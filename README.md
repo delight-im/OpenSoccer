@@ -1,0 +1,4 @@
+Ballmanager
+===========
+
+Online soccer manager

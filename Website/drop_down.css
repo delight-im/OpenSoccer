@@ -1,0 +1,33 @@
+ul#nav li ul {
+	position: absolute;
+	left: -9999px;
+	top: 100%;
+	display: block;
+	width: 105px;
+	background-color: transparent;
+	z-index: 99;
+}
+ul#nav li {
+	position: relative;
+	float: left;
+}
+/* LINKS IN DEN DROP-DOWN-LISTEN ANFANG */
+ul#nav li ul li a, ul#nav li#current ul li a {
+	clear: left;
+	display: block;
+	text-decoration: none;
+	width: 105px;
+	background-color: #333;
+	color: #fff;
+}
+ul#nav li ul li a:hover, ul#nav li#current ul li a:hover {
+	text-decoration: none;
+	background-color: #ececec;
+	color: #333;
+}
+/* LINKS IN DEN DROP-DOWN-LISTEN ENDE */
+/* WECHSELN ZWISCHEN SICHTBAR UND UNSICHTBAR ANFANG */
+ul#nav li:hover ul, #nav li.sfhover ul {
+	left: 0px;
+}
+/* WECHSELN ZWISCHEN SICHTBAR UND UNSICHTBAR ENDE */

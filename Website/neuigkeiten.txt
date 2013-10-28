@@ -1,0 +1,56 @@
+2013-03-18 Im Bereich &quot;Team&quot; gibt es einen neuen Kalender, der mehr Informationen liefert und übersichtlicher ist.
+2013-03-15 Unter &quot;Stadion&quot; kann jetzt ein eigener Name für die heimische Arena vergeben werden!
+2013-03-12 Durch den 48-stündigen Server-Ausfall vom 25.02. fand der Saisonwechsel einen Tag zu spät statt und 437 vereinbarte Testspiele gingen verloren. Die Teams haben Zahlungen aufs Vereinskonto als Entschädigung bekommen.
+2013-03-12 Nach dem 48-stündigen Server-Ausfall vom 25.02. haben einige Teams Spieler verloren, weil die Vertrage ausgelaufen waren. Die Teams haben jetzt Zahlungen aufs Vereinskonto als Entschädigung bekommen. (Insgesamt: 680 Mio.)
+2013-02-27 Über den Spielberichten ist jetzt eine schönere Ergebnis-Anzeige zu sehen.
+2013-02-27 Der Ballmanager ist nach 48-stündigem Server-Ausfall wieder zurück!
+2012-10-31 Die Gehälter für das Personal sind stark angestiegen, die Gehälter der Spieler ganz leicht. Das Personal wollte am wachsenden Umsatz der Vereine beteiligt werden.
+2012-10-29 Unter &quot;Stadion&quot; gibt es jetzt endlich Bilder!
+2012-10-28 Es gibt (wieder) ein Support-Team, das allen Usern bei Fragen oder Problemen zur Seite steht und das Spiel leitet.
+2012-09-30 Neuer Assistent: Der Psychologe Deines Teams kann die Moral der Spieler erhöhen!
+2012-09-11 Durch eure Hilfe konnten über 100 neue Nachnamen für Spieler aufgenommen werden. Damit sind insgesamt 76.779 neue Namenskombinationen entstanden!
+2012-08-04 Die "Globale Tabelle" in den Statistiken zeigt jetzt, welcher Verein der erfolgreichste in der aktuellen Liga-Saison ist.
+2012-08-04 Das Ranking aller Manager (nach RKP) gibt es jetzt auch auf das eigene Land beschränkt. Dabei werden alle 48 Teams eines Landes aufgelistet, auch die Computer-Teams.
+2012-06-11 Ab sofort gibt es eine mobile Version des Ballmanagers, die extra für Smartphones und Tablet PCs optimiert ist (m.ballmanager.de).
+2012-06-11 In den Spielberichten wird es ab sofort einige neue Spielaktionen in den Kommentaren geben - und auch ein paar kleine Überraschungen.
+2012-06-10 Der Fitness-Trainer und der Physiotherapeut sind ab sofort etwas teurer. Außerdem wurde ein Mindestpreis von 1 Mio. eingeführt, unter den die Kosten nie sinken werden.
+2012-06-07 Um sich einen Einblick in das Spiel zu verschaffen, steht jetzt jedem nicht-angemeldeten Besucher ein Demo-Account zur Verfügung.
+2012-06-06 Es gibt ab sofort eine Manager-Prüfung für neue User: Man lernt das Spiel kennen und bekommt pro erledigter Aufgabe 1 Mio. aufs Vereinskonto. Alle alten Manager dürfen diese Prüfung jetzt auch absolvieren. Deshalb wurden jedem 29 Mio. vom Konto des Teams abgezogen.
+2012-06-05 Eine wichtige Änderung: Nach der Registrierung werden die Teams jetzt nicht mehr automatisch zugeteilt, sondern der Manager darf sich ein Team frei aussuchen!
+2012-06-05 Es gab jede Menge kleine Fehlerkorrekturen und Verbesserungen! Unter anderem gibt es jetzt einen Manager-Talk für den internationalen Pokal und die Computer-Teams wurden etwas geschwächt.
+2012-04-16 Die Obergrenze für Gebote bei Auktionen liegt jetzt bei 1600% vom Marktwert eines Spielers. Dieses Maximalgebot erreicht man, wenn man schon mindestens 84 Tage beim Ballmanager dabei ist.
+2012-04-15 Auf der Beobachtungsseite werden die Spieler ab sofort nach dem Ende ihrer Auktion sortiert und die Restzeit wird dazu angezeigt.
+2012-04-15 Beim Transfermarkt wird die Restzeit jetzt in Stunden angezeigt, wenn sie noch länger als 120 Minuten ist.
+2012-04-10 Es bleibt dabei, dass Spieler erst ab 31 Jahren schwächer werden.
+2012-04-08 In Derbys spielen beide Teams jetzt offensiver/aggressiver und es gibt mehr Zuschauer.
+2012-04-08 Die Jugendspieler werden in Zukunft wieder etwas stärker und es sind <em>etwas</em> häufiger Top-Talente dabei.
+2012-04-07 Nichtverkaufte Spieler auf dem Transfermarkt werden jetzt schneller billiger, wenn der Computer sie automatisch neu einstellt.
+2012-04-07 Das Maximalgebot, das schrittweise steigt, je länger Du dabei bist, endet jetzt erst bei 800% vom Marktwert eines Spielers.
+2011-12-10 Gekaufte Spieler (von außerhalb Europas) haben ab sofort 100% Moral, wenn sie zu Deinem Team kommen.
+2011-12-03 Spieler können jetzt nur noch an den Computer (Teams <i>außerhalb Europas</i>) verkauft werden. Dieser bietet sie dann später auf dem Transfermarkt wieder zum Kauf an.
+2011-11-21 Durch Testspiele bekommen Spieler jetzt auch 1% Moral dazu, d.h. sie verlieren keine Moral mehr, wenn sie an einem Tag nur ein Testspiel bestreiten.
+2011-11-13 Der Einfluss der Taktik-Einstellungen auf den Spielverlauf wurde deutlich erhöht.
+2011-11-09 Der Pokalsieger qualifiziert sich jetzt automatisch für den Pokal in der folgenden Saison, unabhängig von der Platzierung in der Liga.
+2011-11-09 Die Wahrscheinlichkeiten für die Maximalstärken bei Jugendspielern wurden geändert. Starke Spieler kommen jetzt seltener, dafür gibt es mehr schwache Spieler.
+2011-11-08 Pro Saison sind jetzt nur noch zwei Transfers zwischen zwei Teams möglich, um den Betrug weiter zu erschweren.
+2011-11-06 Der Sofortkauf wurde abgeschafft, sodass es nur noch Auktionen zum Kauf von Spielern gibt.
+2011-11-05 Die Spieler haben jetzt eine persönliche Zufriedenheit, <i>Moral</i> genannt.
+2011-10-28 Die Integration von Facebook wurde rückgängig gemacht.
+2011-10-28 Die virtuelle Zeitschrift <i>Bolzblatt</i> wurde aus dem Spiel entfernt.
+2011-10-28 Das <i>Renommee</i> wurde vollständig aus dem Spiel entfernt und durch die neue Punktewertung <i>RKP</i> ersetzt.
+2011-05-29 Der Filter auf dem Transfermarkt wurde komplett überarbeitet und ist jetzt deutlich angenehmer und praktischer zu bedienen.
+2011-05-12 Das Team kann Chat-Sperren, die durch die REPORT-Funktion verursacht wurden, jetzt aufheben. Gesperrte User können dann wieder chatten.
+2011-05-11 Der Menüpunkt &quot;Liga&quot;, unter dem man auch Pokal-, Cup- und Testspiele findet, heißt jetzt &quot;Saison&quot;.
+2011-05-09 Eigene Spieler können jetzt mit steigendem Alter nicht mehr für 150% vom Marktwert verkauft werden. Je älter sie werden, desto geringer ist der maximale Preis, für den sie angeboten werden können.
+2011-05-09 Es gibt oben (rechts vom Logo) vorerst keine Werbung mehr beim Ballmanager :)
+2011-05-07 Wenn man 9 Tage nicht online war (ohne Urlaub), dann verliert man sein Team. Bisher gab es automatischen Kurzurlaub nach 9 Tagen, um das zu verhindern. Der wurde jetzt aber abgeschafft. Stattdessen wird die Frist pro Monat, den man dabei ist, um einen Tag verlängert. Beispiel: Ihr seid 4 Monate dabei? Dann werdet ihr erst gelöscht, wenn ihr 13 Tage (9+4) nicht online wart.
+2011-05-07 Analog zum <i>Marktschreier</i> für Transfers gibt es jetzt den Bereich <i>Testwünsche</i> unter <i>Liga</i>.
+2011-05-07 Die Nutzungsregeln des Spiels müssen jetzt immer akzeptiert werden, bevor man weiterspielen kann.
+2011-04-06 Nachdem in dieser Saison ca. 400 Testspiele wegen der Zeitumstellung nicht ausgetragen wurden, hat nun jedes Team 1 Mio pro versäumtem Spiel zurückbekommen.
+2011-03-28 Das Team kann Geldstrafen jetzt aufheben, ebenso wie schon Community- und Transfer-Sperren.
+2011-03-17 Für Spieler, die zum Verkauf stehen oder als Leihgabe angeboten werden, kann nun im Bereich <i>Marktschreier</i> geworben werden.
+2011-03-10 Neue Manager bekommen beim ersten Login eine Willkommens-Nachricht ins Postfach, um ihnen den Einstieg zu erleichtern.
+2011-03-10 Spieler, die an fremde Klubs verliehen sind, werden jetzt auch im eigenen Kader angezeigt und besonders hervorgehoben. So soll eine bessere Kaderplanung möglich sein.
+2011-03-05 Die Votings (<i>Deine Meinung</i>) wurden aus dem Spiel entfernt, da Abstimmungen jetzt auch im neuen Support-Bereich möglich sind.
+2011-03-05 Es gibt einen neuen Support-Bereich: Jeder kann Anfragen (Fragen, Fehlerberichte oder Vorschläge) erstellen und die Einträge von anderen Usern bewerten und kommentieren.
+2011-03-04 Wenn ein Spieler in einer Saison schon ein Pokalspiel gemacht hat, kann er (nach einem Transfer) für andere Klubs keine Pokalspiele mehr bestreiten.

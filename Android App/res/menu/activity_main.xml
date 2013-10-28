@@ -1,0 +1,56 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_buero"
+        android:title="@string/buero"
+        android:icon="@drawable/ic_menu_buero"
+        android:orderInCategory="1"
+        android:showAsAction="always" />
+    <item
+        android:id="@+id/menu_ranking"
+        android:title="@string/ranking"
+        android:icon="@drawable/ic_menu_ranking"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_transfers"
+        android:title="@string/transfers"
+        android:icon="@drawable/ic_menu_transfers"
+        android:orderInCategory="3"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_team"
+        android:title="@string/team"
+        android:icon="@drawable/ic_menu_team"
+        android:orderInCategory="4"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_saison"
+        android:title="@string/saison"
+        android:icon="@drawable/ic_menu_saison"
+        android:orderInCategory="5"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_verein"
+        android:title="@string/verein"
+        android:icon="@drawable/ic_menu_verein"
+        android:orderInCategory="6"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_anfragen"
+        android:title="@string/anfragen"
+        android:icon="@drawable/ic_menu_anfragen"
+        android:orderInCategory="7"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_community"
+        android:title="@string/community"
+        android:icon="@drawable/ic_menu_community"
+        android:orderInCategory="8"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_support"
+        android:title="@string/support"
+        android:icon="@drawable/ic_menu_support"
+        android:orderInCategory="9"
+        android:showAsAction="ifRoom" />
+</menu>

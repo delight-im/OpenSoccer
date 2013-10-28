@@ -1,0 +1,11 @@
+UPDATE man_teams SET renommee = 0, jugendarbeit = 1, meisterschaften = 0, aufstellung = 0, staerke = '', gegentore = 0, tore = 0, punkte = 0, rank = 1, konto = 0, taktik = 'N', sponsor = 0, fanaufkommen = 0, fanbetreuer = 1;
+TRUNCATE TABLE man_transfers;
+UPDATE man_zeitrechnung SET letzte_abbuchung = '2000-01-01', saison = 1, last = '2000-01-01', letzte_stadionkosten = '2000-01-01', letzte_simulation = '2000-01-01';
+UPDATE man_users SET meisterschaften = 0, liga = 0, team = 0;
+UPDATE man_spieler SET transfermarkt = 0, im_verein = 0, verbessert = 0, gehalt = 0, marktwert = 0, tore = 0, spiele = 0, startelf = 0, frische = 100;
+TRUNCATE TABLE man_spiele;
+TRUNCATE TABLE man_news;
+TRUNCATE TABLE man_startbudgets;
+UPDATE man_ligen SET gespielt = 0;
+TRUNCATE TABLE man_form;
+UPDATE man_stadien SET plaetze = 15000, preis = 20, parkplatz = 0, ubahn = 0, restaurant = 0, bierzelt = 0, pizzeria = 0, imbissstand = 0, vereinsmuseum = 0, fanshop = 0;

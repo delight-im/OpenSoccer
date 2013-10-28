@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /passwort_vergessen.php
+Disallow: /regeln.php
+Disallow: /impressum.php

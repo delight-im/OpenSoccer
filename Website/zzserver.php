@@ -2,7 +2,7 @@
 date_default_timezone_set('Europe/Berlin');
 header('content-type: text/html; charset=utf-8');
 ignore_user_abort(true);
-include '/var/www/vhosts/lvps178-77-99-228.dedicated.hosteurope.de/config_manager.php'; // MySQL-Verbindung
+include 'config.php';
 // FEHLERMELDUNGEN ANFANG
 error_reporting(E_ALL);
 function fehlermeldung($errfehler, $errbeschreibung, $errdatei, $errzeile) {

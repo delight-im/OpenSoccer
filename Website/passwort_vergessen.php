@@ -69,9 +69,27 @@ $nachricht .= '
 -----------
 '.$aip;
 }
-$absender = 'From: Ballmanager <system@ballmanager.de>
-Content-type: text/plain; charset=UTF-8';
-mail($empfaenger, $betreff, $nachricht, $absender);
+if($config['PHP_MAILER']){
+	require './phpmailer/PHPMailerAutoload.php';
+	$mail = new PHPMailer(); // create a new object
+	$mail->CharSet		= $config['SMTP_CHARSET']=;
+	$mail->IsSMTP();
+	$mail->SMTPAuth = $config['SMTP_AUTH'];
+	$mail->SMTPSecure = $config['SMTP_SECURE'];
+	$mail->Host = $config['SMTP_HOST'];
+	$mail->Port = $config['SMTP_PORT'];
+	$mail->Username = $config['SMTP_USER'];
+	$mail->Password = $config['SMTP_PASS'];
+	$mail->SetFrom($config['SMTP_FROM']);
+	$mail->Subject = $betreff;
+	$mail->Body = $nachricht;
+	$mail->AddAddress($empfaenger);
+	$mail->Send();
+}
+else{
+	$header = "From: Ballmanager <system@ballmanager.de>\nContent-type: text/plain; charset=UTF-8";
+	mail($empfaenger, $betreff, $nachricht, $absender);
+}
 // E-MAIL VERSENDEN
 				echo addInfoBox('Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren Informationen zu.');
 			} // if in2 == FALSE

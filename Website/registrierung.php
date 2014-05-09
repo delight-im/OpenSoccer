@@ -11,8 +11,27 @@ function email_senden($email, $username, $password, $activeIP='0.0.0.0') {
 	$empfaenger = $email;
 	$betreff = 'Ballmanager: Willkommen';
 	$nachricht = "Hallo ".$username.",\n\nDu hast Dich erfolgreich auf www.ballmanager.de registriert. Bitte logge Dich jetzt mit Deinen Benutzerdaten ein, um Deinen Account zu aktivieren. Und dann kann es auch schon losgehen ...\n\nDamit Du Dich anmelden kannst, findest Du hier noch einmal Deine Benutzerdaten:\n\nE-Mail: ".$email."\nBenutzername: ".$username."\nPasswort: ".$password."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
-	$header = 'From: Ballmanager <info@ballmanager.de>'."\n".'Content-type: text/plain; charset=utf-8';
-	mail($empfaenger, $betreff, $nachricht, $header);
+	if($config['PHP_MAILER']){
+		require './phpmailer/PHPMailerAutoload.php';
+		$mail = new PHPMailer(); // create a new object
+		$mail->CharSet= $config['SMTP_CHARSET'];
+		$mail->IsSMTP();
+		$mail->SMTPAuth = $config['SMTP_AUTH'];
+		$mail->SMTPSecure = $config['SMTP_SECURE'];
+		$mail->Host = $config['SMTP_HOST'];
+		$mail->Port = $config['SMTP_PORT'];
+		$mail->Username = $config['SMTP_USER'];
+		$mail->Password = $config['SMTP_PASS'];
+		$mail->SetFrom($config['SMTP_FROM']);
+		$mail->Subject = $betreff;
+		$mail->Body = $nachricht;
+		$mail->AddAddress($empfaenger);
+		$mail->Send();
+	}
+	else{
+		$header = 'From: Ballmanager <info@ballmanager.de>'."\n".'Content-type: text/plain; charset=utf-8';
+		mail($empfaenger, $betreff, $nachricht, $header);
+	}
 }
 $last_ip = getUserIP();
 $fehler_gemacht = TRUE;

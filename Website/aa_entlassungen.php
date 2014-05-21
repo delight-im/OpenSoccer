@@ -54,8 +54,27 @@ else {
 	$empfaenger = $sql3['email'];
 	$betreff = 'Ballmanager: Keine Lust mehr?';
 	$nachricht = "Hallo ".$sql3['username'].",\n\nDu hast Dich nun schon eine Weile nicht mehr beim Ballmanager (www.ballmanager.de) blicken lassen. Am ".date('d.m.Y', $sql3['last_login'])." wurdest Du zuletzt auf dem Trainingsgelände gesehen. Deine Spieler fühlen sich schon etwas vernachlässigt.\n\nAnsonsten wird sich der Vorstand nach einem Nachfolger umsehen und in 3 Tagen einen neuen Manager für Deinen Klub präsentieren.\n\nWenn Du noch Lust hast weiterzuspielen, bist Du natürlich jederzeit herzlich willkommen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
-	$header = 'From: Ballmanager <info@ballmanager.de>'."\n".'Content-type: text/plain; charset=utf-8';
-	mail($empfaenger, $betreff, $nachricht, $header);
+	if($config['PHP_MAILER']){
+		require './phpmailer/PHPMailerAutoload.php';
+		$mail = new PHPMailer(); // create a new object
+		$mail->CharSet= $config['SMTP_CHARSET'];
+		$mail->IsSMTP();
+		$mail->SMTPAuth = $config['SMTP_AUTH'];
+		$mail->SMTPSecure = $config['SMTP_SECURE'];
+		$mail->Host = $config['SMTP_HOST'];
+		$mail->Port = $config['SMTP_PORT'];
+		$mail->Username = $config['SMTP_USER'];
+		$mail->Password = $config['SMTP_PASS'];
+		$mail->SetFrom($config['SMTP_FROM']);
+		$mail->Subject = $betreff;
+		$mail->Body = $nachricht;
+		$mail->AddAddress($empfaenger);
+		$mail->Send();
+	}
+	else{
+		$header = 'From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8';
+		mail($empfaenger, $betreff, $nachricht, $header);
+	}
 	// E-MAIL VERSENDEN ENDE
 }
 }

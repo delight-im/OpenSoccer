@@ -49,7 +49,6 @@ elseif (isset($_POST['email'])) {
 					$aip = '';
 				}
 // E-MAIL VERSENDEN
-$header = 'From: Ballmanager <system@ballmanager.de>';
 $empfaenger = $email;
 $betreff = 'Ballmanager: Passwort vergessen';
 $nachricht = '
@@ -87,8 +86,8 @@ if($config['PHP_MAILER']){
 	$mail->Send();
 }
 else{
-	$header = "From: Ballmanager <system@ballmanager.de>\nContent-type: text/plain; charset=UTF-8";
-	mail($empfaenger, $betreff, $nachricht, $absender);
+	$header = "From: Ballmanager <system@ballmanager.de>\r\nContent-type: text/plain; charset=UTF-8";
+	mail($empfaenger, $betreff, $nachricht, $header);
 }
 // E-MAIL VERSENDEN
 				echo addInfoBox('Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren Informationen zu.');

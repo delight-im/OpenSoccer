@@ -56,30 +56,57 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 					$approveMail4 = mysql_query($approveMail3);
 					if (mysql_num_rows($approveMail4) == 1) {
 						$approveMail5 = mysql_fetch_assoc($approveMail4);
-						function email_senden($email, $bodyText, $additionalHeader = '') {
+						function email_senden($email, $bodyText, $bcc = array()) {
 							$empfaenger = $email;
 							$betreff = 'Ballmanager: News vom '.dayAndMonth();
 							$nachricht = "Lieber Manager,\n\n".$bodyText."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
-							$header = 'From: Ballmanager <info@ballmanager.de>'."\n".'Content-type: text/plain; charset=utf-8';
-							if ($additionalHeader != '') {
-								$header .= "\n".$additionalHeader;
+							if($config['PHP_MAILER']){
+								require './phpmailer/PHPMailerAutoload.php';
+								if(!empty($bcc)){
+									foreach($bcc as $adresse){
+										$mail->AddBCC($adresse);
+									}
+								}
+								$mail = new PHPMailer(); // create a new object
+								$mail->CharSet= $config['SMTP_CHARSET'];
+								$mail->IsSMTP();
+								$mail->SMTPAuth = $config['SMTP_AUTH'];
+								$mail->SMTPSecure = $config['SMTP_SECURE'];
+								$mail->Host = $config['SMTP_HOST'];
+								$mail->Port = $config['SMTP_PORT'];
+								$mail->Username = $config['SMTP_USER'];
+								$mail->Password = $config['SMTP_PASS'];
+								$mail->SetFrom($config['SMTP_FROM']);
+								$mail->Subject = $betreff;
+								$mail->Body = $nachricht;
+								$mail->AddAddress($empfaenger);
+								$mail->Send();
 							}
-							mail($empfaenger, $betreff, $nachricht, $header);
+							else{
+								$header = 'From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8';
+								if(!empty($bcc)){
+									$header.='\r\nBCC: ';
+									foreach($bcc as $index => $adresse){
+										$header.=$adresse;
+										if($index!=0) $header.=', ';
+									}
+								}
+								mail($empfaenger, $betreff, $nachricht, $header);
+							}
 						}
 						$emailUsers1 = "SELECT email, team FROM ".$prefix."users WHERE last_login > ".(time()-3600*24*42);
 						$emailUsers2 = mysql_query($emailUsers1);
 						$emailUsersCount = 0;
-						$bccList = '';
+						$bccList = array();
 						while ($emailUsers3 = mysql_fetch_assoc($emailUsers2)) {
 							if (mb_substr($emailUsers3['email'], 0, 9) != 'GELOESCHT' && mb_strlen($emailUsers3['team']) == 32) {
 								if ($emailUsers3['email'] == 'info@ballmanager.de') {
-									$bccList .= trim($emailUsers3['email']).', ';
+									$bccList[]=trim($emailUsers3['email']);
 									$emailUsersCount++;
 								}
 							}
 						}
-						if ($bccList != '') {
-							$bccList = 'BCC: '.mb_substr($bccList, 0, -2);
+						if(!empty($bccList)){
 							email_senden('info@ballmanager.de', $approveMail5['text'], $bccList);
 							$logBackend1 = "INSERT INTO ".$prefix."backendEmails (zeit, user, text) VALUES (".time().", '".$cookie_id."', '".mysql_real_escape_string($emailText)."')";
                             mysql_query($logBackend1);

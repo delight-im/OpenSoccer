@@ -29,7 +29,7 @@ function email_senden($email, $username, $password, $activeIP='0.0.0.0') {
 		$mail->Send();
 	}
 	else{
-		$header = 'From: Ballmanager <info@ballmanager.de>'."\n".'Content-type: text/plain; charset=utf-8';
+		$header = 'From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8';
 		mail($empfaenger, $betreff, $nachricht, $header);
 	}
 }

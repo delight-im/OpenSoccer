@@ -83,9 +83,9 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 								$mail->Send();
 							}
 							else{
-								$header = 'From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8';
+								$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8";
 								if(!empty($bcc)){
-									$header.='\r\nBCC: ';
+									$header.="\r\nBCC: ";
 									foreach($bcc as $index => $adresse){
 										$header.=$adresse;
 										if($index!=0) $header.=', ';

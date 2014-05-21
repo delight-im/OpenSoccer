@@ -4,14 +4,14 @@ Online soccer manager
 
 ## Contributing
 
-Every contribution is warmly welcomed. Please fork this repository, apply your changes, and submit your contributions by sending a pull request.
+Any contributions are welcome :) Please fork this repository, apply your changes, and submit your contributions by sending a pull request.
 
 ## License
 
-All parts of this project, except for the folder "images" in folder "Website", has been released under the following license.
+All parts of this project, except for the folder `images` in folder `Website`, has been released under the following license.
 
 ```
- Copyright (C) 2013 www.delight.im <info@delight.im>
+ Copyright (C) 2008-2014 www.delight.im <info@delight.im>
  
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

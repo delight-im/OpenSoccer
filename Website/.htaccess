@@ -1,3 +1,13 @@
+# Disallow all HTTP methods other than GET, POST and HEAD
+RewriteCond %{REQUEST_METHOD} !^(GET|POST|HEAD)
+RewriteRule .* - [R=405,L]
+
+# Cache media files for one week
+<FilesMatch "\.(js|css|gif|jpg|jpeg|png|ico)$">
+Header set Cache-Control "max-age=604800"
+</FilesMatch>
+
+# Enable URL rewriting
 RewriteEngine On
 RewriteBase /
 

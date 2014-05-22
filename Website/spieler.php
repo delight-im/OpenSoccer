@@ -6,8 +6,7 @@ $sql2 = mysql_query($sql1);
 $sql2a = mysql_num_rows($sql2);
 if ($sql2a == 0) { exit; }
 $sql3 = mysql_fetch_assoc($sql2);
-//$newMarktwert1 = "UPDATE ".$prefix."spieler SET marktwert = ".$marktwertAusdruck." WHERE ids = '".$sql3['ids']."'";
-//$newMarktwert2 = mysql_query($newMarktwert1);
+
 $tm1 = "SELECT name FROM ".$prefix."teams WHERE ids = '".$sql3['team']."'";
 $tm2 = mysql_query($tm1);
 $tm3 = mysql_fetch_assoc($tm2);

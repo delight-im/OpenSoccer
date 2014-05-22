@@ -1,3 +1,5 @@
+2013-10-29 Das Demo-Team wird jetzt auch vom Computer trainiert, da es bisher nie eine Aufstellung bekommen hatte und mit der Zeit 1.688.389.448 Schulden angesammelt hatte.
+2013-10-29 Computer-Teams können jetzt nicht mehr weniger als 20 Mio. auf dem Konto haben, damit die Geld-Statistiken nicht durch Computer-Teams mit hohen Schulden verfälscht werden.
 2013-03-18 Im Bereich &quot;Team&quot; gibt es einen neuen Kalender, der mehr Informationen liefert und übersichtlicher ist.
 2013-03-15 Unter &quot;Stadion&quot; kann jetzt ein eigener Name für die heimische Arena vergeben werden!
 2013-03-12 Durch den 48-stündigen Server-Ausfall vom 25.02. fand der Saisonwechsel einen Tag zu spät statt und 437 vereinbarte Testspiele gingen verloren. Die Teams haben Zahlungen aufs Vereinskonto als Entschädigung bekommen.

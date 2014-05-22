@@ -18,7 +18,7 @@
         $temp_liga_query = "";
     }
     else {
-        $temp_liga_query = " AND b.liga = '".$temp_liga."'";
+        $temp_liga_query = " WHERE b.liga = '".$temp_liga."'";
     }
     $shsj1 = "SELECT ids, name FROM ".$prefix."ligen ORDER BY name ASC";
     $shsj2 = mysql_query($shsj1);
@@ -45,14 +45,19 @@
 </thead>
 <tbody>
 <?php
-$sql1 = "SELECT a.spieler, a.gebot, a.datum, b.vorname, b.nachname, c.ids, c.name FROM ".$prefix."transfers AS a JOIN ".$prefix."spieler AS b ON a.spieler = b.ids JOIN ".$prefix."teams AS c ON a.bieter = c.ids WHERE a.bieter != 'AUSSERHALB_EU'".$temp_liga_query." ORDER BY a.gebot DESC LIMIT 0, 20";
+$sql1 = "SELECT a.spieler, a.gebot, a.datum, b.vorname, b.nachname, c.ids, c.name FROM ".$prefix."transfers AS a JOIN ".$prefix."spieler AS b ON a.spieler = b.ids LEFT JOIN ".$prefix."teams AS c ON a.bieter = c.ids".$temp_liga_query." ORDER BY a.gebot DESC LIMIT 0, 20";
 $sql2 = mysql_query($sql1);
 $counter = 0;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if ($sql3['gebot'] == 1) { continue; } // Leihgaben
 	if ($counter % 2 == 0) { echo '<tr>'; } else { echo '<tr class="odd">'; }
 	echo '<td class="link"><a href="/spieler.php?id='.$sql3['spieler'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a></td>';
-	echo '<td class="link"><a href="/team.php?id='.$sql3['ids'].'">'.$sql3['name'].'</a></td>';
+	if (isset($sql3['ids']) && isset($sql3['name'])) {
+		echo '<td class="link"><a href="/team.php?id='.$sql3['ids'].'">'.$sql3['name'].'</a></td>';
+	}
+	else {
+		echo '<td>Außerhalb Europas</td>';
+	}
 	echo '<td>'.number_format($sql3['gebot'], 0, ',', '.').'€</td>';
 	echo '<td>'.date('d.m.Y', $sql3['datum']).'</td>';
 	echo '</tr>';

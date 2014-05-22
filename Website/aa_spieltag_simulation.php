@@ -146,31 +146,31 @@ function kommentar($ersetzung, $typ) {
 		'Der Spieler legt perfekt für seinen Teamkollegen auf.',
 		'Der Angreifer legt für seinen Mitspieler zurück.');
 	$formulierungen['yellow'] = array(
-		'Gelbe Karte für XYZ.',
-		'Der Schiedsrichter zeigt Gelb.',
-		'Der Referee zückt die Gelbe Karte.',
-		'XYZ erhält eine Gelbe Karte.',
-		'XYZ kassiert eine Gelbe Karte.',
-		'Der Spieler von XYZ sieht Gelb.',
-		'Der Schiedsrichter zögert nicht lange: Gelb!',
-		'Der Schiedsrichter zögert nicht lange: Verwarnung!',
-		'Der Spieler von XYZ holt sich die Gelbe Karte ab.',
-		'Klare Gelbe Karte für XYZ.');
+		'<span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.',
+		'Der Schiedsrichter zeigt <span style="padding:2px;background-color:#ff0;">Gelb</span>.',
+		'Der Referee zückt die <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.',
+		'XYZ erhält eine <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.',
+		'XYZ kassiert eine <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.',
+		'Der Spieler von XYZ sieht <span style="padding:2px;background-color:#ff0;">Gelb</span>.',
+		'Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#ff0;">Gelb</span>!',
+		'Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#ff0;">Verwarnung</span>!',
+		'Der Spieler von XYZ holt sich die <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> ab.',
+		'Klare <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.');
 	$formulierungen['red'] = array(
-		'Platzverweis für XYZ!',
-		'Dem Schiedsrichter bleibt keine andere Wahl, als die Rote Karte zu zeigen.',
-		'Rote Karte für XYZ!',
-		'Der Spieler von XYZ wird des Feldes verwiesen!',
-		'Der Spieler von XYZ darf vorzeitig duschen gehen!',
-		'Der Schiedsrichter schickt den Übeltäter vom Platz!',
-		'Der Schiedsrichter zögert nicht lange: Rot!',
-		'Der Schiedsrichter zögert nicht lange: Platzverweis!',
-		'Der Schiedsrichter entscheidet auf Notbremse und zieht die Rote Karte!',
-		'XYZ sieht nach einer Unsportlichkeit Rot!',
-		'Der Unparteiische ahndet diese Aktion mit der Roten Karte!',
-		'Der Spieler von XYZ kassiert Rot!',
-		'Der Referee zückt die Rote Karte!',
-		'Der Schiedsrichter zeigt Rot!');
+		'<span style="padding:2px;background-color:#f00;color:#fff;">Platzverweis</span> für XYZ!',
+		'Dem Schiedsrichter bleibt keine andere Wahl als hier die <span style="padding:2px;background-color:#f00;color:#fff;">Rote Karte</span> zu zeigen.',
+		'<span style="padding:2px;background-color:#f00;color:#fff;">Rote Karte</span> für XYZ!',
+		'Der Spieler von XYZ wird <span style="padding:2px;background-color:#f00;color:#fff;">des Feldes verwiesen</span>!',
+		'Der Spieler von XYZ darf <span style="padding:2px;background-color:#f00;color:#fff;">vorzeitig duschen gehen</span>!',
+		'Der Schiedsrichter <span style="padding:2px;background-color:#f00;color:#fff;">schickt den Übeltäter vom Platz</span>!',
+		'Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#f00;color:#fff;">Rot</span>!',
+		'Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#f00;color:#fff;">Platzverweis</span>!',
+		'Der Schiedsrichter entscheidet auf Notbremse und zieht die <span style="padding:2px;background-color:#f00;color:#fff;">Rote Karte</span>!',
+		'XYZ sieht nach einer Unsportlichkeit <span style="padding:2px;background-color:#f00;color:#fff;">Rot</span>!',
+		'Der Unparteiische ahndet diese Aktion mit der <span style="padding:2px;background-color:#f00;color:#fff;">Roten Karte</span>!',
+		'Der Spieler von XYZ kassiert <span style="padding:2px;background-color:#f00;color:#fff;">Rot</span>!',
+		'Der Referee zückt die <span style="padding:2px;background-color:#f00;color:#fff;">Rote Karte</span>!',
+		'Der Schiedsrichter zeigt <span style="padding:2px;background-color:#f00;color:#fff;">Rot</span>!');
 	$formulierungen['iFreeKick_shot_save'] = array(
 		'Der Torwart hat den Ball sicher.',
 		'Der Torwart von XYZ hält.',
@@ -200,12 +200,12 @@ function kommentar($ersetzung, $typ) {
 		'Das sah nach einem Revanchefoul aus.',
 		'Der Angreifer wird umgestoßen.');
 	$formulierungen['penalty'] = array(
-		'Der Schiedsrichter zeigt auf den Punkt.',
-		'Elfmeter!',
-		'Der Unparteiische entscheidet auf Elfmeter.',
-		'Strafstoß!',
-		'Strafstoß für XYZ!',
-		'Elfmeter für XYZ!');
+		'<span style="text-transform:uppercase;">Der Schiedsrichter zeigt auf den Punkt.</span>',
+		'<span style="text-transform:uppercase;">Elfmeter!</span>',
+		'<span style="text-transform:uppercase;">Der Unparteiische entscheidet auf Elfmeter.</span>',
+		'<span style="text-transform:uppercase;">Strafstoß!</span>',
+		'<span style="text-transform:uppercase;">Strafstoß für XYZ!</span>',
+		'<span style="text-transform:uppercase;">Elfmeter für XYZ!</span>');
 	$formulierungen['penalty_save'] = array(
 		'Der Torwart springt in die richtige Ecke ... und hält!',
 		'Der Torwart bleibt stehen - Gehalten! Schwacher Schuss.',
@@ -1233,7 +1233,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
     $spielbericht_kommentare = array();
     $spielbericht_lines = explode('</p><p>', $spielbericht);
     foreach ($spielbericht_lines as $spielbericht_line) {
-        $spielbericht_line_str = trim(strip_tags($spielbericht_line, '<strong><a>'));
+        $spielbericht_line_str = trim(strip_tags($spielbericht_line, '<strong><a><span>'));
         $spielbericht_line = explode("': ", $spielbericht_line_str, 2);
         if (count($spielbericht_line) == 1) {
             $spielbericht_kommentare[] = array(0, $spielbericht_line[0]);

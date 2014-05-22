@@ -1,11 +1,43 @@
 <?php include 'zz1.php'; ?>
 <title>Namensänderung | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Namensänderung</h1>
 <?php if ($loggedin == 1) { ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <?php
-$letzteAenderung1 = "SELECT MAX(zeit) FROM ".$prefix."vNameChanges WHERE team = '".$cookie_team."' AND sperre = 1";
+$showTeam = mysql_real_escape_string(trim(strip_tags($cookie_team)));
+$showTeamName = mysql_real_escape_string(trim(strip_tags($cookie_teamname)));
+$showTeamLiga = mysql_real_escape_string(trim(strip_tags($cookie_liga)));
+if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
+	if (isset($_GET['team'])) {
+		$showTeam = mysql_real_escape_string(trim(strip_tags($_GET['team'])));
+		$showTeamName1 = "SELECT name, liga FROM ".$prefix."teams WHERE ids = '".$showTeam."'";
+		$showTeamName2 = mysql_query($showTeamName1);
+		if (mysql_num_rows($showTeamName2) == 0) { exit; }
+		$showTeamName3 = mysql_fetch_assoc($showTeamName2);
+		$showTeamName = mysql_real_escape_string(trim(strip_tags($showTeamName3['name'])));
+		$showTeamLiga = mysql_real_escape_string(trim(strip_tags($showTeamName3['liga'])));
+	}
+}
+
+if ($cookie_teamname == $showTeamName) { // if the name of one's own club is to be changed
+	echo '<h1>Namensänderung</h1>';
+}
+else { // if the name of another user's club is to be changed by the support staff
+	echo '<h1>Namensänderung für '.htmlspecialchars($showTeamName).'</h1>';
+}
+
+// CHECK IF USER IS ALLOWED TO CHANGE TEAM NAME AGAIN BEGIN
+if ($_SESSION['status'] != 'Helfer' && $_SESSION['status'] != 'Admin') {
+	$changeLockDuration = 2592000;
+	$changeLockUnit = 86400;
+	$changeLockUnitStr = 'Tagen';
+}
+else {
+	$changeLockDuration = 1800;
+	$changeLockUnit = 60;
+	$changeLockUnitStr = 'Minuten';
+}
+$letzteAenderung1 = "SELECT MAX(zeit) FROM ".$prefix."vNameChanges WHERE team = '".$showTeam."' AND sperre = 1";
 $letzteAenderung2 = mysql_query($letzteAenderung1);
 if (mysql_num_rows($letzteAenderung2) == 0) {
 	$letzteAenderungVor = time();
@@ -14,12 +46,14 @@ else {
 	$letzteAenderung3 = mysql_fetch_assoc($letzteAenderung2);
 	$letzteAenderungVor = time()-$letzteAenderung3['MAX(zeit)'];
 }
-if ($letzteAenderungVor < 2592000) { // vor 30 Tagen
-	$lastTeamNameChange = round($letzteAenderungVor/86400);
-	echo addInfoBox('Der Name Deines Vereins wurde zuletzt vor '.$lastTeamNameChange.' Tagen geändert. Du musst also noch '.intval(30-$lastTeamNameChange).' Tage warten, bis Du ihn wieder ändern kannst.');
+if ($letzteAenderungVor < $changeLockDuration) { // check time limit for team name changing lock
+	$lastTeamNameChange = round($letzteAenderungVor / $changeLockUnit);
+	echo addInfoBox('Der Name Deines Vereins wurde zuletzt vor '.$lastTeamNameChange.' '.$changeLockUnitStr.' geändert. Du kannst ihn in '.intval(30-$lastTeamNameChange).' '.$changeLockUnitStr.' das nächste Mal ändern.');
 	include 'zz3.php';
 	exit;
 }
+// CHECK IF USER IS ALLOWED TO CHANGE TEAM NAME AGAIN END
+
 ?>
 <p>Auf dieser Seite kannst Du den Namen Deines Vereins ändern. Du kannst den Namen einer Stadt und einen beliebigen Zusatz aus der Liste wählen, der vor oder nach dem Städtenamen stehen kann.</p>
 <p>Hier fehlt ein Städtename, den Du gerne dabei hättest? Dann <a href="/post_schreiben.php?id=c4ca4238a0b923820dcc509a6f75849b">sag uns Bescheid</a>, vielleicht kommt er dann dazu!</p>
@@ -51,35 +85,42 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 					echo addInfoBox('Dieser Name steht auf der Sperrliste, weil er einem realen Vereins-Namen zu sehr ähnelt. Bitte versuche es noch einmal mit einem anderen Namen.');
 				}
 				else {
-					$sql1 = "UPDATE man_teams SET name = '".$neuerName."' WHERE name = '".$cookie_teamname."'";
+					$sql1 = "UPDATE man_teams SET name = '".$neuerName."' WHERE name = '".$showTeamName."'";
 					$sql2 = mysql_query($sql1);
 					if ($sql2 == FALSE) {
 						echo addInfoBox('Dieser Name ist leider schon vergeben. Bitte versuche es noch einmal mit einem anderen Namen.');
 					}
 					else {
-						$sql3 = "INSERT INTO ".$prefix."vNameChanges (team, zeit, vonName, zuName) VALUES ('".$cookie_team."', ".time().", '".$cookie_teamname."', '".$neuerName."')";
+						$sql3 = "INSERT INTO ".$prefix."vNameChanges (team, zeit, vonName, zuName) VALUES ('".$showTeam."', ".time().", '".$showTeamName."', '".$neuerName."')";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."pokalsieger SET sieger = '".$neuerName."' WHERE sieger = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."pokalsieger SET sieger = '".$neuerName."' WHERE sieger = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."pokalsieger SET finalgegner = '".$neuerName."' WHERE finalgegner = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."pokalsieger SET finalgegner = '".$neuerName."' WHERE finalgegner = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."cupsieger SET sieger = '".$neuerName."' WHERE sieger = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."cupsieger SET sieger = '".$neuerName."' WHERE sieger = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."cupsieger SET finalgegner = '".$neuerName."' WHERE finalgegner = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."cupsieger SET finalgegner = '".$neuerName."' WHERE finalgegner = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."geschichte_tabellen SET team = '".$neuerName."' WHERE team = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."geschichte_tabellen SET team = '".$neuerName."' WHERE team = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."spiele SET team1 = '".$neuerName."' WHERE team1 = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."spiele SET team1 = '".$neuerName."' WHERE team1 = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."spiele SET team2 = '".$neuerName."' WHERE team2 = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."spiele SET team2 = '".$neuerName."' WHERE team2 = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."testspiel_anfragen SET team1_name = '".$neuerName."' WHERE team1_name = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."testspiel_anfragen SET team1_name = '".$neuerName."' WHERE team1_name = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$sql3 = "UPDATE ".$prefix."transfermarkt_leihe SET bieter = '".$neuerName."' WHERE bieter = '".$cookie_teamname."'";
+						$sql3 = "UPDATE ".$prefix."transfermarkt_leihe SET bieter = '".$neuerName."' WHERE bieter = '".$showTeamName."'";
 						$sql4 = mysql_query($sql3) or reportError(mysql_error(), $sql3);
-						$_SESSION['teamname'] = $neuerName;
-						$cookie_teamname = $neuerName;
-						echo addInfoBox('Dein Verein heißt jetzt: '.$neuerName);
+						if ($cookie_teamname == $showTeamName) { // if the name of one's own club was changed
+							$_SESSION['teamname'] = $neuerName; // change the name in the session as well
+							$cookie_teamname = $neuerName; // and for the rest of the current page
+							$showTeamName = $neuerName; // just to be consistent
+							echo addInfoBox('Dein Verein heißt jetzt: '.$neuerName);
+						}
+						else { // if the name of another user's club was changed by the support staff
+							echo addInfoBox($showTeamName.' heißt jetzt: '.$neuerName);
+							$showTeamName = $neuerName; // just to be consistent
+						}
 					}
 				}
 			}
@@ -93,7 +134,7 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 	}
 }
 ?>
-<form action="namensaenderung.php" method="post" accept-charset="utf-8">
+<form action="namensaenderung.php<?php if ($cookie_teamname != $showTeamName) { echo '?team='.urlencode($showTeam); } ?>" method="post" accept-charset="utf-8">
 <p><select name="kuerzel1" size="1" style="width:100px"><option value="">&nbsp;-&nbsp;</option>
 <?php
 foreach ($kuerzelListe as $kuerzel) {
@@ -102,7 +143,7 @@ foreach ($kuerzelListe as $kuerzel) {
 ?>
 </select> <select name="stadt" size="1" style="width:200px">
 <?php
-$sql1 = "SELECT name FROM ".$prefix."ligen WHERE ids = '".$cookie_liga."'";
+$sql1 = "SELECT name FROM ".$prefix."ligen WHERE ids = '".$showTeamLiga."'";
 $sql2 = mysql_query($sql1);
 $sql3 = mysql_fetch_assoc($sql2);
 $land = mysql_real_escape_string(trim(strip_tags(substr($sql3['name'], 0, -2))));
@@ -123,6 +164,7 @@ foreach ($kuerzelListe as $kuerzel) {
 </form>
 <?php } ?>
 <?php } else { ?>
+<h1>Namensänderung</h1>
 <p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

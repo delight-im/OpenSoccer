@@ -6,7 +6,8 @@
 <div><span id="rfooter" style="color:#666; width:820px; margin-left:auto; margin-right:auto; height:55px; text-align:center; font-size:80%; text-decoration:none">
 	<a href="/regeln.php#regeln" rel="nofollow">Regeln</a> |
 	<a href="/impressum.php" rel="nofollow">Impressum</a> |
-	<a href="/regeln.php#datenschutz" rel="nofollow">Datenschutz</a><br />
+	<a href="/regeln.php#datenschutz" rel="nofollow">Datenschutz</a> |
+	<a href="https://github.com/delight-im/Ballmanager">Open Source</a><br />
 	Alle Vereine, Spieler und Sponsoren sind frei erfunden und haben keinen Bezug zu realen Ligen. Das Geld im Spiel ist nur virtuell und es erfolgen niemals Auszahlungen.</span>
 </div>
 <?php

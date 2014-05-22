@@ -64,9 +64,15 @@ if (strlen($_POST['reg_email']) > 0 && strlen($_POST['reg_benutzername']) > 0) {
 					}
 				}
 				$fehler_gemacht = FALSE;
-				echo '<p>Vielen Dank, die Registrierung war erfolgreich! Wir senden Dir nun an die angegebene Adresse eine E-Mail mit Deinem Passwort zu. Mit dem Benutzernamen und dem zugeschickten Passwort kannst Du Dich danach einloggen.</p>';
-				echo '<p>Logge Dich am besten ganz schnell ein - dann kannst Du dir das beste Team sichern! Viel Spaß!</p>';
-				email_senden($email, $username, $password, $last_ip);
+				if ($config_isLocalInstallation) {
+					echo '<p><strong>Dein Passwort lautet:</strong> '.htmlspecialchars($password).'</p>';
+					echo '<p>Du brauchst dieses Passwort unbedingt für den ersten Login. Danach kannst Du es in den Einstellungen ändern, wenn Du möchtest.</p>';
+				}
+				else {
+					echo '<p>Vielen Dank, die Registrierung war erfolgreich! Wir senden Dir nun an die angegebene Adresse eine E-Mail mit Deinem Passwort zu. Mit dem Benutzernamen und dem zugeschickten Passwort kannst Du Dich danach einloggen.</p>';
+					echo '<p>Logge Dich am besten ganz schnell ein - dann kannst Du dir das beste Team sichern! Viel Spaß!</p>';
+					email_senden($email, $username, $password, $last_ip);
+				}
 			}
 		}
     }

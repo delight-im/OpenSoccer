@@ -80,9 +80,9 @@ CREATE TABLE IF NOT EXISTS `man_buchungen` (
   `betrag` decimal(12,2) NOT NULL DEFAULT '0.00',
   `zeit` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `team` (`team`),
-  KEY `verwendungszweck` (`verwendungszweck`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3428049 ;
+  KEY `verwendungszweck` (`verwendungszweck`),
+  KEY `team` (`team`,`zeit`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3435354 ;
 
 CREATE TABLE IF NOT EXISTS `man_buchungenBuffer` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `man_buchungenBuffer` (
   `ausfuehren` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `ausfuehren` (`ausfuehren`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1392401 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1395708 ;
 
 CREATE TABLE IF NOT EXISTS `man_chatroom` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `man_chatroom` (
   `nachricht` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `zeit` (`zeit`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=656825 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=656827 ;
 
 CREATE TABLE IF NOT EXISTS `man_chatroomReportedUsers` (
   `user` varchar(32) NOT NULL,
@@ -128,7 +128,8 @@ CREATE TABLE IF NOT EXISTS `man_chatroom_sperren` (
   `sperreBis` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `sperreBis` (`sperreBis`),
-  KEY `user` (`user`)
+  KEY `user` (`user`),
+  KEY `zeit` (`zeit`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 CREATE TABLE IF NOT EXISTS `man_chats` (
@@ -137,15 +138,18 @@ CREATE TABLE IF NOT EXISTS `man_chats` (
   `zeit` int(11) NOT NULL,
   `nachricht` varchar(250) NOT NULL,
   `liga` varchar(34) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28857 ;
+  PRIMARY KEY (`id`),
+  KEY `zeit` (`zeit`),
+  KEY `selection` (`liga`,`zeit`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28880 ;
 
 CREATE TABLE IF NOT EXISTS `man_chats_markt` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `user` varchar(32) NOT NULL,
   `zeit` int(11) unsigned NOT NULL DEFAULT '0',
   `nachricht` varchar(250) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `zeit` (`zeit`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1706 ;
 
 CREATE TABLE IF NOT EXISTS `man_chats_pokal` (
@@ -153,15 +157,17 @@ CREATE TABLE IF NOT EXISTS `man_chats_pokal` (
   `user` varchar(255) NOT NULL,
   `zeit` int(11) NOT NULL,
   `nachricht` varchar(250) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=191 ;
+  PRIMARY KEY (`id`),
+  KEY `zeit` (`zeit`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=192 ;
 
 CREATE TABLE IF NOT EXISTS `man_chats_tests` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `user` varchar(32) NOT NULL,
   `zeit` int(11) unsigned NOT NULL DEFAULT '0',
   `nachricht` varchar(250) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `zeit` (`zeit`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1602 ;
 
 CREATE TABLE IF NOT EXISTS `man_compensations` (
@@ -203,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `man_eloBuffer` (
   `ausfuehren` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `ausfuehren` (`ausfuehren`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=406389 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=408559 ;
 
 CREATE TABLE IF NOT EXISTS `man_forum_beitraege` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -251,7 +257,8 @@ CREATE TABLE IF NOT EXISTS `man_freunde` (
   `f2` varchar(32) NOT NULL,
   `typ` enum('F','B') NOT NULL DEFAULT 'F',
   `sortOrder` tinyint(4) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`f1`,`f2`)
+  PRIMARY KEY (`f1`,`f2`),
+  KEY `selection` (`f1`,`typ`,`sortOrder`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `man_freunde_anfragen` (
@@ -302,7 +309,7 @@ CREATE TABLE IF NOT EXISTS `man_licenseTasks_Completed` (
   `user` varchar(34) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `taskID` (`user`,`task`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8168 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8170 ;
 
 CREATE TABLE IF NOT EXISTS `man_ligaChangeAnfragen` (
   `vonTeam` varchar(32) NOT NULL,
@@ -330,7 +337,9 @@ CREATE TABLE IF NOT EXISTS `man_ligaChangeWuensche` (
   `landNoch` varchar(255) NOT NULL,
   `landWunsch` varchar(255) NOT NULL,
   `zeit` int(10) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`teamID`)
+  PRIMARY KEY (`teamID`),
+  KEY `zeit` (`zeit`),
+  KEY `landWunsch` (`landWunsch`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `man_ligen` (
@@ -355,7 +364,8 @@ CREATE TABLE IF NOT EXISTS `man_ligen` (
   KEY `runter` (`runter`),
   KEY `pkt_gesamt` (`pkt_gesamt`),
   KEY `land` (`land`),
-  KEY `lastCupSelection` (`lastCupSelection`)
+  KEY `lastCupSelection` (`lastCupSelection`),
+  KEY `name` (`name`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
 
 CREATE TABLE IF NOT EXISTS `man_loginLog` (
@@ -381,7 +391,8 @@ CREATE TABLE IF NOT EXISTS `man_lotto_gewinner` (
   `summe` decimal(12,2) unsigned NOT NULL,
   `richtige` tinyint(1) unsigned NOT NULL DEFAULT '0',
   KEY `summe` (`summe`),
-  KEY `zeit` (`zeit`)
+  KEY `zeit` (`zeit`),
+  KEY `richtige` (`richtige`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `man_lotto_tipps` (
@@ -439,7 +450,7 @@ CREATE TABLE IF NOT EXISTS `man_php_fehler` (
   `zeit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `datei` (`datei`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 CREATE TABLE IF NOT EXISTS `man_pn` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -455,9 +466,9 @@ CREATE TABLE IF NOT EXISTS `man_pn` (
   `in_reply_to` varchar(32) NOT NULL,
   PRIMARY KEY (`ids`),
   UNIQUE KEY `id` (`id`),
-  KEY `von` (`von`),
-  KEY `an` (`an`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=105836 ;
+  KEY `an` (`an`,`geloescht_an`,`gelesen`,`zeit`),
+  KEY `von` (`von`,`geloescht_von`,`zeit`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=105876 ;
 
 CREATE TABLE IF NOT EXISTS `man_pokalsieger` (
   `saison` tinyint(1) NOT NULL,
@@ -504,8 +515,9 @@ CREATE TABLE IF NOT EXISTS `man_protokoll` (
   `typ` varchar(255) NOT NULL,
   `zeit` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `team` (`team`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2086064 ;
+  KEY `selection_without_filter` (`team`,`zeit`),
+  KEY `selection_with_filter` (`team`,`typ`,`zeit`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2089845 ;
 
 CREATE TABLE IF NOT EXISTS `man_referrals` (
   `werber` varchar(32) NOT NULL,
@@ -546,13 +558,15 @@ CREATE TABLE IF NOT EXISTS `man_spiele` (
   `simulationError` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `kombination` (`team1`(166),`team2`(166)),
-  KEY `typ` (`typ`),
   KEY `datum` (`datum`),
   KEY `kennung` (`kennung`),
   KEY `land` (`land`),
   KEY `simuliert` (`simuliert`),
-  KEY `team2` (`team2`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7884 ;
+  KEY `team2` (`team2`),
+  KEY `typ_land` (`typ`,`land`),
+  KEY `typ_simuliert` (`typ`,`simuliert`),
+  KEY `liga` (`liga`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7922 ;
 
 CREATE TABLE IF NOT EXISTS `man_spieler` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -590,22 +604,22 @@ CREATE TABLE IF NOT EXISTS `man_spieler` (
   `pokalNurFuer` varchar(32) NOT NULL,
   `moral` decimal(5,2) NOT NULL DEFAULT '100.00',
   PRIMARY KEY (`id`),
-  KEY `team` (`team`),
-  KEY `marktwert` (`marktwert`),
   KEY `position` (`position`),
   KEY `liga` (`liga`),
   KEY `ids` (`ids`),
   KEY `transfermarkt` (`transfermarkt`),
-  KEY `leiher` (`leiher`),
-  KEY `vertrag` (`vertrag`),
   KEY `spiele_gesamt` (`spiele_gesamt`),
   KEY `wiealt` (`wiealt`),
   KEY `staerke` (`staerke`),
   KEY `tore` (`tore`),
   KEY `verletzung` (`verletzung`),
   KEY `moral` (`moral`),
-  KEY `frische` (`frische`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=367638 ;
+  KEY `frische` (`frische`),
+  KEY `vertrag_team` (`vertrag`,`team`),
+  KEY `team_position` (`team`,`position`),
+  KEY `marktwert_wiealt` (`marktwert`,`wiealt`),
+  KEY `leiher_praemieProEinsatz` (`leiher`,`praemieProEinsatz`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=368262 ;
 
 CREATE TABLE IF NOT EXISTS `man_spielerEntwicklung` (
   `team` varchar(32) NOT NULL,
@@ -631,8 +645,8 @@ CREATE TABLE IF NOT EXISTS `man_spiele_kommentare` (
   `kommentar` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `minute` (`minute`),
-  KEY `spiel` (`spiel`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=159328 ;
+  KEY `spiel_minute` (`spiel`,`minute`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=197606 ;
 
 CREATE TABLE IF NOT EXISTS `man_spielplan` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -681,7 +695,8 @@ CREATE TABLE IF NOT EXISTS `man_stadien` (
   `fanshop` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `team` (`team`),
-  KEY `plaetze` (`plaetze`)
+  KEY `plaetze` (`plaetze`),
+  KEY `ids` (`ids`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=833 ;
 
 CREATE TABLE IF NOT EXISTS `man_supplyDemandPrices` (
@@ -699,8 +714,8 @@ CREATE TABLE IF NOT EXISTS `man_supportComments` (
   `deleted` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `likes` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `requestID` (`requestID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8796 ;
+  KEY `requestID_zeit` (`requestID`,`zeit`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8829 ;
 
 CREATE TABLE IF NOT EXISTS `man_supportLikes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -710,7 +725,7 @@ CREATE TABLE IF NOT EXISTS `man_supportLikes` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `kombination` (`userID`,`commentID`),
   KEY `requestID` (`commentID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2830 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2845 ;
 
 CREATE TABLE IF NOT EXISTS `man_supportRead` (
   `userID` varchar(32) NOT NULL,
@@ -734,8 +749,9 @@ CREATE TABLE IF NOT EXISTS `man_supportRequests` (
   PRIMARY KEY (`id`),
   KEY `abfrageSortierung` (`visibilityLevel`,`open`,`lastAction`),
   KEY `author` (`author`),
+  KEY `throttling` (`timeAdded`,`author`),
   FULLTEXT KEY `description` (`description`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=817 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=819 ;
 
 CREATE TABLE IF NOT EXISTS `man_supportUsers` (
   `userID` varchar(32) NOT NULL,
@@ -858,7 +874,13 @@ CREATE TABLE IF NOT EXISTS `man_teams` (
   KEY `konto` (`konto`),
   KEY `rank` (`rank`),
   KEY `letzte_jugend` (`letzte_jugend`),
-  KEY `elo` (`elo`)
+  KEY `elo` (`elo`),
+  KEY `vorjahr_liga` (`vorjahr_liga`),
+  KEY `vorjahr_pokalrunde` (`vorjahr_pokalrunde`),
+  KEY `punkte` (`punkte`),
+  KEY `cuprunde` (`cuprunde`),
+  KEY `tv_ein` (`tv_ein`),
+  KEY `pokalrunde` (`pokalrunde`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=844 ;
 
 CREATE TABLE IF NOT EXISTS `man_testspiel_anfragen` (
@@ -869,7 +891,8 @@ CREATE TABLE IF NOT EXISTS `man_testspiel_anfragen` (
   `zeit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`team1`,`team2`),
   KEY `team2` (`team2`),
-  KEY `datum` (`datum`)
+  KEY `datum` (`datum`),
+  KEY `team1_name` (`team1_name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `man_transfermarkt` (
@@ -884,7 +907,8 @@ CREATE TABLE IF NOT EXISTS `man_transfermarkt` (
   `sofortkauf` int(11) unsigned NOT NULL DEFAULT '999999999',
   `autorestart` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`spieler`),
-  KEY `ende` (`ende`)
+  KEY `ende` (`ende`),
+  KEY `besitzer` (`besitzer`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `man_transfermarkt_leihe` (
@@ -922,8 +946,9 @@ CREATE TABLE IF NOT EXISTS `man_transfers` (
   UNIQUE KEY `duplikateVermeiden` (`spieler`,`datum`),
   KEY `besitzer` (`besitzer`),
   KEY `bieter` (`bieter`),
-  KEY `datum` (`datum`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=434 ;
+  KEY `datum` (`datum`),
+  KEY `gebot` (`gebot`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=501 ;
 
 CREATE TABLE IF NOT EXISTS `man_transfers_gebote` (
   `spieler` varchar(32) NOT NULL,
@@ -948,7 +973,9 @@ CREATE TABLE IF NOT EXISTS `man_transfers_old` (
   `damaligeStaerke` decimal(2,1) unsigned NOT NULL DEFAULT '0.0',
   KEY `besitzer` (`besitzer`),
   KEY `bieter` (`bieter`),
-  KEY `datum` (`datum`)
+  KEY `datum` (`datum`),
+  KEY `gebot` (`gebot`),
+  KEY `spieler` (`spieler`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `man_urlaub` (
@@ -1002,13 +1029,14 @@ CREATE TABLE IF NOT EXISTS `man_users` (
   KEY `last_login` (`last_login`),
   KEY `cheated` (`cheated`),
   KEY `verwarnt` (`verwarnt`),
-  KEY `last_login_2` (`last_login`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23140 ;
+  KEY `last_chat` (`last_chat`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23142 ;
 
 CREATE TABLE IF NOT EXISTS `man_users_mds` (
   `manager` varchar(32) NOT NULL,
   `voter` varchar(32) NOT NULL,
-  PRIMARY KEY (`voter`)
+  PRIMARY KEY (`voter`),
+  KEY `manager` (`manager`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `man_users_mds_sieger` (
@@ -1060,7 +1088,8 @@ CREATE TABLE IF NOT EXISTS `man_vNameChanges` (
   `vonName` varchar(255) NOT NULL,
   `zuName` varchar(255) NOT NULL,
   `sperre` tinyint(1) unsigned NOT NULL DEFAULT '1',
-  KEY `zeit` (`zeit`)
+  KEY `zeit` (`zeit`),
+  KEY `team` (`team`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `man_vNameOriginals` (

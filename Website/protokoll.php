@@ -1,10 +1,30 @@
 <?php include 'zz1.php'; ?>
 <title>Protokoll | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Protokoll</h1>
 <?php if ($loggedin == 1) { ?>
 <?php
+$showTeam = mysql_real_escape_string(trim(strip_tags($cookie_team)));
+$showTeamName = mysql_real_escape_string(trim(strip_tags($cookie_teamname)));
+if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
+	if (isset($_GET['team'])) {
+		$showTeam = mysql_real_escape_string(trim(strip_tags($_GET['team'])));
+		$showTeamName1 = "SELECT name, liga FROM ".$prefix."teams WHERE ids = '".$showTeam."'";
+		$showTeamName2 = mysql_query($showTeamName1);
+		if (mysql_num_rows($showTeamName2) == 0) { exit; }
+		$showTeamName3 = mysql_fetch_assoc($showTeamName2);
+		$showTeamName = mysql_real_escape_string(trim(strip_tags($showTeamName3['name'])));
+	}
+}
+
+if ($showTeam == $cookie_team) { // if the event log for one's own club is to be shown
+	echo '<h1>Protokoll</h1>';
+}
+else { // if the event log for another user's club is to be shown by the support staff
+	echo '<h1>Protokoll für '.htmlspecialchars($showTeamName).'</h1>';
+}
+
 setTaskDone('check_logs');
+
 $filterTypes = array('Spieler', 'Finanzen', 'Termine', 'Transfers', 'Verletzung', 'Stadion', 'Assistenten');
 $filterSQL = "";
 $filterGET = '';
@@ -38,12 +58,6 @@ if (isset($_GET['filter'])) {
 </thead>
 <tbody>
 <?php
-$showTeam = mysql_real_escape_string(trim(strip_tags($cookie_team)));
-if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
-	if (isset($_GET['team'])) {
-		$showTeam = mysql_real_escape_string(trim(strip_tags($_GET['team'])));
-	}
-}
 $delOld_Timeout = getTimestamp('-28 days');
 $delOld1 = "DELETE FROM ".$prefix."protokoll WHERE team = '".$showTeam."' AND zeit < ".$delOld_Timeout;
 $delOld2 = mysql_query($delOld1);
@@ -84,6 +98,7 @@ if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$
 echo '</div>';
 ?>
 <?php } else { ?>
+<h1>Protokoll</h1>
 <p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

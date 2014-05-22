@@ -70,83 +70,6 @@ if (isset($_POST['urlaub_abbrechen']) && $cookie_id != DEMO_USER_ID) {
 		echo addInfoBox('Dein Urlaub wurde abgebrochen. Du hast nun wieder die volle Kontrolle über Dein Team.');
 	}
 }
-if (isset($_POST['teamChangeCodeOut']) && $_SESSION['multiSperre'] == 0 && $cookie_id != DEMO_USER_ID) {
-	$timeout = getTimestamp('-28 days');
-	$getRegdate1 = "SELECT COUNT(*) FROM ".$prefix."teamChanges WHERE (team1 = '".$cookie_team."' OR team2 = '".$cookie_team."') AND zeit > ".$timeout;
-	$getRegdate2 = mysql_query($getRegdate1);
-	$getRegdate3 = mysql_result($getRegdate2, 0);
-	if ($getRegdate3 == 0) {
-		$getRegdate1 = "SELECT regdate FROM ".$prefix."users WHERE ids = '".$cookie_id."'";
-		$getRegdate2 = mysql_query($getRegdate1);
-		$getRegdate3 = mysql_fetch_assoc($getRegdate2);
-		$regSince = (time()-$getRegdate3['regdate'])/3600/24;
-		if ($regSince > 28) {
-			$newTeamChangeCodeOut = md5($cookie_id.time()).md5(mt_rand(1000, 9999));
-			$teamChangeCodeUp1 = "INSERT INTO ".$prefix."teamChangeCodes (team, code, gueltigBis) VALUES ('".$cookie_team."', '".$newTeamChangeCodeOut."', ".getTimestamp('+1 hour').") ON DUPLICATE KEY UPDATE code = '".$newTeamChangeCodeOut."', gueltigBis = ".getTimestamp('+1 hour');
-			$teamChangeCodeUp2 = mysql_query($teamChangeCodeUp1);
-			echo addInfoBox('Neuer Code erstellt: '.$newTeamChangeCodeOut);
-		}
-		else {
-			echo addInfoBox('Du musst schon mindestens 28 Tage dabei sein, um diese Funktion nutzen zu können.');
-		}
-	}
-	else {
-		echo addInfoBox('Du kannst nur alle 28 Tage Dein Team tauschen. Bitte habe noch etwas Geduld.');
-	}
-}
-if (isset($_POST['teamChangeCodeIn']) && $_SESSION['multiSperre'] == 0 && $cookie_id != DEMO_USER_ID) {
-	$timeout = getTimestamp('-28 days');
-	$getRegdate1 = "SELECT COUNT(*) FROM ".$prefix."teamChanges WHERE (team1 = '".$cookie_team."' OR team2 = '".$cookie_team."') AND zeit > ".$timeout;
-	$getRegdate2 = mysql_query($getRegdate1);
-	$getRegdate3 = mysql_result($getRegdate2, 0);
-	if ($getRegdate3 == 0) {
-		$newTeamChangeCodeIn = mysql_real_escape_string(trim(strip_tags($_POST['teamChangeCodeIn'])));
-		if (strlen($newTeamChangeCodeIn) == 64) {
-			$teamChangeCodeUp1 = "SELECT team FROM ".$prefix."teamChangeCodes WHERE code = '".$newTeamChangeCodeIn."' AND gueltigBis > ".time();
-			$teamChangeCodeUp2 = mysql_query($teamChangeCodeUp1);
-			if (mysql_num_rows($teamChangeCodeUp2) == 1) {
-				$teamChangeCodeUp3 = mysql_fetch_assoc($teamChangeCodeUp2);
-				if ($teamChangeCodeUp3['team'] != $cookie_team) {
-					if (strlen($teamChangeCodeUp3['team']) == 32) {
-						$teamChangeSwitch1 = "UPDATE ".$prefix."users SET team = '__".$cookie_id."' WHERE ids = '".$cookie_id."'";
-						$teamChangeSwitch2 = mysql_query($teamChangeSwitch1);
-						$teamChangeSwitch1 = "UPDATE ".$prefix."users SET team = '".$cookie_team."' WHERE team = '".$teamChangeCodeUp3['team']."'";
-						$teamChangeSwitch2 = mysql_query($teamChangeSwitch1);
-						$teamChangeSwitch1 = "UPDATE ".$prefix."users SET team = '".$teamChangeCodeUp3['team']."' WHERE ids = '".$cookie_id."'";
-						$teamChangeSwitch2 = mysql_query($teamChangeSwitch1);
-						$teamChangeDel1 = "DELETE FROM ".$prefix."teamChangeCodes WHERE code = '".$newTeamChangeCodeIn."'";
-						$teamChangeDel2 = mysql_query($teamChangeDel1);
-						$teamChangeIn1 = "INSERT INTO ".$prefix."teamChanges (team1, team2, zeit) VALUES ('".$teamChangeCodeUp3['team']."', '".$cookie_team."', ".time().")";
-						$teamChangeIn2 = mysql_query($teamChangeIn1);
-						// VARIABLEN RESET UM AKTIONEN MIT FALSCHEM TEAM ZU VERMEIDEN ANFANG
-						$_SESSION['loggedin'] = 0;
-						$loggedin = 0;
-						$_SESSION['team'] = '';
-						$cookie_team = '';
-						$_SESSION['teamname'] = '';
-						$cookie_teamname = '';
-						// VARIABLEN RESET UM AKTIONEN MIT FALSCHEM TEAM ZU VERMEIDEN ENDE
-						$teamChangeLig1 = "UPDATE ".$prefix."users SET liga = (SELECT liga FROM ".$prefix."teams WHERE ids = ".$prefix."users.team)";
-						$teamChangeLig2 = mysql_query($teamChangeLig1);
-						echo addInfoBox('Eure Teams wurden getauscht. Bitte <a href="/logout.php">logge Dich neu ein</a>!');
-					}
-				}
-				else {
-					echo addInfoBox('Du kannst nicht Deinen eigenen Code eingeben. Der Code muss von einem anderen Manager kommen.');
-				}
-			}
-			else {
-				echo addInfoBox('Der eingegebene Code wurde nicht gefunden oder ist abgelaufen (1h).');
-			}
-		}
-		else {
-			echo addInfoBox('Du musst einen 64-stelligen Code eingeben, damit der Team-Tausch durchgeführt werden kann.');
-		}
-	}
-	else {
-		echo addInfoBox('Du kannst nur alle 28 Tage Dein Team tauschen. Bitte habe noch etwas Geduld.');
-	}
-}
 if (isset($_POST['pw_alt']) && isset($_POST['pw_neu1']) && isset($_POST['pw_neu2']) && $cookie_id != DEMO_USER_ID) {
 $pw_meldung = 'Dein Passwort konnte leider nicht geändert werden. Bitte versuche es noch einmal!';
 	$pw_alt = trim($_POST['pw_alt']);
@@ -308,20 +231,6 @@ for ($i = $start_urlaub; $i <= $noch_urlaub; $i++) {
 </form>
 <?php } ?>
 <?php } ?>
-<?php } ?>
-
-<?php if ($cookie_team != '__'.$cookie_id && $_SESSION['multiSperre'] == 0) { ?>
-<h1>Code für den Team-Tausch</h1>
-<p>Hier kannst du einen 64-stelligen Code erzeugen lassen, der eine Stunde lang gültig ist. Gib diesen Code dann an einen anderen Manager weiter. Sobald er ihn an dieser Stelle bei sich eingibt, werden eure Teams - mit allem, was dazu gehört - getauscht.</p>
-<p><strong>Code erzeugen:</strong> nur Bigpoint-User<br /><strong>Code eingeben:</strong> alle User<br /></p>
-<?php if ($_SESSION['status'] != 'Benutzer') { ?>
-<form action="/einstellungen.php" method="post" accept-charset="utf-8">
-<p>Code zum Versenden:<br /><input type="hidden" name="teamChangeCodeOut" value="" /> <input type="submit" value="Code erzeugen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
-</form>
-<?php } ?>
-<form action="/einstellungen.php" method="post" accept-charset="utf-8">
-<p>Empfangener Code:<br /><input type="text" name="teamChangeCodeIn" value="" size="50" /> <input type="submit" value="Teams tauschen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
-</form>
 <?php } ?>
 
 <h1>Passwort ändern</h1>

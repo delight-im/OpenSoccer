@@ -26,7 +26,18 @@ $sql3 = mysql_fetch_assoc($sql2);
 </style>
 <?php include 'zz2.php'; ?>
 <h1>Team: <?php echo $sql3['name']; ?></h1>
-<p style="text-align:right"><?php if ($loggedin == 1) { if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') { echo '<a href="/protokoll.php?team='.$clearid.'" class="pagenava">Protokoll ansehen</a> '; } } ?><a href="/lig_transfers.php?team=<?php echo $clearid; ?>" class="pagenava">Transfers dieses Teams</a> <a href="/kalender.php?team=<?php echo $clearid; ?>" class="pagenava">Zum Spielplan</a></p>
+	<?php
+	if ($loggedin == 1 && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) {
+		echo '<p style="text-align:right">';
+		echo '<a href="/namensaenderung.php?team='.$clearid.'" class="pagenava">Vereinsnamen ändern</a>';
+		echo '<a href="/protokoll.php?team='.$clearid.'" class="pagenava">Protokoll ansehen</a>';
+		echo '</p>';
+	}
+	?>
+<p style="text-align:right">
+	<a href="/lig_transfers.php?team=<?php echo $clearid; ?>" class="pagenava">Transfers dieses Teams</a>
+	<a href="/kalender.php?team=<?php echo $clearid; ?>" class="pagenava">Zum Spielplan</a>
+</p>
 <?php if ($loggedin == 1) { ?>
 <p>
 <table>

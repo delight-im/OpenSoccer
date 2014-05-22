@@ -1,5 +1,7 @@
 <?php
 if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+define('COMPUTER_MINIMUM_KONTOSTAND', 20000000);
+
 $in_14_tagen = endOfDay(getTimestamp('+14 days'));
 $ligaToKlasse = array();
 $lig1a = "SELECT ids, name FROM ".$prefix."ligen";
@@ -7,18 +9,30 @@ $lig1b = mysql_query($lig1a);
 while ($lig1c = mysql_fetch_assoc($lig1b)) {
 	$ligaToKlasse[$lig1c['ids']] = substr($lig1c['name'], -1);
 }
+
+$demoTeamID1 = "SELECT team FROM ".$prefix."users WHERE ids = '".DEMO_USER_ID."'";
+$demoTeamID2 = mysql_query($demoTeamID1);
+$sqlIsDemoTeam = "";
+if (mysql_num_rows($demoTeamID2) == 1) {
+	$demoTeamID3 = mysql_result($demoTeamID2, 0);
+	$sqlIsDemoTeam = " OR ids = '".mysql_real_escape_string($demoTeamID3)."'";
+}
+
 $urlaub1 = "SELECT user, team FROM ".$prefix."urlaub WHERE ende > ".time();
 $urlaub2 = mysql_query($urlaub1);
 $urlaub_string = "('LEER', ";
 $beurlaubte_teams = array();
 while ($urlaub3 = mysql_fetch_assoc($urlaub2)) {
-	$urlaub_string .= "'".$urlaub3['user']."', ";
-	$beurlaubte_teams[] = $urlaub3['team'];
+	if ($urlaub3['user'] != DEMO_USER_ID) {
+		$urlaub_string .= "'".$urlaub3['user']."', ";
+		$beurlaubte_teams[] = $urlaub3['team'];
+	}
 }
 $urlaub_string = substr($urlaub_string, 0, -2);
 $urlaub_string .= ")";
-$sql1 = "SELECT name, ids, liga FROM ".$prefix."teams WHERE ids NOT IN (SELECT team FROM ".$prefix."users WHERE ids NOT IN ".$urlaub_string.") ORDER BY last_managed ASC LIMIT 0, 8";
+$sql1 = "SELECT name, ids, liga FROM ".$prefix."teams WHERE ids NOT IN (SELECT team FROM ".$prefix."users WHERE ids NOT IN ".$urlaub_string.")".$sqlIsDemoTeam." ORDER BY last_managed ASC LIMIT 0, 8";
 $sql2 = mysql_query($sql1);
+
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$limit_staerke = " AND staerke < 8.0";
 	if (isset($ligaToKlasse[$sql3['liga']])) {
@@ -85,8 +99,12 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$sql4 = "UPDATE ".$prefix."spieler SET startelf_Liga = 1, startelf_Pokal = 1, startelf_Cup = 1 WHERE team = '".$sql3['ids']."' AND position = 'S' AND verletzung = 0 ORDER BY (staerke*frische) DESC LIMIT 2";
 	$sql4 = mysql_query($sql4);
 	// SPIELER AUSWAEHLEN ENDE
-    $lastm1 = "UPDATE ".$prefix."teams SET last_managed = ".time()." WHERE ids = '".$sql3['ids']."'";
-    $lastm2 = mysql_query($lastm1);
+	if (!in_array($sql3['ids'], $beurlaubte_teams)) { // nur bei Computer-Teams
+		$lastm1 = "UPDATE ".$prefix."teams SET konto = ".COMPUTER_MINIMUM_KONTOSTAND." WHERE ids = '".$sql3['ids']."' AND konto < ".COMPUTER_MINIMUM_KONTOSTAND;
+		$lastm2 = mysql_query($lastm1);
+	}
+	$lastm1 = "UPDATE ".$prefix."teams SET last_managed = ".time()." WHERE ids = '".$sql3['ids']."'";
+	$lastm2 = mysql_query($lastm1);
 }
 // TAKTIKEN ZURUECKSETZEN ANFANG
 $tr1 = "UPDATE ".$prefix."taktiken SET ausrichtung = DEFAULT, geschw_auf = DEFAULT, pass_auf = DEFAULT, risk_pass = DEFAULT, druck = 1, aggress = 1 WHERE team NOT IN (SELECT team FROM ".$prefix."users)";

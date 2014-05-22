@@ -115,14 +115,17 @@ if ($cookie_team != '__'.$cookie_id) {
 		?>
 	</a></td></tr>
 	<?php
-	$daysUntilNextYouth = intval($cookie_spieltag % 3);
-	switch ($daysUntilNextYouth) {
-		case 2: $nextYouth = 'morgen'; $nextYouthDay = $cookie_spieltag+1; break;
-		case 1: $nextYouth = 'übermorgen'; $nextYouthDay = $cookie_spieltag+2; break;
-		case 0: $nextYouth = 'heute'; $nextYouthDay = $cookie_spieltag; break;
+	if ($cookie_spieltag < 22) {
+		$daysUntilNextYouth = intval($cookie_spieltag % 3);
+		switch ($daysUntilNextYouth) {
+			case 2: $nextYouth = 'morgen'; $nextYouthDay = $cookie_spieltag+1; break;
+			case 1: $nextYouth = 'übermorgen'; $nextYouthDay = $cookie_spieltag+2; break;
+			case 0: $nextYouth = 'heute'; $nextYouthDay = $cookie_spieltag; break;
+		}
 	}
-	if ($nextYouthDay > 22) {
-		$nextYouthDay -= 21; // nach Spieler am 21. Spieltag kommt der nächste am 3. Spieltag der neuen Saison
+	else {
+		$nextYouth = 'in drei Tagen';
+		$nextYouthDay = 3;
 	}
 	echo '<tr><td>Nächster Jugendspieler</td><td>'.$nextYouth.' (Spieltag '.$nextYouthDay.')</td></tr>';
 	?>

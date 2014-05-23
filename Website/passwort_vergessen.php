@@ -71,7 +71,7 @@ $nachricht .= '
 if($config['PHP_MAILER']){
 	require './phpmailer/PHPMailerAutoload.php';
 	$mail = new PHPMailer(); // create a new object
-	$mail->CharSet		= $config['SMTP_CHARSET']=;
+	$mail->CharSet = $config['SMTP_CHARSET'];
 	$mail->IsSMTP();
 	$mail->SMTPAuth = $config['SMTP_AUTH'];
 	$mail->SMTPSecure = $config['SMTP_SECURE'];

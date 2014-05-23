@@ -8,10 +8,11 @@ if (!isset($_POST['reg_email']) OR !isset($_POST['reg_benutzername'])) { exit; }
 <h1>Registriert</h1>
 <?php
 function email_senden($email, $username, $password, $activeIP='0.0.0.0') {
+    global $config;
 	$empfaenger = $email;
 	$betreff = 'Ballmanager: Willkommen';
 	$nachricht = "Hallo ".$username.",\n\nDu hast Dich erfolgreich auf www.ballmanager.de registriert. Bitte logge Dich jetzt mit Deinen Benutzerdaten ein, um Deinen Account zu aktivieren. Und dann kann es auch schon losgehen ...\n\nDamit Du Dich anmelden kannst, findest Du hier noch einmal Deine Benutzerdaten:\n\nE-Mail: ".$email."\nBenutzername: ".$username."\nPasswort: ".$password."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
-	if($config['PHP_MAILER']){
+	if ($config['PHP_MAILER']) {
 		require './phpmailer/PHPMailerAutoload.php';
 		$mail = new PHPMailer(); // create a new object
 		$mail->CharSet= $config['SMTP_CHARSET'];

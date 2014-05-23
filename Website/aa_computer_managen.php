@@ -53,6 +53,8 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 				$limit_staerke = " AND staerke < 3.9";
 				$kick_limit_staerke = "staerke > 3.9";
 				break;
+            default:
+                throw new Exception('Unknown league: '.$ligaToKlasse[$sql3['liga']]);
 		}
 	}
 	$moralSQL = "";

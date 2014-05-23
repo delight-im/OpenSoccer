@@ -64,7 +64,7 @@ if (strlen($_POST['reg_email']) > 0 && strlen($_POST['reg_benutzername']) > 0) {
 					}
 				}
 				$fehler_gemacht = FALSE;
-				if ($config_isLocalInstallation) {
+				if ($config['isLocalInstallation']) {
 					echo '<p><strong>Dein Passwort lautet:</strong> '.htmlspecialchars($password).'</p>';
 					echo '<p>Du brauchst dieses Passwort unbedingt für den ersten Login. Danach kannst Du es in den Einstellungen ändern, wenn Du möchtest.</p>';
 				}

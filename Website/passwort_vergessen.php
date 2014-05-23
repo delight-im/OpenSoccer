@@ -3,6 +3,7 @@
 <title>Passwort vergessen | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php
+$showPasswordResetForm = true;
 $timeout = getTimestamp('-5 hours');
 $ou1 = "DELETE FROM ".$prefix."users_newpw WHERE zeit < ".$timeout;
 $ou2 = mysql_query($ou1);
@@ -17,6 +18,8 @@ if (isset($_GET['e']) && isset($_GET['k'])) {
 		$in2 = mysql_query($in1);
 		$in1 = "DELETE FROM ".$prefix."users_newpw WHERE user = '".$ou3['user']."'";
 		$in2 = mysql_query($in1);
+
+        $showPasswordResetForm = false;
 		echo addInfoBox('Dein neues Passwort wurde aktiviert. Du kannst Dich jetzt damit einloggen.');
 	}
 	else {
@@ -86,10 +89,11 @@ if($config['PHP_MAILER']){
 	$mail->Send();
 }
 else{
-	$header = "From: Ballmanager <system@ballmanager.de>\r\nContent-type: text/plain; charset=UTF-8";
+	$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=UTF-8";
 	mail($empfaenger, $betreff, $nachricht, $header);
 }
 // E-MAIL VERSENDEN
+                $showPasswordResetForm = false;
 				echo addInfoBox('Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren Informationen zu.');
 			} // if in2 == FALSE
 		}
@@ -100,10 +104,12 @@ else{
 }
 ?>
 <h1>Passwort vergessen</h1>
+<?php if ($showPasswordResetForm) { ?>
 <p>Du hast Dein Passwort vergessen? Dann gib hier bitte einfach die E-Mail-Adresse ein, mit der Du Dich registriert hast. Wir schicken Dir dann eine E-Mail mit weiteren Informationen, damit Du ein neues Passwort wählen kannst.<br />
 <i>Wichtig:</i> Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang gültig. Danach musst Du die E-Mail erneut anfordern.</p>
 <form method="post" action="/passwort_vergessen.php" accept-charset="utf-8">
 <p>E-Mail-Adresse:<br /><input type="text" name="email" id="email" style="width:200px" /></p>
 <p><input type="submit" value="Anfordern" /></p>
 </form>
+<?php } ?>
 <?php include 'zz3.php'; ?>

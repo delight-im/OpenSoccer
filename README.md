@@ -10,6 +10,31 @@ Demo: http://www.ballmanager.de/
  2. Set up an empty MySQL database
  3. Run the SQL from [Database/STRUCTURE.sql](Database/STRUCTURE.sql) to create the database structure
  4. Edit [Website/config.example.php](Website/config.example.php) so that it matches your installation and rename it to `Website/config.php`
+ 5. Set up all the cron jobs listed below
+
+## Cron jobs
+
+ * [Website/aa_buchungenBuffer.php](Website/aa_buchungenBuffer.php): every 10 minutes; except for hours 10-11, 14-15, 18-19 and 22-23
+ * [Website/aa_computer_managen.php](Website/aa_computer_managen.php): every 10 minutes
+ * [Website/aa_cup_auslosen.php](Website/aa_cup_auslosen.php): every 30 minutes
+ * [Website/aa_db_analyse.php](Website/aa_db_analyse.php): every day
+ * [Website/aa_entlassungen.php](Website/aa_entlassungen.php): every hour
+ * [Website/aa_gehaelter_abbuchen.php](Website/aa_gehaelter_abbuchen.php): every day
+ * [Website/aa_lotto.php](Website/aa_lotto.php): every day
+ * [Website/aa_marktwert_berechnen.php](Website/aa_marktwert_berechnen.php): every 5 minutes
+ * [Website/aa_multi_detect.php](Website/aa_multi_detect.php): every 5 minutes
+ * [Website/aa_npc_transfermarkt.php](Website/aa_npc_transfermarkt.php): every 15 minutes
+ * [Website/aa_pokal_auslosen.php](Website/aa_pokal_auslosen.php): every 6 hours
+ * [Website/aa_praemienAbrechnung.php](Website/aa_praemienAbrechnung.php): every 15 minutes
+ * [Website/aa_saisonende.php](Website/aa_saisonende.php): every day; at hour 22
+ * [Website/aa_spieler_erzeugen.php](Website/aa_spieler_erzeugen.php): every 30 minutes
+ * [Website/aa_spieler_verbesserung.php](Website/aa_spieler_verbesserung.php): every 15 minutes
+ * [Website/aa_spielplan_erstellen.php](Website/aa_spielplan_erstellen.php): every day; at hour 23
+ * [Website/aa_spieltag_simulation.php?v=1](Website/aa_spieltag_simulation.php?v=1): every minute; at hours 10-11, 14-15, 18-19 and 22-23
+ * [Website/aa_stadion_kosten.php](Website/aa_stadion_kosten.php): every day; at hour 23
+ * [Website/aa_tabellen_berechnen.php](Website/aa_tabellen_berechnen.php): every 2 minutes; at hours 16-17
+ * [Website/aa_team_staerke_berechnen.php](Website/aa_team_staerke_berechnen.php): every 5 minutes
+ * [Website/aa_tv_einnahmen.php](Website/aa_tv_einnahmen.php): every 6 hours
 
 ## Contributing
 

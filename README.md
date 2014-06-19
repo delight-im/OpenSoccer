@@ -2,6 +2,15 @@
 
 Online soccer manager
 
+Demo: http://www.ballmanager.de/
+
+## Setup
+
+ 1. Put the PHP files up on a web server
+ 2. Set up an empty MySQL database
+ 3. Run the SQL from [Database/STRUCTURE.sql](Database/STRUCTURE.sql) to create the database structure
+ 4. Edit [Website/config.example.php](Website/config.example.php) so that it matches your installation and rename it to `Website/config.php`
+
 ## Contributing
 
 Any contributions are welcome :) Please fork this repository, apply your changes, and submit your contributions by sending a pull request.

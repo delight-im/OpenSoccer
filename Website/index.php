@@ -100,8 +100,8 @@ if ($cookie_team != '__'.$cookie_id) {
 	<tr><td>Kontostand</td><td<?php if ($vd3['konto'] < 0) { echo ' style="color:red"'; } ?>><?php echo showKontostand($vd3['konto']); ?> €</td></tr>
 	<tr class="odd"><td>Einsatz in Auktionen</td><td><?php echo number_format($einsatzAuk, 0, ',', '.'); ?> €</td></tr>
 	<tr><td>Verfügbares Geld</td><td><?php echo showKontostand($verfuegbaresGeld); ?> €</td></tr>
-	<tr class="odd"><td>Aufstellungsstärke</td><td><img src="http://s3.amazonaws.com/ballmanager.de/images/balken/<?php echo $vd_aufstellungsstaerke; ?>.png" alt="" /></td></tr>
-	<tr><td>Kaderstärke</td><td><img src="http://s3.amazonaws.com/ballmanager.de/images/balken/<?php echo $vd_kaderstaerke; ?>.png" alt="" /></td></tr>
+	<tr class="odd"><td>Aufstellungsstärke</td><td><img src="//www.ballmanager.de/images/balken/<?php echo $vd_aufstellungsstaerke; ?>.png" alt="" /></td></tr>
+	<tr><td>Kaderstärke</td><td><img src="//www.ballmanager.de/images/balken/<?php echo $vd_kaderstaerke; ?>.png" alt="" /></td></tr>
 	<tr class="odd"><td>Jugendabteilung</td><td class="link"><a href="/kader.php#besetzung">
 		<?php
 		switch ($vd3['posToSearch']) {

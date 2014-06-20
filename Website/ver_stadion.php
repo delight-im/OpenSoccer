@@ -15,12 +15,12 @@ function getPhrases($words, $maxTerms = 5) {
 $teamNameParts = getPhrases(explode(' ', $cookie_teamname));
 $stadiumAffixes = array('Arena', 'Stadium', 'Stade', 'Estadio', 'Estádio', 'Parc', 'Park', 'Stadio', 'Stadyum');
 $stadionPhotos = array(
-	0 => array(0, 'http://s3.amazonaws.com/ballmanager.de/images/arena_01.jpg', 'Richard Matthews auf Flickr (Lizenz: Creative Commons BY)'),
-	1 => array(30000, 'http://s3.amazonaws.com/ballmanager.de/images/arena_03.jpg', 'Jon Candy auf Flickr (Lizenz: Creative Commons BY-SA)'),
-	2 => array(45000, 'http://s3.amazonaws.com/ballmanager.de/images/arena_04.jpg', 'poolie auf Flickr (Lizenz: Creative Commons BY)'),
-	3 => array(60000, 'http://s3.amazonaws.com/ballmanager.de/images/arena_05.jpg', 'Lawrie Cate auf Flickr (Lizenz: Creative Commons BY)'),
-	4 => array(75000, 'http://s3.amazonaws.com/ballmanager.de/images/arena_06.jpg', 'Steve Cadman auf Flickr (Lizenz: Creative Commons BY-SA)'),
-	5 => array(90000, 'http://s3.amazonaws.com/ballmanager.de/images/arena_07.jpg', 'Ralf Peter Reimann auf Flickr (Lizenz: Creative Commons BY-SA)')
+	0 => array(0, '//www.ballmanager.de/images/arena_01.jpg', 'Richard Matthews auf Flickr (Lizenz: Creative Commons BY)'),
+	1 => array(30000, '//www.ballmanager.de/images/arena_03.jpg', 'Jon Candy auf Flickr (Lizenz: Creative Commons BY-SA)'),
+	2 => array(45000, '//www.ballmanager.de/images/arena_04.jpg', 'poolie auf Flickr (Lizenz: Creative Commons BY)'),
+	3 => array(60000, '//www.ballmanager.de/images/arena_05.jpg', 'Lawrie Cate auf Flickr (Lizenz: Creative Commons BY)'),
+	4 => array(75000, '//www.ballmanager.de/images/arena_06.jpg', 'Steve Cadman auf Flickr (Lizenz: Creative Commons BY-SA)'),
+	5 => array(90000, '//www.ballmanager.de/images/arena_07.jpg', 'Ralf Peter Reimann auf Flickr (Lizenz: Creative Commons BY-SA)')
 );
 if (isset($_POST['plaetze']) && isset($_POST['art']) && $cookie_id != DEMO_USER_ID) {
     $val1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$cookie_team."'";

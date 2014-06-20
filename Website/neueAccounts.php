@@ -34,10 +34,10 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 		}
 		echo '</td>';
 		if ($sql3['welcomedByStaff'] == 1) {
-			echo '<td><img src="http://s3.amazonaws.com/ballmanager.de/images/erfolg.png" alt="+" title="Dieser Manager wurde bereits angeschrieben" /></td>';
+			echo '<td><img src="//www.ballmanager.de/images/erfolg.png" alt="+" title="Dieser Manager wurde bereits angeschrieben" /></td>';
 		}
 		else {
-			echo '<td><img src="http://s3.amazonaws.com/ballmanager.de/images/fehler.png" alt="-" title="Dieser Manager wurde bisher noch nicht angeschrieben" /></td>';
+			echo '<td><img src="//www.ballmanager.de/images/fehler.png" alt="-" title="Dieser Manager wurde bisher noch nicht angeschrieben" /></td>';
 		}
 		echo '</tr>';
 		$counter++;

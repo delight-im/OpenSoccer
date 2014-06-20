@@ -111,7 +111,7 @@ function nachricht_erzeugen($user, $nachricht) {
 			$emoticons2 = array('emoticon_smile', 'emoticon_grin', 'emoticon_happy', 'emoticon_surprised', 'emoticon_surprised',
 								'emoticon_tongue', 'emoticon_tongue', 'emoticon_unhappy', 'emoticon_wink');
 			foreach ($emoticons1 as $key=>$value) {
-				$ersetzung = '<img src="http://s3.amazonaws.com/ballmanager.de/images/'.$emoticons2[$key].'.png" alt="'.$value.'" title="'.$value.'" />';
+				$ersetzung = '<img src="//www.ballmanager.de/images/'.$emoticons2[$key].'.png" alt="'.$value.'" title="'.$value.'" />';
 				$nachricht = str_replace($value, $ersetzung, $nachricht);
 			}
 			// EMOTICONS ENDE

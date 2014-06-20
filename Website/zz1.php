@@ -65,7 +65,7 @@ else {
 }
 ?>
 <link rel="stylesheet" href="images/Refresh.php?v=234926" type="text/css" />
-<script type="text/javascript" src="http://s3.amazonaws.com/ballmanager.de/js/drop_down.js"></script>
-<link rel="stylesheet" href="http://s3.amazonaws.com/ballmanager.de/css/drop_down.css" type="text/css" />
-<link rel="icon" type="image/x-icon" href="http://s3.amazonaws.com/ballmanager.de/images/favicon.ico" />
+<script type="text/javascript" src="//www.ballmanager.de/js/drop_down.js"></script>
+<link rel="stylesheet" href="//www.ballmanager.de/css/drop_down.css" type="text/css" />
+<link rel="icon" type="image/x-icon" href="//www.ballmanager.de/images/favicon.ico" />
 <?php if (isMobile()) { ?><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /><?php } ?>

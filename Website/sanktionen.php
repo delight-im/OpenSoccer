@@ -342,7 +342,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 		}
 	}
 	if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin' && ($sql3['transferSperre'] != $sql3['zeit'] && $sql3['chatSperre'] != $sql3['zeit'] && $sql3['geldStrafe'] != -1)) { // nicht aufgehoben
-		echo '<td class="link"><a title="Sperre aufheben" href="/sanktionen.php?un1='.$sql3['managerBestrafen'].'&amp;un2='.$sql3['zeit'].'" onclick="return confirm(\'Soll diese Sperre wirklich aufgehoben werden?\')"><img src="http://s3.amazonaws.com/ballmanager.de/images/fehler.png" alt="" /></a></td>';
+		echo '<td class="link"><a title="Sperre aufheben" href="/sanktionen.php?un1='.$sql3['managerBestrafen'].'&amp;un2='.$sql3['zeit'].'" onclick="return confirm(\'Soll diese Sperre wirklich aufgehoben werden?\')"><img src="//www.ballmanager.de/images/fehler.png" alt="" /></a></td>';
 	}
 	else {
 		echo '<td>&nbsp;</td>';

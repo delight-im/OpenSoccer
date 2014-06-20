@@ -67,7 +67,7 @@ $blaetter3 = anzahl_datensaetze_gesamt($sql1);
 $counter = 0;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if ($counter % 2 == 0) { echo '<tr>'; } else { echo '<tr class="odd">'; }
-	echo '<td><img src="http://s3.amazonaws.com/ballmanager.de/images/protokoll/'.$sql3['typ'].'.png" alt="'.$sql3['typ'].'" title="'.$sql3['typ'].'" /></td>';
+	echo '<td><img src="//www.ballmanager.de/images/protokoll/'.$sql3['typ'].'.png" alt="'.$sql3['typ'].'" title="'.$sql3['typ'].'" /></td>';
 	echo '<td><span title="'.date('d.m.Y H:i', $sql3['zeit']).' Uhr">'.date('d.m.Y', $sql3['zeit']).'</span></td><td>'.$sql3['text'].'</a></td>';
 	echo '</tr>';
 	$counter++;

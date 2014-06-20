@@ -35,7 +35,7 @@ else {
 		$sortDown = $kontakt3['sortOrder']-1;
 		if ($sortDown < -125) { $sortDown = -125; }
         echo '<tr><td class="link">'.displayUsername($kontakt3['username'], $kontakt3['f2']).'</td><td>'.date('d.m.Y, H:i', $kontakt3['last_login']).' Uhr</td><td class="link"><a href="/post_schreiben.php?id='.$kontakt3['f2'].'">Nachricht schicken</a></td>';
-		echo '<td><a href="/freunde.php?sort='.$sortUp.'&amp;user='.$kontakt3['f2'].'"><img src="http://s3.amazonaws.com/ballmanager.de/images/arrow_up.png" alt="+" title="Nach oben verschieben" /></a> <a href="/freunde.php?sort='.$sortDown.'&amp;user='.$kontakt3['f2'].'"><img src="http://s3.amazonaws.com/ballmanager.de/images/arrow_down.png" alt="-" title="Nach unten verschieben" /></a></td>';
+		echo '<td><a href="/freunde.php?sort='.$sortUp.'&amp;user='.$kontakt3['f2'].'"><img src="//www.ballmanager.de/images/arrow_up.png" alt="+" title="Nach oben verschieben" /></a> <a href="/freunde.php?sort='.$sortDown.'&amp;user='.$kontakt3['f2'].'"><img src="//www.ballmanager.de/images/arrow_down.png" alt="-" title="Nach unten verschieben" /></a></td>';
 		echo '</tr>';
     }
     echo '</tbody></table></p>';
@@ -56,7 +56,7 @@ else {
 		$sortDown = $kontakt3['sortOrder']-1;
 		if ($sortDown < -125) { $sortDown = -125; }
         echo '<tr><td class="link">'.displayUsername($kontakt3['username'], $kontakt3['f2']).'</td><td>'.date('d.m.Y, H:i', $kontakt3['last_login']).' Uhr</td><td class="link"><a href="/post_schreiben.php?id='.$kontakt3['f2'].'">Nachricht schicken</a></td>';
-		echo '<td><a href="/freunde.php?sort='.$sortUp.'&amp;user='.$kontakt3['f2'].'"><img src="http://s3.amazonaws.com/ballmanager.de/images/arrow_up.png" alt="+" title="Nach oben verschieben" /></a> <a href="/freunde.php?sort='.$sortDown.'&amp;user='.$kontakt3['f2'].'"><img src="http://s3.amazonaws.com/ballmanager.de/images/arrow_down.png" alt="-" title="Nach unten verschieben" /></a></td>';
+		echo '<td><a href="/freunde.php?sort='.$sortUp.'&amp;user='.$kontakt3['f2'].'"><img src="//www.ballmanager.de/images/arrow_up.png" alt="+" title="Nach oben verschieben" /></a> <a href="/freunde.php?sort='.$sortDown.'&amp;user='.$kontakt3['f2'].'"><img src="//www.ballmanager.de/images/arrow_down.png" alt="-" title="Nach unten verschieben" /></a></td>';
 		echo '</tr>';
     }
     echo '</tbody></table></p>';

@@ -8,10 +8,10 @@ function showErfolg($erfolg = 0) {
 	global $nDone;
 	if ($erfolg > 0) {
 		$nDone++;
-		return '<img src="http://s3.amazonaws.com/ballmanager.de/images/erfolg.png" width="16" alt="J" title="Erfolgreich bestanden" />';
+		return '<img src="//www.ballmanager.de/images/erfolg.png" width="16" alt="J" title="Erfolgreich bestanden" />';
 	}
 	else {
-		return '<img src="http://s3.amazonaws.com/ballmanager.de/images/fehler.png" width="16" alt="N" title="Noch nicht abgeschlossen" />';
+		return '<img src="//www.ballmanager.de/images/fehler.png" width="16" alt="N" title="Noch nicht abgeschlossen" />';
 	}
 }
 // DABEIBLEIBEN - PRÜFEN ANFANG

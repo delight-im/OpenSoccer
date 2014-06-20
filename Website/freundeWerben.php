@@ -30,10 +30,10 @@ else {
 		if ($counter % 2 == 0) { echo '<tr>'; } else { echo '<tr class="odd">'; }
 		echo '<td>';
 		if ($sql3['billed'] == 1) {
-			echo '<img src="http://s3.amazonaws.com/ballmanager.de/images/erfolg.png" width="16" alt="X" title="Prämie erhalten" />';
+			echo '<img src="//www.ballmanager.de/images/erfolg.png" width="16" alt="X" title="Prämie erhalten" />';
 		}
 		else {
-			echo '<img src="http://s3.amazonaws.com/ballmanager.de/images/fehler.png" width="16" alt="O" title="Prämie noch nicht ausgezahlt" />';
+			echo '<img src="//www.ballmanager.de/images/fehler.png" width="16" alt="O" title="Prämie noch nicht ausgezahlt" />';
 		}
 		echo '</td>';
 		echo '<td>'.displayUsername($sql3['username'], $sql3['geworben']).'</td>';

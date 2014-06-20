@@ -62,10 +62,10 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<td>'.floor($sql3['wiealt']/365).'</td>';
 	echo '<td>'.number_format($sql3['staerke'], 1, ',', '.').'</td>';
 	if ($sql3['bieter_highest'] == $cookie_team) {
-		echo '<td><img src="http://s3.amazonaws.com/ballmanager.de/images/erfolg.png" alt="+" title="Du bist zurzeit der Höchstbietende" /></td>';
+		echo '<td><img src="//www.ballmanager.de/images/erfolg.png" alt="+" title="Du bist zurzeit der Höchstbietende" /></td>';
 	}
 	else {
-		echo '<td><img src="http://s3.amazonaws.com/ballmanager.de/images/fehler.png" alt="-" title="Du bist nicht der Höchstbietende" /></td>';
+		echo '<td><img src="//www.ballmanager.de/images/fehler.png" alt="-" title="Du bist nicht der Höchstbietende" /></td>';
 	}
 	echo '<td>';
 	if (is_null($sql3['ende'])) {

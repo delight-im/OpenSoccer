@@ -79,7 +79,7 @@ $bilanzAusgaben = ($gehalt3+$ausgaben_jugendtrainer+$ausgaben_fanbetreuer+$fitne
 $bilanz = $bilanzEinnahmen-$bilanzAusgaben;
 $naechster_kontostand = $daten3['vorjahr_konto']+$bilanz;
 function showSymbolIcon($which) {
-	return '<td style="width:22px; padding:2px 0 2px 4px;"><img src="http://s3.amazonaws.com/ballmanager.de/images/icon_'.$which.'.png" alt="O" width="18" style="width:18px; height:18px; border:0;" /></td>';
+	return '<td style="width:22px; padding:2px 0 2px 4px;"><img src="//www.ballmanager.de/images/icon_'.$which.'.png" alt="O" width="18" style="width:18px; height:18px; border:0;" /></td>';
 }
 ?>
 <p>

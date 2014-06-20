@@ -93,8 +93,8 @@ echo '<tr class="odd"><td>Stärke</td><td>'.number_format($sql3['staerke'], 1, '
 if ($sql3['team'] == 'frei') {
 	$sql3['frische'] = getRegularFreshness($cookie_spieltag);
 }
-echo '<tr><td>Frische</td><td><img src="http://s3.amazonaws.com/ballmanager.de/images/balken/'.round($sql3['frische']).'.png" alt="'.round($sql3['frische']).'%" title="'.round($sql3['frische']).'%" width="104" /></td></tr>';
-echo '<tr class="odd"><td>Moral</td><td><img src="http://s3.amazonaws.com/ballmanager.de/images/balken/'.round($sql3['moral']).'.png" alt="'.round($sql3['moral']).'%" title="'.round($sql3['moral']).'%" width="104" /></td></tr>';
+echo '<tr><td>Frische</td><td><img src="//www.ballmanager.de/images/balken/'.round($sql3['frische']).'.png" alt="'.round($sql3['frische']).'%" title="'.round($sql3['frische']).'%" width="104" /></td></tr>';
+echo '<tr class="odd"><td>Moral</td><td><img src="//www.ballmanager.de/images/balken/'.round($sql3['moral']).'.png" alt="'.round($sql3['moral']).'%" title="'.round($sql3['moral']).'%" width="104" /></td></tr>';
 echo '<tr><td>Marktwert</td><td>'.number_format($sql3['marktwert'], 0, ',', '.').' €</td></tr>';
 if ($sql3['team'] == $cookie_team) {
 	echo '<tr class="odd"><td>Gehalt / Saison</td><td>'.number_format($sql3['gehalt'], 0, ',', '.').' €</td></tr>';
@@ -168,10 +168,10 @@ echo '</td></tr>';
 echo '<tr class="odd"><td>Talent</td><td>';
 $talentStars = round($schaetzungVomScout/9.9*5);
 for ($stars_full = 1; $stars_full <= $talentStars; $stars_full++) {
-	echo '<img src="http://s3.amazonaws.com/ballmanager.de/images/stern.png" alt="+" width="16" />';
+	echo '<img src="//www.ballmanager.de/images/stern.png" alt="+" width="16" />';
 }
 for ($stars_empty = ($talentStars+1); $stars_empty <= 5; $stars_empty++) {
-	echo '<img src="http://s3.amazonaws.com/ballmanager.de/images/stern_leer.png" alt="O" width="16" />';
+	echo '<img src="//www.ballmanager.de/images/stern_leer.png" alt="O" width="16" />';
 }
 echo '</td></tr>';
 if ($schaetzungVomScout <= $sql3['staerke']) {

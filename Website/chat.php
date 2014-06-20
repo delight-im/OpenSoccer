@@ -1,7 +1,7 @@
 <?php include 'zz1.php'; ?>
 <title>Chat | Ballmanager.de</title>
 <?php if ($loggedin == 1) { ?>
-<script type="text/javascript" src="http://s3.amazonaws.com/ballmanager.de/js/jquery.js"></script>
+<script type="text/javascript" src="//www.ballmanager.de/js/jquery.min.js"></script>
 <script type="text/javascript">
 function nachladen() {
 	$.ajax({
@@ -104,13 +104,13 @@ else {
 	echo '</p>';
 }
 echo '<p> 
-<a href="#" onclick="add_smiley(\':)\'); return false;"><img src="http://s3.amazonaws.com/ballmanager.de/images/emoticon_smile.png" alt=":)" title=":)" /></a> 
-<a href="#" onclick="add_smiley(\':D\'); return false;"><img src="http://s3.amazonaws.com/ballmanager.de/images/emoticon_grin.png" alt=":D" title=":D" /></a> 
-<a href="#" onclick="add_smiley(\'=D\'); return false;"><img src="http://s3.amazonaws.com/ballmanager.de/images/emoticon_happy.png" alt="=D" title="=D" /></a> 
-<a href="#" onclick="add_smiley(\':O\'); return false;"><img src="http://s3.amazonaws.com/ballmanager.de/images/emoticon_surprised.png" alt=":O" title=":O" /></a> 
-<a href="#" onclick="add_smiley(\':P\'); return false;"><img src="http://s3.amazonaws.com/ballmanager.de/images/emoticon_tongue.png" alt=":P" title=":P" /></a> 
-<a href="#" onclick="add_smiley(\':(\'); return false;"><img src="http://s3.amazonaws.com/ballmanager.de/images/emoticon_unhappy.png" alt=":(" title=":(" /></a> 
-<a href="#" onclick="add_smiley(\';)\'); return false;"><img src="http://s3.amazonaws.com/ballmanager.de/images/emoticon_wink.png" alt=";)" title=";)" /></a> 
+<a href="#" onclick="add_smiley(\':)\'); return false;"><img src="//www.ballmanager.de/images/emoticon_smile.png" alt=":)" title=":)" /></a>
+<a href="#" onclick="add_smiley(\':D\'); return false;"><img src="//www.ballmanager.de/images/emoticon_grin.png" alt=":D" title=":D" /></a>
+<a href="#" onclick="add_smiley(\'=D\'); return false;"><img src="//www.ballmanager.de/images/emoticon_happy.png" alt="=D" title="=D" /></a>
+<a href="#" onclick="add_smiley(\':O\'); return false;"><img src="//www.ballmanager.de/images/emoticon_surprised.png" alt=":O" title=":O" /></a>
+<a href="#" onclick="add_smiley(\':P\'); return false;"><img src="//www.ballmanager.de/images/emoticon_tongue.png" alt=":P" title=":P" /></a>
+<a href="#" onclick="add_smiley(\':(\'); return false;"><img src="//www.ballmanager.de/images/emoticon_unhappy.png" alt=":(" title=":(" /></a>
+<a href="#" onclick="add_smiley(\';)\'); return false;"><img src="//www.ballmanager.de/images/emoticon_wink.png" alt=";)" title=";)" /></a>
 </p>';
 ?>
 <form name="chatform" action="" method="post" accept-charset="utf-8">

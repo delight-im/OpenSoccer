@@ -102,22 +102,22 @@ if ($sql3['meisterschaften'] > 0 OR $sql3['pokalsiege'] > 0 OR $sql3['cupsiege']
 	echo '<h1>Trophäen-Raum</h1><p>';
 	if ($sql3['meisterschaften'] > 0) {
 		for ($i = 0; $i < $sql3['meisterschaften']; $i++) {
-			echo '<img src="//www.ballmanager.de/images/trophaee_liga.png" alt="Meisterschaft" title="Meisterschaft" /> ';
+			echo '<img src="/images/trophaee_liga.png" alt="Meisterschaft" title="Meisterschaft" /> ';
 		}
 	}
 	if ($sql3['pokalsiege'] > 0) {
 		for ($i = 0; $i < $sql3['pokalsiege']; $i++) {
-			echo '<img src="//www.ballmanager.de/images/trophaee_pokal.png" alt="Pokalsieg" title="Pokalsieg" /> ';
+			echo '<img src="/images/trophaee_pokal.png" alt="Pokalsieg" title="Pokalsieg" /> ';
 		}
 	}
 	if ($sql3['cupsiege'] > 0) {
 		for ($i = 0; $i < $sql3['cupsiege']; $i++) {
-			echo '<img src="//www.ballmanager.de/images/trophaee_cup.png" alt="Cupsieg" title="Cupsieg" /> ';
+			echo '<img src="/images/trophaee_cup.png" alt="Cupsieg" title="Cupsieg" /> ';
 		}
 	}
 	if ($mdsSiege4 > 0) {
 		for ($i = 0; $i < $mdsSiege4; $i++) {
-			echo '<img src="//www.ballmanager.de/images/trophaee_mds.png" alt="Manager der Saison" title="Manager der Saison" /> ';
+			echo '<img src="/images/trophaee_mds.png" alt="Manager der Saison" title="Manager der Saison" /> ';
 		}
 	}
 	echo '</p>';

@@ -86,7 +86,7 @@ echo addInfoBox('<strong>Jackpot:</strong> '.number_format($get_jackpot3['jackpo
 ?>
 <?php if ($meine_zahlen == '') { ?>
 <form action="/ver_lotto.php" method="post" accept-charset="utf-8">
-<div style="position:relative;width:372px;height:483px;background-image:url(//www.ballmanager.de/images/lottoschein.png)">
+<div style="position:relative;width:372px;height:483px;background-image:url(/images/lottoschein.png)">
 <?php
 for ($i = 0; $i < 5; $i++) {
 	for ($k = 0; $k < 3; $k++) {

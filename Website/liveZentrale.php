@@ -129,7 +129,7 @@ else {
 			echo '>';
 			echo '<td>';
 			if (isset($kontaktListe[$resultEntry[1]]) OR isset($kontaktListe[$resultEntry[2]])) { // Spiel eines Freundes
-				echo '<img src="//www.ballmanager.de/images/protokoll/Spieler.png" alt="!" title="Spiel eines Freundes" />';
+				echo '<img src="/images/protokoll/Spieler.png" alt="!" title="Spiel eines Freundes" />';
 			}
 			else {
 				echo '&nbsp;';

@@ -16,7 +16,7 @@ select { width:120px; }
 .sturm1 { display: block; margin: 2px 0; }
 .sturm2 { display: block; margin: 2px 0; }
 <?php } else { ?>
-.spielfeld { position:relative; left:0px; top:0px; width:522px; height:400px; background:white url(//www.ballmanager.de/images/fussballfeld.png) scroll no-repeat; color:#fff; font-weight:bold; z-index:1; }
+.spielfeld { position:relative; left:0px; top:0px; width:522px; height:400px; background:white url(/images/fussballfeld.png) scroll no-repeat; color:#fff; font-weight:bold; z-index:1; }
 select { width:120px; }
 .torwart { position:absolute; left:201px; top:340px; }
 .abwehr1 { position:absolute; left:36px; top:230px; }

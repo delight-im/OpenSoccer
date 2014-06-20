@@ -197,14 +197,14 @@ else {
 		else {
 			echo '<td>';
 			if ($sql3['category'] != 'Vorschlag') {
-				echo '<img src="//www.ballmanager.de/images/balken/50.png" alt="Frage/Fehlerbericht" title="Frage / Fehlerbericht" />';
+				echo '<img src="/images/balken/50.png" alt="Frage/Fehlerbericht" title="Frage / Fehlerbericht" />';
 			}
 			elseif (isset($listVoted[$sql3['id']])) {
 				$pVotes = round($sql3['pro']/($sql3['pro']+$sql3['contra'])*100);
-				echo '<img src="//www.ballmanager.de/images/balken/'.$pVotes.'.png" alt="'.$pVotes.'%" title="'.$pVotes.'% sind für diesen Vorschlag" />';
+				echo '<img src="/images/balken/'.$pVotes.'.png" alt="'.$pVotes.'%" title="'.$pVotes.'% sind für diesen Vorschlag" />';
 			}
 			else {
-				echo '<img src="//www.ballmanager.de/images/balken/undefined.png" alt="???" title="Du hast diesen Vorschlag noch nicht bewertet" />';
+				echo '<img src="/images/balken/undefined.png" alt="???" title="Du hast diesen Vorschlag noch nicht bewertet" />';
 			}
 			echo '</td>';
 			echo '<td class="link"><a href="/supportRequest.php?id='.id2secure($sql3['id']).'" title="Zur Anfrage mit Beschreibung">'.$sql3['title'].'</a></td>';

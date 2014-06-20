@@ -7,6 +7,6 @@
 <p>Wir denken, dass niemand wirklich mehr als 4 Freunde oder Verwandte hat, die am selben Anschluss spielen. Um Betrug vorzubeugen, begrenzen wir das Ganze deshalb auf 4 aktive Mitspieler. Und Du hast diese Grenze leider überschritten ...</p>
 <p>Das bedeutet für Dich: Du kannst Dich erst mal nicht mehr einloggen. Deine Teams können also nicht mehr betreut werden. Wir bitten Dich, das zu akzeptieren.</p>
 <p>Falls Du der Meinung bist, Du wurdest zu Unrecht gesperrt, dann kontaktiere uns bitte unter der folgenden E-Mail-Adresse:</p>
-<div style="width:214px; height:32px; margin:10px auto"><img src="//www.ballmanager.de/images/multiKontakt.png" width="214" alt="Kontakt" /></div>
+<div style="width:214px; height:32px; margin:10px auto"><img src="/images/multiKontakt.png" width="214" alt="Kontakt" /></div>
 <p style="text-align:center">Möchtest Du <a href="/einstellungen.php">Deinen Account löschen</a>?</p>
 <?php include 'zz3.php'; ?>

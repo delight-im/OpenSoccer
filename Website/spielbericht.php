@@ -42,7 +42,7 @@ div.matchReport {
 	width: 100%;
 	height: 36px;
 	margin-top: 1em;
-	background: transparent url(//www.ballmanager.de/images/match_score_back.png) scroll repeat-x left center;
+	background: transparent url(/images/match_score_back.png) scroll repeat-x left center;
 }
 div.matchReport div.scores {
 	width: 108px;
@@ -55,7 +55,7 @@ div.matchReport div.scores span.score {
 	width: 46px;
 	line-height: 36px;
 	margin: 0 4px;
-	background: transparent url(//www.ballmanager.de/images/match_score_highlight.png) scroll repeat-x left center;
+	background: transparent url(/images/match_score_highlight.png) scroll repeat-x left center;
 	text-align: center;
 	vertical-align: middle;
 	font-size: 2.0em;
@@ -235,7 +235,7 @@ if ($ber2a > 0) {
 			}
 		}
 		else {
-			$kommentar_ergebnisStr = str_replace('</strong>', '</strong> <img src="//www.ballmanager.de/images/ball_14.png" alt="Tor!" width="14" />', $kommentar_ergebnisStr);
+			$kommentar_ergebnisStr = str_replace('</strong>', '</strong> <img src="/images/ball_14.png" alt="Tor!" width="14" />', $kommentar_ergebnisStr);
 		}
 		$firstVorkommen1 = strpos($kommentar_ergebnisStr, $sql3['team1']);
 		if ($firstVorkommen1 === FALSE) { $firstVorkommen1 = 999; }

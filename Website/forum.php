@@ -105,7 +105,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 		}
 	}
 	if ($sql3['sticky'] == 1) {
-		$sticky = '<img src="//www.ballmanager.de/images/daumen_hoch.png" alt="Top-Thema" title="Top-Thema" /> ';
+		$sticky = '<img src="/images/daumen_hoch.png" alt="Top-Thema" title="Top-Thema" /> ';
 	}
 	else {
 		$sticky = '';

@@ -126,7 +126,7 @@ blockquote {
 	margin: 10px;
  	padding: 0 0 0 35px;
     border: 1px solid #999;
-  	background: #eee url(//www.ballmanager.de/images/quote.png) no-repeat 5px 5px;
+  	background: #eee url(/images/quote.png) no-repeat 5px 5px;
 }
 
 /* form elements */
@@ -185,7 +185,7 @@ form.search input.textbox {
 	color: #333;
 }
 form.search input.button {
-	background: #999 url(//www.ballmanager.de/images/headerbg.gif) repeat-x;
+	background: #999 url(/images/headerbg.gif) repeat-x;
 	color: #333;
 	border: none;
 	width: 70px; height: 21px;
@@ -196,7 +196,7 @@ form.search input.button {
 ********************************************/
 #wrap {
 	max-width: 820px;
-	background: #ccc url(//www.ballmanager.de/images/content.jpg) repeat-y center top;
+	background: #ccc url(/images/content.jpg) repeat-y center top;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -210,7 +210,7 @@ form.search input.button {
 	width: 100%;
 	position: relative;
 	height: 106px;
-	background: #ccc url(//www.ballmanager.de/images/header.jpg) no-repeat center top;
+	background: #ccc url(/images/header.jpg) no-repeat center top;
 	padding: 0;
 	font-size: 14px;
 	color: #FFF;
@@ -241,7 +241,7 @@ form.search input.button {
 #menu {
 	clear: both;
 	margin: 0; padding: 0 40px 0 0;
-	background: url(//www.ballmanager.de/images/menu.jpg) repeat-y center top;
+	background: url(/images/menu.jpg) repeat-y center top;
 	font: bold 12px/26px Verdana, Arial, Tahoma, Sans-serif;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
 	height: 26px;
@@ -285,7 +285,7 @@ form.search input.button {
 	color: #88ac0b;
 	padding: 5px 0 5px 25px;
 	border-bottom: 1px solid #EFF0F1;
-	background: #FFF url(//www.ballmanager.de/images/square-green.png) no-repeat 3px 50%;
+	background: #FFF url(/images/square-green.png) no-repeat 3px 50%;
 }
 
 #main_full {
@@ -299,7 +299,7 @@ form.search input.button {
 	color: #88ac0b;
 	padding: 5px 0 5px 25px;
 	border-bottom: 1px solid #EFF0F1;
-	background: #FFF url(//www.ballmanager.de/images/square-green.png) no-repeat 3px 50%;
+	background: #FFF url(/images/square-green.png) no-repeat 3px 50%;
 }
 
 .post-footer {
@@ -309,15 +309,15 @@ form.search input.button {
 	font-size: 95%;
 }
 .post-footer .date {
-	background: url(//www.ballmanager.de/images/clock.gif) no-repeat left center;
+	background: url(/images/clock.gif) no-repeat left center;
 	padding-left: 20px; margin: 0 10px 0 5px;
 }
 .post-footer .comments {
-	background: url(//www.ballmanager.de/images/comment.gif) no-repeat left center;
+	background: url(/images/comment.gif) no-repeat left center;
 	padding-left: 20px; margin: 0 10px 0 5px;
 }
 .post-footer .readmore {
-	background: url(//www.ballmanager.de/images/page.gif) no-repeat left center;
+	background: url(/images/page.gif) no-repeat left center;
 	padding-left: 20px; margin: 0 10px 0 5px;
 }
 
@@ -344,7 +344,7 @@ form.search input.button {
 /* Footer */
 #footer {
 	color: #666666;
-	background: #ccc url(//www.ballmanager.de/images/footer.jpg) no-repeat center top;
+	background: #ccc url(/images/footer.jpg) no-repeat center top;
 	clear: both;
 	width: 100%;
 	height: 55px;
@@ -560,7 +560,7 @@ div.navBlockLinks {
 div.navBlockLinks a, div.navBlockLinks a:link, div.navBlockLinks a:visited {
 	display: block;
 	border-bottom: 1px solid #eff0f1;
-	background-image: url(//www.ballmanager.de/images/go.gif);
+	background-image: url(/images/go.gif);
 	background-repeat: no-repeat;
 	background-position: 5px center;
 	padding: 4px 4px 4px 25px;

@@ -321,14 +321,14 @@ else {
 	}
 }
 ?>
-<script type="text/javascript" src="//www.ballmanager.de/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript">
 function voteComment(requestID, commentID, linkElement) {
 	if (typeof(linkElement) !== 'undefined') {
 		var responseSpan = document.createElement('span');
 		responseSpan.style.marginLeft = '10px';
 		responseSpan.style.marginRight = '10px';
-		responseSpan.innerHTML = '<img src="//www.ballmanager.de/images/loading_14.gif" width="14" alt="Wird gesendet ..." /> Wird gesendet ...';
+		responseSpan.innerHTML = '<img src="/images/loading_14.gif" width="14" alt="Wird gesendet ..." /> Wird gesendet ...';
 		linkElement.parentNode.appendChild(responseSpan);
 		linkElement.parentNode.removeChild(linkElement);
 	}

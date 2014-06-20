@@ -198,7 +198,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 </p>
 </form>
 </div>
-<div style="float:left; width:220px;"><img src="//www.ballmanager.de/images/personal_youth.jpg" alt="Jugendtrainer" width="220" style="width:220; height:150; border:0;" /></div>
+<div style="float:left; width:220px;"><img src="/images/personal_youth.jpg" alt="Jugendtrainer" width="220" style="width:220; height:150; border:0;" /></div>
 <div style="clear:both;"></div>
 <h1>Fanbetreuer</h1>
 <p>Je höher die Stufe für die Kompetenz des Fanbetreuers ist, desto wohler fühlen sich die Fans Deines Vereins. Sie werden lieber ins Stadion gehen und Du wirst mehr Karten verkaufen.<br />
@@ -288,7 +288,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 </p>
 </form>
 </div>
-<div style="float:left; width:220px;"><img src="//www.ballmanager.de/images/personal_scout.jpg" alt="Scout" width="220" style="width:220; height:150; border:0;" /></div>
+<div style="float:left; width:220px;"><img src="/images/personal_scout.jpg" alt="Scout" width="220" style="width:220; height:150; border:0;" /></div>
 <div style="clear:both;"></div>
 <h1>Fitness-Trainer <span style="color:red">[Angebot und Nachfrage]</span></h1>
 <p>Dein Fitness-Trainer bietet Dir an, ein Regenerations-Camp zu buchen. Dies ist ein Mal pro Tag möglich und bringt allen Spielern
@@ -306,7 +306,7 @@ Deines Kaders einmalig 1, 2 oder 3 Prozentpunkte Frische zusätzlich.</p>
 </form>
 <?php } ?>
 </div>
-<div style="float:left; width:220px;"><img src="//www.ballmanager.de/images/personal_fitness.jpg" alt="Fitness-Trainer" width="220" style="width:220; height:150; border:0;" /></div>
+<div style="float:left; width:220px;"><img src="/images/personal_fitness.jpg" alt="Fitness-Trainer" width="220" style="width:220; height:150; border:0;" /></div>
 <div style="clear:both;"></div>
 <h1>Physiotherapeut <span style="color:red">[Angebot und Nachfrage]</span></h1>
 <p>Dein Physiotherapeut bietet Dir an, die Behandlung Deiner verletzten Spieler zu übernehmen. Er verspricht dabei, die Verletzungszeit zu verkürzen.</p>

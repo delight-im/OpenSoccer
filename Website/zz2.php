@@ -21,7 +21,7 @@ function noDemoPopup() {
 <body>
 <div id="wrap">
 <div id="header">
-<div class="logo_top" style="position:relative"><img src="//www.ballmanager.de/images/logo260x60.png" alt="Ballmanager - Online-Fußball-Manager" title="Ballmanager - Online-Fußball-Manager" width="260" style="border:0; width:260px; height:60px" />
+<div class="logo_top" style="position:relative"><img src="/images/logo260x60.png" alt="Ballmanager - Online-Fußball-Manager" title="Ballmanager - Online-Fußball-Manager" width="260" style="border:0; width:260px; height:60px" />
 <?php
 $topWidget = '<h1>Top-Manager</h1>';
 $topWidget .= '<div class="left-box navBlockLinks">';

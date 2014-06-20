@@ -139,7 +139,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		}
 		?>
 	</a></td></tr>
-	<tr><td colspan="2"><?php echo 'Saison '.$cookie_saison.' &middot; Spieltag '.$cookie_spieltag.' &middot; '.date('d.m.Y, H:i', time()).' Uhr'; ?></td></tr>
+	<tr><td colspan="2"><?php echo '<img src="/images/clock.gif"> Saison '.$cookie_saison.' &middot; Spieltag '.$cookie_spieltag.' &middot; '.date('d.m.Y, H:i', time()).' Uhr'; ?></td></tr>
 	</tbody>
 	</table>
 	<?php

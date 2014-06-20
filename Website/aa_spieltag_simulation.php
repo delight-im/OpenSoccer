@@ -78,6 +78,23 @@ function staerkeBenoten($wert) {
 }
 function kommentar($ersetzung, $typ) {
 	$formulierungen = array();
+	$formulierungen['start_game'] = array(
+		'AnstoÃŸ!',
+		'The mood of the audience was pleasant when the kick off started today\'s match.',
+		'XYZ starts the match.',
+		'The match started with the kick off in front of an excited audience.',
+		'It was fairly windy and cold on the field when the match started.',
+		'Dark clouds were building up when the players entered the field. None of the them looked very eager to play. The match started with the kick off.',
+		'The sun was shining, the grass was green and the audience cheered when the match started.',
+		'The field was rather wet after several days of rain when the XYZ started the first half of the match.',
+		'Here starts the  match.');
+	$formulierungen['mid_game'] = array(
+		'Halbzeit!',
+		'The wind increased when XYZ started the second half.',
+		'The players of the away team seemed most concentrated when the kick started the second half.',
+		'Both teams looked relatively alert before the second half when the XYZ blew his whistle starting the second half.',
+		'The hometeam waved at the audience when it was time to strike the kick off in the second half.',
+		'The players of the home team were most fresh-looking when they entered the field to play the second half.');
 	$formulierungen['attack'] = array(
 		'XYZ am Ball.',
 		'XYZ greift an.',
@@ -928,7 +945,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$spielzeit = $tempmax[0]+mt_rand(0, 3);
 	$nachSpielZeit = $spielzeit-90;
 	if ($spielzeit < 90) { $spielzeit = 90; }
-	$spielbericht .= '<p>1\': Anstoß!';
+	$spielbericht .= '<p>1\': '.kommentar('Referee', 'start_game');
 	if ($is_derby) {
 		$spielbericht .= ' Die Zuschauer fiebern dem Derby schon lange entgegen!';
 	}
@@ -942,7 +959,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 			starte_angriff($sql3['team2'], $sql3['team1'], $staerke_team2, $staerke_team1);
 		}
 		if ($minute == 45) {
-			$spielbericht .= '<p>45\': Halbzeit!</p>';
+			$spielbericht .= '<p>45\': '.kommentar('Referee', 'mid_game');
 		}
 		elseif ($minute > 90) {
 			$spielbericht .= '<p>90\': Der Assistent zeigt '.$nachSpielZeit.' Minuten Nachspielzeit an. Die Fans treiben ihr Team noch einmal richtig an.</p>';

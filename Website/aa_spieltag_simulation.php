@@ -1,6 +1,8 @@
 <?php
+
 if (!isset($_GET['mode'])) { include 'zzserver.php'; }
 set_time_limit(0);
+
 $vereinsKurzelEntfernung = array();
 foreach ($kuerzelListe as $kuerzelEntry) {
 	$vereinsKurzelEntfernung[] = $kuerzelEntry.' ';
@@ -15,17 +17,15 @@ function create_verletzung() {
 	elseif (mt_rand(10, 20) < 17) { $vName = 'wegen eines Bänderrisses'; $vDauer = 9; }
 	elseif (mt_rand(10, 20) < 17) { $vName = 'aufgrund eines Knorpelschadens'; $vDauer = 11; }
 	else { $vName = 'durch einen Knochenbruch'; $vDauer = 13; }
-	$daten = array('name'=>$vName, 'dauer'=>$vDauer);
+	$daten = array('name' => $vName, 'dauer' => $vDauer);
 	return $daten;
 }
 function get_minutes($anzahl_angriffe, $ballbesitz_team1) {
 	$minuten_array = array();
     $intervall = 90/$anzahl_angriffe;
-    $hoechster_zeitwert = 0;
     $spielraum = ceil($intervall)-1;
     $minute = 1;
     $next = 0;
-    $zufall_zeit = 0;
     $noch_angriffe_fuer_team1 = round($anzahl_angriffe*$ballbesitz_team1/100);
     for ($i = 1; $i <= $anzahl_angriffe; $i++) {
     	// ENTSCHEIDEN WER ANGREIFT ANFANG
@@ -41,11 +41,7 @@ function get_minutes($anzahl_angriffe, $ballbesitz_team1) {
     		$noch_angriffe_fuer_team1--;
     	}
     	// ENTSCHEIDEN WER ANGREIFT ENDE
-    	// BACKUP FALLS MINUTE WIEDERHOLT WERDEN MUSS ANFANG
-    	$zufall_zeit_back = $zufall_zeit;
-    	$next_back = $next;
-    	$minute_back = $minute;
-    	// BACKUP FALLS MINUTE WIEDERHOLT WERDEN MUSS ENDE
+
         if ($next != 0) {
             $zufall_zeit = $next;
             $next = 0;
@@ -54,9 +50,8 @@ function get_minutes($anzahl_angriffe, $ballbesitz_team1) {
             $zufall_zeit = mt_rand(-$spielraum, $spielraum);
             $next = -$zufall_zeit;
         }
-        $minute = $minute+$intervall+$zufall_zeit;
+        $minute = $minute + $intervall + $zufall_zeit;
         $minuten_array[] = array(round($minute), $angreifendes_team);
-        $hoechster_zeitwert = round($minute);
     }
     return $minuten_array;
 }
@@ -79,28 +74,34 @@ function staerkeBenoten($wert) {
 function kommentar($ersetzung, $typ) {
 	$formulierungen = array();
 	$formulierungen['start_game'] = array(
-		'AnstoÃŸ!',
-		'The mood of the audience was pleasant when the kick off started today\'s match.',
-		'XYZ starts the match.',
-		'The match started with the kick off in front of an excited audience.',
-		'It was fairly windy and cold on the field when the match started.',
-		'Dark clouds were building up when the players entered the field. None of the them looked very eager to play. The match started with the kick off.',
-		'The sun was shining, the grass was green and the audience cheered when the match started.',
-		'The field was rather wet after several days of rain when the XYZ started the first half of the match.',
-		'Here starts the  match.');
+		'Anstoß!',
+		'Das Publikum ist gut gelaunt beim Anpfiff des heutigen Spiels.',
+		'Das Spiel beginnt.',
+		'Das Spiel fängt mit dem Anstoß vor begeisterten Zuschauern an.',
+		'Bei windigem und kaltem Wetter beginnt das Spiel.',
+		'Dunkle Wolken bildeten sich, als die Spieler das Feld betraten. Anstoß.',
+		'Die Sonne scheint, das Gras ist grün und das Publikum freut sich aufs Spiel.',
+		'Das Spielfeld ist etwas nass nach einigen Tagen Regen. Die erste Halbzeit beginnt.',
+		'Los geht\'s mit der ersten Halbzeit!'
+    );
 	$formulierungen['mid_game'] = array(
 		'Halbzeit!',
-		'The wind increased when XYZ started the second half.',
-		'The players of the away team seemed most concentrated when the kick started the second half.',
-		'Both teams looked relatively alert before the second half when the XYZ blew his whistle starting the second half.',
-		'The hometeam waved at the audience when it was time to strike the kick off in the second half.',
-		'The players of the home team were most fresh-looking when they entered the field to play the second half.');
+		'Der Wind nimmt zu, die zweite Halbzeit beginnt.',
+        'Los geht\'s mit der zweiten Halbzeit!',
+        'Anpfiff zur zweiten Halbzeit.',
+        '15 Minuten Pause.',
+		'Die Spieler der Gäste sehen konzentrierter aus zu Beginn der zweiten Halbzeit.',
+		'Der Schiedsrichter pfeift zur zweiten Halbzeit.',
+		'Die Spieler des Gastgebers winken den Zuschauern zu, das Spiel geht weiter.',
+		'Die Spieler des Gastgebers sehen frischer aus, währen die das Spielfeld zur zweiten Halbzeit betreten.'
+    );
 	$formulierungen['attack'] = array(
 		'XYZ am Ball.',
 		'XYZ greift an.',
 		'XYZ macht wieder Druck.',
 		'Ballbesitz für XYZ.',
-		'XYZ hat den Ball.');
+		'XYZ hat den Ball.'
+    );
 	$formulierungen['advance'] = array(
 		'Der Ballführende spielt den öffnenden Pass.',
 		'Den Mitspieler mit einem öffnenden Pass bedient.',
@@ -121,7 +122,8 @@ function kommentar($ersetzung, $typ) {
 		'Der ungenaue Pass kommt mit Glück an.',
 		'Unpräzises Anspiel, aber der Gegner kommt zu spät.',
 		'Der Spieler nutzt seine Schnelligkeit.',
-		'Guter Querpass zum Teamkollegen.');
+		'Guter Querpass zum Teamkollegen.'
+    );
 	$formulierungen['advance_further'] = array(
 		'Schöne Vorlage.',
 		'Tolle Vorlage.',
@@ -161,7 +163,8 @@ function kommentar($ersetzung, $typ) {
 		'Gute Flanke.',
 		'Der Flügelspieler flankt auf den Stürmer.',
 		'Der Spieler legt perfekt für seinen Teamkollegen auf.',
-		'Der Angreifer legt für seinen Mitspieler zurück.');
+		'Der Angreifer legt für seinen Mitspieler zurück.'
+    );
 	$formulierungen['yellow'] = array(
 		'<span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.',
 		'Der Schiedsrichter zeigt <span style="padding:2px;background-color:#ff0;">Gelb</span>.',
@@ -172,7 +175,8 @@ function kommentar($ersetzung, $typ) {
 		'Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#ff0;">Gelb</span>!',
 		'Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#ff0;">Verwarnung</span>!',
 		'Der Spieler von XYZ holt sich die <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> ab.',
-		'Klare <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.');
+		'Klare <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.'
+    );
 	$formulierungen['red'] = array(
 		'<span style="padding:2px;background-color:#f00;color:#fff;">Platzverweis</span> für XYZ!',
 		'Dem Schiedsrichter bleibt keine andere Wahl als hier die <span style="padding:2px;background-color:#f00;color:#fff;">Rote Karte</span> zu zeigen.',
@@ -187,18 +191,21 @@ function kommentar($ersetzung, $typ) {
 		'Der Unparteiische ahndet diese Aktion mit der <span style="padding:2px;background-color:#f00;color:#fff;">Roten Karte</span>!',
 		'Der Spieler von XYZ kassiert <span style="padding:2px;background-color:#f00;color:#fff;">Rot</span>!',
 		'Der Referee zückt die <span style="padding:2px;background-color:#f00;color:#fff;">Rote Karte</span>!',
-		'Der Schiedsrichter zeigt <span style="padding:2px;background-color:#f00;color:#fff;">Rot</span>!');
+		'Der Schiedsrichter zeigt <span style="padding:2px;background-color:#f00;color:#fff;">Rot</span>!'
+    );
 	$formulierungen['iFreeKick_shot_save'] = array(
 		'Der Torwart hat den Ball sicher.',
 		'Der Torwart von XYZ hält.',
 		'Der Ball fliegt Richtung Eckfahne.',
 		'Leichte Aufgabe für den Schlussmann von XYZ.',
 		'Kein Problem für den Torhüter.',
-		'Der Keeper fängt den Ball locker ab.');
+		'Der Keeper fängt den Ball locker ab.'
+    );
 	$formulierungen['dFreeKick_shot_save'] = array(
 		'Glanzparade vom Schlussmann!',
 		'Was für ein Reflex!',
-		'Souverän gehalten.');
+		'Souverän gehalten.'
+    );
 	$formulierungen['foul'] = array(
 		'Grobes Foul!',
 		'Foul von XYZ.',
@@ -215,14 +222,16 @@ function kommentar($ersetzung, $typ) {
 		'Das hat der Referee gesehen - Foulspiel.',
 		'Der Spieler wird zu Fall gebracht.',
 		'Das sah nach einem Revanchefoul aus.',
-		'Der Angreifer wird umgestoßen.');
+		'Der Angreifer wird umgestoßen.'
+    );
 	$formulierungen['penalty'] = array(
 		'<span style="text-transform:uppercase;">Der Schiedsrichter zeigt auf den Punkt.</span>',
 		'<span style="text-transform:uppercase;">Elfmeter!</span>',
 		'<span style="text-transform:uppercase;">Der Unparteiische entscheidet auf Elfmeter.</span>',
 		'<span style="text-transform:uppercase;">Strafstoß!</span>',
 		'<span style="text-transform:uppercase;">Strafstoß für XYZ!</span>',
-		'<span style="text-transform:uppercase;">Elfmeter für XYZ!</span>');
+		'<span style="text-transform:uppercase;">Elfmeter für XYZ!</span>'
+    );
 	$formulierungen['penalty_save'] = array(
 		'Der Torwart springt in die richtige Ecke ... und hält!',
 		'Der Torwart bleibt stehen - Gehalten! Schwacher Schuss.',
@@ -231,7 +240,8 @@ function kommentar($ersetzung, $typ) {
 		'Schwach geschossen.',
 		'Sensationelle Parade!',
 		'Den hat der Keeper sicher. Schlecht geschossen!',
-		'Toll gehalten vom Torwart!');
+		'Toll gehalten vom Torwart!'
+    );
 	$formulierungen['penalty_miss'] = array(
 		'Drüber!',
 		'XYZ schießt drüber!',
@@ -243,19 +253,22 @@ function kommentar($ersetzung, $typ) {
 		'Der Stürmer setzt den Elfmeter an die Latte!',
 		'Er vergibt die Chance!',
 		'Das war knapp. Da fehlten nur Zentimeter.',
-		'Der geht daneben!');
+		'Der geht daneben!'
+    );
 	$formulierungen['iFreeKick'] = array(
 		'Indirekter Freistoß für XYZ!',
 		'Indirekter Freistoß!',
 		'Der Schiedsrichter entscheidet auf Freistoß, indirekt.',
-		'Freistoß für XYZ, ca. '.mt_rand(19, 35).'m vor dem gegnerischen Tor.');
+		'Freistoß für XYZ, ca. '.mt_rand(19, 35).'m vor dem gegnerischen Tor.'
+    );
 	$formulierungen['dFreeKick'] = array(
 		'Direkter Freistoß für XYZ!',
 		'Direkter Freistoß!',
 		'Freistoß an der Strafraumgrenze.',
 		'Der Schiedsrichter entscheidet auf Freistoß, direkt.',
 		'Direkter Freistoß vor dem Strafraum. 6 Mann in der Mauer.',
-		'Freistoß für XYZ, ca. '.mt_rand(17, 23).'m vor dem gegnerischen Tor.');
+		'Freistoß für XYZ, ca. '.mt_rand(17, 23).'m vor dem gegnerischen Tor.'
+    );
 	$formulierungen['iFreeKick_clear'] = array(
 		'Per Kopfball geklärt.',
 		'XYZ klärt.',
@@ -264,7 +277,8 @@ function kommentar($ersetzung, $typ) {
 		'Der Verteidiger bereinigt die Situation.',
 		'Der Schuss geht auf die Tribüne. Hoffentlich hat sich kein Zuschauer verletzt.',
 		'Der Schuss geht auf die Tribüne. Die Fans freuen sich über den gefangenen Ball.',
-		'Der Schuss geht weit daneben.');
+		'Der Schuss geht weit daneben.'
+    );
 	$formulierungen['stopped'] = array(
 		'Ballverlust im Mittelfeld.',
 		'XYZ macht Druck und holt sich den Ball wieder.',
@@ -283,7 +297,8 @@ function kommentar($ersetzung, $typ) {
 		'Pass abgefangen.',
 		'XYZ holt sich den Ball wieder.',
 		'Fehlpass. Der Gegner hat den Ball.',
-		'Der Gegner holt sich den Ball wieder.');
+		'Der Gegner holt sich den Ball wieder.'
+    );
 	$formulierungen['iFreeKick_shot'] = array(
 		'Ein Spieler von XYZ kommt zum Kopfball.',
 		'Per Kopf in den Strafraum verlängert.',
@@ -293,7 +308,8 @@ function kommentar($ersetzung, $typ) {
 		'Der Ball wird abgefälscht ...',
 		'Flatterball aus '.mt_rand(25, 45).'m.',
 		'Der Ball wird verlängert.',
-		'Zur Seite gelegt und Schuss!');
+		'Zur Seite gelegt und Schuss!'
+    );
 	$formulierungen['dFreeKick_shot'] = array(
 		'Flachschuss.',
 		'Da war noch jemand dran.',
@@ -301,7 +317,8 @@ function kommentar($ersetzung, $typ) {
 		'Der Ball streift die Mauer.',
 		'Schöne Freistoß-Variante.',
 		'Der Ball geht durch die Mauer.',
-		'Schön um die Mauer gezirkelt.');
+		'Schön um die Mauer gezirkelt.'
+    );
 	$formulierungen['dFreeKick_clear'] = array(
 		'Der Ball geht in die Mauer.',
 		'Der Schuss geht daneben.',
@@ -309,7 +326,8 @@ function kommentar($ersetzung, $typ) {
 		'Der Schuss geht auf die Tribüne. Die Fans freuen sich über den gefangenen Ball.',
 		'Der Schuss geht weit drüber.',
 		'Da fehlten nur Zentimeter.',
-		'Der Verteidiger wirft sich in den Schuss.');
+		'Der Verteidiger wirft sich in den Schuss.'
+    );
 	$formulierungen['shot'] = array(
 		'Schuss und ...',
 		'Kopfball und ...',
@@ -331,7 +349,8 @@ function kommentar($ersetzung, $typ) {
 		'Nur noch der Torwart steht vor dem Angreifer.',
 		'Der Angreifer versucht, den Torwart mit einem Heber zu überwinden.',
 		'Kaltschnäuziger Abschluss.',
-		'Toller Weitschuss von XYZ.');
+		'Toller Weitschuss von XYZ.'
+    );
 	$formulierungen['shot_score'] = array(
 		'<strong>Der passt genau!</strong>',
 		'<strong>Den hätte der Keeper haben müssen!</strong>',
@@ -357,7 +376,8 @@ function kommentar($ersetzung, $typ) {
 		'<strong>Was für ein Treffer!</strong>',
 		'<strong>Sensationelles Tor!</strong>',
 		'<strong>Unglaublich! Toooor!</strong>',
-		'<strong>Tor für XYZ!</strong>');
+		'<strong>Tor für XYZ!</strong>'
+    );
 	$formulierungen['shot_block'] = array(
 		'Der Schuss wird vom Verteidiger abgeblockt.',
 		'Der Abwehrspieler kann noch an den Pfosten abfälschen.',
@@ -370,7 +390,8 @@ function kommentar($ersetzung, $typ) {
 		'Der Schuss geht weit daneben.',
 		'Der Ball knallt ans Lattenkreuz.',
 		'Der Stürmer kommt angerauscht und schlägt ein wunderbares Luftloch.',
-		'Ball zur Ecke geklärt.');
+		'Ball zur Ecke geklärt.'
+    );
 	$formulierungen['shot_save'] = array(
 		'Gehalten!',
 		'Tolle Parade vom Torwart.',
@@ -381,7 +402,8 @@ function kommentar($ersetzung, $typ) {
 		'Der Torwart klatscht nur ab, aber der Nachschuss geht vorbei.',
 		'Der Schlussmann fängt sicher.',
 		'Der Torhüter vereitelt die Chance mit einem tollen Reflex.',
-		'Der Torwart bewahrt sein Team mit einer Glanzparade vor dem Gegentreffer.');
+		'Der Torwart bewahrt sein Team mit einer Glanzparade vor dem Gegentreffer.'
+    );
 	$formulierungen['offside'] = array(
 		'Abseits.',
 		'XYZ im Abseits.',
@@ -393,7 +415,8 @@ function kommentar($ersetzung, $typ) {
 		'Der Schiedsrichter erkennt zu Recht auf Abseits.',
 		'Der Referee entscheidet auf Abseitsstellung.',
 		'Abseits! Die Spieler können es kaum glauben.',
-		'Der Spieler steht im Abseits.');
+		'Der Spieler steht im Abseits.'
+    );
 	$formulierungen['quickCounterAttack'] = array(
 		'XYZ kontert.',
 		'Schneller Gegenangriff von XYZ.',
@@ -405,18 +428,22 @@ function kommentar($ersetzung, $typ) {
 		'XYZ schaltet direkt in den Angriff um.',
 		'Direkter Konter von XYZ.',
 		'Schönes Konterspiel von XYZ.',
-		'Schneller Konter von XYZ.');
+		'Schneller Konter von XYZ.'
+    );
 	$formulierungen['throwIn'] = array(
 		'Ball im Aus. Einwurf.',
 		'Der Ball geht ins Aus.',
 		'Die Kugel rollt ins Aus. Einwurf.',
-		'Einwurf tief in der gegnerischen Hälfte.');
+		'Einwurf tief in der gegnerischen Hälfte.'
+    );
 	$formulierungen['throwIn_def'] = array(
 		'Der Gegner hat den Ball.',
-		'Ballbesitz für den Gegner.');
+		'Ballbesitz für den Gegner.'
+    );
 	$formulierungen['throwIn_att'] = array(
 		'XYZ hat den Ball.',
-		'Ballbesitz für XYZ.');
+		'Ballbesitz für XYZ.'
+    );
 	if (isset($formulierungen[$typ])) { $formulierung = $formulierungen[$typ]; } else { return $typ; }
 	shuffle($formulierung);
 	$ausgabe = str_replace('XYZ', $ersetzung, $formulierung[0]);
@@ -945,7 +972,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$spielzeit = $tempmax[0]+mt_rand(0, 3);
 	$nachSpielZeit = $spielzeit-90;
 	if ($spielzeit < 90) { $spielzeit = 90; }
-	$spielbericht .= '<p>1\': '.kommentar('Referee', 'start_game');
+	$spielbericht .= '<p>1\': '.kommentar('', 'start_game');
 	if ($is_derby) {
 		$spielbericht .= ' Die Zuschauer fiebern dem Derby schon lange entgegen!';
 	}
@@ -959,7 +986,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 			starte_angriff($sql3['team2'], $sql3['team1'], $staerke_team2, $staerke_team1);
 		}
 		if ($minute == 45) {
-			$spielbericht .= '<p>45\': '.kommentar('Referee', 'mid_game');
+			$spielbericht .= '<p>45\': '.kommentar('', 'mid_game');
 		}
 		elseif ($minute > 90) {
 			$spielbericht .= '<p>90\': Der Assistent zeigt '.$nachSpielZeit.' Minuten Nachspielzeit an. Die Fans treiben ihr Team noch einmal richtig an.</p>';

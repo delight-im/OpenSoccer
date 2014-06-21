@@ -74,7 +74,13 @@ if ($cookie_team != '__'.$cookie_id) {
 	?>
 	<?php if (isMobile() && isset($nextGamesHTML)) { echo str_replace(' (<a href="/wio.php">WIO</a>)', '', $nextGamesHTML); } ?>
 	<h1>Dein Verein: <?php echo $cookie_teamname; ?></h1>
-	<p style="text-align:left; margin-bottom:0;"><a class="pagenava" href="/freundeWerben.php">Freunde einladen</a></p>
+    <p style="float:left; text-align:left; margin-bottom:0;">
+        <a class="pagenava" href="/freundeWerben.php">Freunde einladen</a>
+    </p>
+    <p style="text-align:left; margin-bottom:0;">
+        <img style="width:16px; height:16px; vertical-align:middle;" src="http://www.ballmanager.de/images/icon_spieler.png" width="16" alt="Freunde einladen"> Lade Deine Freunde ein und erhalte 7,5 Mio. Bonus!
+    </p>
+    <div style="clear:both;"></div>
 	<table>
 	<thead>
 	<tr class="odd">

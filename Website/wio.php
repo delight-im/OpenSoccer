@@ -1,9 +1,9 @@
 <?php include 'zz1.php'; ?>
-<title>Wer ist online? | Ballmanager.de</title>
+<title><?php echo _('Wer ist online? | Ballmanager.de'); ?></title>
 <?php include 'zz2.php'; ?>
-<h1>Wer ist online?</h1>
+<h1><?php echo _('Wer ist online?'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p><table><thead><tr class="odd"><th scope="col">Manager</th><th scope="col">Aktiv</th><th scope="col">Chat</th><th scope="col">Team</th><th scope="col">Aktion</th></tr></thead><tbody>
+<p><table><thead><tr class="odd"><th scope="col"><?php echo _('Manager'); ?></th><th scope="col"><?php echo _('Aktiv'); ?></th><th scope="col"><?php echo _('Chat'); ?></th><th scope="col"><?php echo _('Team'); ?></th><th scope="col"><?php echo _('Aktion'); ?></th></tr></thead><tbody>
 <?php
 setTaskDone('check_wio');
 // FREUNDESLISTE LADEN ANFANG
@@ -32,10 +32,10 @@ while ($kontakt3 = mysql_fetch_assoc($kontakt2)) {
 }
 ?>
 </tbody></table></p>
-<p><strong>Hinweis:</strong> Deine <a href="/freunde.php">Freunde</a> sind fett markiert.</p>
+<p><strong><?php echo _('Hinweis:'); ?></strong><?php echo _('Deine'); ?><a href="/freunde.php"><?php echo _('Freunde'); ?></a> <?php echo _('sind fett markiert.'); ?></p>
 
-<h1 id="teamList">Support-Team</h1>
-<p><table><thead><tr class="odd"><th scope="col">Manager</th><th scope="col">Aktiv</th><th scope="col">Chat</th><th scope="col">Aktion</th></tr></thead><tbody>
+<h1 id="teamList"><?php echo _('Support-Team') ?></h1>
+<p><table><thead><tr class="odd"><th scope="col"><?php echo _('Manager') ?></th><th scope="col"><?php echo _('Aktiv') ?></th><th scope="col"><?php echo _('Chat') ?></th><th scope="col"><?php echo _('Aktion') ?></th></tr></thead><tbody>
 <?php
 $kontakt1 = "SELECT ids, username, last_login, last_chat FROM ".$prefix."users WHERE status = 'Helfer'";
 $kontakt2 = mysql_query($kontakt1);
@@ -53,6 +53,6 @@ while ($kontakt3 = mysql_fetch_assoc($kontakt2)) {
 </tbody></table></p>
 
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!') ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

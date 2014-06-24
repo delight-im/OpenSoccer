@@ -28,7 +28,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		$nql1 = "SELECT COUNT(*) FROM ".$prefix."teams AS a JOIN ".$prefix."users AS b ON a.ids = b.team WHERE a.elo > ".$sql3['elo'];
 		$nql2 = mysql_query($nql1);
 		$nql3 = mysql_result($nql2, 0);
-		$meinePositionsSeite = ceil(intval(($nql3)+1)/$eintraege_pro_seite);
+		$meinePositionsSeite = ceil((intval($nql3) + 1) / $eintraege_pro_seite);
 		echo '<p style="text-align:right"><a href="/top_manager.php?seite='.$meinePositionsSeite.'" class="pagenava">'._('Meine Position').'</a>';
 		if (mb_strlen($sql3['liga']) == 32) {
 			$ownCountry1 = "SELECT land FROM ".$prefix."ligen WHERE ids = '".$sql3['liga']."'";
@@ -43,14 +43,13 @@ if ($cookie_team != '__'.$cookie_id) {
 }
 ?>
 <p><?php echo _('Welcher Manager ist der erfolgreichste? Die Rangliste zeigt alle Manager, geordnet nach dem RKP ihrer Vereine.'); ?></p>
-<p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col"><?php echo _('Manager') ?></th>
-<th scope="col"><?php echo _('Team') ?></th>
-<th scope="col"><?php echo _('RKP') ?></th>
+<th scope="col"><?php echo _('Manager'); ?></th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('RKP'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -92,12 +91,11 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <?php
 echo '<div class="pagebar">';
 $wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS
 $vorherige = $seite-1;
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite=1">._('Erste')</a> '; } else { echo '<span class="this-page">._('Erste')</span>'; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite=1">'._('Erste').'</a> '; } else { echo '<span class="this-page">'._('Erste').'</span>'; }
 if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$vorherige.'">'._('Vorherige').'</a> '; } else { echo '<span class="this-page">'._('Vorherige').'</span> '; }
 $naechste = $seite+1;
 $vor4 = $seite-4; if ($vor4 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$vor4.'">'.$vor4.'</a> '; }

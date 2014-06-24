@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-06-24 03:23+0100\n"
-"PO-Revision-Date: 2014-06-24 03:57+0100\n"
+"POT-Creation-Date: 2014-06-24 16:19+0100\n"
+"PO-Revision-Date: 2014-06-24 16:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -18,3 +18,51 @@ msgstr ""
 #: ../../../index.php:314
 msgid "Kostenloser Online-Fußball-Manager"
 msgstr "Free Online Soccer Manager"
+
+#: ../../../top_manager.php:32
+msgid "Meine Position"
+msgstr "My position"
+
+#: ../../../top_manager.php:38
+msgid "Mein Land"
+msgstr "My country"
+
+#: ../../../top_manager.php:45
+msgid ""
+"Welcher Manager ist der erfolgreichste? Die Rangliste zeigt alle Manager, "
+"geordnet nach dem RKP ihrer Vereine."
+msgstr ""
+"Which manager is the most successful? This ranking shows all managers "
+"ordered by the RKP of their clubs."
+
+#: ../../../top_manager.php:50
+msgid "Manager"
+msgstr "Manager"
+
+#: ../../../top_manager.php:51
+msgid "Team"
+msgstr "Team"
+
+#: ../../../top_manager.php:52
+msgid "RKP"
+msgstr "RKP"
+
+#: ../../../top_manager.php:98
+msgid "Erste"
+msgstr "First"
+
+#: ../../../top_manager.php:99
+msgid "Vorherige"
+msgstr "Previous"
+
+#: ../../../top_manager.php:110
+msgid "Nächste"
+msgstr "Next"
+
+#: ../../../top_manager.php:111
+msgid "Letzte"
+msgstr "Last"
+
+#: ../../../top_manager.php:115
+msgid "Du musst angemeldet sein, um diese Seite aufrufen zu können!"
+msgstr "Please sign in to your personal account in order to access this page!"

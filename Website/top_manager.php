@@ -29,28 +29,28 @@ if ($cookie_team != '__'.$cookie_id) {
 		$nql2 = mysql_query($nql1);
 		$nql3 = mysql_result($nql2, 0);
 		$meinePositionsSeite = ceil(intval(($nql3)+1)/$eintraege_pro_seite);
-		echo '<p style="text-align:right"><a href="/top_manager.php?seite='.$meinePositionsSeite.'" class="pagenava">Meine Position</a>';
+		echo '<p style="text-align:right"><a href="/top_manager.php?seite='.$meinePositionsSeite.'" class="pagenava">'._('Meine Position').'</a>';
 		if (mb_strlen($sql3['liga']) == 32) {
 			$ownCountry1 = "SELECT land FROM ".$prefix."ligen WHERE ids = '".$sql3['liga']."'";
 			$ownCountry2 = mysql_query($ownCountry1);
 			if (mysql_num_rows($ownCountry2) == 1) {
 				$ownCountry3 = mysql_fetch_assoc($ownCountry2);
-				echo '<a href="/top_manager.php?land='.urlencode($ownCountry3['land']).'" class="pagenava">Mein Land</a>';
+				echo '<a href="/top_manager.php?land='.urlencode($ownCountry3['land']).'" class="pagenava">'._('Mein Land').'</a>';
 			}
 		}
 		echo '</p>';
 	}
 }
 ?>
-<p>Welcher Manager ist der erfolgreichste? Die Rangliste zeigt alle Manager, geordnet nach dem RKP ihrer Vereine.</p>
+<p><?php echo _('Welcher Manager ist der erfolgreichste? Die Rangliste zeigt alle Manager, geordnet nach dem RKP ihrer Vereine.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Manager</th>
-<th scope="col">Team</th>
-<th scope="col">RKP</th>
+<th scope="col"><?php echo _('Manager') ?></th>
+<th scope="col"><?php echo _('Team') ?></th>
+<th scope="col"><?php echo _('RKP') ?></th>
 </tr>
 </thead>
 <tbody>
@@ -97,8 +97,8 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 echo '<div class="pagebar">';
 $wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS
 $vorherige = $seite-1;
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite=1">Erste</a> '; } else { echo '<span class="this-page">Erste</span>'; }
-if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$vorherige.'">Vorherige</a> '; } else { echo '<span class="this-page">Vorherige</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite=1">._('Erste')</a> '; } else { echo '<span class="this-page">._('Erste')</span>'; }
+if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$vorherige.'">'._('Vorherige').'</a> '; } else { echo '<span class="this-page">'._('Vorherige').'</span> '; }
 $naechste = $seite+1;
 $vor4 = $seite-4; if ($vor4 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$vor4.'">'.$vor4.'</a> '; }
 $vor3 = $seite-3; if ($vor3 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$vor3.'">'.$vor3.'</a> '; }
@@ -109,11 +109,11 @@ $nach1 = $seite+1; if ($nach1 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['
 $nach2 = $seite+2; if ($nach2 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$nach2.'">'.$nach2.'</a> '; }
 $nach3 = $seite+3; if ($nach3 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$nach3.'">'.$nach3.'</a> '; }
 $nach4 = $seite+4; if ($nach4 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$nach4.'">'.$nach4.'</a> '; }
-if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$naechste.'">Nächste</a> '; } else { echo '<span class="this-page">Nächste</span> '; }
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.ceil($wieviel_seiten).'">Letzte</a>'; } else { echo '<span clss="this-page">Letzte</span>'; }
+if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.$naechste.'">'._('Nächste').'</a> '; } else { echo '<span class="this-page">'._('Nächste').'</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?land='.$filter_land.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!') ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

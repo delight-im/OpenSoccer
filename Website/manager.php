@@ -148,7 +148,6 @@ if ($urlaub3 > 0 && $clearedID != 'c4ca4238a0b923820dcc509a6f75849b') {
 	echo '<p style="color:red">'.$sql3['username'].' ist zurzeit im Urlaub!</p>';
 }
 ?>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -172,16 +171,15 @@ else {
 }
 echo '</td></tr>';
 if ($_GET['id'] != $cookie_id) {
-	echo '<tr><td colspan="2" class="link"><a href="/post_schreiben.php?id='.$_GET['id'].'"'.noDemoClick($cookie_id).'><img width="16" style="vertical-align: middle;" alt="email" src="images/email_add.png"> '.$sql3['username'].' jetzt eine Nachricht schicken</a></td></tr>';
+	echo '<tr><td colspan="2" class="link"><a href="/post_schreiben.php?id='.$_GET['id'].'"'.noDemoClick($cookie_id).'><img width="16" style="vertical-align: middle;" alt="email" src="/images/email_add.png"> '.$sql3['username'].' jetzt eine Nachricht schicken</a></td></tr>';
 	if (isset($kontakt_link)) { echo $kontakt_link; }
 }
 if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
-	echo '<tr class="odd"><td colspan="2" class="link"><a href="/sanktionen.php?profileID='.$clearedID.'">Sanktion für '.$sql3['username'].' festlegen</a></td></tr>';
+	echo '<tr class="odd"><td colspan="2" class="link"><a href="/sanktionen.php?profileID='.$clearedID.'"><img width="16" style="vertical-align: middle;" alt="report" src="/images/report_add.png"> Sanktion für '.$sql3['username'].' festlegen</a></td></tr>';
 }
 ?>
 </tbody>
 </table>
-</p>
 <?php
 if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 	if ($wantTests == 1) {

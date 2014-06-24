@@ -4,11 +4,11 @@
 </div>
 <?php echo showInfoBox($showInfoBox); /* Meldungen ausgeben */ ?>
 <div><span id="rfooter" style="color:#666; width:820px; margin-left:auto; margin-right:auto; height:55px; text-align:center; font-size:80%; text-decoration:none">
-	<a href="/regeln.php#regeln" rel="nofollow">Regeln</a> |
-	<a href="/impressum.php" rel="nofollow">Impressum</a> |
-	<a href="/regeln.php#datenschutz" rel="nofollow">Datenschutz</a> |
-	<a href="https://github.com/delight-im/Ballmanager">Open Source</a><br />
-	Alle Vereine, Spieler und Sponsoren sind frei erfunden und haben keinen Bezug zu realen Ligen. Das Geld im Spiel ist nur virtuell und es erfolgen niemals Auszahlungen.</span>
+	<a href="/regeln.php#regeln" rel="nofollow"><?php echo _('Regeln'); ?></a> |
+	<a href="/impressum.php" rel="nofollow"><?php echo _('Impressum'); ?></a> |
+	<a href="/regeln.php#datenschutz" rel="nofollow"><?php echo _('Datenschutz'); ?></a> |
+	<a href="https://github.com/delight-im/Ballmanager"><?php echo _('Open Source'); ?></a><br />
+	<?php echo _('Alle Vereine, Spieler und Sponsoren sind frei erfunden und haben keinen Bezug zu realen Ligen. Das Geld im Spiel ist nur virtuell und es erfolgen niemals Auszahlungen.'); ?></span>
 </div>
 <?php
 // CRONJOBS AUSFUEREN ANFANG

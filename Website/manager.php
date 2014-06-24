@@ -172,7 +172,7 @@ else {
 }
 echo '</td></tr>';
 if ($_GET['id'] != $cookie_id) {
-	echo '<tr><td colspan="2" class="link"><a href="/post_schreiben.php?id='.$_GET['id'].'"'.noDemoClick($cookie_id).'>'.$sql3['username'].' jetzt eine Nachricht schicken</a></td></tr>';
+	echo '<tr><td colspan="2" class="link"><a href="/post_schreiben.php?id='.$_GET['id'].'"'.noDemoClick($cookie_id).'><img width="16" style="vertical-align: middle;" alt="email" src="images/email_add.png"> '.$sql3['username'].' jetzt eine Nachricht schicken</a></td></tr>';
 	if (isset($kontakt_link)) { echo $kontakt_link; }
 }
 if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {

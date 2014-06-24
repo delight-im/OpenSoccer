@@ -311,7 +311,7 @@ else {
 <p>Du kannst Deine Daten anschließend noch einmal prüfen, sie werden noch nicht gespeichert. Du darfst Dich nur ein einziges Mal registrieren und nur einen Verein haben.</p>
 </form>
 <?php } else { ?>
-<h1>Kostenloser Online-Fußball-Manager</h1>
+<h1><?php echo _('Kostenloser Online-Fußball-Manager'); ?></h1>
 <p><strong>Du bist der Trainer. Du bist der Manager. Du hast alles in der Hand!</strong></p>
 <p>+ Übernimm Deinen eigenen Fußballklub!<br />+ jeden Tag 1 bis 4 Spiele (Liga + Pokal)<br />+ einfach im Browser managen &mdash; keine Installation<br />+ garantiert kostenlos &mdash; auch in Zukunft<br />+ keine Premium-Accounts &mdash; gleiche Chancen für alle<br />+ schneller Einstieg<br />+ langfristiger Spielspaß<br />+ tolle Community<br />+ wenig Zeitaufwand<br />+ LIVE-Spiele &mdash; spannend bis zum Ende<br />+ Urlaubsvertretung durch den Computer (10-30 Tage)</p>
 <h1>Jetzt registrieren</h1>

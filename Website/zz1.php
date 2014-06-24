@@ -6,12 +6,17 @@ include 'zzserver.php';
 include 'zzcookie.php';
 include 'zzfunctions.php';
 ob_start();
+
 // BLAETTERN ANFANG
 if (isset($_GET['seite'])) { $seite = intval($_GET['seite']); }
 else { $seite = 1; }
 $eintraege_pro_seite = 15; // ANGEBEN DER BEITRAEGE PRO SEITE
 $start = $seite*$eintraege_pro_seite-$eintraege_pro_seite; // ERMITTELN DER STARTZAHL FÜR DIE ABFRAGE
 // BLAETTERN ENDE
+
+require_once('./classes/I18N.php');
+I18N::init('de_DE', 'messages', './i18n');
+
 // INFO-BOXEN-ARRAY ANFANG
 $showInfoBox = array();
 function addInfoBox($text) {

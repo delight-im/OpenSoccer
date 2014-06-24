@@ -42,6 +42,10 @@ Demo: http://www.ballmanager.de/
 
 Any contributions are welcome :) Please fork this repository, apply your changes, and submit your contributions by sending a pull request.
 
+## Translating
+
+In order to provide translations for this project, please refer to our [documentation](https://github.com/delight-im/PHP-I18N) and find the translation files in [Website/i18n](Website/i18n).
+
 ## License
 
 All parts of this project, except for the folder `images` in folder `Website`, has been released under the following license.

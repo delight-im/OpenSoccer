@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-06-24 16:19+0100\n"
-"PO-Revision-Date: 2014-06-24 16:22+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-06-25 01:01+0100\n"
+"PO-Revision-Date: 2014-06-25 01:02+0100\n"
+"Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -35,11 +35,11 @@ msgstr ""
 "Which manager is the most successful? This ranking shows all managers "
 "ordered by the RKP of their clubs."
 
-#: ../../../top_manager.php:50
+#: ../../../top_manager.php:50 ../../../wio.php:6 ../../../wio.php:38
 msgid "Manager"
 msgstr "Manager"
 
-#: ../../../top_manager.php:51
+#: ../../../top_manager.php:51 ../../../wio.php:6
 msgid "Team"
 msgstr "Team"
 
@@ -63,6 +63,161 @@ msgstr "Next"
 msgid "Letzte"
 msgstr "Last"
 
-#: ../../../top_manager.php:115
+#: ../../../top_manager.php:115 ../../../wio.php:56
 msgid "Du musst angemeldet sein, um diese Seite aufrufen zu können!"
 msgstr "Please sign in to your personal account in order to access this page!"
+
+#: ../../../warteliste.php:2 ../../../warteliste.php:4
+msgid "Warteliste"
+msgstr "Waiting list"
+
+#: ../../../warteliste.php:5
+msgid ""
+"Zurzeit stehst Du noch auf der Warteliste. Es wird aber nicht lange dauern, "
+"bis Dir ein Team zugeteilt wird. Dann informieren wir Dich per E-Mail "
+"darüber und Du kannst sofort losspielen."
+msgstr ""
+"Right now, you're still on the waiting list. But it won't be long until a "
+"team is assigned to you. We will then inform you via email and you can start "
+"playing instantly."
+
+#: ../../../wio.php:2 ../../../wio.php:4
+msgid "Wer ist online?"
+msgstr "Who is online?"
+
+#: ../../../wio.php:6 ../../../wio.php:38
+msgid "Aktiv"
+msgstr "Active"
+
+#: ../../../wio.php:6 ../../../wio.php:38
+msgid "Chat"
+msgstr "Chat"
+
+#: ../../../wio.php:6 ../../../wio.php:38
+msgid "Aktion"
+msgstr "Action"
+
+#: ../../../wio.php:37
+msgid "Support-Team"
+msgstr "Support staff"
+
+#: ../../../zz3.php:7
+msgid "Regeln"
+msgstr "Rules"
+
+#: ../../../zz3.php:8
+msgid "Impressum"
+msgstr "Contact"
+
+#: ../../../zz3.php:9
+msgid "Datenschutz"
+msgstr "Privacy Policy"
+
+#: ../../../zz3.php:10
+msgid "Open Source"
+msgstr "Open source"
+
+#: ../../../zz3.php:11
+msgid ""
+"Alle Vereine, Spieler und Sponsoren sind frei erfunden und haben keinen "
+"Bezug zu realen Ligen. Das Geld im Spiel ist nur virtuell und es erfolgen "
+"niemals Auszahlungen."
+msgstr ""
+"All clubs, players and sponsors are fictitious and bear no relation to real "
+"leagues. The in-game money is virtual only and there are never any payouts."
+
+#: ../../../zzsubnav_statistik.php:6
+msgid "5-Jahres-Wertung"
+msgstr "5-year ranking"
+
+#: ../../../zzsubnav_statistik.php:7
+msgid "Cup-Sieger"
+msgstr "National Trophy winners"
+
+#: ../../../zzsubnav_statistik.php:8
+msgid "Dauerbrenner"
+msgstr "Most reliable players"
+
+#: ../../../zzsubnav_statistik.php:9
+msgid "Ergebnisverlauf"
+msgstr "Course of results"
+
+#: ../../../zzsubnav_statistik.php:10
+msgid "Geschichte"
+msgstr "History"
+
+#: ../../../zzsubnav_statistik.php:11
+msgid "Getauschte Ligen"
+msgstr "Changed leagues"
+
+#: ../../../zzsubnav_statistik.php:12
+msgid "Globale Tabelle"
+msgstr "Global standings"
+
+#: ../../../zzsubnav_statistik.php:13
+msgid "Jüngste Kader"
+msgstr "Youngest squads"
+
+#: ../../../zzsubnav_statistik.php:14
+msgid "Meiste Titel"
+msgstr "Most triumphs"
+
+#: ../../../zzsubnav_statistik.php:15
+msgid "Meiste Zuschauer"
+msgstr "Largest audience"
+
+#: ../../../zzsubnav_statistik.php:16
+msgid "Meister"
+msgstr "Champions"
+
+#: ../../../zzsubnav_statistik.php:17
+msgid "Pokal-Sieger"
+msgstr "International Cup winners"
+
+#: ../../../zzsubnav_statistik.php:18
+msgid "Reichste Ligen"
+msgstr "Wealthiest leagues"
+
+#: ../../../zzsubnav_statistik.php:19
+msgid "Saisonverlauf"
+msgstr "Course of season"
+
+#: ../../../zzsubnav_statistik.php:20
+msgid "Stärkste Ligen - Aufstellung"
+msgstr "Strongest leagues - Line-up"
+
+#: ../../../zzsubnav_statistik.php:21
+msgid "Stärkste Ligen - Kader"
+msgstr "Strongest leagues - Squad"
+
+#: ../../../zzsubnav_statistik.php:22
+msgid "Stärkste Ligen - RKP"
+msgstr "Strongest leagues - RKP"
+
+#: ../../../zzsubnav_statistik.php:23
+msgid "Teuerste Transfers"
+msgstr "Most expensive transfers"
+
+#: ../../../zzsubnav_statistik.php:24
+msgid "Torjägerliste"
+msgstr "Top scorers"
+
+#: ../../../zzsubnav_statistik.php:25
+msgid "Treueste Spieler"
+msgstr "Most loyal players"
+
+#: ../../../zzsubnav_statistik.php:26
+msgid "Wert des Geldes"
+msgstr "Value of money"
+
+#: ../../../zzsubnav_statistik.php:27
+msgid "Wertvollste Spieler"
+msgstr "Most valuable players"
+
+#: ../../../zzsubnav_statistik.php:28
+msgid "Wertvollste Teams"
+msgstr "Most valuable teams"
+
+#: ../../../zzsubnav_statistik.php:29
+msgid "Zuschauerverlauf"
+msgstr "Development of audience"

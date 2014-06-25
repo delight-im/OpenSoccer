@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Stärkste Ligen - RKP | Ballmanager.de</title>
+<title><?php echo _('Stärkste Ligen - RKP'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .liga_<?php echo $cookie_liga; ?> {
@@ -11,14 +11,14 @@
 <?php include 'zzsubnav_statistik.php'; ?>
 <h1>Stärkste Ligen - RKP</h1>
 <?php if ($loggedin == 1) { ?>
-<p>Jedes Team besitzt eine Punktzahl fürs Ranking, RKP genannt. Am Durchschnitt dieser RKP-Zahlen innerhalb der einzelnen Ligen wird hier deren Stärke gemessen.</p>
+<p><?php echo _('Jedes Team besitzt eine Punktzahl fürs Ranking, RKP genannt. Am Durchschnitt dieser RKP-Zahlen innerhalb der einzelnen Ligen wird hier deren Stärke gemessen.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Liga</th>
-<th scope="col">RKP</th>
+<th scope="col"><?php echo _('Liga'); ?></th>
+<th scope="col"><?php echo _('RKP'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -38,6 +38,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </table>
 </p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

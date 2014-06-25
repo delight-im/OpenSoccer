@@ -1,18 +1,18 @@
 <?php include 'zz1.php'; ?>
-<title>Neuigkeiten | Ballmanager.de</title>
+<title><?php echo _('Neuigkeiten'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Neuigkeiten durchsuchen</h1>
+<h1><?php echo _('Neuigkeiten durchsuchen'); ?></h1>
 <form action="/neuigkeiten.php" method="get" accept-charset="utf-8">
 <p><input type="text" name="q" style="width:200px" /> <input type="submit" value="Suchen" /></p>
 </form>
 <?php
 if (isset($_GET['q'])) { $q = mysql_real_escape_string(trim(strip_tags($_GET['q']))); } else { $q = ''; }
 if ($q == '') {
-	echo '<h1>Neuigkeiten</h1>';
+	echo '<h1>'._('Neuigkeiten').'</h1>';
 }
 else {
-	echo '<h1>Neuigkeiten zum Thema &quot;'.$q.'&quot;</h1>';
+	echo '<h1>'._('Neuigkeiten zum Thema').' &quot;.$q.'&quot;</h1>';
 }
 ?>
 <?php
@@ -29,7 +29,7 @@ foreach ($newsList as $newsEntry) {
 }
 ?>
 <?php } else { ?>
-<h1>Neuigkeiten</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Neuigkeiten'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

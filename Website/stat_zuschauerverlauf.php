@@ -1,11 +1,11 @@
 <?php include 'zz1.php'; ?>
-<title>Zuschauerverlauf | Ballmanager.de</title>
+<title><?php echo _('Zuschauerverlauf'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
-<h1>Zuschauerverlauf</h1>
-<p>Dieses Liniendiagramm zeigt die Entwicklung Deiner Zuschauerzahlen in der aktuellen Saison. Hinweis: Die Daten können erst nach dem zweiten Heimspiel angezeigt werden.</p>
+<h1><?php echo _('Zuschauerverlauf'); ?></h1>
+<p><?php echo _('Dieses Liniendiagramm zeigt die Entwicklung Deiner Zuschauerzahlen in der aktuellen Saison. Hinweis: Die Daten können erst nach dem zweiten Heimspiel angezeigt werden.'); ?></p>
 <p>
 <?php
 $torj1 = "SELECT zuschauer, datum FROM ".$prefix."spiele WHERE team1 = '".$cookie_teamname."' AND simuliert = 1 ORDER BY datum ASC";
@@ -34,13 +34,13 @@ if (mysql_num_rows($torj2) > 0) {
     echo' alt="" />';
 }
 else {
-	echo 'Noch keine Daten verfügbar!';
+	echo _('Noch keine Daten verfügbar!')';
 }
 ?>
 </p>
 <?php } ?>
 <?php } else { ?>
-<h1>Zuschauerverlauf</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Zuschauerverlauf'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

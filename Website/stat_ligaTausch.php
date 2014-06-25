@@ -1,18 +1,18 @@
 <?php include 'zz1.php'; ?>
-<title>Getauschte Ligen | Ballmanager.de</title>
+<title><?php echo _('Getauschte Ligen'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
-<h1>Getauschte Ligen</h1>
+<h1><?php echo _('Getauschte Ligen'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p>Welcher Manager ist wann in welches Land gegangen? Mit welchem Team hat er getauscht?</p>
+<p><?php echo _('Welcher Manager ist wann in welches Land gegangen? Mit welchem Team hat er getauscht?'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Datum</th>
-<th scope="col">Manager</th>
-<th scope="col">Von</th>
-<th scope="col">Nach</th>
+<th scope="col"><?php echo _('Datum'); ?></th>
+<th scope="col"><?php echo _('Manager'); ?></th>
+<th scope="col"><?php echo _('Von'); ?></th>
+<th scope="col"><?php echo _('Nach'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -42,6 +42,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </table>
 </p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

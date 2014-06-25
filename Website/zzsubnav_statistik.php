@@ -1,4 +1,4 @@
-<h1>Statistik wählen</h1>
+<h1><?php echo _('Statistik wählen'); ?></h1>
 <form action="/statistiken_redirect.php" method="post" accept-charset="utf-8">
 <p><select name="stat" size="1" style="width:200px">
 <?php

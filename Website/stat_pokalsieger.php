@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Pokalsieger | Ballmanager.de</title>
+<title><?php echo _('Pokalsieger'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -9,16 +9,16 @@
 </style>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
-<h1>Pokalsieger</h1>
+<h1><?php echo _('Pokalsieger'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p>Welches Teams haben den Pokal schon gewonnen? Wer war ihr Finalgegner?</p>
+<p><?php echo _('Welches Teams haben den Pokal schon gewonnen? Wer war ihr Finalgegner?'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Saison</th>
-<th scope="col">Sieger</th>
-<th scope="col">Finalgegner</th>
+<th scope="col"><?php echo _('Saison'); ?></th>
+<th scope="col"><?php echo _('Sieger'); ?></th>
+<th scope="col"><?php echo _('Finalgegner'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -39,6 +39,6 @@ while ($torj3 = mysql_fetch_assoc($torj2)) {
 </table>
 </p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

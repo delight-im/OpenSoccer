@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Cupsieger | Ballmanager.de</title>
+<title><?php echo _('Cupsieger'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo md5($cookie_teamname); ?> {
@@ -10,7 +10,7 @@
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Land wählen</h1>
+<h1><?php echo _('Land wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="land" size="1" style="width:200px">
     <?php
@@ -36,15 +36,15 @@
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Cupsieger</h1>
-<p>Welches Teams haben den Cup schon gewonnen? Wer war ihr Finalgegner?</p>
+<h1><?php echo _('Cupsieger'); ?></h1>
+<p><?php echo _('Welches Teams haben den Cup schon gewonnen? Wer war ihr Finalgegner?'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Saison</th>
-<th scope="col">Sieger</th>
-<th scope="col">Finalgegner</th>
+<th scope="col"><?php echo _('Saison'); ?></th>
+<th scope="col"><?php echo _('Sieger'); ?></th>
+<th scope="col"><?php echo _('Finalgegner'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -65,7 +65,7 @@ while ($torj3 = mysql_fetch_assoc($torj2)) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Cupsieger</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Cupsieger'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

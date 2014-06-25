@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Transferliste | Ballmanager.de</title>
+<title><?php echo _('Transferliste'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <h1>Transferliste</h1>
 <?php if ($loggedin == 1) { ?>
@@ -7,10 +7,10 @@
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Spieler</th>
-<th scope="col">Gebote</th>
-<th scope="col">Höchstgebot</th>
-<th scope="col">Ende</th>
+<th scope="col"><?php echo _('Spieler'); ?></th>
+<th scope="col"><?php echo _('Gebote'); ?></th>
+<th scope="col"><?php echo _('Höchstgebot'); ?></th>
+<th scope="col"><?php echo _('Ende'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -19,7 +19,7 @@ $sql1 = "SELECT a.ids, a.vorname, a.nachname, a.position, a.wiealt, b.bieter_hig
 $sql2 = mysql_query($sql1);
 $counter = 0;
 if (mysql_num_rows($sql2) == 0) {
-	echo '<tr><td colspan="4">Du bietest im Moment keinen Spieler zum Verkauf an.</td></tr>';
+	echo '<tr><td colspan="4">'._('Du bietest im Moment keinen Spieler zum Verkauf an.').'</td></tr>';
 }
 else {
 	while ($sql3 = mysql_fetch_assoc($sql2)) {
@@ -39,6 +39,6 @@ else {
 </table>
 </p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

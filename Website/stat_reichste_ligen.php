@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Reichste Ligen | Ballmanager.de</title>
+<title><?php echo _('Reichste Ligen'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .liga_<?php echo $cookie_liga; ?> {
@@ -11,14 +11,14 @@
 <?php include 'zzsubnav_statistik.php'; ?>
 <h1>Reichste Ligen</h1>
 <?php if ($loggedin == 1) { ?>
-<p>In welcher Liga spielen die reichsten Teams? Diese Statistik zeigt den Durschnitt der Kontostände.</p>
+<p><?php echo _('In welcher Liga spielen die reichsten Teams? Diese Statistik zeigt den Durschnitt der Kontostände.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Liga</th>
-<th scope="col">Durchschnitt</th>
+<th scope="col"><?php echo _('Liga'); ?></th>
+<th scope="col"><?php echo _('Durchschnitt'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -38,6 +38,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </table>
 </p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

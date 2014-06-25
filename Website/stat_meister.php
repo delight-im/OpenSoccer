@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Meister | Ballmanager.de</title>
+<title><?php echo _('Meister'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo cleanCSSclass($cookie_teamname); ?> {
@@ -10,7 +10,7 @@
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Liga wählen</h1>
+<h1><?php echo _('Liga wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
     <?php
@@ -32,16 +32,16 @@
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Meister</h1>
-<p>Wer wurde in meiner Liga in den letzten Saisons Meister? Wie viele Punkte hatten diese Teams jeweils?</p>
+<h1><?php echo _('Meister'); ?></h1>
+<p><?php echo _('Wer wurde in meiner Liga in den letzten Saisons Meister? Wie viele Punkte hatten diese Teams jeweils?'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Saison</th>
-<th scope="col">Team</th>
-<th scope="col">Punkte</th>
-<th scope="col">Tore</th>
+<th scope="col"><?php echo _('Saison'); ?></th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('Punkte'); ?></th>
+<th scope="col"><?php echo _('Tore'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -60,7 +60,7 @@ while ($torj3 = mysql_fetch_assoc($torj2)) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Meister</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Meister'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Dauerbrenner | Ballmanager.de</title>
+<title><?php echo _('Dauerbrenner'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -10,16 +10,16 @@
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Dauerbrenner</h1>
-<p>Welche Spieler hatten die meisten Einsätze in dieser Saison? Wer ist am häufigsten für sein Team aufgelaufen?</p>
+<h1><?php echo _('Dauerbrenner'); ?></h1>
+<p><?php echo _('Welche Spieler hatten die meisten Einsätze in dieser Saison? Wer ist am häufigsten für sein Team aufgelaufen?'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Spieler</th>
-<th scope="col">Team</th>
-<th scope="col">Einsätze</th>
+<th scope="col"><?php echo _('Spieler'); ?></th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('Einsätze'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -61,7 +61,7 @@ $tmp_liga_cache = '';
 </table>
 </p>
 <?php } else { ?>
-<h1>Meiste Zuschauer</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Meiste Zuschauer'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

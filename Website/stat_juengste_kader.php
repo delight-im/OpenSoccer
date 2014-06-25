@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Jüngste Kader | Ballmanager.de</title>
+<title><?php echo _('Jüngste Kader'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -13,7 +13,7 @@
 <h1>Liga wählen</h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
-	<option value="alle">Alle Ligen</option>
+	<option value="alle"><?php echo _('Alle Ligen'); ?></option>
     <?php
     if (isset($_GET['liga'])) {
     	$temp_liga = mysql_real_escape_string(trim(strip_tags($_GET['liga'])));
@@ -38,15 +38,15 @@
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Jüngste Kader</h1>
-<p>Welche Vereine setzen am stärksten auf die Jugend? Die folgende Liste zeigt die Teams mit den jüngsten Kadern. Bedingung: mindestens 17 Spieler im Kader.</p>
+<h1><?php echo _('Jüngste Kader'); ?></h1>
+<p><?php echo _('Welche Vereine setzen am stärksten auf die Jugend? Die folgende Liste zeigt die Teams mit den jüngsten Kadern. Bedingung: mindestens 17 Spieler im Kader.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Team</th>
-<th scope="col">Alter</th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('Alter'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -65,7 +65,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Jüngste Kader</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Jüngste Kader'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

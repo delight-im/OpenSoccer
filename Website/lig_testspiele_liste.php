@@ -41,8 +41,8 @@ for ($i = 1; $i <= 22; $i++) {
 <tr class="odd">
 <th scope="col"><?php echo _('Datum'); ?></th>
 <th scope="col"><?php echo _('Heim'); ?></th>
-<th scope="col"><?php echo _('Auswärts</th>
-<th scope="col"><?php echo _('Ergebnis'); ?>'); ?></th>
+<th scope="col"><?php echo _('Auswärts'); ?></th>
+<th scope="col"><?php echo _('Ergebnis'); ?></th>
 </tr>
 </thead>
 <tbody>

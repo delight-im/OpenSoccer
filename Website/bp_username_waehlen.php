@@ -9,8 +9,8 @@ if (isset($_POST['username']) && isset($_SESSION['bp_username'])) {
 		$email = mysql_real_escape_string(trim(strip_tags($_SESSION['bp_username'])));
 		$username = mysql_real_escape_string(trim(strip_tags($_POST['username'])));
 		if (!validUsername($username)) {
-			echo '<p>'._('Dein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30).</p>';
-			echo '<p><strong>'._('Buchstaben:').'</strong>'._(' A-Z + Umlaute (groß und klein)').'<br /><strong>'._('Zahlen:').'</strong> 0-9<br /><strong>'._('Sonderzeichen:').'</strong> '._('Bindestrich')'</p>';
+			echo '<p>'._('Dein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30):').'</p>';
+			echo '<p><strong>'._('Buchstaben:').'</strong> '._('A-Z und Umlaute (groß und klein)').'<br /><strong>'._('Zahlen:').'</strong> 0-9<br /><strong>'._('Sonderzeichen:').'</strong> '._('Bindestrich').'</p>';
 			echo '<p>'._('Nicht erlaubt sind also Leerzeichen, Punkt, Komma, Sternchen usw.').'</p>';
 			echo '<p>'._('Bitte versuche es noch einmal.').'</p>';
 		}
@@ -40,11 +40,9 @@ if (isset($_POST['username']) && isset($_SESSION['bp_username'])) {
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Benutzernamen wählen'); ?></h1>
 <?php if (isset($schon_vergeben_message)) { echo $schon_vergeben_message; } ?>
-<p><?php echo _('Willkommen beim Ballmanager! Du stehst jetzt erst einmal auf der Warteliste. Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - erhältst Du eine
-Nachricht von uns bei Bigpoint.'); ?></p>
-<p><?php echo _('Damit es dann sofort losgehen kann, brauchst Du jetzt noch einen Benutzernamen. Dieser Name wird überall im Spiel angezeigt, Du bist daran zu erkennen.</p>
-<p><?php echo _('Trage Deinen gewünschten Namen in das Textfeld unten ein und klicke anschließend auf &quot;Fertig&quot;. Bitte halte Dich bei der Wahl Deines Namens aber an');?> 
-<a href="/regeln.php" onclick="window.open('/regeln.php'); return false"><?php echo _('diese Regeln'); ?></a>.</p>
+<p><?php echo _('Willkommen beim Ballmanager! Du stehst jetzt erst einmal auf der Warteliste. Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - erhältst Du eine Nachricht von uns bei Bigpoint.'); ?></p>
+<p><?php echo _('Damit es dann sofort losgehen kann, brauchst Du jetzt noch einen Benutzernamen. Dieser Name wird überall im Spiel angezeigt, Du bist daran zu erkennen.'); ?></p>
+<p>Trage Deinen gewünschten Namen in das Textfeld unten ein und klicke anschließend auf &quot;Fertig&quot;. Bitte halte Dich bei der Wahl Deines Namens aber an <a href="/regeln.php" onclick="window.open('/regeln.php'); return false">diese Regeln</a>.</p>
 <?php
 if (substr($_SESSION['username'], 0, 3) != 'BP_') {
 	echo '<p><strong>'._('Du hast schon einen Benutzernamen und kannst deshalb hier keinen wählen.').'</strong></p>';

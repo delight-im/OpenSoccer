@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Tausch-Wünsche | Ballmanager.de</title>
+<title><?php echo _('Tausch-Wünsche'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -30,13 +30,13 @@ else {
 	$ownWunsch3 = mysql_fetch_assoc($ownWunsch2);
 	$ownWunsch4 = $ownWunsch3['landWunsch'];
 }
-echo '<h1>Mein Wunsch</h1>';
-echo '<p style="text-align:right"><a href="/ligaTausch.php" class="pagenava">Liga tauschen</a></p>';
+echo '<h1>'._('Mein Wunsch').'</h1>';
+echo '<p style="text-align:right"><a href="/ligaTausch.php" class="pagenava">'._('Liga tauschen').'</a></p>';
 echo '<form action="/ligaTauschWuensche.php" method="post" accept-charset="utf-8">';
 echo '<p><select name="meinWunsch" size="1" style="width:200px">';
 $wunschLand1 = "SELECT land FROM ".$prefix."ligen GROUP BY land ORDER BY land ASC";
 $wunschLand2 = mysql_query($wunschLand1);
-echo '<option value="no">Kein Wunsch</option>';
+echo '<option value="no">'._('Kein Wunsch').'</option>';
 while ($wunschLand3 = mysql_fetch_assoc($wunschLand2)) {
 	if ($wunschLand3['land'] == $ownLand4) { continue; }
 	echo '<option';
@@ -48,8 +48,8 @@ echo '<p><input type="submit" value="Speichern"'.noDemoClick($cookie_id).' /></p
 echo '</form>';
 $sql1 = "SELECT teamID, teamName, landNoch, landWunsch FROM ".$prefix."ligaChangeWuensche ORDER BY landWunsch ASC";
 $sql2 = mysql_query($sql1);
-echo '<h1>Tausch-Wünsche</h1>';
-echo '<p><table><thead><tr class="odd"><th scope="col">Team</th><th scope="col">Land</th><th scope="col">Wunsch</th></tr></thead><tbody>';
+echo '<h1>'._('Tausch-Wünsche').'</h1>';
+echo '<p><table><thead><tr class="odd"><th scope="col">'._('Team').'</th><th scope="col">'._('Land').'</th><th scope="col">'._('Wunsch').'</th></tr></thead><tbody>';
 $counter = 0;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<tr'; if ($counter % 2 == 1) { echo ' class="odd"'; } if ($sql3['landWunsch'] == $ownLand4) { echo ' style="font-weight:bold"'; } echo '>';
@@ -60,10 +60,10 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$counter++;
 }
 echo '</tbody></table></p>';
-echo '<p><strong>Hinweis:</strong> Jeder Eintrag wird nach 22 Tagen wieder gelöscht, kann dann aber erneut eingestellt werden.</p>';
+echo '<p><strong>'._('Hinweis:').'</strong> '._('Jeder Eintrag wird nach 22 Tagen wieder gelöscht, kann dann aber erneut eingestellt werden.').'</p>';
 ?>
 <?php } else { ?>
-<h1>Tausch-Wünsche</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Tausch-Wünsche'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -289,7 +289,7 @@ else {
 ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <?php
-$nextGamesHTML = '<h1>Nächste Spiele</h1><div class="left-box navBlockLinks match">';
+$nextGamesHTML = '<h1>Nächste Spiele</h1><div class="left-box navBlockLinks-match">';
 $nxt3_zeit = mktime(0, 0, 0, date('m', time()), date('d', time()), date('Y', time()));
 $nxt1 = "SELECT id, team1, team2, ergebnis, typ, datum FROM ".$prefix."spiele WHERE (team1 = '".$cookie_teamname."' OR team2 = '".$cookie_teamname."') AND (datum > ".$nxt3_zeit.") ORDER BY datum ASC LIMIT 0, 5";
 $nxt2 = mysql_query($nxt1);

@@ -579,6 +579,19 @@ div.navBlockLinks {
 div.navBlockLinks a, div.navBlockLinks a:link, div.navBlockLinks a:visited {
 	display: block;
 	border-bottom: 1px solid #eff0f1;
+	background-image: url(/images/go.gif);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding: 4px 4px 4px 25px;
+	text-align: left;
+	font-weight: bold;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+div.navBlockLinksmatch a, div.navBlockLinksmatch a:link, div.navBlockLinksmatch a:visited {
+	display: block;
+	border-bottom: 1px solid #eff0f1;
 	padding: 4px 4px 4px 5px;
 	text-align: left;
 	font-weight: bold;
@@ -586,7 +599,8 @@ div.navBlockLinks a, div.navBlockLinks a:link, div.navBlockLinks a:visited {
 	text-decoration: none;
 }
 
-div.navBlockLinks a:hover {
+
+div.navBlockLinks a:hover, div.navBlockLinksmatch a:hover {
 	background-color: #f5f5f5;
 	text-decoration: none;
 }

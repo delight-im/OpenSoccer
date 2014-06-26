@@ -1,7 +1,7 @@
 <?php include 'zz1.php'; ?>
-<title>Gesperrte Teamnamen | Ballmanager.de</title>
+<title><?php echo _('Gesperrte Teamnamen'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Gesperrte Teamnamen</h1>
+<h1><?php echo _('Gesperrte Teamnamen'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <?php if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') { ?>
@@ -94,6 +94,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </ul>
 <?php } ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

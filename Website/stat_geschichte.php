@@ -1,9 +1,9 @@
 <?php include 'zz1.php'; ?>
-<title>Geschichte | Ballmanager.de</title>
+<title><?php echo _('Geschichte'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Tabelle wählen</h1>
+<h1><?php echo _('Tabelle wählen'); ?></h1>
 <?php
 $spieltag = 22;
 $sql1 = "SELECT saison FROM ".$prefix."zeitrechnung LIMIT 0, 1";
@@ -49,17 +49,17 @@ else {
 </select></p>
 <p><input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Geschichte</h1>
-<p>Hier kannst Du Dir die Tabellen aller Ligen von jedem Spieltag der letzten Saisons ansehen.</p>
+<h1><?php echo _('Geschichte'); ?></h1>
+<p><?php echo _('Hier kannst Du Dir die Tabellen aller Ligen von jedem Spieltag der letzten Saisons ansehen.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Platz</th>
-<th scope="col">Team</th>
-<th scope="col">Punkte</th>
-<th scope="col">Tore</th>
-<th scope="col">Differenz</th>
+<th scope="col"><?php echo _('Platz'); ?></th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('Punkte'); ?></th>
+<th scope="col"><?php echo _('Tore'); ?></th>
+<th scope="col"><?php echo _('Differenz'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -78,7 +78,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Geschichte</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Geschichte'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

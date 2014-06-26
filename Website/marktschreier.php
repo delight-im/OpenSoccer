@@ -1,10 +1,10 @@
 <?php include 'zz1.php'; ?>
-<title>Marktschreier | Ballmanager.de</title>
+<title><?php echo _('Marktschreier'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <h1>Marktschreier</h1>
 <?php if ($loggedin == 1) { ?>
-<p>Du möchtest dafür sorgen, dass einer Deiner Spieler <!-- verkauft oder -->verliehen wird? Du hast noch nicht genügend Angebote? Dann bist Du hier genau richtig!</p>
-<p>Hier kannst Du für Deine Spieler werben - und hoffen, dass Dich jemand hört. Wenn Du Erfolg haben willst, solltest Du wiederkehren - denn alte Angebote verschwinden schnell!</p>
+<p><?php echo _('Du möchtest dafür sorgen, dass einer Deiner Spieler <!-- verkauft oder -->verliehen wird? Du hast noch nicht genügend Angebote? Dann bist Du hier genau richtig!'); ?></p>
+<p><?php echo _('Hier kannst Du für Deine Spieler werben - und hoffen, dass Dich jemand hört. Wenn Du Erfolg haben willst, solltest Du wiederkehren - denn alte Angebote verschwinden schnell!'); ?></p>
 <?php
 function time_rel($zeitstempel) {
 	$ago = time()-$zeitstempel;
@@ -33,11 +33,11 @@ if (isset($_POST['nachricht']) && $cookie_id != DEMO_USER_ID) {
 	$sql2 = mysql_query($sql1);
 }
 ?>
-<h1>Deine Nachricht</h1>
+<h1><?php echo _('Deine Nachricht'); ?></h1>
 <form action="/marktschreier.php" method="post" accept-charset="utf-8">
 <p><input type="text" name="nachricht" style="width:80%" /> <input type="submit" value="Eintragen"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
-<h1>Angebote auf dem Markt</h1>
+<h1><?php echo _('Angebote auf dem Markt'); ?></h1>
 <?php
 if (isset($_GET['delEntry']) && $cookie_id != DEMO_USER_ID) {
 	$delEntry = mysql_real_escape_string(trim(strip_tags($_GET['delEntry'])));
@@ -57,6 +57,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 }
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

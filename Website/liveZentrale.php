@@ -1,9 +1,9 @@
 <?php include 'zz1.php'; ?>
-<title>LIVE-Zentrale | Ballmanager.de</title>
+<title><?php echo _('LIVE-Zentrale'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php if ($live_scoring_spieltyp_laeuft == 'Liga' OR ($live_scoring_spieltyp_laeuft == 'Cup' && $cookie_spieltag < 15)) { ?>
-<h1>Land wählen</h1>
+<h1><?php echo _('Land wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="land" size="1" style="width:200px">
     <?php
@@ -32,9 +32,9 @@
 <?php } ?>
 <?php
 if ($live_scoring_spieltyp_laeuft == '') {
-	echo '<h1>LIVE-Zentrale</h1>';
-	echo '<p>Zurzeit läuft leider kein Spiel, von dem live berichtet werden kann.</p>';
-	echo '<h1>Spielzeiten</h1><p>Cup: 10-12 Uhr</p><p>Liga: 14-16 Uhr</p><p>Pokal: 18-20 Uhr</p><p>Test: 22-24 Uhr</p>';
+	echo '<h1>'._('LIVE-Zentrale').'</h1>';
+	echo '<p>'._('Zurzeit läuft leider kein Spiel, von dem live berichtet werden kann.').'</p>';
+	echo '<h1>'._('Spielzeiten').'</h1><p>'._('Cup: 10-12 Uhr').'</p><p>'._('Liga: 14-16 Uhr').'</p><p>'._('Pokal: 18-20 Uhr').'</p><p>'._('Test: 22-24 Uhr').'</p>';
 }
 else {
 	// FREUNDESLISTE LADEN ANFANG
@@ -140,7 +140,7 @@ else {
 			echo '<td style="color:';
 			if (isset($resultEntry[4])) { echo '#000'; } else { echo 'red'; }
 			echo '">'.$resultEntry[3].'</td>';
-			echo '<td class="link"><a href="/spielbericht.php?id='.$spielID.'#lastAction">Spielbericht</a></td>';
+			echo '<td class="link"><a href="/spielbericht.php?id='.$spielID.'#lastAction">'._('Spielbericht').'</a></td>';
 			echo '</tr>';
 		}
 		echo '</tbody>';
@@ -149,10 +149,10 @@ else {
 	}
 }
 ?>
-<p><strong>Farben:</strong> Rot: LIVE, Schwarz: Beendet</p>
-<p><strong>Hinweis:</strong> Spiele Deiner <a href="/freunde.php">Freunde</a> sind mit einem Symbol vor den Teamnamen gekennzeichnet. Deine eigenen Spiele sind fett markiert.</p>
+<p><?php echo _('<strong>Farben:</strong> Rot: LIVE, Schwarz: Beendet'); ?></p>
+<p><?php echo _('<strong>Hinweis:</strong> Spiele Deiner'); ?> <a href="/freunde.php">Freunde</a> sind mit einem Symbol vor den Teamnamen gekennzeichnet. Deine eigenen Spiele sind fett markiert.</p>
 <?php } else { ?>
-<h1>LIVE-Zentrale</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('LIVE-Zentrale'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Testspiele | Ballmanager.de</title>
+<title><?php echo _('Testspiele'); ?> | Ballmanager.de</title>
 <?php if ($loggedin == 1) { ?>
 <style type="text/css">
 <!--
@@ -11,7 +11,7 @@
 <?php } ?>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Spieltag auswählen</h1>
+<h1><?php echo _('Spieltag auswählen'); ?></h1>
 <form action="/lig_testspiele_liste.php" method="get" accept-charset="utf-8">
 <p><select name="tag" size="1" style="width:200px">
 <?php
@@ -34,15 +34,15 @@ for ($i = 1; $i <= 22; $i++) {
 </select></p>
 <p><input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Testspiele</h1>
+<h1><?php echo _('Testspiele'); ?></h1>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Datum</th>
-<th scope="col">Heim</th>
-<th scope="col">Auswärts</th>
-<th scope="col">Ergebnis</th>
+<th scope="col"><?php echo _('Datum'); ?></th>
+<th scope="col"><?php echo _('Heim'); ?></th>
+<th scope="col"><?php echo _('Auswärts</th>
+<th scope="col"><?php echo _('Ergebnis'); ?>'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -75,7 +75,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Testspiele</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Testspiele'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

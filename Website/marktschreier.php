@@ -3,7 +3,7 @@
 <?php include 'zz2.php'; ?>
 <h1>Marktschreier</h1>
 <?php if ($loggedin == 1) { ?>
-<p><?php echo _('Du möchtest dafür sorgen, dass einer Deiner Spieler <!-- verkauft oder -->verliehen wird? Du hast noch nicht genügend Angebote? Dann bist Du hier genau richtig!'); ?></p>
+<p><?php echo _('Du möchtest dafür sorgen, dass einer Deiner Spieler verliehen wird? Du hast noch nicht genügend Angebote? Dann bist Du hier genau richtig!'); ?></p>
 <p><?php echo _('Hier kannst Du für Deine Spieler werben - und hoffen, dass Dich jemand hört. Wenn Du Erfolg haben willst, solltest Du wiederkehren - denn alte Angebote verschwinden schnell!'); ?></p>
 <?php
 function time_rel($zeitstempel) {

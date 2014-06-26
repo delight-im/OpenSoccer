@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Wertvollste Teams | Ballmanager.de</title>
+<title><?php echo _('Wertvollste Teams'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -10,10 +10,10 @@
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Liga wählen</h1>
+<h1><?php echo _('Liga wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
-	<option value="alle">Alle Ligen</option>
+	<option value="alle"><?php echo _('Alle Ligen'); ?></option>
     <?php
     if (isset($_GET['liga'])) {
     	$temp_liga = mysql_real_escape_string(trim(strip_tags($_GET['liga'])));
@@ -38,15 +38,15 @@
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Wertvollste Teams</h1>
-<p>Der Marktwert eines Teams ist die Summer aller Marktwerte der einzelnen Spieler. In dieser Tabelle wurden alle Teams nach ihrem Marktwert sortiert aufgelistet.</p>
+<h1><?php echo _('Wertvollste Teams'); ?></h1>
+<p><?php echo _('Der Marktwert eines Teams ist die Summer aller Marktwerte der einzelnen Spieler. In dieser Tabelle wurden alle Teams nach ihrem Marktwert sortiert aufgelistet.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Team</th>
-<th scope="col">Marktwert</th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('Marktwert'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -85,7 +85,7 @@ if ($temp == FALSE) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Wertvollste Teams</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Wertvollste Teams'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

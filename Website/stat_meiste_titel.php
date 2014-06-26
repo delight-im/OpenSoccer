@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Meiste Titel | Ballmanager.de</title>
+<title><?php echo _('Meiste Titel'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -10,10 +10,10 @@
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Liga wählen</h1>
+<h1><?php echo _('Liga wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
-	<option value="alle">Alle Ligen</option>
+	<option value="alle"><?php echo _('Alle Ligen'); ?></option>
     <?php
     if (isset($_GET['liga'])) {
     	$temp_liga = mysql_real_escape_string(trim(strip_tags($_GET['liga'])));
@@ -38,7 +38,7 @@
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Meiste Titel</h1>
+<h1><?php echo _('Meiste Titel'); ?></h1>
 <?php
 // TYPEN-FILTER ANFANG
 $filterSQL = "(a.cupsiege+a.meisterschaften+a.pokalsiege)";
@@ -58,18 +58,18 @@ echo $standardLink.'" class="pagenava'; if ($filterTyp == '') { echo ' aktiv'; }
 echo '</p>';
 // TYPEN FILTER ENDE
 ?>
-<p>In dieser Tabelle sind die 20 Teams mit den meisten gewonnenen Titeln aufgelistet. Pokalsiege, Cupsiege und Meisterschaften werden für das Ranking einfach addiert.</p>
+<p><?php echo _('In dieser Tabelle sind die 20 Teams mit den meisten gewonnenen Titeln aufgelistet. Pokalsiege, Cupsiege und Meisterschaften werden für das Ranking einfach addiert.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Manager</th>
-<th scope="col">Team</th>
-<th scope="col">Titel</th>
-<th scope="col">Cup</th>
-<th scope="col">Liga</th>
-<th scope="col">Pokal</th>
+<th scope="col"><?php echo _('Manager'); ?></th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('Titel'); ?></th>
+<th scope="col"><?php echo _('Cup'); ?></th>
+<th scope="col"><?php echo _('Liga'); ?></th>
+<th scope="col"><?php echo _('Pokal'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -88,7 +88,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Meiste Titel</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Meiste Titel'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

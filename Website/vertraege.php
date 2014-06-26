@@ -1,19 +1,19 @@
 <?php include 'zz1.php'; ?>
-<title>Verträge | Ballmanager.de</title>
+<title><?php echo _('Verträge'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Verträge</h1>
+<h1><?php echo _('Verträge'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Spieler</th>
-<th scope="col">AL</th>
-<th scope="col">MO</th>
-<th scope="col">Stärke</th>
-<th scope="col">GE</th>
-<th scope="col">Vertrag</th>
+<th scope="col"><?php echo _('Spieler'); ?></th>
+<th scope="col"><?php echo _('AL'); ?></th>
+<th scope="col"><?php echo _('MO'); ?></th>
+<th scope="col"><?php echo _('Stärke'); ?></th>
+<th scope="col"><?php echo _('GE'); ?></th>
+<th scope="col"><?php echo _('Vertrag'); ?></th>
 <th scope="col">&nbsp;</th>
 </tr>
 </thead>
@@ -73,7 +73,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<td>'.number_format($sql3['gehalt']/1000000, 2, ',', '.').'</td>';
 	echo '<td>'.floor(($sql3['vertrag']-time())/86400).' Tage</td>';
 	if ($sql3['marktwert'] > 0 && $sql3['leiher'] == 'keiner') {
-		echo '<td class="link"><a href="/vertrag_verlaengern.php?id='.$sql3['ids'].'">Verlängern</a></td>';
+		echo '<td class="link"><a href="/vertrag_verlaengern.php?id='.$sql3['ids'].'">'._('Verlängern').'</a></td>';
 	}
 	else {
 		echo '<td>&nbsp;</td>';
@@ -85,8 +85,8 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </tbody>
 </table>
 </p>
-<p><strong>Überschriften:</strong> AL: Alter, MO: Moral, GE: Gehalt pro Saison in Millionen €</p>
+<p><strong><?php echo _('Überschriften:</strong> AL: Alter, MO: Moral, GE: Gehalt pro Saison in Millionen €'); ?></p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

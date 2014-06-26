@@ -297,12 +297,12 @@ while ($nxt3 = mysql_fetch_assoc($nxt2)) {
 	if ($nxt3['team1'] == $cookie_teamname) {
 		$nxt3_gegner = $nxt3['team2'];
 		$nxt3_ergebnis = $nxt3['ergebnis'];
-		$home = '<img width="16" src="house.png" style="vertical-align: middle;">';
+		$home = '<img width="16" src="images/house.png" style="vertical-align: middle;">';
 	}
 	else {
 		$nxt3_gegner = $nxt3['team1'];
 		$nxt3_ergebnis = ergebnis_drehen($nxt3['ergebnis']);
-		$home = '<img width="16" src="house_go.png" style="vertical-align: middle;">';
+		$home = '<img width="16" src="images/house_go.png" style="vertical-align: middle;">';
 	}
 	// LIVE ODER ERGEBNIS ANFANG
 	if ($nxt3['typ'] == $live_scoring_spieltyp_laeuft && date('d', time()) == date('d', $nxt3['datum'])) {

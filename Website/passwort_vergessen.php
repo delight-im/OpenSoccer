@@ -1,6 +1,6 @@
 <?php include 'zz1.php'; ?>
 <?php if ($loggedin == 1) { exit; } ?>
-<title>Passwort vergessen | Ballmanager.de</title>
+<title><?php echo _('Passwort vergessen'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php
 $showPasswordResetForm = true;
@@ -20,10 +20,10 @@ if (isset($_GET['e']) && isset($_GET['k'])) {
 		$in2 = mysql_query($in1);
 
         $showPasswordResetForm = false;
-		echo addInfoBox('Dein neues Passwort wurde aktiviert. Du kannst Dich jetzt damit einloggen.');
+		echo addInfoBox(_('Dein neues Passwort wurde aktiviert. Du kannst Dich jetzt damit einloggen.'));
 	}
 	else {
-		echo addInfoBox('Das Passwort konnte nicht aktiviert werden. Bitte rufe den Link noch einmal auf oder fordere ein neues Passwort an.');
+		echo addInfoBox(_('Das Passwort konnte nicht aktiviert werden. Bitte rufe den Link noch einmal auf oder fordere ein neues Passwort an.'));
 	}
 }
 elseif (isset($_POST['email'])) {
@@ -42,11 +42,11 @@ elseif (isset($_POST['email'])) {
 			$in1 = "INSERT INTO ".$prefix."users_newpw (user, zeit, keywert, newpw) VALUES ('".$user."', '".time()."', '".$key_db."', '".$newpw_db."')";
 			$in2 = mysql_query($in1);
 			if ($in2 == FALSE) {
-				echo addInfoBox('Für diese E-Mail-Adresse wurde in den letzten 5 Stunden schon ein Passwort angefordert.');
+				echo addInfoBox(_('Für diese E-Mail-Adresse wurde in den letzten 5 Stunden schon ein Passwort angefordert.'));
 			}
 			else {
 				if (isset($_SERVER['REMOTE_ADDR'])) {
-					$aip = 'Wenn Du kein neues Passwort angefordert hast, wurde diese Funktion von jemand anderem missbraucht. Die Anfrage kam von der IP-Adresse '.$_SERVER['REMOTE_ADDR'];
+					$aip = _('Wenn Du kein neues Passwort angefordert hast, wurde diese Funktion von jemand anderem missbraucht. Die Anfrage kam von der IP-Adresse '.$_SERVER['REMOTE_ADDR']);
 				}
 				else {
 					$aip = '';
@@ -94,21 +94,21 @@ else{
 }
 // E-MAIL VERSENDEN
                 $showPasswordResetForm = false;
-				echo addInfoBox('Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren Informationen zu.');
+				echo addInfoBox(_('Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren Informationen zu.'));
 			} // if in2 == FALSE
 		}
 	}
 	else {
-		echo addInfoBox('Es konnte kein User mit der angegebenen E-Mail-Adresse gefunden werden. Bitte versuche es noch einmal.');
+		echo addInfoBox(_('Es konnte kein User mit der angegebenen E-Mail-Adresse gefunden werden. Bitte versuche es noch einmal.'));
 	}
 }
 ?>
-<h1>Passwort vergessen</h1>
+<h1><?php echo _('Passwort vergessen'); ?></h1>
 <?php if ($showPasswordResetForm) { ?>
-<p>Du hast Dein Passwort vergessen? Dann gib hier bitte einfach die E-Mail-Adresse ein, mit der Du Dich registriert hast. Wir schicken Dir dann eine E-Mail mit weiteren Informationen, damit Du ein neues Passwort wählen kannst.<br />
-<i>Wichtig:</i> Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang gültig. Danach musst Du die E-Mail erneut anfordern.</p>
+<p><?php echo _('Du hast Dein Passwort vergessen? Dann gib hier bitte einfach die E-Mail-Adresse ein, mit der Du Dich registriert hast. Wir schicken Dir dann eine E-Mail mit weiteren Informationen, damit Du ein neues Passwort wählen kannst.'); ?><br />
+<i><?php echo _('Wichtig:</i> Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang gültig. Danach musst Du die E-Mail erneut anfordern.'); ?></p>
 <form method="post" action="/passwort_vergessen.php" accept-charset="utf-8">
-<p>E-Mail-Adresse:<br /><input type="text" name="email" id="email" style="width:200px" /></p>
+<p><?php echo _('E-Mail-Adresse:'); ?><br /><input type="text" name="email" id="email" style="width:200px" /></p>
 <p><input type="submit" value="Anfordern" /></p>
 </form>
 <?php } ?>

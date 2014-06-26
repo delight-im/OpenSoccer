@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Torjäger | Ballmanager.de</title>
+<title><?php echo _('Torjäger'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -12,16 +12,16 @@
 <?php if ($loggedin == 1) { ?>
 <?php
 if ($live_scoring_spieltyp_laeuft != '') {
-	echo '<h1>Torjäger</h1>';
+	echo '<h1>'._('Torjäger').'</h1>';
 	echo '<p>Zurzeit laufen '.$live_scoring_spieltyp_laeuft.'spiele. Deshalb kannst Du leider die Torjäger-Liste nicht ansehen. Bitte warte, bis die Spiele beendet sind.</p>';
 	include 'zz3.php';
 	exit;
 }
 ?>
-<h1>Liga wählen</h1>
+<h1><?php echo _('Liga wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
-	<option value="alle">Alle Ligen</option>
+	<option value="alle"><?php echo _('Alle Ligen'); ?></option>
     <?php
     if (isset($_GET['liga'])) {
     	$temp_liga = mysql_real_escape_string(trim(strip_tags($_GET['liga'])));
@@ -46,15 +46,15 @@ if ($live_scoring_spieltyp_laeuft != '') {
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Torjäger</h1>
-<p>In dieser Torjägerliste sind die erfolgreichsten Torschützen aller Ligen aufgelistet.</p>
+<h1><?php echo _('Torjäger'); ?></h1>
+<p><?php echo _('In dieser Torjägerliste sind die erfolgreichsten Torschützen aller Ligen aufgelistet.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Name</th>
-<th scope="col">Tore</th>
+<th scope="col"><?php echo _('Name'); ?></th>
+<th scope="col"><?php echo _('Tore'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -74,7 +74,7 @@ while ($torj3 = mysql_fetch_assoc($torj2)) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Torjäger</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Torjäger'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

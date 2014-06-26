@@ -1,9 +1,9 @@
 <?php include 'zz1.php'; ?>
-<title>Wert des Geldes | Ballmanager.de</title>
+<title><?php echo _('Wert des Geldes'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Wert des Geldes</h1>
+<h1><?php echo _('Wert des Geldes'); ?></h1>
 <?php
 $temp = FALSE;
 $tmp_dateiname = 'cache/stat_geldwert.html';
@@ -59,9 +59,9 @@ if ($temp == FALSE) {
     }
     $werte_liste = substr($werte_liste, 0, -1);
 	$datumListe = array_values(array_unique(array_reverse($datumListe))); // alle Tage sind 4-fach drin wegen verschiedenen wirtschaftlichen Groessen - Indizes wieder richtig machen mit array_values
-    $tmp_liga_cache .= '<p>Dieses Liniendiagramm zeigt die Entwicklung der Geldmenge, die beim Ballmanager im Umlauf ist. Der Durschnitt wird dabei auch getrennt
+    $tmp_liga_cache .= '<p>'.('Dieses Liniendiagramm zeigt die Entwicklung der Geldmenge, die beim Ballmanager im Umlauf ist. Der Durschnitt wird dabei auch getrennt
     für die obere und die untere Hälfte der &quot;Konto-Rangliste&quot; angezeigt. So kann man sehen, ob nur die reichen oder auch die
-    ärmeren Vereine Geld gewinnen oder verlieren.</p>';
+    ärmeren Vereine Geld gewinnen oder verlieren.').'</p>';
     $tmp_liga_cache .= '<p><img src="http://chart.apis.google.com/chart?cht=lc&amp;chco=76A4FB&amp;chls=2.0&amp;chs=470x470&amp;chxt=x&amp;chdlp=t&amp;';
     $tmp_liga_cache .= 'chd=t:'.$werte_liste.'&amp;chdl=Median|&empty;%20Gesamt|&empty;%20obere%20Hälfte|&empty;%20untere Hälfte&amp;chco=';
     $tmp_liga_cache .= 'FF0000,00FF00,0000FF,000000&amp;';
@@ -74,7 +74,7 @@ if ($temp == FALSE) {
 }
 ?>
 <?php } else { ?>
-<h1>Wert des Geldes</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Wert des Geldes'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Meiste Zuschauer | Ballmanager.de</title>
+<title><?php echo _('Meiste Zuschauer'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -10,10 +10,10 @@
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Liga wählen</h1>
+<h1><?php echo _('Liga wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
-	<option value="alle">Alle Ligen</option>
+	<option value="alle"><?php echo _('Alle Ligen'); ?></option>
     <?php
     if (isset($_GET['liga'])) {
     	$temp_liga = mysql_real_escape_string(trim(strip_tags($_GET['liga'])));
@@ -38,15 +38,15 @@
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Meiste Zuschauer</h1>
-<p>Hier sind die Teams mit dem höchsten Zuschauerschnitt in der aktuellen Saison aufgelistet.</p>
+<h1><?php echo _('Meiste Zuschauer'); ?></h1>
+<p><?php echo _('Hier sind die Teams mit dem höchsten Zuschauerschnitt in der aktuellen Saison aufgelistet.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Team</th>
-<th scope="col">Zuschauer i.D.</th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('Zuschauer i.D.'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -84,7 +84,7 @@ $tmp_liga_cache = '';
 </table>
 </p>
 <?php } else { ?>
-<h1>Meiste Zuschauer</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Meiste Zuschauer'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

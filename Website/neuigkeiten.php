@@ -12,7 +12,7 @@ if ($q == '') {
 	echo '<h1>'._('Neuigkeiten').'</h1>';
 }
 else {
-	echo '<h1>'._('Neuigkeiten zum Thema').' &quot;.$q.'&quot;</h1>';
+    echo '<h1>Neuigkeiten zum Thema &quot;'.$q.'&quot;</h1>';
 }
 ?>
 <?php

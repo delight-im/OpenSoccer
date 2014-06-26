@@ -61,7 +61,7 @@ $tmp_liga_cache = '';
 </table>
 </p>
 <?php } else { ?>
-<h1><?php echo _('Meiste Zuschauer'); ?></h1>
+<h1><?php echo _('Dauerbrenner'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

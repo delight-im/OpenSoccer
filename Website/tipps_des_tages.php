@@ -10,10 +10,10 @@
 setTaskDone('open_shorttips');
 if (isset($_GET['q'])) { $q = mysql_real_escape_string(trim(strip_tags($_GET['q']))); } else { $q = ''; }
 if ($q == '') {
-	echo '<h1>'._('Tipps des Tages');.'</h1>';
+	echo '<h1>'._('Tipps des Tages').'</h1>';
 }
 else {
-	echo '<h1>'._('Tipps des Tages zum Thema');.' &quot;'.$q.'&quot;</h1>';
+	echo '<h1>'._('Tipps des Tages zum Thema').' &quot;'.$q.'&quot;</h1>';
 }
 ?>
 <p><strong><?php echo _('Hier findest Du alle <i>Tipps des Tages</i> - gesammelt auf einer Seite.'); ?></strong></p>

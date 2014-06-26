@@ -1,12 +1,12 @@
 <?php include 'zz1.php'; ?>
-<title>Transfer-Übersicht | Ballmanager.de</title>
+<title><?php echo _('Transfer-Übersicht'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Liga wählen</h1>
+<h1><?php echo _('Liga wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
-	<option value="alle">Alle Ligen</option>
+	<option value="alle"><?php echo _('Alle Ligen'); ?></option>
     <?php
     if (isset($_GET['liga'])) {
     	$temp_liga = mysql_real_escape_string(trim(strip_tags($_GET['liga'])));
@@ -31,16 +31,16 @@
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Transfer-Übersicht</h1>
-<p>In dieser Tabelle sind die 20 teuersten Transfers dieser Saison aufgelistet. Es werden jedoch nur Spieler angezeigt, die nach dem Transfer weiterhin in Europa gespielt haben.</p>
+<h1><?php echo _('Transfer-Übersicht'); ?></h1>
+<p><?php echo _('In dieser Tabelle sind die 20 teuersten Transfers dieser Saison aufgelistet. Es werden jedoch nur Spieler angezeigt, die nach dem Transfer weiterhin in Europa gespielt haben.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Spieler</th>
-<th scope="col">Käufer</th>
-<th scope="col">Ablöse</th>
-<th scope="col">Datum</th>
+<th scope="col"><?php echo _('Spieler'); ?></th>
+<th scope="col"><?php echo _('Käufer'); ?></th>
+<th scope="col"><?php echo _('Ablöse'); ?></th>
+<th scope="col"><?php echo _('Datum'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -56,7 +56,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 		echo '<td class="link"><a href="/team.php?id='.$sql3['ids'].'">'.$sql3['name'].'</a></td>';
 	}
 	else {
-		echo '<td>Außerhalb Europas</td>';
+		echo '<td>'._('Außerhalb Europas').'</td>';
 	}
 	echo '<td>'.number_format($sql3['gebot'], 0, ',', '.').'€</td>';
 	echo '<td>'.date('d.m.Y', $sql3['datum']).'</td>';
@@ -68,7 +68,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </table>
 </p>
 <?php } else { ?>
-<h1>Transfer-Übersicht</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Transfer-Übersicht'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Treueste Spieler | Ballmanager.de</title>
+<title><?php echo _('Treueste Spieler'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -9,7 +9,7 @@
 </style>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
-<h1>Treueste Spieler</h1>
+<h1><?php echo _('Treueste Spieler'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 // NUR EIGENE SPIELER ODER ALLE ANFANG
@@ -26,15 +26,15 @@ if (isset($_GET['own'])) {
 echo '<p style="text-align:right">'.$onlyShowOwnLink.'</p>';
 // NUR EIGENE SPIELER ODER ALLE ENDE
 ?>
-<p>Welche Spieler haben über mehrere Saisons die meisten Einsätze für ihren Verein absolviert? Welche Spieler sind die treuesten?</p>
+<p><?php echo _('Welche Spieler haben über mehrere Saisons die meisten Einsätze für ihren Verein absolviert? Welche Spieler sind die treuesten?'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Spieler</th>
-<th scope="col">Team</th>
-<th scope="col">Einsätze</th>
+<th scope="col"><?php echo _('Spieler'); ?></th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('Einsätze'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -76,6 +76,6 @@ $tmp_liga_cache = '';
 </table>
 </p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

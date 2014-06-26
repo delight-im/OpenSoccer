@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>5-Jahres-Wertung | Ballmanager.de</title>
+<title><?php echo _('5-Jahres-Wertung'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .tabelle_3startplaetze td, .tabelle_3startplaetze a {
@@ -10,18 +10,18 @@
 </style>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
-<h1>5-Jahres-Wertung</h1>
+<h1><?php echo _('5-Jahres-Wertung'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p>Auf dieser Seite sind alle ersten Ligen aufgelistet, sortiert nach ihrem Erfolg im Pokal. Dabei zählen die Punkte, die die Teams in den letzten 5 Saisons geholt haben.</p>
-<p>Für einen Sieg im Pokal bekommt jedes Land 2 Punkte, für ein Unentschieden 1 Punkt. Die Punktzahl wird am Ende durch die Anzahl der Teams für das Land geteilt.</p>
-<p>Auf Grundlage dieser 5-Jahres-Wertung werden die Startplätze im Pokal vergeben: Die ersten 6 Länder bekommen 3 Startplätze, die restlichen Länder 2.</p>
+<p><?php echo _('Auf dieser Seite sind alle ersten Ligen aufgelistet, sortiert nach ihrem Erfolg im Pokal. Dabei zählen die Punkte, die die Teams in den letzten 5 Saisons geholt haben.'); ?></p>
+<p><?php echo _('Für einen Sieg im Pokal bekommt jedes Land 2 Punkte, für ein Unentschieden 1 Punkt. Die Punktzahl wird am Ende durch die Anzahl der Teams für das Land geteilt.'); ?></p>
+<p><?php echo _('Auf Grundlage dieser 5-Jahres-Wertung werden die Startplätze im Pokal vergeben: Die ersten 6 Länder bekommen 3 Startplätze, die restlichen Länder 2.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Liga</th>
-<th scope="col">GES</th>
+<th scope="col"><?php echo _('Liga'); ?></th>
+<th scope="col"><?php echo _('GES'); ?></th>
 <th scope="col"><?php echo $cookie_saison; ?></th>
 <th scope="col"><?php echo intval($cookie_saison-1); ?></th>
 <th scope="col"><?php echo intval($cookie_saison-2); ?></th>
@@ -57,9 +57,9 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </tbody>
 </table>
 </p>
-<p><strong>Erklärungen:</strong> Die erste Spalte gibt die Platzierung an, die zweite die Liga, die dritte (&quot;GES&quot;) die Gesamtpunktzahl der letzten 5 Saisons und die folgenden fünf Spalten die einzelnen Punktzahlen für die letzten Saisons.</p>
-<p style="font-size:80%; color:#666;">Bei Punktgleichheit (GES) zwischen zwei Ländern entscheidet das neueste Saisonergebnis, in dem es eine Differenz gibt.</p>
+<p><strong><?php echo _('Erklärungen:').'</strong> '._('Die erste Spalte gibt die Platzierung an, die zweite die Liga, die dritte (&quot;GES&quot;) die Gesamtpunktzahl der letzten 5 Saisons und die folgenden fünf Spalten die einzelnen Punktzahlen für die letzten Saisons.').'</p>';
+<p style="font-size:80%; color:#666;"><?php echo _('Bei Punktgleichheit (GES) zwischen zwei Ländern entscheidet das neueste Saisonergebnis, in dem es eine Differenz gibt.') ?></p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

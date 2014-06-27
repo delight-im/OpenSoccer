@@ -46,7 +46,7 @@ elseif (isset($_POST['email'])) {
 			}
 			else {
 				if (isset($_SERVER['REMOTE_ADDR'])) {
-					$aip = _('Wenn Du kein neues Passwort angefordert hast, wurde diese Funktion von jemand anderem missbraucht. Die Anfrage kam von der IP-Adresse '.$_SERVER['REMOTE_ADDR']);
+					$aip = _('Wenn Du kein neues Passwort angefordert hast, wurde diese Funktion von jemand anderem missbraucht. Die Anfrage kam von der folgenden IP-Adresse:').' '.$_SERVER['REMOTE_ADDR'];
 				}
 				else {
 					$aip = '';
@@ -106,7 +106,7 @@ else{
 <h1><?php echo _('Passwort vergessen'); ?></h1>
 <?php if ($showPasswordResetForm) { ?>
 <p><?php echo _('Du hast Dein Passwort vergessen? Dann gib hier bitte einfach die E-Mail-Adresse ein, mit der Du Dich registriert hast. Wir schicken Dir dann eine E-Mail mit weiteren Informationen, damit Du ein neues Passwort wählen kannst.'); ?><br />
-<i><?php echo _('Wichtig:</i> Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang gültig. Danach musst Du die E-Mail erneut anfordern.'); ?></p>
+<i><?php echo _('Wichtig:').'</i> '._('Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang gültig. Danach musst Du die E-Mail erneut anfordern.'); ?></p>
 <form method="post" action="/passwort_vergessen.php" accept-charset="utf-8">
 <p><?php echo _('E-Mail-Adresse:'); ?><br /><input type="text" name="email" id="email" style="width:200px" /></p>
 <p><input type="submit" value="Anfordern" /></p>

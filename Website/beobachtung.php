@@ -30,7 +30,6 @@ if (isset($_POST['markedAction'])) {
 }
 ?>
 <form action="/beobachtung.php" name="checkBoxForm" method="post" accept-charset="utf-8">
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -92,7 +91,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <p><select name="markedAction" size="1" style="width:200px">
 	<option value="DEL"><?php echo _('Markierte löschen'); ?></option>
 </select></p>
@@ -118,8 +116,8 @@ if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite
 if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
-<p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil').'</p>
-<p><strong><?php echo _('Mannschaftsteile:).'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm').'</p>
+<p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil'); ?></p>
+<p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>

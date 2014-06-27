@@ -3,7 +3,8 @@
 <?php include 'zz2.php'; ?>
 <?php
 $specialOffer = getSpecialOffer();
-switch (date('m', time())) {
+$monthIndex = date('m', time());
+switch ($monthIndex) {
 	case '01': $monat_string = _('Januar'); break;
 	case '02': $monat_string = _('Februar'); break;
 	case '03': $monat_string = _('März'); break;
@@ -16,6 +17,7 @@ switch (date('m', time())) {
 	case '10': $monat_string = _('Oktober'); break;
 	case '11': $monat_string = _('November'); break;
 	case '12': $monat_string = _('Dezember'); break;
+    default: throw new Exception('Unknown month index: '.$monthIndex);
 }
 $heute_tag = date('d', time());
 $heute_monat = date('m', time());
@@ -24,7 +26,7 @@ $datum_min = mktime(00, 00, 01, $heute_monat, 01, $heute_jahr);
 $datum_max = mktime(23, 59, 59, $heute_monat, 31, $heute_jahr);
 $datum_heute = date('Y-m-d', time());
 ?>
-<h1><?php echo _('Lotto vom'); ?> <?php echo $heute_tag.'. '.$monat_string.' '.$heute_jahr; ?></h1>
+<h1><?php echo _('Lotto vom:'); ?> <?php echo $heute_tag.'. '.$monat_string.' '.$heute_jahr; ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 // TIPP EINLOESEN ANFANG

@@ -149,8 +149,8 @@ else {
 	}
 }
 ?>
-<p><?php echo _('<strong>Farben:</strong> Rot: LIVE, Schwarz: Beendet'); ?></p>
-<p><?php echo _('<strong>Hinweis:</strong> Spiele Deiner'); ?> <a href="/freunde.php">Freunde</a> sind mit einem Symbol vor den Teamnamen gekennzeichnet. Deine eigenen Spiele sind fett markiert.</p>
+<p><strong><?php echo _('Farben:').'</strong> '._('Rot: LIVE, Schwarz: Beendet'); ?></p>
+<p><strong><?php echo _('Hinweis:'); ?></strong> Spiele Deiner <a href="/freunde.php">Freunde</a> sind mit einem Symbol vor den Teamnamen gekennzeichnet. Deine eigenen Spiele sind fett markiert.</p>
 <?php } else { ?>
 <h1><?php echo _('LIVE-Zentrale'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>

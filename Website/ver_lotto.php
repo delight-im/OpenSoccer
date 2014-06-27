@@ -1,21 +1,21 @@
 <?php include 'zz1.php'; ?>
-<title>Lotto | Ballmanager.de</title>
+<title><?php echo _('Lotto'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php
 $specialOffer = getSpecialOffer();
 switch (date('m', time())) {
-	case '01': $monat_string = 'Januar'; break;
-	case '02': $monat_string = 'Februar'; break;
-	case '03': $monat_string = 'März'; break;
-	case '04': $monat_string = 'April'; break;
-	case '05': $monat_string = 'Mai'; break;
-	case '06': $monat_string = 'Juni'; break;
-	case '07': $monat_string = 'Juli'; break;
-	case '08': $monat_string = 'August'; break;
-	case '09': $monat_string = 'September'; break;
-	case '10': $monat_string = 'Oktober'; break;
-	case '11': $monat_string = 'November'; break;
-	case '12': $monat_string = 'Dezember'; break;
+	case '01': $monat_string = _('Januar'); break;
+	case '02': $monat_string = _('Februar'); break;
+	case '03': $monat_string = _('März'); break;
+	case '04': $monat_string = _('April'); break;
+	case '05': $monat_string = _('Mai'); break;
+	case '06': $monat_string = _('Juni'); break;
+	case '07': $monat_string = _('Juli'); break;
+	case '08': $monat_string = _('August'); break;
+	case '09': $monat_string = _('September'); break;
+	case '10': $monat_string = _('Oktober'); break;
+	case '11': $monat_string = _('November'); break;
+	case '12': $monat_string = _('Dezember'); break;
 }
 $heute_tag = date('d', time());
 $heute_monat = date('m', time());
@@ -24,7 +24,7 @@ $datum_min = mktime(00, 00, 01, $heute_monat, 01, $heute_jahr);
 $datum_max = mktime(23, 59, 59, $heute_monat, 31, $heute_jahr);
 $datum_heute = date('Y-m-d', time());
 ?>
-<h1>Lotto vom <?php echo $heute_tag.'. '.$monat_string.' '.$heute_jahr; ?></h1>
+<h1><?php echo _('Lotto vom'); ?> <?php echo $heute_tag.'. '.$monat_string.' '.$heute_jahr; ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 // TIPP EINLOESEN ANFANG
@@ -49,10 +49,10 @@ if (isset($_POST['tipp']) && $cookie_id != DEMO_USER_ID) {
 						$az2 = mysql_query($az1);
 						$az3 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Lottoschein', -1000000, '".time()."')";
 						$az4 = mysql_query($az3);
-						$formulierung = 'Du hast für 1.000.000 € einen Lottoschein eingelöst.';
+						$formulierung = _('Du hast für 1.000.000 € einen Lottoschein eingelöst.');
 					}
 					else {
-						$formulierung = 'Du hast zur Feier des Tages einen kostenlosen Lottoschein eingelöst.';
+						$formulierung = _('Du hast zur Feier des Tages einen kostenlosen Lottoschein eingelöst.');
 					}
                     // PROTOKOLL ANFANG
                     $az5 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Finanzen', ".time().")";
@@ -82,7 +82,7 @@ else {
 	$meine_zahlen = '';
 }
 // DATEN HOLEN ENDE
-echo addInfoBox('<strong>Jackpot:</strong> '.number_format($get_jackpot3['jackpot'], 0, ',', '.').' €');
+echo addInfoBox('<strong>'._('Jackpot:').'</strong> '.number_format($get_jackpot3['jackpot'], 0, ',', '.').' €');
 ?>
 <?php if ($meine_zahlen == '') { ?>
 <form action="/ver_lotto.php" method="post" accept-charset="utf-8">
@@ -98,20 +98,20 @@ for ($i = 0; $i < 5; $i++) {
 }
 echo '</div><p><input type="submit" value="';
 if ($specialOffer === FALSE) {
-	echo 'Für 1.000.000€ einlösen';
+	echo _('Für 1.000.000€ einlösen');
 }
 else {
-	echo 'Kostenlos einlösen';
+	echo _('Kostenlos einlösen');
 }
 echo '"'.noDemoClick($cookie_id).' /></p></form>';
 ?>
 <?php
 }
 else {
-	echo '<p>Du hast heute schon getippt. Deine Zahlen: '.$meine_zahlen.'</p>';
+	echo '<p>'._('Du hast heute schon getippt. Deine Zahlen:').' '.$meine_zahlen.'</p>';
 }
 ?>
-<h1>Heute schon getippt</h1>
+<h1><?php echo _('Heute schon getippt'); ?></h1>
 <?php
 $sql1 = "SELECT a.team, b.name FROM ".$prefix."lotto_tipps AS a JOIN ".$prefix."teams AS b ON a.team = b.ids ORDER BY b.name ASC";
 $sql2 = mysql_query($sql1);
@@ -121,9 +121,9 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 }
 echo '<p>'.substr($tipper_liste, 0, -2).'</p>';
 ?>
-<h1>Zahlen von gestern</h1>
+<h1><?php echo _('Zahlen von gestern'); ?></h1>
 <p><?php echo $get_jackpot3['zahlen_gestern']; ?></p>
-<h1>Letzte Gewinne</h1>
+<h1><?php echo _('Letzte Gewinne'); ?></h1>
 <ul>
 <?php
 $sql1 = "SELECT a.team, a.summe, a.zeit, a.richtige, b.name FROM ".$prefix."lotto_gewinner AS a JOIN ".$prefix."teams AS b ON a.team = b.ids ORDER BY zeit DESC LIMIT 0, 10";
@@ -137,7 +137,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 }
 ?>
 </ul>
-<h1>Höchste Gewinne</h1>
+<h1><?php echo _('Höchste Gewinne'); ?></h1>
 <ul>
 <?php
 $sql1 = "SELECT a.team, a.summe, a.richtige, b.name FROM ".$prefix."lotto_gewinner AS a JOIN ".$prefix."teams AS b ON a.team = b.ids ORDER BY summe DESC LIMIT 0, 10";
@@ -148,6 +148,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </ul>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -3,7 +3,6 @@
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Verträge'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -84,8 +83,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
-<p><strong><?php echo _('Überschriften:</strong> AL: Alter, MO: Moral, GE: Gehalt pro Saison in Millionen €'); ?></p>
+<p><strong><?php echo _('Überschriften:').'</strong> '._('AL: Alter, MO: Moral, GE: Gehalt pro Saison in Millionen €'); ?></p>
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>

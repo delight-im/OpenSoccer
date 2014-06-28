@@ -8,7 +8,7 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 	$sql2 = mysql_query($sql1);
 	$blaetter3 = anzahl_datensaetze_gesamt($sql1);
 	echo '<h1>'._('Neue Accounts').'</h1>';
-	echo '<p>'._('Die folgenden Accounts wurden zuletzt neu registriert. Nicht Manager haben schon ein Team bekommen.').'</p>';
+	echo '<p>'._('Die folgenden Accounts wurden zuletzt neu registriert. Nicht alle Manager haben schon ein Team bekommen.').'</p>';
 	echo '<table><thead><tr class="odd"><th scope="col">'._('Manager').'</th><th scope="col">'._('Registriert').'</th><th scope="col">'._('Geworben von').'</th><th scope="col">'._('Letzter Login').'</th><th scope="col">&nbsp;</th></tr></thead><tbody>';
 	$counter = 0;
 	while ($sql3 = mysql_fetch_assoc($sql2)) {

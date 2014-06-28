@@ -5,7 +5,6 @@
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('players_development');
-echo '<p>';
 echo '<table>';
 echo '<thead>';
 echo '<tr>';
@@ -41,9 +40,8 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 }
 echo '</tbody>';
 echo '</table>';
-echo '</p>';
-echo '<p><strong>'._('Überschriften:</strong> MT: Mannschaftsteil').'</p>';
-echo '<p><strong>'._('Mannschaftsteile:</strong> T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm').'</p>';
+echo '<p><strong>'._('Überschriften:').'</strong> '._('MT: Mannschaftsteil').'</p>';
+echo '<p><strong>'._('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm').'</p>';
 ?>
 <?php
 echo '<div class="pagebar">';

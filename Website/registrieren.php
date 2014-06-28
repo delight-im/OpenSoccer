@@ -66,7 +66,7 @@ function in_blacklist($text, $list) {
 	}
 	return $meldung;
 }
-$mailHostBlacklist = array('trash-mail.com', 'emailgo.de', 'spambog.com', 'spambog.de', 'discardmail.com', 'discardmail.de', 'sofort-mail.de', 'wegwerfemail.de', 'trashemail.de', 'safetypost.de', 'trashmail.net');
+$mailHostBlacklist = array('trash-mail.com', 'emailgo.de', 'spambog.com', 'spambog.de', 'discardmail.com', 'discardmail.de', 'sofort-mail.de', 'wegwerfemail.de', 'trashemail.de', 'safetypost.de', 'trashmail.net', 'byom.de', 'trashmail.de', 'spoofmail.de', 'squizzy.de');
 $uName = trim($_POST['reg_benutzername']);
 $uMail = trim($_POST['reg_email']);
 if (!validUsername($uName)) {

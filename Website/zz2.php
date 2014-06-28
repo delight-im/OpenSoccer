@@ -289,7 +289,7 @@ else {
 ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <?php
-$nextGamesHTML = '<h1>Nächste Spiele</h1><div class="left-box navBlockLinksmatch">';
+$nextGamesHTML = '<h1>Nächste Spiele</h1><div class="left-box navBlockLinks matchList">';
 $nxt3_zeit = mktime(0, 0, 0, date('m', time()), date('d', time()), date('Y', time()));
 $nxt1 = "SELECT id, team1, team2, ergebnis, typ, datum FROM ".$prefix."spiele WHERE (team1 = '".$cookie_teamname."' OR team2 = '".$cookie_teamname."') AND (datum > ".$nxt3_zeit.") ORDER BY datum ASC LIMIT 0, 5";
 $nxt2 = mysql_query($nxt1);
@@ -297,12 +297,12 @@ while ($nxt3 = mysql_fetch_assoc($nxt2)) {
 	if ($nxt3['team1'] == $cookie_teamname) {
 		$nxt3_gegner = $nxt3['team2'];
 		$nxt3_ergebnis = $nxt3['ergebnis'];
-		$home = '<img width="16" src="images/house.png" style="vertical-align: middle;">';
+		$homeGuest = '<img width="16" src="/images/house.png" style="vertical-align:middle;">';
 	}
 	else {
 		$nxt3_gegner = $nxt3['team1'];
 		$nxt3_ergebnis = ergebnis_drehen($nxt3['ergebnis']);
-		$home = '<img width="16" src="images/house_go.png" style="vertical-align: middle;">';
+        $homeGuest = '<img width="16" src="/images/car.png" style="vertical-align:middle;">';
 	}
 	// LIVE ODER ERGEBNIS ANFANG
 	if ($nxt3['typ'] == $live_scoring_spieltyp_laeuft && date('d', time()) == date('d', $nxt3['datum'])) {
@@ -315,7 +315,7 @@ while ($nxt3 = mysql_fetch_assoc($nxt2)) {
 	}
 	// LIVE ODER ERGEBNIS ENDE
 	$nxt3_typ = substr($nxt3['typ'], 0, 1);
-	$nextGamesHTML .= '<a href="/spielbericht.php?id='.$nxt3['id'].$lastActionZusatz.'">'.$home.' ' '.$nxt3_typ.': '.$nxt3_gegner.' ('.$ergebnis_live.')</a>';
+	$nextGamesHTML .= '<a href="/spielbericht.php?id='.$nxt3['id'].$lastActionZusatz.'">'.$homeGuest.' '.$nxt3_typ.': '.$nxt3_gegner.' ('.$ergebnis_live.')</a>';
 }
 $nextGamesHTML .= '</div>';
 echo $nextGamesHTML;

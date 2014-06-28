@@ -589,18 +589,18 @@ div.navBlockLinks a, div.navBlockLinks a:link, div.navBlockLinks a:visited {
 	text-decoration: none;
 }
 
-div.navBlockLinksmatch a, div.navBlockLinksmatch a:link, div.navBlockLinksmatch a:visited {
+div.navBlockLinks.matchList a, div.navBlockLinks.matchList a:link, div.navBlockLinks.matchList a:visited {
 	display: block;
 	border-bottom: 1px solid #eff0f1;
-	padding: 4px 4px 4px 5px;
+    background-image: none;
+	padding: 4px 4px 4px 9px;
 	text-align: left;
 	font-weight: bold;
 	background-color: #fff;
 	text-decoration: none;
 }
 
-
-div.navBlockLinks a:hover, div.navBlockLinksmatch a:hover {
+div.navBlockLinks a:hover {
 	background-color: #f5f5f5;
 	text-decoration: none;
 }

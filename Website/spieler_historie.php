@@ -16,18 +16,18 @@ else {
 	$aktuellerVerein = '<a href="/team.php?id='.$sql3['team'].'">'.$tm3['name'].'</a>';
 }
 ?>
-<title>Spieler-Historie: <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
+<title><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Spieler-Historie: <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
+<h1><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p style="text-align:right"><a href="/spieler.php?id=<?php echo $sql3['ids']; ?>" class="pagenava">Zum Spieler-Profil</a></p>
+<p style="text-align:right"><a href="/spieler.php?id=<?php echo $sql3['ids']; ?>" class="pagenava"><?php echo _('Zum Spieler-Profil'); ?></a></p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Datum</th>
-<th scope="col">Von</th>
-<th scope="col">Zu</th>
-<th scope="col">Ablöse</th>
+<th scope="col"><?php echo _('Datum'); ?></th>
+<th scope="col"><?php echo _('Von'); ?></th>
+<th scope="col"><?php echo _('Zu'); ?></th>
+<th scope="col"><?php echo _('Ablöse'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -66,7 +66,7 @@ while ($a3 = mysql_fetch_assoc($a2)) {
 	if ($counter % 2 == 0) { echo '<tr>'; } else { echo '<tr class="odd">'; }
 	echo '<td>'.date('d.m.Y', $a3['datum']).'</td><td>'.$vonStr.'</td><td>'.$zuStr.'</td>';
 	if ($a3['gebot'] == 1) {
-		echo '<td>Leihgabe</td>';
+		echo '<td>'.('Leihgabe').'</td>';
 	}
 	else {
 		echo '<td>'.abloeseSchaetzen($cookie_team, $a3['gebot'], $a3['bieter'], $a3['besitzer']).'</td>';
@@ -88,13 +88,13 @@ if (mysql_num_rows($youthTeam2) == 1) {
 </tbody>
 </table>
 <?php if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') { ?>
-<h1>Letzte Gebote [Sichtbar fürs Team]</h1>
+<h1><?php echo _('Letzte Gebote [Sichtbar fürs Team]'); ?></h1>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Datum</th>
-<th scope="col">Bieter-IP</th>
-<th scope="col">Betrag</th>
+<th scope="col"><?php echo _('Datum'); ?></th>
+<th scope="col"><?php echo _('Bieter-IP'); ?></th>
+<th scope="col"><?php echo _('Betrag'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -127,6 +127,6 @@ while ($a3 = mysql_fetch_assoc($a2)) {
 </table>
 <?php } ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

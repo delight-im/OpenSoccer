@@ -33,7 +33,7 @@ if ($sql3['von'] != '18a393b5e23e2b9b4da106b06d8235f3') {
 }
 echo '</p>';
 if ($sql3['in_reply_to'] != '') {
-	$ur1 = "SELECT inhalt FROM ".$prefix."pn WHERE ids = '".mysql_real_escape_string($sql3['in_reply_to'])."'";
+	$ur1 = "SELECT inhalt FROM ".$prefix."pn WHERE ids = '".mysql_real_escape_string($sql3['in_reply_to'])."' AND (an = '".$cookie_id."' OR von = '".$cookie_id."')";
 	$ur2 = mysql_query($ur1);
 	if (mysql_num_rows($ur2) != 0) {
 		$ur3 = mysql_fetch_assoc($ur2);

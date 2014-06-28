@@ -286,6 +286,7 @@ else {
 		else {
 			echo '<p>Leider sind im Moment keine Jobs als Manager frei - aber es wird nicht lange dauern, dann wirst Du Dein erstes Job-Angebot bekommen. Versprochen! Schau einfach in ein paar Stunden wieder vorbei, dann wird ein Team für Dich frei sein. Man sagt, Du hättest das Zeug zum Top-Manager ...</p>';
 		}
+        echo '<p>Nicht genug Angebote? Du möchtest in einer anderen Liga anfangen? <a href="/?show_all=1">Klicke hier, um mehr anzuzeigen!</a></p>';
 		echo '<p>Wenn Du Fragen hast, helfen wir Dir gerne im Support-Bereich oder im Chat weiter. Beides findest Du im Hauptmenü unter <i>Community</i>.</p>';
 	}
 }

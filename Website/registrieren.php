@@ -71,7 +71,7 @@ $uName = trim($_POST['reg_benutzername']);
 $uMail = trim($_POST['reg_email']);
 if (!validUsername($uName)) {
 	echo '<p>'._('Dein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30).').'</p>';
-	echo '<p><strong>'._('Buchstaben:').'</strong> '._('A-Z + Umlaute (groß und klein)').'<br /><strong>'._('Zahlen:').'</strong> 0-9<br /><strong>'._('Sonderzeichen:').'</strong> '._('Bindestrich').'</p>';
+	echo '<p><strong>'._('Buchstaben:').'</strong> '._('A-Z und Umlaute (groß und klein)').'<br /><strong>'._('Zahlen:').'</strong> 0-9<br /><strong>'._('Sonderzeichen:').'</strong> '._('Bindestrich').'</p>';
 	echo '<p>'._('Nicht erlaubt sind also Leerzeichen, Punkt, Komma, Sternchen usw.').'</p>';
 	echo '<p><a href="/index.php">'._('Bitte klicke hier und versuche es noch einmal.').'</a></p>';
 }

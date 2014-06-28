@@ -217,7 +217,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 		$neuerName = mysql_real_escape_string(trim(strip_tags($_POST['neuerName'])));
 		if (!validUsername($neuerName)) {
 			echo '<p>Ein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30).</p>';
-			echo '<p><strong>Buchstaben:</strong> A-Z + Umlaute (groß und klein)<br /><strong>Zahlen:</strong> 0-9<br /><strong>Sonderzeichen:</strong> Bindestrich</p>';
+			echo '<p><strong>Buchstaben:</strong> A-Z und Umlaute (groß und klein)<br /><strong>Zahlen:</strong> 0-9<br /><strong>Sonderzeichen:</strong> Bindestrich</p>';
 			echo '<p>Nicht erlaubt sind also Leerzeichen, Punkt, Komma, Sternchen usw.</p>';
 			echo '<p>Bitte versuche es noch einmal.</p>';
 		}

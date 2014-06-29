@@ -16,7 +16,7 @@ select { width:120px; }
 .sturm1 { display: block; margin: 2px 0; }
 .sturm2 { display: block; margin: 2px 0; }
 <?php } else { ?>
-.spielfeld { position:relative; left:0px; top:0px; width:522px; height:400px; background:white url(/images/fussballfeld.png) scroll no-repeat; color:#fff; font-weight:bold; z-index:1; }
+.spielfeld { position:relative; left:0; top:0; width:522px; height:400px; background:white url(/images/fussballfeld.png) scroll no-repeat; color:#fff; font-weight:bold; z-index:1; }
 select { width:120px; }
 .torwart { position:absolute; left:201px; top:340px; }
 .abwehr1 { position:absolute; left:36px; top:230px; }
@@ -257,14 +257,14 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 </form>
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
 <p><select name="farbeAufstellen" size="1" style="width:200px">
-	<option><?php echo _('Aqua'); ?></option>
-	<option><?php echo _('Blau'); ?></option>
-	<option><?php echo _('Gelb'); ?></option>
-	<option><?php echo _('Lila'); ?></option>
-	<option><?php echo _('Oliv'); ?></option>
-	<option><?php echo _('Pink'); ?></option>
-	<option><?php echo _('Rot'); ?></option>
-	<option><?php echo _('Silber'); ?></option>
+	<option value="Aqua"><?php echo _('Aqua'); ?></option>
+	<option value="Blau"><?php echo _('Blau'); ?></option>
+	<option value="Gelb"><?php echo _('Gelb'); ?></option>
+	<option value="Lila"><?php echo _('Lila'); ?></option>
+	<option value="Oliv"><?php echo _('Oliv'); ?></option>
+	<option value="Pink"><?php echo _('Pink'); ?></option>
+	<option value="Rot"><?php echo _('Rot'); ?></option>
+	<option value="Silber"><?php echo _('Silber'); ?></option>
 	<option value="Gruen"><?php echo _('Grün'); ?></option>
 </select> <input type="submit" value="Farbe aufstellen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
 </form>
@@ -280,7 +280,6 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 </select> <input type="submit" value="Aufstellung übernehmen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
 </form>
 <h1>Meine Spieler</h1>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -338,7 +337,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <p><strong><?php echo _('Überschriften:').'</strong> '._('SE: Startelf, MT: Mannschaftsteil, AL: Alter, FR: Frische, MO: Moral'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
 <p><strong><?php echo _('Fettdruck:').'</strong> '._('Aufgestellte Spieler'); ?></p>

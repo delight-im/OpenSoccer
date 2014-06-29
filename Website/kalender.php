@@ -19,7 +19,7 @@ else {
 	$chosenTeam = $cookie_teamname;
 }
 ?>
-<h1><?php echo _('Saison'); ?> <?php echo $cookie_saison; ?> - <?php echo _('Spiele von'); ?> <?php echo $chosenTeam; ?></h1>
+<h1>Saison <?php echo $cookie_saison; ?> - Spiele von <?php echo $chosenTeam; ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('team_calender');
@@ -39,7 +39,6 @@ echo ' <a href="/team.php?id='.$chosenTeamID.'" class="pagenava">'.('Zum Teampro
 echo '</p>';
 // TYPEN FILTER ENDE
 ?>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -51,15 +50,15 @@ echo '</p>';
 </thead>
 <tbody>
 <?php
-$spieltagDescription = array(	4 => array(_('Pokal: Vorrunde (Hinspiel)', 'Cup: Qualifikation')),
+$spieltagDescription = array(	4 => array(_('Pokal: Vorrunde (Hinspiel)'), _('Cup: Qualifikation')),
 								5 => array(_('Pokal: Vorrunde (Rückspiel)')),
 								7 => array(_('Cup: Vorrunde')),
 								8 => array(_('Pokal: Achtelfinale (Hinspiel)')),
 								9 => array(_('Pokal: Achtelfinale (Rückspiel)')),
 								10 => array(_('Cup: Achtelfinale')),
 								12 => array(_('Pokal: Viertelfinale (Hinspiel)')),
-								13 => array(_('Pokal: Viertelfinale (Rückspiel)', 'Cup: Viertelfinale')),
-								16 => array(_('Pokal: Halbfinale (Hinspiel)', 'Cup: Halbfinale')),
+								13 => array(_('Pokal: Viertelfinale (Rückspiel)'), _('Cup: Viertelfinale')),
+								16 => array(_('Pokal: Halbfinale (Hinspiel)'), _('Cup: Halbfinale')),
 								17 => array(_('Pokal: Halbfinale (Rückspiel)')),
 								19 => array(_('Cup: Finale')),
 								20 => array(_('Pokal: Finale'))
@@ -78,7 +77,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	else { // neuer Tag
 		$currentSpieltag = $cookie_spieltag-round((time()-$sql3['datum'])/86400);
 		echo '<td style="font-weight:bold;">'.$currentDate.'</td>';
-		echo '<td colspan="3" style="font-weight:bold;">'._('Spieltag').' '.$currentSpieltag.'</td></tr><tr><td>&nbsp;</td>'; // Zeile mit Spieltag einschieben
+		echo '<td colspan="3" style="font-weight:bold;">Spieltag '.$currentSpieltag.'</td></tr><tr><td>&nbsp;</td>'; // Zeile mit Spieltag einschieben
 		$counter++; // Zeilen-Counter erhöhen
 		if (isset($spieltagDescription[$currentSpieltag]) && is_array($spieltagDescription[$currentSpieltag])) { // Zeile mit Spieltags-Beschreibung einschieben
             foreach ($spieltagDescription[$currentSpieltag] as $special_date) {
@@ -109,7 +108,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>

@@ -48,7 +48,7 @@ if (isset($_POST['laufzeit']) && isset($_POST['spieler'])) {
 			$getmanager2 = mysql_query($getmanager1);
 			$getmanager3 = mysql_fetch_assoc($getmanager2);
 			$getmanager4 = $getmanager3['vorname'].' '.$getmanager3['nachname'];
-			$formulierung = _('Du hast den Vertrag mit').' <a href="/spieler.php?id='.$spieler_id.'">'.$getmanager4.'</a> '._('auf').' '.$laufzeit.' '.('Tage verlängert.');
+            $formulierung = 'Du hast den Vertrag mit <a href="/spieler.php?id='.$spieler_id.'">'.$getmanager4.'</a> auf '.$laufzeit.' Tage verlängert.';
 			$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Finanzen', '".time()."')";
 			$sql8 = mysql_query($sql7);
 			// PROTOKOLL ENDE
@@ -125,8 +125,8 @@ if ($sql3['vertrag'] < getTimestamp('+66 days') && (($sql3['wiealt']+16.5909091*
 </form>
 <?php } else { ?>
 </form>
-<p><?php echo _('Der Spieler'); ?> <?php echo '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>'; ?> <?php echo _('möchte seinen Vertrag zurzeit nicht verlängern und hat Dir deshalb kein Angebot gemacht. Vielleicht ist er unzufrieden in Deinem Team. Achte auf seine Moral!'); ?></p>
-<p><a href="/vertraege.php"><?php echo _('Zurück zur Vertragsübersicht'); ?></a><br /><?php echo '<a href="/spieler.php?id='.$sql3['ids'].'"><?php echo _('Zurück zum Spielerprofil'); ?></a>'; ?></p>
+<p>Der Spieler <?php echo '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>'; ?> möchte seinen Vertrag zurzeit nicht verlängern und hat Dir deshalb kein Angebot gemacht. Vielleicht ist er unzufrieden in Deinem Team. Achte auf seine Moral!</p>
+<p><a href="/vertraege.php"><?php echo _('Zurück zur Vertragsübersicht'); ?></a><br /><?php echo '<a href="/spieler.php?id='.$sql3['ids'].'">'._('Zurück zum Spielerprofil').'</a>'; ?></p>
 <?php } ?>
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>

@@ -7,7 +7,7 @@ if ($_SESSION['status'] != 'Helfer' && $_SESSION['status'] != 'Admin') { exit; }
 if (!isset($_GET['ip'])) { exit; }
 $getIP = mysql_real_escape_string(trim(strip_tags($_GET['ip'])));
 echo '<h1>'._('IP-Info:').' '.$getIP.'</h1>';
-echo '<p>'._('Die folgende Liste zeigt, welche User schon mit der IP-Adresse').' &quot;'.$getIP.'&quot; '._('eingeloggt waren.').'</p>';
+    echo '<p>Die folgende Liste zeigt, welche User schon mit der IP-Adresse &quot;'.$getIP.'&quot; eingeloggt waren.</p>';
 ?>
 <table>
 <thead>

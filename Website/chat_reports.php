@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Chat-Reports | Ballmanager.de</title>
+<title><?php echo _('Chat-Reports'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 td.sperrRelevant_1 {
@@ -15,7 +15,7 @@ td.sperrRelevant_0 {
 <?php if ($loggedin == 1) { ?>
 <?php
 if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
-	echo '<h1>Chat-Reports</h1>';
+	echo '<h1>'._('Chat-Reports').'</h1>';
 	if (isset($_GET['user']) && isset($_GET['reporter']) && isset($_GET['datum'])) {
 		$q1 = mysql_real_escape_string(trim(strip_tags($_GET['user'])));
 		$q2 = mysql_real_escape_string(trim(strip_tags($_GET['reporter'])));
@@ -27,7 +27,7 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 			echo maskIPs($sql3['protokoll']);
 		}
 		else {
-			echo '<p>Kein Protokoll gefunden!</p>';
+			echo '<p>'._('Kein Protokoll gefunden!').'</p>';
 		}
 	}
 	else {
@@ -49,10 +49,10 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 		echo '<thead>';
 		echo '<tr>';
 		echo '<th scope="col">&nbsp;</th>';
-		echo '<th scope="col">Gemeldet</th>';
-		echo '<th scope="col">Report von</th>';
-		echo '<th scope="col">Datum</th>';
-		echo '<th scope="col">Sperre</th>';
+		echo '<th scope="col">'._('Gemeldet').'</th>';
+		echo '<th scope="col">'._('Report von').'</th>';
+		echo '<th scope="col">'._('Datum').'</th>';
+		echo '<th scope="col">'._('Sperre').'</th>';
 		echo '</tr>';
 		echo '</thead>';
 		echo '<tbody>';
@@ -98,6 +98,6 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 }
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

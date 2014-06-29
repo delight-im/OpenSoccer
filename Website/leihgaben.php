@@ -21,7 +21,7 @@ while ($n3t3 = mysql_fetch_assoc($n3t2)) {
 $transfers_mit_team = array_count_values($transfers_mit_team);
 // NUR 2 TRANSFERS ZWISCHEN 2 TEAMS ENDE
 if ($_SESSION['transferGesperrt'] == TRUE) {
-	echo addInfoBox('Du bist noch für den Transfermarkt <a class="inText" href="/sanktionen.php">gesperrt</a>. Wenn Dir unklar ist, warum, frage bitte ein <a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">Team-Mitglied</a>.');
+	addInfoBox('Du bist noch für den Transfermarkt <a class="inText" href="/sanktionen.php">gesperrt</a>. Wenn Dir unklar ist, warum, frage bitte ein <a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">Team-Mitglied</a>.');
 }
 else {
 	echo '<h1>Erhaltene Anfragen</h1>';
@@ -32,10 +32,10 @@ else {
 		$de1 = "DELETE FROM ".$prefix."transfermarkt_leihe WHERE spieler = '".$ac_spieler."' AND besitzer = '".$ac_besitzer."' AND bieter = '".mysql_real_escape_string($cookie_teamname)."'";
 		mysql_query($de1);
 		if (mysql_affected_rows() == 0) {
-			echo addInfoBox('Der Spieler konnte nicht gefunden werden.');
+			addInfoBox('Der Spieler konnte nicht gefunden werden.');
 		}
 		else {
-			echo addInfoBox('Die Anfrage wurde zurückgezogen.');
+			addInfoBox('Die Anfrage wurde zurückgezogen.');
 		}
 	}
 	if (isset($_POST['spieler']) && isset($_POST['aktion']) && isset($_POST['bieter']) && isset($_POST['praemie'])) {
@@ -82,13 +82,13 @@ else {
 						$ac1 = "UPDATE ".$prefix."transfermarkt_leihe SET akzeptiert = 2 WHERE spieler = '".$ac_spieler."' AND bieter != '".$ac_bieter."' AND akzeptiert = 0";
 						$ac2 = mysql_query($ac1);
 						// ALLE ANDEREN GEBOTE ABLEHNEN ENDE
-						echo addInfoBox('Die Anfrage wurde angenommen.');
+						addInfoBox('Die Anfrage wurde angenommen.');
                         if (isset($_SESSION['last_leihgaben_anzahl'])) {
                             $_SESSION['last_leihgaben_anzahl']--;
                         }
 					}
 					else {
-						echo addInfoBox('Du hast mit diesem Verein schon zwei Transfers ausgehandelt.');
+						addInfoBox('Du hast mit diesem Verein schon zwei Transfers ausgehandelt.');
 					}
 				}
 			}
@@ -96,7 +96,7 @@ else {
 		elseif ($ac_aktion == 'Nein') {
 			$ac1 = "UPDATE ".$prefix."transfermarkt_leihe SET akzeptiert = 2 WHERE spieler = '".$ac_spieler."' AND bieter = '".$ac_bieter."'";
 			$ac2 = mysql_query($ac1);
-			echo addInfoBox('Die Anfrage wurde abgelehnt.');
+			addInfoBox('Die Anfrage wurde abgelehnt.');
 			$_SESSION['last_leihgaben_anzahl']--;
 		}
 	}

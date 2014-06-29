@@ -20,7 +20,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		echo addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+		addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
 		include 'zz3.php';
 		exit;
 	}
@@ -50,7 +50,7 @@ if (isset($_GET['del']) && ($_SESSION['status'] == 'Admin' OR $_SESSION['status'
 			$sql2 = mysql_query($sql1) or die(mysql_error());
 			$sql1 = "DELETE FROM ".$prefix."supportVotes WHERE request = ".$delID;
 			$sql2 = mysql_query($sql1) or die(mysql_error());
-			echo addInfoBox('Die ausgewählte Anfrage wurde vollständig gelöscht.');
+			addInfoBox('Die ausgewählte Anfrage wurde vollständig gelöscht.');
 		}
 	}
 }
@@ -80,12 +80,12 @@ if (isset($_POST['category']) && isset($_POST['title']) && isset($_POST['descrip
 	$sql1 = "INSERT INTO ".$prefix."supportRequests (category, title, description, timeAdded, lastAction, author, visibilityLevel) VALUES ('".$newCategory."', '".$newTitle."', '".$newDescription."', ".time().", ".time().", '".$cookie_id."', ".$newVisibility.")";
 	$sql2 = mysql_query($sql1);
 	if ($sql2 == FALSE) {
-		echo addInfoBox('Sorry, Du kannst nicht zwei Anfragen mit dem gleichen Titel erstellen.');
+		addInfoBox('Sorry, Du kannst nicht zwei Anfragen mit dem gleichen Titel erstellen.');
 	}
 	else {
 		$sql1 = "INSERT INTO ".$prefix."supportVotes (request, userID, vote) VALUES (".mysql_insert_id().", '".$cookie_id."', 1)";
 		$sql2 = mysql_query($sql1);
-		echo addInfoBox('Danke, Deine Anfrage wurde erstellt.');
+		addInfoBox('Danke, Deine Anfrage wurde erstellt.');
 	}
 }
 // NEUE ANFRAGE ERSTELLEN ENDE
@@ -103,20 +103,20 @@ if (isset($_GET['mark'])) {
 		$markRead1 = "INSERT IGNORE INTO ".$prefix."supportRead (userID, anfrageID) SELECT '".$cookie_id."' AS user, id FROM ".$prefix."supportRequests WHERE open = 1";
 		$markRead2 = mysql_query($markRead1);
 		if ($markRead2 == FALSE) {
-			echo addInfoBox('Es konnten nicht alle Themen als gelesen markiert werden (E073).');
+			addInfoBox('Es konnten nicht alle Themen als gelesen markiert werden (E073).');
 		}
 		else {
 			//$_SESSION['last_forumneu_anzahl'] = 0;
-			echo addInfoBox('Alle Themen wurden als gelesen markiert.');
+			addInfoBox('Alle Themen wurden als gelesen markiert.');
 		}
 	}
 }
 if (isset($_GET['msg'])) {
 	if ($_GET['msg'] == 'replied') {
-		echo addInfoBox('Danke, Dein Kommentar wurde gespeichert.');
+		addInfoBox('Danke, Dein Kommentar wurde gespeichert.');
 	}
 	elseif ($_GET['msg'] == 'edited') {
-		echo addInfoBox('Danke, Dein Kommentar wurde geändert.');
+		addInfoBox('Danke, Dein Kommentar wurde geändert.');
 	}
 }
 function time_rel_s($zeitstempel) {

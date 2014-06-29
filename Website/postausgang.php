@@ -23,7 +23,7 @@ if (isset($_POST['auswahl']) && $cookie_id != DEMO_USER_ID) {
 			$del1 = "DELETE FROM ".$prefix."pn WHERE geloescht_von = 1 AND geloescht_an = 1";
 			mysql_query($del1);
 		}
-		echo addInfoBox('Es wurden '.count($_POST['auswahl']).' Nachrichten aus Deinem Postausgang gelöscht.');
+		addInfoBox('Es wurden '.count($_POST['auswahl']).' Nachrichten aus Deinem Postausgang gelöscht.');
 	}
 }
 ?>

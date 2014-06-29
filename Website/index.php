@@ -40,13 +40,13 @@ if ($cookie_team != '__'.$cookie_id) {
 	$sucheName = '';
 	if (isset($_GET['sucheName'])) {
 		$sucheName = mysql_real_escape_string(trim(strip_tags($_GET['sucheName'])));
-		echo addInfoBox('<a class="inText" href="#sucheNameErgebnisse">Klicke hier, um die Ergebnisse für Deine Suche anzeigen zu lassen.</a>');
+		addInfoBox('<a class="inText" href="#sucheNameErgebnisse">Klicke hier, um die Ergebnisse für Deine Suche anzeigen zu lassen.</a>');
 	}
 	if ($_SESSION['acceptedRules'] == 0) {
-		echo addInfoBox('Bitte akzeptiere unsere aktuellen <a class="inText" href="/regeln.php">Regeln</a>, die dem Spiel zugrunde liegen.');
+		addInfoBox('Bitte akzeptiere unsere aktuellen <a class="inText" href="/regeln.php">Regeln</a>, die dem Spiel zugrunde liegen.');
 	}
 	if ($unvollstaendigStr != '') {
-		echo addInfoBox('Die folgenden <a class="inText" href="/aufstellung.php">Aufstellungen</a> sind unvollständig: '.substr($unvollstaendigStr, 0, -2));
+		addInfoBox('Die folgenden <a class="inText" href="/aufstellung.php">Aufstellungen</a> sind unvollständig: '.substr($unvollstaendigStr, 0, -2));
 	}
 	if ($auslauf3 != 0) {
 		$showInfoText = 'In den nächsten drei Tagen ';
@@ -57,19 +57,19 @@ if ($cookie_team != '__'.$cookie_id) {
 			$showInfoText .= 'laufen <a class="inText" href="/vertraege.php">'.$auslauf3.' Verträge';
 		}
 		$showInfoText .= '</a> aus.';
-		echo addInfoBox($showInfoText);
+		addInfoBox($showInfoText);
 	}
 	if ($myteam3['sponsor'] == 0) {
-		echo addInfoBox('Du hast für die aktuelle Saison noch keinen Vertrag mit einem Sponsor abgeschlossen. <a class="inText" href="/sponsoren.php">Klicke hier, um jetzt einen Vertrag abzuschließen.</a>');
+		addInfoBox('Du hast für die aktuelle Saison noch keinen Vertrag mit einem Sponsor abgeschlossen. <a class="inText" href="/sponsoren.php">Klicke hier, um jetzt einen Vertrag abzuschließen.</a>');
 	}
 	if ($laufende_spiele3 != 0) {
-		echo addInfoBox('LIVE: '.$live_scoring_spieltyp_laeuft.'spiele von heute! <a class="inText" href="/liveZentrale.php">&raquo; Zur LIVE-Zentrale</a>');
+		addInfoBox('LIVE: '.$live_scoring_spieltyp_laeuft.'spiele von heute! <a class="inText" href="/liveZentrale.php">&raquo; Zur LIVE-Zentrale</a>');
 	}
 	if ($_SESSION['mds_abgestimmt'] == FALSE) {
-		echo addInfoBox('Die Wahl zum &quot;Manager der Saison&quot; läuft! <a class="inText" href="/manager_der_saison.php">&raquo; Jetzt abstimmen</a>');
+		addInfoBox('Die Wahl zum &quot;Manager der Saison&quot; läuft! <a class="inText" href="/manager_der_saison.php">&raquo; Jetzt abstimmen</a>');
 	}
 	if ($_SESSION['hasLicense'] == 0 && $cookie_team != '__'.$cookie_id) {
-		echo addInfoBox('Du hast Deine <a class="inText" href="/managerPruefung.php">Manager-Prüfung</a> noch nicht abgeschlossen: Für jede erledigte Aufgabe bekommst Du 1 Mio. auf Dein Vereinskonto!');
+		addInfoBox('Du hast Deine <a class="inText" href="/managerPruefung.php">Manager-Prüfung</a> noch nicht abgeschlossen: Für jede erledigte Aufgabe bekommst Du 1 Mio. auf Dein Vereinskonto!');
 	}
 	?>
 	<?php if (isMobile() && isset($nextGamesHTML)) { echo str_replace(' (<a href="/wio.php">WIO</a>)', '', $nextGamesHTML); } ?>
@@ -153,7 +153,7 @@ if ($cookie_team != '__'.$cookie_id) {
 	if (!isset($_SESSION['last_special_offer_check']) || $_SESSION['last_special_offer_check'] < (time()-3600)) {
 		$specialOffer = getSpecialOffer();
 		if ($specialOffer !== FALSE) {
-			echo addInfoBox($specialOffer);
+			addInfoBox($specialOffer);
 		}
 	}
 	// SPECIAL OFFERS END
@@ -227,7 +227,7 @@ else {
 				$in1 = "UPDATE ".$prefix."users SET team = '".$newUser_selectTeam."', liga = '".$newUser_getData3['liga']."' WHERE ids = '".$cookie_id."'";
 				$in2 = mysql_query($in1);
 				if ($in2 == FALSE) {
-					echo addInfoBox('Sorry, ein anderer Manager war leider schneller: Er hat Dir das Team weggeschnappt! Bitte versuche es mit einem anderen Team ...');
+					addInfoBox('Sorry, ein anderer Manager war leider schneller: Er hat Dir das Team weggeschnappt! Bitte versuche es mit einem anderen Team ...');
 				}
 				else {
 					$maxFrische = floor(98.5-1.75*$cookie_spieltag);
@@ -250,7 +250,7 @@ else {
 					$sql1 = "UPDATE ".$prefix."pn SET ids = MD5(id) WHERE ids = ''";
 					$sql2 = mysql_query($sql1);
 					// WILLKOMMENS-POST SCHICKEN ENDE
-					echo addInfoBox('Der Rasen ist gestutzt, der Kugelschreiber poliert: Starte Deine Karriere nach dem nächsten Login! <a class="inText" href="/logout.php">[Ausloggen]</a>');
+					addInfoBox('Der Rasen ist gestutzt, der Kugelschreiber poliert: Starte Deine Karriere nach dem nächsten Login! <a class="inText" href="/logout.php">[Ausloggen]</a>');
 					echo '<h1>Dein neuer Job!</h1>';
 					echo '<p>Herzlichen Glückwunsch! '.$newUser_getData3['name'].' freut sich sehr, Dich als neuen Manager begrüßen zu dürfen! Du erhältst Dein Team automatisch beim nächsten Login.</p>';
 					echo '<p>Wenn Du sofort spielen möchtest, loggst Du Dich am besten aus und anschließend direkt wieder ein. Du kommst dann direkt ins Büro Deines Vereins.</p>';

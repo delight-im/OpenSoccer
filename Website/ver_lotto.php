@@ -84,7 +84,7 @@ else {
 	$meine_zahlen = '';
 }
 // DATEN HOLEN ENDE
-echo addInfoBox('<strong>'._('Jackpot:').'</strong> '.number_format($get_jackpot3['jackpot'], 0, ',', '.').' €');
+addInfoBox('<strong>'._('Jackpot:').'</strong> '.number_format($get_jackpot3['jackpot'], 0, ',', '.').' €');
 ?>
 <?php if ($meine_zahlen == '') { ?>
 <form action="/ver_lotto.php" method="post" accept-charset="utf-8">

@@ -21,14 +21,14 @@ if (isset($_POST['connectAction']) && isset($_POST['user1ID']) && isset($_POST['
 		$connectAction2 = mysql_query($connectAction1);
 		$multiChangesType = 'connect';
 		$markNotice .= 'die folgenden User als Multi-Accounts verknüpft:<br />';
-		echo addInfoBox('Die beiden User wurden im System als Multi-Accounts verknüpft.');
+		addInfoBox('Die beiden User wurden im System als Multi-Accounts verknüpft.');
 	}
 	elseif ($_POST['connectAction'] == 'delete') {
 		$connectAction1 = "DELETE FROM ".$prefix."users_multis WHERE (user1 = '".$tempUser1ID."' AND user2 = '".$tempUser2ID."') OR (user1 = '".$tempUser2ID."' AND user2 = '".$tempUser1ID."')";
 		$connectAction2 = mysql_query($connectAction1);
 		$multiChangesType = 'unconnect';
 		$markNotice .= 'die Verknüpfung der folgenden User als Multi-Accounts gelöst:<br />';
-		echo addInfoBox('Die Verknüpfung der beiden User im System als Multi-Accounts wurde gelöst.');
+		addInfoBox('Die Verknüpfung der beiden User im System als Multi-Accounts wurde gelöst.');
 	}
 	$multiChanges1 = "INSERT INTO ".$prefix."multiChanges (helfer, zeit, user1, user2, type) VALUES ('".$cookie_id."', ".time().", '".$tempUser1ID."', '".$tempUser2ID."', '".$multiChangesType."')";
 	$multiChanges2 = mysql_query($multiChanges1);
@@ -45,7 +45,7 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 	$sql1 = "SELECT ids FROM ".$prefix."users WHERE username = '".$user1Name."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) {
-		echo addInfoBox('Der User '.$user1Name.' konnte nicht gefunden werden.');
+		addInfoBox('Der User '.$user1Name.' konnte nicht gefunden werden.');
 		include 'zz3.php';
 		exit;
 	}
@@ -56,7 +56,7 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 	$sql1 = "SELECT ids FROM ".$prefix."users WHERE username = '".$user2Name."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) {
-		echo addInfoBox('Der User '.$user2Name.' konnte nicht gefunden werden.');
+		addInfoBox('Der User '.$user2Name.' konnte nicht gefunden werden.');
 		include 'zz3.php';
 		exit;
 	}

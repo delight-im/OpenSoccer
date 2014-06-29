@@ -87,25 +87,25 @@ if (isset($_GET['id']) && $cookie_id != DEMO_USER_ID) {
 				$praemie = bigintval($_GET['praemie']);
 				if ($praemie > 350000) { $praemie = 0; }
 				if ($transfers_mit_team[$anf_besitzer] >= 2) { // nur 2 Transfers
-					echo addInfoBox('Du kannst den Spieler nicht ausleihen: 2-Transfers-Sperre');
+					addInfoBox('Du kannst den Spieler nicht ausleihen: 2-Transfers-Sperre');
 				}
 				else {
 					$anf1 = "INSERT INTO ".$prefix."transfermarkt_leihe (besitzer, spieler, bieter, praemie, zeit) VALUES ('".$anf_besitzer."', '".$ids."', '".$cookie_teamname."', ".$praemie.", ".time().")";
 					$anf2 = mysql_query($anf1);
 					$transferLog1 = "INSERT INTO ".$prefix."transfers_gebote (spieler, datum, bieter, bieterIP, betrag) VALUES ('".$ids."', ".time().", '".$cookie_team."', '".getUserIP()."', 1)";
 					$transferLog2 = mysql_query($transferLog1);
-					echo addInfoBox('Deine Anfrage für diesen Spieler wurde gesendet.');
+					addInfoBox('Deine Anfrage für diesen Spieler wurde gesendet.');
 					setTaskDone('market_borrow');
 				}
 			}
 			elseif ($anf03 != 0) {
 				$anf1 = "DELETE FROM ".$prefix."transfermarkt_leihe WHERE spieler = '".$ids."' AND bieter = '".$cookie_teamname."' AND akzeptiert = 0";
 				$anf2 = mysql_query($anf1);
-				echo addInfoBox('Deine Anfrage wurde zurückgezogen.');
+				addInfoBox('Deine Anfrage wurde zurückgezogen.');
 			}
 		}
 		else {
-			echo addInfoBox('Du bist noch für den Transfermarkt <a class="inText" href="/sanktionen.php">gesperrt</a>. Wenn Dir unklar ist, warum, frage bitte ein <a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">Team-Mitglied</a>.');
+			addInfoBox('Du bist noch für den Transfermarkt <a class="inText" href="/sanktionen.php">gesperrt</a>. Wenn Dir unklar ist, warum, frage bitte ein <a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">Team-Mitglied</a>.');
 		}
 	}
 }

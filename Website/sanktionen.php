@@ -36,10 +36,10 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 		if (mysql_affected_rows() == 1) {
 			$queueEmails1 = "INSERT INTO ".$prefix."backendEmails_pending (zeit, user, text, voters) VALUES (".time().", '".$cookie_id."', '".mysql_real_escape_string($emailText)."', '-".$cookie_id."-')";
 			mysql_query($queueEmails1);
-			echo addInfoBox('Die E-Mails werden versendet, sobald es die Bestätigung von 2 Team-Mitgliedern gibt.');
+			addInfoBox('Die E-Mails werden versendet, sobald es die Bestätigung von 2 Team-Mitgliedern gibt.');
 		}
 		else {
-			echo addInfoBox('Es ist nur ein einziger E-Mail-Versand pro Tag möglich!');
+			addInfoBox('Es ist nur ein einziger E-Mail-Versand pro Tag möglich!');
 		}
 	}
 	if (isset($_GET['approveMail']) && isset($_GET['approveToken'])) {
@@ -110,28 +110,28 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 							email_senden('info@ballmanager.de', $approveMail5['text'], $bccList);
 							$logBackend1 = "INSERT INTO ".$prefix."backendEmails (zeit, user, text) VALUES (".time().", '".$cookie_id."', '".mysql_real_escape_string($emailText)."')";
                             mysql_query($logBackend1);
-							echo addInfoBox('Insgesamt '.$emailUsersCount.' E-Mails werden nun versendet ...');
+							addInfoBox('Insgesamt '.$emailUsersCount.' E-Mails werden nun versendet ...');
 						}
 						else {
-							echo addInfoBox('Die E-Mail konnten nicht gesendet werden!');
+							addInfoBox('Die E-Mail konnten nicht gesendet werden!');
 						}
 					}
 					else {
-						echo addInfoBox('Die E-Mail an alle User wurde bestätigt!');
+						addInfoBox('Die E-Mail an alle User wurde bestätigt!');
 					}
 				}
 				else {
-					echo addInfoBox('Die E-Mail an alle User konnte nicht bestätigt werden!');
+					addInfoBox('Die E-Mail an alle User konnte nicht bestätigt werden!');
 				}
 			}
 			else { // ablehnen
 				$approveMail1 = "UPDATE ".$prefix."backendEmails_pending SET voters = CONCAT(voters, '-".$cookie_id."-') WHERE id = ".$approveMailID." AND votes < 3 AND voters NOT LIKE '%".$cookie_id."%'";
 				$approveMail2 = mysql_query($approveMail1);
-				echo addInfoBox('Die E-Mail an alle User wurde abgelehnt!');
+				addInfoBox('Die E-Mail an alle User wurde abgelehnt!');
 			}
 		}
 		else {
-			echo addInfoBox('Die E-Mail an alle User konnte nicht bestätigt werden!');
+			addInfoBox('Die E-Mail an alle User konnte nicht bestätigt werden!');
 		}
 	}
 	if (isset($_GET['profileID'])) {
@@ -144,7 +144,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 		$getTeam1 = "SELECT team, anzSanktionen FROM ".$prefix."users WHERE ids = '".$managerBestrafen."'";
 		$getTeam2 = mysql_query($getTeam1);
 		if (mysql_num_rows($getTeam2) == 0) {
-			echo addInfoBox('Der angegebene User konnte nicht gefunden werden.');
+			addInfoBox('Der angegebene User konnte nicht gefunden werden.');
 		}
 		else {
 			$getTeam3 = mysql_fetch_assoc($getTeam2);
@@ -184,7 +184,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 			}
 			$anzSanktionen1 = "UPDATE ".$prefix."users SET anzSanktionen = anzSanktionen+1 WHERE ids = '".$managerBestrafen."'";
 			mysql_query($anzSanktionen1);
-			echo addInfoBox('Die Strafe wurde ausgeführt.');
+			addInfoBox('Die Strafe wurde ausgeführt.');
 		}
 	}
 	if (isset($_GET['un1']) && isset($_GET['un2'])) {
@@ -206,7 +206,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 			}
 			$un3 = "UPDATE ".$prefix."helferLog SET chatSperre = zeit, transferSperre = zeit, geldStrafe = -1 WHERE managerBestrafen = '".$un1."' AND zeit = ".$un2;
 			mysql_query($un3);
-			echo addInfoBox('Die Sperre wurde aufgehoben, bleibt jedoch in der Liste stehen.');
+			addInfoBox('Die Sperre wurde aufgehoben, bleibt jedoch in der Liste stehen.');
 		}
 	}
 	if (isset($_POST['IDofUserToChange']) && isset($_POST['neuerName'])) {
@@ -225,12 +225,12 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 			$nnChange1 = "UPDATE ".$prefix."users SET username = '".$neuerName."' WHERE ids = '".$IDofUserToChange_id."'";
 			$nnChange2 = mysql_query($nnChange1);
 			if ($nnChange2 == FALSE) {
-				echo addInfoBox('Dieser Username existiert schon.');
+				addInfoBox('Dieser Username existiert schon.');
 			}
 			else {
 				$nameChanges1 = "INSERT INTO ".$prefix."nameChanges (helfer, zeit, vonID, vonName, zuName) VALUES ('".$cookie_id."', ".time().", '".$IDofUserToChange_id."', '".$IDofUserToChange_name."', '".$neuerName."')";
 				mysql_query($nameChanges1);
-				echo addInfoBox('Der Username wurde erfolgreich geändert.');
+				addInfoBox('Der Username wurde erfolgreich geändert.');
 			}
 		}
 	}
@@ -414,7 +414,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 		$compensationReason = mysql_real_escape_string(trim(strip_tags($_POST['compensationReason'])));
 		if ($compensationTeam != '' && $compensationValue >= 5000000 && $compensationValue <= 100000000) {
 			zahleEntschaedigung($compensationTeam, $compensationValue, $compensationReason);
-			echo addInfoBox('Die Entschädigung in Höhe von '.number_format($compensationValue, 0, ',', '.').'€ wurde gezahlt.');
+			addInfoBox('Die Entschädigung in Höhe von '.number_format($compensationValue, 0, ',', '.').'€ wurde gezahlt.');
 		}
 	}
 	echo '<h1>Entschädigung zahlen</h1>';
@@ -470,7 +470,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
             $doRepeatPostponeBy = "ROUND((".$repeatTime."-datum)/3600/24)"; // Ausdruck gibt die Tage an, um die das jeweilige Spiel verschoben werden muss
             $doRepeat1 = "UPDATE ".$prefix."spiele SET datum = datum+(3600*24*".$doRepeatPostponeBy."), simuliert = 0 WHERE ".$invalidMatchesWhere." LIMIT 312";
             mysql_query($doRepeat1) or die(mysql_error());
-            echo addInfoBox('Es wurden insgesamt '.mysql_affected_rows().' Spiele verschoben!');
+            addInfoBox('Es wurden insgesamt '.mysql_affected_rows().' Spiele verschoben!');
         }
     }
     $invalidMatches1 = "SELECT id, team1, team2, typ, datum FROM man_spiele WHERE ".$invalidMatchesWhere." LIMIT 0, 312";

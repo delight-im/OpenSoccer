@@ -60,11 +60,11 @@ if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
 					$sd1 = "UPDATE ".$prefix."supplyDemandPrices SET price = price*1.04 WHERE item = 'Fitness-Trainer'";
 					$sd2 = mysql_query($sd1);
 					// PREIS ERHOEHEN ENDE
-					echo addInfoBox($formulierung);
+					addInfoBox($formulierung);
 				}
 			}
 			else {
-				echo addInfoBox('Deine Mannschaft befindet sich schon im Regenerations-Camp.');
+				addInfoBox('Deine Mannschaft befindet sich schon im Regenerations-Camp.');
 			}
 		}
 	}
@@ -103,10 +103,10 @@ if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
 				$sd1 = "UPDATE ".$prefix."supplyDemandPrices SET price = price*1.06 WHERE item = 'Physiotherapeut'";
 				$sd2 = mysql_query($sd1);
 				// PREIS ERHOEHEN ENDE
-				echo addInfoBox($formulierung);
+				addInfoBox($formulierung);
 			}
 			else {
-				echo addInfoBox('Deine Mannschaft befindet sich schon in Behandlung.');
+				addInfoBox('Deine Mannschaft befindet sich schon in Behandlung.');
 			}
 		}
 	}
@@ -145,10 +145,10 @@ if (isset($_POST['psychologe_behandlung']) && $cookie_id != DEMO_USER_ID) {
 				$sd1 = "UPDATE ".$prefix."supplyDemandPrices SET price = price*1.06 WHERE item = 'Psychologe'";
 				$sd2 = mysql_query($sd1);
 				// PREIS ERHOEHEN ENDE
-				echo addInfoBox($formulierung);
+				addInfoBox($formulierung);
 			}
 			else {
-				echo addInfoBox('Deine Mannschaft wird im Moment schon betreut.');
+				addInfoBox('Deine Mannschaft wird im Moment schon betreut.');
 			}
 		}
 	}

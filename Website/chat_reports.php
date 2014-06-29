@@ -38,10 +38,10 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 			$sql1 = "UPDATE ".$prefix."chatroomReportedUsers SET sperrRelevant = 0 WHERE user = '".$q1."' AND reporter = '".$q2."' AND datum = '".$q3."' LIMIT 1";
 			$sql2 = mysql_query($sql1);
 			if (mysql_affected_rows() == 1) {
-				echo addInfoBox('Die Sperre durch den ausgewählten Report wurde aufgehoben.');
+				addInfoBox('Die Sperre durch den ausgewählten Report wurde aufgehoben.');
 			}
 			else {
-				echo addInfoBox('Es konnte kein Report gefunden werden, dessen Sperre aufgehoben werden soll.');
+				addInfoBox('Es konnte kein Report gefunden werden, dessen Sperre aufgehoben werden soll.');
 			}
 		}
 		echo '<p>';

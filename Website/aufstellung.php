@@ -139,7 +139,7 @@ if ($spieltypAufstellung == 'Liga') {
 	$aufstellung_aktivieren13 = "UPDATE ".$prefix."teams SET aufstellung = ".$aufstellung_holen3['SUM(staerke)']." WHERE ids = '".$cookie_team."'";
 	$aufstellung_aktivieren13 = mysql_query($aufstellung_aktivieren13);
 }
-echo addInfoBox('Aufgestellte Spieler: '.$aufstellung_holen3['COUNT(*)'].'/11, Stärke: '.number_format($aufstellung_holen3['SUM(staerke)'], 1, ',', '.'));
+addInfoBox('Aufgestellte Spieler: '.$aufstellung_holen3['COUNT(*)'].'/11, Stärke: '.number_format($aufstellung_holen3['SUM(staerke)'], 1, ',', '.'));
 ?>
 <?php
 // SPIELER IN ARRAY LESEN ANFANG

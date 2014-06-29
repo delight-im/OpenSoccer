@@ -94,7 +94,7 @@ if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3
 			$sql2 = mysql_query($sql1);
 		}
 		// AUTOR DER ANFRAGE PER POST BENACHRICHTIGEN ENDE
-		echo addInfoBox('Der Status der Anfrage wurde geändert.');
+		addInfoBox('Der Status der Anfrage wurde geändert.');
 	}
 }
 if (isset($_GET['delCom']) && $cookie_id != DEMO_USER_ID) {
@@ -107,10 +107,10 @@ if (isset($_GET['delCom']) && $cookie_id != DEMO_USER_ID) {
 }
 if ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') {
 	if ($sql3['visibilityLevel'] == 1) {
-		echo addInfoBox('Diese Anfrage ist geschützt und nur für das Support-Team sichtbar.');
+		addInfoBox('Diese Anfrage ist geschützt und nur für das Support-Team sichtbar.');
 	}
 	elseif ($sql3['visibilityLevel'] == 2) {
-		echo addInfoBox('Bei dieser Anfrage handelt es sich um einen gelöschten Eintrag.');
+		addInfoBox('Bei dieser Anfrage handelt es sich um einen gelöschten Eintrag.');
 	}
 }
 else {
@@ -125,7 +125,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		echo addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+		addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
 		include 'zz3.php';
 		exit;
 	}

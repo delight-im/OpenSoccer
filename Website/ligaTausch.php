@@ -44,21 +44,21 @@ else {
 		$sql1 = "SELECT a.ids, b.land FROM ".$prefix."teams AS a JOIN ".$prefix."ligen AS b ON a.liga = b.ids WHERE a.name = '".$wishTeam."'";
 		$sql2 = mysql_query($sql1);
 		if (mysql_num_rows($sql2) == 0) {
-			echo addInfoBox('Es konnte kein Team mit dem angegebenen Namen gefunden werden.');
+			addInfoBox('Es konnte kein Team mit dem angegebenen Namen gefunden werden.');
 		}
 		else {
 			$sql3 = mysql_fetch_assoc($sql2);
 			if ($sql3['land'] == $ownLand4) {
-				echo addInfoBox('Du kannst nicht innerhalb des eigenen Landes die Liga tauschen.');
+				addInfoBox('Du kannst nicht innerhalb des eigenen Landes die Liga tauschen.');
 			}
 			else {
 				$sql1 = "INSERT INTO ".$prefix."ligaChangeAnfragen (vonTeam, anTeam, zeit) VALUES ('".$cookie_team."', '".$sql3['ids']."', ".time().")";
 				$sql2 = mysql_query($sql1);
 				if ($sql2 == FALSE) {
-					echo addInfoBox('Du hast diesem Team schon eine Anfrage geschickt. Bitte warte die Entscheidung des Managers ab.');
+					addInfoBox('Du hast diesem Team schon eine Anfrage geschickt. Bitte warte die Entscheidung des Managers ab.');
 				}
 				else {
-					echo addInfoBox('Dem anderen Manager wurde eine Anfrage zugeschickt, die er jetzt annehmen oder ablehnen kann. Bitte informiere ihn darüber per Post.');
+					addInfoBox('Dem anderen Manager wurde eine Anfrage zugeschickt, die er jetzt annehmen oder ablehnen kann. Bitte informiere ihn darüber per Post.');
 				}
 			}
 		}
@@ -143,14 +143,14 @@ else {
                         $sql2 = mysql_query($sql1);
                         $sql1 = "INSERT INTO ".$prefix."ligaChanges (user2, team2, user1, team1, zeit, newLiga1, newLiga2) VALUES ('".$otherManager3['ids']."', '".$newTeam."', '".$cookie_id."', '".$cookie_team."', ".time().", '".mysql_real_escape_string($daten2['liga'])."', '".mysql_real_escape_string($daten1['liga'])."')";
                         $sql2 = mysql_query($sql1);
-                        echo addInfoBox('Die Anfrage wurde angenommen, eure Ligen wurden getauscht.');
+                        addInfoBox('Die Anfrage wurde angenommen, eure Ligen wurden getauscht.');
                         include 'zz3.php';
                         exit;
                     }
 				}
 			}
 			elseif ($_POST['aktion'] == 'Ablehnen') {
-				echo addInfoBox('Die Anfrage wurde abgelehnt.');
+				addInfoBox('Die Anfrage wurde abgelehnt.');
 			}
 		}
 	}

@@ -21,7 +21,7 @@ if (isset($_POST['markedAction']) && $cookie_id != DEMO_USER_ID) {
 		$sql1 = "UPDATE ".$prefix."pn SET gelesen = 1 WHERE an = '".$cookie_id."'";
 		$sql2 = mysql_query($sql1);
 		$_SESSION['last_pn_anzahl'] = 0;
-		echo addInfoBox('Es wurden '.mysql_affected_rows().' Nachrichten als gelesen markiert.');
+		addInfoBox('Es wurden '.mysql_affected_rows().' Nachrichten als gelesen markiert.');
 	}
 	elseif (isset($_POST['auswahl'])) {
 		if (is_array($_POST['auswahl'])) {
@@ -31,7 +31,7 @@ if (isset($_POST['markedAction']) && $cookie_id != DEMO_USER_ID) {
 				$del1 = "DELETE FROM ".$prefix."pn WHERE geloescht_von = 1 AND geloescht_an = 1";
 				mysql_query($del1);
 			}
-			echo addInfoBox('Es wurden '.count($_POST['auswahl']).' Nachrichten aus Deinem Posteingang gelöscht.');
+			addInfoBox('Es wurden '.count($_POST['auswahl']).' Nachrichten aus Deinem Posteingang gelöscht.');
 		}
 	}
 }

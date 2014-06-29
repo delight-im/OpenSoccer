@@ -26,7 +26,7 @@ if (isset($_GET['recall']) && $cookie_id != DEMO_USER_ID) {
 	$recall_team2 = mysql_real_escape_string(trim(strip_tags($_GET['recall'])));
 	$anfa = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$cookie_team."' AND team2 = '".$recall_team2."'";
 	$anfb = mysql_query($anfa);
-	echo addInfoBox('Deine Anfrage wurde zurückgezogen.');
+	addInfoBox('Deine Anfrage wurde zurückgezogen.');
 }
 ?>
 <?php
@@ -48,10 +48,10 @@ if (isset($_POST['wantTests']) && $cookie_id != DEMO_USER_ID) {
 		$up1 = "UPDATE ".$prefix."teams SET wantTests = '".$wantTests."' WHERE ids = '".$cookie_team."'";
 		$up2 = mysql_query($up1);
 		if ($wantTests == 1) {
-			echo addInfoBox('Andere Teams können Dir nun Testspiel-Anfragen senden, die Du hier annehmen oder ablehnen kannst.');
+			addInfoBox('Andere Teams können Dir nun Testspiel-Anfragen senden, die Du hier annehmen oder ablehnen kannst.');
 		}
 		else {
-			echo addInfoBox('Ab sofort bekommst Du keine Testspiel-Anfragen mehr.');
+			addInfoBox('Ab sofort bekommst Du keine Testspiel-Anfragen mehr.');
 		}
 	}
 }

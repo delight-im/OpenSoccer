@@ -30,7 +30,7 @@ if (isset($_GET['archive'])) {
 	if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 		$sql1 = "UPDATE ".$prefix."forum_themen SET datum = 0 WHERE ids = '".$themaToArchive."'";
 		$sql2 = mysql_query($sql1);
-		echo addInfoBox('Das Thema wurde archiviert.');
+		addInfoBox('Das Thema wurde archiviert.');
 	}
 }
 if (isset($_GET['mark'])) {
@@ -38,20 +38,20 @@ if (isset($_GET['mark'])) {
 		$markRead1 = "INSERT IGNORE INTO ".$prefix."forum_gelesen (thema, user) SELECT ids, '".$cookie_id."' AS user FROM ".$prefix."forum_themen WHERE datum > 0";
 		$markRead2 = mysql_query($markRead1);
 		if ($markRead2 == FALSE) {
-			echo addInfoBox('Es konnten nicht alle Themen als gelesen markiert werden (E073).');
+			addInfoBox('Es konnten nicht alle Themen als gelesen markiert werden (E073).');
 		}
 		else {
 			$_SESSION['last_forumneu_anzahl'] = 0;
-			echo addInfoBox('Alle Themen wurden als gelesen markiert.');
+			addInfoBox('Alle Themen wurden als gelesen markiert.');
 		}
 	}
 }
 if (isset($_GET['msg'])) {
 	if ($_GET['msg'] == 'replied') {
-		echo addInfoBox('Danke, Deine Antwort wurde gespeichert.');
+		addInfoBox('Danke, Deine Antwort wurde gespeichert.');
 	}
 	elseif ($_GET['msg'] == 'edited') {
-		echo addInfoBox('Danke, Dein Beitrag wurde geändert.');
+		addInfoBox('Danke, Dein Beitrag wurde geändert.');
 	}
 }
 function time_rel_s($zeitstempel) {

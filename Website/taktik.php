@@ -56,10 +56,10 @@ if (isset($_POST['vorlageLaden']) && $cookie_id != DEMO_USER_ID) {
 	$vorlageLaden4 = "UPDATE ".$prefix."taktiken SET ausrichtung = ".$vL3['ausrichtung'].", geschw_auf = ".$vL3['geschw_auf'].", pass_auf = ".$vL3['pass_auf'].", risk_pass = ".$vL3['risk_pass'].", druck = ".$vL3['druck'].", aggress = ".$vL3['aggress']." WHERE team = '".$cookie_team."' AND spieltyp = '".$spieltypTaktik."'";
 	$vorlageLaden5 = mysql_query($vorlageLaden4);
 	if ($vorlageLaden5 == FALSE) {
-		echo addInfoBox('Die Vorlage konnte nicht geladen werden. Bitte versuche es noch einmal.');
+		addInfoBox('Die Vorlage konnte nicht geladen werden. Bitte versuche es noch einmal.');
 	}
 	else {
-		echo addInfoBox('Die Vorlage &quot;'.$vorlageLaden.'&quot; wurde geladen und als neue Taktik übernommen.');
+		addInfoBox('Die Vorlage &quot;'.$vorlageLaden.'&quot; wurde geladen und als neue Taktik übernommen.');
 	}
 }
 if (isset($_POST['vorlageLoeschen']) && $cookie_id != DEMO_USER_ID) {
@@ -67,10 +67,10 @@ if (isset($_POST['vorlageLoeschen']) && $cookie_id != DEMO_USER_ID) {
 	$vorlageLoeschen1 = "DELETE FROM ".$prefix."taktiken_vorlagen WHERE team = '".$cookie_team."' AND name = '".$vorlageLoeschen."'";
 	$vorlageLoeschen2 = mysql_query($vorlageLoeschen1);
 	if (mysql_affected_rows() == 0) {
-		echo addInfoBox('Die Vorlage konnte nicht gelöscht werden. Bitte versuche es noch einmal.');
+		addInfoBox('Die Vorlage konnte nicht gelöscht werden. Bitte versuche es noch einmal.');
 	}
 	else {
-		echo addInfoBox('Die Vorlage &quot;'.$vorlageLoeschen.'&quot; wurde gelöscht.');
+		addInfoBox('Die Vorlage &quot;'.$vorlageLoeschen.'&quot; wurde gelöscht.');
 	}
 }
 $tue1 = "SELECT ausrichtung, geschw_auf, pass_auf, risk_pass, druck, aggress FROM ".$prefix."taktiken WHERE team = '".$cookie_team."' AND spieltyp = '".$spieltypTaktik."'";
@@ -81,10 +81,10 @@ if (isset($_POST['vorlageSpeichern']) && $cookie_id != DEMO_USER_ID) {
 	$vorlageSpeichern1 = "INSERT INTO ".$prefix."taktiken_vorlagen (team, name, zeit, ausrichtung, geschw_auf, pass_auf, risk_pass, druck, aggress) VALUES ('".$cookie_team."', '".$vorlageSpeichern."', ".time().", ".$tue3['ausrichtung'].", ".$tue3['geschw_auf'].", ".$tue3['pass_auf'].", ".$tue3['risk_pass'].", ".$tue3['druck'].", ".$tue3['aggress'].")";
 	$vorlageSpeichern2 = mysql_query($vorlageSpeichern1);
 	if ($vorlageSpeichern2 == FALSE) {
-		echo addInfoBox('Deine Taktik konnte nicht als Vorlage gespeichert werden. Bitte versuche es noch einmal. Du darfst jeden Namen nur ein Mal benutzen.');
+		addInfoBox('Deine Taktik konnte nicht als Vorlage gespeichert werden. Bitte versuche es noch einmal. Du darfst jeden Namen nur ein Mal benutzen.');
 	}
 	else {
-		echo addInfoBox('Deine Taktik wurde als Vorlage mit dem Namen &quot;'.$vorlageSpeichern.'&quot; gespeichert.');
+		addInfoBox('Deine Taktik wurde als Vorlage mit dem Namen &quot;'.$vorlageSpeichern.'&quot; gespeichert.');
 	}
 }
 ?>

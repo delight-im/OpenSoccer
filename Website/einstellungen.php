@@ -67,7 +67,7 @@ if (isset($_POST['urlaub_abbrechen']) && $cookie_id != DEMO_USER_ID) {
 	if ($_POST['urlaub_abbrechen'] == '1') {
 		$cancelUrlaub1 = "DELETE FROM ".$prefix."urlaub WHERE user = '".$cookie_id."'";
 		$cancelUrlaub2 = mysql_query($cancelUrlaub1);
-		echo addInfoBox('Dein Urlaub wurde abgebrochen. Du hast nun wieder die volle Kontrolle über Dein Team.');
+		addInfoBox('Dein Urlaub wurde abgebrochen. Du hast nun wieder die volle Kontrolle über Dein Team.');
 	}
 }
 if (isset($_POST['pw_alt']) && isset($_POST['pw_neu1']) && isset($_POST['pw_neu2']) && $cookie_id != DEMO_USER_ID) {

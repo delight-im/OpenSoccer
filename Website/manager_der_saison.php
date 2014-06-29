@@ -21,10 +21,10 @@ $sql5 = mysql_query($sql4);
 $sql6 = mysql_result($sql5, 0);
 if ($sql3['regdate'] > $timeout) {
 	$tage_dabei = round((time()-$sql3['regdate'])/86400);
-	echo addInfoBox('Du bist erst '.$tage_dabei.' Tage dabei und deshalb nicht stimmberechtigt.');
+	addInfoBox('Du bist erst '.$tage_dabei.' Tage dabei und deshalb nicht stimmberechtigt.');
 }
 elseif ($sql6 == 1 || $cookie_id == DEMO_USER_ID) {
-	echo addInfoBox('Du hast schon abgestimmt!');
+	addInfoBox('Du hast schon abgestimmt!');
 }
 else {
 ?>
@@ -87,15 +87,15 @@ if (isset($_GET['wahl_id']) && isset($_GET['sec_id'])) {
         $wahl1 = "INSERT INTO ".$prefix."users_mds (manager, voter) VALUES ('".$wahl_id."', '".$cookie_id."')";
         $wahl2 = mysql_query($wahl1);
         if ($wahl2 == FALSE) {
-        	echo addInfoBox('Du hast schon abgestimmt!');
+        	addInfoBox('Du hast schon abgestimmt!');
         }
         else {
-        	echo addInfoBox('Danke, Deine Stimme wurde gezählt!');
+        	addInfoBox('Danke, Deine Stimme wurde gezählt!');
     		$_SESSION['mds_abgestimmt'] = TRUE;
         }
 	}
 	else {
-		echo addInfoBox('Deine Stimme war leider ungültig. Bitte versuche es noch einmal.');
+		addInfoBox('Deine Stimme war leider ungültig. Bitte versuche es noch einmal.');
 	}
 }
 // FILTER ANFANG

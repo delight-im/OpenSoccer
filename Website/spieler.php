@@ -59,7 +59,7 @@ if (isset($_GET['action'])) {
 }
 if (isset($_GET['sellSuccess'])) {
 	$sellPrice = number_format($_GET['sellSuccess'], 0, ',', '.');
-	echo addInfoBox('Du hast den Spieler erfolgreich für '.$sellPrice.' € verkauft.');
+	addInfoBox('Du hast den Spieler erfolgreich für '.$sellPrice.' € verkauft.');
 }
 echo '<p style="text-align:right"><a href="/transfermarkt_watch.php?id='.$sql3['ids'].'" class="pagenava" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')">';
 if ($watch3 == 0) {

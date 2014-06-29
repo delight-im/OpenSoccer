@@ -20,10 +20,10 @@ if (isset($_GET['e']) && isset($_GET['k'])) {
 		$in2 = mysql_query($in1);
 
         $showPasswordResetForm = false;
-		echo addInfoBox(_('Dein neues Passwort wurde aktiviert. Du kannst Dich jetzt damit einloggen.'));
+		addInfoBox(_('Dein neues Passwort wurde aktiviert. Du kannst Dich jetzt damit einloggen.'));
 	}
 	else {
-		echo addInfoBox(_('Das Passwort konnte nicht aktiviert werden. Bitte rufe den Link noch einmal auf oder fordere ein neues Passwort an.'));
+		addInfoBox(_('Das Passwort konnte nicht aktiviert werden. Bitte rufe den Link noch einmal auf oder fordere ein neues Passwort an.'));
 	}
 }
 elseif (isset($_POST['email'])) {
@@ -42,7 +42,7 @@ elseif (isset($_POST['email'])) {
 			$in1 = "INSERT INTO ".$prefix."users_newpw (user, zeit, keywert, newpw) VALUES ('".$user."', '".time()."', '".$key_db."', '".$newpw_db."')";
 			$in2 = mysql_query($in1);
 			if ($in2 == FALSE) {
-				echo addInfoBox(_('Für diese E-Mail-Adresse wurde in den letzten 5 Stunden schon ein Passwort angefordert.'));
+				addInfoBox(_('Für diese E-Mail-Adresse wurde in den letzten 5 Stunden schon ein Passwort angefordert.'));
 			}
 			else {
 				if (isset($_SERVER['REMOTE_ADDR'])) {
@@ -94,12 +94,12 @@ else{
 }
 // E-MAIL VERSENDEN
                 $showPasswordResetForm = false;
-				echo addInfoBox(_('Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren Informationen zu.'));
+				addInfoBox(_('Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren Informationen zu.'));
 			} // if in2 == FALSE
 		}
 	}
 	else {
-		echo addInfoBox(_('Es konnte kein User mit der angegebenen E-Mail-Adresse gefunden werden. Bitte versuche es noch einmal.'));
+		addInfoBox(_('Es konnte kein User mit der angegebenen E-Mail-Adresse gefunden werden. Bitte versuche es noch einmal.'));
 	}
 }
 ?>

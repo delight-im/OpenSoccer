@@ -93,7 +93,7 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 		$stadt = mysql_real_escape_string(trim(strip_tags($_POST['stadt'])));
 		if ((in_array($kuerzel1, $stadiumAffixes) OR in_array($kuerzel2, $stadiumAffixes)) && in_array($stadt, $teamNameParts)) {
 			if ($kuerzel1 != '' && $kuerzel2 != '') {
-				echo addInfoBox('Du darfst nur <i>einen</i> Zusatz für den Namen wählen. Bitte entscheide Dich für einen und versuche es noch einmal.');
+				addInfoBox('Du darfst nur <i>einen</i> Zusatz für den Namen wählen. Bitte entscheide Dich für einen und versuche es noch einmal.');
 			}
 			else {
 				if ($kuerzel2 == '') {
@@ -105,19 +105,19 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 				$sql1 = "UPDATE ".$prefix."stadien SET name = '".$neuerName."', namePrefix = '".$kuerzel1."', namePostfix = '".$kuerzel2."' WHERE team = '".$cookie_team."'";
 				$sql2 = mysql_query($sql1);
 				if ($sql2 == FALSE) {
-					echo addInfoBox('Es ist ein Fehler aufgetreten.');
+					addInfoBox('Es ist ein Fehler aufgetreten.');
 				}
 				else {
-					echo addInfoBox('Dein Stadion heißt jetzt: '.$neuerName);
+					addInfoBox('Dein Stadion heißt jetzt: '.$neuerName);
 				}
 			}
 		}
 		else {
-			echo addInfoBox('Du musst <i>einen</i> Zusatz wählen. Bitte versuche es noch einmal.');
+			addInfoBox('Du musst <i>einen</i> Zusatz wählen. Bitte versuche es noch einmal.');
 		}
 	}
 	else {
-		echo addInfoBox('Du kannst den Namen Deines Stadions nur außerhalb der Spielzeiten ändern. Zurzeit laufen '.$live_scoring_spieltyp_laeuft.'spiele.');
+		addInfoBox('Du kannst den Namen Deines Stadions nur außerhalb der Spielzeiten ändern. Zurzeit laufen '.$live_scoring_spieltyp_laeuft.'spiele.');
 	}
 }
 ?>

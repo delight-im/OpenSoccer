@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Chat | Ballmanager.de</title>
+<title><?php echo _('Chat'); ?> | Ballmanager.de</title>
 <?php if ($loggedin == 1) { ?>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript">
@@ -86,8 +86,8 @@ while (date('w', $chatAbendTime) != 0 OR date('W', $chatAbendTime) % 2 != 0) {
 $timeout = getTimestamp('-1 hour');
 $up1 = "DELETE FROM ".$prefix."chatroom WHERE zeit < ".$timeout;
 $up2 = mysql_query($up1);
-echo '<p><strong>REPORT Username</strong> schreiben, um einen User zu melden (nur bei <a href="/regeln.php">Regelverstoß</a>)<br />';
-echo '<strong>Usernamen anklicken</strong>, um einen User direkt anzusprechen';
+echo '<p><strong>'._('REPORT Username').'</strong> schreiben, um einen User zu melden (nur bei <a href="/regeln.php">Regelverstoß</a>)<br />';
+echo '<strong>'._('Usernamen anklicken').'</strong>, '._('um einen User direkt anzusprechen');
 $timeout = getTimestamp('-120 seconds');
 $whosOn1 = "SELECT ids, username FROM ".$prefix."users WHERE last_chat > ".$timeout;
 $whosOn2 = mysql_query($whosOn1);
@@ -97,8 +97,8 @@ if (mysql_num_rows($whosOn2) > 0) {
 		$whosOnList .= '<a href="/manager.php?id='.$whosOn3['ids'].'">'.$whosOn3['username'].'</a>, ';
 	}
 	$whosOnList = substr($whosOnList, 0, -2);
-	echo '<br /><strong>Chatter:</strong> '.$whosOnList;
-	echo '<br /><strong>Nächster Chat-Abend:</strong> '.date('d.m.Y H:i', $chatAbendTime).' Uhr</p>';
+	echo '<br /><strong>'._('Chatter:').'</strong> '.$whosOnList;
+	echo '<br /><strong>'._('Nächster Chat-Abend:').'</strong> '.date('d.m.Y H:i', $chatAbendTime).' '._('Uhr').'</p>';
 }
 else {
 	echo '</p>';
@@ -116,10 +116,10 @@ echo '<p>
 <form name="chatform" action="" method="post" accept-charset="utf-8">
 <p><input type="text" name="nachricht" id="nachricht" style="width:300px" /> <input type="submit" value="Senden" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> senden(document.chatform.nachricht.value);" /></p>
 </form>
-<div id="nachrichten"><noscript>Bitte aktiviere JavaScript in Deinem Browser, um den Chat nutzen zu können!</noscript></div>
+<div id="nachrichten"><noscript><?php echo _('Bitte aktiviere JavaScript in Deinem Browser, um den Chat nutzen zu können!'); ?></noscript></div>
 <div id="contain"></div>
 <?php } else { ?>
 <h1>Chat</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

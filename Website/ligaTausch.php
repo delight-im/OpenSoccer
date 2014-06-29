@@ -1,20 +1,20 @@
 <?php include 'zz1.php'; ?>
-<title>Liga-Tausch | Ballmanager.de</title>
+<title><?php echo _('Liga-Tausch'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Liga-Tausch</h1>
+<h1><?php echo _('Liga-Tausch'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p style="text-align:right"><a href="/ligaTauschWuensche.php" class="pagenava">Tausch-Wünsche</a></p>
+<p style="text-align:right"><a href="/ligaTauschWuensche.php" class="pagenava"><?php echo _('Tausch-Wünsche'); ?></a></p>
 <?php
 $ownLand1 = "SELECT land FROM ".$prefix."ligen WHERE ids = '".$cookie_liga."'";
 $ownLand2 = mysql_query($ownLand1);
 $ownLand3 = mysql_fetch_assoc($ownLand2);
 $ownLand4 = $ownLand3['land'];
 ?>
-<p style="color:red"><strong>Wichtig: Vor Liga-Tausch erst lesen:</strong></p>
+<p style="color:red"><strong><?php echo _('Wichtig: Vor Liga-Tausch erst lesen:'); ?></strong></p>
 <p>Du möchtest in einer anderen Liga spielen? In <?php echo $ownLand4; ?> hast Du schon alles gewonnen und jetzt möchtest Du in einem anderen Land um den Titel kämpfen? Oder ein anderes Land gefällt Dir einfach besser?</p>
-<p>Dann ist der Liga-Tausch genau das Richtige für Dich! Tausche einfach mit einem anderen Manager die Liga, der gerne in Deiner Liga spielen würde.</p>
-<p>Versendete Anfragen verfallen automatisch nach 24h. Kläre deshalb am besten vorher schon per Post mit dem anderen Manager, ob Interesse an einem Tausch besteht.</p>
-<p>Wenn beide Manager einem Tausch zustimmen, dann werden die Namen der Teams getauscht und Du spielst alle Wettbewerbe (Liga, Pokal, Cup und Test) für das andere Team zu Ende. Der Rest (Spieler, Konto, Titel usw.) bleibt gleich. Beachte also, dass Testspiele, die Du eventuell schon vereinbart hast, nicht zum neuen Verein mitgenommen werden.</p>
+<p><?php echo _('Dann ist der Liga-Tausch genau das Richtige für Dich! Tausche einfach mit einem anderen Manager die Liga, der gerne in Deiner Liga spielen würde.'); ?></p>
+<p><?php echo _('Versendete Anfragen verfallen automatisch nach 24h. Kläre deshalb am besten vorher schon per Post mit dem anderen Manager, ob Interesse an einem Tausch besteht.'); ?></p>
+<p><?php echo _('Wenn beide Manager einem Tausch zustimmen, dann werden die Namen der Teams getauscht und Du spielst alle Wettbewerbe (Liga, Pokal, Cup und Test) für das andere Team zu Ende. Der Rest (Spieler, Konto, Titel usw.) bleibt gleich. Beachte also, dass Testspiele, die Du eventuell schon vereinbart hast, nicht zum neuen Verein mitgenommen werden.'); ?></p>
 <?php
 $sperre1 = "SELECT MAX(zeit) FROM ".$prefix."ligaChanges WHERE team1 = '".$cookie_team."'";
 $sperre2 = mysql_query($sperre1);
@@ -26,7 +26,7 @@ if ($daysToWait > 0) {
 	exit;
 }
 elseif ($cookie_spieltag > 5) {
-	echo '<p><strong>Der Verband erlaubt einen Liga-Tausch nur an den ersten fünf Spieltagen. Bitte warte bis zur nächsten Saison.</strong></p>';
+	echo '<p><strong>'._('Der Verband erlaubt einen Liga-Tausch nur an den ersten fünf Spieltagen. Bitte warte bis zur nächsten Saison.').'</strong></p>';
 	include 'zz3.php';
 	exit;
 }
@@ -176,13 +176,13 @@ else {
 		echo '</tbody></table></p>';
 	}
 	?>
-	<h1>Anfrage versenden</h1>
-	<p>Falls Du wirklich die Liga tauschen möchtest, gib bitte hier den Namen des Teams an, mit dem Du tauschen willst. Unbeantwortete Anfragen verfallen nach 24 Stunden.</p>
+	<h1><?php echo _('Anfrage versenden'); ?></h1>
+	<p><?php echo _('Falls Du wirklich die Liga tauschen möchtest, gib bitte hier den Namen des Teams an, mit dem Du tauschen willst. Unbeantwortete Anfragen verfallen nach 24 Stunden.'); ?></p>
 	<form action="/ligaTausch.php" method="post" accept-charset="utf-8">
-	<p><strong>Teamname:</strong><br /><input type="text" name="wishTeam" style="width:200px" /></p>
+	<p><strong><?php echo _('Teamname:'); ?></strong><br /><input type="text" name="wishTeam" style="width:200px" /></p>
 	<p><input type="submit" value="Anfragen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?');" /></p>
 	</form>
-	<h1>Versendete Anfragen</h1>
+	<h1><?php echo _('Versendete Anfragen'); ?></h1>
 	<?php
 	$sql1 = "SELECT a.anTeam, a.zeit, b.name FROM ".$prefix."ligaChangeAnfragen AS a JOIN ".$prefix."teams AS b ON a.anTeam = b.ids WHERE a.vonTeam = '".$cookie_team."'";
 	$sql2 = mysql_query($sql1);
@@ -190,7 +190,7 @@ else {
 		echo '<p>Zurzeit keine Anfragen</p>';
 	}
 	else {
-		echo '<p><table><thead><tr class="odd"><th scope="col">Team</th><th scope="col">Datum</th><th scope="col">Verfällt</th></tr></thead><tbody>';
+		echo '<p><table><thead><tr class="odd"><th scope="col">'._('Team').'</th><th scope="col">'._('Datum').'</th><th scope="col">'._('Verfällt').'</th></tr></thead><tbody>';
 		$counter = 0;
 		while ($sql3 = mysql_fetch_assoc($sql2)) {
 			echo '<tr class="odd">';
@@ -205,6 +205,6 @@ else {
 }
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

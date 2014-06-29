@@ -139,7 +139,7 @@ function kommentar($ersetzung, $typ) {
 		_('Der Spieler lässt seinen Gegner stehen.'),
 		_('Der Spieler tunnelt seinen Gegner.'),
 		_('Dribbling über den halben Platz.'),
-		_('Der Ballführende vernascht '.mt_rand(2, 3).' Abwehrspieler.'),
+		'Der Ballführende vernascht '.mt_rand(2, 3).' Abwehrspieler.',
 		_('Steilpass auf den rechten Flügel.'),
 		_('Den Kollegen mustergültig freigespielt.'),
 		_('Traumpass auf den linken Flügelspieler.'),
@@ -166,16 +166,16 @@ function kommentar($ersetzung, $typ) {
 		_('Der Angreifer legt für seinen Mitspieler zurück.')
     );
 	$formulierungen['yellow'] = array(
-		_('<span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.'),
-		_('Der Schiedsrichter zeigt <span style="padding:2px;background-color:#ff0;">Gelb</span>.'),
-		_('Der Referee zückt die <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.'),
-		_('XYZ erhält eine <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.'),
-		_('XYZ kassiert eine <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.'),
-		_('Der Spieler von XYZ sieht <span style="padding:2px;background-color:#ff0;">Gelb</span>.'),
-		_('Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#ff0;">Gelb</span>!'),
-		_('Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#ff0;">Verwarnung</span>!'),
-		_('Der Spieler von XYZ holt sich die <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> ab.'),
-		_('Klare <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.')
+		'<span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.',
+		'Der Schiedsrichter zeigt <span style="padding:2px;background-color:#ff0;">Gelb</span>.',
+		'Der Referee zückt die <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.',
+		'XYZ erhält eine <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.',
+		'XYZ kassiert eine <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span>.',
+		'Der Spieler von XYZ sieht <span style="padding:2px;background-color:#ff0;">Gelb</span>.',
+		'Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#ff0;">Gelb</span>!',
+		'Der Schiedsrichter zögert nicht lange: <span style="padding:2px;background-color:#ff0;">Verwarnung</span>!',
+		'Der Spieler von XYZ holt sich die <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> ab.',
+		'Klare <span style="padding:2px;background-color:#ff0;">Gelbe Karte</span> für XYZ.'
     );
 	$formulierungen['red'] = array(
 		'<span style="padding:2px;background-color:#f00;color:#fff;">Platzverweis</span> für XYZ!',
@@ -765,21 +765,21 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 		$stadiumPreposition = 'im';
 	}
 	if ($watcher4 >= 90000) {
-		$spielbericht .= '<p>'._('Knapp 100.000 Zuschauer hier ').''.$stadiumPreposition.' '.$stadiumName.'!</p>';
+        $spielbericht .= '<p>Knapp 100.000 Zuschauer hier '.$stadiumPreposition.' '.$stadiumName.'!</p>';
 	}
 	elseif ($watcher4 >= 70000) {
-		$spielbericht .= '<p>'._('Eine super Stimmung ').''.$stadiumPreposition.' '.$stadiumName.'!</p>';
+        $spielbericht .= '<p>Eine super Stimmung '.$stadiumPreposition.' '.$stadiumName.'!</p>';
 	}
 	elseif ($watcher4 >= 50000) {
-		$spielbericht .= '<p>'._('Gute Stimmung hier ').''.$stadiumPreposition.' '.$stadiumName.'!</p>';
+        $spielbericht .= '<p>Gute Stimmung hier '.$stadiumPreposition.' '.$stadiumName.'!</p>';
 	}
 	elseif ($watcher4 >= 30000) {
-		$spielbericht .= '<p>'._('Die Fans freuen sich auf das Spiel ').''.$stadiumPreposition.' '.$stadiumName.'!</p>';
+        $spielbericht .= '<p>Die Fans freuen sich auf das Spiel '.$stadiumPreposition.' '.$stadiumName.'!</p>';
 	}
 	else {
-		$spielbericht .= '<p>'._('Es sind nicht viele Zuschauer hier ').''.$stadiumPreposition.' '.$stadiumName.'!</p>';
+        $spielbericht .= '<p>Es sind nicht viele Zuschauer hier '.$stadiumPreposition.' '.$stadiumName.'!</p>';
 	}
-	$spielbericht .= '<p>'._('Ticketpreis: ').''.$watcher3['preis'].' €</p>';
+	$spielbericht .= '<p>'._('Ticketpreis:').' '.$watcher3['preis'].' €</p>';
     // ZUSCHAUER ENDE
     $sponsor_einkommen1 = $daten_team1['sponsor_a'];
     $sponsor_einkommen2 = $daten_team2['sponsor_a'];
@@ -1122,7 +1122,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
                 $tore[$sql3['team1']]++;
             }
             $resultat = $tore[$sql3['team1']].':'.$tore[$sql3['team2']];
-            $spielbericht .= '<p>'._('Es konnte nach beiden Partien kein Sieger ermittelt werden. Deshalb hat das Los entschieden und das Spiel wurde mit').' '.$resultat.' '.('gewertet.').'</p>';
+            $spielbericht .= '<p>Es konnte nach beiden Partien kein Sieger ermittelt werden. Deshalb hat das Los entschieden und das Spiel wurde mit '.$resultat.' gewertet.</p>';
         }
     }
     // AUSWAERTSTORREGEL FALLS KAMPFLOS ENDE

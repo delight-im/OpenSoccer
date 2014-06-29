@@ -23,7 +23,7 @@ if ($cookie_teamname == $showTeamName) { // if the name of one's own club is to 
 	echo '<h1>'._('Namensänderung').'</h1>';
 }
 else { // if the name of another user's club is to be changed by the support staff
-	echo '<h1>'._('Namensänderung für ').''.htmlspecialchars($showTeamName).'</h1>';
+    echo '<h1>Namensänderung für '.htmlspecialchars($showTeamName).'</h1>';
 }
 
 // CHECK IF USER IS ALLOWED TO CHANGE TEAM NAME AGAIN BEGIN
@@ -56,7 +56,7 @@ if ($letzteAenderungVor < $changeLockDuration) { // check time limit for team na
 
 ?>
 <p><?php echo _('Auf dieser Seite kannst Du den Namen Deines Vereins ändern. Du kannst den Namen einer Stadt und einen beliebigen Zusatz aus der Liste wählen, der vor oder nach dem Städtenamen stehen kann.'); ?></p>
-<p><?php echo _('Hier fehlt ein Städtename, den Du gerne dabei hättest? Dann').' <a href="/post_schreiben.php?id=c4ca4238a0b923820dcc509a6f75849b">').'sag uns Bescheid</a>, vielleicht kommt er dann dazu!'); ?></p>
+<p>Hier fehlt ein Städtename, den Du gerne dabei hättest? Dann <a href="/post_schreiben.php?id=c4ca4238a0b923820dcc509a6f75849b">sag uns Bescheid</a>, vielleicht kommt er dann dazu!</p>
 <p><strong><?php echo _('Hinweis:').'</strong> '._('Du kannst den Namen Deines Klubs nur alle 30 Tage ändern.'); ?></p>
 <?php
 if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != DEMO_USER_ID) {
@@ -164,7 +164,7 @@ foreach ($kuerzelListe as $kuerzel) {
 </form>
 <?php } ?>
 <?php } else { ?>
-<h1><?php echo _('Namensänderung');</h1>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!');</p>
+<h1><?php echo _('Namensänderung'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

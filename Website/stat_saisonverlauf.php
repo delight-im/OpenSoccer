@@ -1,10 +1,10 @@
 <?php include 'zz1.php'; ?>
-<title>Saisonverlauf | Ballmanager.de</title>
+<title><?php echo _('Saisonverlauf'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Saisonverlauf</h1>
-<p>Dieses Liniendiagramm zeigt die Entwicklung Deines Tabellenplatzes in der aktuellen Saison. Hinweis: Die Daten können erst nach zwei Spielen angezeigt werden.</p>
+<h1><?php echo _('Saisonverlauf'); ?></h1>
+<p><?php echo _('Dieses Liniendiagramm zeigt die Entwicklung Deines Tabellenplatzes in der aktuellen Saison. Hinweis: Die Daten können erst nach zwei Spielen angezeigt werden.'); ?></p>
 <p>
 <?php
 $torj1 = "SELECT spieltag, platz FROM ".$prefix."geschichte_tabellen WHERE liga = '".$cookie_liga."' AND saison = ".$cookie_saison." AND team = '".$cookie_teamname."' ORDER BY spieltag ASC";
@@ -33,16 +33,16 @@ if (mysql_num_rows($torj2) >= 2) {
 		echo' alt="" />';
 	}
 	else {
-		echo 'Noch keine Daten verfügbar!';
+		echo _('Noch keine Daten verfügbar!');
 	}
 }
 else {
-	echo 'Noch keine Daten verfügbar!';
+	echo _('Noch keine Daten verfügbar!');
 }
 ?>
 </p>
 <?php } else { ?>
-<h1>Saisonverlauf</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Saisonverlauf'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

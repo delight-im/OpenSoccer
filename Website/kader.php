@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Kader | Ballmanager.de</title>
+<title><?php echo _('Kader'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .verletzt td {
@@ -54,13 +54,13 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">MT</th>
-<th scope="col">TS</th>
-<th scope="col">Name</th>
-<th scope="col">AL</th>
-<th scope="col">Stärke</th>
-<th scope="col">PS</th>
-<th scope="col">MW</th>
+<th scope="col"><?php echo _('MT'); ?></th>
+<th scope="col"><?php echo _('TS'); ?></th>
+<th scope="col"><?php echo _('Name'); ?></th>
+<th scope="col"><?php echo _('AL'); ?></th>
+<th scope="col"><?php echo _('Stärke'); ?></th>
+<th scope="col"><?php echo _('PS'); ?></th>
+<th scope="col"><?php echo _('MW'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -151,28 +151,28 @@ echo '<tr class="odd"><td colspan="8">Team-Marktwert: '.number_format($gMarktwer
 </table>
 </p>
 <p><select name="farbe" size="1" style="width:200px">
-	<option>Keine</option>
-	<option>Aqua</option>
-	<option>Blau</option>
-	<option>Gelb</option>
-	<option>Lila</option>
-	<option>Oliv</option>
-	<option>Pink</option>
-	<option>Rot</option>
-	<option>Silber</option>
-	<option value="Gruen">Grün</option>
+	<option><?php echo _('Keine'); ?></option>
+	<option><?php echo _('Aqua'); ?></option>
+	<option><?php echo _('Blau'); ?></option>
+	<option><?php echo _('Gelb'); ?></option>
+	<option><?php echo _('Lila'); ?></option>
+	<option><?php echo _('Oliv'); ?></option>
+	<option><?php echo _('Pink'); ?></option>
+	<option><?php echo _('Rot'); ?></option>
+	<option><?php echo _('Silber'); ?></option>
+	<option value="Gruen"><?php echo _('Grün'); ?></option>
 </select> <input type="submit" value="Ausgewählte Spieler markieren"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
-<p><strong>Überschriften:</strong> MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, PS: Pflichtspiele (Tore), MW: Marktwert in Millionen Euro</p>
-<p><strong>Mannschaftsteile:</strong> T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm</p>
-<p><strong>Durchgestrichen:</strong> verletzte oder gesperrte Spieler</p>
-<h1 id="besetzung">Besetzung des Kaders</h1>
+<p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, PS: Pflichtspiele (Tore), MW: Marktwert in Millionen Euro'); ?></p>
+<p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
+<p><strong><?php echo _('Durchgestrichen:').'</strong> '._('verletzte oder gesperrte Spieler'); ?></p>
+<h1 id="besetzung"><?php echo _('Besetzung des Kaders'); ?></h1>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Position</th>
-<th scope="col">Besetzung</th>
-<th scope="col">Spieler</th>
+<th scope="col"><?php echo _('Position'); ?></th>
+<th scope="col"><?php echo _('Besetzung'); ?></th>
+<th scope="col"><?php echo _('Spieler'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -239,6 +239,6 @@ echo '</form>';
 // FESTLEGEN WAS GESUCHT WERDEN SOLL ENDE
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!');</p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

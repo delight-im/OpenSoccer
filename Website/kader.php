@@ -49,7 +49,6 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 // SPIELER-MARKIERUNGEN ENDE
 ?>
 <form action="/kader.php" method="post" accept-charset="utf-8">
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -149,17 +148,16 @@ echo '<tr class="odd"><td colspan="8">Team-Marktwert: '.number_format($gMarktwer
 ?>
 </tbody>
 </table>
-</p>
 <p><select name="farbe" size="1" style="width:200px">
-	<option><?php echo _('Keine'); ?></option>
-	<option><?php echo _('Aqua'); ?></option>
-	<option><?php echo _('Blau'); ?></option>
-	<option><?php echo _('Gelb'); ?></option>
-	<option><?php echo _('Lila'); ?></option>
-	<option><?php echo _('Oliv'); ?></option>
-	<option><?php echo _('Pink'); ?></option>
-	<option><?php echo _('Rot'); ?></option>
-	<option><?php echo _('Silber'); ?></option>
+	<option value="Keine"><?php echo _('Keine'); ?></option>
+	<option value="Aqua"><?php echo _('Aqua'); ?></option>
+	<option value="Blau"><?php echo _('Blau'); ?></option>
+	<option value="Gelb"><?php echo _('Gelb'); ?></option>
+	<option value="Lila"><?php echo _('Lila'); ?></option>
+	<option value="Oliv"><?php echo _('Oliv'); ?></option>
+	<option value="Pink"><?php echo _('Pink'); ?></option>
+	<option value="Rot"><?php echo _('Rot'); ?></option>
+	<option value="Silber"><?php echo _('Silber'); ?></option>
 	<option value="Gruen"><?php echo _('Grün'); ?></option>
 </select> <input type="submit" value="Ausgewählte Spieler markieren"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
@@ -239,6 +237,6 @@ echo '</form>';
 // FESTLEGEN WAS GESUCHT WERDEN SOLL ENDE
 ?>
 <?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!');</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

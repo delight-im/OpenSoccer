@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Aufstellung | Ballmanager.de</title>
+<title><?php echo _('Aufstellung'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 <?php if (isMobile()) { ?>
@@ -257,15 +257,15 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 </form>
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
 <p><select name="farbeAufstellen" size="1" style="width:200px">
-	<option>Aqua</option>
-	<option>Blau</option>
-	<option>Gelb</option>
-	<option>Lila</option>
-	<option>Oliv</option>
-	<option>Pink</option>
-	<option>Rot</option>
-	<option>Silber</option>
-	<option value="Gruen">Grün</option>
+	<option><?php echo _('Aqua'); ?></option>
+	<option><?php echo _('Blau'); ?></option>
+	<option><?php echo _('Gelb'); ?></option>
+	<option><?php echo _('Lila'); ?></option>
+	<option><?php echo _('Oliv'); ?></option>
+	<option><?php echo _('Pink'); ?></option>
+	<option><?php echo _('Rot'); ?></option>
+	<option><?php echo _('Silber'); ?></option>
+	<option value="Gruen"><?php echo _('Grün'); ?></option>
 </select> <input type="submit" value="Farbe aufstellen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
 </form>
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
@@ -285,12 +285,12 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">MT</th>
-<th scope="col">Name</th>
-<th scope="col">AL</th>
-<th scope="col">Stärke</th>
-<th scope="col">FR</th>
-<th scope="col">MO</th>
+<th scope="col"><?php echo _('MT'); ?></th>
+<th scope="col"><?php echo _('Name'); ?></th>
+<th scope="col"><?php echo _('AL'); ?></th>
+<th scope="col"><?php echo _('Stärke'); ?></th>
+<th scope="col"><?php echo _('FR'); ?></th>
+<th scope="col"><?php echo _('MO'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -339,12 +339,12 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </tbody>
 </table>
 </p>
-<p><strong>Überschriften:</strong> SE: Startelf, MT: Mannschaftsteil, AL: Alter, FR: Frische, MO: Moral</p>
-<p><strong>Mannschaftsteile:</strong> T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm</p>
-<p><strong>Fettdruck:</strong> Aufgestellte Spieler</p>
-<p><strong>Rote Schrift:</strong> verletzte oder gesperrte Spieler</p>
+<p><strong><?php echo _('Überschriften:').'</strong> '._('SE: Startelf, MT: Mannschaftsteil, AL: Alter, FR: Frische, MO: Moral'); ?></p>
+<p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
+<p><strong><?php echo _('Fettdruck:').'</strong> '._('Aufgestellte Spieler'); ?></p>
+<p><strong><?php echo _('Rote Schrift:').'</strong> '._('verletzte oder gesperrte Spieler'); ?></p>
 <?php } ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -48,7 +48,7 @@ if (isset($_POST['laufzeit']) && isset($_POST['spieler'])) {
 			$getmanager2 = mysql_query($getmanager1);
 			$getmanager3 = mysql_fetch_assoc($getmanager2);
 			$getmanager4 = $getmanager3['vorname'].' '.$getmanager3['nachname'];
-			$formulierung = 'Du hast den Vertrag mit <a href="/spieler.php?id='.$spieler_id.'">'.$getmanager4.'</a> auf '.$laufzeit.' Tage verlängert.';
+			$formulierung = _('Du hast den Vertrag mit').' <a href="/spieler.php?id='.$spieler_id.'">'.$getmanager4.'</a> '._('auf').' '.$laufzeit.' '.('Tage verlängert.');
 			$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Finanzen', '".time()."')";
 			$sql8 = mysql_query($sql7);
 			// PROTOKOLL ENDE
@@ -75,9 +75,9 @@ if ($sql3['marktwert'] == 0) { exit; }
 if ($sql3['leiher'] != 'keiner') { exit; }
 $prozentstufen = prozentstufen(round($sql3['wiealt']/365));
 ?>
-<title>Vertrag verlängern: <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
+<title><?php echo _('Vertrag verlängern:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Vertrag verlängern: <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
+<h1><?php echo _('Vertrag verlängern:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
 <?php if ($loggedin == 1) { ?>
 <form action="/vertrag_verlaengern.php" method="post" accept-charset="utf-8" class="imtext">
 <?php
@@ -125,10 +125,10 @@ if ($sql3['vertrag'] < getTimestamp('+66 days') && (($sql3['wiealt']+16.5909091*
 </form>
 <?php } else { ?>
 </form>
-<p>Der Spieler <?php echo '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>'; ?> möchte seinen Vertrag zurzeit nicht verlängern und hat Dir deshalb kein Angebot gemacht. Vielleicht ist er unzufrieden in Deinem Team. Achte auf seine Moral!</p>
-<p><a href="/vertraege.php">Zurück zur Vertragsübersicht</a><br /><?php echo '<a href="/spieler.php?id='.$sql3['ids'].'">Zurück zum Spielerprofil</a>'; ?></p>
+<p><?php echo _('Der Spieler'); ?> <?php echo '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>'; ?> <?php echo _('möchte seinen Vertrag zurzeit nicht verlängern und hat Dir deshalb kein Angebot gemacht. Vielleicht ist er unzufrieden in Deinem Team. Achte auf seine Moral!'); ?></p>
+<p><a href="/vertraege.php"><?php echo _('Zurück zur Vertragsübersicht'); ?></a><br /><?php echo '<a href="/spieler.php?id='.$sql3['ids'].'"><?php echo _('Zurück zum Spielerprofil'); ?></a>'; ?></p>
 <?php } ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

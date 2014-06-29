@@ -1,8 +1,8 @@
 <?php include 'zz1.php'; ?>
-<title>Nationaler Cup | Ballmanager.de</title>
+<title><?php echo _('Nationaler Cup'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Land wählen</h1>
+<h1><?php echo _('Land wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="land" size="1" style="width:200px">
     <?php
@@ -32,9 +32,9 @@
 </select>
 <input type="submit" value="Auswählen" /></p>
 </form>
-<h1>Nationaler Cup</h1>
-<p>Für diesen Wettbewerb qualifizieren sich die 32 besten Teams aus <?php echo $temp_land; ?>, 16 davon durch ein Freilos. Von Liga 1 bis 4 - jeder hat die Chance auf den Cup-Sieg.</p>
-<p>Es gibt eine Qualifikation und danach fünf Runden, die jeweils ausgelost werden. In einem KO-Spiel pro Runde ermitteln die Teams den Sieger, der dann die nächste Runde erreicht.</p>
+<h1><?php echo _('Nationaler Cup'); ?></h1>
+<p><?php echo _('Für diesen Wettbewerb qualifizieren sich die 32 besten Teams aus').' '; ?> <?php echo $temp_land; ?>, <?php echo _('16 davon durch ein Freilos. Von Liga 1 bis 4 - jeder hat die Chance auf den Cup-Sieg.'); ?></p>
+<p><?php echo _('Es gibt eine Qualifikation und danach fünf Runden, die jeweils ausgelost werden. In einem KO-Spiel pro Runde ermitteln die Teams den Sieger, der dann die nächste Runde erreicht.'); ?></p>
 <?php
 $temp = FALSE;
 $tmp_dateiname = 'cache/cup_ergebnisse'.urlencode($temp_land).'.html';
@@ -116,7 +116,7 @@ for ($i = 1; $i <= 6; $i++) {
 	$spielliste = $spiels['value'];
 	if (count($spielliste) == 0) { continue; }
 	$tmp_liga_cache .= '<h1>'.$spiels['key'].'</h1>';
-	$tmp_liga_cache .= '<p><table><thead><tr class="odd"><th scope="col">Team 1</th><th scope="col">Team 2</th><th scope="col">&nbsp;</th></tr></thead><tbody>';
+	$tmp_liga_cache .= '<p><table><thead><tr class="odd"><th scope="col">'._('Team 1').'</th><th scope="col">'._('Team 2').'</th><th scope="col">&nbsp;</th></tr></thead><tbody>';
 	foreach ($spielliste as $spiel) {
 		$tmp_liga_cache .= '<tr><td>['.substr((isset($ligaID2ligaName[$team2liga[$spiel['team1']]]) ? $ligaID2ligaName[$team2liga[$spiel['team1']]] : ' '), -1).'] <a href="/team.php?id='.$team_ids[$spiel['team1']].'">'.$spiel['team1'].'</a></td><td>['.substr((isset($ligaID2ligaName[$team2liga[$spiel['team2']]]) ? $ligaID2ligaName[$team2liga[$spiel['team2']]] : ' '), -1).'] <a href="/team.php?id='.$team_ids[$spiel['team2']].'">'.$spiel['team2'].'</a></td><td>'.$spiel['ergebnis'].'</td></tr>';
 	}
@@ -131,9 +131,9 @@ $ersatz_temp = '<strong>'.$cookie_teamname.'</strong>';
 echo str_replace($cookie_teamname, $ersatz_temp, $tmp_liga_cache);
 }
 ?>
-<p><strong>Hinweis:</strong> Die Zahlen in den eckigen Klammern geben die Liga des jeweiligen Teams an.</p>
+<p><strong><?php echo _('Hinweis:'); ?></strong> <?php echo _('Die Zahlen in den eckigen Klammern geben die Liga des jeweiligen Teams an.'); ?></p>
 <?php } else { ?>
-<h1>Cup</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Cup'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

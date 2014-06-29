@@ -276,7 +276,6 @@ if ($sql3['typ'] == 'Liga') {
 }
 // HIN-RUCKRUNDEN-ERGEBNIS ENDE
 ?>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -287,7 +286,7 @@ if ($sql3['typ'] == 'Liga') {
 <tbody>
 <tr><td><?php echo _('Begegnung'); ?></td><td><?php echo '<a href="/team.php?id='.$tid1.'">'.$sql3['team1'].'</a>'; ?> - <?php echo '<a href="/team.php?id='.$tid2.'">'.$sql3['team2'].'</a>'; ?></td></tr>
 <tr class="odd"><td><?php echo _('Ergebnis'); ?></td><td><?php if ($live_scoring_meldung != '') { echo $spielstand.' ('.$live_scoring_meldung.')'; } else { echo $sql3['ergebnis'].$hinrueckStr; } ?></td></tr>
-<tr><td><?php echo _('Datum'); ?></td><td><?php echo date('d.m.Y H:i', $sql3['datum']-3600); ?> <?php echo _('Uhr'); ?></td></tr>
+<tr><td><?php echo _('Datum'); ?></td><td><?php echo date('d.m.Y H:i', $sql3['datum']-3600); ?></td></tr>
 <tr class="odd"><td><?php echo _('Wettbewerb'); ?></td><td><?php echo $sql3['typ']; ?></td></tr>
 <tr><td><?php echo _('Zuschauer'); ?></td><td><?php echo number_format($sql3['zuschauer'], 0, ',', '.'); ?></td></tr>
 <?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td><?php echo _('Tore (Heim)'); ?></td><td><?php echo $torschuetzen1; ?></td></tr><?php } ?>
@@ -302,7 +301,6 @@ if ($sql3['typ'] == 'Liga') {
 <?php if ($live_scoring_meldung == '') { ?><tr><td><?php echo _('Rot (Auswärts)'); ?></td><td><?php echo $rot2; ?></td></tr><?php } ?>
 </tbody>
 </table>
-</p>
 <?php
 $abstand_spiel_heute = time()-$sql3['datum'];
 if ($abstand_spiel_heute > -3600) { // wenn das Spiel ueberhaupt schon war dann Kommentare zeigen

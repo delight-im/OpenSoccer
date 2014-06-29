@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Internationaler Pokal | Ballmanager.de</title>
+<title><?php echo _('Internationaler'); ?> Pokal | Ballmanager.de</title>
 <?php
 // LAENDER HOLEN ANFANG
 $ld1 = "SELECT ids, name FROM ".$prefix."ligen";
@@ -63,9 +63,9 @@ if (isset($_POST['nachricht']) && $cookie_id != DEMO_USER_ID) {
 	$sql2 = mysql_query($sql1);
 }
 ?>
-<h1>Internationaler Pokal</h1>
-<p>Für diesen Wettbewerb qualifizieren sich die 32 besten Teams des Spiels. Das sind alle Erstplatzierten, alle Zweitplatzierten und dazu die sechs besten Drittplatzierten.</p>
-<p>Es gibt fünf Runden, die jeweils ausgelost werden. In einem Hin- und einem Rückspiel mit Auswärtstorregel ermitteln die Teams den Sieger, der dann die nächste Runde erreicht.</p>
+<h1><?php echo _('Internationaler Pokal'); ?></h1>
+<p><?php echo _('Für diesen Wettbewerb qualifizieren sich die 32 besten Teams des Spiels. Das sind alle Erstplatzierten, alle Zweitplatzierten und dazu die sechs besten Drittplatzierten.'); ?></p>
+<p><?php echo _('Es gibt fünf Runden, die jeweils ausgelost werden. In einem Hin- und einem Rückspiel mit Auswärtstorregel ermitteln die Teams den Sieger, der dann die nächste Runde erreicht.'); ?></p>
 <?php
 $temp = FALSE;
 $tmp_dateiname = 'cache/pokal_ergebnisse.html';
@@ -77,11 +77,11 @@ if (file_exists($tmp_dateiname)) {
 			echo str_replace($cookie_teamname, $ersatz_temp, $tmp_liga_cache);
             $temp = TRUE;
 			?>
-<h1>Deine Nachricht</h1>
+<h1><?php echo _('Deine Nachricht'); ?></h1>
 <form action="/pokal.php" method="post" accept-charset="utf-8">
 <p><input type="text" name="nachricht" style="width:80%" /> <input type="submit" value="Eintragen"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
-<h1>Manager-Talk</h1>
+<h1><?php echo _('Manager-Talk'); ?></h1>
 <?php
 if (isset($_GET['delEntry']) && $cookie_id != DEMO_USER_ID) {
 	$delEntry = mysql_real_escape_string(trim(strip_tags($_GET['delEntry'])));
@@ -193,7 +193,7 @@ for ($i = 1; $i <= 6; $i++) {
 		$tmp_liga_cache .= '<tr class="land_'.$laender[$team_ids[$spiel['team1']][1]].' land_'.$laender[$team_ids[$spiel['team2']][1]].'"><td class="link"><a href="/team.php?id='.$team_ids[$spiel['team1']][0].'">'.$spiel['team1'].'</a></td><td><img src="/images/flaggen/'.$laender[$team_ids[$spiel['team1']][1]].'.png" alt="" /></td><td class="link"><a href="/team.php?id='.$team_ids[$spiel['team2']][0].'">'.$spiel['team2'].'</a></td><td><img src="/images/flaggen/'.$laender[$team_ids[$spiel['team2']][1]].'.png" alt="" /></td><td class="link">'.$spiel['ergebnis1'].'</td><td class="link">'.$spiel['ergebnis2'].'</td></tr>';
 	}
 	$tmp_liga_cache .= '</tbody></table></p>';
-	$tmp_liga_cache .= '<p><strong>Hinweis:</strong> Spiele mit Beteiligung aus dem eigenen Land werden grau hinterlegt.</p>';
+	$tmp_liga_cache .= '<p><strong>Hinweis:</strong> Spiele mit Beteiligung aus dem eigenen Land werden grau hinterlegt.').'</p>';
 }
 ?>
 <?php
@@ -215,11 +215,11 @@ $ersatz_temp = '<strong>'.$cookie_teamname.'</strong>';
 echo str_replace($cookie_teamname, $ersatz_temp, $tmp_liga_cache);
 }
 ?>
-<h1>Deine Nachricht</h1>
+<h1><?php echo _('Deine Nachricht'); ?></h1>
 <form action="/pokal.php" method="post" accept-charset="utf-8">
 <p><input type="text" name="nachricht" style="width:80%" /> <input type="submit" value="Eintragen"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
-<h1>Manager-Talk</h1>
+<h1><?php echo _('Manager-Talk'); ?></h1>
 <?php
 if (isset($_GET['delEntry'])) {
 	$delEntry = mysql_real_escape_string(trim(strip_tags($_GET['delEntry'])));
@@ -239,7 +239,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 }
 ?>
 <?php } else { ?>
-<h1>Pokal</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Pokal'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

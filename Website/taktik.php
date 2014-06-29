@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo ('Taktik'); ?> | Ballmanager.de</title>
+<title><?php echo _('Taktik'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 select { width: 200px; }

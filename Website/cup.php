@@ -33,7 +33,7 @@
 <input type="submit" value="Auswählen" /></p>
 </form>
 <h1><?php echo _('Nationaler Cup'); ?></h1>
-<p><?php echo _('Für diesen Wettbewerb qualifizieren sich die 32 besten Teams aus').' '; ?> <?php echo $temp_land; ?>, <?php echo _('16 davon durch ein Freilos. Von Liga 1 bis 4 - jeder hat die Chance auf den Cup-Sieg.'); ?></p>
+<p>Für diesen Wettbewerb qualifizieren sich die 32 besten Teams aus <?php echo $temp_land; ?>, 16 davon durch ein Freilos. Von Liga 1 bis 4 - jeder hat die Chance auf den Cup-Sieg.</p>
 <p><?php echo _('Es gibt eine Qualifikation und danach fünf Runden, die jeweils ausgelost werden. In einem KO-Spiel pro Runde ermitteln die Teams den Sieger, der dann die nächste Runde erreicht.'); ?></p>
 <?php
 $temp = FALSE;
@@ -133,7 +133,7 @@ echo str_replace($cookie_teamname, $ersatz_temp, $tmp_liga_cache);
 ?>
 <p><strong><?php echo _('Hinweis:'); ?></strong> <?php echo _('Die Zahlen in den eckigen Klammern geben die Liga des jeweiligen Teams an.'); ?></p>
 <?php } else { ?>
-<h1><?php echo _('Cup'); ?></h1>
+<h1><?php echo _('Nationaler Cup'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

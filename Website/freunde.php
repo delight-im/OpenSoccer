@@ -25,7 +25,7 @@ $kontakt1 = "SELECT username, last_login, f2, sortOrder FROM ".$prefix."freunde 
 $kontakt2 = mysql_query($kontakt1);
 $kontakt2a = mysql_num_rows($kontakt2);
 if ($kontakt2a == 0) { $kontakt2a = 'noch keine'; }
-echo '<h1>'._('Du hast zurzeit').' '.$kontakt2a.' '._('Freunde beim Ballmanager').'</h1>';
+echo '<h1>Du hast zurzeit '.$kontakt2a.' Freunde beim Ballmanager</h1>';
 if ($kontakt2a == 'noch keine') { echo '<p>'._('Wenn Du Deine Freunde zu dieser Liste hinzufügen möchtest, dann öffne bitte das Profil des jeweiligen Managers und klicke unten auf den Link &quot;Freundschaft anbieten&quot;.').'</p>'; }
 else {
 	echo '<p><table><thead><tr class="odd"><th scope="col">'._('Manager').'</th><th scope="col">'._('Letzte Aktion').'</th><th scope="col">&nbsp;</th><th scope="col">&nbsp;</th></tr></thead><tbody>';
@@ -46,7 +46,7 @@ $kontakt1 = "SELECT username, last_login, f2, sortOrder FROM ".$prefix."freunde 
 $kontakt2 = mysql_query($kontakt1);
 $kontakt2a = mysql_num_rows($kontakt2);
 if ($kontakt2a == 0) { $kontakt2a = 'noch keine'; }
-echo '<h1>'._('Du ignorierst zurzeit').' '.$kontakt2a.' '._('User beim Ballmanager').'</h1>';
+echo '<h1>Du ignorierst zurzeit '.$kontakt2a.' User beim Ballmanager</h1>';
 if ($kontakt2a == 'noch keine') { echo '<p>'._('Wenn Du User zu dieser Liste hinzufügen möchtest, dann öffne bitte das Profil des jeweiligen Managers und klicke unten auf den Link &quot;Diesen User ignorieren&quot;.').'</p>'; }
 else {
 	echo '<p><table><thead><tr class="odd"><th scope="col">'._('Manager').'</th><th scope="col">'._('Letzte Aktion').'</th><th scope="col">&nbsp;</th><th scope="col">&nbsp;</th></tr></thead><tbody>';

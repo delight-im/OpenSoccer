@@ -112,7 +112,7 @@ echo '</div>';
 if ($live_scoring_meldung != '') {
 	echo '<p style="text-align:right">';
 	echo '<a href="/spielbericht.php?id='.$sql3['id'].'" onclick="location.reload(); return false" class="pagenava">Aktualisieren</a> ';
-	echo '<a href="/liveZentrale.php" class="pagenava">Zur LIVE-Zentrale</a>';
+	echo '<a href="/liveZentrale.php" class="pagenava">'._('Zur LIVE-Zentrale').'</a>';
 	echo '</p>';
 }
 // TORSCHUTZEN ANFANG
@@ -255,7 +255,7 @@ if ($ber2a > 0) {
 else {
 	$spielstand = '-:-';
 	if ($live_scoring_meldung != '') {
-		$kommentar_liste = '<p>Herzlich willkommen im Stadion. Heute findet das Spiel zwischen '.$sql3['team1'].' und '.$sql3['team2'].' statt. Viele Gästefans haben den Weg ins Stadion gefunden. Die Fans singen für ihr Team und die Spieler stehen schon in den Katakomben.</p>';
+		$kommentar_liste = '<p>'._('Herzlich willkommen im Stadion. Heute findet das Spiel zwischen '.$sql3['team1'].' und '.$sql3['team2'].' statt. Viele Gästefans haben den Weg ins Stadion gefunden. Die Fans singen für ihr Team und die Spieler stehen schon in den Katakomben.').'</p>';
 	}
 }
 // HIN-RUCKRUNDEN-ERGEBNIS ANFANG
@@ -280,41 +280,41 @@ if ($sql3['typ'] == 'Liga') {
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Bereich</th>
-<th scope="col">Wert</th>
+<th scope="col"><?php echo _('Bereich'); ?></th>
+<th scope="col"><?php echo _('Wert'); ?></th>
 </tr>
 </thead>
 <tbody>
-<tr><td>Begegnung</td><td><?php echo '<a href="/team.php?id='.$tid1.'">'.$sql3['team1'].'</a>'; ?> - <?php echo '<a href="/team.php?id='.$tid2.'">'.$sql3['team2'].'</a>'; ?></td></tr>
-<tr class="odd"><td>Ergebnis</td><td><?php if ($live_scoring_meldung != '') { echo $spielstand.' ('.$live_scoring_meldung.')'; } else { echo $sql3['ergebnis'].$hinrueckStr; } ?></td></tr>
-<tr><td>Datum</td><td><?php echo date('d.m.Y H:i', $sql3['datum']-3600); ?> Uhr</td></tr>
-<tr class="odd"><td>Wettbewerb</td><td><?php echo $sql3['typ']; ?></td></tr>
-<tr><td>Zuschauer</td><td><?php echo number_format($sql3['zuschauer'], 0, ',', '.'); ?></td></tr>
-<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td>Tore (Heim)</td><td><?php echo $torschuetzen1; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr><td>Tore (Auswärts)</td><td><?php echo $torschuetzen2; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td>Ballbesitz</td><td><?php echo $sql3['ballbesitz1'].'% - '.$sql3['ballbesitz2'].'%'; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr><td>Fouls</td><td><?php echo $sql3['fouls1'].' - '.$sql3['fouls2']; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td>Abseits</td><td><?php echo $sql3['abseits1'].' - '.$sql3['abseits2']; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr><td>Schüsse</td><td><?php echo $sql3['schuesse1'].' - '.$sql3['schuesse2']; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td>Gelb (Heim)</td><td><?php echo $gelb1; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr><td>Gelb (Auswärts)</td><td><?php echo $gelb2; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td>Rot (Heim)</td><td><?php echo $rot1; ?></td></tr><?php } ?>
-<?php if ($live_scoring_meldung == '') { ?><tr><td>Rot (Auswärts)</td><td><?php echo $rot2; ?></td></tr><?php } ?>
+<tr><td><?php echo _('Begegnung'); ?></td><td><?php echo '<a href="/team.php?id='.$tid1.'">'.$sql3['team1'].'</a>'; ?> - <?php echo '<a href="/team.php?id='.$tid2.'">'.$sql3['team2'].'</a>'; ?></td></tr>
+<tr class="odd"><td><?php echo _('Ergebnis'); ?></td><td><?php if ($live_scoring_meldung != '') { echo $spielstand.' ('.$live_scoring_meldung.')'; } else { echo $sql3['ergebnis'].$hinrueckStr; } ?></td></tr>
+<tr><td><?php echo _('Datum'); ?></td><td><?php echo date('d.m.Y H:i', $sql3['datum']-3600); ?> <?php echo _('Uhr'); ?></td></tr>
+<tr class="odd"><td><?php echo _('Wettbewerb'); ?></td><td><?php echo $sql3['typ']; ?></td></tr>
+<tr><td><?php echo _('Zuschauer'); ?></td><td><?php echo number_format($sql3['zuschauer'], 0, ',', '.'); ?></td></tr>
+<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td><?php echo _('Tore (Heim)'); ?></td><td><?php echo $torschuetzen1; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr><td><?php echo _('Tore (Auswärts)'); ?></td><td><?php echo $torschuetzen2; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td><?php echo _('Ballbesitz'); ?></td><td><?php echo $sql3['ballbesitz1'].'% - '.$sql3['ballbesitz2'].'%'; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr><td><?php echo _('Fouls'); ?></td><td><?php echo $sql3['fouls1'].' - '.$sql3['fouls2']; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td><?php echo _('Abseits'); ?></td><td><?php echo $sql3['abseits1'].' - '.$sql3['abseits2']; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr><td><?php echo _('Schüsse'); ?></td><td><?php echo $sql3['schuesse1'].' - '.$sql3['schuesse2']; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td><?php echo _('Gelb (Heim)'); ?></td><td><?php echo $gelb1; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr><td><?php echo _('Gelb (Auswärts)'); ?></td><td><?php echo $gelb2; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr class="odd"><td><?php echo _('Rot (Heim)'); ?></td><td><?php echo $rot1; ?></td></tr><?php } ?>
+<?php if ($live_scoring_meldung == '') { ?><tr><td><?php echo _('Rot (Auswärts)'); ?></td><td><?php echo $rot2; ?></td></tr><?php } ?>
 </tbody>
 </table>
 </p>
 <?php
 $abstand_spiel_heute = time()-$sql3['datum'];
 if ($abstand_spiel_heute > -3600) { // wenn das Spiel ueberhaupt schon war dann Kommentare zeigen
-    echo '<h1>Kommentar des Reporters';
+    echo '<h1>'._('Kommentar des Reporters');
     if ($live_scoring_meldung != '') { echo ' ('.$live_scoring_min_gespielt.'. Minute)'; }
     echo '</h1>';
     echo $kommentar_liste;
 }
 elseif ($live_scoring_spieltyp_laeuft == '') {
-	echo '<h1>Mögliche RKP-Veränderungen</h1>';
+	echo '<h1>'._('Mögliche RKP-Veränderungen').'</h1>';
 	$ergebnisStrings = array('0:0', '1:0', '2:0', '3:0', '0:3', '0:2', '0:1');
-	echo '<table><thead><tr class="odd"><th scope="col">Ergebnis</th><th scope="col">'.$sql3['team1'].' ('.round($eloTeam1).')</th><th scope="col">'.$sql3['team2'].' ('.round($eloTeam2).')</th></tr></thead><tbody>';
+	echo '<table><thead><tr class="odd"><th scope="col">'._('Ergebnis').'</th><th scope="col">'.$sql3['team1'].' ('.round($eloTeam1).')</th><th scope="col">'.$sql3['team2'].' ('.round($eloTeam2).')</th></tr></thead><tbody>';
 	foreach ($ergebnisStrings as $ergebnisStr) {
 		$eloChange1 = round(eloChange($ergebnisStr, $eloTeam1, $eloTeam2, $sql3['typ']));
 		if ($eloChange1 > 0) { $eloChange1 = '+'.$eloChange1; }
@@ -326,6 +326,6 @@ elseif ($live_scoring_spieltyp_laeuft == '') {
 }
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

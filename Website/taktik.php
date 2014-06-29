@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Taktik | Ballmanager.de</title>
+<title><?php echo ('Taktik'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 select { width: 200px; }
@@ -90,51 +90,51 @@ if (isset($_POST['vorlageSpeichern']) && $cookie_id != DEMO_USER_ID) {
 ?>
 <form action="/taktik.php?spieltypTaktik=<?php echo $spieltypTaktik; ?>" method="POST" accept-charset="utf-8">
 <p>
-<label for="ausrichtung">Ausrichtung:</label>
+<label for="ausrichtung"><?php echo _('Ausrichtung:'); ?></label>
 <select name="ausrichtung" size="1">
-	<option value="1"<?php if ($tue3['ausrichtung'] == '1') { echo ' selected="selected"'; } ?>>Defensiv</option>
-	<option value="2"<?php if ($tue3['ausrichtung'] == '2') { echo ' selected="selected"'; } ?>>Neutral</option>
-	<option value="3"<?php if ($tue3['ausrichtung'] == '3') { echo ' selected="selected"'; } ?>>Offensiv</option>
+	<option value="1"<?php if ($tue3['ausrichtung'] == '1') { echo ' selected="selected"'; } ?>><?php echo _('Defensiv'); ?></option>
+	<option value="2"<?php if ($tue3['ausrichtung'] == '2') { echo ' selected="selected"'; } ?>><?php echo _('Neutral'); ?></option>
+	<option value="3"<?php if ($tue3['ausrichtung'] == '3') { echo ' selected="selected"'; } ?>><?php echo _('Offensiv'); ?></option>
 </select>
 </p>
 <p>
-<label for="geschw_auf">Geschwindigkeit des Spielaufbaus:</label>
+<label for="geschw_auf"><?php echo _('Geschwindigkeit des Spielaufbaus:'); ?></label>
 <select name="geschw_auf" size="1">
-	<option value="1"<?php if ($tue3['geschw_auf'] == 1) { echo ' selected="selected"'; } ?>>Langsam</option>
-	<option value="2"<?php if ($tue3['geschw_auf'] == 2) { echo ' selected="selected"'; } ?>>Gemäßigt</option>
-	<option value="3"<?php if ($tue3['geschw_auf'] == 3) { echo ' selected="selected"'; } ?>>Schnell</option>
+	<option value="1"<?php if ($tue3['geschw_auf'] == 1) { echo ' selected="selected"'; } ?>><?php echo _('Langsam'); ?></option>
+	<option value="2"<?php if ($tue3['geschw_auf'] == 2) { echo ' selected="selected"'; } ?>><?php echo _('Gemäßigt'); ?></option>
+	<option value="3"<?php if ($tue3['geschw_auf'] == 3) { echo ' selected="selected"'; } ?>><?php echo _('Schnell'); ?></option>
 </select>
 </p>
 <p>
-<label for="pass_auf">Passdistanz:</label>
+<label for="pass_auf"><?php echo _('Passdistanz:'); ?></label>
 <select name="pass_auf" size="1">
-	<option value="1"<?php if ($tue3['pass_auf'] == 1) { echo ' selected="selected"'; } ?>>Kurz</option>
-	<option value="2"<?php if ($tue3['pass_auf'] == 2) { echo ' selected="selected"'; } ?>>Gemischt</option>
-	<option value="3"<?php if ($tue3['pass_auf'] == 3) { echo ' selected="selected"'; } ?>>Lang</option>
+	<option value="1"<?php if ($tue3['pass_auf'] == 1) { echo ' selected="selected"'; } ?>><?php echo _('Kurz'); ?></option>
+	<option value="2"<?php if ($tue3['pass_auf'] == 2) { echo ' selected="selected"'; } ?>><?php echo _('Gemischt'); ?></option>
+	<option value="3"<?php if ($tue3['pass_auf'] == 3) { echo ' selected="selected"'; } ?>><?php echo _('Lang'); ?></option>
 </select>
 </p>
 <p>
-<label for="risk_pass">Chancen-Erarbeitung:</label>
+<label for="risk_pass"><?php echo _('Chancen-Erarbeitung:'); ?></label>
 <select name="risk_pass" size="1">
-	<option value="1"<?php if ($tue3['risk_pass'] == 1) { echo ' selected="selected"'; } ?>>Sicher</option>
-	<option value="2"<?php if ($tue3['risk_pass'] == 2) { echo ' selected="selected"'; } ?>>Ausgeglichen</option>
-	<option value="3"<?php if ($tue3['risk_pass'] == 3) { echo ' selected="selected"'; } ?>>Riskant</option>
+	<option value="1"<?php if ($tue3['risk_pass'] == 1) { echo ' selected="selected"'; } ?>><?php echo _('Sicher'); ?></option>
+	<option value="2"<?php if ($tue3['risk_pass'] == 2) { echo ' selected="selected"'; } ?>><?php echo _('Ausgeglichen'); ?></option>
+	<option value="3"<?php if ($tue3['risk_pass'] == 3) { echo ' selected="selected"'; } ?>><?php echo _('Riskant'); ?></option>
 </select>
 </p>
 <p>
-<label for="druck">Druck:</label>
+<label for="druck"><?php echo _('Druck:'); ?></label>
 <select name="druck" size="1">
-	<option value="1"<?php if ($tue3['druck'] == 1) { echo ' selected="selected"'; } ?>>Niedrig</option>
-	<option value="2"<?php if ($tue3['druck'] == 2) { echo ' selected="selected"'; } ?>>Normal</option>
-	<option value="3"<?php if ($tue3['druck'] == 3) { echo ' selected="selected"'; } ?>>Hoch</option>
+	<option value="1"<?php if ($tue3['druck'] == 1) { echo ' selected="selected"'; } ?>><?php echo _('Niedrig'); ?></option>
+	<option value="2"<?php if ($tue3['druck'] == 2) { echo ' selected="selected"'; } ?>><?php echo _('Normal'); ?></option>
+	<option value="3"<?php if ($tue3['druck'] == 3) { echo ' selected="selected"'; } ?>><?php echo _('Hoch'); ?></option>
 </select>
 </p>
 <p>
-<label for="aggress">Aggressivität:</label>
+<label for="aggress"><?php echo _('Aggressivität:'); ?></label>
 <select name="aggress" size="1">
-	<option value="1"<?php if ($tue3['aggress'] == 1) { echo ' selected="selected"'; } ?>>Niedrig</option>
-	<option value="2"<?php if ($tue3['aggress'] == 2) { echo ' selected="selected"'; } ?>>Normal</option>
-	<option value="3"<?php if ($tue3['aggress'] == 3) { echo ' selected="selected"'; } ?>>Hoch</option>
+	<option value="1"<?php if ($tue3['aggress'] == 1) { echo ' selected="selected"'; } ?>><?php echo _('Niedrig'); ?></option>
+	<option value="2"<?php if ($tue3['aggress'] == 2) { echo ' selected="selected"'; } ?>><?php echo _('Normal'); ?></option>
+	<option value="3"<?php if ($tue3['aggress'] == 3) { echo ' selected="selected"'; } ?>><?php echo _('Hoch'); ?></option>
 </select>
 </p>
 <p><input type="submit" value="Speichern"<?php echo noDemoClick($cookie_id); ?> /></p>
@@ -148,7 +148,7 @@ while ($tmp3 = mysql_fetch_assoc($tmp2)) {
 	$vorhandeneVorlagen[] = $tmp3['name'];
 }
 ?>
-<p>Hier kannst Du die aktuell ausgewählte Taktik als Vorlage speichern. Du kannst auch eine Vorlage laden, die dann die aktuelle Taktik ersetzt.</p>
+<p><?php echo _('Hier kannst Du die aktuell ausgewählte Taktik als Vorlage speichern. Du kannst auch eine Vorlage laden, die dann die aktuelle Taktik ersetzt.'); ?></p>
 <form action="/taktik.php?spieltypTaktik=<?php echo $spieltypTaktik; ?>" method="POST" accept-charset="utf-8">
 <p><select name="vorlageLaden" size="1" style="width:200px">
 	<?php
@@ -170,16 +170,16 @@ while ($tmp3 = mysql_fetch_assoc($tmp2)) {
 	?>
 </select> <input type="submit" value="Löschen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
 </form>
-<h1>Erklärungen zu den einzelnen Einstellungen</h1>
-<p>Wähle oben einfach aus jeder der sechs Auswahllisten deine bevorzugte Einstellung aus. Du solltest die Taktiken - je nach Gegner - anpassen, um das Beste aus deiner Mannschaft rauszuholen. Die Taktik, die gespeichert ist, während ein Spiel simuliert wird, wird für dieses Spiel auch angewendet. Du hast für jeden Teil drei Auswahlmöglichkeiten. Im Folgenden werden davon die äußeren Möglichkeiten erklärt, die mittleren stellen immer nur einen Mittelweg dar.</p>
-<p><strong>Ausrichtung:</strong> Die Einstellung "Offensiv" wird den Angriff Deines Teams stärken. Dein Team wird aber nicht mehr so viel Wert auf die Verteidigung legen, weshalb diese schwächer wird. Mit "Defensiv" bewirkst Du genau das Gegenteil: Die Verteidigung wird stärker, der Angriff schwächer.</p>
-<p><strong>Geschwindigkeit des Spielaufbaus:</strong> Mit der Einstellung "Schnell" werden mehr Angriffe Deines Teams erfolgreich verlaufen und durch die Abwehr kommen, dafür steigt aber auch das Risiko, vom Gegner ausgekontert zu werden. Wenn Dein Team "Langsam" spielt, wird es schwerer, Torchancen herauszuspielen. Der Vorteil ist jedoch, dass Dein Gegner Dich nicht so leicht auskontern kann.</p>
-<p><strong>Passdistanz:</strong> "Kurz" als bevorzugte Passdistanz hat zur Folge, dass mehr Angriffe durch die gegnerische Abwehr kommen und zu Torchancen werden. Allerdings sind die Torchancen dann nicht so gut. Die Auswahl "Lang" bewirkt, dass weniger Torchancen enstehen, aber wenn eine Chance entsteht, dann ist sie auch sehr gut. Ein weiterer Nachteil: Du wirst häufiger im Abseits stehen.</p>
-<p><strong>Chancen-Erarbeitung:</strong> Wenn du "Riskant" spielst, wirst Du nicht mehr Torschuss-Möglichkeiten bekommen als sonst, aber die Chancen werden besser. Dafür steigt aber auch die Kontergefahr stark an. Bei der Spielweise "Sicher" wirst Du wenige gute Chancen bekommen. Allerdings ist dann auch die Kontergefahr sehr niedrig.</p>
-<p><strong>Druck:</strong> Wenn Deine Mannschaft "Viel" Druck macht, wirst Du Dir viele Konterchancen erarbeiten können. Leider brauchen Deine Spieler auch viel Kondition, um diese Spielweise durchhalten zu können. Die Frische Deiner Spieler wird so also stärker sinken. Falls der Druck, den Dein Team erzeugt, "Niedrig" ist, wird das Spiel nicht so anstrengend. Dein Gegner wird aber auch weniger Fehler machen, sodass Du weniger Konterchancen erhältst.</p>
-<p><strong>Aggressivität:</strong> Bei der Auswahl "Hoch" wirst Du viele gegnerische Angriffe durch Fouls unterbrechen, wodurch auch gute Chancen des Gegners zunichte gemacht werden. Allerdings erhält der Gegner so auch mehr Freistoß-Möglichkeiten, aus denen Tore enstehen können. Falls die Aggressivität Deines Teams "Niedrig" ist, werden Deine Spieler weniger Fouls begehen (fairer spielen), gute Chancen des Gegners werden sie aber auch seltener mit unfairen Mitteln stoppen.</p>
+<h1><?php echo _('Erklärungen zu den einzelnen Einstellungen'); ?></h1>
+<p><?php echo _('Wähle oben einfach aus jeder der sechs Auswahllisten deine bevorzugte Einstellung aus. Du solltest die Taktiken - je nach Gegner - anpassen, um das Beste aus deiner Mannschaft rauszuholen. Die Taktik, die gespeichert ist, während ein Spiel simuliert wird, wird für dieses Spiel auch angewendet. Du hast für jeden Teil drei Auswahlmöglichkeiten. Im Folgenden werden davon die äußeren Möglichkeiten erklärt, die mittleren stellen immer nur einen Mittelweg dar.'); ?></p>
+<p><strong><?php echo _('Ausrichtung:').'</strong> '.('Die Einstellung "Offensiv" wird den Angriff Deines Teams stärken. Dein Team wird aber nicht mehr so viel Wert auf die Verteidigung legen, weshalb diese schwächer wird. Mit "Defensiv" bewirkst Du genau das Gegenteil: Die Verteidigung wird stärker, der Angriff schwächer.'); ?></p>
+<p><strong><?php echo _('Geschwindigkeit des Spielaufbaus:').'</strong> '.('Mit der Einstellung "Schnell" werden mehr Angriffe Deines Teams erfolgreich verlaufen und durch die Abwehr kommen, dafür steigt aber auch das Risiko, vom Gegner ausgekontert zu werden. Wenn Dein Team "Langsam" spielt, wird es schwerer, Torchancen herauszuspielen. Der Vorteil ist jedoch, dass Dein Gegner Dich nicht so leicht auskontern kann.'); ?></p>
+<p><strong><?php echo _('Passdistanz:').'</strong> '.('"Kurz" als bevorzugte Passdistanz hat zur Folge, dass mehr Angriffe durch die gegnerische Abwehr kommen und zu Torchancen werden. Allerdings sind die Torchancen dann nicht so gut. Die Auswahl "Lang" bewirkt, dass weniger Torchancen enstehen, aber wenn eine Chance entsteht, dann ist sie auch sehr gut. Ein weiterer Nachteil: Du wirst häufiger im Abseits stehen.'); ?></p>
+<p><strong><?php echo _('Chancen-Erarbeitung:').'</strong> '.('Wenn du "Riskant" spielst, wirst Du nicht mehr Torschuss-Möglichkeiten bekommen als sonst, aber die Chancen werden besser. Dafür steigt aber auch die Kontergefahr stark an. Bei der Spielweise "Sicher" wirst Du wenige gute Chancen bekommen. Allerdings ist dann auch die Kontergefahr sehr niedrig.'); ?></p>
+<p><strong><?php echo _('Druck:').'</strong> '.('Wenn Deine Mannschaft "Viel" Druck macht, wirst Du Dir viele Konterchancen erarbeiten können. Leider brauchen Deine Spieler auch viel Kondition, um diese Spielweise durchhalten zu können. Die Frische Deiner Spieler wird so also stärker sinken. Falls der Druck, den Dein Team erzeugt, "Niedrig" ist, wird das Spiel nicht so anstrengend. Dein Gegner wird aber auch weniger Fehler machen, sodass Du weniger Konterchancen erhältst.'); ?></p>
+<p><strong><?php echo _('Aggressivität:').'</strong> '.('Bei der Auswahl "Hoch" wirst Du viele gegnerische Angriffe durch Fouls unterbrechen, wodurch auch gute Chancen des Gegners zunichte gemacht werden. Allerdings erhält der Gegner so auch mehr Freistoß-Möglichkeiten, aus denen Tore enstehen können. Falls die Aggressivität Deines Teams "Niedrig" ist, werden Deine Spieler weniger Fouls begehen (fairer spielen), gute Chancen des Gegners werden sie aber auch seltener mit unfairen Mitteln stoppen.'); ?></p>
 <?php } ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

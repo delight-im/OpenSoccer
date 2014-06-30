@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-06-25 01:01+0100\n"
-"PO-Revision-Date: 2014-06-25 01:02+0100\n"
+"POT-Creation-Date: 2014-06-30 00:43+0100\n"
+"PO-Revision-Date: 2014-06-30 02:40+0100\n"
 "Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,9 +15,3566 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../index.php:314
+#: ../../../aa_spieltag_simulation.php:13
+msgid "wegen einer Muskelzerrung"
+msgstr "due to a pulled muscle"
+
+#: ../../../aa_spieltag_simulation.php:14
+msgid "aufgrund einer Verstauchung"
+msgstr "because of a sprain"
+
+#: ../../../aa_spieltag_simulation.php:15
+msgid "wegen einer Prellung"
+msgstr "due to a bruise"
+
+#: ../../../aa_spieltag_simulation.php:16
+msgid "aufgrund eines Muskelfaserrisses"
+msgstr "because of a torn muscle fiber"
+
+#: ../../../aa_spieltag_simulation.php:17
+msgid "wegen eines Bänderrisses"
+msgstr "due to a ligament rupture"
+
+#: ../../../aa_spieltag_simulation.php:18
+msgid "aufgrund eines Knorpelschadens"
+msgstr "because of a cartilage damage"
+
+#: ../../../aa_spieltag_simulation.php:19
+msgid "durch einen Knochenbruch"
+msgstr "due to a bone fracture"
+
+#: ../../../aa_spieltag_simulation.php:77
+msgid "Anstoß!"
+msgstr "Kick-off!"
+
+#: ../../../aa_spieltag_simulation.php:78
+msgid "Das Publikum ist gut gelaunt beim Anpfiff des heutigen Spiels."
+msgstr "The audience is in jovial mood at the kick-off of today's match."
+
+#: ../../../aa_spieltag_simulation.php:79
+msgid "Das Spiel beginnt."
+msgstr "The match begins."
+
+#: ../../../aa_spieltag_simulation.php:80
+msgid "Das Spiel fängt mit dem Anstoß vor begeisterten Zuschauern an."
+msgstr ""
+"The match starts with the kick-off in front of an audience in jovial mood."
+
+#: ../../../aa_spieltag_simulation.php:81
+msgid "Bei windigem und kaltem Wetter beginnt das Spiel."
+msgstr "In windy and cold weather, the match begins."
+
+#: ../../../aa_spieltag_simulation.php:82
+msgid "Dunkle Wolken bildeten sich, als die Spieler das Feld betraten. Anstoß."
+msgstr "Dark clouds appear when the players enter the field. Kick-off."
+
+#: ../../../aa_spieltag_simulation.php:83
+msgid ""
+"Die Sonne scheint, das Gras ist grün und das Publikum freut sich aufs Spiel."
+msgstr ""
+"The sun shines, the grass is green and the audience is looking forward to "
+"the match."
+
+#: ../../../aa_spieltag_simulation.php:84
+msgid ""
+"Das Spielfeld ist etwas nass nach einigen Tagen Regen. Die erste Halbzeit "
+"beginnt."
+msgstr "The field is wet after several days of rain. The first half begins."
+
+#: ../../../aa_spieltag_simulation.php:85
+msgid "Los geht's mit der ersten Halbzeit!"
+msgstr "Here we go with the first half!"
+
+#: ../../../aa_spieltag_simulation.php:88
+msgid "Halbzeit!"
+msgstr "Half-time break!"
+
+#: ../../../aa_spieltag_simulation.php:89
+msgid "Der Wind nimmt zu, die zweite Halbzeit beginnt."
+msgstr "The wind is rising, the second half begins."
+
+#: ../../../aa_spieltag_simulation.php:90
+msgid "Los geht's mit der zweiten Halbzeit!"
+msgstr "Here we go with the second half!"
+
+#: ../../../aa_spieltag_simulation.php:91
+msgid "Anpfiff zur zweiten Halbzeit."
+msgstr "Opening whistle for the second half."
+
+#: ../../../aa_spieltag_simulation.php:92
+msgid "15 Minuten Pause."
+msgstr "15 minutes break."
+
+#: ../../../aa_spieltag_simulation.php:93
+msgid ""
+"Die Spieler der Gäste sehen konzentrierter aus zu Beginn der zweiten "
+"Halbzeit."
+msgstr ""
+"The guests' players look more concentrated at the beginning of the second "
+"half."
+
+#: ../../../aa_spieltag_simulation.php:94
+msgid "Der Schiedsrichter pfeift zur zweiten Halbzeit."
+msgstr "The referee whistles for the second half."
+
+#: ../../../aa_spieltag_simulation.php:95
+msgid ""
+"Die Spieler des Gastgebers winken den Zuschauern zu, das Spiel geht weiter."
+msgstr "The home team's players wave at the audience, the match continues."
+
+#: ../../../aa_spieltag_simulation.php:96
+msgid ""
+"Die Spieler des Gastgebers sehen frischer aus, währen die das Spielfeld zur "
+"zweiten Halbzeit betreten."
+msgstr ""
+"The home team's players look more relaxed when they enter the field for the "
+"second half."
+
+#: ../../../aa_spieltag_simulation.php:99
+msgid "XYZ am Ball."
+msgstr "XYZ on the ball."
+
+#: ../../../aa_spieltag_simulation.php:100
+msgid "XYZ greift an."
+msgstr "XYZ attacks."
+
+#: ../../../aa_spieltag_simulation.php:101
+msgid "XYZ macht wieder Druck."
+msgstr "XYZ presses forward."
+
+#: ../../../aa_spieltag_simulation.php:102
+#: ../../../aa_spieltag_simulation.php:445
+msgid "Ballbesitz für XYZ."
+msgstr "Ball possession for XYZ."
+
+#: ../../../aa_spieltag_simulation.php:103
+#: ../../../aa_spieltag_simulation.php:444
+msgid "XYZ hat den Ball."
+msgstr "XYZ is in possession."
+
+#: ../../../aa_spieltag_simulation.php:106
+msgid "Der Ballführende spielt den öffnenden Pass."
+msgstr "The ball carrier plays the opening pass."
+
+#: ../../../aa_spieltag_simulation.php:107
+msgid "Den Mitspieler mit einem öffnenden Pass bedient."
+msgstr "Served the teammate with an opening pass."
+
+#: ../../../aa_spieltag_simulation.php:108
+msgid "Starker Diagonalpass."
+msgstr "Strong diagonal pass."
+
+#: ../../../aa_spieltag_simulation.php:109
+msgid "Pass zum Mitspieler."
+msgstr "Pass to the teammate."
+
+#: ../../../aa_spieltag_simulation.php:110
+msgid "Schönes Dribbling im Mittelfeld."
+msgstr "Nice dribble in the midfield."
+
+#: ../../../aa_spieltag_simulation.php:111
+msgid "Pass von der rechten Seite nach innen."
+msgstr "Inward pass from the right side."
+
+#: ../../../aa_spieltag_simulation.php:112
+msgid "Pass von der linken Seite nach innen."
+msgstr "Inward pass from the left side."
+
+#: ../../../aa_spieltag_simulation.php:113
+msgid "Der Mitspieler steht völlig frei."
+msgstr "The teammate is completely free."
+
+#: ../../../aa_spieltag_simulation.php:114
+msgid "Schöner Pass zum Mitspieler."
+msgstr "Nice pass to the teammate."
+
+#: ../../../aa_spieltag_simulation.php:115
+msgid "Der präzise Pass kommt genau im richtigen Moment an."
+msgstr "The precise pass arrives just on time."
+
+#: ../../../aa_spieltag_simulation.php:116
+msgid "Der Ballführende spielt einen feinen Pass nach vorne."
+msgstr "The ball carrier plays a decent pass forward."
+
+#: ../../../aa_spieltag_simulation.php:117
+msgid "Sehenswertes Dribbling."
+msgstr "A dribble worth seeing."
+
+#: ../../../aa_spieltag_simulation.php:118
+msgid "Schöne Ballstafette in den eigenen Reihen."
+msgstr "Nice series of passes in the own rows."
+
+#: ../../../aa_spieltag_simulation.php:119
+msgid "Schneller Doppelpass im Mittelfeld."
+msgstr "Fast one-two in the midfield."
+
+#: ../../../aa_spieltag_simulation.php:120
+msgid "Schönes Dribbling."
+msgstr "Great dribble."
+
+#: ../../../aa_spieltag_simulation.php:121
+msgid "Herrliche Kombination der Offensiv-Spieler."
+msgstr "Awesome combination by the offensive players."
+
+#: ../../../aa_spieltag_simulation.php:122
+msgid "Der ungenaue Pass kommt mit Glück an."
+msgstr "The imprecise pass arrives luckily."
+
+#: ../../../aa_spieltag_simulation.php:123
+msgid "Unpräzises Anspiel, aber der Gegner kommt zu spät."
+msgstr "Imprecise pass, but the opponent is too late."
+
+#: ../../../aa_spieltag_simulation.php:124
+msgid "Der Spieler nutzt seine Schnelligkeit."
+msgstr "The player makes use of his quickness."
+
+#: ../../../aa_spieltag_simulation.php:125
+msgid "Guter Querpass zum Teamkollegen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:128
+msgid "Schöne Vorlage."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:129
+msgid "Tolle Vorlage."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:130
+msgid "Ein Dribbling wie aus dem Lehrbuch."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:131
+msgid "Der Mitspieler dribbelt ein, zwei Spieler aus."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:132
+msgid "Der Mitspieler dribbelt einen, nein zwei, Spieler aus."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:133
+msgid "Der Mitspieler wird schön in Szene gesetzt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:134
+msgid "Der Angreifer lässt seine Gegenspieler stehen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:135
+msgid "Geschickt freigespielt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:136
+msgid "Schönes Dribbling des Stürmers."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:137
+msgid "Der Stürmer wird herrlich von seinem Mitspieler bedient."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:138
+msgid "Steilpass auf den linken Flügel."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:139
+msgid "Der Spieler lässt seinen Gegner stehen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:140
+msgid "Der Spieler tunnelt seinen Gegner."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:141
+msgid "Dribbling über den halben Platz."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:143
+msgid "Steilpass auf den rechten Flügel."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:144
+msgid "Den Kollegen mustergültig freigespielt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:145
+msgid "Traumpass auf den linken Flügelspieler."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:146
+msgid "Traumpass auf den rechten Flügelspieler."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:147
+msgid "Traumpass in die Spitze."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:148
+msgid "Ball selbstlos quergelegt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:149
+msgid "Der kreuzende Mitspieler wird geschickt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:150
+msgid "Der Angreifer wird halblinks geschickt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:151
+msgid "Der Angreifer wird halbrechts geschickt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:152
+msgid "Steilpass auf den Stürmer, der jetzt alleine aufs Tor zuläuft."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:153
+msgid "Die Offensivabteilung arbeitet eine Chance heraus."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:154
+msgid "Jetzt wirds gefährlich ..."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:155
+msgid "Zuspiel in die Spitze."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:156
+msgid "Langer Pass auf den Stürmer."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:157
+msgid "Flanke aus dem Halbfeld."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:158
+msgid "Schöne Flanke von rechts."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:159
+msgid "Tolle Flanke von links."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:160
+msgid "Schöne Flanke von links."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:161
+msgid "Tolle Flanke von rechts."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:162
+msgid "Schöne Flanke."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:163
+msgid "Gute Flanke."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:164
+msgid "Der Flügelspieler flankt auf den Stürmer."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:165
+msgid "Der Spieler legt perfekt für seinen Teamkollegen auf."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:166
+msgid "Der Angreifer legt für seinen Mitspieler zurück."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:197
+msgid "Der Torwart hat den Ball sicher."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:198
+msgid "Der Torwart von XYZ hält."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:199
+msgid "Der Ball fliegt Richtung Eckfahne."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:200
+msgid "Leichte Aufgabe für den Schlussmann von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:201
+msgid "Kein Problem für den Torhüter."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:202
+msgid "Der Keeper fängt den Ball locker ab."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:205
+msgid "Glanzparade vom Schlussmann!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:206
+msgid "Was für ein Reflex!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:207
+msgid "Souverän gehalten."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:210
+msgid "Grobes Foul!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:211
+msgid "Foul von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:212
+msgid "Bösartiges Foul des Abwehrspielers!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:213
+msgid "Der Verteidiger setzt zur Grätsche an."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:214
+msgid "Handspiel von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:215
+msgid "Diese Grätsche ging nur in die Beine des Gegners."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:216
+msgid "Den Ball wollte er mit dieser Aktion sicher nicht holen. Grobes Foul!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:217
+msgid ""
+"Was für eine Schwalbe! Hat der Schiedsrichter da etwa mehr gesehen als wir?"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:218
+msgid "War das wirklich ein Foul? Da kann man drüber streiten."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:219
+msgid "Der Stürmer wird von den Beinen geholt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:220
+msgid "Foul vom Abwehrspieler."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:221
+msgid "Der Spieler setzt sich mit dem Ellenbogen durch. Foul!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:222
+msgid "Das hat der Referee gesehen - Foulspiel."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:223
+msgid "Der Spieler wird zu Fall gebracht."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:224
+msgid "Das sah nach einem Revanchefoul aus."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:225
+msgid "Der Angreifer wird umgestoßen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:228
+msgid "Der Schiedsrichter zeigt auf den Punkt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:229
+msgid "Elfmeter!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:230
+msgid "Der Unparteiische entscheidet auf Elfmeter."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:231
+msgid "Strafstoß!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:232
+msgid "Strafstoß für XYZ!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:233
+msgid "Elfmeter für XYZ!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:236
+msgid "Der Torwart springt in die richtige Ecke ... und hält!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:237
+msgid "Der Torwart bleibt stehen - Gehalten! Schwacher Schuss."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:238
+msgid "Der Schlussmann von XYZ hält!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:239
+msgid "Den hat der Keeper sicher!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:240
+msgid "Schwach geschossen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:241
+msgid "Sensationelle Parade!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:242
+msgid "Den hat der Keeper sicher. Schlecht geschossen!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:243
+msgid "Toll gehalten vom Torwart!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:246
+msgid "Drüber!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:247
+msgid "XYZ schießt drüber!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:248
+msgid "In die Wolken!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:249
+msgid "An den Pfosten!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:250
+msgid "XYZ schießt daneben!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:251
+msgid "XYZ trifft nur den Pfosten."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:252
+msgid "Schwacher Schuss vom Mittelfeldspieler!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:253
+msgid "Der Stürmer setzt den Elfmeter an die Latte!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:254
+msgid "Er vergibt die Chance!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:255
+msgid "Das war knapp. Da fehlten nur Zentimeter."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:256
+msgid "Der geht daneben!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:259
+msgid "Indirekter Freistoß für XYZ!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:260
+msgid "Indirekter Freistoß!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:261
+msgid "Der Schiedsrichter entscheidet auf Freistoß, indirekt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:265
+msgid "Direkter Freistoß für XYZ!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:266
+msgid "Direkter Freistoß!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:267
+msgid "Freistoß an der Strafraumgrenze."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:268
+msgid "Der Schiedsrichter entscheidet auf Freistoß, direkt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:269
+msgid "Direkter Freistoß vor dem Strafraum. 6 Mann in der Mauer."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:273
+msgid "Per Kopfball geklärt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:274
+msgid "XYZ klärt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:275
+msgid "Schuss geht daneben."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:276
+msgid "Der Abwehrspieler klärt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:277
+msgid "Der Verteidiger bereinigt die Situation."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:278
+#: ../../../aa_spieltag_simulation.php:325
+#: ../../../aa_spieltag_simulation.php:386
+msgid ""
+"Der Schuss geht auf die Tribüne. Hoffentlich hat sich kein Zuschauer "
+"verletzt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:279
+#: ../../../aa_spieltag_simulation.php:326
+#: ../../../aa_spieltag_simulation.php:387
+msgid ""
+"Der Schuss geht auf die Tribüne. Die Fans freuen sich über den gefangenen "
+"Ball."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:280
+#: ../../../aa_spieltag_simulation.php:390
+msgid "Der Schuss geht weit daneben."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:283
+msgid "Ballverlust im Mittelfeld."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:284
+msgid "XYZ macht Druck und holt sich den Ball wieder."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:285
+msgid "Perfektes Pressing, Ballverlust."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:286
+msgid "XYZ steht zu gut."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:287
+msgid "Keine Anspielstation."
+msgstr "No open man."
+
+#: ../../../aa_spieltag_simulation.php:288
+msgid "Unnötiger Fehlpass!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:289
+msgid "Erstklassig verteidigt von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:290
+msgid "Schön verteidigt von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:291
+msgid "An diesem Verteidiger kommt heute wohl keiner vorbei!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:292
+msgid "Der Gegner rutscht aus und XYZ holt sich den Ball wieder."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:293
+msgid "Schwerer Ballverlust im Mittelfeld."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:294
+msgid "Da ist kein Durchkommen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:295
+msgid "Die Verteidigung von XYZ steht sicher."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:296
+msgid "XYZ stoppt den Angriff."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:297
+msgid "Pass abgefangen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:298
+msgid "XYZ holt sich den Ball wieder."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:299
+msgid "Fehlpass. Der Gegner hat den Ball."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:300
+msgid "Der Gegner holt sich den Ball wieder."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:303
+msgid "Ein Spieler von XYZ kommt zum Kopfball."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:304
+msgid "Per Kopf in den Strafraum verlängert."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:308
+msgid "Der Ball wird abgefälscht ..."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:310
+msgid "Der Ball wird verlängert."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:311
+msgid "Zur Seite gelegt und Schuss!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:314
+msgid "Flachschuss."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:315
+msgid "Da war noch jemand dran."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:316
+msgid "Abgefälschter Schuss."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:317
+msgid "Der Ball streift die Mauer."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:318
+msgid "Schöne Freistoß-Variante."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:319
+msgid "Der Ball geht durch die Mauer."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:320
+msgid "Schön um die Mauer gezirkelt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:323
+msgid "Der Ball geht in die Mauer."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:324
+msgid "Der Schuss geht daneben."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:327
+msgid "Der Schuss geht weit drüber."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:328
+msgid "Da fehlten nur Zentimeter."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:329
+msgid "Der Verteidiger wirft sich in den Schuss."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:332
+msgid "Schuss und ..."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:333
+msgid "Kopfball und ..."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:335
+msgid "Der Angreifer schließt perfekt ins kurze Eck ab."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:336
+msgid "Der Stürmer zirkelt den Ball ins lange Eck."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:338
+msgid "XYZ setzt einen Schuss flach ins lange Eck."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:340
+msgid "Der Stürmer kommt am langen Eck unbedrängt zum Kopfball."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:341
+msgid "Direktschuss aus spitzem Winkel."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:342
+msgid ""
+"Einfach mal aufs Tor geschossen, der Schlussmann hat damit nicht gerechnet."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:343
+msgid "Schuss aus spitzem Winkel."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:344
+msgid "Schuss aus dem Rückraum."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:345
+msgid "Ein Versuch aus der Distanz!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:346
+msgid "Der Stürmer versucht den Ball über den Torwart zu lupfen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:347
+msgid "Der Angreifer donnert den Ball mit einem Seitfallzieher aufs Tor."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:348
+msgid "Jetzt muss er nur noch den Keeper überwinden ..."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:349
+msgid "Nur noch der Torwart steht vor dem Angreifer."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:350
+msgid "Der Angreifer versucht, den Torwart mit einem Heber zu überwinden."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:351
+msgid "Kaltschnäuziger Abschluss."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:352
+msgid "Toller Weitschuss von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:355
+msgid "Der passt genau!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:356
+msgid "Den hätte der Keeper haben müssen!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:357
+msgid "Der Ball donnert ins Netz!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:358
+msgid "Keine Chance für den Keeper, der Ball flatterte zu sehr!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:359
+msgid "Der Torwart springt ... und kommt nicht mehr dran. Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:360
+msgid "XYZ netzt mit Glück ein. Der Torwart war dran."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:361
+msgid "XYZ trifft."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:362
+msgid "Tor des Tages!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:363
+msgid "Direkt unter die Querlatte. Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:364
+msgid "XYZ netzt ein."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:365
+msgid "Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:366
+msgid "Ein super Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:367
+msgid "Gooolaso!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:368
+msgid "Der Ball kullert irgendwie ins Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:369
+msgid "Der Ball geht ins Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:370
+msgid "Abstauber ins Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:371
+msgid "Nachschuss und ... Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:372
+msgid "Keine Chance für den Keeper!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:373
+msgid "Treffer!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:374
+msgid "Toooor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:375
+msgid ""
+"Der Schlussmann zeigt keine Reaktion und sieht den Ball im Netz zappeln!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:376
+msgid "Was für ein Treffer!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:377
+msgid "Sensationelles Tor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:378
+msgid "Unglaublich! Toooor!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:379
+msgid "Tor für XYZ!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:382
+msgid "Der Schuss wird vom Verteidiger abgeblockt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:383
+msgid "Der Abwehrspieler kann noch an den Pfosten abfälschen."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:384
+msgid "Der Stürmer verzieht leicht nach links."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:385
+msgid "Das war knapp, der Schuss geht über die Latte."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:388
+msgid "XYZ verfehlt das Tor nur um Zentimeter."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:389
+msgid "Der Ball knallt an den Pfosten. Ein Raunen geht durch das Stadion."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:391
+msgid "Der Ball knallt ans Lattenkreuz."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:392
+msgid "Der Stürmer kommt angerauscht und schlägt ein wunderbares Luftloch."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:393
+msgid "Ball zur Ecke geklärt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:396
+msgid "Gehalten!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:397
+msgid "Tolle Parade vom Torwart."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:398
+msgid "Der Keeper wehrt den Ball mit den Fäusten ab."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:399
+msgid "Der Torwart wehrt den Ball ab."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:400
+msgid "Der Schlussmann kann den Ball mit einer herrlichen Parade retten."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:401
+msgid "Der Torhüter fliegt ... und hält! Tolle Parade!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:402
+msgid "Der Torwart klatscht nur ab, aber der Nachschuss geht vorbei."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:403
+msgid "Der Schlussmann fängt sicher."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:404
+msgid "Der Torhüter vereitelt die Chance mit einem tollen Reflex."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:405
+msgid ""
+"Der Torwart bewahrt sein Team mit einer Glanzparade vor dem Gegentreffer."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:408
+msgid "Abseits."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:409
+msgid "XYZ im Abseits."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:410
+msgid "Schönes Tor von XYZ, doch leider Abseits."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:411
+msgid "Ein Spieler von XYZ läuft ins Abseits."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:412
+msgid "Der Spieler von XYZ steht im Abseits."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:413
+msgid "XYZ ist im Abseits."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:414
+msgid "Der Spieler von XYZ wird in Abseitsposition angespielt."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:415
+msgid "Der Schiedsrichter erkennt zu Recht auf Abseits."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:416
+msgid "Der Referee entscheidet auf Abseitsstellung."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:417
+msgid "Abseits! Die Spieler können es kaum glauben."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:418
+msgid "Der Spieler steht im Abseits."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:421
+msgid "XYZ kontert."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:422
+msgid "Schneller Gegenangriff von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:423
+msgid "Sofort der Konter von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:424
+msgid "Konterchance für XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:425
+msgid "Kontermöglichkeit für XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:426
+msgid "XYZ hat sofort wieder die Kugel und geht in die Offensive."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:427
+msgid "Schnelles Umschalten von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:428
+msgid "XYZ schaltet direkt in den Angriff um."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:429
+msgid "Direkter Konter von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:430
+msgid "Schönes Konterspiel von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:431
+msgid "Schneller Konter von XYZ."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:434
+msgid "Ball im Aus. Einwurf."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:435
+msgid "Der Ball geht ins Aus."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:436
+msgid "Die Kugel rollt ins Aus. Einwurf."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:437
+msgid "Einwurf tief in der gegnerischen Hälfte."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:440
+msgid "Der Gegner hat den Ball."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:441
+msgid "Ballbesitz für den Gegner."
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:782
+msgid "Ticketpreis:"
+msgstr "Ticket price:"
+
+#: ../../../aa_spieltag_simulation.php:950
+msgid ""
+"Die Zeitschrift &quot;Bolzblatt&quot; bewertet die Leistung der Teams wie "
+"folgt:"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:977
+msgid "Die Zuschauer fiebern dem Derby schon lange entgegen!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:999
+msgid ""
+"Was ist das denn? Ein Flitzer auf dem Spielfeld! Der Schiedsrichter "
+"unterbricht die Partie!"
+msgstr ""
+
+#: ../../../aa_spieltag_simulation.php:1070
+msgid "Der Schiedsrichter pfeift das Spiel ab."
+msgstr ""
+
+#: ../../../android_app.php:2 ../../../android_app.php:19
+msgid "Android™-App"
+msgstr "Android app"
+
+#: ../../../android_app.php:20
+msgid ""
+"Du hast ein Smartphone oder Tablet mit Android? Dann spiele den Ballmanager "
+"ganz einfach von unterwegs:"
+msgstr ""
+
+#: ../../../android_app.php:22
+msgid ""
+"Aktiviere unter <em>Einstellungen</em> &raquo; <em>Anwendungen</em> das "
+"Kästchen bei &quot;Unbekannte Quellen&quot;, damit Du die Ballmanager-App "
+"von dieser Seite aus installieren kannst."
+msgstr ""
+
+#: ../../../android_app.php:23
+msgid ""
+"Lade <a href=\"/Ballmanager.apk\">diese Datei</a> auf Dein Gerät und öffne "
+"Sie - die Installation startet automatisch."
+msgstr ""
+
+#: ../../../android_app.php:24
+msgid ""
+"Auf Geräten bis einschließlich Android 2.3.3 findest Du alle Bereiche des "
+"Spiels im Menü, das sich öffnet, wenn Du die Menü-Taste Deines Gerätes "
+"drückst. Auf Geräten ab Android 3.0 findest Du alles im Menü am oberen Rand "
+"des Bildschirms. Über die drei Punkte/Striche, die übereinander zu sehen "
+"sind, kannst Du die restlichen Menü-Einträge anzeigen lassen."
+msgstr ""
+
+#: ../../../aufstellung.php:2
+msgid "Aufstellung"
+msgstr "Line-up"
+
+#: ../../../aufstellung.php:260 ../../../kader.php:153
+msgid "Aqua"
+msgstr "Aqua"
+
+#: ../../../aufstellung.php:261 ../../../kader.php:154
+msgid "Blau"
+msgstr "Blue"
+
+#: ../../../aufstellung.php:262 ../../../kader.php:155
+msgid "Gelb"
+msgstr "Yellow"
+
+#: ../../../aufstellung.php:263 ../../../kader.php:156
+msgid "Lila"
+msgstr "Purple"
+
+#: ../../../aufstellung.php:264 ../../../kader.php:157
+msgid "Oliv"
+msgstr "Olive"
+
+#: ../../../aufstellung.php:265 ../../../kader.php:158
+msgid "Pink"
+msgstr "Pink"
+
+#: ../../../aufstellung.php:266 ../../../kader.php:159
+msgid "Rot"
+msgstr "Red"
+
+#: ../../../aufstellung.php:267 ../../../kader.php:160
+msgid "Silber"
+msgstr "Silver"
+
+#: ../../../aufstellung.php:268 ../../../kader.php:161
+msgid "Grün"
+msgstr "Green"
+
+#: ../../../aufstellung.php:287 ../../../beobachtung.php:37
+#: ../../../entwicklung.php:11 ../../../kader.php:56
+msgid "MT"
+msgstr "PT"
+
+#: ../../../aufstellung.php:288 ../../../kader.php:58
+#: ../../../stat_torjaegerliste.php:56
+msgid "Name"
+msgstr "Name"
+
+#: ../../../aufstellung.php:289 ../../../kader.php:59
+#: ../../../vertraege.php:11
+msgid "AL"
+msgstr "AG"
+
+#: ../../../aufstellung.php:290 ../../../beobachtung.php:41
+#: ../../../kader.php:60 ../../../stat_staerkste_ligen_a.php:21
+#: ../../../stat_staerkste_ligen_k.php:21 ../../../vertraege.php:13
+msgid "Stärke"
+msgstr "Strength"
+
+#: ../../../aufstellung.php:291
+msgid "FR"
+msgstr "FR"
+
+#: ../../../aufstellung.php:292 ../../../vertraege.php:12
+msgid "MO"
+msgstr "MO"
+
+#: ../../../aufstellung.php:340 ../../../beobachtung.php:119
+#: ../../../entwicklung.php:43 ../../../kader.php:164
+#: ../../../vertraege.php:86
+msgid "Überschriften:"
+msgstr "Headings:"
+
+#: ../../../aufstellung.php:340
+msgid "SE: Startelf, MT: Mannschaftsteil, AL: Alter, FR: Frische, MO: Moral"
+msgstr "FE: First eleven, TP: part of team, AG: age, FR: freshness, MO: morale"
+
+#: ../../../aufstellung.php:341 ../../../beobachtung.php:120
+#: ../../../entwicklung.php:44 ../../../kader.php:165
+msgid "Mannschaftsteile:"
+msgstr "Parts of team:"
+
+#: ../../../aufstellung.php:341 ../../../beobachtung.php:120
+#: ../../../entwicklung.php:44 ../../../kader.php:165
+msgid "T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm"
+msgstr "T: goalkeeper, A: defender, M: midfield, S: forward"
+
+#: ../../../aufstellung.php:342
+msgid "Fettdruck:"
+msgstr "Bold print:"
+
+#: ../../../aufstellung.php:342
+msgid "Aufgestellte Spieler"
+msgstr "Players in line-up"
+
+#: ../../../aufstellung.php:343
+msgid "Rote Schrift:"
+msgstr "Red print:"
+
+#: ../../../aufstellung.php:343 ../../../kader.php:166
+msgid "verletzte oder gesperrte Spieler"
+msgstr ""
+
+#: ../../../aufstellung.php:346 ../../../beobachtung.php:122
+#: ../../../chat.php:123 ../../../chat_reports.php:101 ../../../cup.php:137
+#: ../../../einstellungen.php:255 ../../../entwicklung.php:67
+#: ../../../freunde.php:68 ../../../freundeWerben.php:48
+#: ../../../geloeschteAccounts.php:42 ../../../gesperrteTeamnamen.php:97
+#: ../../../gruendeFuerLoeschung.php:42 ../../../ipInfo.php:43
+#: ../../../kader.php:240 ../../../kalender.php:112
+#: ../../../lig_testspiele_liste.php:79 ../../../ligaTausch.php:208
+#: ../../../ligaTauschWuensche.php:67 ../../../liveZentrale.php:156
+#: ../../../marktschreier.php:60 ../../../namensaenderung.php:168
+#: ../../../neueAccounts.php:67 ../../../neuigkeiten.php:33
+#: ../../../notizen.php:58 ../../../pokal.php:243 ../../../postausgang.php:16
+#: ../../../spielbericht.php:327 ../../../spieler_historie.php:130
+#: ../../../stat_5jahresWertung.php:61 ../../../stat_cupsieger.php:69
+#: ../../../stat_dauerbrenner.php:65 ../../../stat_ergebnisverlauf.php:69
+#: ../../../stat_geldwert.php:78 ../../../stat_geschichte.php:82
+#: ../../../stat_juengste_kader.php:69 ../../../stat_ligaTausch.php:45
+#: ../../../stat_meiste_titel.php:92 ../../../stat_meiste_zuschauer.php:88
+#: ../../../stat_meister.php:64 ../../../stat_pokalsieger.php:42
+#: ../../../stat_reichste_ligen.php:41 ../../../stat_saisonverlauf.php:46
+#: ../../../stat_staerkste_ligen_a.php:41
+#: ../../../stat_staerkste_ligen_k.php:41
+#: ../../../stat_staerkste_ligen_r.php:41 ../../../stat_torjaegerliste.php:78
+#: ../../../stat_transfer_uebersicht.php:72
+#: ../../../stat_treuesteSpieler.php:79
+#: ../../../stat_wertvollste_spieler.php:69
+#: ../../../stat_wertvollste_teams.php:89 ../../../taktik.php:183
+#: ../../../tipps_des_tages.php:35 ../../../top_manager.php:115
+#: ../../../transferliste.php:42 ../../../ver_buchungen.php:64
+#: ../../../ver_lotto.php:153 ../../../vertraege.php:88
+#: ../../../vertrag_verlaengern.php:132 ../../../wio.php:56
+msgid "Du musst angemeldet sein, um diese Seite aufrufen zu können!"
+msgstr "Please sign in to your personal account in order to access this page!"
+
+#: ../../../beobachtung.php:2
+msgid "Beobachtung"
+msgstr "Watch list"
+
+#: ../../../beobachtung.php:17
+msgid ""
+"Die folgenden Spieler stehen auf Deiner Beobachtungsliste. Mit einem Klick "
+"auf den Namen kommst Du zum Spielerprofil. Wenn der Spieler zu verkaufen\n"
+"oder zu verleihen ist, dann ist der Transferstatus auch verlinkt."
+msgstr ""
+
+#: ../../../beobachtung.php:38 ../../../entwicklung.php:12
+#: ../../../kader.php:173 ../../../stat_dauerbrenner.php:20
+#: ../../../stat_transfer_uebersicht.php:40
+#: ../../../stat_treuesteSpieler.php:35
+#: ../../../stat_wertvollste_spieler.php:48 ../../../transferliste.php:10
+#: ../../../vertraege.php:10
+msgid "Spieler"
+msgstr "Player"
+
+#: ../../../beobachtung.php:39
+msgid "Status"
+msgstr "Status"
+
+#: ../../../beobachtung.php:40 ../../../entwicklung.php:13
+#: ../../../stat_juengste_kader.php:49
+msgid "Alter"
+msgstr "Age"
+
+#: ../../../beobachtung.php:43
+msgid "Noch"
+msgstr "Still"
+
+#: ../../../beobachtung.php:95 ../../../postausgang.php:75
+msgid "Markierte löschen"
+msgstr "Delete marked"
+
+#: ../../../beobachtung.php:103 ../../../entwicklung.php:50
+#: ../../../geloeschteAccounts.php:24 ../../../gruendeFuerLoeschung.php:24
+#: ../../../neueAccounts.php:49 ../../../postausgang.php:83
+#: ../../../top_manager.php:98 ../../../ver_buchungen.php:47
+msgid "Erste"
+msgstr "First"
+
+#: ../../../beobachtung.php:104 ../../../entwicklung.php:51
+#: ../../../geloeschteAccounts.php:25 ../../../gruendeFuerLoeschung.php:25
+#: ../../../neueAccounts.php:50 ../../../postausgang.php:84
+#: ../../../top_manager.php:99 ../../../ver_buchungen.php:48
+msgid "Vorherige"
+msgstr "Previous"
+
+#: ../../../beobachtung.php:115 ../../../entwicklung.php:62
+#: ../../../geloeschteAccounts.php:36 ../../../gruendeFuerLoeschung.php:36
+#: ../../../neueAccounts.php:61 ../../../postausgang.php:95
+#: ../../../top_manager.php:110 ../../../ver_buchungen.php:59
+msgid "Nächste"
+msgstr "Next"
+
+#: ../../../beobachtung.php:116 ../../../entwicklung.php:63
+#: ../../../geloeschteAccounts.php:37 ../../../gruendeFuerLoeschung.php:37
+#: ../../../neueAccounts.php:62 ../../../postausgang.php:96
+#: ../../../top_manager.php:111 ../../../ver_buchungen.php:60
+msgid "Letzte"
+msgstr "Last"
+
+#: ../../../beobachtung.php:119 ../../../entwicklung.php:43
+msgid "MT: Mannschaftsteil"
+msgstr "PT: part of team"
+
+#: ../../../bp_nicht_eingeloggt.php:2 ../../../bp_nicht_eingeloggt.php:4
+msgid "Nicht eingeloggt"
+msgstr "Not signed-in"
+
+#: ../../../bp_nicht_eingeloggt.php:5
+msgid ""
+"Im Moment bist Du leider nicht eingeloggt. Bitte logge Dich über die "
+"Bigpoint-Seite beim Ballmanager ein, damit Du spielen kannst."
+msgstr ""
+
+#: ../../../bp_username_waehlen.php:12
+msgid ""
+"Dein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30):"
+msgstr ""
+
+#: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
+msgid "Buchstaben:"
+msgstr "Letters:"
+
+#: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
+msgid "A-Z und Umlaute (groß und klein)"
+msgstr "A-Z (upper and lower)"
+
+#: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
+msgid "Zahlen:"
+msgstr "Numbers:"
+
+#: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
+msgid "Sonderzeichen:"
+msgstr "Special characters:"
+
+#: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
+msgid "Bindestrich"
+msgstr "Dash"
+
+#: ../../../bp_username_waehlen.php:14 ../../../registrieren.php:75
+msgid "Nicht erlaubt sind also Leerzeichen, Punkt, Komma, Sternchen usw."
+msgstr ""
+
+#: ../../../bp_username_waehlen.php:15
+msgid "Bitte versuche es noch einmal."
+msgstr ""
+
+#: ../../../bp_username_waehlen.php:35 ../../../bp_username_waehlen.php:48
+msgid ""
+"Du hast schon einen Benutzernamen und kannst deshalb hier keinen wählen."
+msgstr ""
+
+#: ../../../bp_username_waehlen.php:39 ../../../bp_username_waehlen.php:41
+msgid "Benutzernamen wählen"
+msgstr "Choose username"
+
+#: ../../../bp_username_waehlen.php:43
+msgid ""
+"Willkommen beim Ballmanager! Du stehst jetzt erst einmal auf der Warteliste. "
+"Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - "
+"erhältst Du eine Nachricht von uns bei Bigpoint."
+msgstr ""
+
+#: ../../../bp_username_waehlen.php:44
+msgid ""
+"Damit es dann sofort losgehen kann, brauchst Du jetzt noch einen "
+"Benutzernamen. Dieser Name wird überall im Spiel angezeigt, Du bist daran zu "
+"erkennen."
+msgstr ""
+
+#: ../../../chat.php:2 ../../../wio.php:6 ../../../wio.php:38
+msgid "Chat"
+msgstr "Chat"
+
+#: ../../../chat.php:100
+msgid "Chatter:"
+msgstr "Chatters:"
+
+#: ../../../chat.php:101
+msgid "Nächster Chat-Abend:"
+msgstr "Next regulars' chat:"
+
+#: ../../../chat.php:119
+msgid ""
+"Bitte aktiviere JavaScript in Deinem Browser, um den Chat nutzen zu können!"
+msgstr ""
+"Please enable JavaScript in your browser in order to be able to use the chat!"
+
+#: ../../../chat_reports.php:2 ../../../chat_reports.php:18
+msgid "Chat-Reports"
+msgstr "Chat reports"
+
+#: ../../../chat_reports.php:30
+msgid "Kein Protokoll gefunden!"
+msgstr ""
+
+#: ../../../chat_reports.php:52
+msgid "Gemeldet"
+msgstr "Reported"
+
+#: ../../../chat_reports.php:53
+msgid "Report von"
+msgstr "Report by"
+
+#: ../../../chat_reports.php:54 ../../../entwicklung.php:14
+#: ../../../freundeWerben.php:15 ../../../kalender.php:45
+#: ../../../lig_testspiele_liste.php:42 ../../../ligaTausch.php:193
+#: ../../../postausgang.php:39 ../../../spielbericht.php:289
+#: ../../../spieler_historie.php:27 ../../../spieler_historie.php:95
+#: ../../../stat_ligaTausch.php:12 ../../../stat_transfer_uebersicht.php:43
+msgid "Datum"
+msgstr "Date"
+
+#: ../../../chat_reports.php:55
+msgid "Sperre"
+msgstr ""
+
+#: ../../../cup.php:2 ../../../cup.php:35 ../../../cup.php:136
+msgid "Nationaler Cup"
+msgstr "National Trophy"
+
+#: ../../../cup.php:5 ../../../liveZentrale.php:6
+#: ../../../stat_cupsieger.php:13
+msgid "Land wählen"
+msgstr "Choose country"
+
+#: ../../../cup.php:37
+msgid ""
+"Es gibt eine Qualifikation und danach fünf Runden, die jeweils ausgelost "
+"werden. In einem KO-Spiel pro Runde ermitteln die Teams den Sieger, der dann "
+"die nächste Runde erreicht."
+msgstr ""
+
+#: ../../../cup.php:119
+msgid "Team 1"
+msgstr "Team 1"
+
+#: ../../../cup.php:119
+msgid "Team 2"
+msgstr "Team 2"
+
+#: ../../../cup.php:134 ../../../ligaTauschWuensche.php:63
+#: ../../../liveZentrale.php:153 ../../../namensaenderung.php:60
+#: ../../../notizen.php:52 ../../../pokal.php:196
+msgid "Hinweis:"
+msgstr "Notice:"
+
+#: ../../../cup.php:134
+msgid ""
+"Die Zahlen in den eckigen Klammern geben die Liga des jeweiligen Teams an."
+msgstr ""
+
+#: ../../../einstellungen.php:2 ../../../einstellungen.php:254
+msgid "Einstellungen"
+msgstr "Settings"
+
+#: ../../../einstellungen.php:74
+msgid ""
+"Dein Passwort konnte leider nicht geändert werden. Bitte versuche es noch "
+"einmal!"
+msgstr ""
+
+#: ../../../einstellungen.php:86
+msgid "Dein Passwort wurde erfolgreich geändert!"
+msgstr ""
+
+#: ../../../einstellungen.php:95
+msgid "Du kannst leider keinen Urlaub beantragen, der so lange dauert."
+msgstr ""
+
+#: ../../../einstellungen.php:116
+msgid "Dein Urlaub wurde genehmigt!"
+msgstr ""
+
+#: ../../../einstellungen.php:140 ../../../regeln.php:104
+msgid "E-Mail-Adresse"
+msgstr "Email address"
+
+#: ../../../einstellungen.php:141
+msgid "Du bist mit der folgenden E-Mail-Adresse registriert:"
+msgstr ""
+
+#: ../../../einstellungen.php:144
+msgid "Vereinsnamen ändern"
+msgstr ""
+
+#: ../../../einstellungen.php:149
+msgid "Managernamen ändern"
+msgstr ""
+
+#: ../../../einstellungen.php:153
+msgid "Urlaub beantragen"
+msgstr "Request vacation"
+
+#: ../../../einstellungen.php:156
+msgid ""
+"Mit dem folgenden Formular kannst Du Urlaub beantragen. In Deiner "
+"Urlaubszeit kannst Du nicht automatisch gelöscht werden. Außerdem verwaltet "
+"der Computer Deine Aufstellung und verlängert alle Spieler-Verträge, die "
+"während Deines Urlaubs auslaufen würden."
+msgstr ""
+
+#: ../../../einstellungen.php:166 ../../../einstellungen.php:184
+msgid "noch keinen Urlaub"
+msgstr ""
+
+#: ../../../einstellungen.php:172 ../../../einstellungen.php:190
+msgid "Du kannst jetzt neuen Urlaub beantragen."
+msgstr ""
+
+#: ../../../einstellungen.php:179
+msgid "Kurzurlaub (1-10 Tage):"
+msgstr "Short vacation (1-10 days):"
+
+#: ../../../einstellungen.php:197
+msgid "Langer Urlaub (11-30 Tage):"
+msgstr "Long vacation (11-30 days):"
+
+#: ../../../einstellungen.php:236
+msgid "Passwort ändern"
+msgstr "Change password"
+
+#: ../../../einstellungen.php:237
+msgid ""
+"Mit dem folgenden Formular kannst Du Dein Passwort beim Ballmanager ändern. "
+"Dazu musst Du alle Felder ausfüllen."
+msgstr ""
+
+#: ../../../einstellungen.php:245
+msgid "Account löschen"
+msgstr "Delete account"
+
+#: ../../../einstellungen.php:246
+msgid ""
+"Du bist Dir wirklich sicher, dass Du Deinen Account hier beim Ballmanager "
+"löschen möchtest? Das ist sehr schade, aber wir akzeptieren das natürlich."
+msgstr ""
+
+#: ../../../einstellungen.php:247
+msgid ""
+"Wir würden uns freuen, wenn Du uns noch mitteilen würdest, was Dir hier "
+"gefallen hat und was noch nicht so gut war."
+msgstr ""
+
+#: ../../../einstellungen.php:249
+msgid "Das war gut:"
+msgstr "What I liked:"
+
+#: ../../../einstellungen.php:250
+msgid "Das hat mir nicht gefallen:"
+msgstr "What I didn't like:"
+
+#: ../../../entwicklung.php:2 ../../../entwicklung.php:4
+msgid "Entwicklung"
+msgstr "Development"
+
+#: ../../../entwicklung.php:15
+msgid "Alt"
+msgstr "Old"
+
+#: ../../../entwicklung.php:16
+msgid "Neu"
+msgstr "New"
+
+#: ../../../entwicklung.php:33
+msgid "Höhepunkt"
+msgstr "Peak"
+
+#: ../../../freunde.php:2 ../../../freunde.php:67
+msgid "Freunde"
+msgstr "Friends"
+
+#: ../../../freunde.php:9
+msgid "Anfragen"
+msgstr "Requests"
+
+#: ../../../freunde.php:9 ../../../freunde.php:31 ../../../freunde.php:52
+#: ../../../geloeschteAccounts.php:12 ../../../gruendeFuerLoeschung.php:12
+#: ../../../neueAccounts.php:12 ../../../stat_ligaTausch.php:13
+#: ../../../stat_meiste_titel.php:67 ../../../top_manager.php:50
+#: ../../../wio.php:6 ../../../wio.php:38
+msgid "Manager"
+msgstr "Manager"
+
+#: ../../../freunde.php:9
+msgid "Aktionen"
+msgstr "Actions"
+
+#: ../../../freunde.php:29
+msgid ""
+"Wenn Du Deine Freunde zu dieser Liste hinzufügen möchtest, dann öffne bitte "
+"das Profil des jeweiligen Managers und klicke unten auf den Link &quot;"
+"Freundschaft anbieten&quot;."
+msgstr ""
+
+#: ../../../freunde.php:31 ../../../freunde.php:52
+msgid "Letzte Aktion"
+msgstr "Last action"
+
+#: ../../../freunde.php:50
+msgid ""
+"Wenn Du User zu dieser Liste hinzufügen möchtest, dann öffne bitte das "
+"Profil des jeweiligen Managers und klicke unten auf den Link &quot;Diesen "
+"User ignorieren&quot;."
+msgstr ""
+
+#: ../../../freundeWerben.php:2 ../../../freundeWerben.php:4
+msgid "Freunde einladen"
+msgstr "Invite friends"
+
+#: ../../../freundeWerben.php:6
+msgid "Deine Freunde sind noch nicht beim Ballmanager?"
+msgstr ""
+
+#: ../../../freundeWerben.php:6
+msgid "Dann nutze den folgenden Link, um sie einzuladen."
+msgstr ""
+
+#: ../../../freundeWerben.php:6
+msgid ""
+"Wenn sie sich nach Deiner Empfehlung über den Link registrieren, bekommt "
+"<strong>ihr beide</strong> jeweils <strong>7,5 Mio.</strong> als Prämie aufs "
+"Vereinskonto:"
+msgstr ""
+
+#: ../../../freundeWerben.php:8
+msgid "Tipp:"
+msgstr "Hint:"
+
+#: ../../../freundeWerben.php:9
+msgid ""
+"Dein Verein erhält die Prämie, sobald der andere Manager seine Manager-"
+"Prüfung abgeschlossen hat. Voraussetzung ist allerdings, dass Dein Account "
+"und der geworbene Account nicht vom selben Computer aus gesteuert werden."
+msgstr ""
+
+#: ../../../freundeWerben.php:10
+msgid "Geworbene Manager"
+msgstr ""
+
+#: ../../../freundeWerben.php:16
+msgid "Geworben"
+msgstr ""
+
+#: ../../../freundeWerben.php:24
+msgid "Du hast bisher noch keine User geworben!"
+msgstr ""
+
+#: ../../../freundeWerben.php:32
+msgid "Prämie erhalten"
+msgstr ""
+
+#: ../../../freundeWerben.php:35
+msgid "Prämie noch nicht ausgezahlt"
+msgstr ""
+
+#: ../../../geloeschteAccounts.php:2 ../../../geloeschteAccounts.php:10
+msgid "Gelöschte Accounts"
+msgstr "Deleted accounts"
+
+#: ../../../geloeschteAccounts.php:11
+msgid ""
+"Die folgenden Accounts wurden zuletzt gelöscht. Entweder war der Manager "
+"nicht mehr aktiv oder er hat seinen Account unter &quot;Einstellungen&quot; "
+"gelöscht."
+msgstr ""
+
+#: ../../../geloeschteAccounts.php:12
+msgid "Gelöscht"
+msgstr "Deleted"
+
+#: ../../../geloeschteAccounts.php:12
+msgid "Dabei"
+msgstr ""
+
+#: ../../../geloeschteAccounts.php:12 ../../../stat_5jahresWertung.php:22
+#: ../../../stat_meiste_titel.php:71 ../../../stat_reichste_ligen.php:20
+#: ../../../stat_staerkste_ligen_a.php:20
+#: ../../../stat_staerkste_ligen_k.php:20
+#: ../../../stat_staerkste_ligen_r.php:20
+msgid "Liga"
+msgstr "League"
+
+#: ../../../geloeschterAccount.php:2 ../../../geloeschterAccount.php:4
+msgid "Gelöschter Account"
+msgstr "Deleted account"
+
+#: ../../../geloeschterAccount.php:5
+msgid ""
+"Du hast Deinen Account beim Ballmanager gelöscht. Deshalb kannst Du leider "
+"nicht mehr mitspielen."
+msgstr ""
+
+#: ../../../gesperrteTeamnamen.php:2 ../../../gesperrteTeamnamen.php:4
+msgid "Gesperrte Teamnamen"
+msgstr "Blocked team names"
+
+#: ../../../gruendeFuerLoeschung.php:2 ../../../gruendeFuerLoeschung.php:10
+msgid "Gründe für Löschung"
+msgstr "Reasons for deletion"
+
+#: ../../../gruendeFuerLoeschung.php:11
+msgid ""
+"Warum haben sich die User beim Ballmanager gelöscht? Lies nach, was ihnen "
+"gefallen und hat und was nicht."
+msgstr ""
+
+#: ../../../gruendeFuerLoeschung.php:12
+msgid "Löschdatum"
+msgstr "Date of deletion"
+
+#: ../../../gruendeFuerLoeschung.php:12
+msgid "Positiv"
+msgstr "Positive"
+
+#: ../../../gruendeFuerLoeschung.php:12
+msgid "Negativ"
+msgstr "Negative"
+
+#: ../../../index.php:315
 msgid "Kostenloser Online-Fußball-Manager"
 msgstr "Free Online Soccer Manager"
+
+#: ../../../ipInfo.php:2 ../../../ipInfo.php:42
+msgid "IP-Info"
+msgstr ""
+
+#: ../../../ipInfo.php:9
+msgid "IP-Info:"
+msgstr ""
+
+#: ../../../ipInfo.php:15
+msgid "User"
+msgstr "User"
+
+#: ../../../ipInfo.php:16 ../../../neueAccounts.php:12
+msgid "Letzter Login"
+msgstr "Last sign-in"
+
+#: ../../../kader.php:2
+msgid "Kader"
+msgstr "Squad"
+
+#: ../../../kader.php:57
+msgid "TS"
+msgstr "TS"
+
+#: ../../../kader.php:61
+msgid "PS"
+msgstr "OM"
+
+#: ../../../kader.php:62
+msgid "MW"
+msgstr "MV"
+
+#: ../../../kader.php:152
+msgid "Keine"
+msgstr "None"
+
+#: ../../../kader.php:164
+msgid ""
+"MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, PS: Pflichtspiele "
+"(Tore), MW: Marktwert in Millionen Euro"
+msgstr ""
+"PT: part of team, TS: transfer status, AG: age, OM: official matches "
+"(goals), MV: market value in million €"
+
+#: ../../../kader.php:166
+msgid "Durchgestrichen:"
+msgstr ""
+
+#: ../../../kader.php:167
+msgid "Besetzung des Kaders"
+msgstr ""
+
+#: ../../../kader.php:171
+msgid "Position"
+msgstr "Position"
+
+#: ../../../kader.php:172
+msgid "Besetzung"
+msgstr ""
+
+#: ../../../kalender.php:2
+msgid "Kalender"
+msgstr "Calendar"
+
+#: ../../../kalender.php:46
+msgid "Anstoß"
+msgstr "Kick-off"
+
+#: ../../../kalender.php:47
+msgid "Gegner"
+msgstr "Opponent"
+
+#: ../../../kalender.php:48 ../../../lig_testspiele_liste.php:45
+#: ../../../spielbericht.php:288 ../../../spielbericht.php:315
+msgid "Ergebnis"
+msgstr "Result"
+
+#: ../../../kalender.php:53
+msgid "Pokal: Vorrunde (Hinspiel)"
+msgstr "International Cup: Preliminary (First)"
+
+#: ../../../kalender.php:53
+msgid "Cup: Qualifikation"
+msgstr "National Trophy: Qualifiers"
+
+#: ../../../kalender.php:54
+msgid "Pokal: Vorrunde (Rückspiel)"
+msgstr "International Cup: Preliminary (Return)"
+
+#: ../../../kalender.php:55
+msgid "Cup: Vorrunde"
+msgstr "National Trophy: Preliminary"
+
+#: ../../../kalender.php:56
+msgid "Pokal: Achtelfinale (Hinspiel)"
+msgstr "International Cup: Last 16 (First)"
+
+#: ../../../kalender.php:57
+msgid "Pokal: Achtelfinale (Rückspiel)"
+msgstr "International Cup: Last 16 (Return)"
+
+#: ../../../kalender.php:58
+msgid "Cup: Achtelfinale"
+msgstr "National Trophy: Last 16"
+
+#: ../../../kalender.php:59
+msgid "Pokal: Viertelfinale (Hinspiel)"
+msgstr "International Cup: Quarterfinal (First)"
+
+#: ../../../kalender.php:60
+msgid "Pokal: Viertelfinale (Rückspiel)"
+msgstr "International Cup: Quarterfinal (Return)"
+
+#: ../../../kalender.php:60
+msgid "Cup: Viertelfinale"
+msgstr "National Trophy: Quarterfinal"
+
+#: ../../../kalender.php:61
+msgid "Pokal: Halbfinale (Hinspiel)"
+msgstr "International Cup: Semifinal (First)"
+
+#: ../../../kalender.php:61
+msgid "Cup: Halbfinale"
+msgstr "National Trophy: Semifinal"
+
+#: ../../../kalender.php:62
+msgid "Pokal: Halbfinale (Rückspiel)"
+msgstr "International Cup: Semifinal (Return)"
+
+#: ../../../kalender.php:63
+msgid "Cup: Finale"
+msgstr "National Trophy: Final"
+
+#: ../../../kalender.php:64
+msgid "Pokal: Finale"
+msgstr "International Cup: Final"
+
+#: ../../../lig_testspiele_liste.php:2 ../../../lig_testspiele_liste.php:37
+#: ../../../lig_testspiele_liste.php:78
+msgid "Testspiele"
+msgstr "Friendly matches"
+
+#: ../../../lig_testspiele_liste.php:14
+msgid "Spieltag auswählen"
+msgstr "Choose matchday"
+
+#: ../../../lig_testspiele_liste.php:43
+msgid "Heim"
+msgstr "Home"
+
+#: ../../../lig_testspiele_liste.php:44
+msgid "Auswärts"
+msgstr "Guest"
+
+#: ../../../ligaTausch.php:2 ../../../ligaTausch.php:4
+msgid "Liga-Tausch"
+msgstr "League swap"
+
+#: ../../../ligaTausch.php:6 ../../../ligaTauschWuensche.php:2
+#: ../../../ligaTauschWuensche.php:51 ../../../ligaTauschWuensche.php:66
+msgid "Tausch-Wünsche"
+msgstr "Swap preferences"
+
+#: ../../../ligaTausch.php:13
+msgid "Wichtig: Vor Liga-Tausch erst lesen:"
+msgstr ""
+
+#: ../../../ligaTausch.php:15
+msgid ""
+"Dann ist der Liga-Tausch genau das Richtige für Dich! Tausche einfach mit "
+"einem anderen Manager die Liga, der gerne in Deiner Liga spielen würde."
+msgstr ""
+
+#: ../../../ligaTausch.php:16
+msgid ""
+"Versendete Anfragen verfallen automatisch nach 24h. Kläre deshalb am besten "
+"vorher schon per Post mit dem anderen Manager, ob Interesse an einem Tausch "
+"besteht."
+msgstr ""
+
+#: ../../../ligaTausch.php:17
+msgid ""
+"Wenn beide Manager einem Tausch zustimmen, dann werden die Namen der Teams "
+"getauscht und Du spielst alle Wettbewerbe (Liga, Pokal, Cup und Test) für "
+"das andere Team zu Ende. Der Rest (Spieler, Konto, Titel usw.) bleibt "
+"gleich. Beachte also, dass Testspiele, die Du eventuell schon vereinbart "
+"hast, nicht zum neuen Verein mitgenommen werden."
+msgstr ""
+
+#: ../../../ligaTausch.php:29
+msgid ""
+"Der Verband erlaubt einen Liga-Tausch nur an den ersten fünf Spieltagen. "
+"Bitte warte bis zur nächsten Saison."
+msgstr ""
+
+#: ../../../ligaTausch.php:179
+msgid "Anfrage versenden"
+msgstr "Send request"
+
+#: ../../../ligaTausch.php:180
+msgid ""
+"Falls Du wirklich die Liga tauschen möchtest, gib bitte hier den Namen des "
+"Teams an, mit dem Du tauschen willst. Unbeantwortete Anfragen verfallen nach "
+"24 Stunden."
+msgstr ""
+
+#: ../../../ligaTausch.php:182
+msgid "Teamname:"
+msgstr "Team name:"
+
+#: ../../../ligaTausch.php:185
+msgid "Versendete Anfragen"
+msgstr "Sent requests"
+
+#: ../../../ligaTausch.php:193 ../../../ligaTauschWuensche.php:52
+#: ../../../stat_dauerbrenner.php:21 ../../../stat_geschichte.php:59
+#: ../../../stat_juengste_kader.php:48 ../../../stat_meiste_titel.php:68
+#: ../../../stat_meiste_zuschauer.php:48 ../../../stat_meister.php:42
+#: ../../../stat_treuesteSpieler.php:36 ../../../stat_wertvollste_teams.php:48
+#: ../../../top_manager.php:51 ../../../wio.php:6
+msgid "Team"
+msgstr "Team"
+
+#: ../../../ligaTausch.php:193
+msgid "Verfällt"
+msgstr "Expires"
+
+#: ../../../ligaTauschWuensche.php:33
+msgid "Mein Wunsch"
+msgstr "My wish"
+
+#: ../../../ligaTauschWuensche.php:34
+msgid "Liga tauschen"
+msgstr "Swap leagues"
+
+#: ../../../ligaTauschWuensche.php:39
+msgid "Kein Wunsch"
+msgstr "No preference"
+
+#: ../../../ligaTauschWuensche.php:52
+msgid "Land"
+msgstr "Country"
+
+#: ../../../ligaTauschWuensche.php:52
+msgid "Wunsch"
+msgstr "Preference"
+
+#: ../../../ligaTauschWuensche.php:63
+msgid ""
+"Jeder Eintrag wird nach 22 Tagen wieder gelöscht, kann dann aber erneut "
+"eingestellt werden."
+msgstr ""
+
+#: ../../../liveZentrale.php:2 ../../../liveZentrale.php:35
+#: ../../../liveZentrale.php:155
+msgid "LIVE-Zentrale"
+msgstr "LIVE Center"
+
+#: ../../../liveZentrale.php:36
+msgid "Zurzeit läuft leider kein Spiel, von dem live berichtet werden kann."
+msgstr ""
+
+#: ../../../liveZentrale.php:37
+msgid "Spielzeiten"
+msgstr "Playtimes"
+
+#: ../../../liveZentrale.php:37
+msgid "Cup: 10-12 Uhr"
+msgstr "National Trophy: 10:00-12:00"
+
+#: ../../../liveZentrale.php:37
+msgid "Liga: 14-16 Uhr"
+msgstr "League: 14:00-16:00"
+
+#: ../../../liveZentrale.php:37
+msgid "Pokal: 18-20 Uhr"
+msgstr "International Cup: 18:00-20:00"
+
+#: ../../../liveZentrale.php:37
+msgid "Test: 22-24 Uhr"
+msgstr "Friendly: 22:00-24:00"
+
+#: ../../../liveZentrale.php:143
+msgid "Spielbericht"
+msgstr "Match report"
+
+#: ../../../liveZentrale.php:152
+msgid "Farben:"
+msgstr "Colors:"
+
+#: ../../../liveZentrale.php:152
+msgid "Rot: LIVE, Schwarz: Beendet"
+msgstr ""
+
+#: ../../../manager_kontaktlink.php:9 ../../../manager_kontaktlink.php:19
+msgid "Freundschaft anbieten"
+msgstr "Offer friendship"
+
+#: ../../../manager_kontaktlink.php:10 ../../../manager_kontaktlink.php:16
+msgid "Diesen User ignorieren"
+msgstr "Ignore this user"
+
+#: ../../../manager_kontaktlink.php:15
+msgid "Freundschaft beenden"
+msgstr "Cancel friendship"
+
+#: ../../../manager_kontaktlink.php:20
+msgid "Diesen User nicht mehr ignorieren"
+msgstr "Stop ignoring this user"
+
+#: ../../../marktschreier.php:2
+msgid "Marktschreier"
+msgstr "Market barker"
+
+#: ../../../marktschreier.php:6
+msgid ""
+"Du möchtest dafür sorgen, dass einer Deiner Spieler verliehen wird? Du hast "
+"noch nicht genügend Angebote? Dann bist Du hier genau richtig!"
+msgstr ""
+
+#: ../../../marktschreier.php:7
+msgid ""
+"Hier kannst Du für Deine Spieler werben - und hoffen, dass Dich jemand hört. "
+"Wenn Du Erfolg haben willst, solltest Du wiederkehren - denn alte Angebote "
+"verschwinden schnell!"
+msgstr ""
+
+#: ../../../marktschreier.php:36 ../../../pokal.php:80 ../../../pokal.php:218
+msgid "Deine Nachricht"
+msgstr "Your message"
+
+#: ../../../marktschreier.php:40
+msgid "Angebote auf dem Markt"
+msgstr ""
+
+#: ../../../multiSperre.php:3 ../../../multiSperre.php:5
+msgid "Multi-Accounts"
+msgstr ""
+
+#: ../../../multiSperre.php:7
+msgid ""
+"Wir denken, dass niemand wirklich mehr als 4 Freunde oder Verwandte hat, die "
+"am selben Anschluss spielen. Um Betrug vorzubeugen, begrenzen wir das Ganze "
+"deshalb auf 4 aktive Mitspieler. Und Du hast diese Grenze leider "
+"überschritten ..."
+msgstr ""
+
+#: ../../../multiSperre.php:8
+msgid ""
+"Das bedeutet für Dich: Du kannst Dich erst mal nicht mehr einloggen. Deine "
+"Teams können also nicht mehr betreut werden. Wir bitten Dich, das zu "
+"akzeptieren."
+msgstr ""
+
+#: ../../../multiSperre.php:9
+msgid ""
+"Falls Du der Meinung bist, Du wurdest zu Unrecht gesperrt, dann kontaktiere "
+"uns bitte unter der folgenden E-Mail-Adresse:"
+msgstr ""
+
+#: ../../../namensaenderung.php:2 ../../../namensaenderung.php:23
+#: ../../../namensaenderung.php:167
+msgid "Namensänderung"
+msgstr ""
+
+#: ../../../namensaenderung.php:58
+msgid ""
+"Auf dieser Seite kannst Du den Namen Deines Vereins ändern. Du kannst den "
+"Namen einer Stadt und einen beliebigen Zusatz aus der Liste wählen, der vor "
+"oder nach dem Städtenamen stehen kann."
+msgstr ""
+
+#: ../../../namensaenderung.php:60
+msgid "Du kannst den Namen Deines Klubs nur alle 30 Tage ändern."
+msgstr ""
+
+#: ../../../neueAccounts.php:2 ../../../neueAccounts.php:10
+msgid "Neue Accounts"
+msgstr "New accounts"
+
+#: ../../../neueAccounts.php:11
+msgid ""
+"Die folgenden Accounts wurden zuletzt neu registriert. Nicht alle Manager "
+"haben schon ein Team bekommen."
+msgstr ""
+
+#: ../../../neueAccounts.php:12
+msgid "Registriert"
+msgstr "Signed up"
+
+#: ../../../neueAccounts.php:12
+msgid "Geworben von"
+msgstr ""
+
+#: ../../../neueAccounts.php:37
+msgid "Dieser Manager wurde bereits angeschrieben"
+msgstr ""
+
+#: ../../../neueAccounts.php:40
+msgid "Dieser Manager wurde bisher noch nicht angeschrieben"
+msgstr ""
+
+#: ../../../neuigkeiten.php:2 ../../../neuigkeiten.php:12
+#: ../../../neuigkeiten.php:32
+msgid "Neuigkeiten"
+msgstr "News"
+
+#: ../../../neuigkeiten.php:5
+msgid "Neuigkeiten durchsuchen"
+msgstr "Search news"
+
+#: ../../../notizen.php:2 ../../../notizen.php:49
+msgid "Notizen"
+msgstr "Notes"
+
+#: ../../../notizen.php:6
+msgid "Es sind nur 250 Zeichen erlaubt. Diese Grenze hast Du jetzt erreicht!"
+msgstr ""
+
+#: ../../../notizen.php:52
+msgid "Es werden immer nur die letzten 25 Notizen angezeigt."
+msgstr ""
+
+#: ../../../notizen.php:53
+msgid "Neue Notiz erstellen"
+msgstr "Add new note"
+
+#: ../../../passwort_vergessen.php:3 ../../../passwort_vergessen.php:106
+msgid "Passwort vergessen"
+msgstr "Forgot password"
+
+#: ../../../passwort_vergessen.php:23
+msgid ""
+"Dein neues Passwort wurde aktiviert. Du kannst Dich jetzt damit einloggen."
+msgstr ""
+
+#: ../../../passwort_vergessen.php:26
+msgid ""
+"Das Passwort konnte nicht aktiviert werden. Bitte rufe den Link noch einmal "
+"auf oder fordere ein neues Passwort an."
+msgstr ""
+
+#: ../../../passwort_vergessen.php:45
+msgid ""
+"Für diese E-Mail-Adresse wurde in den letzten 5 Stunden schon ein Passwort "
+"angefordert."
+msgstr ""
+
+#: ../../../passwort_vergessen.php:49
+msgid ""
+"Wenn Du kein neues Passwort angefordert hast, wurde diese Funktion von "
+"jemand anderem missbraucht. Die Anfrage kam von der folgenden IP-Adresse:"
+msgstr ""
+
+#: ../../../passwort_vergessen.php:97
+msgid ""
+"Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren "
+"Informationen zu."
+msgstr ""
+
+#: ../../../passwort_vergessen.php:102
+msgid ""
+"Es konnte kein User mit der angegebenen E-Mail-Adresse gefunden werden. "
+"Bitte versuche es noch einmal."
+msgstr ""
+
+#: ../../../passwort_vergessen.php:108
+msgid ""
+"Du hast Dein Passwort vergessen? Dann gib hier bitte einfach die E-Mail-"
+"Adresse ein, mit der Du Dich registriert hast. Wir schicken Dir dann eine E-"
+"Mail mit weiteren Informationen, damit Du ein neues Passwort wählen kannst."
+msgstr ""
+
+#: ../../../passwort_vergessen.php:109
+msgid "Wichtig:"
+msgstr "Important:"
+
+#: ../../../passwort_vergessen.php:109
+msgid ""
+"Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang "
+"gültig. Danach musst Du die E-Mail erneut anfordern."
+msgstr ""
+
+#: ../../../passwort_vergessen.php:111
+msgid "E-Mail-Adresse:"
+msgstr "Email address:"
+
+#: ../../../pokal.php:2 ../../../pokal.php:66 ../../../pokal.php:242
+msgid "Internationaler Pokal"
+msgstr "International Cup"
+
+#: ../../../pokal.php:67
+msgid ""
+"Für diesen Wettbewerb qualifizieren sich die 32 besten Teams des Spiels. Das "
+"sind alle Erstplatzierten, alle Zweitplatzierten und dazu die sechs besten "
+"Drittplatzierten."
+msgstr ""
+
+#: ../../../pokal.php:68
+msgid ""
+"Es gibt fünf Runden, die jeweils ausgelost werden. In einem Hin- und einem "
+"Rückspiel mit Auswärtstorregel ermitteln die Teams den Sieger, der dann die "
+"nächste Runde erreicht."
+msgstr ""
+
+#: ../../../pokal.php:84 ../../../pokal.php:222
+msgid "Manager-Talk"
+msgstr "Manager talk"
+
+#: ../../../pokal.php:196
+msgid "Spiele mit Beteiligung aus dem eigenen Land werden grau hinterlegt."
+msgstr ""
+
+#: ../../../postausgang.php:2 ../../../postausgang.php:30
+msgid "Postausgang"
+msgstr "Outbox"
+
+#: ../../../postausgang.php:30
+msgid "Posteingang"
+msgstr "Inbox"
+
+#: ../../../postausgang.php:37
+msgid "Betreff"
+msgstr "Subject"
+
+#: ../../../postausgang.php:38
+msgid "Empfänger"
+msgstr "Recipient"
+
+#: ../../../regeln.php:2 ../../../zz3.php:7
+msgid "Regeln"
+msgstr "Rules"
+
+#: ../../../regeln.php:17
+msgid "Regeln akzeptieren"
+msgstr "Accept rules"
+
+#: ../../../regeln.php:20
+msgid "Bitte bestätigen"
+msgstr "Please confirm"
+
+#: ../../../regeln.php:21
+msgid "Ich habe die unten stehenden Regeln gelesen"
+msgstr ""
+
+#: ../../../regeln.php:25
+msgid ""
+"Du kannst leider nur am Spiel teilnehmen, wenn Du unsere aktuellen Regeln "
+"akzeptierst. Ansonsten empfehlen wir Dir, Deinen Account unter &quot;"
+"Einstellungen&quot; zu löschen."
+msgstr ""
+
+#: ../../../regeln.php:30
+msgid "Nutzungsregeln"
+msgstr ""
+
+#: ../../../regeln.php:31
+msgid ""
+"Diese Nutzungsbedingungen (&quot;Regeln&quot;) legen fest, wie Du (&quot;der "
+"User&quot;) die Webseite unter www.ballmanager.de (&quot;Ballmanager&quot;) "
+"nutzen darfst. Mit der Nutzung dieser Webseite erklärst Du, dass Du mit den "
+"Regeln auf dieser Seite einverstanden bist."
+msgstr ""
+
+#: ../../../regeln.php:32
+msgid ""
+"Bitte lies die Regeln sorgfältig durch, denn sie müssen eingehalten werden, "
+"damit alles fair bleibt und jeder Spaß am Spiel hat."
+msgstr ""
+
+#: ../../../regeln.php:33
+msgid "Teil I: Allgemeines Verhalten"
+msgstr ""
+
+#: ../../../regeln.php:35
+msgid ""
+"Pro Person ist nur ein einziger Account (Benutzerkonto) erlaubt. Freunde und "
+"Verwandte dürfen natürlich mitspielen, auch wenn sie vom gleichen "
+"Internetanschluss aus spielen."
+msgstr ""
+
+#: ../../../regeln.php:36
+msgid ""
+"Im Spiel kann mit anderen Usern kommuniziert werden. Dabei sollte man auf "
+"einen höflichen Umgangston achten und sich an die <a href=\"http://de."
+"wikipedia.org/wiki/Netiquette\">Netiquette</a> halten."
+msgstr ""
+
+#: ../../../regeln.php:37
+msgid ""
+"Du darfst andere User nicht diskriminieren, etwa wegen ihrer Herkunft, ihrer "
+"Hautfarbe, ihres Geschlechts oder ihrer Religion."
+msgstr ""
+
+#: ../../../regeln.php:38
+msgid ""
+"Die Veröffentlichung privater Inhalte (Post etc.) oder realer Namen von "
+"anderen Usern ohne deren Einverständnis ist nicht gestattet."
+msgstr ""
+
+#: ../../../regeln.php:39
+msgid ""
+"Team-Mitglieder dürfen nicht (persönlich) angegriffen werden, ihre "
+"Entscheidungen sind zu akzeptieren."
+msgstr ""
+
+#: ../../../regeln.php:40
+msgid ""
+"Kritik im Forum muss sachlich erfolgen und darf keine persönliche Wertung "
+"enthalten. Jeder soll sich seine Meinung selbst bilden können, &quot;"
+"Meinungsmache&quot; ist nicht erwünscht."
+msgstr ""
+
+#: ../../../regeln.php:41
+msgid ""
+"Du versicherst, dass Du andere Personen (vor allem andere User) nicht "
+"beleidigen oder belästigen wirst."
+msgstr ""
+
+#: ../../../regeln.php:42
+msgid ""
+"Du bist dazu verpflichtet, Deine Zugangsdaten zu schützen und diese geheim "
+"zu halten, sodass Dritte keinen Zugang zu Deinem Account haben."
+msgstr ""
+
+#: ../../../regeln.php:43
+msgid ""
+"Der Missbrauch der Melden-Funktion im Chat (REPORT Username) ist verboten."
+msgstr ""
+
+#: ../../../regeln.php:44
+msgid "Politische Diskussionen sind in keinem Bereich der Webseite gestattet."
+msgstr ""
+
+#: ../../../regeln.php:45
+msgid "Es ist verboten, bewusst falsche Informationen zu verbreiten."
+msgstr ""
+
+#: ../../../regeln.php:46
+msgid ""
+"Das Einstellen von jugendgefährdenden, gewaltverherrlichenden oder in "
+"sonstiger Weise rechtsverletzenden Inhalten ist strengstens verboten."
+msgstr ""
+
+#: ../../../regeln.php:47
+msgid ""
+"In allen Bereichen, in denen öffentlich kommuniziert werden kann, sind nur "
+"deutsche und englische Mitteilungen erlaubt. Denn die Kommunikation soll für "
+"jeden User nachvollziehbar bleiben."
+msgstr ""
+
+#: ../../../regeln.php:49
+msgid "Teil II: Verhalten in der Spielwelt"
+msgstr ""
+
+#: ../../../regeln.php:51
+msgid ""
+"Transfers mit anderen Nutzern, die vom selben Internetanschluss aus spielen, "
+"sind nicht gestattet."
+msgstr ""
+
+#: ../../../regeln.php:52
+msgid ""
+"Es ist nicht erlaubt, bei der Wahl zum <i>Manager der Saison</i> für Manager "
+"abzustimmen, die vom selben Internetanschluss aus spielen."
+msgstr ""
+
+#: ../../../regeln.php:53
+msgid ""
+"Es ist verboten, absichtlich schwache (oder sogar unvollständige) "
+"Aufstellungen einzustellen, um anderen Teams dadurch einen Vorteil zu "
+"verschaffen."
+msgstr ""
+
+#: ../../../regeln.php:54
+msgid ""
+"Das Ausnutzen von Fehlern in der Programmierung (&quot;Bugs&quot;) ist "
+"verboten. Die Fehler sollten sofort gemeldet werden."
+msgstr ""
+
+#: ../../../regeln.php:55
+msgid ""
+"Es dürfen keine Spieler (virtuell) von Teams gekauft oder geliehen werden, "
+"die jemandem gehören, der am gleichen Internetanschluss spielt."
+msgstr ""
+
+#: ../../../regeln.php:56
+msgid ""
+"Es darf kein Ligatausch mit Teams durchgeführt werden, die jemandem gehören, "
+"der am gleichen Internetanschluss spielt."
+msgstr ""
+
+#: ../../../regeln.php:57
+msgid ""
+"Es ist nicht gestattet, andere User nach ihrer Scout-Schätzung zu fragen."
+msgstr ""
+
+#: ../../../regeln.php:58
+msgid "Zwischen zwei Teams darf es pro Saison höchstens zwei Transfers geben."
+msgstr ""
+
+#: ../../../regeln.php:60
+msgid "Teil III: Verbotene Usernamen"
+msgstr ""
+
+#: ../../../regeln.php:62
+msgid "obszöne Usernamen"
+msgstr ""
+
+#: ../../../regeln.php:63
+msgid "Usernamen, die beleidigend gegenüber Personen oder Gruppen sind"
+msgstr ""
+
+#: ../../../regeln.php:64
+msgid "rassistische Usernamen"
+msgstr ""
+
+#: ../../../regeln.php:65
+msgid "Usernamen, die Internetadressen enthalten"
+msgstr ""
+
+#: ../../../regeln.php:66
+msgid "Usernamen, die dem Namen eines realen Vereins ähneln"
+msgstr ""
+
+#: ../../../regeln.php:68
+msgid "Teil IV: Aufgaben und Funktion des Ballmanager-Teams"
+msgstr ""
+
+#: ../../../regeln.php:70
+msgid ""
+"Sämtliche Inhalte, die von Usern selbst eingestellt wurden, können vom Team "
+"ohne Angabe von Gründen gelöscht werden."
+msgstr ""
+
+#: ../../../regeln.php:71
+msgid ""
+"Das Team legt Sanktionen fest, wenn begründeter Verdacht eines Verstoßes "
+"gegen die hier aufgelisteten Regeln besteht. Es kann auch der Zugriff auf "
+"bestimmte Funktionen des Spiels gesperrt werden."
+msgstr ""
+
+#: ../../../regeln.php:72
+msgid ""
+"Usernamen können vom Team geändert werden, sofern sie gegen <i>Regel III</i> "
+"verstoßen."
+msgstr ""
+
+#: ../../../regeln.php:73
+msgid "Das Team unterstützt User bei Fragen oder Problemen."
+msgstr ""
+
+#: ../../../regeln.php:74
+msgid ""
+"Unangebrachte (rechtsverletzende) Inhalte werden vom Team entfernt, sobald "
+"es in Kenntnis gesetzt wurde."
+msgstr ""
+
+#: ../../../regeln.php:75
+msgid ""
+"Das Team soll immer mit gutem Beispiel vorangehen, geduldig und fair sein."
+msgstr ""
+
+#: ../../../regeln.php:76
+msgid ""
+"Jedes Teammitglied muss gegenüber den anderen Usern der Community Respekt in "
+"Wort und Tat zeigen."
+msgstr ""
+
+#: ../../../regeln.php:78
+msgid "Teil V: Ballmanager"
+msgstr ""
+
+#: ../../../regeln.php:80
+msgid ""
+"Alle Geldwerte im Spiel sind Teil der virtuellen Währung. Eine Auszahlung "
+"dieses Guthabens ist ausgeschlossen."
+msgstr ""
+
+#: ../../../regeln.php:81
+msgid ""
+"Alle Vereine, Spieler und Sponsoren sowie deren Namen sind frei erfunden und "
+"haben keinen Bezug zu realen Ligen."
+msgstr ""
+"All clubs, players and sponsors as well as their names are fictitious and "
+"bear no relation to real leagues."
+
+#: ../../../regeln.php:82
+msgid ""
+"Das Spiel wird ständig weiterentwickelt und Funktionen verändert, "
+"hinzugefügt oder entfernt."
+msgstr ""
+
+#: ../../../regeln.php:83
+msgid ""
+"Ballmanager behält sich vor, den Zugang ohne Angabe von Gründen zu sperren "
+"bzw. Accounts zu löschen. Dabei ist auch keine Benachrichtigung im Voraus "
+"nötig."
+msgstr ""
+
+#: ../../../regeln.php:84
+msgid ""
+"Es wird keine Garantie für die Verfügbarkeit des Spiels übernommen. Es gibt "
+"keinen Anspruch auf bestimmte Funktionen oder deren Aktualisierung."
+msgstr ""
+
+#: ../../../regeln.php:85
+msgid ""
+"Für alle Aktivitäten, die mit einem Account stattfinden, ist ausschließlich "
+"der User verantwortlich, der diesen Account registriert hat. Zu diesen "
+"Aktivitäten zählen vor allem selbst eingestellte Beiträge und die "
+"Kommunikation im Spiel."
+msgstr ""
+
+#: ../../../regeln.php:86
+msgid ""
+"Es wird keine Gewähr für die Richtigkeit, Aktualität und Vollständigkeit der "
+"bereitgestellten Informationen übernommen."
+msgstr ""
+
+#: ../../../regeln.php:87
+msgid ""
+"Diese Webseite (und auch jeder Teil davon) darf ausschließlich mit "
+"Webbrowsern aufgerufen werden. Die Verwendung von anderen Programmen ist "
+"nicht gestattet."
+msgstr ""
+
+#: ../../../regeln.php:88
+msgid "Ballmanager behält sich vor, diese Regeln jederzeit ändern zu können."
+msgstr ""
+
+#: ../../../regeln.php:90 ../../../zz3.php:9
+msgid "Datenschutz"
+msgstr "Privacy Policy"
+
+#: ../../../regeln.php:91
+msgid "Keine Weitergabe der Daten:"
+msgstr ""
+
+#: ../../../regeln.php:92
+msgid ""
+"Die Betreiber der Webseite unter www.ballmanager.de (&quot;"
+"Ballmanager&quot;) geben grundsätzlich keine Daten von Benutzern an Dritte "
+"weiter. Ausnahmen sind Fälle, in denen Ballmanager.de gesetzlich oder durch "
+"Entscheidungen von Gerichten dazu verpflichtet ist, und Fälle, in denen die "
+"Daten zur Strafverfolgung benötigt werden."
+msgstr ""
+
+#: ../../../regeln.php:93
+msgid "Akzeptieren der Datenschutzerklärung:"
+msgstr ""
+
+#: ../../../regeln.php:94
+msgid ""
+"Mit dem Nutzen dieser Webseite erklärt sich der User mit dieser "
+"Datenschutzerklärung einverstanden. Die Verarbeitung und Nutzung der "
+"personenbezogenen Daten wird gemäß dieser Datenschutzerklärung und der "
+"gesetzlichen Bestimmungen durchgeführt."
+msgstr ""
+
+#: ../../../regeln.php:95
+msgid "IP-Adresse"
+msgstr "IP address"
+
+#: ../../../regeln.php:96
+msgid ""
+"Beim Aufrufen, Lesen und Benutzen von Seiten unter www.ballmanager.de wird "
+"die IP-Adresse des Users in anonymisierter Form gespeichert. Zum einen wird "
+"die aktuelle IP-Adresse als MD5-Hash (Beispiel: "
+"d41d8cd98f00b204e9800998ecf8427e) gespeichert. Zum anderen wird die IP-"
+"Adresse gespeichert, nachdem die letzten beiden Oktetts gelöscht wurden "
+"(Beispiel: 123.123.XXX.XXX)."
+msgstr ""
+
+#: ../../../regeln.php:97
+msgid "User-Agent"
+msgstr "User Agent"
+
+#: ../../../regeln.php:98
+msgid ""
+"Der User-Agent-Header des Webbrowsers wird bei jedem Besuch gespeichert."
+msgstr ""
+
+#: ../../../regeln.php:99
+msgid "Persönliche Daten bei der Registrierung"
+msgstr ""
+
+#: ../../../regeln.php:100
+msgid "Bei der Registrierung werden die folgenden Daten gespeichert:"
+msgstr ""
+
+#: ../../../regeln.php:102
+msgid "Benutzername"
+msgstr "Username"
+
+#: ../../../regeln.php:103
+msgid "Passwort"
+msgstr "Password"
+
+#: ../../../regeln.php:106
+msgid ""
+"Diese Daten sind erforderlich, damit die Registrierung möglich ist danach "
+"weitere Funktionen zur Verfügung stehen. Diese Informationen können aber "
+"vollständig entfernt werden, indem der eigene Account gelöscht wird."
+msgstr ""
+
+#: ../../../regeln.php:107
+msgid "Protokoll-Dateien:"
+msgstr ""
+
+#: ../../../regeln.php:108
+msgid ""
+"In Verbindung mit Protokoll-Dateien werden die folgenden Daten über jeden "
+"Besucher gespeichert:"
+msgstr ""
+
+#: ../../../regeln.php:110
+msgid "abgerufene Dateien/Seiten"
+msgstr ""
+
+#: ../../../regeln.php:111
+msgid "Datum und Uhrzeit der Abrufe"
+msgstr ""
+
+#: ../../../regeln.php:112
+msgid "Status der Abrufe (Erfolg / Fehler)"
+msgstr ""
+
+#: ../../../regeln.php:113
+msgid "Menge der übertragenen Daten"
+msgstr ""
+
+#: ../../../regeln.php:114
+msgid "gesendeter User-Agent-Header"
+msgstr ""
+
+#: ../../../regeln.php:116
+msgid ""
+"Alle diese Daten werden jedoch anonym gespeichert. Das bedeutet, dass die IP-"
+"Adresse nicht dazu gespeichert wird und die oben genannten Daten nicht mit "
+"dem Besucher in Verbindung gebracht werden können."
+msgstr ""
+
+#: ../../../regeln.php:117
+msgid "Drittanbieter:"
+msgstr ""
+
+#: ../../../regeln.php:118
+msgid ""
+"Wir greifen auf Amazon als Drittanbieter zurück, um Anzeigen zu schalten, "
+"wenn Sie unsere Website besuchen. Lesen Sie dazu bitte auch die <a href="
+"\"http://www.amazon.de/gp/help/customer/display.html?"
+"ie=UTF8&nodeId=3312401\">Datenschutzerklärung von Amazon</a>."
+msgstr ""
+
+#: ../../../regeln.php:120
+msgid ""
+"Diese Website benutzt Google Analytics, einen Webanalysedienst der Google "
+"Inc. (&quot;Google&quot;). Google Analytics verwendet sog. &quot;"
+"Cookies&quot;, Textdateien, die auf Ihrem Computer gespeichert werden und "
+"eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den "
+"Cookie erzeugten Informationen über Ihre Benutzung dieser Website "
+"(einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA "
+"übertragen und dort gespeichert. Google wird diese Informationen benutzen, "
+"um Ihre Nutzung der Website auszuwerten, um Reports über die "
+"Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere "
+"mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen "
+"zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte "
+"übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese "
+"Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-"
+"Adresse mit anderen Daten von Google in Verbindung bringen. Sie können die "
+"Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser-"
+"Software verhindern. Wir weisen Sie allerdings darauf hin, dass Sie in "
+"diesem Fall möglicherweise nicht alle Funktionen dieser Website in vollem "
+"Umfang nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit "
+"der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor "
+"beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden. "
+"Der Datenerhebung und -speicherung <a href=\"http://tools.google.com/dlpage/"
+"gaoptout?hl=de\">kann jederzeit mit Wirkung für die Zukunft widersprochen "
+"werden</a>. Angesichts der Diskussion um den Einsatz von Analysetools mit "
+"vollständigen IP-Adressen möchten wir darauf hinweisen, dass diese Website "
+"Google Analytics mit der Erweiterung &quot;anonymizeIp&quot; verwendet und "
+"daher IP-Adressen nur gekürzt weiterverarbeitet werden, um eine direkte "
+"Personenbeziehbarkeit auszuschließen."
+msgstr ""
+
+#: ../../../regeln.php:122
+msgid ""
+"Da auf dieser Seite teilweise Werbung durch Google Adsense angezeigt wird, "
+"speichert Ihr Browser eventuell ein von Google Inc. oder Dritten gesendetes "
+"Cookie. Dieses Cookie kann durch Google Inc. oder Dritte ausgelesen werden. "
+"Um dieses Cookie zu löschen oder die Cookiebehandlung generell zu verändern, "
+"konsultieren Sie bitte die Hilfe Ihres Browsers. In der Regel finden sich "
+"diese Einstellungen unter Extras &raquo; Einstellungen &raquo; Datenschutz "
+"(Firefox) oder unter Extras &raquo; Internetoptionen &raquo; Datenschutz "
+"(Internet Explorer)."
+msgstr ""
+
+#: ../../../regeln.php:123
+msgid "Änderungen an dieser Datenschutzerklärung:"
+msgstr ""
+
+#: ../../../regeln.php:124
+msgid ""
+"Ballmanager behält sich vor, jederzeit Änderungen an dieser "
+"Datenschutzerklärung durchzuführen."
+msgstr ""
+
+#: ../../../regeln.php:125
+msgid "Verlinkte Webseiten:"
+msgstr ""
+
+#: ../../../regeln.php:126
+msgid ""
+"Auf den einzelnen Seiten dieses Projekts sind verschiedene externe Webseiten "
+"verlinkt. Für diese Seiten gilt die obige Erklärung nicht und Ballmanager "
+"ist nicht für die Seiten verantwortlich."
+msgstr ""
+
+#: ../../../regeln.php:127
+msgid "Weitere Informationen:"
+msgstr ""
+
+#: ../../../registrieren.php:4 ../../../registrieren.php:6
+msgid "Registrierung - Daten prüfen"
+msgstr ""
+
+#: ../../../registrieren.php:73
+msgid ""
+"Dein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30)."
+msgstr ""
+
+#: ../../../registrieren.php:76 ../../../registrieren.php:80
+#: ../../../registrieren.php:84
+msgid "Bitte klicke hier und versuche es noch einmal."
+msgstr ""
+
+#: ../../../registrieren.php:79
+msgid "Du hast keine gültige E-Mail-Adresse angegeben."
+msgstr ""
+
+#: ../../../registrieren.php:83
+msgid "E-Mail-Adressen von diesem Anbieter können leider nicht genutzt werden."
+msgstr ""
+
+#: ../../../registrieren.php:91
+msgid "Dein Team und die Liga kannst Du Dir beim ersten Login frei aussuchen."
+msgstr ""
+
+#: ../../../registrieren.php:93
+msgid ""
+"Du kannst die Registrierung an dieser Stelle noch abbrechen. Deine Daten "
+"wurden noch nicht gespeichert."
+msgstr ""
+
+#: ../../../spielbericht.php:115
+msgid "Zur LIVE-Zentrale"
+msgstr ""
+
+#: ../../../spielbericht.php:258
+msgid "Herzlich willkommen im Stadion. Heute findet das Spiel zwischen "
+msgstr ""
+
+#: ../../../spielbericht.php:282
+msgid "Bereich"
+msgstr "Section"
+
+#: ../../../spielbericht.php:283
+msgid "Wert"
+msgstr "Value"
+
+#: ../../../spielbericht.php:287
+msgid "Begegnung"
+msgstr ""
+
+#: ../../../spielbericht.php:290
+msgid "Wettbewerb"
+msgstr ""
+
+#: ../../../spielbericht.php:291
+msgid "Zuschauer"
+msgstr "Audience"
+
+#: ../../../spielbericht.php:292
+msgid "Tore (Heim)"
+msgstr "Goals (home)"
+
+#: ../../../spielbericht.php:293
+msgid "Tore (Auswärts)"
+msgstr "Goals (guest)"
+
+#: ../../../spielbericht.php:294
+msgid "Ballbesitz"
+msgstr "Ball possession"
+
+#: ../../../spielbericht.php:295
+msgid "Fouls"
+msgstr "Foul plays"
+
+#: ../../../spielbericht.php:296
+msgid "Abseits"
+msgstr "Offside"
+
+#: ../../../spielbericht.php:297
+msgid "Schüsse"
+msgstr "Shots"
+
+#: ../../../spielbericht.php:298
+msgid "Gelb (Heim)"
+msgstr "Yellow cards (home)"
+
+#: ../../../spielbericht.php:299
+msgid "Gelb (Auswärts)"
+msgstr "Yellow cards (guest)"
+
+#: ../../../spielbericht.php:300
+msgid "Rot (Heim)"
+msgstr "Red cards (home)"
+
+#: ../../../spielbericht.php:301
+msgid "Rot (Auswärts)"
+msgstr "Red cards (guest)"
+
+#: ../../../spielbericht.php:307
+msgid "Kommentar des Reporters"
+msgstr ""
+
+#: ../../../spielbericht.php:313
+msgid "Mögliche RKP-Veränderungen"
+msgstr ""
+
+#: ../../../spieler_historie.php:19 ../../../spieler_historie.php:21
+msgid "Spieler-Historie:"
+msgstr ""
+
+#: ../../../spieler_historie.php:23
+msgid "Zum Spieler-Profil"
+msgstr "Go to player's profile"
+
+#: ../../../spieler_historie.php:28 ../../../stat_ligaTausch.php:14
+msgid "Von"
+msgstr "From"
+
+#: ../../../spieler_historie.php:29
+msgid "Zu"
+msgstr "To"
+
+#: ../../../spieler_historie.php:30 ../../../stat_transfer_uebersicht.php:42
+msgid "Ablöse"
+msgstr "Transfer fee"
+
+#: ../../../spieler_historie.php:91
+msgid "Letzte Gebote [Sichtbar fürs Team]"
+msgstr ""
+
+#: ../../../spieler_historie.php:96
+msgid "Bieter-IP"
+msgstr ""
+
+#: ../../../spieler_historie.php:97 ../../../ver_buchungen.php:13
+msgid "Betrag"
+msgstr "Amount"
+
+#: ../../../stat_5jahresWertung.php:2 ../../../stat_5jahresWertung.php:13
+#: ../../../zzsubnav_statistik.php:6
+msgid "5-Jahres-Wertung"
+msgstr "5-year ranking"
+
+#: ../../../stat_5jahresWertung.php:15
+msgid ""
+"Auf dieser Seite sind alle ersten Ligen aufgelistet, sortiert nach ihrem "
+"Erfolg im Pokal. Dabei zählen die Punkte, die die Teams in den letzten 5 "
+"Saisons geholt haben."
+msgstr ""
+
+#: ../../../stat_5jahresWertung.php:16
+msgid ""
+"Für einen Sieg im Pokal bekommt jedes Land 2 Punkte, für ein Unentschieden 1 "
+"Punkt. Die Punktzahl wird am Ende durch die Anzahl der Teams für das Land "
+"geteilt."
+msgstr ""
+
+#: ../../../stat_5jahresWertung.php:17
+msgid ""
+"Auf Grundlage dieser 5-Jahres-Wertung werden die Startplätze im Pokal "
+"vergeben: Die ersten 6 Länder bekommen 3 Startplätze, die restlichen Länder "
+"2."
+msgstr ""
+
+#: ../../../stat_5jahresWertung.php:23
+msgid "GES"
+msgstr ""
+
+#: ../../../stat_5jahresWertung.php:58
+msgid "Erklärungen:"
+msgstr ""
+
+#: ../../../stat_5jahresWertung.php:58
+msgid ""
+"Die erste Spalte gibt die Platzierung an, die zweite die Liga, die dritte "
+"(&quot;GES&quot;) die Gesamtpunktzahl der letzten 5 Saisons und die "
+"folgenden fünf Spalten die einzelnen Punktzahlen für die letzten Saisons."
+msgstr ""
+
+#: ../../../stat_5jahresWertung.php:59
+msgid ""
+"Bei Punktgleichheit (GES) zwischen zwei Ländern entscheidet das neueste "
+"Saisonergebnis, in dem es eine Differenz gibt."
+msgstr ""
+
+#: ../../../stat_cupsieger.php:2 ../../../stat_cupsieger.php:39
+#: ../../../stat_cupsieger.php:68
+msgid "Cupsieger"
+msgstr "National Trophy winners"
+
+#: ../../../stat_cupsieger.php:40
+msgid "Welches Teams haben den Cup schon gewonnen? Wer war ihr Finalgegner?"
+msgstr ""
+
+#: ../../../stat_cupsieger.php:45 ../../../stat_meister.php:41
+#: ../../../stat_pokalsieger.php:19
+msgid "Saison"
+msgstr "Season"
+
+#: ../../../stat_cupsieger.php:46 ../../../stat_pokalsieger.php:20
+msgid "Sieger"
+msgstr "Winner"
+
+#: ../../../stat_cupsieger.php:47 ../../../stat_pokalsieger.php:21
+msgid "Finalgegner"
+msgstr "Opponent in the final"
+
+#: ../../../stat_dauerbrenner.php:2 ../../../stat_dauerbrenner.php:13
+#: ../../../stat_dauerbrenner.php:64 ../../../zzsubnav_statistik.php:8
+msgid "Dauerbrenner"
+msgstr "Most reliable players"
+
+#: ../../../stat_dauerbrenner.php:14
+msgid ""
+"Welche Spieler hatten die meisten Einsätze in dieser Saison? Wer ist am "
+"häufigsten für sein Team aufgelaufen?"
+msgstr ""
+
+#: ../../../stat_dauerbrenner.php:22 ../../../stat_treuesteSpieler.php:37
+msgid "Einsätze"
+msgstr "Appearances"
+
+#: ../../../stat_ergebnisverlauf.php:2 ../../../stat_ergebnisverlauf.php:6
+#: ../../../stat_ergebnisverlauf.php:68 ../../../zzsubnav_statistik.php:9
+msgid "Ergebnisverlauf"
+msgstr "Course of results"
+
+#: ../../../stat_ergebnisverlauf.php:7
+msgid ""
+"Dieses Liniendiagramm zeigt die Entwicklung Deiner Ergebnisse in der "
+"aktuellen Saison. Hinweis: Die Daten können erst nach zwei Spielen angezeigt "
+"werden."
+msgstr ""
+
+#: ../../../stat_ergebnisverlauf.php:59 ../../../stat_ergebnisverlauf.php:63
+#: ../../../stat_saisonverlauf.php:36 ../../../stat_saisonverlauf.php:40
+#: ../../../stat_zuschauerverlauf.php:37
+msgid "Noch keine Daten verfügbar!"
+msgstr ""
+
+#: ../../../stat_geldwert.php:2 ../../../stat_geldwert.php:6
+#: ../../../stat_geldwert.php:77 ../../../zzsubnav_statistik.php:26
+msgid "Wert des Geldes"
+msgstr "Value of money"
+
+#: ../../../stat_geschichte.php:2 ../../../stat_geschichte.php:52
+#: ../../../stat_geschichte.php:81 ../../../zzsubnav_statistik.php:10
+msgid "Geschichte"
+msgstr "History"
+
+#: ../../../stat_geschichte.php:6
+msgid "Tabelle wählen"
+msgstr "Choose standings"
+
+#: ../../../stat_geschichte.php:53
+msgid ""
+"Hier kannst Du Dir die Tabellen aller Ligen von jedem Spieltag der letzten "
+"Saisons ansehen."
+msgstr ""
+
+#: ../../../stat_geschichte.php:58
+msgid "Platz"
+msgstr "Rank"
+
+#: ../../../stat_geschichte.php:60 ../../../stat_meister.php:43
+msgid "Punkte"
+msgstr "Points"
+
+#: ../../../stat_geschichte.php:61 ../../../stat_meister.php:44
+#: ../../../stat_torjaegerliste.php:57
+msgid "Tore"
+msgstr "Goals"
+
+#: ../../../stat_geschichte.php:62
+msgid "Differenz"
+msgstr "Difference"
+
+#: ../../../stat_juengste_kader.php:2 ../../../stat_juengste_kader.php:41
+#: ../../../stat_juengste_kader.php:68 ../../../zzsubnav_statistik.php:13
+msgid "Jüngste Kader"
+msgstr "Youngest squads"
+
+#: ../../../stat_juengste_kader.php:16 ../../../stat_meiste_titel.php:16
+#: ../../../stat_meiste_zuschauer.php:16 ../../../stat_torjaegerliste.php:24
+#: ../../../stat_transfer_uebersicht.php:9
+#: ../../../stat_wertvollste_spieler.php:16
+#: ../../../stat_wertvollste_teams.php:16
+msgid "Alle Ligen"
+msgstr "All leagues"
+
+#: ../../../stat_juengste_kader.php:42
+msgid ""
+"Welche Vereine setzen am stärksten auf die Jugend? Die folgende Liste zeigt "
+"die Teams mit den jüngsten Kadern. Bedingung: mindestens 17 Spieler im Kader."
+msgstr ""
+
+#: ../../../stat_ligaTausch.php:2 ../../../stat_ligaTausch.php:5
+#: ../../../zzsubnav_statistik.php:11
+msgid "Getauschte Ligen"
+msgstr "Changed leagues"
+
+#: ../../../stat_ligaTausch.php:7
+msgid ""
+"Welcher Manager ist wann in welches Land gegangen? Mit welchem Team hat er "
+"getauscht?"
+msgstr ""
+
+#: ../../../stat_ligaTausch.php:15
+msgid "Nach"
+msgstr ""
+
+#: ../../../stat_meiste_titel.php:2 ../../../stat_meiste_titel.php:41
+#: ../../../stat_meiste_titel.php:91 ../../../zzsubnav_statistik.php:14
+msgid "Meiste Titel"
+msgstr "Most triumphs"
+
+#: ../../../stat_meiste_titel.php:13 ../../../stat_meiste_zuschauer.php:13
+#: ../../../stat_meister.php:13 ../../../stat_torjaegerliste.php:21
+#: ../../../stat_transfer_uebersicht.php:6
+#: ../../../stat_wertvollste_spieler.php:13
+#: ../../../stat_wertvollste_teams.php:13
+msgid "Liga wählen"
+msgstr "Choose league"
+
+#: ../../../stat_meiste_titel.php:61
+msgid ""
+"In dieser Tabelle sind die 20 Teams mit den meisten gewonnenen Titeln "
+"aufgelistet. Pokalsiege, Cupsiege und Meisterschaften werden für das Ranking "
+"einfach addiert."
+msgstr ""
+
+#: ../../../stat_meiste_titel.php:69
+msgid "Titel"
+msgstr ""
+
+#: ../../../stat_meiste_titel.php:70
+msgid "Cup"
+msgstr "National Trophy"
+
+#: ../../../stat_meiste_titel.php:72
+msgid "Pokal"
+msgstr "International Cup"
+
+#: ../../../stat_meiste_zuschauer.php:2 ../../../stat_meiste_zuschauer.php:41
+#: ../../../stat_meiste_zuschauer.php:87 ../../../zzsubnav_statistik.php:15
+msgid "Meiste Zuschauer"
+msgstr "Largest audience"
+
+#: ../../../stat_meiste_zuschauer.php:42
+msgid ""
+"Hier sind die Teams mit dem höchsten Zuschauerschnitt in der aktuellen "
+"Saison aufgelistet."
+msgstr ""
+
+#: ../../../stat_meiste_zuschauer.php:49
+msgid "Zuschauer i.D."
+msgstr "Average audience"
+
+#: ../../../stat_meister.php:2 ../../../stat_meister.php:35
+#: ../../../stat_meister.php:63 ../../../zzsubnav_statistik.php:16
+msgid "Meister"
+msgstr "Champions"
+
+#: ../../../stat_meister.php:36
+msgid ""
+"Wer wurde in meiner Liga in den letzten Saisons Meister? Wie viele Punkte "
+"hatten diese Teams jeweils?"
+msgstr ""
+
+#: ../../../stat_pokalsieger.php:2 ../../../stat_pokalsieger.php:12
+msgid "Pokalsieger"
+msgstr "International Cup winners"
+
+#: ../../../stat_pokalsieger.php:14
+msgid "Welches Teams haben den Pokal schon gewonnen? Wer war ihr Finalgegner?"
+msgstr ""
+
+#: ../../../stat_reichste_ligen.php:2 ../../../zzsubnav_statistik.php:18
+msgid "Reichste Ligen"
+msgstr "Wealthiest leagues"
+
+#: ../../../stat_reichste_ligen.php:14
+msgid ""
+"In welcher Liga spielen die reichsten Teams? Diese Statistik zeigt den "
+"Durschnitt der Kontostände."
+msgstr ""
+
+#: ../../../stat_reichste_ligen.php:21
+msgid "Durchschnitt"
+msgstr "Average"
+
+#: ../../../stat_saisonverlauf.php:2 ../../../stat_saisonverlauf.php:6
+#: ../../../stat_saisonverlauf.php:45 ../../../zzsubnav_statistik.php:19
+msgid "Saisonverlauf"
+msgstr "Course of season"
+
+#: ../../../stat_saisonverlauf.php:7
+msgid ""
+"Dieses Liniendiagramm zeigt die Entwicklung Deines Tabellenplatzes in der "
+"aktuellen Saison. Hinweis: Die Daten können erst nach zwei Spielen angezeigt "
+"werden."
+msgstr ""
+
+#: ../../../stat_staerkste_ligen_a.php:2
+#: ../../../stat_staerkste_ligen_a.php:12 ../../../zzsubnav_statistik.php:20
+msgid "Stärkste Ligen - Aufstellung"
+msgstr "Strongest leagues - Line-up"
+
+#: ../../../stat_staerkste_ligen_a.php:14
+msgid ""
+"Jedes Team besitzt eine Aufstellungsstärke. Am Durchschnitt dieser Stärken "
+"innerhalb der einzelnen Ligen wird hier deren Stärke gemessen."
+msgstr ""
+
+#: ../../../stat_staerkste_ligen_k.php:2
+#: ../../../stat_staerkste_ligen_k.php:12 ../../../zzsubnav_statistik.php:21
+msgid "Stärkste Ligen - Kader"
+msgstr "Strongest leagues - Squad"
+
+#: ../../../stat_staerkste_ligen_k.php:14
+msgid ""
+"Jedes Team besitzt eine Kaderstärke. Am Durchschnitt dieser Stärken "
+"innerhalb der einzelnen Ligen wird hier deren Stärke gemessen."
+msgstr ""
+
+#: ../../../stat_staerkste_ligen_r.php:2 ../../../zzsubnav_statistik.php:22
+msgid "Stärkste Ligen - RKP"
+msgstr "Strongest leagues - RKP"
+
+#: ../../../stat_staerkste_ligen_r.php:14
+msgid ""
+"Jedes Team besitzt eine Punktzahl fürs Ranking, RKP genannt. Am Durchschnitt "
+"dieser RKP-Zahlen innerhalb der einzelnen Ligen wird hier deren Stärke "
+"gemessen."
+msgstr ""
+
+#: ../../../stat_staerkste_ligen_r.php:21 ../../../top_manager.php:52
+msgid "RKP"
+msgstr "RKP"
+
+#: ../../../stat_torjaegerliste.php:2 ../../../stat_torjaegerliste.php:15
+#: ../../../stat_torjaegerliste.php:49 ../../../stat_torjaegerliste.php:77
+msgid "Torjäger"
+msgstr "Top scorers"
+
+#: ../../../stat_torjaegerliste.php:50
+msgid ""
+"In dieser Torjägerliste sind die erfolgreichsten Torschützen aller Ligen "
+"aufgelistet."
+msgstr ""
+
+#: ../../../stat_transfer_uebersicht.php:2
+#: ../../../stat_transfer_uebersicht.php:34
+#: ../../../stat_transfer_uebersicht.php:71
+msgid "Transfer-Übersicht"
+msgstr "Transfer overview"
+
+#: ../../../stat_transfer_uebersicht.php:35
+msgid ""
+"In dieser Tabelle sind die 20 teuersten Transfers dieser Saison aufgelistet. "
+"Es werden jedoch nur Spieler angezeigt, die nach dem Transfer weiterhin in "
+"Europa gespielt haben."
+msgstr ""
+
+#: ../../../stat_transfer_uebersicht.php:41
+msgid "Käufer"
+msgstr "Buyer"
+
+#: ../../../stat_transfer_uebersicht.php:59
+msgid "Außerhalb Europas"
+msgstr ""
+
+#: ../../../stat_treuesteSpieler.php:2 ../../../stat_treuesteSpieler.php:12
+#: ../../../zzsubnav_statistik.php:25
+msgid "Treueste Spieler"
+msgstr "Most loyal players"
+
+#: ../../../stat_treuesteSpieler.php:29
+msgid ""
+"Welche Spieler haben über mehrere Saisons die meisten Einsätze für ihren "
+"Verein absolviert? Welche Spieler sind die treuesten?"
+msgstr ""
+
+#: ../../../stat_wertvollste_spieler.php:2
+#: ../../../stat_wertvollste_spieler.php:41
+#: ../../../stat_wertvollste_spieler.php:68 ../../../zzsubnav_statistik.php:27
+msgid "Wertvollste Spieler"
+msgstr "Most valuable players"
+
+#: ../../../stat_wertvollste_spieler.php:42
+msgid ""
+"In dieser Tabelle sind die 20 wertvollsten Spieler aus allen Ligen "
+"aufgelistet. Sie wurden nach ihrem Marktwert absteigend sortiert."
+msgstr ""
+
+#: ../../../stat_wertvollste_spieler.php:49
+#: ../../../stat_wertvollste_teams.php:49
+msgid "Marktwert"
+msgstr "Market value"
+
+#: ../../../stat_wertvollste_teams.php:2
+#: ../../../stat_wertvollste_teams.php:41
+#: ../../../stat_wertvollste_teams.php:88 ../../../zzsubnav_statistik.php:28
+msgid "Wertvollste Teams"
+msgstr "Most valuable teams"
+
+#: ../../../stat_wertvollste_teams.php:42
+msgid ""
+"Der Marktwert eines Teams ist die Summer aller Marktwerte der einzelnen "
+"Spieler. In dieser Tabelle wurden alle Teams nach ihrem Marktwert sortiert "
+"aufgelistet."
+msgstr ""
+
+#: ../../../stat_zuschauerverlauf.php:2 ../../../stat_zuschauerverlauf.php:7
+#: ../../../zzsubnav_statistik.php:29
+msgid "Zuschauerverlauf"
+msgstr "Development of audience"
+
+#: ../../../stat_zuschauerverlauf.php:8
+msgid ""
+"Dieses Liniendiagramm zeigt die Entwicklung Deiner Zuschauerzahlen in der "
+"aktuellen Saison. Hinweis: Die Daten können erst nach dem zweiten Heimspiel "
+"angezeigt werden."
+msgstr ""
+
+#: ../../../taktik.php:2
+msgid "Taktik"
+msgstr "Tactics"
+
+#: ../../../taktik.php:93 ../../../taktik.php:175
+msgid "Ausrichtung:"
+msgstr "Orientation:"
+
+#: ../../../taktik.php:95
+msgid "Defensiv"
+msgstr "Defensive"
+
+#: ../../../taktik.php:96
+msgid "Neutral"
+msgstr "Neutral"
+
+#: ../../../taktik.php:97
+msgid "Offensiv"
+msgstr "Offensive"
+
+#: ../../../taktik.php:101 ../../../taktik.php:176
+msgid "Geschwindigkeit des Spielaufbaus:"
+msgstr "Speed of build-up:"
+
+#: ../../../taktik.php:103
+msgid "Langsam"
+msgstr "Slow"
+
+#: ../../../taktik.php:104
+msgid "Gemäßigt"
+msgstr "Moderate"
+
+#: ../../../taktik.php:105
+msgid "Schnell"
+msgstr "Fast"
+
+#: ../../../taktik.php:109 ../../../taktik.php:177
+msgid "Passdistanz:"
+msgstr "Passing distance:"
+
+#: ../../../taktik.php:111
+msgid "Kurz"
+msgstr "Short"
+
+#: ../../../taktik.php:112
+msgid "Gemischt"
+msgstr "Mixed"
+
+#: ../../../taktik.php:113
+msgid "Lang"
+msgstr "Long"
+
+#: ../../../taktik.php:117 ../../../taktik.php:178
+msgid "Chancen-Erarbeitung:"
+msgstr "Scoring chance preparation:"
+
+#: ../../../taktik.php:119
+msgid "Sicher"
+msgstr "Safe"
+
+#: ../../../taktik.php:120
+msgid "Ausgeglichen"
+msgstr "Balanced"
+
+#: ../../../taktik.php:121
+msgid "Riskant"
+msgstr "Risky"
+
+#: ../../../taktik.php:125 ../../../taktik.php:179
+msgid "Druck:"
+msgstr "Pressing:"
+
+#: ../../../taktik.php:127 ../../../taktik.php:135
+msgid "Niedrig"
+msgstr "Low"
+
+#: ../../../taktik.php:128 ../../../taktik.php:136
+msgid "Normal"
+msgstr "Normal"
+
+#: ../../../taktik.php:129 ../../../taktik.php:137
+msgid "Hoch"
+msgstr "High"
+
+#: ../../../taktik.php:133 ../../../taktik.php:180
+msgid "Aggressivität:"
+msgstr "Aggressiveness:"
+
+#: ../../../taktik.php:151
+msgid ""
+"Hier kannst Du die aktuell ausgewählte Taktik als Vorlage speichern. Du "
+"kannst auch eine Vorlage laden, die dann die aktuelle Taktik ersetzt."
+msgstr ""
+
+#: ../../../taktik.php:173
+msgid "Erklärungen zu den einzelnen Einstellungen"
+msgstr ""
+
+#: ../../../taktik.php:174
+msgid ""
+"Wähle oben einfach aus jeder der sechs Auswahllisten deine bevorzugte "
+"Einstellung aus. Du solltest die Taktiken - je nach Gegner - anpassen, um "
+"das Beste aus deiner Mannschaft rauszuholen. Die Taktik, die gespeichert "
+"ist, während ein Spiel simuliert wird, wird für dieses Spiel auch "
+"angewendet. Du hast für jeden Teil drei Auswahlmöglichkeiten. Im Folgenden "
+"werden davon die äußeren Möglichkeiten erklärt, die mittleren stellen immer "
+"nur einen Mittelweg dar."
+msgstr ""
+
+#: ../../../taktik.php:175
+msgid ""
+"Die Einstellung \"Offensiv\" wird den Angriff Deines Teams stärken. Dein "
+"Team wird aber nicht mehr so viel Wert auf die Verteidigung legen, weshalb "
+"diese schwächer wird. Mit \"Defensiv\" bewirkst Du genau das Gegenteil: Die "
+"Verteidigung wird stärker, der Angriff schwächer."
+msgstr ""
+
+#: ../../../taktik.php:176
+msgid ""
+"Mit der Einstellung \"Schnell\" werden mehr Angriffe Deines Teams "
+"erfolgreich verlaufen und durch die Abwehr kommen, dafür steigt aber auch "
+"das Risiko, vom Gegner ausgekontert zu werden. Wenn Dein Team \"Langsam\" "
+"spielt, wird es schwerer, Torchancen herauszuspielen. Der Vorteil ist "
+"jedoch, dass Dein Gegner Dich nicht so leicht auskontern kann."
+msgstr ""
+
+#: ../../../taktik.php:177
+msgid ""
+"\"Kurz\" als bevorzugte Passdistanz hat zur Folge, dass mehr Angriffe durch "
+"die gegnerische Abwehr kommen und zu Torchancen werden. Allerdings sind die "
+"Torchancen dann nicht so gut. Die Auswahl \"Lang\" bewirkt, dass weniger "
+"Torchancen enstehen, aber wenn eine Chance entsteht, dann ist sie auch sehr "
+"gut. Ein weiterer Nachteil: Du wirst häufiger im Abseits stehen."
+msgstr ""
+
+#: ../../../taktik.php:178
+msgid ""
+"Wenn du \"Riskant\" spielst, wirst Du nicht mehr Torschuss-Möglichkeiten "
+"bekommen als sonst, aber die Chancen werden besser. Dafür steigt aber auch "
+"die Kontergefahr stark an. Bei der Spielweise \"Sicher\" wirst Du wenige "
+"gute Chancen bekommen. Allerdings ist dann auch die Kontergefahr sehr "
+"niedrig."
+msgstr ""
+
+#: ../../../taktik.php:179
+msgid ""
+"Wenn Deine Mannschaft \"Viel\" Druck macht, wirst Du Dir viele Konterchancen "
+"erarbeiten können. Leider brauchen Deine Spieler auch viel Kondition, um "
+"diese Spielweise durchhalten zu können. Die Frische Deiner Spieler wird so "
+"also stärker sinken. Falls der Druck, den Dein Team erzeugt, \"Niedrig\" "
+"ist, wird das Spiel nicht so anstrengend. Dein Gegner wird aber auch weniger "
+"Fehler machen, sodass Du weniger Konterchancen erhältst."
+msgstr ""
+
+#: ../../../taktik.php:180
+msgid ""
+"Bei der Auswahl \"Hoch\" wirst Du viele gegnerische Angriffe durch Fouls "
+"unterbrechen, wodurch auch gute Chancen des Gegners zunichte gemacht werden. "
+"Allerdings erhält der Gegner so auch mehr Freistoß-Möglichkeiten, aus denen "
+"Tore enstehen können. Falls die Aggressivität Deines Teams \"Niedrig\" ist, "
+"werden Deine Spieler weniger Fouls begehen (fairer spielen), gute Chancen "
+"des Gegners werden sie aber auch seltener mit unfairen Mitteln stoppen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php:2 ../../../tipps_des_tages.php:13
+#: ../../../tipps_des_tages.php:34
+msgid "Tipps des Tages"
+msgstr "Hints of the day"
+
+#: ../../../tipps_des_tages.php:5
+msgid "Tipps durchsuchen"
+msgstr "Search hints"
+
+#: ../../../tipps_des_tages.php:16
+msgid "Tipps des Tages zum Thema"
+msgstr "Hints of the day on topic"
+
+#: ../../../tipps_des_tages.php:19
+msgid ""
+"Hier findest Du alle <i>Tipps des Tages</i> - gesammelt auf einer Seite."
+msgstr ""
 
 #: ../../../top_manager.php:32
 msgid "Meine Position"
@@ -35,37 +3592,172 @@ msgstr ""
 "Which manager is the most successful? This ranking shows all managers "
 "ordered by the RKP of their clubs."
 
-#: ../../../top_manager.php:50 ../../../wio.php:6 ../../../wio.php:38
-msgid "Manager"
-msgstr "Manager"
+#: ../../../transferliste.php:2
+msgid "Transferliste"
+msgstr "Transfer list"
 
-#: ../../../top_manager.php:51 ../../../wio.php:6
-msgid "Team"
-msgstr "Team"
+#: ../../../transferliste.php:11
+msgid "Gebote"
+msgstr "Bids"
 
-#: ../../../top_manager.php:52
-msgid "RKP"
-msgstr "RKP"
+#: ../../../transferliste.php:12
+msgid "Höchstgebot"
+msgstr "Best offer"
 
-#: ../../../top_manager.php:98
-msgid "Erste"
-msgstr "First"
+#: ../../../transferliste.php:13
+msgid "Ende"
+msgstr "End"
 
-#: ../../../top_manager.php:99
-msgid "Vorherige"
-msgstr "Previous"
+#: ../../../transferliste.php:22
+msgid "Du bietest im Moment keinen Spieler zum Verkauf an."
+msgstr "Right now, you don't offer any player for sale."
 
-#: ../../../top_manager.php:110
-msgid "Nächste"
-msgstr "Next"
+#: ../../../ver_buchungen.php:2 ../../../ver_buchungen.php:4
+msgid "Buchungen"
+msgstr "Transactions"
 
-#: ../../../top_manager.php:111
-msgid "Letzte"
-msgstr "Last"
+#: ../../../ver_buchungen.php:6
+msgid ""
+"In dieser Tabelle sind alle Buchungen aufgelistet, die in der aktuellen "
+"Saison durchgeführt wurden."
+msgstr ""
+"This table lists all transactions that have been made in the current season."
 
-#: ../../../top_manager.php:115 ../../../wio.php:56
-msgid "Du musst angemeldet sein, um diese Seite aufrufen zu können!"
-msgstr "Please sign in to your personal account in order to access this page!"
+#: ../../../ver_buchungen.php:11
+msgid "Buchungstag"
+msgstr "Transaction date"
+
+#: ../../../ver_buchungen.php:12
+msgid "Verwendungszweck"
+msgstr "Designated use"
+
+#: ../../../ver_lotto.php:2
+msgid "Lotto"
+msgstr "Lottery"
+
+#: ../../../ver_lotto.php:8
+msgid "Januar"
+msgstr "January"
+
+#: ../../../ver_lotto.php:9
+msgid "Februar"
+msgstr "February"
+
+#: ../../../ver_lotto.php:10
+msgid "März"
+msgstr "March"
+
+#: ../../../ver_lotto.php:11
+msgid "April"
+msgstr "April"
+
+#: ../../../ver_lotto.php:12
+msgid "Mai"
+msgstr "May"
+
+#: ../../../ver_lotto.php:13
+msgid "Juni"
+msgstr "June"
+
+#: ../../../ver_lotto.php:14
+msgid "Juli"
+msgstr "July"
+
+#: ../../../ver_lotto.php:15
+msgid "August"
+msgstr "August"
+
+#: ../../../ver_lotto.php:16
+msgid "September"
+msgstr "September"
+
+#: ../../../ver_lotto.php:17
+msgid "Oktober"
+msgstr "October"
+
+#: ../../../ver_lotto.php:18
+msgid "November"
+msgstr "November"
+
+#: ../../../ver_lotto.php:19
+msgid "Dezember"
+msgstr "December"
+
+#: ../../../ver_lotto.php:29
+msgid "Lotto vom:"
+msgstr "Lottery of:"
+
+#: ../../../ver_lotto.php:54
+msgid "Du hast für 1.000.000 € einen Lottoschein eingelöst."
+msgstr "You have redeemed a lottery coupon for 1 million €."
+
+#: ../../../ver_lotto.php:57
+msgid "Du hast zur Feier des Tages einen kostenlosen Lottoschein eingelöst."
+msgstr "To mark the occasion, you have redeemed a free lottery coupon."
+
+#: ../../../ver_lotto.php:87
+msgid "Jackpot:"
+msgstr "Jackpot:"
+
+#: ../../../ver_lotto.php:103
+msgid "Für 1.000.000€ einlösen"
+msgstr "Redeem for 1 million €"
+
+#: ../../../ver_lotto.php:106
+msgid "Kostenlos einlösen"
+msgstr "Redeem for free"
+
+#: ../../../ver_lotto.php:113
+msgid "Du hast heute schon getippt. Deine Zahlen:"
+msgstr "You have bet already today. Your numbers:"
+
+#: ../../../ver_lotto.php:116
+msgid "Heute schon getippt"
+msgstr "Bet already today"
+
+#: ../../../ver_lotto.php:126
+msgid "Zahlen von gestern"
+msgstr "Yesterday's numbers"
+
+#: ../../../ver_lotto.php:128
+msgid "Letzte Gewinne"
+msgstr "Last prizes"
+
+#: ../../../ver_lotto.php:142
+msgid "Höchste Gewinne"
+msgstr "Highest prizes"
+
+#: ../../../vertraege.php:2 ../../../vertraege.php:4
+msgid "Verträge"
+msgstr "Contracts"
+
+#: ../../../vertraege.php:14
+msgid "GE"
+msgstr "SA"
+
+#: ../../../vertraege.php:15
+msgid "Vertrag"
+msgstr "Contract"
+
+#: ../../../vertraege.php:75
+msgid "Verlängern"
+msgstr "Extend"
+
+#: ../../../vertraege.php:86
+msgid "AL: Alter, MO: Moral, GE: Gehalt pro Saison in Millionen €"
+msgstr "AG: age, MO: morale, SA: salary per season in million €"
+
+#: ../../../vertrag_verlaengern.php:78 ../../../vertrag_verlaengern.php:80
+msgid "Vertrag verlängern:"
+msgstr "Extend contract:"
+
+#: ../../../vertrag_verlaengern.php:129
+msgid "Zurück zur Vertragsübersicht"
+msgstr "Back to contracts overview"
+
+#: ../../../vertrag_verlaengern.php:129
+msgid "Zurück zum Spielerprofil"
+msgstr "Back to player's profile"
 
 #: ../../../warteliste.php:2 ../../../warteliste.php:4
 msgid "Warteliste"
@@ -90,10 +3782,6 @@ msgid "Aktiv"
 msgstr "Active"
 
 #: ../../../wio.php:6 ../../../wio.php:38
-msgid "Chat"
-msgstr "Chat"
-
-#: ../../../wio.php:6 ../../../wio.php:38
 msgid "Aktion"
 msgstr "Action"
 
@@ -101,17 +3789,9 @@ msgstr "Action"
 msgid "Support-Team"
 msgstr "Support staff"
 
-#: ../../../zz3.php:7
-msgid "Regeln"
-msgstr "Rules"
-
 #: ../../../zz3.php:8
 msgid "Impressum"
 msgstr "Contact"
-
-#: ../../../zz3.php:9
-msgid "Datenschutz"
-msgstr "Privacy Policy"
 
 #: ../../../zz3.php:10
 msgid "Open Source"
@@ -126,73 +3806,21 @@ msgstr ""
 "All clubs, players and sponsors are fictitious and bear no relation to real "
 "leagues. The in-game money is virtual only and there are never any payouts."
 
-#: ../../../zzsubnav_statistik.php:6
-msgid "5-Jahres-Wertung"
-msgstr "5-year ranking"
+#: ../../../zzsubnav_statistik.php:1
+msgid "Statistik wählen"
+msgstr "Choose statistics"
 
 #: ../../../zzsubnav_statistik.php:7
 msgid "Cup-Sieger"
 msgstr "National Trophy winners"
 
-#: ../../../zzsubnav_statistik.php:8
-msgid "Dauerbrenner"
-msgstr "Most reliable players"
-
-#: ../../../zzsubnav_statistik.php:9
-msgid "Ergebnisverlauf"
-msgstr "Course of results"
-
-#: ../../../zzsubnav_statistik.php:10
-msgid "Geschichte"
-msgstr "History"
-
-#: ../../../zzsubnav_statistik.php:11
-msgid "Getauschte Ligen"
-msgstr "Changed leagues"
-
 #: ../../../zzsubnav_statistik.php:12
 msgid "Globale Tabelle"
 msgstr "Global standings"
 
-#: ../../../zzsubnav_statistik.php:13
-msgid "Jüngste Kader"
-msgstr "Youngest squads"
-
-#: ../../../zzsubnav_statistik.php:14
-msgid "Meiste Titel"
-msgstr "Most triumphs"
-
-#: ../../../zzsubnav_statistik.php:15
-msgid "Meiste Zuschauer"
-msgstr "Largest audience"
-
-#: ../../../zzsubnav_statistik.php:16
-msgid "Meister"
-msgstr "Champions"
-
 #: ../../../zzsubnav_statistik.php:17
 msgid "Pokal-Sieger"
 msgstr "International Cup winners"
-
-#: ../../../zzsubnav_statistik.php:18
-msgid "Reichste Ligen"
-msgstr "Wealthiest leagues"
-
-#: ../../../zzsubnav_statistik.php:19
-msgid "Saisonverlauf"
-msgstr "Course of season"
-
-#: ../../../zzsubnav_statistik.php:20
-msgid "Stärkste Ligen - Aufstellung"
-msgstr "Strongest leagues - Line-up"
-
-#: ../../../zzsubnav_statistik.php:21
-msgid "Stärkste Ligen - Kader"
-msgstr "Strongest leagues - Squad"
-
-#: ../../../zzsubnav_statistik.php:22
-msgid "Stärkste Ligen - RKP"
-msgstr "Strongest leagues - RKP"
 
 #: ../../../zzsubnav_statistik.php:23
 msgid "Teuerste Transfers"
@@ -201,23 +3829,3 @@ msgstr "Most expensive transfers"
 #: ../../../zzsubnav_statistik.php:24
 msgid "Torjägerliste"
 msgstr "Top scorers"
-
-#: ../../../zzsubnav_statistik.php:25
-msgid "Treueste Spieler"
-msgstr "Most loyal players"
-
-#: ../../../zzsubnav_statistik.php:26
-msgid "Wert des Geldes"
-msgstr "Value of money"
-
-#: ../../../zzsubnav_statistik.php:27
-msgid "Wertvollste Spieler"
-msgstr "Most valuable players"
-
-#: ../../../zzsubnav_statistik.php:28
-msgid "Wertvollste Teams"
-msgstr "Most valuable teams"
-
-#: ../../../zzsubnav_statistik.php:29
-msgid "Zuschauerverlauf"
-msgstr "Development of audience"

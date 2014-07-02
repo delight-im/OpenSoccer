@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
 "POT-Creation-Date: 2014-06-30 00:43+0100\n"
-"PO-Revision-Date: 2014-07-02 18:42+0100\n"
+"PO-Revision-Date: 2014-07-02 19:45+0100\n"
 "Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -1294,7 +1294,7 @@ msgstr "Headings:"
 
 #: ../../../aufstellung.php:340
 msgid "SE: Startelf, MT: Mannschaftsteil, AL: Alter, FR: Frische, MO: Moral"
-msgstr "FE: First eleven, TP: part of team, AG: age, FR: freshness, MO: morale"
+msgstr "FE: First eleven, PT: part of team, AG: age, FR: freshness, MO: morale"
 
 #: ../../../aufstellung.php:341 ../../../beobachtung.php:120
 #: ../../../entwicklung.php:44 ../../../kader.php:165
@@ -1312,7 +1312,7 @@ msgstr "Bold print:"
 
 #: ../../../aufstellung.php:342
 msgid "Aufgestellte Spieler"
-msgstr "Players in line-up"
+msgstr "players in line-up"
 
 #: ../../../aufstellung.php:343
 msgid "Rote Schrift:"
@@ -1320,7 +1320,7 @@ msgstr "Red print:"
 
 #: ../../../aufstellung.php:343 ../../../kader.php:166
 msgid "verletzte oder gesperrte Spieler"
-msgstr ""
+msgstr "injured or suspended players"
 
 #: ../../../aufstellung.php:346 ../../../beobachtung.php:122
 #: ../../../chat.php:123 ../../../chat_reports.php:101 ../../../cup.php:137
@@ -1919,7 +1919,7 @@ msgstr ""
 
 #: ../../../kader.php:166
 msgid "Durchgestrichen:"
-msgstr ""
+msgstr "Struck-through:"
 
 #: ../../../kader.php:167
 msgid "Besetzung des Kaders"

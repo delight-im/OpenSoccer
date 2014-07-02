@@ -15,7 +15,10 @@ $start = $seite*$eintraege_pro_seite-$eintraege_pro_seite; // ERMITTELN DER STAR
 // BLAETTERN ENDE
 
 require_once('./classes/I18N.php');
-I18N::init('de_DE', 'messages', './i18n');
+if (isset($_GET['setLocale'])) {
+    $_SESSION['locale'] = htmlspecialchars(trim($_GET['setLocale']));
+}
+I18N::init((isset($_SESSION['locale']) ? $_SESSION['locale'] : 'de_DE'), 'messages', './i18n');
 
 // INFO-BOXEN-ARRAY ANFANG
 $showInfoBox = array();
@@ -38,7 +41,6 @@ function setTaskDone($shortName) {
 	}
 }
 function getSpecialOffer() {
-	$reason = 'Heute ist ein schöner Tag';
 	$today = date('d.m');
 	$ostern = date('d.m', easter_date());
 	switch ($today) {

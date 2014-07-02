@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
 "POT-Creation-Date: 2014-06-30 00:43+0100\n"
-"PO-Revision-Date: 2014-06-30 02:40+0100\n"
+"PO-Revision-Date: 2014-07-02 18:42+0100\n"
 "Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -913,15 +913,15 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:365
 msgid "Tor!"
-msgstr ""
+msgstr "Goal!"
 
 #: ../../../aa_spieltag_simulation.php:366
 msgid "Ein super Tor!"
-msgstr ""
+msgstr "An amazing goal!"
 
 #: ../../../aa_spieltag_simulation.php:367
 msgid "Gooolaso!"
-msgstr ""
+msgstr "Gooolaso!"
 
 #: ../../../aa_spieltag_simulation.php:368
 msgid "Der Ball kullert irgendwie ins Tor!"
@@ -949,7 +949,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:374
 msgid "Toooor!"
-msgstr ""
+msgstr "Goooaaal!"
 
 #: ../../../aa_spieltag_simulation.php:375
 msgid ""
@@ -1466,12 +1466,12 @@ msgstr ""
 
 #: ../../../bp_username_waehlen.php:15
 msgid "Bitte versuche es noch einmal."
-msgstr ""
+msgstr "Please try once again."
 
 #: ../../../bp_username_waehlen.php:35 ../../../bp_username_waehlen.php:48
 msgid ""
 "Du hast schon einen Benutzernamen und kannst deshalb hier keinen wählen."
-msgstr ""
+msgstr "You already have a username and thus you cannot choose one here."
 
 #: ../../../bp_username_waehlen.php:39 ../../../bp_username_waehlen.php:41
 msgid "Benutzernamen wählen"
@@ -1483,6 +1483,9 @@ msgid ""
 "Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - "
 "erhältst Du eine Nachricht von uns bei Bigpoint."
 msgstr ""
+"Welcome to Ballmanager! You're now on our waiting list. As soon as a team "
+"becomes available for you - and this won't take long - you will receive a "
+"notification from us on Bigpoint."
 
 #: ../../../bp_username_waehlen.php:44
 msgid ""
@@ -1490,6 +1493,8 @@ msgid ""
 "Benutzernamen. Dieser Name wird überall im Spiel angezeigt, Du bist daran zu "
 "erkennen."
 msgstr ""
+"In order to get started, you just need a username now. This name will be "
+"shown throughout the game. You can be recognized from this name."
 
 #: ../../../chat.php:2 ../../../wio.php:6 ../../../wio.php:38
 msgid "Chat"
@@ -1571,7 +1576,7 @@ msgstr "Notice:"
 #: ../../../cup.php:134
 msgid ""
 "Die Zahlen in den eckigen Klammern geben die Liga des jeweiligen Teams an."
-msgstr ""
+msgstr "The numbers in the square brackets indicate each team's league."
 
 #: ../../../einstellungen.php:2 ../../../einstellungen.php:254
 msgid "Einstellungen"
@@ -1585,15 +1590,15 @@ msgstr ""
 
 #: ../../../einstellungen.php:86
 msgid "Dein Passwort wurde erfolgreich geändert!"
-msgstr ""
+msgstr "Your password has successfully been changed."
 
 #: ../../../einstellungen.php:95
 msgid "Du kannst leider keinen Urlaub beantragen, der so lange dauert."
-msgstr ""
+msgstr "Unfortunately, you cannot request a vacation with that duration."
 
 #: ../../../einstellungen.php:116
 msgid "Dein Urlaub wurde genehmigt!"
-msgstr ""
+msgstr "Your vacation has been granted!"
 
 #: ../../../einstellungen.php:140 ../../../regeln.php:104
 msgid "E-Mail-Adresse"
@@ -1601,15 +1606,15 @@ msgstr "Email address"
 
 #: ../../../einstellungen.php:141
 msgid "Du bist mit der folgenden E-Mail-Adresse registriert:"
-msgstr ""
+msgstr "You have signed up with the following email address:"
 
 #: ../../../einstellungen.php:144
 msgid "Vereinsnamen ändern"
-msgstr ""
+msgstr "Change team name"
 
 #: ../../../einstellungen.php:149
 msgid "Managernamen ändern"
-msgstr ""
+msgstr "Change manager name"
 
 #: ../../../einstellungen.php:153
 msgid "Urlaub beantragen"
@@ -1622,6 +1627,10 @@ msgid ""
 "der Computer Deine Aufstellung und verlängert alle Spieler-Verträge, die "
 "während Deines Urlaubs auslaufen würden."
 msgstr ""
+"With the following form, you can request a vacation. In your vacation time, "
+"you will be protected from automatic deletion. Apart from that, the computer "
+"will manage your line-up and extend players' contracts in case they expire "
+"during your vacation."
 
 #: ../../../einstellungen.php:166 ../../../einstellungen.php:184
 msgid "noch keinen Urlaub"
@@ -1629,7 +1638,7 @@ msgstr ""
 
 #: ../../../einstellungen.php:172 ../../../einstellungen.php:190
 msgid "Du kannst jetzt neuen Urlaub beantragen."
-msgstr ""
+msgstr "You can now request a new vacation."
 
 #: ../../../einstellungen.php:179
 msgid "Kurzurlaub (1-10 Tage):"
@@ -1648,6 +1657,8 @@ msgid ""
 "Mit dem folgenden Formular kannst Du Dein Passwort beim Ballmanager ändern. "
 "Dazu musst Du alle Felder ausfüllen."
 msgstr ""
+"With the following form, you can change your password for this game. Please "
+"fill out all the fields."
 
 #: ../../../einstellungen.php:245
 msgid "Account löschen"
@@ -1658,12 +1669,16 @@ msgid ""
 "Du bist Dir wirklich sicher, dass Du Deinen Account hier beim Ballmanager "
 "löschen möchtest? Das ist sehr schade, aber wir akzeptieren das natürlich."
 msgstr ""
+"Are you really sure you want to delete your account here in this game? It's "
+"a pity, but we accept it, of course."
 
 #: ../../../einstellungen.php:247
 msgid ""
 "Wir würden uns freuen, wenn Du uns noch mitteilen würdest, was Dir hier "
 "gefallen hat und was noch nicht so gut war."
 msgstr ""
+"We would be happy if you could tell us what you liked in this game and what "
+"you think must still be improved."
 
 #: ../../../einstellungen.php:249
 msgid "Das war gut:"
@@ -1715,6 +1730,8 @@ msgid ""
 "das Profil des jeweiligen Managers und klicke unten auf den Link &quot;"
 "Freundschaft anbieten&quot;."
 msgstr ""
+"If you want to add your friends to this list, please open the particular "
+"manager's profile and choose &quot;Send friendship request&quot;."
 
 #: ../../../freunde.php:31 ../../../freunde.php:52
 msgid "Letzte Aktion"
@@ -1726,6 +1743,8 @@ msgid ""
 "Profil des jeweiligen Managers und klicke unten auf den Link &quot;Diesen "
 "User ignorieren&quot;."
 msgstr ""
+"If you want to add users to this list, please open the particular manager's "
+"profile and choose &quot;Ignore this user&quot;."
 
 #: ../../../freundeWerben.php:2 ../../../freundeWerben.php:4
 msgid "Freunde einladen"
@@ -1733,11 +1752,11 @@ msgstr "Invite friends"
 
 #: ../../../freundeWerben.php:6
 msgid "Deine Freunde sind noch nicht beim Ballmanager?"
-msgstr ""
+msgstr "Your friends are not part of the game yet?"
 
 #: ../../../freundeWerben.php:6
 msgid "Dann nutze den folgenden Link, um sie einzuladen."
-msgstr ""
+msgstr "Use the following link to invite them."
 
 #: ../../../freundeWerben.php:6
 msgid ""
@@ -1745,6 +1764,9 @@ msgid ""
 "<strong>ihr beide</strong> jeweils <strong>7,5 Mio.</strong> als Prämie aufs "
 "Vereinskonto:"
 msgstr ""
+"Should they sign up as a result of your recommendation, <strong>you both</"
+"strong> will receive <strong>7,5 Mio.</strong> each as a bonus to your club "
+"account:"
 
 #: ../../../freundeWerben.php:8
 msgid "Tipp:"
@@ -1759,23 +1781,23 @@ msgstr ""
 
 #: ../../../freundeWerben.php:10
 msgid "Geworbene Manager"
-msgstr ""
+msgstr "Successfully invited managers"
 
 #: ../../../freundeWerben.php:16
 msgid "Geworben"
-msgstr ""
+msgstr "Invited"
 
 #: ../../../freundeWerben.php:24
 msgid "Du hast bisher noch keine User geworben!"
-msgstr ""
+msgstr "You have not successfully invited any user yet!"
 
 #: ../../../freundeWerben.php:32
 msgid "Prämie erhalten"
-msgstr ""
+msgstr "Received bonus"
 
 #: ../../../freundeWerben.php:35
 msgid "Prämie noch nicht ausgezahlt"
-msgstr ""
+msgstr "Bonus not paid yet"
 
 #: ../../../geloeschteAccounts.php:2 ../../../geloeschteAccounts.php:10
 msgid "Gelöschte Accounts"
@@ -1787,6 +1809,9 @@ msgid ""
 "nicht mehr aktiv oder er hat seinen Account unter &quot;Einstellungen&quot; "
 "gelöscht."
 msgstr ""
+"The following accounts were the last to be deleted. Either the manager was "
+"not active anymore or they deleted their account manually in the &quot;"
+"Settings&quot; section."
 
 #: ../../../geloeschteAccounts.php:12
 msgid "Gelöscht"
@@ -1813,6 +1838,8 @@ msgid ""
 "Du hast Deinen Account beim Ballmanager gelöscht. Deshalb kannst Du leider "
 "nicht mehr mitspielen."
 msgstr ""
+"You have deleted your account in this game. Thus you cannot play and compete "
+"anymore."
 
 #: ../../../gesperrteTeamnamen.php:2 ../../../gesperrteTeamnamen.php:4
 msgid "Gesperrte Teamnamen"
@@ -1827,6 +1854,8 @@ msgid ""
 "Warum haben sich die User beim Ballmanager gelöscht? Lies nach, was ihnen "
 "gefallen und hat und was nicht."
 msgstr ""
+"Why have the users deleted their accounts in this game? Read here what they "
+"liked and what must be improved in their opinion."
 
 #: ../../../gruendeFuerLoeschung.php:12
 msgid "Löschdatum"
@@ -1846,11 +1875,11 @@ msgstr "Free Online Soccer Manager"
 
 #: ../../../ipInfo.php:2 ../../../ipInfo.php:42
 msgid "IP-Info"
-msgstr ""
+msgstr "IP information"
 
 #: ../../../ipInfo.php:9
 msgid "IP-Info:"
-msgstr ""
+msgstr "IP information:"
 
 #: ../../../ipInfo.php:15
 msgid "User"
@@ -2009,13 +2038,15 @@ msgstr "Swap preferences"
 
 #: ../../../ligaTausch.php:13
 msgid "Wichtig: Vor Liga-Tausch erst lesen:"
-msgstr ""
+msgstr "Important: Please read before league swap:"
 
 #: ../../../ligaTausch.php:15
 msgid ""
 "Dann ist der Liga-Tausch genau das Richtige für Dich! Tausche einfach mit "
 "einem anderen Manager die Liga, der gerne in Deiner Liga spielen würde."
 msgstr ""
+"Then the league swap is exactly the right thing for you! Just swap leagues "
+"with another manager who wants to play in your league."
 
 #: ../../../ligaTausch.php:16
 msgid ""
@@ -2023,6 +2054,9 @@ msgid ""
 "vorher schon per Post mit dem anderen Manager, ob Interesse an einem Tausch "
 "besteht."
 msgstr ""
+"Sent requests expire automatically after 24 hours. This is why we recommend "
+"you to discuss with the other manager in advance if they are interested in a "
+"swap."
 
 #: ../../../ligaTausch.php:17
 msgid ""
@@ -2032,12 +2066,20 @@ msgid ""
 "gleich. Beachte also, dass Testspiele, die Du eventuell schon vereinbart "
 "hast, nicht zum neuen Verein mitgenommen werden."
 msgstr ""
+"If both managers agree on the swap, the two teams' names will be changed and "
+"you will be playing all the competitions (league, international cup, "
+"national trophy, friendlies) for the other team until the end of the season. "
+"The rest (players, account, achievements, etc.) will not change. So please "
+"note that you will not be taking friendlies with you to the new team in case "
+"you have already added some for this season."
 
 #: ../../../ligaTausch.php:29
 msgid ""
 "Der Verband erlaubt einen Liga-Tausch nur an den ersten fünf Spieltagen. "
 "Bitte warte bis zur nächsten Saison."
 msgstr ""
+"The association permits a league swap only on the first five match days. "
+"Please wait until the next season."
 
 #: ../../../ligaTausch.php:179
 msgid "Anfrage versenden"
@@ -2049,6 +2091,9 @@ msgid ""
 "Teams an, mit dem Du tauschen willst. Unbeantwortete Anfragen verfallen nach "
 "24 Stunden."
 msgstr ""
+"If you are sure that you want to swap leagues, please enter the name of the "
+"team here that you want to swap with. Requests that are not accepted within "
+"24 hours will expire automatically."
 
 #: ../../../ligaTausch.php:182
 msgid "Teamname:"
@@ -2096,6 +2141,8 @@ msgid ""
 "Jeder Eintrag wird nach 22 Tagen wieder gelöscht, kann dann aber erneut "
 "eingestellt werden."
 msgstr ""
+"Every entry will be deleted after 22 days, but can then be added once again, "
+"of course."
 
 #: ../../../liveZentrale.php:2 ../../../liveZentrale.php:35
 #: ../../../liveZentrale.php:155
@@ -2104,7 +2151,7 @@ msgstr "LIVE Center"
 
 #: ../../../liveZentrale.php:36
 msgid "Zurzeit läuft leider kein Spiel, von dem live berichtet werden kann."
-msgstr ""
+msgstr "Right now, there are no matches that we could report live from."
 
 #: ../../../liveZentrale.php:37
 msgid "Spielzeiten"
@@ -2136,7 +2183,7 @@ msgstr "Colors:"
 
 #: ../../../liveZentrale.php:152
 msgid "Rot: LIVE, Schwarz: Beendet"
-msgstr ""
+msgstr "red: LIVE, black: finished"
 
 #: ../../../manager_kontaktlink.php:9 ../../../manager_kontaktlink.php:19
 msgid "Freundschaft anbieten"
@@ -2170,6 +2217,9 @@ msgid ""
 "Wenn Du Erfolg haben willst, solltest Du wiederkehren - denn alte Angebote "
 "verschwinden schnell!"
 msgstr ""
+"Here you can advertise your players - and hope that somebody will hear you. "
+"If you want to be successful, you should come back regularly - because old "
+"offers will disappear quickly!"
 
 #: ../../../marktschreier.php:36 ../../../pokal.php:80 ../../../pokal.php:218
 msgid "Deine Nachricht"
@@ -2177,7 +2227,7 @@ msgstr "Your message"
 
 #: ../../../marktschreier.php:40
 msgid "Angebote auf dem Markt"
-msgstr ""
+msgstr "Offers on the market"
 
 #: ../../../multiSperre.php:3 ../../../multiSperre.php:5
 msgid "Multi-Accounts"
@@ -2190,6 +2240,10 @@ msgid ""
 "deshalb auf 4 aktive Mitspieler. Und Du hast diese Grenze leider "
 "überschritten ..."
 msgstr ""
+"We think that nobody really has more than four friends or family members who "
+"play from the same internet connection. In order to prevent abuse, we are "
+"limiting this to four people actively playing with you. And you have crossed "
+"this limit, unfortunately ..."
 
 #: ../../../multiSperre.php:8
 msgid ""
@@ -2197,17 +2251,22 @@ msgid ""
 "Teams können also nicht mehr betreut werden. Wir bitten Dich, das zu "
 "akzeptieren."
 msgstr ""
+"For you, this means that you cannot sign in anymore, for now. Thus your "
+"teams cannot be managed anymore. We'd like to ask your to accept this, "
+"please."
 
 #: ../../../multiSperre.php:9
 msgid ""
 "Falls Du der Meinung bist, Du wurdest zu Unrecht gesperrt, dann kontaktiere "
 "uns bitte unter der folgenden E-Mail-Adresse:"
 msgstr ""
+"In case you think you have been banned for the wrong reasons, please contact "
+"us via email at the following address:"
 
 #: ../../../namensaenderung.php:2 ../../../namensaenderung.php:23
 #: ../../../namensaenderung.php:167
 msgid "Namensänderung"
-msgstr ""
+msgstr "Name change"
 
 #: ../../../namensaenderung.php:58
 msgid ""
@@ -2215,10 +2274,12 @@ msgid ""
 "Namen einer Stadt und einen beliebigen Zusatz aus der Liste wählen, der vor "
 "oder nach dem Städtenamen stehen kann."
 msgstr ""
+"On this page, you can change your team's name. You can pick the name of a "
+"city and an additional title that can be before or after the city's name."
 
 #: ../../../namensaenderung.php:60
 msgid "Du kannst den Namen Deines Klubs nur alle 30 Tage ändern."
-msgstr ""
+msgstr "You can change your club's name every 30 days only."
 
 #: ../../../neueAccounts.php:2 ../../../neueAccounts.php:10
 msgid "Neue Accounts"
@@ -2229,6 +2290,8 @@ msgid ""
 "Die folgenden Accounts wurden zuletzt neu registriert. Nicht alle Manager "
 "haben schon ein Team bekommen."
 msgstr ""
+"The following accounts were the last to be registered. Not all of these "
+"managers have got a team yet."
 
 #: ../../../neueAccounts.php:12
 msgid "Registriert"
@@ -2236,15 +2299,15 @@ msgstr "Signed up"
 
 #: ../../../neueAccounts.php:12
 msgid "Geworben von"
-msgstr ""
+msgstr "Invited by"
 
 #: ../../../neueAccounts.php:37
 msgid "Dieser Manager wurde bereits angeschrieben"
-msgstr ""
+msgstr "This manager has been contacted already"
 
 #: ../../../neueAccounts.php:40
 msgid "Dieser Manager wurde bisher noch nicht angeschrieben"
-msgstr ""
+msgstr "This manager has not been contacted yet"
 
 #: ../../../neuigkeiten.php:2 ../../../neuigkeiten.php:12
 #: ../../../neuigkeiten.php:32
@@ -2262,10 +2325,11 @@ msgstr "Notes"
 #: ../../../notizen.php:6
 msgid "Es sind nur 250 Zeichen erlaubt. Diese Grenze hast Du jetzt erreicht!"
 msgstr ""
+"You may not enter more than 250 characters. This limit has been reached!"
 
 #: ../../../notizen.php:52
 msgid "Es werden immer nur die letzten 25 Notizen angezeigt."
-msgstr ""
+msgstr "You will always see the latest 25 notes only."
 
 #: ../../../notizen.php:53
 msgid "Neue Notiz erstellen"
@@ -2278,37 +2342,47 @@ msgstr "Forgot password"
 #: ../../../passwort_vergessen.php:23
 msgid ""
 "Dein neues Passwort wurde aktiviert. Du kannst Dich jetzt damit einloggen."
-msgstr ""
+msgstr "Your new password has been activated. You can now use it to sign in."
 
 #: ../../../passwort_vergessen.php:26
 msgid ""
 "Das Passwort konnte nicht aktiviert werden. Bitte rufe den Link noch einmal "
 "auf oder fordere ein neues Passwort an."
 msgstr ""
+"Your password could not be activated. Please use the activation link once "
+"again or request a new password."
 
 #: ../../../passwort_vergessen.php:45
 msgid ""
 "Für diese E-Mail-Adresse wurde in den letzten 5 Stunden schon ein Passwort "
 "angefordert."
 msgstr ""
+"For this email address, a new password has already been requested during the "
+"last 5 hours."
 
 #: ../../../passwort_vergessen.php:49
 msgid ""
 "Wenn Du kein neues Passwort angefordert hast, wurde diese Funktion von "
 "jemand anderem missbraucht. Die Anfrage kam von der folgenden IP-Adresse:"
 msgstr ""
+"If you did not request a new password, this feature has been abused by "
+"another person. The request has been sent from the following IP address:"
 
 #: ../../../passwort_vergessen.php:97
 msgid ""
 "Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren "
 "Informationen zu."
 msgstr ""
+"The process has been successful. We are now sending an email to you with "
+"further information."
 
 #: ../../../passwort_vergessen.php:102
 msgid ""
 "Es konnte kein User mit der angegebenen E-Mail-Adresse gefunden werden. "
 "Bitte versuche es noch einmal."
 msgstr ""
+"We could not find any user with the given email address. Please try once "
+"again."
 
 #: ../../../passwort_vergessen.php:108
 msgid ""
@@ -2316,6 +2390,9 @@ msgid ""
 "Adresse ein, mit der Du Dich registriert hast. Wir schicken Dir dann eine E-"
 "Mail mit weiteren Informationen, damit Du ein neues Passwort wählen kannst."
 msgstr ""
+"You forgot your password? Just enter your email address below that you used "
+"for the sign up. We will then send an email to you with further information "
+"about how to reset your password."
 
 #: ../../../passwort_vergessen.php:109
 msgid "Wichtig:"

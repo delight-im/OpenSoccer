@@ -32,7 +32,7 @@ Demo: http://www.ballmanager.de/
  * [Website/aa_spieler_erzeugen.php](Website/aa_spieler_erzeugen.php): every 30 minutes
  * [Website/aa_spieler_verbesserung.php](Website/aa_spieler_verbesserung.php): every 15 minutes
  * [Website/aa_spielplan_erstellen.php](Website/aa_spielplan_erstellen.php): every day; at hour 23
- * [Website/aa_spieltag_simulation.php?v=1](Website/aa_spieltag_simulation.php?v=1): every minute; at hours 10-11, 14-15, 18-19 and 22-23
+ * [Website/aa_spieltag_simulation.php](Website/aa_spieltag_simulation.php): every minute; at hours 10-11, 14-15, 18-19 and 22-23
  * [Website/aa_stadion_kosten.php](Website/aa_stadion_kosten.php): every day; at hour 23
  * [Website/aa_tabellen_berechnen.php](Website/aa_tabellen_berechnen.php): every 2 minutes; at hours 16-17
  * [Website/aa_team_staerke_berechnen.php](Website/aa_team_staerke_berechnen.php): every 5 minutes

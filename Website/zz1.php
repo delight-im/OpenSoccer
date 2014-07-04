@@ -16,9 +16,13 @@ $start = $seite*$eintraege_pro_seite-$eintraege_pro_seite; // ERMITTELN DER STAR
 
 require_once('./classes/I18N.php');
 if (isset($_GET['setLocale'])) {
-    $_SESSION['locale'] = htmlspecialchars(trim($_GET['setLocale']));
+    I18N::changeLanguage($_GET['setLocale']);
 }
-I18N::init((isset($_SESSION['locale']) ? $_SESSION['locale'] : 'de_DE'), 'messages', './i18n');
+I18N::init('messages', './i18n', 'en_US', array(
+    '/(^de(-.*?)?$)/i' => 'de_DE',
+    '/(^en(-.*?)?$)/i' => 'en_US',
+    '/(^es(-.*?)?$)/i' => 'es_ES'
+));
 
 // INFO-BOXEN-ARRAY ANFANG
 $showInfoBox = array();

@@ -3,20 +3,17 @@ date_default_timezone_set('Europe/Berlin');
 header('content-type: text/html; charset=utf-8');
 ignore_user_abort(true);
 include 'config.php';
-// FEHLERMELDUNGEN ANFANG
+
+// ERROR REPORTING BEGIN
 error_reporting(E_ALL);
-function fehlermeldung($errfehler, $errbeschreibung, $errdatei, $errzeile) {
-	global $prefix;
-	$php_fehler1 = "INSERT INTO ".$prefix."php_fehler (datei, zeile, beschreibung, zeit) VALUES ('".$errdatei."', '".$errzeile."', '".mysql_real_escape_string($errbeschreibung)."', ".time().")";
-	$php_fehler2 = mysql_query($php_fehler1);
-}
-set_error_handler('fehlermeldung');
+ini_set('display_errors', 'stdout');
 function reportError($text, $statement = '') {
 	$err1 = "INSERT INTO man_php_fehler (datei, zeile, beschreibung, zeit) VALUES ('".$_SERVER['REQUEST_URI']."_".mt_rand(0, 1000000)."', '0', '".mysql_real_escape_string(trim($text).'/'.$statement)."', ".time().")";
 	mysql_query($err1);
 	return FALSE;
 }
-// FEHLERMELDUNGEN ENDE
+// ERROR REPORTING END
+
 // SERVER-DATEN
 define('DEMO_USER_ID', '1d0a7ce36ffa946eea1a52394fcdaebf');
 $prefix = 'man_';
@@ -140,7 +137,7 @@ function displayUsername($name, $ids = '') {
 }
 function einsatz_in_auktionen($team) {
 	global $prefix;
-	$sql1 = "SELECT SUM(betrag_highest) AS einsatz FROM man_transfermarkt WHERE bieter_highest = '".$team."'";
+	$sql1 = "SELECT SUM(betrag_highest) AS einsatz FROM ".$prefix."transfermarkt WHERE bieter_highest = '".$team."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) == 0) { return 0; }
 	$sql3 = mysql_fetch_assoc($sql2);
@@ -165,8 +162,7 @@ function showKontostand($exakterWert) {
 function autoLink($text) {
 	return preg_replace('/(?<!")(https?:\/\/[^\s<]+)/i', '<a href="\0" target="_blank">\0</a>', $text);
 }
-function schaetzungVomScout($cookie_team, $cookie_scout, $spielerID, $spielerTalent, $spielerStaerke, $besitzer='') {
-	// Variable $besitzer überflüssig geworden, kann raus
+function schaetzungVomScout($cookie_team, $cookie_scout, $spielerID, $spielerTalent, $spielerStaerke) {
 	$possibleMD5chr = array(48=>-1, 49=>1, 50=>-1, 51=>1, 52=>-1, 53=>1, 54=>-1, 55=>1, 56=>-1, 57=>1, 97=>-1, 98=>1, 99=>-1, 100=>1, 101=>-1, 102=>1);
 	if ($spielerStaerke == $spielerTalent) { return $spielerTalent; }
 	$scout_hash = md5($cookie_team.$cookie_scout.$spielerID);

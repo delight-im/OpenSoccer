@@ -76,17 +76,25 @@ $pw_meldung = _('Dein Passwort konnte leider nicht geändert werden. Bitte versu
 	$pw_neu1 = trim($_POST['pw_neu1']);
 	$pw_neu2 = trim($_POST['pw_neu2']);
 	if ($pw_neu1 == $pw_neu2) {
-		$pw_alt = md5('1'.$pw_alt.'29');
-		$pw_neu = md5('1'.$pw_neu1.'29');
-		$sql1 = "UPDATE ".$prefix."users SET password = '".$pw_neu."' WHERE password = '".$pw_alt."' AND ids = '".$cookie_id."'";
-		$sql2 = mysql_query($sql1);
-		if ($sql2 != FALSE) {
-			if (mysql_affected_rows() > 0) {
-				setTaskDone('change_pw');
-				$pw_meldung = _('Dein Passwort wurde erfolgreich geändert!');
+            if (strlen($pw_neu1)>5) {
+                if ($pw_neu1 != $pw_alt) {
+		    $pw_alt = md5('1'.$pw_alt.'29');
+		    $pw_neu = md5('1'.$pw_neu1.'29');
+		    $sql1 = "UPDATE ".$prefix."users SET password = '".$pw_neu."' WHERE password = '".$pw_alt."' AND ids = '".$cookie_id."'";
+         	    $sql2 = mysql_query($sql1);
+  		    if ($sql2 != FALSE) {
+		        if (mysql_affected_rows() > 0) {
+ 			    setTaskDone('change_pw');
+			    $pw_meldung = _('Dein Passwort wurde erfolgreich geändert!');
 			}
-		}
-	}
+		    }
+                }else {
+                    $pw_meldung = _('You can\'t enter the same password!');
+                }
+            }else {
+               $pw_meldung = _('The password you entered is too short. At least 6 characters are required!');
+            }
+        }
 }
 if (isset($_POST['urlaub_ende']) && $cookie_id != DEMO_USER_ID) {
 	if ($cookie_team != '__'.$cookie_id) {

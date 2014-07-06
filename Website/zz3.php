@@ -12,8 +12,9 @@
 	<?php echo _('Alle Vereine, Spieler und Sponsoren sind frei erfunden und haben keinen Bezug zu realen Ligen. Das Geld im Spiel ist nur virtuell und es erfolgen niemals Auszahlungen.'); ?></span>
 </div>
 <?php
-// CRONJOBS AUSFUEREN ANFANG
-if (Chance_Percent(33)) {
+// RUN A SINGLE CRONJOB BEGIN
+// IF THIS TURNS OUT TO BE UNNECESSARY REMOVE CODE AND DATABASE TABLE <man_cronjobs>
+/*if (Chance_Percent(33)) {
 	$aktuelle_stunde = date('H');
 	$sql1 = "SELECT id, datei FROM ".$prefix."cronjobs WHERE (zuletzt+intervall) < ".time()." AND stunde_min <= ".$aktuelle_stunde." AND stunde_max >= ".$aktuelle_stunde." ORDER BY zuletzt ASC LIMIT 0, 1";
 	$sql2 = mysql_query($sql1);
@@ -23,8 +24,8 @@ if (Chance_Percent(33)) {
 		$sql4 = "UPDATE ".$prefix."cronjobs SET zuletzt = ".time()." WHERE id = ".intval($sql3['id']);
 		$sql5 = mysql_query($sql4);
 	}
-}
-// CRONJOBS AUSFUEREN ENDE
+}*/
+// RUN A SINGLE CRONJOB END
 ?>
 </body>
 </html>

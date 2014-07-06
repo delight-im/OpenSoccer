@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-06-30 00:43+0100\n"
-"PO-Revision-Date: 2014-07-02 19:45+0100\n"
+"POT-Creation-Date: 2014-07-06 18:24+0100\n"
+"PO-Revision-Date: 2014-07-06 18:35+0100\n"
 "Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -230,87 +230,87 @@ msgstr "The player makes use of his quickness."
 
 #: ../../../aa_spieltag_simulation.php:125
 msgid "Guter Querpass zum Teamkollegen."
-msgstr ""
+msgstr "Good square pass to the teammate."
 
 #: ../../../aa_spieltag_simulation.php:128
 msgid "Schöne Vorlage."
-msgstr ""
+msgstr "Nice assist."
 
 #: ../../../aa_spieltag_simulation.php:129
 msgid "Tolle Vorlage."
-msgstr ""
+msgstr "Great assist."
 
 #: ../../../aa_spieltag_simulation.php:130
 msgid "Ein Dribbling wie aus dem Lehrbuch."
-msgstr ""
+msgstr "A dribble in an exemplary manner."
 
 #: ../../../aa_spieltag_simulation.php:131
 msgid "Der Mitspieler dribbelt ein, zwei Spieler aus."
-msgstr ""
+msgstr "The teammate sidesteps one, two players."
 
 #: ../../../aa_spieltag_simulation.php:132
 msgid "Der Mitspieler dribbelt einen, nein zwei, Spieler aus."
-msgstr ""
+msgstr "The teammate sidesteps one, no, two players."
 
 #: ../../../aa_spieltag_simulation.php:133
 msgid "Der Mitspieler wird schön in Szene gesetzt."
-msgstr ""
+msgstr "The teammate is staged well."
 
 #: ../../../aa_spieltag_simulation.php:134
 msgid "Der Angreifer lässt seine Gegenspieler stehen."
-msgstr ""
+msgstr "The attacking player ditches his opponents."
 
 #: ../../../aa_spieltag_simulation.php:135
 msgid "Geschickt freigespielt."
-msgstr ""
+msgstr "Skilfully released."
 
 #: ../../../aa_spieltag_simulation.php:136
 msgid "Schönes Dribbling des Stürmers."
-msgstr ""
+msgstr "Nice dribble by the striker."
 
 #: ../../../aa_spieltag_simulation.php:137
 msgid "Der Stürmer wird herrlich von seinem Mitspieler bedient."
-msgstr ""
+msgstr "The forward is wonderfully served by his teammate."
 
 #: ../../../aa_spieltag_simulation.php:138
 msgid "Steilpass auf den linken Flügel."
-msgstr ""
+msgstr "Long ball onto the left flank."
 
 #: ../../../aa_spieltag_simulation.php:139
 msgid "Der Spieler lässt seinen Gegner stehen."
-msgstr ""
+msgstr "The player ditches his opponent."
 
 #: ../../../aa_spieltag_simulation.php:140
 msgid "Der Spieler tunnelt seinen Gegner."
-msgstr ""
+msgstr "The player nutmegs his opponent."
 
 #: ../../../aa_spieltag_simulation.php:141
 msgid "Dribbling über den halben Platz."
-msgstr ""
+msgstr "Dribble across half of the field."
 
 #: ../../../aa_spieltag_simulation.php:143
 msgid "Steilpass auf den rechten Flügel."
-msgstr ""
+msgstr "Logn pass onto the right flank."
 
 #: ../../../aa_spieltag_simulation.php:144
 msgid "Den Kollegen mustergültig freigespielt."
-msgstr ""
+msgstr "Perfectly released the mate."
 
 #: ../../../aa_spieltag_simulation.php:145
 msgid "Traumpass auf den linken Flügelspieler."
-msgstr ""
+msgstr "A fantastic pass to the left winger."
 
 #: ../../../aa_spieltag_simulation.php:146
 msgid "Traumpass auf den rechten Flügelspieler."
-msgstr ""
+msgstr "A fantastic pass to the right winger."
 
 #: ../../../aa_spieltag_simulation.php:147
 msgid "Traumpass in die Spitze."
-msgstr ""
+msgstr "Fantastic pass into the spearhead."
 
 #: ../../../aa_spieltag_simulation.php:148
 msgid "Ball selbstlos quergelegt."
-msgstr ""
+msgstr "Selflessly squared the ball."
 
 #: ../../../aa_spieltag_simulation.php:149
 msgid "Der kreuzende Mitspieler wird geschickt."
@@ -491,7 +491,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:229
 msgid "Elfmeter!"
-msgstr ""
+msgstr "Penalty!"
 
 #: ../../../aa_spieltag_simulation.php:230
 msgid "Der Unparteiische entscheidet auf Elfmeter."
@@ -499,15 +499,15 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:231
 msgid "Strafstoß!"
-msgstr ""
+msgstr "Spot kick!"
 
 #: ../../../aa_spieltag_simulation.php:232
 msgid "Strafstoß für XYZ!"
-msgstr ""
+msgstr "Spot kick for XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:233
 msgid "Elfmeter für XYZ!"
-msgstr ""
+msgstr "Penalty for XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:236
 msgid "Der Torwart springt in die richtige Ecke ... und hält!"
@@ -1170,6 +1170,8 @@ msgid ""
 "Die Zeitschrift &quot;Bolzblatt&quot; bewertet die Leistung der Teams wie "
 "folgt:"
 msgstr ""
+"The magazine &quot;KickJournal&quot; evaluates the teams' performances like "
+"this:"
 
 #: ../../../aa_spieltag_simulation.php:977
 msgid "Die Zuschauer fiebern dem Derby schon lange entgegen!"
@@ -1194,6 +1196,8 @@ msgid ""
 "Du hast ein Smartphone oder Tablet mit Android? Dann spiele den Ballmanager "
 "ganz einfach von unterwegs:"
 msgstr ""
+"You have a smartphone or tablet with Android? Play the game comfortably on "
+"the go:"
 
 #: ../../../android_app.php:22
 msgid ""
@@ -1201,6 +1205,9 @@ msgid ""
 "Kästchen bei &quot;Unbekannte Quellen&quot;, damit Du die Ballmanager-App "
 "von dieser Seite aus installieren kannst."
 msgstr ""
+"Under <em>Settings</em> &raquo; <em>Applications</em>, activate the checkbox "
+"for &quot;Unknown sources&quot; so that you can install the game's app from "
+"this page."
 
 #: ../../../android_app.php:23
 msgid ""
@@ -1324,7 +1331,7 @@ msgstr "injured or suspended players"
 
 #: ../../../aufstellung.php:346 ../../../beobachtung.php:122
 #: ../../../chat.php:123 ../../../chat_reports.php:101 ../../../cup.php:137
-#: ../../../einstellungen.php:255 ../../../entwicklung.php:67
+#: ../../../einstellungen.php:265 ../../../entwicklung.php:67
 #: ../../../freunde.php:68 ../../../freundeWerben.php:48
 #: ../../../geloeschteAccounts.php:42 ../../../gesperrteTeamnamen.php:97
 #: ../../../gruendeFuerLoeschung.php:42 ../../../ipInfo.php:43
@@ -1332,24 +1339,23 @@ msgstr "injured or suspended players"
 #: ../../../lig_testspiele_liste.php:79 ../../../ligaTausch.php:208
 #: ../../../ligaTauschWuensche.php:67 ../../../liveZentrale.php:156
 #: ../../../marktschreier.php:60 ../../../namensaenderung.php:168
-#: ../../../neueAccounts.php:67 ../../../neuigkeiten.php:33
-#: ../../../notizen.php:58 ../../../pokal.php:243 ../../../postausgang.php:16
-#: ../../../spielbericht.php:327 ../../../spieler_historie.php:130
-#: ../../../stat_5jahresWertung.php:61 ../../../stat_cupsieger.php:69
-#: ../../../stat_dauerbrenner.php:65 ../../../stat_ergebnisverlauf.php:69
-#: ../../../stat_geldwert.php:78 ../../../stat_geschichte.php:82
-#: ../../../stat_juengste_kader.php:69 ../../../stat_ligaTausch.php:45
-#: ../../../stat_meiste_titel.php:92 ../../../stat_meiste_zuschauer.php:88
-#: ../../../stat_meister.php:64 ../../../stat_pokalsieger.php:42
-#: ../../../stat_reichste_ligen.php:41 ../../../stat_saisonverlauf.php:46
-#: ../../../stat_staerkste_ligen_a.php:41
+#: ../../../neueAccounts.php:67 ../../../notizen.php:58 ../../../pokal.php:243
+#: ../../../postausgang.php:16 ../../../spielbericht.php:327
+#: ../../../spieler_historie.php:130 ../../../stat_5jahresWertung.php:61
+#: ../../../stat_cupsieger.php:69 ../../../stat_dauerbrenner.php:65
+#: ../../../stat_ergebnisverlauf.php:69 ../../../stat_geldwert.php:78
+#: ../../../stat_geschichte.php:82 ../../../stat_juengste_kader.php:69
+#: ../../../stat_ligaTausch.php:45 ../../../stat_meiste_titel.php:92
+#: ../../../stat_meiste_zuschauer.php:88 ../../../stat_meister.php:64
+#: ../../../stat_pokalsieger.php:42 ../../../stat_reichste_ligen.php:41
+#: ../../../stat_saisonverlauf.php:46 ../../../stat_staerkste_ligen_a.php:41
 #: ../../../stat_staerkste_ligen_k.php:41
 #: ../../../stat_staerkste_ligen_r.php:41 ../../../stat_torjaegerliste.php:78
 #: ../../../stat_transfer_uebersicht.php:72
 #: ../../../stat_treuesteSpieler.php:79
 #: ../../../stat_wertvollste_spieler.php:69
 #: ../../../stat_wertvollste_teams.php:89 ../../../taktik.php:183
-#: ../../../tipps_des_tages.php:35 ../../../top_manager.php:115
+#: ../../../tipps_des_tages.php:37 ../../../top_manager.php:115
 #: ../../../transferliste.php:42 ../../../ver_buchungen.php:64
 #: ../../../ver_lotto.php:153 ../../../vertraege.php:88
 #: ../../../vertrag_verlaengern.php:132 ../../../wio.php:56
@@ -1439,6 +1445,7 @@ msgstr ""
 msgid ""
 "Dein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30):"
 msgstr ""
+"Your manager name may only contain the following characters (length: 3-30):"
 
 #: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
 msgid "Buchstaben:"
@@ -1462,7 +1469,7 @@ msgstr "Dash"
 
 #: ../../../bp_username_waehlen.php:14 ../../../registrieren.php:75
 msgid "Nicht erlaubt sind also Leerzeichen, Punkt, Komma, Sternchen usw."
-msgstr ""
+msgstr "Not permitted are thus the space character, dot, comma, asterisk etc."
 
 #: ../../../bp_username_waehlen.php:15
 msgid "Bitte versuche es noch einmal."
@@ -1520,7 +1527,7 @@ msgstr "Chat reports"
 
 #: ../../../chat_reports.php:30
 msgid "Kein Protokoll gefunden!"
-msgstr ""
+msgstr "No report found!"
 
 #: ../../../chat_reports.php:52
 msgid "Gemeldet"
@@ -1541,11 +1548,11 @@ msgstr "Date"
 
 #: ../../../chat_reports.php:55
 msgid "Sperre"
-msgstr ""
+msgstr "Suspension"
 
 #: ../../../cup.php:2 ../../../cup.php:35 ../../../cup.php:136
 msgid "Nationaler Cup"
-msgstr "National Trophy"
+msgstr "National Cup"
 
 #: ../../../cup.php:5 ../../../liveZentrale.php:6
 #: ../../../stat_cupsieger.php:13
@@ -1558,6 +1565,9 @@ msgid ""
 "werden. In einem KO-Spiel pro Runde ermitteln die Teams den Sieger, der dann "
 "die nächste Runde erreicht."
 msgstr ""
+"There are qualifiers and afterwards five rounds that are drawn by lot. In "
+"the single-elimination rounds, the teams make out the winner who then gets "
+"to the next round."
 
 #: ../../../cup.php:119
 msgid "Team 1"
@@ -1578,7 +1588,7 @@ msgid ""
 "Die Zahlen in den eckigen Klammern geben die Liga des jeweiligen Teams an."
 msgstr "The numbers in the square brackets indicate each team's league."
 
-#: ../../../einstellungen.php:2 ../../../einstellungen.php:254
+#: ../../../einstellungen.php:2 ../../../einstellungen.php:264
 msgid "Einstellungen"
 msgstr "Settings"
 
@@ -1586,41 +1596,49 @@ msgstr "Settings"
 msgid ""
 "Dein Passwort konnte leider nicht geändert werden. Bitte versuche es noch "
 "einmal!"
-msgstr ""
+msgstr "Your password could not be changed. Please try again!"
 
-#: ../../../einstellungen.php:86
+#: ../../../einstellungen.php:88
 msgid "Dein Passwort wurde erfolgreich geändert!"
 msgstr "Your password has successfully been changed."
 
-#: ../../../einstellungen.php:95
+#: ../../../einstellungen.php:93
+msgid "Dein altes und neues Passwort dürfen nicht übereinstimmen!"
+msgstr ""
+
+#: ../../../einstellungen.php:97
+msgid "Bitte gib mindestens 6 Zeichen für das Passwort ein!"
+msgstr ""
+
+#: ../../../einstellungen.php:105
 msgid "Du kannst leider keinen Urlaub beantragen, der so lange dauert."
 msgstr "Unfortunately, you cannot request a vacation with that duration."
 
-#: ../../../einstellungen.php:116
+#: ../../../einstellungen.php:126
 msgid "Dein Urlaub wurde genehmigt!"
 msgstr "Your vacation has been granted!"
 
-#: ../../../einstellungen.php:140 ../../../regeln.php:104
+#: ../../../einstellungen.php:150 ../../../regeln.php:104
 msgid "E-Mail-Adresse"
 msgstr "Email address"
 
-#: ../../../einstellungen.php:141
+#: ../../../einstellungen.php:151
 msgid "Du bist mit der folgenden E-Mail-Adresse registriert:"
 msgstr "You have signed up with the following email address:"
 
-#: ../../../einstellungen.php:144
+#: ../../../einstellungen.php:154
 msgid "Vereinsnamen ändern"
 msgstr "Change team name"
 
-#: ../../../einstellungen.php:149
+#: ../../../einstellungen.php:159
 msgid "Managernamen ändern"
 msgstr "Change manager name"
 
-#: ../../../einstellungen.php:153
+#: ../../../einstellungen.php:163
 msgid "Urlaub beantragen"
 msgstr "Request vacation"
 
-#: ../../../einstellungen.php:156
+#: ../../../einstellungen.php:166
 msgid ""
 "Mit dem folgenden Formular kannst Du Urlaub beantragen. In Deiner "
 "Urlaubszeit kannst Du nicht automatisch gelöscht werden. Außerdem verwaltet "
@@ -1632,27 +1650,27 @@ msgstr ""
 "will manage your line-up and extend players' contracts in case they expire "
 "during your vacation."
 
-#: ../../../einstellungen.php:166 ../../../einstellungen.php:184
+#: ../../../einstellungen.php:176 ../../../einstellungen.php:194
 msgid "noch keinen Urlaub"
-msgstr ""
+msgstr "no vacation yet"
 
-#: ../../../einstellungen.php:172 ../../../einstellungen.php:190
+#: ../../../einstellungen.php:182 ../../../einstellungen.php:200
 msgid "Du kannst jetzt neuen Urlaub beantragen."
 msgstr "You can now request a new vacation."
 
-#: ../../../einstellungen.php:179
+#: ../../../einstellungen.php:189
 msgid "Kurzurlaub (1-10 Tage):"
 msgstr "Short vacation (1-10 days):"
 
-#: ../../../einstellungen.php:197
+#: ../../../einstellungen.php:207
 msgid "Langer Urlaub (11-30 Tage):"
 msgstr "Long vacation (11-30 days):"
 
-#: ../../../einstellungen.php:236
+#: ../../../einstellungen.php:246
 msgid "Passwort ändern"
 msgstr "Change password"
 
-#: ../../../einstellungen.php:237
+#: ../../../einstellungen.php:247
 msgid ""
 "Mit dem folgenden Formular kannst Du Dein Passwort beim Ballmanager ändern. "
 "Dazu musst Du alle Felder ausfüllen."
@@ -1660,11 +1678,11 @@ msgstr ""
 "With the following form, you can change your password for this game. Please "
 "fill out all the fields."
 
-#: ../../../einstellungen.php:245
+#: ../../../einstellungen.php:255
 msgid "Account löschen"
 msgstr "Delete account"
 
-#: ../../../einstellungen.php:246
+#: ../../../einstellungen.php:256
 msgid ""
 "Du bist Dir wirklich sicher, dass Du Deinen Account hier beim Ballmanager "
 "löschen möchtest? Das ist sehr schade, aber wir akzeptieren das natürlich."
@@ -1672,7 +1690,7 @@ msgstr ""
 "Are you really sure you want to delete your account here in this game? It's "
 "a pity, but we accept it, of course."
 
-#: ../../../einstellungen.php:247
+#: ../../../einstellungen.php:257
 msgid ""
 "Wir würden uns freuen, wenn Du uns noch mitteilen würdest, was Dir hier "
 "gefallen hat und was noch nicht so gut war."
@@ -1680,11 +1698,11 @@ msgstr ""
 "We would be happy if you could tell us what you liked in this game and what "
 "you think must still be improved."
 
-#: ../../../einstellungen.php:249
+#: ../../../einstellungen.php:259
 msgid "Das war gut:"
 msgstr "What I liked:"
 
-#: ../../../einstellungen.php:250
+#: ../../../einstellungen.php:260
 msgid "Das hat mir nicht gefallen:"
 msgstr "What I didn't like:"
 
@@ -1778,6 +1796,9 @@ msgid ""
 "Prüfung abgeschlossen hat. Voraussetzung ist allerdings, dass Dein Account "
 "und der geworbene Account nicht vom selben Computer aus gesteuert werden."
 msgstr ""
+"Your team will receive the bonus as soon as the other manager has completed "
+"their management test. A requirement is, however, that you and the invited "
+"user are now playing from the same internet connection."
 
 #: ../../../freundeWerben.php:10
 msgid "Geworbene Manager"
@@ -1819,7 +1840,7 @@ msgstr "Deleted"
 
 #: ../../../geloeschteAccounts.php:12
 msgid "Dabei"
-msgstr ""
+msgstr "Involved"
 
 #: ../../../geloeschteAccounts.php:12 ../../../stat_5jahresWertung.php:22
 #: ../../../stat_meiste_titel.php:71 ../../../stat_reichste_ligen.php:20
@@ -1923,7 +1944,7 @@ msgstr "Struck-through:"
 
 #: ../../../kader.php:167
 msgid "Besetzung des Kaders"
-msgstr ""
+msgstr "Composition of squad"
 
 #: ../../../kader.php:171
 msgid "Position"
@@ -1931,7 +1952,7 @@ msgstr "Position"
 
 #: ../../../kader.php:172
 msgid "Besetzung"
-msgstr ""
+msgstr "Composition"
 
 #: ../../../kalender.php:2
 msgid "Kalender"
@@ -1956,7 +1977,7 @@ msgstr "International Cup: Preliminary (First)"
 
 #: ../../../kalender.php:53
 msgid "Cup: Qualifikation"
-msgstr "National Trophy: Qualifiers"
+msgstr "National Cup: Qualifiers"
 
 #: ../../../kalender.php:54
 msgid "Pokal: Vorrunde (Rückspiel)"
@@ -1964,7 +1985,7 @@ msgstr "International Cup: Preliminary (Return)"
 
 #: ../../../kalender.php:55
 msgid "Cup: Vorrunde"
-msgstr "National Trophy: Preliminary"
+msgstr "National Cup: Preliminary"
 
 #: ../../../kalender.php:56
 msgid "Pokal: Achtelfinale (Hinspiel)"
@@ -1976,7 +1997,7 @@ msgstr "International Cup: Last 16 (Return)"
 
 #: ../../../kalender.php:58
 msgid "Cup: Achtelfinale"
-msgstr "National Trophy: Last 16"
+msgstr "National Cup: Last 16"
 
 #: ../../../kalender.php:59
 msgid "Pokal: Viertelfinale (Hinspiel)"
@@ -1988,7 +2009,7 @@ msgstr "International Cup: Quarterfinal (Return)"
 
 #: ../../../kalender.php:60
 msgid "Cup: Viertelfinale"
-msgstr "National Trophy: Quarterfinal"
+msgstr "National Cup: Quarterfinal"
 
 #: ../../../kalender.php:61
 msgid "Pokal: Halbfinale (Hinspiel)"
@@ -1996,7 +2017,7 @@ msgstr "International Cup: Semifinal (First)"
 
 #: ../../../kalender.php:61
 msgid "Cup: Halbfinale"
-msgstr "National Trophy: Semifinal"
+msgstr "National Cup: Semifinal"
 
 #: ../../../kalender.php:62
 msgid "Pokal: Halbfinale (Rückspiel)"
@@ -2004,7 +2025,7 @@ msgstr "International Cup: Semifinal (Return)"
 
 #: ../../../kalender.php:63
 msgid "Cup: Finale"
-msgstr "National Trophy: Final"
+msgstr "National Cup: Final"
 
 #: ../../../kalender.php:64
 msgid "Pokal: Finale"
@@ -2067,11 +2088,11 @@ msgid ""
 "hast, nicht zum neuen Verein mitgenommen werden."
 msgstr ""
 "If both managers agree on the swap, the two teams' names will be changed and "
-"you will be playing all the competitions (league, international cup, "
-"national trophy, friendlies) for the other team until the end of the season. "
-"The rest (players, account, achievements, etc.) will not change. So please "
-"note that you will not be taking friendlies with you to the new team in case "
-"you have already added some for this season."
+"you will be playing all the competitions (League, International Cup, "
+"National Cup and Friendly) for the other team until the end of the season. "
+"The rest (players, account, trophies, etc.) will not change. So please note "
+"that you will not be taking friendlies with you to the new team in case you "
+"have already added some for this season."
 
 #: ../../../ligaTausch.php:29
 msgid ""
@@ -2159,7 +2180,7 @@ msgstr "Playtimes"
 
 #: ../../../liveZentrale.php:37
 msgid "Cup: 10-12 Uhr"
-msgstr "National Trophy: 10:00-12:00"
+msgstr "National Cup: 10:00-12:00"
 
 #: ../../../liveZentrale.php:37
 msgid "Liga: 14-16 Uhr"
@@ -2210,6 +2231,8 @@ msgid ""
 "Du möchtest dafür sorgen, dass einer Deiner Spieler verliehen wird? Du hast "
 "noch nicht genügend Angebote? Dann bist Du hier genau richtig!"
 msgstr ""
+"You want to improve the chances for one of your players to be loaned out? "
+"You don't have enough offers yet? Then this is the place to be!"
 
 #: ../../../marktschreier.php:7
 msgid ""
@@ -2231,7 +2254,7 @@ msgstr "Offers on the market"
 
 #: ../../../multiSperre.php:3 ../../../multiSperre.php:5
 msgid "Multi-Accounts"
-msgstr ""
+msgstr "Multiple accounts"
 
 #: ../../../multiSperre.php:7
 msgid ""
@@ -2308,15 +2331,6 @@ msgstr "This manager has been contacted already"
 #: ../../../neueAccounts.php:40
 msgid "Dieser Manager wurde bisher noch nicht angeschrieben"
 msgstr "This manager has not been contacted yet"
-
-#: ../../../neuigkeiten.php:2 ../../../neuigkeiten.php:12
-#: ../../../neuigkeiten.php:32
-msgid "Neuigkeiten"
-msgstr "News"
-
-#: ../../../neuigkeiten.php:5
-msgid "Neuigkeiten durchsuchen"
-msgstr "Search news"
 
 #: ../../../notizen.php:2 ../../../notizen.php:49
 msgid "Notizen"
@@ -2403,6 +2417,8 @@ msgid ""
 "Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang "
 "gültig. Danach musst Du die E-Mail erneut anfordern."
 msgstr ""
+"The link in the email that you will receive from us will be valid for five "
+"hours. After that, you need to request a new email again."
 
 #: ../../../passwort_vergessen.php:111
 msgid "E-Mail-Adresse:"
@@ -2418,6 +2434,9 @@ msgid ""
 "sind alle Erstplatzierten, alle Zweitplatzierten und dazu die sechs besten "
 "Drittplatzierten."
 msgstr ""
+"The best 32 teams from the whole continent qualify for this competition. "
+"These are all teams from the first and second rank in their league as well "
+"as the six best teams from the third rank."
 
 #: ../../../pokal.php:68
 msgid ""
@@ -2425,6 +2444,9 @@ msgid ""
 "Rückspiel mit Auswärtstorregel ermitteln die Teams den Sieger, der dann die "
 "nächste Runde erreicht."
 msgstr ""
+"There are five rounds that are drawn by lot each. The teams will play a "
+"first leg and a return match with away goals rule. They make out the winner, "
+"who then gets to the next round."
 
 #: ../../../pokal.php:84 ../../../pokal.php:222
 msgid "Manager-Talk"
@@ -2433,6 +2455,7 @@ msgstr "Manager talk"
 #: ../../../pokal.php:196
 msgid "Spiele mit Beteiligung aus dem eigenen Land werden grau hinterlegt."
 msgstr ""
+"Matches with participation from your own country are highlighted in gray."
 
 #: ../../../postausgang.php:2 ../../../postausgang.php:30
 msgid "Postausgang"
@@ -2450,7 +2473,7 @@ msgstr "Subject"
 msgid "Empfänger"
 msgstr "Recipient"
 
-#: ../../../regeln.php:2 ../../../zz3.php:7
+#: ../../../regeln.php:2 ../../../zz3.php:8
 msgid "Regeln"
 msgstr "Rules"
 
@@ -2464,7 +2487,7 @@ msgstr "Please confirm"
 
 #: ../../../regeln.php:21
 msgid "Ich habe die unten stehenden Regeln gelesen"
-msgstr ""
+msgstr "I have read the rules below"
 
 #: ../../../regeln.php:25
 msgid ""
@@ -2472,10 +2495,13 @@ msgid ""
 "akzeptierst. Ansonsten empfehlen wir Dir, Deinen Account unter &quot;"
 "Einstellungen&quot; zu löschen."
 msgstr ""
+"You can only participate in this game if you accept the game's rules. "
+"Otherwise, we recommend you to delete your account under &quot;"
+"Settings&quot;."
 
 #: ../../../regeln.php:30
 msgid "Nutzungsregeln"
-msgstr ""
+msgstr "Terms of use"
 
 #: ../../../regeln.php:31
 msgid ""
@@ -2484,16 +2510,22 @@ msgid ""
 "nutzen darfst. Mit der Nutzung dieser Webseite erklärst Du, dass Du mit den "
 "Regeln auf dieser Seite einverstanden bist."
 msgstr ""
+"These terms of use (%quot;the Rules&quot;) determine how you (&quot;the "
+"User&quot;) may use this website and all services offered on our pages "
+"(&quot;the Application&quot;). By using th Application you declare your "
+"agreement with the Rules listed on this page."
 
 #: ../../../regeln.php:32
 msgid ""
 "Bitte lies die Regeln sorgfältig durch, denn sie müssen eingehalten werden, "
 "damit alles fair bleibt und jeder Spaß am Spiel hat."
 msgstr ""
+"Please read the Rules carefully, as they have to be respected and followed "
+"in order to make the game fair and fun for everybody."
 
 #: ../../../regeln.php:33
 msgid "Teil I: Allgemeines Verhalten"
-msgstr ""
+msgstr "Part I: General behavior"
 
 #: ../../../regeln.php:35
 msgid ""
@@ -2501,6 +2533,9 @@ msgid ""
 "Verwandte dürfen natürlich mitspielen, auch wenn sie vom gleichen "
 "Internetanschluss aus spielen."
 msgstr ""
+"A single account per user (account) is permitted. Friends and family members "
+"may participate as well, of course, even if they play from the same internet "
+"connection."
 
 #: ../../../regeln.php:36
 msgid ""
@@ -2508,12 +2543,16 @@ msgid ""
 "einen höflichen Umgangston achten und sich an die <a href=\"http://de."
 "wikipedia.org/wiki/Netiquette\">Netiquette</a> halten."
 msgstr ""
+"In the game, you can communicate with other users. Please pay attention to a "
+"polite tone and adhere to the netiquette."
 
 #: ../../../regeln.php:37
 msgid ""
 "Du darfst andere User nicht diskriminieren, etwa wegen ihrer Herkunft, ihrer "
 "Hautfarbe, ihres Geschlechts oder ihrer Religion."
 msgstr ""
+"You may not discriminate against other users, neither due to their origin "
+"nor due to their skin color, gender or religion."
 
 #: ../../../regeln.php:38
 msgid ""
@@ -2574,7 +2613,7 @@ msgstr ""
 
 #: ../../../regeln.php:49
 msgid "Teil II: Verhalten in der Spielwelt"
-msgstr ""
+msgstr "Part II: Behaviour in the Game's virtual world"
 
 #: ../../../regeln.php:51
 msgid ""
@@ -2612,6 +2651,8 @@ msgid ""
 "Es darf kein Ligatausch mit Teams durchgeführt werden, die jemandem gehören, "
 "der am gleichen Internetanschluss spielt."
 msgstr ""
+"A league swap is not permitted with teams that are managed from the same "
+"internet connection."
 
 #: ../../../regeln.php:57
 msgid ""
@@ -2624,7 +2665,7 @@ msgstr ""
 
 #: ../../../regeln.php:60
 msgid "Teil III: Verbotene Usernamen"
-msgstr ""
+msgstr "Part III: Forbidden usernames"
 
 #: ../../../regeln.php:62
 msgid "obszöne Usernamen"
@@ -2648,7 +2689,7 @@ msgstr ""
 
 #: ../../../regeln.php:68
 msgid "Teil IV: Aufgaben und Funktion des Ballmanager-Teams"
-msgstr ""
+msgstr "Part IV: Tasks and duties of the Staff"
 
 #: ../../../regeln.php:70
 msgid ""
@@ -2692,7 +2733,7 @@ msgstr ""
 
 #: ../../../regeln.php:78
 msgid "Teil V: Ballmanager"
-msgstr ""
+msgstr "Part V: The Game"
 
 #: ../../../regeln.php:80
 msgid ""
@@ -2752,7 +2793,7 @@ msgstr ""
 msgid "Ballmanager behält sich vor, diese Regeln jederzeit ändern zu können."
 msgstr ""
 
-#: ../../../regeln.php:90 ../../../zz3.php:9
+#: ../../../regeln.php:90 ../../../zz3.php:10
 msgid "Datenschutz"
 msgstr "Privacy Policy"
 
@@ -2866,7 +2907,7 @@ msgstr ""
 
 #: ../../../regeln.php:117
 msgid "Drittanbieter:"
-msgstr ""
+msgstr "Third-party providers:"
 
 #: ../../../regeln.php:118
 msgid ""
@@ -2931,7 +2972,7 @@ msgstr ""
 
 #: ../../../regeln.php:125
 msgid "Verlinkte Webseiten:"
-msgstr ""
+msgstr "Linked websites:"
 
 #: ../../../regeln.php:126
 msgid ""
@@ -2942,7 +2983,7 @@ msgstr ""
 
 #: ../../../regeln.php:127
 msgid "Weitere Informationen:"
-msgstr ""
+msgstr "Additional information:"
 
 #: ../../../registrieren.php:4 ../../../registrieren.php:6
 msgid "Registrierung - Daten prüfen"
@@ -2969,6 +3010,8 @@ msgstr ""
 #: ../../../registrieren.php:91
 msgid "Dein Team und die Liga kannst Du Dir beim ersten Login frei aussuchen."
 msgstr ""
+"You can choose your team and league freely after signing in for the first "
+"time."
 
 #: ../../../registrieren.php:93
 msgid ""
@@ -2978,7 +3021,7 @@ msgstr ""
 
 #: ../../../spielbericht.php:115
 msgid "Zur LIVE-Zentrale"
-msgstr ""
+msgstr "Go to LIVE central"
 
 #: ../../../spielbericht.php:258
 msgid "Herzlich willkommen im Stadion. Heute findet das Spiel zwischen "
@@ -2994,11 +3037,11 @@ msgstr "Value"
 
 #: ../../../spielbericht.php:287
 msgid "Begegnung"
-msgstr ""
+msgstr "Encounter"
 
 #: ../../../spielbericht.php:290
 msgid "Wettbewerb"
-msgstr ""
+msgstr "Competition"
 
 #: ../../../spielbericht.php:291
 msgid "Zuschauer"
@@ -3046,7 +3089,7 @@ msgstr "Red cards (guest)"
 
 #: ../../../spielbericht.php:307
 msgid "Kommentar des Reporters"
-msgstr ""
+msgstr "Reporter's commentary"
 
 #: ../../../spielbericht.php:313
 msgid "Mögliche RKP-Veränderungen"
@@ -3054,7 +3097,7 @@ msgstr ""
 
 #: ../../../spieler_historie.php:19 ../../../spieler_historie.php:21
 msgid "Spieler-Historie:"
-msgstr ""
+msgstr "Player's history:"
 
 #: ../../../spieler_historie.php:23
 msgid "Zum Spieler-Profil"
@@ -3074,11 +3117,11 @@ msgstr "Transfer fee"
 
 #: ../../../spieler_historie.php:91
 msgid "Letzte Gebote [Sichtbar fürs Team]"
-msgstr ""
+msgstr "Latest bids [Visible for Staff]"
 
 #: ../../../spieler_historie.php:96
 msgid "Bieter-IP"
-msgstr ""
+msgstr "Bidder IP:"
 
 #: ../../../spieler_historie.php:97 ../../../ver_buchungen.php:13
 msgid "Betrag"
@@ -3112,11 +3155,11 @@ msgstr ""
 
 #: ../../../stat_5jahresWertung.php:23
 msgid "GES"
-msgstr ""
+msgstr "TTL"
 
 #: ../../../stat_5jahresWertung.php:58
 msgid "Erklärungen:"
-msgstr ""
+msgstr "Explanations:"
 
 #: ../../../stat_5jahresWertung.php:58
 msgid ""
@@ -3124,21 +3167,28 @@ msgid ""
 "(&quot;GES&quot;) die Gesamtpunktzahl der letzten 5 Saisons und die "
 "folgenden fünf Spalten die einzelnen Punktzahlen für die letzten Saisons."
 msgstr ""
+"The first column indicates the rank, the second one shows the league, the "
+"third one (&quot;TTL&quot;) is for the total points from the last 5 seasons "
+"and the following five columns indicate the points for the last seasons."
 
 #: ../../../stat_5jahresWertung.php:59
 msgid ""
 "Bei Punktgleichheit (GES) zwischen zwei Ländern entscheidet das neueste "
 "Saisonergebnis, in dem es eine Differenz gibt."
 msgstr ""
+"In case of level score (TTL) between two countries, the latest season's "
+"result with a difference is the deciding factor."
 
 #: ../../../stat_cupsieger.php:2 ../../../stat_cupsieger.php:39
 #: ../../../stat_cupsieger.php:68
 msgid "Cupsieger"
-msgstr "National Trophy winners"
+msgstr "National Cup winners"
 
 #: ../../../stat_cupsieger.php:40
 msgid "Welches Teams haben den Cup schon gewonnen? Wer war ihr Finalgegner?"
 msgstr ""
+"Which teams have already won the National Cup? Who has been their opponent "
+"in the final?"
 
 #: ../../../stat_cupsieger.php:45 ../../../stat_meister.php:41
 #: ../../../stat_pokalsieger.php:19
@@ -3184,7 +3234,7 @@ msgstr ""
 #: ../../../stat_saisonverlauf.php:36 ../../../stat_saisonverlauf.php:40
 #: ../../../stat_zuschauerverlauf.php:37
 msgid "Noch keine Daten verfügbar!"
-msgstr ""
+msgstr "No data available yet!"
 
 #: ../../../stat_geldwert.php:2 ../../../stat_geldwert.php:6
 #: ../../../stat_geldwert.php:77 ../../../zzsubnav_statistik.php:26
@@ -3255,12 +3305,12 @@ msgstr ""
 
 #: ../../../stat_ligaTausch.php:15
 msgid "Nach"
-msgstr ""
+msgstr "To"
 
 #: ../../../stat_meiste_titel.php:2 ../../../stat_meiste_titel.php:41
 #: ../../../stat_meiste_titel.php:91 ../../../zzsubnav_statistik.php:14
 msgid "Meiste Titel"
-msgstr "Most triumphs"
+msgstr "Most trophies"
 
 #: ../../../stat_meiste_titel.php:13 ../../../stat_meiste_zuschauer.php:13
 #: ../../../stat_meister.php:13 ../../../stat_torjaegerliste.php:21
@@ -3276,14 +3326,17 @@ msgid ""
 "aufgelistet. Pokalsiege, Cupsiege und Meisterschaften werden für das Ranking "
 "einfach addiert."
 msgstr ""
+"In this table you'll find the 20 teams with the most trophies won. "
+"International Cup, National Cup and League wins are simply added for this "
+"ranking."
 
 #: ../../../stat_meiste_titel.php:69
 msgid "Titel"
-msgstr ""
+msgstr "Trophies"
 
 #: ../../../stat_meiste_titel.php:70
 msgid "Cup"
-msgstr "National Trophy"
+msgstr "National Cup"
 
 #: ../../../stat_meiste_titel.php:72
 msgid "Pokal"
@@ -3314,6 +3367,8 @@ msgid ""
 "Wer wurde in meiner Liga in den letzten Saisons Meister? Wie viele Punkte "
 "hatten diese Teams jeweils?"
 msgstr ""
+"Who has been winning my league in the last seasons? What number of points "
+"did they have then?"
 
 #: ../../../stat_pokalsieger.php:2 ../../../stat_pokalsieger.php:12
 msgid "Pokalsieger"
@@ -3322,6 +3377,8 @@ msgstr "International Cup winners"
 #: ../../../stat_pokalsieger.php:14
 msgid "Welches Teams haben den Pokal schon gewonnen? Wer war ihr Finalgegner?"
 msgstr ""
+"Which teams have already won the International Cup? Who has been their "
+"opponent in the final?"
 
 #: ../../../stat_reichste_ligen.php:2 ../../../zzsubnav_statistik.php:18
 msgid "Reichste Ligen"
@@ -3332,6 +3389,8 @@ msgid ""
 "In welcher Liga spielen die reichsten Teams? Diese Statistik zeigt den "
 "Durschnitt der Kontostände."
 msgstr ""
+"Which league are the most wealthy teams playing in? This statistic shows the "
+"average of their account balances."
 
 #: ../../../stat_reichste_ligen.php:21
 msgid "Durchschnitt"
@@ -3416,7 +3475,7 @@ msgstr "Buyer"
 
 #: ../../../stat_transfer_uebersicht.php:59
 msgid "Außerhalb Europas"
-msgstr ""
+msgstr "Outside of Europe"
 
 #: ../../../stat_treuesteSpieler.php:2 ../../../stat_treuesteSpieler.php:12
 #: ../../../zzsubnav_statistik.php:25
@@ -3567,7 +3626,7 @@ msgstr ""
 
 #: ../../../taktik.php:173
 msgid "Erklärungen zu den einzelnen Einstellungen"
-msgstr ""
+msgstr "Explanations for the single settings"
 
 #: ../../../taktik.php:174
 msgid ""
@@ -3636,9 +3695,9 @@ msgid ""
 msgstr ""
 
 #: ../../../tipps_des_tages.php:2 ../../../tipps_des_tages.php:13
-#: ../../../tipps_des_tages.php:34
+#: ../../../tipps_des_tages.php:36
 msgid "Tipps des Tages"
-msgstr "Hints of the day"
+msgstr "Hints of the Day"
 
 #: ../../../tipps_des_tages.php:5
 msgid "Tipps durchsuchen"
@@ -3646,12 +3705,13 @@ msgstr "Search hints"
 
 #: ../../../tipps_des_tages.php:16
 msgid "Tipps des Tages zum Thema"
-msgstr "Hints of the day on topic"
+msgstr "Hints of the Day on topic"
 
 #: ../../../tipps_des_tages.php:19
 msgid ""
 "Hier findest Du alle <i>Tipps des Tages</i> - gesammelt auf einer Seite."
 msgstr ""
+"Here you find all <i>Hints of the Day</i> - collected on a single page."
 
 #: ../../../top_manager.php:32
 msgid "Meine Position"
@@ -3866,15 +3926,19 @@ msgstr "Action"
 msgid "Support-Team"
 msgstr "Support staff"
 
-#: ../../../zz3.php:8
+#: ../../../zz3.php:7
+msgid "Sprache:"
+msgstr "Language:"
+
+#: ../../../zz3.php:9
 msgid "Impressum"
 msgstr "Contact"
 
-#: ../../../zz3.php:10
+#: ../../../zz3.php:11
 msgid "Open Source"
 msgstr "Open source"
 
-#: ../../../zz3.php:11
+#: ../../../zz3.php:12
 msgid ""
 "Alle Vereine, Spieler und Sponsoren sind frei erfunden und haben keinen "
 "Bezug zu realen Ligen. Das Geld im Spiel ist nur virtuell und es erfolgen "
@@ -3889,7 +3953,7 @@ msgstr "Choose statistics"
 
 #: ../../../zzsubnav_statistik.php:7
 msgid "Cup-Sieger"
-msgstr "National Trophy winners"
+msgstr "National Cup winners"
 
 #: ../../../zzsubnav_statistik.php:12
 msgid "Globale Tabelle"
@@ -3906,3 +3970,9 @@ msgstr "Most expensive transfers"
 #: ../../../zzsubnav_statistik.php:24
 msgid "Torjägerliste"
 msgstr "Top scorers"
+
+#~ msgid "Neuigkeiten"
+#~ msgstr "News"
+
+#~ msgid "Neuigkeiten durchsuchen"
+#~ msgstr "Search news"

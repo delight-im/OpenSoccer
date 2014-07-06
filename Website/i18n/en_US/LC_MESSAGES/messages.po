@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-07-06 18:24+0100\n"
-"PO-Revision-Date: 2014-07-06 18:35+0100\n"
+"POT-Creation-Date: 2014-07-06 20:33+0100\n"
+"PO-Revision-Date: 2014-07-06 22:33+0100\n"
 "Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -314,156 +314,157 @@ msgstr "Selflessly squared the ball."
 
 #: ../../../aa_spieltag_simulation.php:149
 msgid "Der kreuzende Mitspieler wird geschickt."
-msgstr ""
+msgstr "The player running across gets the ball."
 
 #: ../../../aa_spieltag_simulation.php:150
 msgid "Der Angreifer wird halblinks geschickt."
-msgstr ""
+msgstr "The striker gets the ball at inside left."
 
 #: ../../../aa_spieltag_simulation.php:151
 msgid "Der Angreifer wird halbrechts geschickt."
-msgstr ""
+msgstr "The striker gets the ball at inside right."
 
 #: ../../../aa_spieltag_simulation.php:152
 msgid "Steilpass auf den Stürmer, der jetzt alleine aufs Tor zuläuft."
-msgstr ""
+msgstr "Long pass to the forward, who now runs up to the goal all alone."
 
 #: ../../../aa_spieltag_simulation.php:153
 msgid "Die Offensivabteilung arbeitet eine Chance heraus."
-msgstr ""
+msgstr "The offensive unit creates an opportunity."
 
 #: ../../../aa_spieltag_simulation.php:154
 msgid "Jetzt wirds gefährlich ..."
-msgstr ""
+msgstr "Now it's becoming dangerous ..."
 
 #: ../../../aa_spieltag_simulation.php:155
 msgid "Zuspiel in die Spitze."
-msgstr ""
+msgstr "Pass into the spearhead."
 
 #: ../../../aa_spieltag_simulation.php:156
 msgid "Langer Pass auf den Stürmer."
-msgstr ""
+msgstr "Long pass to the striker."
 
 #: ../../../aa_spieltag_simulation.php:157
 msgid "Flanke aus dem Halbfeld."
-msgstr ""
+msgstr "Cross from the midfield."
 
 #: ../../../aa_spieltag_simulation.php:158
 msgid "Schöne Flanke von rechts."
-msgstr ""
+msgstr "Nice cross from the right."
 
 #: ../../../aa_spieltag_simulation.php:159
 msgid "Tolle Flanke von links."
-msgstr ""
+msgstr "Great cross from the left."
 
 #: ../../../aa_spieltag_simulation.php:160
 msgid "Schöne Flanke von links."
-msgstr ""
+msgstr "Nice cross from the left."
 
 #: ../../../aa_spieltag_simulation.php:161
 msgid "Tolle Flanke von rechts."
-msgstr ""
+msgstr "Great cross from the right."
 
 #: ../../../aa_spieltag_simulation.php:162
 msgid "Schöne Flanke."
-msgstr ""
+msgstr "Decent cross."
 
 #: ../../../aa_spieltag_simulation.php:163
 msgid "Gute Flanke."
-msgstr ""
+msgstr "Good cross."
 
 #: ../../../aa_spieltag_simulation.php:164
 msgid "Der Flügelspieler flankt auf den Stürmer."
-msgstr ""
+msgstr "The outside player crosses the ball to onto the forward."
 
 #: ../../../aa_spieltag_simulation.php:165
 msgid "Der Spieler legt perfekt für seinen Teamkollegen auf."
-msgstr ""
+msgstr "The player perfectly sets up for his teammate."
 
 #: ../../../aa_spieltag_simulation.php:166
 msgid "Der Angreifer legt für seinen Mitspieler zurück."
-msgstr ""
+msgstr "The forward lays back for his teammate."
 
 #: ../../../aa_spieltag_simulation.php:197
 msgid "Der Torwart hat den Ball sicher."
-msgstr ""
+msgstr "The goalkeeper catches the ball safely."
 
 #: ../../../aa_spieltag_simulation.php:198
 msgid "Der Torwart von XYZ hält."
-msgstr ""
+msgstr "The keeper of XYZ saves."
 
 #: ../../../aa_spieltag_simulation.php:199
 msgid "Der Ball fliegt Richtung Eckfahne."
-msgstr ""
+msgstr "The ball goes towards the corner flag."
 
 #: ../../../aa_spieltag_simulation.php:200
 msgid "Leichte Aufgabe für den Schlussmann von XYZ."
-msgstr ""
+msgstr "Easy pickings for the netminder of XYZ."
 
 #: ../../../aa_spieltag_simulation.php:201
 msgid "Kein Problem für den Torhüter."
-msgstr ""
+msgstr "No problem for the goalie."
 
 #: ../../../aa_spieltag_simulation.php:202
 msgid "Der Keeper fängt den Ball locker ab."
-msgstr ""
+msgstr "The keeper intercepts the ball with ease."
 
 #: ../../../aa_spieltag_simulation.php:205
 msgid "Glanzparade vom Schlussmann!"
-msgstr ""
+msgstr "Brilliant save by the goalkeeper!"
 
 #: ../../../aa_spieltag_simulation.php:206
 msgid "Was für ein Reflex!"
-msgstr ""
+msgstr "What a reflex!"
 
 #: ../../../aa_spieltag_simulation.php:207
 msgid "Souverän gehalten."
-msgstr ""
+msgstr "Saved confidently."
 
 #: ../../../aa_spieltag_simulation.php:210
 msgid "Grobes Foul!"
-msgstr ""
+msgstr "Rude foul!"
 
 #: ../../../aa_spieltag_simulation.php:211
 msgid "Foul von XYZ."
-msgstr ""
+msgstr "Foul by XYZ."
 
 #: ../../../aa_spieltag_simulation.php:212
 msgid "Bösartiges Foul des Abwehrspielers!"
-msgstr ""
+msgstr "Rogue foul by the defender!"
 
 #: ../../../aa_spieltag_simulation.php:213
 msgid "Der Verteidiger setzt zur Grätsche an."
-msgstr ""
+msgstr "The defender launches into a sliding tackle."
 
 #: ../../../aa_spieltag_simulation.php:214
 msgid "Handspiel von XYZ."
-msgstr ""
+msgstr "Handball by XYZ."
 
 #: ../../../aa_spieltag_simulation.php:215
 msgid "Diese Grätsche ging nur in die Beine des Gegners."
-msgstr ""
+msgstr "This sliding tackle was aiming for the opponent's legs only."
 
 #: ../../../aa_spieltag_simulation.php:216
 msgid "Den Ball wollte er mit dieser Aktion sicher nicht holen. Grobes Foul!"
-msgstr ""
+msgstr "Surely he didn't want to get the ball with this action. Rough foul!"
 
 #: ../../../aa_spieltag_simulation.php:217
 msgid ""
 "Was für eine Schwalbe! Hat der Schiedsrichter da etwa mehr gesehen als wir?"
 msgstr ""
+"What a blatant dive! Did the referee see more than we did in this scene?"
 
 #: ../../../aa_spieltag_simulation.php:218
 msgid "War das wirklich ein Foul? Da kann man drüber streiten."
-msgstr ""
+msgstr "Has this really been a foul? You can argue with that."
 
 #: ../../../aa_spieltag_simulation.php:219
 msgid "Der Stürmer wird von den Beinen geholt."
-msgstr ""
+msgstr "The striker is felled."
 
 #: ../../../aa_spieltag_simulation.php:220
 msgid "Foul vom Abwehrspieler."
-msgstr ""
+msgstr "Foul by the defender."
 
 #: ../../../aa_spieltag_simulation.php:221
 msgid "Der Spieler setzt sich mit dem Ellenbogen durch. Foul!"
@@ -531,7 +532,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:241
 msgid "Sensationelle Parade!"
-msgstr ""
+msgstr "Spectacular save!"
 
 #: ../../../aa_spieltag_simulation.php:242
 msgid "Den hat der Keeper sicher. Schlecht geschossen!"
@@ -539,11 +540,11 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:243
 msgid "Toll gehalten vom Torwart!"
-msgstr ""
+msgstr "Wonderfully saved by the keeper!"
 
 #: ../../../aa_spieltag_simulation.php:246
 msgid "Drüber!"
-msgstr ""
+msgstr "Over the goal!"
 
 #: ../../../aa_spieltag_simulation.php:247
 msgid "XYZ schießt drüber!"
@@ -551,19 +552,19 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:248
 msgid "In die Wolken!"
-msgstr ""
+msgstr "Into the clouds!"
 
 #: ../../../aa_spieltag_simulation.php:249
 msgid "An den Pfosten!"
-msgstr ""
+msgstr "Against the post!"
 
 #: ../../../aa_spieltag_simulation.php:250
 msgid "XYZ schießt daneben!"
-msgstr ""
+msgstr "XYZ fires wide!"
 
 #: ../../../aa_spieltag_simulation.php:251
 msgid "XYZ trifft nur den Pfosten."
-msgstr ""
+msgstr "XYZ only hits the post."
 
 #: ../../../aa_spieltag_simulation.php:252
 msgid "Schwacher Schuss vom Mittelfeldspieler!"
@@ -575,23 +576,23 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:254
 msgid "Er vergibt die Chance!"
-msgstr ""
+msgstr "He misses the opportunity!"
 
 #: ../../../aa_spieltag_simulation.php:255
 msgid "Das war knapp. Da fehlten nur Zentimeter."
-msgstr ""
+msgstr "That was close. Only centimeters were missing!"
 
 #: ../../../aa_spieltag_simulation.php:256
 msgid "Der geht daneben!"
-msgstr ""
+msgstr "This was fired wide!"
 
 #: ../../../aa_spieltag_simulation.php:259
 msgid "Indirekter Freistoß für XYZ!"
-msgstr ""
+msgstr "Indirect kick for XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:260
 msgid "Indirekter Freistoß!"
-msgstr ""
+msgstr "Indirect kick!"
 
 #: ../../../aa_spieltag_simulation.php:261
 msgid "Der Schiedsrichter entscheidet auf Freistoß, indirekt."
@@ -599,11 +600,11 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:265
 msgid "Direkter Freistoß für XYZ!"
-msgstr ""
+msgstr "Direct free kick for XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:266
 msgid "Direkter Freistoß!"
-msgstr ""
+msgstr "Direct free kick!"
 
 #: ../../../aa_spieltag_simulation.php:267
 msgid "Freistoß an der Strafraumgrenze."
@@ -619,19 +620,19 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:273
 msgid "Per Kopfball geklärt."
-msgstr ""
+msgstr "Cleared with a header."
 
 #: ../../../aa_spieltag_simulation.php:274
 msgid "XYZ klärt."
-msgstr ""
+msgstr "XYZ clears."
 
 #: ../../../aa_spieltag_simulation.php:275
 msgid "Schuss geht daneben."
-msgstr ""
+msgstr "The shot goes amiss!"
 
 #: ../../../aa_spieltag_simulation.php:276
 msgid "Der Abwehrspieler klärt."
-msgstr ""
+msgstr "The defender clears."
 
 #: ../../../aa_spieltag_simulation.php:277
 msgid "Der Verteidiger bereinigt die Situation."
@@ -680,7 +681,7 @@ msgstr "No open man."
 
 #: ../../../aa_spieltag_simulation.php:288
 msgid "Unnötiger Fehlpass!"
-msgstr ""
+msgstr "Unnecessary bad pass!"
 
 #: ../../../aa_spieltag_simulation.php:289
 msgid "Erstklassig verteidigt von XYZ."
@@ -712,23 +713,23 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:296
 msgid "XYZ stoppt den Angriff."
-msgstr ""
+msgstr "XYZ puts a stop to the attack."
 
 #: ../../../aa_spieltag_simulation.php:297
 msgid "Pass abgefangen."
-msgstr ""
+msgstr "Pass intercepted."
 
 #: ../../../aa_spieltag_simulation.php:298
 msgid "XYZ holt sich den Ball wieder."
-msgstr ""
+msgstr "XYZ fetches back the ball."
 
 #: ../../../aa_spieltag_simulation.php:299
 msgid "Fehlpass. Der Gegner hat den Ball."
-msgstr ""
+msgstr "Misdirected pass. The opponent gets the ball."
 
 #: ../../../aa_spieltag_simulation.php:300
 msgid "Der Gegner holt sich den Ball wieder."
-msgstr ""
+msgstr "The opponent retrieves the ball."
 
 #: ../../../aa_spieltag_simulation.php:303
 msgid "Ein Spieler von XYZ kommt zum Kopfball."
@@ -752,7 +753,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:314
 msgid "Flachschuss."
-msgstr ""
+msgstr "Low shot."
 
 #: ../../../aa_spieltag_simulation.php:315
 msgid "Da war noch jemand dran."

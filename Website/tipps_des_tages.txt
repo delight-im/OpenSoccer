@@ -1,104 +1,104 @@
-_('Leihe Dir Spieler von anderen Klubs aus: Leihgaben sind günstige Verstärkungen für Dein Team.')
-_('Gerade schwächere Teams können mit erhöhter Aggressivität technische Schwächen ausgleichen.')
-_('Testspiele sind günstige Möglichkeiten, zusätzliche Erfahrung zu sammeln. Frage einfach bei anderen Managern an, indem Du in ihrem Profil einen Tag auswählst und eine Anfrage machst.')
-_('Wenn Du oft mit hohem Druck spielst, werden Deine Spieler schnell müde.')
-_('Im Kalender kannst Du sehen, wann wichtige Spiele anstehen. Schone Deine Stars gegebenenfalls vorher.')
-_('Nutze Deinen Heimvorteil im eigenen Stadion - besonders im Pokal!')
-_('Fitness-Trainer und der Physiotherapeut sind sehr teuer. Beide sind auch nur für sehr reiche Vereine gedacht, Du kannst also auch sehr gut ohne diese Assistenten erfolgreich sein.')
-_('Verleihe Spieler, die bei Dir keine Einsätze bekommen. Bei anderen Klubs können sie Erfahrung sammeln und dadurch stärker werden.')
-_('Denke beim Kauf von alten Spielern daran, dass sie vielleicht bald ihre Karriere beenden.')
-_('In der Rangliste (unter <i>Statistiken</i>) findest Du eine Liste mit allen Usern im Spiel.')
-_('Es gibt keine &quot;perfekte&quot; Taktik. Wähle die Taktik je nach Gegner und Stärken Deines Teams aus.')
-_('Schaue öfters mal alle Deine Verträge nach. Häufig kannst Du bei einigen Spielern Geld einsparen.')
-_('Denke immer daran, die Verträge Deiner Spieler rechtzeitig zu verlängern. Du findest im Büro eine Liste mit Verträgen, die bald enden.')
-_('10-12 Uhr: Cupspiele<br />14-16 Uhr: Ligaspiele<br />18-20 Uhr: Pokalspiele<br />22-24 Uhr: Testspiele')
-_('Verletzungen haben keinen Einfluss auf den weiteren Spielverlauf, da automatisch ein Ersatzspieler eingewechselt wird.')
-_('Im Spielbericht findest Du Noten nach dem deutschen System (1-6). Sie bewerten die einzelnen Mannschaftsteile der Teams.')
-_('Spieler ab 31 Jahren werden mit der Zeit schwächer. Deshalb sind sie auf dem Transfermarkt günstiger.')
-_('Du kannst Deinen Sponsor zu Beginn jeder Saison wechseln. Der Vertrag läuft immer bis Saisonende. Wenn Du noch keinen Sponsor ausgewählt hast, bekommst Du als Prämie jeweils 500.000 €.')
-_('Wenn Du einen Spieler in der aktuellen Saison schon mehr als 6 Mal eingesetzt hast, dann kannst Du ihn nicht mehr verleihen.')
-_('Zwischen 2 Teams darf es pro Saison höchstens 2 Transfers geben. Achte bei Deinen Käufen und Leihgaben darauf.')
-_('Bevor ein Spieler verkauft werden kann, muss er in Deinem Verein 6 Spiele absolviert haben. Dabei ist es egal, ob es sich um Liga-, Test-, Cup- oder Pokalspiele gehandelt hat.')
-_('Die meisten Spieler beenden im Alter von ca. 34 Jahren ihre Karriere. Denke bei Deiner Planung daran.')
-_('Der <i>Einsatz in Auktionen</i> zeigt dir, wie viel Du gerade in offenen Auktionen bietest.')
-_('Die Frische beschreibt, wie gut die körperliche Verfassung eines Spielers ist. Sie kann einen Wert zwischen 0 und 100 Prozent haben.')
-_('Je häufiger ein Spieler eingesetzt wird und je höher der Druck (Taktik) ist, desto mehr Frische verliert er.')
-_('Du erhältst alle 3 Tage Nachwuchsspieler aus Deiner Jugendabteilung. Die Qualität wird von Deinem Jugendtrainer beeinflusst.')
-_('Jedes Team muss immer mindestens 13 Spieler im Kader haben, die nicht auf dem Transfermarkt angeboten werden.')
-_('Bei jedem Foul im Spiel besteht das Risiko, dass der foulende Spieler eine Karte bekommt.')
-_('Nach einer Roten Karte verliert ein Team 10% seiner Stärke, nach einer Gelben 2%.')
-_('Beim <i>BM-Lotto</i> wird 4 aus 15 gespielt. Das heißt, man muss aus der Zahlenreihe von 1 bis 15 insgesamt 4 Zahlen tippen.')
-_('Chancen beim <i>BM-Lotto</i>:<br />- 4 Richtige = 1:1365<br />- 3 Richtige = 33:1365<br />- 2 Richtige = 330:1365')
-_('Ein Lottoschein für einen Tag kostet 1 Mio. Euro, 75% davon gehen in den Jackpot.')
-_('Dein persönliches Maximalgebot bei Auktionen hängt davon ab, wie lange Du schon beim Ballmanager dabei bist.')
-_('Spieler wechseln erst nach Saisonende in die Torjägerliste der neuen Liga, nicht direkt nach dem Transfer.')
-_('Die TV-Gelder werden an den ersten Spieltagen jeder Saison verteilt.')
-_('Liga-Tabellen werden immer für 30 Minuten gespeichert, Änderungen sind also nicht sofort sichtbar.')
-_('Themen im Forum, die ein Daumen-Symbol haben, sind Top-Themen. Sie bleiben immer oben und sind praktisch &quot;festgepinnt&quot;.')
-_('In den <i>Pokal</i> kommen die Erst- und Zweitplatzierten jedes Landes. Dazu noch die Drittplatzierten der besten Ligen nach der 5-Jahres-Wertung.')
-_('Auch freie (vereinslose) Spieler werden auf dem Transfermarkt angeboten. Sie sind allerdings relativ teuer.')
-_('Wenn Du Schulden hast, kannst Du keine Spieler mehr auf dem Transfermarkt kaufen. Auch Dein Stadion kannst Du nicht mehr weiter ausbauen.')
-_('Bei Leihgaben übernimmt der Ausleihende, also der vorübergehende Besitzer, das Gehalt eines Spielers.')
-_('Leih-Prämien können vom verleihenden Team angeboten werden. Das ausleihende Team bekommt sie für jeden Pflichtspiel-Einsatz des Spielers überwiesen.')
-_('Der <i>Manager der Saison</i> ist eine Auszeichnung für den erfolgreichsten Manager der vergangenen Saison. Er wird durch eine Abstimmung von allen Managern gewählt.')
-_('Der Titel <i>Manager der Saison</i> bringt keine finanziellen Vorteile für den Sieger, Du kannst also auch einen Konkurrenten wählen, ohne Nachteile dadurch zu haben.')
-_('Das <i>4-4-2</i> ist das einzige Spielsystem beim Ballmanager. Trotzdem kannst Du viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-Einstellungen.')
-_('Bei jeder Auktion gibt es ein Mindestgebot. Das verhindert, dass Du einen anderen Verein mit nur 1 Euro überbieten kannst.')
-_('Die Aufstellungsstärke bezieht sich auf die Aufstellung für Ligaspiele. Sie ist die Summe der Spielstärken in der Aufstellung.')
-_('Bei jedem Deiner Heimspiele kommen Fans in Dein Stadion und zahlen Eintritt. Es können natürlich nur so viele Zuschauer kommen, wie Deine Stadiongröße erlaubt.')
-_('Deine Zuschauerzahlen hängen unter anderem vom Fanbetreuer, Deinem Stadiongelände, dem Ticketpreis, Deinem Renommee und dem Gegner ab.')
-_('Spieler können sich bei Einsätzen verletzen. Das Risiko hängt dabei von ihrer Frische ab. Je niedriger die Frische eines Spielers ist, desto höher ist die Wahrscheinlichkeit, dass er sich verletzt.')
-_('Du kannst alle 30 Tage einen Kurzurlaub und alle 60 Tage einen langen Urlaub nehmen. In dieser Zeit übernimmt der Computer die Aufstellung für Pflichtspiele und schützt Dich vor der automatischen Löschung.')
-_('Für jeden Spieler, den Du kaufst, musst Du 5% Transfersteuer zahlen.')
-_('Jeder Manager hat die Möglichkeit, Testspiele mit anderen Vereinen auszutragen. Allerdings muss dafür an den Verband eine Entschädigung gezahlt werden, damit das Spiel genehmigt wird.')
-_('Sponsoren zahlen für Testspiele keine Prämien, da die Werbewirkung für sie nicht gegeben ist.')
-_('Auf Anweisung des Vorstandes werden die Fans bei Testspielen ohne Tickets ins Stadion gelassen.')
-_('Der Scout Deines Teams beobachtet Spieler und schätzt deren Talent ein. Er kann die Spieler sowohl überschätzen als auch unterschätzen.')
-_('Je höher die Kompetenz Deines Scouts ist, also je mehr Geld du für ihn ausgibst, desto genauer werden seine Schätzungen.')
-_('Wenn Du Schulden hast, musst Du keinen Kredit aufnehmen. Du musst auch keine Zinsen zahlen. Es passiert nichts Schlimmes, Du solltest nur versuchen, diese Schulden schnell wieder loszuwerden.')
-_('Mit Sanktionen kann das Team unfaires und unpassendes Verhalten bestrafen. Wer gegen die Regeln verstößt, kann verschiedene Strafen bekommen, unter anderem Transfersperren und Geldstrafen.')
-_('Eine Saison beim Ballmanager dauert 22 Tage. Nach 11 Hinrunden- und 11 Rückrundenspielen endet eine Saison und die nächste beginnt. Dabei gibt es keinen Tag Pause zwischen den beiden Saisons.')
-_('Du kannst mit dem <i>Team-Tausch</i> Dein Team an einen anderen Manager übergeben. Du findest ihn unter <i>Einstellungen</i>.')
-_('Das Renommee eines Vereins ist der Maßstab für den Erfolg. Jedes Team hat eine Punktzahl, die angibt, wie angesehen der Klub zurzeit ist. Dabei spielen unter anderem Meistertitel, Cup- und Pokalsiege sowie die Qualität der Spieler eine Rolle.')
-_('Für den <i>Cup</i> qualifizieren sich die 16 renommiertesten Teams eines Landes (Freilos). Die restlichen 32 Teams müssen eine Quali-Runde spielen.')
-_('Klicke im Büro unter <i>Jugendabteilung</i> auf die gesuchte Position, um die Besetzung Deines Kaders zu sehen und um die Position zu ändern.')
-_('Für unvollständige Aufstellungen in Liga-, Cup- und Pokalspielen musst Du Deinem Sponsor eine Entschädigung zahlen. Sie wird direkt von Deinen Prämien für das betroffene Spiel abgezogen.')
-_('Am Anfang einer neuen Saison kann es beim Renommee zu leichten Sprüngen kommen. Denn die vorletzte Saison fällt zu diesem Zeitpunkt aus der Bewertung heraus.')
-_('Die <i>Kaderstärke</i> ist die durchschnittliche Stärke aller Spieler in Deinem Kader.')
-_('Bei den Buchungen wird unter &quot;Gehalt&quot; die Bezahlung der Spieler und Assistenten zusammengefasst.')
-_('Der Kontostand hat keine Auswirkungen auf das Renommee Deines Klubs.')
-_('Durch ein hohes Renommee kannst Du eines von 16 Freilosen für die erste Cuprunde bekommen.')
-_('Du möchtest in einem anderen Land spielen? Dann nutze den Ligatausch (Spieltag 1-5)! Klicke dazu im Menü einfach unter <i>Anfragen</i> auf <i>Ligatausch</i>.')
-_('Wenn Du einen Spieler verliehen hast und der Manager des anderen Teams aufhört, kommt dein Spieler sofort zurück.')
-_('Im Pokal gibt es 1 Mio. Euro zusätzliche Antrittsprämie vom Sponsor, im Cup 500.000 Euro.')
-_('Zu Beginn jeder Saison haben alle Spieler wieder 100% Frische.')
-_('Unter <i>Anfragen</i> &raquo; <i>Testspiele</i> kannst Du einstellen, ob Du Anfragen für Testspiele erhalten möchtest oder nicht.')
-_('Auf der Seite <i>Community</i> &raquo; <i>Freunde</i> verwaltest Du sowohl Deine Freundesliste als auch deine Ignorier-Liste.')
-_('Bei Punktgleichheit in der Liga zählt die bessere Tordifferenz, danach die geschossenen Tore. Ansonsten entscheidet das Los.')
-_('Jugendspieler haben am Anfang immer schon 50 bis 90 Prozent ihrer möglichen Maximalstärke erreicht.')
-_('Der Jugendtrainer beeinflusst den Trainingseifer Deiner Jugendspieler und die maximale Stärke, die sie jemals erreichen können.')
-_('Mit einem Jugendtrainer der Stufe 1 können Deine Nachwuchsspieler höchstens eine Maximalstärke von 5,9 erreichen. Mit besseren Jugendtrainern sind auch höhere Maximalstärken möglich.')
-_('Zwischen den 4 Spielphasen bleibt Zeit, um die Aufstellung und Taktik zu ändern. Die Spiele werden immer automatisch simuliert, Du musst sie also nicht erst selber starten.')
-_('Für den Spielausgang spielen die Stärken der einzelnen Spieler eine Rolle, deren Frischewerte, die Zusammensetzung der Mannschaftsteile und natürlich Deine Taktik.')
-_('Es spielt keine Rolle, ob Du einen Spieler auf der linken oder auf der rechten Seite aufstellst. Die Spieler sind alle beidfüßig stark. ')
-_('Wenn Du irgendwo im Spiel auf das Ergebnis einer Partie klickst, gelangst Du zum ausführlichen Spielbericht mit Kommentaren und Statistiken.')
-_('Unter <i>Finanzen</i> steht in Deiner Prognose, dass Du negative Sponsorengelder bekommst? Dann liegt das wahrscheinlich an den Strafen für unvollständige Aufstellungen. Hochgerechnet für die ganze Saison ergibt das ein Minus.')
-_('Je angesehener Dein Klub ist, desto mehr Geld wirst Du von den Sponsoren bekommen. Achte also auf Dein Renommee.')
-_('Die RKPs sind Ranking-Punkte, die Deinen sportlichen Erfolg bewerten. In jedem Spiel gewinnst oder verlierst Du RKPs. Dabei kommt es auf das Ergebnis und die Stärke des Gegners an.')
-_('Die einzelnen Wettbewerbe werden für die RKP-Wertung unterschiedlich gewichtet: Pokal=180%, Cup=120%, Liga=100%. Testspiele haben keinen Einfluss auf die Wertung.')
-_('Zu den Pflichtspielen gehören Liga-, Cup- und Pokalspiele. Testspiele sind keine Pflichtspiele!')
-_('Du möchtest Deine Meinung in das Spiel einbringen und aktiv mitentscheiden? Dann stelle uns doch einfach Deine Ideen im <a href="/support.php">Supportbereich</a> vor!')
-_('Bei Transfers, an denen Du selbst nicht beteiligt bist (Spieler-Wechsel unter fremden Teams), sind Ablösesummen immer geschätzt.')
-_('Die Ziehung der Lottozahlen findet täglich kurz nach 00:00 Uhr statt.')
-_('Deine Spieler erholen sich während den Spielen gut. Deshalb bekommen sie jeden Tag wieder 1% Frische (Prozentpunkt) dazu.')
-_('Je stärker Deine Aufstellung ist, desto stärker werden auch Amateurspieler sein, die automatisch eingesetzt werden, wenn Du eine unvollständige Aufstellung hast.')
-_('Du warst bei einer Auktion für einige Zeit der Höchstbietende, aber am Ende ging der Spieler an ein anderes Team - anscheinend für weniger Geld? <i>siehe Tipp #091</i>')
-_('Wenn ein Spieler in einer Saison schon ein Pokalspiel gemacht hat, kann er (nach einem Transfer) für andere Klubs keine Pokalspiele mehr bestreiten.')
-_('Wenn man 9 Tage nicht online war, wird man von seinem Verein entlassen. Diese Frist wird pro Monat, den man schon dabei ist, um einen Tag verlängert.')
-_('Achte auf die Moral Deiner Spieler! Wenn ein Profi unzufrieden wird, möchte er vielleicht seinen Vertrag nicht verlängern.')
-_('Denke bei Transfers oder Vertragsverlängerungen daran, dass die Moral des Spielers dadurch beeinflusst wird. Er möchte schließlich bei Dir im Team spielen und braucht Sicherheit.')
-_('Täglich verlieren Deine Spieler 1% Moral. Aber für jeden Pflichtspiel-Einsatz bekommen sie auch wieder 1,8% dazu, für jedes Testspiel 1,0%.')
-_('Spieler, die Du von einem Verein außerhalb Europas kaufst, haben immer 100% Moral.')
-_('Beim Anbieten eines Spielers zur Leihgabe verliert er sofort 10% Moral. Aber wenn er dann verliehen wird und ein neues Team bekommt, gewinnt er wieder 5% Moral.')
-_('Bei Vertragsverlängerungen kann die Moral eines Spielers um bis zu 10% steigen - je nach Gehalt und Laufzeit des Vertrages.')
-_('In Derbys, also wenn beide Teams aus derselben Stadt kommen, spielen die Teams immer besonders offensiv und mit viel Aggressivität. Deshalb kommen natürlich auch mehr Zuschauer!')
+return _('Leihe Dir Spieler von anderen Klubs aus: Leihgaben sind günstige Verstärkungen für Dein Team.');
+return _('Gerade schwächere Teams können mit erhöhter Aggressivität technische Schwächen ausgleichen.');
+return _('Testspiele sind günstige Möglichkeiten, zusätzliche Erfahrung zu sammeln. Frage einfach bei anderen Managern an, indem Du in ihrem Profil einen Tag auswählst und eine Anfrage machst.');
+return _('Wenn Du oft mit hohem Druck spielst, werden Deine Spieler schnell müde.');
+return _('Im Kalender kannst Du sehen, wann wichtige Spiele anstehen. Schone Deine Stars gegebenenfalls vorher.');
+return _('Nutze Deinen Heimvorteil im eigenen Stadion - besonders im Pokal!');
+return _('Fitness-Trainer und der Physiotherapeut sind sehr teuer. Beide sind auch nur für sehr reiche Vereine gedacht, Du kannst also auch sehr gut ohne diese Assistenten erfolgreich sein.');
+return _('Verleihe Spieler, die bei Dir keine Einsätze bekommen. Bei anderen Klubs können sie Erfahrung sammeln und dadurch stärker werden.');
+return _('Denke beim Kauf von alten Spielern daran, dass sie vielleicht bald ihre Karriere beenden.');
+return _('In der Rangliste (unter <i>Statistiken</i>) findest Du eine Liste mit allen Usern im Spiel.');
+return _('Es gibt keine &quot;perfekte&quot; Taktik. Wähle die Taktik je nach Gegner und Stärken Deines Teams aus.');
+return _('Schaue öfters mal alle Deine Verträge nach. Häufig kannst Du bei einigen Spielern Geld einsparen.');
+return _('Denke immer daran, die Verträge Deiner Spieler rechtzeitig zu verlängern. Du findest im Büro eine Liste mit Verträgen, die bald enden.');
+return _('10-12 Uhr: Cupspiele<br />14-16 Uhr: Ligaspiele<br />18-20 Uhr: Pokalspiele<br />22-24 Uhr: Testspiele');
+return _('Verletzungen haben keinen Einfluss auf den weiteren Spielverlauf, da automatisch ein Ersatzspieler eingewechselt wird.');
+return _('Im Spielbericht findest Du Noten nach dem deutschen System (1-6). Sie bewerten die einzelnen Mannschaftsteile der Teams.');
+return _('Spieler ab 31 Jahren werden mit der Zeit schwächer. Deshalb sind sie auf dem Transfermarkt günstiger.');
+return _('Du kannst Deinen Sponsor zu Beginn jeder Saison wechseln. Der Vertrag läuft immer bis Saisonende. Wenn Du noch keinen Sponsor ausgewählt hast, bekommst Du als Prämie jeweils 500.000 €.');
+return _('Wenn Du einen Spieler in der aktuellen Saison schon mehr als 6 Mal eingesetzt hast, dann kannst Du ihn nicht mehr verleihen.');
+return _('Zwischen 2 Teams darf es pro Saison höchstens 2 Transfers geben. Achte bei Deinen Käufen und Leihgaben darauf.');
+return _('Bevor ein Spieler verkauft werden kann, muss er in Deinem Verein 6 Spiele absolviert haben. Dabei ist es egal, ob es sich um Liga-, Test-, Cup- oder Pokalspiele gehandelt hat.');
+return _('Die meisten Spieler beenden im Alter von ca. 34 Jahren ihre Karriere. Denke bei Deiner Planung daran.');
+return _('Der <i>Einsatz in Auktionen</i> zeigt dir, wie viel Du gerade in offenen Auktionen bietest.');
+return _('Die Frische beschreibt, wie gut die körperliche Verfassung eines Spielers ist. Sie kann einen Wert zwischen 0 und 100 Prozent haben.');
+return _('Je häufiger ein Spieler eingesetzt wird und je höher der Druck (Taktik) ist, desto mehr Frische verliert er.');
+return _('Du erhältst alle 3 Tage Nachwuchsspieler aus Deiner Jugendabteilung. Die Qualität wird von Deinem Jugendtrainer beeinflusst.');
+return _('Jedes Team muss immer mindestens 13 Spieler im Kader haben, die nicht auf dem Transfermarkt angeboten werden.');
+return _('Bei jedem Foul im Spiel besteht das Risiko, dass der foulende Spieler eine Karte bekommt.');
+return _('Nach einer Roten Karte verliert ein Team 10% seiner Stärke, nach einer Gelben 2%.');
+return _('Beim <i>BM-Lotto</i> wird 4 aus 15 gespielt. Das heißt, man muss aus der Zahlenreihe von 1 bis 15 insgesamt 4 Zahlen tippen.');
+return _('Chancen beim <i>BM-Lotto</i>:<br />- 4 Richtige = 1:1365<br />- 3 Richtige = 33:1365<br />- 2 Richtige = 330:1365');
+return _('Ein Lottoschein für einen Tag kostet 1 Mio. Euro, 75% davon gehen in den Jackpot.');
+return _('Dein persönliches Maximalgebot bei Auktionen hängt davon ab, wie lange Du schon beim Ballmanager dabei bist.');
+return _('Spieler wechseln erst nach Saisonende in die Torjägerliste der neuen Liga, nicht direkt nach dem Transfer.');
+return _('Die TV-Gelder werden an den ersten Spieltagen jeder Saison verteilt.');
+return _('Liga-Tabellen werden immer für 30 Minuten gespeichert, Änderungen sind also nicht sofort sichtbar.');
+return _('Themen im Forum, die ein Daumen-Symbol haben, sind Top-Themen. Sie bleiben immer oben und sind praktisch &quot;festgepinnt&quot;.');
+return _('In den <i>Pokal</i> kommen die Erst- und Zweitplatzierten jedes Landes. Dazu noch die Drittplatzierten der besten Ligen nach der 5-Jahres-Wertung.');
+return _('Auch freie (vereinslose) Spieler werden auf dem Transfermarkt angeboten. Sie sind allerdings relativ teuer.');
+return _('Wenn Du Schulden hast, kannst Du keine Spieler mehr auf dem Transfermarkt kaufen. Auch Dein Stadion kannst Du nicht mehr weiter ausbauen.');
+return _('Bei Leihgaben übernimmt der Ausleihende, also der vorübergehende Besitzer, das Gehalt eines Spielers.');
+return _('Leih-Prämien können vom verleihenden Team angeboten werden. Das ausleihende Team bekommt sie für jeden Pflichtspiel-Einsatz des Spielers überwiesen.');
+return _('Der <i>Manager der Saison</i> ist eine Auszeichnung für den erfolgreichsten Manager der vergangenen Saison. Er wird durch eine Abstimmung von allen Managern gewählt.');
+return _('Der Titel <i>Manager der Saison</i> bringt keine finanziellen Vorteile für den Sieger, Du kannst also auch einen Konkurrenten wählen, ohne Nachteile dadurch zu haben.');
+return _('Das <i>4-4-2</i> ist das einzige Spielsystem beim Ballmanager. Trotzdem kannst Du viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-Einstellungen.');
+return _('Bei jeder Auktion gibt es ein Mindestgebot. Das verhindert, dass Du einen anderen Verein mit nur 1 Euro überbieten kannst.');
+return _('Die Aufstellungsstärke bezieht sich auf die Aufstellung für Ligaspiele. Sie ist die Summe der Spielstärken in der Aufstellung.');
+return _('Bei jedem Deiner Heimspiele kommen Fans in Dein Stadion und zahlen Eintritt. Es können natürlich nur so viele Zuschauer kommen, wie Deine Stadiongröße erlaubt.');
+return _('Deine Zuschauerzahlen hängen unter anderem vom Fanbetreuer, Deinem Stadiongelände, dem Ticketpreis, Deinem Renommee und dem Gegner ab.');
+return _('Spieler können sich bei Einsätzen verletzen. Das Risiko hängt dabei von ihrer Frische ab. Je niedriger die Frische eines Spielers ist, desto höher ist die Wahrscheinlichkeit, dass er sich verletzt.');
+return _('Du kannst alle 30 Tage einen Kurzurlaub und alle 60 Tage einen langen Urlaub nehmen. In dieser Zeit übernimmt der Computer die Aufstellung für Pflichtspiele und schützt Dich vor der automatischen Löschung.');
+return _('Für jeden Spieler, den Du kaufst, musst Du 5% Transfersteuer zahlen.');
+return _('Jeder Manager hat die Möglichkeit, Testspiele mit anderen Vereinen auszutragen. Allerdings muss dafür an den Verband eine Entschädigung gezahlt werden, damit das Spiel genehmigt wird.');
+return _('Sponsoren zahlen für Testspiele keine Prämien, da die Werbewirkung für sie nicht gegeben ist.');
+return _('Auf Anweisung des Vorstandes werden die Fans bei Testspielen ohne Tickets ins Stadion gelassen.');
+return _('Der Scout Deines Teams beobachtet Spieler und schätzt deren Talent ein. Er kann die Spieler sowohl überschätzen als auch unterschätzen.');
+return _('Je höher die Kompetenz Deines Scouts ist, also je mehr Geld du für ihn ausgibst, desto genauer werden seine Schätzungen.');
+return _('Wenn Du Schulden hast, musst Du keinen Kredit aufnehmen. Du musst auch keine Zinsen zahlen. Es passiert nichts Schlimmes, Du solltest nur versuchen, diese Schulden schnell wieder loszuwerden.');
+return _('Mit Sanktionen kann das Team unfaires und unpassendes Verhalten bestrafen. Wer gegen die Regeln verstößt, kann verschiedene Strafen bekommen, unter anderem Transfersperren und Geldstrafen.');
+return _('Eine Saison beim Ballmanager dauert 22 Tage. Nach 11 Hinrunden- und 11 Rückrundenspielen endet eine Saison und die nächste beginnt. Dabei gibt es keinen Tag Pause zwischen den beiden Saisons.');
+return _('Du kannst mit dem <i>Team-Tausch</i> Dein Team an einen anderen Manager übergeben. Du findest ihn unter <i>Einstellungen</i>.');
+return _('Das Renommee eines Vereins ist der Maßstab für den Erfolg. Jedes Team hat eine Punktzahl, die angibt, wie angesehen der Klub zurzeit ist. Dabei spielen unter anderem Meistertitel, Cup- und Pokalsiege sowie die Qualität der Spieler eine Rolle.');
+return _('Für den <i>Cup</i> qualifizieren sich die 16 renommiertesten Teams eines Landes (Freilos). Die restlichen 32 Teams müssen eine Quali-Runde spielen.');
+return _('Klicke im Büro unter <i>Jugendabteilung</i> auf die gesuchte Position, um die Besetzung Deines Kaders zu sehen und um die Position zu ändern.');
+return _('Für unvollständige Aufstellungen in Liga-, Cup- und Pokalspielen musst Du Deinem Sponsor eine Entschädigung zahlen. Sie wird direkt von Deinen Prämien für das betroffene Spiel abgezogen.');
+return _('Am Anfang einer neuen Saison kann es beim Renommee zu leichten Sprüngen kommen. Denn die vorletzte Saison fällt zu diesem Zeitpunkt aus der Bewertung heraus.');
+return _('Die <i>Kaderstärke</i> ist die durchschnittliche Stärke aller Spieler in Deinem Kader.');
+return _('Bei den Buchungen wird unter &quot;Gehalt&quot; die Bezahlung der Spieler und Assistenten zusammengefasst.');
+return _('Der Kontostand hat keine Auswirkungen auf das Renommee Deines Klubs.');
+return _('Durch ein hohes Renommee kannst Du eines von 16 Freilosen für die erste Cuprunde bekommen.');
+return _('Du möchtest in einem anderen Land spielen? Dann nutze den Ligatausch (Spieltag 1-5)! Klicke dazu im Menü einfach unter <i>Anfragen</i> auf <i>Ligatausch</i>.');
+return _('Wenn Du einen Spieler verliehen hast und der Manager des anderen Teams aufhört, kommt dein Spieler sofort zurück.');
+return _('Im Pokal gibt es 1 Mio. Euro zusätzliche Antrittsprämie vom Sponsor, im Cup 500.000 Euro.');
+return _('Zu Beginn jeder Saison haben alle Spieler wieder 100% Frische.');
+return _('Unter <i>Anfragen</i> &raquo; <i>Testspiele</i> kannst Du einstellen, ob Du Anfragen für Testspiele erhalten möchtest oder nicht.');
+return _('Auf der Seite <i>Community</i> &raquo; <i>Freunde</i> verwaltest Du sowohl Deine Freundesliste als auch deine Ignorier-Liste.');
+return _('Bei Punktgleichheit in der Liga zählt die bessere Tordifferenz, danach die geschossenen Tore. Ansonsten entscheidet das Los.');
+return _('Jugendspieler haben am Anfang immer schon 50 bis 90 Prozent ihrer möglichen Maximalstärke erreicht.');
+return _('Der Jugendtrainer beeinflusst den Trainingseifer Deiner Jugendspieler und die maximale Stärke, die sie jemals erreichen können.');
+return _('Mit einem Jugendtrainer der Stufe 1 können Deine Nachwuchsspieler höchstens eine Maximalstärke von 5,9 erreichen. Mit besseren Jugendtrainern sind auch höhere Maximalstärken möglich.');
+return _('Zwischen den 4 Spielphasen bleibt Zeit, um die Aufstellung und Taktik zu ändern. Die Spiele werden immer automatisch simuliert, Du musst sie also nicht erst selber starten.');
+return _('Für den Spielausgang spielen die Stärken der einzelnen Spieler eine Rolle, deren Frischewerte, die Zusammensetzung der Mannschaftsteile und natürlich Deine Taktik.');
+return _('Es spielt keine Rolle, ob Du einen Spieler auf der linken oder auf der rechten Seite aufstellst. Die Spieler sind alle beidfüßig stark. ');
+return _('Wenn Du irgendwo im Spiel auf das Ergebnis einer Partie klickst, gelangst Du zum ausführlichen Spielbericht mit Kommentaren und Statistiken.');
+return _('Unter <i>Finanzen</i> steht in Deiner Prognose, dass Du negative Sponsorengelder bekommst? Dann liegt das wahrscheinlich an den Strafen für unvollständige Aufstellungen. Hochgerechnet für die ganze Saison ergibt das ein Minus.');
+return _('Je angesehener Dein Klub ist, desto mehr Geld wirst Du von den Sponsoren bekommen. Achte also auf Dein Renommee.');
+return _('Die RKPs sind Ranking-Punkte, die Deinen sportlichen Erfolg bewerten. In jedem Spiel gewinnst oder verlierst Du RKPs. Dabei kommt es auf das Ergebnis und die Stärke des Gegners an.');
+return _('Die einzelnen Wettbewerbe werden für die RKP-Wertung unterschiedlich gewichtet: Pokal=180%, Cup=120%, Liga=100%. Testspiele haben keinen Einfluss auf die Wertung.');
+return _('Zu den Pflichtspielen gehören Liga-, Cup- und Pokalspiele. Testspiele sind keine Pflichtspiele!');
+return _('Du möchtest Deine Meinung in das Spiel einbringen und aktiv mitentscheiden? Dann stelle uns doch einfach Deine Ideen im <a href="/support.php">Supportbereich</a> vor!');
+return _('Bei Transfers, an denen Du selbst nicht beteiligt bist (Spieler-Wechsel unter fremden Teams), sind Ablösesummen immer geschätzt.');
+return _('Die Ziehung der Lottozahlen findet täglich kurz nach 00:00 Uhr statt.');
+return _('Deine Spieler erholen sich während den Spielen gut. Deshalb bekommen sie jeden Tag wieder 1% Frische (Prozentpunkt) dazu.');
+return _('Je stärker Deine Aufstellung ist, desto stärker werden auch Amateurspieler sein, die automatisch eingesetzt werden, wenn Du eine unvollständige Aufstellung hast.');
+return _('Du warst bei einer Auktion für einige Zeit der Höchstbietende, aber am Ende ging der Spieler an ein anderes Team - anscheinend für weniger Geld? <i>siehe Tipp #091</i>');
+return _('Wenn ein Spieler in einer Saison schon ein Pokalspiel gemacht hat, kann er (nach einem Transfer) für andere Klubs keine Pokalspiele mehr bestreiten.');
+return _('Wenn man 9 Tage nicht online war, wird man von seinem Verein entlassen. Diese Frist wird pro Monat, den man schon dabei ist, um einen Tag verlängert.');
+return _('Achte auf die Moral Deiner Spieler! Wenn ein Profi unzufrieden wird, möchte er vielleicht seinen Vertrag nicht verlängern.');
+return _('Denke bei Transfers oder Vertragsverlängerungen daran, dass die Moral des Spielers dadurch beeinflusst wird. Er möchte schließlich bei Dir im Team spielen und braucht Sicherheit.');
+return _('Täglich verlieren Deine Spieler 1% Moral. Aber für jeden Pflichtspiel-Einsatz bekommen sie auch wieder 1,8% dazu, für jedes Testspiel 1,0%.');
+return _('Spieler, die Du von einem Verein außerhalb Europas kaufst, haben immer 100% Moral.');
+return _('Beim Anbieten eines Spielers zur Leihgabe verliert er sofort 10% Moral. Aber wenn er dann verliehen wird und ein neues Team bekommt, gewinnt er wieder 5% Moral.');
+return _('Bei Vertragsverlängerungen kann die Moral eines Spielers um bis zu 10% steigen - je nach Gehalt und Laufzeit des Vertrages.');
+return _('In Derbys, also wenn beide Teams aus derselben Stadt kommen, spielen die Teams immer besonders offensiv und mit viel Aggressivität. Deshalb kommen natürlich auch mehr Zuschauer!');

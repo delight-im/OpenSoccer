@@ -22,6 +22,8 @@ $tippList = file('tipps_des_tages.txt');
 $counter = 0;
 foreach ($tippList as $tippEntry) {
 	$counter++;
+    // be careful with the input for eval() here (which should only contain a gettext call)
+    $tippEntry = eval($tippEntry);
 	if ($q != '') {
 		if (strpos($tippEntry, $q) === FALSE) {
 			continue;

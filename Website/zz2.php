@@ -267,8 +267,10 @@ if (Chance_Percent(50)) {
 	echo '<h1>Tipp des Tages (<a href="/tipps_des_tages.php">Alle</a>)</h1>';
 	echo '<div class="left-box"><p>';
 	$tipps_des_tages = file('tipps_des_tages.txt');
-	$zufalls_tipp = mt_rand(0, count($tipps_des_tages)-1);
-	echo $tipps_des_tages[$zufalls_tipp];
+	$randomHintIndex = mt_rand(0, count($tipps_des_tages)-1);
+    // be careful with the input for eval() here (which should only contain a gettext call)
+    $randomHint = eval($tipps_des_tages[$randomHintIndex]);
+	echo $randomHint;
 	echo '</p></div>';
 }
 else {

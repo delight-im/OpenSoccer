@@ -207,12 +207,11 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 		<li><a href="/ligaTausch.php">Ligatausch (<?php echo $_SESSION['last_ligaTausch_anzahl']; ?>)</a></li>
 	</ul>
 </li><?php } ?>
-<?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 0, 8) == '/support' OR $_SERVER['SCRIPT_NAME'] == '/neuigkeiten.php' OR $_SERVER['SCRIPT_NAME'] == '/tipps_des_tages.php' OR $_SERVER['SCRIPT_NAME'] == '/regeln.php' OR $_SERVER['REQUEST_URI'] == '/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3') { echo ' id="current"'; } ?>><a href="/support.php">Support</a>
+<?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 0, 8) == '/support' OR $_SERVER['SCRIPT_NAME'] == '/tipps_des_tages.php' OR $_SERVER['SCRIPT_NAME'] == '/regeln.php' OR $_SERVER['REQUEST_URI'] == '/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3') { echo ' id="current"'; } ?>><a href="/support.php">Support</a>
 	<ul>
 		<li><a href="/support.php">Support</a></li>
 		<li><a href="/wio.php#teamList">Post ans Team</a></li>
 		<li><a href="/tipps_des_tages.php">Kurztipps</a></li>
-		<li><a href="/neuigkeiten.php">Neuigkeiten</a></li>
 		<li><a href="/regeln.php">Regeln</a></li>
 		<?php if ($cookie_username == 'Yazu7') { ?><li><a href="/forum.php">Archiv</a></li><?php } ?>
 	</ul>
@@ -263,31 +262,17 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') { // fuer
 	echo '<a href="/sanktionen.php">Kontrollzentrum</a>';
 	echo '</div>';
 }
-if (Chance_Percent(50)) {
-	echo '<h1>Tipp des Tages (<a href="/tipps_des_tages.php">Alle</a>)</h1>';
-	echo '<div class="left-box"><p>';
-	$tipps_des_tages = file('tipps_des_tages.txt');
-	$randomHintIndex = mt_rand(0, count($tipps_des_tages)-1);
-    // be careful with the input for eval() here (which should only contain a gettext call)
-    $randomHint = eval($tipps_des_tages[$randomHintIndex]);
-	echo $randomHint;
-	echo '</p></div>';
-}
-else {
-	$tipps_des_tages = file('neuigkeiten.txt');
-	$zufalls_tipp = mt_rand(0, 2);
-	if (isset($tipps_des_tages[$zufalls_tipp])) {
-		echo '<h1>Neuigkeiten (<a href="/neuigkeiten.php">Alle</a>)</h1>';
-		echo '<div class="left-box"><p>';
-		$zufalls_tipp_content = $tipps_des_tages[$zufalls_tipp];
-		$zufalls_tipp_content = explode(' ', $zufalls_tipp_content, 2);
-		$zufalls_tipp_datum = explode('-', $zufalls_tipp_content[0], 3);
-		$zufalls_tipp_datum = $zufalls_tipp_datum[2].'.'.$zufalls_tipp_datum[1].'.'.$zufalls_tipp_datum[0];
-		$zufalls_tipp_content = '<strong>'.$zufalls_tipp_datum.':</strong> '.$zufalls_tipp_content[1];
-		echo $zufalls_tipp_content;
-		echo '</p></div>';
-	}
-}
+
+// show random short hints
+echo '<h1>Tipp des Tages (<a href="/tipps_des_tages.php">Alle</a>)</h1>';
+echo '<div class="left-box"><p>';
+$tipps_des_tages = file('tipps_des_tages.txt');
+$randomHintIndex = mt_rand(0, count($tipps_des_tages)-1);
+// be careful with the input for eval() here (which should only contain a gettext call)
+$randomHint = eval($tipps_des_tages[$randomHintIndex]);
+echo $randomHint;
+echo '</p></div>';
+
 ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <?php

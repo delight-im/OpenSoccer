@@ -75,26 +75,28 @@ $pw_meldung = _('Dein Passwort konnte leider nicht geändert werden. Bitte versu
 	$pw_alt = trim($_POST['pw_alt']);
 	$pw_neu1 = trim($_POST['pw_neu1']);
 	$pw_neu2 = trim($_POST['pw_neu2']);
-	if ($pw_neu1 == $pw_neu2) {
-            if (strlen($pw_neu1)>5) {
-                if ($pw_neu1 != $pw_alt) {
-		    $pw_alt = md5('1'.$pw_alt.'29');
-		    $pw_neu = md5('1'.$pw_neu1.'29');
-		    $sql1 = "UPDATE ".$prefix."users SET password = '".$pw_neu."' WHERE password = '".$pw_alt."' AND ids = '".$cookie_id."'";
-         	    $sql2 = mysql_query($sql1);
-  		    if ($sql2 != FALSE) {
-		        if (mysql_affected_rows() > 0) {
- 			    setTaskDone('change_pw');
-			    $pw_meldung = _('Dein Passwort wurde erfolgreich geändert!');
-			}
-		    }
-                }else {
-                    $pw_meldung = _('You can\'t enter the same password!');
+    if ($pw_neu1 == $pw_neu2) {
+        if (mb_strlen($pw_neu1) >= 6) {
+            if ($pw_neu1 != $pw_alt) {
+                $pw_alt = md5('1'.$pw_alt.'29');
+                $pw_neu = md5('1'.$pw_neu1.'29');
+                $sql1 = "UPDATE ".$prefix."users SET password = '".$pw_neu."' WHERE password = '".$pw_alt."' AND ids = '".$cookie_id."'";
+                $sql2 = mysql_query($sql1);
+                if ($sql2 != FALSE) {
+                    if (mysql_affected_rows() > 0) {
+                        setTaskDone('change_pw');
+                        $pw_meldung = _('Dein Passwort wurde erfolgreich geändert!');
+                    }
                 }
-            }else {
-               $pw_meldung = _('The password you entered is too short. At least 6 characters are required!');
+            }
+            else {
+                $pw_meldung = _('Dein altes und neues Passwort dürfen nicht übereinstimmen!');
             }
         }
+        else {
+            $pw_meldung = _('Bitte gib mindestens 6 Zeichen für das Passwort ein!');
+        }
+    }
 }
 if (isset($_POST['urlaub_ende']) && $cookie_id != DEMO_USER_ID) {
 	if ($cookie_team != '__'.$cookie_id) {

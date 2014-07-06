@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-07-02 22:57-0300\n"
-"PO-Revision-Date: 2014-07-04 22:56+0100\n"
+"POT-Creation-Date: 2014-07-06 18:38+0100\n"
+"PO-Revision-Date: 2014-07-06 18:39+0100\n"
 "Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -1174,7 +1174,7 @@ msgid ""
 "Die Zeitschrift &quot;Bolzblatt&quot; bewertet die Leistung der Teams wie "
 "folgt:"
 msgstr ""
-"La revista &quot;Bolzblatt&quot; evalúa el desempeño de los equipos de la "
+"La revista &quot;KickJournal&quot; evalúa el desempeño de los equipos de la "
 "siguiente manera:"
 
 #: ../../../aa_spieltag_simulation.php:977
@@ -1330,7 +1330,7 @@ msgstr "jugadores lesionados o suspendidos"
 
 #: ../../../aufstellung.php:346 ../../../beobachtung.php:122
 #: ../../../chat.php:123 ../../../chat_reports.php:101 ../../../cup.php:137
-#: ../../../einstellungen.php:255 ../../../entwicklung.php:67
+#: ../../../einstellungen.php:265 ../../../entwicklung.php:67
 #: ../../../freunde.php:68 ../../../freundeWerben.php:48
 #: ../../../geloeschteAccounts.php:42 ../../../gesperrteTeamnamen.php:97
 #: ../../../gruendeFuerLoeschung.php:42 ../../../ipInfo.php:43
@@ -1338,24 +1338,23 @@ msgstr "jugadores lesionados o suspendidos"
 #: ../../../lig_testspiele_liste.php:79 ../../../ligaTausch.php:208
 #: ../../../ligaTauschWuensche.php:67 ../../../liveZentrale.php:156
 #: ../../../marktschreier.php:60 ../../../namensaenderung.php:168
-#: ../../../neueAccounts.php:67 ../../../neuigkeiten.php:33
-#: ../../../notizen.php:58 ../../../pokal.php:243 ../../../postausgang.php:16
-#: ../../../spielbericht.php:327 ../../../spieler_historie.php:130
-#: ../../../stat_5jahresWertung.php:61 ../../../stat_cupsieger.php:69
-#: ../../../stat_dauerbrenner.php:65 ../../../stat_ergebnisverlauf.php:69
-#: ../../../stat_geldwert.php:78 ../../../stat_geschichte.php:82
-#: ../../../stat_juengste_kader.php:69 ../../../stat_ligaTausch.php:45
-#: ../../../stat_meiste_titel.php:92 ../../../stat_meiste_zuschauer.php:88
-#: ../../../stat_meister.php:64 ../../../stat_pokalsieger.php:42
-#: ../../../stat_reichste_ligen.php:41 ../../../stat_saisonverlauf.php:46
-#: ../../../stat_staerkste_ligen_a.php:41
+#: ../../../neueAccounts.php:67 ../../../notizen.php:58 ../../../pokal.php:243
+#: ../../../postausgang.php:16 ../../../spielbericht.php:327
+#: ../../../spieler_historie.php:130 ../../../stat_5jahresWertung.php:61
+#: ../../../stat_cupsieger.php:69 ../../../stat_dauerbrenner.php:65
+#: ../../../stat_ergebnisverlauf.php:69 ../../../stat_geldwert.php:78
+#: ../../../stat_geschichte.php:82 ../../../stat_juengste_kader.php:69
+#: ../../../stat_ligaTausch.php:45 ../../../stat_meiste_titel.php:92
+#: ../../../stat_meiste_zuschauer.php:88 ../../../stat_meister.php:64
+#: ../../../stat_pokalsieger.php:42 ../../../stat_reichste_ligen.php:41
+#: ../../../stat_saisonverlauf.php:46 ../../../stat_staerkste_ligen_a.php:41
 #: ../../../stat_staerkste_ligen_k.php:41
 #: ../../../stat_staerkste_ligen_r.php:41 ../../../stat_torjaegerliste.php:78
 #: ../../../stat_transfer_uebersicht.php:72
 #: ../../../stat_treuesteSpieler.php:79
 #: ../../../stat_wertvollste_spieler.php:69
 #: ../../../stat_wertvollste_teams.php:89 ../../../taktik.php:183
-#: ../../../tipps_des_tages.php:35 ../../../top_manager.php:115
+#: ../../../tipps_des_tages.php:37 ../../../top_manager.php:115
 #: ../../../transferliste.php:42 ../../../ver_buchungen.php:64
 #: ../../../ver_lotto.php:153 ../../../vertraege.php:88
 #: ../../../vertrag_verlaengern.php:132 ../../../wio.php:56
@@ -1579,7 +1578,7 @@ msgid ""
 "Die Zahlen in den eckigen Klammern geben die Liga des jeweiligen Teams an."
 msgstr ""
 
-#: ../../../einstellungen.php:2 ../../../einstellungen.php:254
+#: ../../../einstellungen.php:2 ../../../einstellungen.php:264
 msgid "Einstellungen"
 msgstr ""
 
@@ -1591,39 +1590,47 @@ msgstr ""
 "Desafortunadamente, tu contraseña no se ha podido cambiar. Por favor, vuelve "
 "a intentarlo!"
 
-#: ../../../einstellungen.php:86
+#: ../../../einstellungen.php:88
 msgid "Dein Passwort wurde erfolgreich geändert!"
 msgstr "Tu contraseña fue cambiada exitosamente!"
 
-#: ../../../einstellungen.php:95
+#: ../../../einstellungen.php:93
+msgid "Dein altes und neues Passwort dürfen nicht übereinstimmen!"
+msgstr ""
+
+#: ../../../einstellungen.php:97
+msgid "Bitte gib mindestens 6 Zeichen für das Passwort ein!"
+msgstr ""
+
+#: ../../../einstellungen.php:105
 msgid "Du kannst leider keinen Urlaub beantragen, der so lange dauert."
 msgstr ""
 
-#: ../../../einstellungen.php:116
+#: ../../../einstellungen.php:126
 msgid "Dein Urlaub wurde genehmigt!"
 msgstr ""
 
-#: ../../../einstellungen.php:140 ../../../regeln.php:104
+#: ../../../einstellungen.php:150 ../../../regeln.php:104
 msgid "E-Mail-Adresse"
 msgstr "Dirección de correo electrónico"
 
-#: ../../../einstellungen.php:141
+#: ../../../einstellungen.php:151
 msgid "Du bist mit der folgenden E-Mail-Adresse registriert:"
 msgstr "Te has registrado con la siguiente dirección de correo electrónico:"
 
-#: ../../../einstellungen.php:144
+#: ../../../einstellungen.php:154
 msgid "Vereinsnamen ändern"
 msgstr "Cambiar el nombre del equipo"
 
-#: ../../../einstellungen.php:149
+#: ../../../einstellungen.php:159
 msgid "Managernamen ändern"
 msgstr "Cambiar el nombre de mánager"
 
-#: ../../../einstellungen.php:153
+#: ../../../einstellungen.php:163
 msgid "Urlaub beantragen"
 msgstr "Solicitar vacaciones"
 
-#: ../../../einstellungen.php:156
+#: ../../../einstellungen.php:166
 msgid ""
 "Mit dem folgenden Formular kannst Du Urlaub beantragen. In Deiner "
 "Urlaubszeit kannst Du nicht automatisch gelöscht werden. Außerdem verwaltet "
@@ -1635,27 +1642,27 @@ msgstr ""
 "eso, la computadora se encargará de tus formaciones y extenderá los "
 "contratos de los jugadores en caso expiren durante tus vacaciones."
 
-#: ../../../einstellungen.php:166 ../../../einstellungen.php:184
+#: ../../../einstellungen.php:176 ../../../einstellungen.php:194
 msgid "noch keinen Urlaub"
 msgstr ""
 
-#: ../../../einstellungen.php:172 ../../../einstellungen.php:190
+#: ../../../einstellungen.php:182 ../../../einstellungen.php:200
 msgid "Du kannst jetzt neuen Urlaub beantragen."
 msgstr "Ya puedes solicitar unas nuevas vacaciones."
 
-#: ../../../einstellungen.php:179
+#: ../../../einstellungen.php:189
 msgid "Kurzurlaub (1-10 Tage):"
 msgstr "Vacaciones cortas (1-10 días):"
 
-#: ../../../einstellungen.php:197
+#: ../../../einstellungen.php:207
 msgid "Langer Urlaub (11-30 Tage):"
 msgstr "Vacaciones largas (11-30 días):"
 
-#: ../../../einstellungen.php:236
+#: ../../../einstellungen.php:246
 msgid "Passwort ändern"
 msgstr "Cambiar contraseña"
 
-#: ../../../einstellungen.php:237
+#: ../../../einstellungen.php:247
 msgid ""
 "Mit dem folgenden Formular kannst Du Dein Passwort beim Ballmanager ändern. "
 "Dazu musst Du alle Felder ausfüllen."
@@ -1663,11 +1670,11 @@ msgstr ""
 "Con este formulario puedes cambiar tu contraseña del juego. Por favor, llena "
 "todos los campos"
 
-#: ../../../einstellungen.php:245
+#: ../../../einstellungen.php:255
 msgid "Account löschen"
 msgstr "Cuenta eliminada"
 
-#: ../../../einstellungen.php:246
+#: ../../../einstellungen.php:256
 msgid ""
 "Du bist Dir wirklich sicher, dass Du Deinen Account hier beim Ballmanager "
 "löschen möchtest? Das ist sehr schade, aber wir akzeptieren das natürlich."
@@ -1675,17 +1682,17 @@ msgstr ""
 "¿Estás seguro de que quieres eliminar tu cuenta de este juego? Es una "
 "lástima, pero lo aceptamos de todos modos."
 
-#: ../../../einstellungen.php:247
+#: ../../../einstellungen.php:257
 msgid ""
 "Wir würden uns freuen, wenn Du uns noch mitteilen würdest, was Dir hier "
 "gefallen hat und was noch nicht so gut war."
 msgstr ""
 
-#: ../../../einstellungen.php:249
+#: ../../../einstellungen.php:259
 msgid "Das war gut:"
 msgstr "Lo que si me gustó:"
 
-#: ../../../einstellungen.php:250
+#: ../../../einstellungen.php:260
 msgid "Das hat mir nicht gefallen:"
 msgstr "Lo que no me gusto:"
 
@@ -2302,15 +2309,6 @@ msgstr "Este mánager ya ha sido contactado"
 #: ../../../neueAccounts.php:40
 msgid "Dieser Manager wurde bisher noch nicht angeschrieben"
 msgstr "Este mánager aún no fue contactado"
-
-#: ../../../neuigkeiten.php:2 ../../../neuigkeiten.php:12
-#: ../../../neuigkeiten.php:32
-msgid "Neuigkeiten"
-msgstr "Noticias"
-
-#: ../../../neuigkeiten.php:5
-msgid "Neuigkeiten durchsuchen"
-msgstr "Buscar noticias"
 
 #: ../../../notizen.php:2 ../../../notizen.php:49
 msgid "Notizen"
@@ -3638,7 +3636,7 @@ msgid ""
 msgstr ""
 
 #: ../../../tipps_des_tages.php:2 ../../../tipps_des_tages.php:13
-#: ../../../tipps_des_tages.php:34
+#: ../../../tipps_des_tages.php:36
 msgid "Tipps des Tages"
 msgstr "Consejo del día"
 
@@ -3912,3 +3910,9 @@ msgstr "Transferencias más costosas"
 #: ../../../zzsubnav_statistik.php:24
 msgid "Torjägerliste"
 msgstr "Mejores puntajes"
+
+#~ msgid "Neuigkeiten"
+#~ msgstr "Noticias"
+
+#~ msgid "Neuigkeiten durchsuchen"
+#~ msgstr "Buscar noticias"

@@ -19,10 +19,8 @@ if (Chance_Percent(33)) {
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 0) {
 		$sql3 = mysql_fetch_assoc($sql2);
-		$id = $sql3['id'];
-		$dateiname = 'http://www.ballmanager.de/'.$sql3['datei'];
-		$requestTXT = file_get_contents($dateiname);
-		$sql4 = "UPDATE ".$prefix."cronjobs SET zuletzt = ".time()." WHERE id = ".$id;
+		$requestTXT = file_get_contents($sql3['datei']);
+		$sql4 = "UPDATE ".$prefix."cronjobs SET zuletzt = ".time()." WHERE id = ".intval($sql3['id']);
 		$sql5 = mysql_query($sql4);
 	}
 }

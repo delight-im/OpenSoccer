@@ -3,7 +3,7 @@
 <script type="text/javascript">
 function laengeStoppen(feld) {
   if (feld.value.length > 240) {
-    alert(<?php echo _('Es sind nur 250 Zeichen erlaubt. Diese Grenze hast Du jetzt erreicht!'); ?>);
+    alert('<?php echo _('Es sind nur 250 Zeichen erlaubt. Diese Grenze hast Du jetzt erreicht!'); ?>');
 	return false;
   }
 }
@@ -52,7 +52,7 @@ if (mysql_num_rows($sql2) != 0) {
 <p><strong><?php echo _('Hinweis:').'</strong> '._('Es werden immer nur die letzten 25 Notizen angezeigt.'); ?></p>
 <h1><?php echo _('Neue Notiz erstellen'); ?></h1>
 <form action="/notizen.php" method="post" accept-charset="utf-8">
-<p><textarea name="neu" onkeypress="laengeStoppen(this)"></textarea></p><p><input type="submit" value="Speichern"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><textarea name="neu" onkeypress="laengeStoppen(this)"></textarea></p><p><input type="submit" value="<?php echo _('Speichern'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>

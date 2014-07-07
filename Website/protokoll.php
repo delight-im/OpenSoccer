@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Protokoll | Ballmanager.de</title>
+<title><?php echo _('Protokoll'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -17,7 +17,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 }
 
 if ($showTeam == $cookie_team) { // if the event log for one's own club is to be shown
-	echo '<h1>Protokoll</h1>';
+	echo '<h1>'._('Protokoll').'</h1>';
 }
 else { // if the event log for another user's club is to be shown by the support staff
 	echo '<h1>Protokoll für '.htmlspecialchars($showTeamName).'</h1>';
@@ -45,15 +45,15 @@ if (isset($_GET['filter'])) {
 		echo '>'.$filterType.'</option>';
 	}
 	?>
-</select> <input type="submit" value="Filtern" /></p>
+</select> <input type="submit" value="<?php echo _('Filtern'); ?>" /></p>
 </form>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Datum</th>
-<th scope="col">Ereignis</th>
+<th scope="col"><?php echo _('Datum'); ?></th>
+<th scope="col"><?php echo _('Ereignis'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -76,13 +76,13 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </tbody>
 </table>
 </p>
-<p><strong>Hinweis:</strong> Die Ereignisse sind nach Datum geordnet, d.h. die neueste Meldung steht ganz oben.</p>
+<p><strong><?php echo _('Hinweis:').'</strong> '_('Die Ereignisse sind nach Datum geordnet, d.h. die neueste Meldung steht ganz oben.'); ?></p>
 <?php
 echo '<div class="pagebar">';
 $wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS
 $vorherige = $seite-1;
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite=1">Erste</a> '; } else { echo '<span class="this-page">Erste</span>'; }
-if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$vorherige.'">Vorherige</a> '; } else { echo '<span class="this-page">Vorherige</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite=1">'._('Erste').'</a> '; } else { echo '<span class="this-page">'._('Erste').'</span>'; }
+if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$vorherige.'">'._('Vorherige').'</a> '; } else { echo '<span class="this-page">'._('Vorherige').'</span> '; }
 $naechste = $seite+1;
 $vor4 = $seite-4; if ($vor4 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$vor4.'">'.$vor4.'</a> '; }
 $vor3 = $seite-3; if ($vor3 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$vor3.'">'.$vor3.'</a> '; }
@@ -93,12 +93,12 @@ $nach1 = $seite+1; if ($nach1 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['
 $nach2 = $seite+2; if ($nach2 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$nach2.'">'.$nach2.'</a> '; }
 $nach3 = $seite+3; if ($nach3 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$nach3.'">'.$nach3.'</a> '; }
 $nach4 = $seite+4; if ($nach4 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$nach4.'">'.$nach4.'</a> '; }
-if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$naechste.'">Nächste</a> '; } else { echo '<span class="this-page">Nächste</span> '; }
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.ceil($wieviel_seiten).'">Letzte</a>'; } else { echo '<span clss="this-page">Letzte</span>'; }
+if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.$naechste.'">'._('Nächste').'</a> '; } else { echo '<span class="this-page">'._('Nächste').'</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?filter='.$filterGET.'&amp;team='.htmlspecialchars($showTeam).'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
 <?php } else { ?>
-<h1>Protokoll</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Protokoll'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

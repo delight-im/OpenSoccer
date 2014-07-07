@@ -18,10 +18,13 @@ else {
 ?>
 <p><strong><?php echo _('Hier findest Du alle <i>Tipps des Tages</i> - gesammelt auf einer Seite.'); ?></strong></p>
 <?php
-$tippList = file('tipps_des_tages.txt');
-$counter = 0;
+$tippList = file('tipps_des_tages.php.txt');
+$counter = -1;
 foreach ($tippList as $tippEntry) {
-	$counter++;
+    // increment the counter
+    $counter++;
+    // ignore the first line (PHP tag)
+    if ($counter == 0) { continue; }
     // be careful with the input for eval() here (which should only contain a gettext call)
     $tippEntry = eval($tippEntry);
 	if ($q != '') {

@@ -1,3 +1,4 @@
+<?php
 return _('Leihe Dir Spieler von anderen Klubs aus: Leihgaben sind günstige Verstärkungen für Dein Team.');
 return _('Gerade schwächere Teams können mit erhöhter Aggressivität technische Schwächen ausgleichen.');
 return _('Testspiele sind günstige Möglichkeiten, zusätzliche Erfahrung zu sammeln. Frage einfach bei anderen Managern an, indem Du in ihrem Profil einen Tag auswählst und eine Anfrage machst.');

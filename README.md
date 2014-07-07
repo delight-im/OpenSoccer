@@ -46,6 +46,11 @@ Any contributions are welcome :) Please fork this repository, apply your changes
 
 In order to provide translations for this project, please refer to our [documentation](https://github.com/delight-im/PHP-I18N) and find the translation files in [Website/i18n](Website/i18n).
 
+### Custom Poedit settings
+
+ * Go to `File` - `Preferences` - `Parsers` - `PHP` - `Edit`. In the list of extensions, add `;*.php.txt` at the end.
+ * Go to `File` - `Preferences` - `Translation Memory`. Disable the checkbox for `Use translation memory`.
+
 ## License
 
 All parts of this project, except for the folder `images` in folder `Website`, has been released under the following license.

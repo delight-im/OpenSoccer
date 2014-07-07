@@ -265,8 +265,9 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') { // fuer
 // show random short hints
 echo '<h1>'._('Tipp des Tages').' (<a href="/tipps_des_tages.php">'._('Alle').'</a>)</h1>';
 echo '<div class="left-box"><p>';
-$tipps_des_tages = file('tipps_des_tages.txt');
-$randomHintIndex = mt_rand(0, count($tipps_des_tages)-1);
+$tipps_des_tages = file('tipps_des_tages.php.txt');
+// ignore the first line (PHP tag)
+$randomHintIndex = mt_rand(1, count($tipps_des_tages)-1);
 // be careful with the input for eval() here (which should only contain a gettext call)
 $randomHint = eval($tipps_des_tages[$randomHintIndex]);
 echo $randomHint;

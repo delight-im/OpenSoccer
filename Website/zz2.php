@@ -2,7 +2,7 @@
 <meta name="keywords" content="fußball,fussball,manager,online-fußball-manager,online,browser,spiel,game,browserspiel,browsergame" />
 <script type="text/javascript">
 function noDemoPopup() {
-	alert('Diese Funktion ist mit dem Demo-Account leider nicht verfügbar!');
+	alert('<?php echo _('Diese Funktion ist mit dem Demo-Account leider nicht verfügbar!');?>);
 	return false;
 }
 </script>
@@ -60,15 +60,15 @@ if (!isset($_SESSION['pMaxGebot'])) { $_SESSION['pMaxGebot'] = 0; }
 <?php if ($_SESSION['via_android'] == 0) { ?>
 <ul id="nav">
 <?php if ($loggedin == 0) { ?>
-<li<?php if ($_SERVER['SCRIPT_NAME'] == '/index.php') { echo ' id="current"'; } ?>><a href="/">Startseite</a></li>
+<li<?php if ($_SERVER['SCRIPT_NAME'] == '/index.php') { echo ' id="current"'; } ?>><a href="/"><?php echo _('Startseite'); ?></a></li>
 <?php
 if (isMobile()) {
-	echo '<li><a href="http://www.ballmanager.de/">Desktop</a></li>';
+	echo '<li><a href="http://www.ballmanager.de/">'._('Desktop').'</a></li>';
 }
 else {
-	echo '<li><a href="http://m.ballmanager.de/">Mobil</a></li>';
+	echo '<li><a href="http://m.ballmanager.de/">'_('Mobil')'</a></li>';
 }
-echo '<li><a href="/android_app.php">Android™-App</a></li>';
+echo '<li><a href="/android_app.php">'_('Android™-App')'</a></li>';
 ?>
 <li<?php if ($_SERVER['SCRIPT_NAME'] == '/tour.php') { echo ' id="current"'; } ?>><a href="#" onclick="document.getElementById('lusername').value = 'Demo'; document.getElementById('lpassword').value = 'demo'; document.getElementById('login_form').submit(); return false;">Demo-Account</a></li>
 <?php } else { ?>
@@ -145,78 +145,78 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 }
 // LIGA-TAUSCH-ANFRAGEN ENDE
 ?>
-<li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/index.php' OR $_SERVER['SCRIPT_NAME'] == '/notizen.php' OR $_SERVER['SCRIPT_NAME'] == '/protokoll.php' OR $_SERVER['SCRIPT_NAME'] == '/einstellungen.php') { echo ' id="current"'; } ?>><a href="/">Büro</a>
+<li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/index.php' OR $_SERVER['SCRIPT_NAME'] == '/notizen.php' OR $_SERVER['SCRIPT_NAME'] == '/protokoll.php' OR $_SERVER['SCRIPT_NAME'] == '/einstellungen.php') { echo ' id="current"'; } ?>><a href="/"><?php echo _('Büro'); ?></a>
 	<ul>
-		<li><a href="/">Zentrale</a></li>
-		<?php if ($cookie_team != '__'.$cookie_id) { ?><li><a href="/protokoll.php">Protokoll</a></li><?php } ?>
-		<li><a href="/notizen.php">Notizen</a></li>
-		<?php if (isMobile()) { ?><li><a href="/logout.php">Logout</a></li><?php } ?>
-		<li><a href="/einstellungen.php">Einstellungen</a></li>
+		<li><a href="/"><?php echo _('Zentrale'); ?></a></li>
+		<?php if ($cookie_team != '__'.$cookie_id) { ?><li><a href="/protokoll.php"><?php echo _('Protokoll'); ?></a></li><?php } ?>
+		<li><a href="/notizen.php"><?php echo _('Notizen'); ?></a></li>
+		<?php if (isMobile()) { ?><li><a href="/logout.php"><?php echo _('Logout'); ?></a></li><?php } ?>
+		<li><a href="/einstellungen.php"><?php echo _('Einstellungen'); ?></a></li>
 	</ul>
 </li>
-<?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 1, 5) == 'stat_' OR $_SERVER['SCRIPT_NAME'] == '/top_manager.php' OR $_SERVER['SCRIPT_NAME'] == '/manager_der_saison.php') { echo ' id="current"'; } ?>><a href="/top_manager.php">Ranking</a>
+<?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 1, 5) == 'stat_' OR $_SERVER['SCRIPT_NAME'] == '/top_manager.php' OR $_SERVER['SCRIPT_NAME'] == '/manager_der_saison.php') { echo ' id="current"'; } ?>><a href="/top_manager.php"><?php echo _('Ranking'); ?></a>
 	<?php if ($cookie_team != '__'.$cookie_id) { ?>
 		<ul>
-			<li><a href="/top_manager.php">Ranking</a></li>
-			<li><a href="/stat_5jahresWertung.php">Statistiken</a></li>
-			<li><a href="/manager_der_saison.php">Manager-Wahl</a></li>
+			<li><a href="/top_manager.php"><?php echo _('Ranking'); ?></a></li>
+			<li><a href="/stat_5jahresWertung.php"><?php echo _('Statistiken'); ?></a></li>
+			<li><a href="/manager_der_saison.php"><?php echo _('Manager-Wahl'); ?></a></li>
 		</ul>
 	<?php } ?>
 </li><?php } ?>
-<li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/transfermarkt.php' OR $_SERVER['SCRIPT_NAME'] == '/marktschreier.php' OR $_SERVER['SCRIPT_NAME'] == '/transfermarkt_leihe.php' OR $_SERVER['SCRIPT_NAME'] == '/lig_transfers.php' OR $_SERVER['SCRIPT_NAME'] == '/beobachtung.php' OR $_SERVER['SCRIPT_NAME'] == '/transferliste.php') { echo ' id="current"'; } ?>><a href="/transfermarkt.php">Transfers</a>
+<li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/transfermarkt.php' OR $_SERVER['SCRIPT_NAME'] == '/marktschreier.php' OR $_SERVER['SCRIPT_NAME'] == '/transfermarkt_leihe.php' OR $_SERVER['SCRIPT_NAME'] == '/lig_transfers.php' OR $_SERVER['SCRIPT_NAME'] == '/beobachtung.php' OR $_SERVER['SCRIPT_NAME'] == '/transferliste.php') { echo ' id="current"'; } ?>><a href="/transfermarkt.php"><?php echo _('Transfers'); ?></a>
 	<ul>
-		<li><a href="/transfermarkt.php">Kaufen</a></li>
-		<li><a href="/transfermarkt_leihe.php">Leihen</a></li>
-		<?php if ($cookie_team != '__'.$cookie_id) { ?><li><a href="/beobachtung.php">Beobachtung</a></li><?php } ?>
-		<li><a href="/lig_transfers.php">Abgeschlossen</a></li>
-		<li><a href="/marktschreier.php">Marktschreier</a></li>
+		<li><a href="/transfermarkt.php"><?php echo _('Kaufen'); ?></a></li>
+		<li><a href="/transfermarkt_leihe.php"><?php echo _('Leihen'); ?></a></li>
+		<?php if ($cookie_team != '__'.$cookie_id) { ?><li><a href="/beobachtung.php"><?php echo _('Beobachtung'); ?></a></li><?php } ?>
+		<li><a href="/lig_transfers.php"><?php echo _('Abgeschlossen'); ?></a></li>
+		<li><a href="/marktschreier.php"><?php echo _('Marktschreier'); ?></a></li>
 	</ul>
 </li>
-<?php if ($cookie_team != '__'.$cookie_id) { ?><li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/kader.php' OR $_SERVER['SCRIPT_NAME'] == '/aufstellung.php' OR $_SERVER['SCRIPT_NAME'] == '/taktik.php' OR $_SERVER['SCRIPT_NAME'] == '/vertraege.php' OR $_SERVER['SCRIPT_NAME'] == '/kalender.php' OR $_SERVER['SCRIPT_NAME'] == '/entwicklung.php') { echo ' id="current"'; } ?>><a href="/aufstellung.php">Team</a>
+<?php if ($cookie_team != '__'.$cookie_id) { ?><li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/kader.php' OR $_SERVER['SCRIPT_NAME'] == '/aufstellung.php' OR $_SERVER['SCRIPT_NAME'] == '/taktik.php' OR $_SERVER['SCRIPT_NAME'] == '/vertraege.php' OR $_SERVER['SCRIPT_NAME'] == '/kalender.php' OR $_SERVER['SCRIPT_NAME'] == '/entwicklung.php') { echo ' id="current"'; } ?>><a href="/aufstellung.php"><?php echo _('Team'); ?></a>
 	<ul>
-		<li><a href="/aufstellung.php">Aufstellung</a></li>
-		<li><a href="/taktik.php">Taktik</a></li>
-		<li><a href="/kader.php">Kader</a></li>
-		<li><a href="/entwicklung.php">Entwicklung</a></li>
-		<li><a href="/vertraege.php">Verträge</a></li>
-		<li><a href="/kalender.php">Kalender</a></li>
+		<li><a href="/aufstellung.php"><?php echo _('Aufstellung'); ?></a></li>
+		<li><a href="/taktik.php"><?php echo _('Taktik'); ?></a></li>
+		<li><a href="/kader.php"><?php echo _('Kader'); ?></a></li>
+		<li><a href="/entwicklung.php"><?php echo _('Entwicklung'); ?></a></li>
+		<li><a href="/vertraege.php"><?php echo _('Verträge'); ?></a></li>
+		<li><a href="/kalender.php"><?php echo _('Kalender'); ?></a></li>
 	</ul>
 </li><?php } ?>
-<li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/lig_tabelle.php' OR $_SERVER['SCRIPT_NAME'] == '/pokal.php' OR $_SERVER['SCRIPT_NAME'] == '/cup.php' OR $_SERVER['SCRIPT_NAME'] == '/lig_testspiele_liste.php' OR $_SERVER['SCRIPT_NAME'] == '/testWuensche.php') { echo ' id="current"'; } ?>><a href="/lig_tabelle.php">Saison</a>
+<li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/lig_tabelle.php' OR $_SERVER['SCRIPT_NAME'] == '/pokal.php' OR $_SERVER['SCRIPT_NAME'] == '/cup.php' OR $_SERVER['SCRIPT_NAME'] == '/lig_testspiele_liste.php' OR $_SERVER['SCRIPT_NAME'] == '/testWuensche.php') { echo ' id="current"'; } ?>><a href="/lig_tabelle.php"><?php echo _('Saison'); ?></a>
 	<ul>
-		<li><a href="/lig_tabelle.php">Liga</a></li>
-		<li><a href="/pokal.php">Int. Pokal</a></li>
-		<li><a href="/cup.php">Nat. Cup</a></li>
-		<li><a href="/lig_testspiele_liste.php">Testspiele</a></li>
-		<li><a href="/testWuensche.php">Testwünsche</a></li>
+		<li><a href="/lig_tabelle.php"><?php echo _('Liga'); ?></a></li>
+		<li><a href="/pokal.php"><?php echo _('Int. Pokal'); ?></a></li>
+		<li><a href="/cup.php"><?php echo _('Nat. Cup'); ?></a></li>
+		<li><a href="/lig_testspiele_liste.php"><?php echo _('Testspiele'); ?></a></li>
+		<li><a href="/testWuensche.php"><?php echo _('Testwünsche'); ?></a></li>
 	</ul>
 </li>
-<?php if ($cookie_team != '__'.$cookie_id && !isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 1, 4) == 'ver_') { echo ' id="current"'; } ?>><a href="/ver_finanzen.php">Verein</a>
+<?php if ($cookie_team != '__'.$cookie_id && !isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 1, 4) == 'ver_') { echo ' id="current"'; } ?>><a href="/ver_finanzen.php"><?php echo _('Verein'); ?></a>
 	<ul>
-		<li><a href="/ver_finanzen.php">Finanzen</a></li>
-		<li><a href="/ver_buchungen.php">Buchungen</a></li>
-		<li><a href="/ver_personal.php">Personal</a></li>
-		<li><a href="/ver_stadion.php">Stadion</a></li>
-		<li><a href="/ver_lotto.php">Lotto</a></li>
+		<li><a href="/ver_finanzen.php"><?php echo _('Finanzen'); ?></a></li>
+		<li><a href="/ver_buchungen.php"><?php echo _('Buchungen'); ?></a></li>
+		<li><a href="/ver_personal.php"><?php echo _('Personal'); ?></a></li>
+		<li><a href="/ver_stadion.php"><?php echo _('Stadion'); ?></a></li>
+		<li><a href="/ver_lotto.php"><?php echo _('Lotto'); ?></a></li>
 	</ul>
 </li><?php } ?>
 <?php if ($cookie_team != '__'.$cookie_id && !isMobile()) { ?><li class="menueintrag"<?php if ($_SERVER['SCRIPT_NAME'] == '/leihgaben.php' OR $_SERVER['SCRIPT_NAME'] == '/testspiele.php' OR $_SERVER['SCRIPT_NAME'] == '/ligaTausch.php') { echo ' id="current"'; } ?>><a href="/leihgaben.php">Anfragen (<?php echo intval($_SESSION['last_testspiele_anzahl']+$_SESSION['last_leihgaben_anzahl']+$_SESSION['last_ligaTausch_anzahl']); ?>)</a>
 	<ul>
-		<li><a href="/leihgaben.php">Leihgaben (<?php echo $_SESSION['last_leihgaben_anzahl']; ?>)</a></li>
-		<li><a href="/testspiele.php">Testspiele (<?php echo $_SESSION['last_testspiele_anzahl']; ?>)</a></li>
-		<li><a href="/ligaTausch.php">Ligatausch (<?php echo $_SESSION['last_ligaTausch_anzahl']; ?>)</a></li>
+		<li><a href="/leihgaben.php"><?php echo _('Leihgaben'); ?> (<?php echo $_SESSION['last_leihgaben_anzahl']; ?>)</a></li>
+		<li><a href="/testspiele.php"><?php echo _('Testspiele'); ?> (<?php echo $_SESSION['last_testspiele_anzahl']; ?>)</a></li>
+		<li><a href="/ligaTausch.php"><?php echo _('Ligatausch'); ?> (<?php echo $_SESSION['last_ligaTausch_anzahl']; ?>)</a></li>
 	</ul>
 </li><?php } ?>
-<?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 0, 8) == '/support' OR $_SERVER['SCRIPT_NAME'] == '/tipps_des_tages.php' OR $_SERVER['SCRIPT_NAME'] == '/regeln.php' OR $_SERVER['REQUEST_URI'] == '/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3') { echo ' id="current"'; } ?>><a href="/support.php">Support</a>
+<?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 0, 8) == '/support' OR $_SERVER['SCRIPT_NAME'] == '/tipps_des_tages.php' OR $_SERVER['SCRIPT_NAME'] == '/regeln.php' OR $_SERVER['REQUEST_URI'] == '/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3') { echo ' id="current"'; } ?>><a href="/support.php"><?php echo _('Support'); ?></a>
 	<ul>
-		<li><a href="/support.php">Support</a></li>
-		<li><a href="/wio.php#teamList">Post ans Team</a></li>
-		<li><a href="/tipps_des_tages.php">Kurztipps</a></li>
-		<li><a href="/regeln.php">Regeln</a></li>
-		<?php if ($cookie_username == 'Yazu7') { ?><li><a href="/forum.php">Archiv</a></li><?php } ?>
+		<li><a href="/support.php"><?php echo _('Support'); ?></a></li>
+		<li><a href="/wio.php#teamList"><?php echo _('Post ans Team'); ?></a></li>
+		<li><a href="/tipps_des_tages.php"><?php echo _('Kurztipps'); ?></a></li>
+		<li><a href="/regeln.php"><?php echo _('Regeln'); ?></a></li>
+		<?php if ($cookie_username == 'Yazu7') { ?><li><a href="/forum.php"><?php echo _('Archiv'); ?></a></li><?php } ?>
 	</ul>
 </li><?php } ?>
-<?php if (!isMobile()) { ?><li class="menueintrag"><a href="/<?php if ($_SESSION['pMaxGebot'] == 1) { echo 'logoutNewUser.php'; } else { echo 'logout.php'; } ?>">Logout</a></li><?php } ?>
+<?php if (!isMobile()) { ?><li class="menueintrag"><a href="/<?php if ($_SESSION['pMaxGebot'] == 1) { echo 'logoutNewUser.php'; } else { echo 'logout.php'; } ?>"><?php echo _('Logout'); ?></a></li><?php } ?>
 <?php } ?>
 </ul>
 <?php } ?>
@@ -224,47 +224,47 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 <div id="content-wrap">
 <div id="sidebar">
 <?php if ($loggedin == 0) { ?>
-<h1>Login</h1>
+<h1><?php echo _('Login'); ?></h1>
 <div class="left-box">
 <form action="/login.php" method="post" accept-charset="utf-8" id="login_form" class="imtext">
 <p>
-<label for="lusername">E-Mail / Username:</label><input type="text" name="lusername" id="lusername" /><br />
-<label for="lpassword">Passwort:</label><input type="password" name="lpassword" id="lpassword" />
+<label for="lusername"><?php echo _('E-Mail / Username:'); ?></label><input type="text" name="lusername" id="lusername" /><br />
+<label for="lpassword"><?php echo _('Passwort:'); ?></label><input type="password" name="lpassword" id="lpassword" />
 </p>
 <p>
 <input type="hidden" name="returnURL" value="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" /><input type="submit" value="Einloggen" />
 </p>
-<p><b><a href="/passwort_vergessen.php">Passwort vergessen?</a></b></p>
+<p><b><a href="/passwort_vergessen.php"><?php echo _('Passwort vergessen?'); ?></a></b></p>
 </form>
 </div>
-<h1>Demo-Account</h1>
+<h1><?php echo _('Demo-Account'); ?></h1>
 <div class="left-box">
-<p><strong>Username:</strong> Demo<br /><strong>Passwort:</strong> demo</p>
+<p><strong><?php echo _('Username:'); ?></strong> Demo<br /><strong><?php echo _('Passwort:'); ?></strong> demo</p>
 </div>
 <?php echo $topWidget; ?>
 <?php } else { ?>
 <div id="top_box_nav">
-<a href="/wio.php" class="blue">Wer ist online?</a>
+<a href="/wio.php" class="blue"><?php echo _('Wer ist online?'); ?></a>
 <a href="/posteingang.php" class="lightgrey">Posteingang (<?php echo (isset($_SESSION['last_pn_anzahl']) ? $_SESSION['last_pn_anzahl'] : 0); ?> ungelesen)</a>
 <a href="/freunde.php" class="red">Freunde (<?php echo (isset($_SESSION['last_freunde_anzahl']) ? $_SESSION['last_freunde_anzahl'] : 0); ?> Anfragen)</a>
 <a href="/chat.php" class="grey">Chat (<?php echo (isset($_SESSION['last_chatter_anzahl']) ? $_SESSION['last_chatter_anzahl'] : 0); ?> online)</a>
-<a href="/manager.php?id=<?php echo $cookie_id; ?>" class="green">Mein Profil</a>
+<a href="/manager.php?id=<?php echo $cookie_id; ?>" class="green"><?php echo _('Mein Profil'); ?></a>
 </div>
 <?php
 if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') { // fuer Team das Helfer-Menue
-	echo '<h1>Support-Menü</h1>';
+	echo '<h1>'._('Support-Menü').'</h1>';
 	echo '<div class="left-box navBlockLinks">';
-	echo '<a href="/multiAccounts.php">Multi-Accounts</a>';
-	echo '<a href="/chat_reports.php">Chat-Reports</a>';
-	echo '<a href="/geloeschteAccounts.php">Gelöschte Accounts</a>';
-	echo '<a href="/neueAccounts.php">Neue Accounts</a>';
-	echo '<a href="/gruendeFuerLoeschung.php">Gründe für Löschung</a>';
-	echo '<a href="/sanktionen.php">Kontrollzentrum</a>';
+	echo '<a href="/multiAccounts.php">'._('Multi-Accounts').'</a>';
+	echo '<a href="/chat_reports.php">'._('Chat-Reports').'</a>';
+	echo '<a href="/geloeschteAccounts.php">'._('Gelöschte Accounts').'</a>';
+	echo '<a href="/neueAccounts.php">'._('Neue Accounts').'</a>';
+	echo '<a href="/gruendeFuerLoeschung.php">'._('Gründe für Löschung').'</a>';
+	echo '<a href="/sanktionen.php">'._('Kontrollzentrum').'</a>';
 	echo '</div>';
 }
 
 // show random short hints
-echo '<h1>Tipp des Tages (<a href="/tipps_des_tages.php">Alle</a>)</h1>';
+echo '<h1>'._('Tipp des Tages').' (<a href="/tipps_des_tages.php">'._('Alle').'</a>)</h1>';
 echo '<div class="left-box"><p>';
 $tipps_des_tages = file('tipps_des_tages.txt');
 $randomHintIndex = mt_rand(0, count($tipps_des_tages)-1);
@@ -276,7 +276,7 @@ echo '</p></div>';
 ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <?php
-$nextGamesHTML = '<h1>Nächste Spiele</h1><div class="left-box navBlockLinks matchList">';
+$nextGamesHTML = '<h1>'._('Nächste Spiele').'</h1><div class="left-box navBlockLinks matchList">';
 $nxt3_zeit = mktime(0, 0, 0, date('m', time()), date('d', time()), date('Y', time()));
 $nxt1 = "SELECT id, team1, team2, ergebnis, typ, datum FROM ".$prefix."spiele WHERE (team1 = '".$cookie_teamname."' OR team2 = '".$cookie_teamname."') AND (datum > ".$nxt3_zeit.") ORDER BY datum ASC LIMIT 0, 5";
 $nxt2 = mysql_query($nxt1);

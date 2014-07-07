@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Rangliste | Ballmanager.de</title>
+<title><?php echo _('Rangliste'); ?> | Ballmanager.de</title>
 <?php if ($loggedin == 1) { ?>
 <style type="text/css">
 <!--
@@ -16,7 +16,7 @@ if (isset($_GET['land'])) {
 }
 ?>
 <?php include 'zz2.php'; ?>
-<h1>Rangliste<?php if ($filter_land != '') { echo ' für '.$filter_land; } ?></h1>
+<h1><?php echo _('Rangliste'); ?><?php if ($filter_land != '') { echo ' für '.$filter_land; } ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('overall_ranking');

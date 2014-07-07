@@ -34,7 +34,7 @@ select { width:120px; }
 -->
 </style>
 <?php include 'zz2.php'; ?>
-<h1>Aufstellung</h1>
+<h1><?php echo _('Aufstellung'); ?></h1>
 <?php
 function moralToGraphic($intValue) {
 	$outputStr = '<span';
@@ -170,9 +170,9 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 // SPIELER-MARKIERUNGEN ENDE
 ?>
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
-<p><input type="submit" value="Aufstellung speichern"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><input type="submit" value="<?php echo _('Aufstellung speichern'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 <?php if (!isMobile()) { ?><div class="spielfeld"><?php } ?>
-<?php if (isMobile()) { ?><p><strong>Torwart:</strong></p><?php } ?>
+<?php if (isMobile()) { ?><p><strong><?php echo _('Torwart:'); ?></strong></p><?php } ?>
 <select name="11" size="1" class="torwart">
 	<?php
 	foreach ($player_t as $player_ts) {
@@ -180,7 +180,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 	}
 	?>
 </select>
-<?php if (isMobile()) { ?><p><strong>Abwehr:</strong></p><?php } ?>
+<?php if (isMobile()) { ?><p><strong><?php echo _('Abwehr:'); ?></strong></p><?php } ?>
 <select name="10" size="1" class="abwehr1">
 	<?php
 	foreach ($player_a as $player_as) {
@@ -209,7 +209,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 	}
 	?>
 </select>
-<?php if (isMobile()) { ?><p><strong>Mittelfeld:</strong></p><?php } ?>
+<?php if (isMobile()) { ?><p><strong><?php echo _('Mittelfeld:'); ?></strong></p><?php } ?>
 <select name="6" size="1" class="mittelfeld1">
 	<?php
 	foreach ($player_m as $player_ms) {
@@ -238,7 +238,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 	}
 	?>
 </select>
-<?php if (isMobile()) { ?><p><strong>Sturm:</strong></p><?php } ?>
+<?php if (isMobile()) { ?><p><strong><?php echo _('Sturm:'); ?></strong></p><?php } ?>
 <select name="2" size="1" class="sturm1">
 	<?php
 	foreach ($player_s as $player_ss) {
@@ -266,7 +266,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 	<option value="Rot"><?php echo _('Rot'); ?></option>
 	<option value="Silber"><?php echo _('Silber'); ?></option>
 	<option value="Gruen"><?php echo _('Grün'); ?></option>
-</select> <input type="submit" value="Farbe aufstellen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+</select> <input type="submit" value="<?php echo _('Farbe aufstellen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
 <p><select name="aufstellungUebernehmen" size="1" style="width:200px">
@@ -277,9 +277,9 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 		echo '<option>'.$andererSpieltyp.'</option>';
 	}
 	?>
-</select> <input type="submit" value="Aufstellung übernehmen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+</select> <input type="submit" value="<?php echo _('Aufstellung übernehmen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
-<h1>Meine Spieler</h1>
+<h1><?php echo _('Meine Spieler'); ?></h1>
 <table>
 <thead>
 <tr class="odd">

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-07-06 20:33+0100\n"
-"PO-Revision-Date: 2014-07-06 22:33+0100\n"
+"POT-Creation-Date: 2014-07-07 20:03+0100\n"
+"PO-Revision-Date: 2014-07-07 20:23+0100\n"
 "Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -946,7 +946,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:373
 msgid "Treffer!"
-msgstr ""
+msgstr "Strike!"
 
 #: ../../../aa_spieltag_simulation.php:374
 msgid "Toooor!"
@@ -971,7 +971,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:379
 msgid "Tor für XYZ!"
-msgstr ""
+msgstr "Goal for XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:382
 msgid "Der Schuss wird vom Verteidiger abgeblockt."
@@ -1011,7 +1011,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:396
 msgid "Gehalten!"
-msgstr ""
+msgstr "Saved!"
 
 #: ../../../aa_spieltag_simulation.php:397
 msgid "Tolle Parade vom Torwart."
@@ -1052,11 +1052,11 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:408
 msgid "Abseits."
-msgstr ""
+msgstr "Offside position."
 
 #: ../../../aa_spieltag_simulation.php:409
 msgid "XYZ im Abseits."
-msgstr ""
+msgstr "XYZ in offside position."
 
 #: ../../../aa_spieltag_simulation.php:410
 msgid "Schönes Tor von XYZ, doch leider Abseits."
@@ -1072,7 +1072,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:413
 msgid "XYZ ist im Abseits."
-msgstr ""
+msgstr "XYZ is in an offside position."
 
 #: ../../../aa_spieltag_simulation.php:414
 msgid "Der Spieler von XYZ wird in Abseitsposition angespielt."
@@ -1188,7 +1188,7 @@ msgstr ""
 msgid "Der Schiedsrichter pfeift das Spiel ab."
 msgstr ""
 
-#: ../../../android_app.php:2 ../../../android_app.php:19
+#: ../../../android_app.php:2 ../../../android_app.php:19 ../../../zz2.php:70
 msgid "Android™-App"
 msgstr "Android app"
 
@@ -1225,9 +1225,29 @@ msgid ""
 "sind, kannst Du die restlichen Menü-Einträge anzeigen lassen."
 msgstr ""
 
-#: ../../../aufstellung.php:2
+#: ../../../aufstellung.php:2 ../../../aufstellung.php:37 ../../../zz2.php:176
 msgid "Aufstellung"
 msgstr "Line-up"
+
+#: ../../../aufstellung.php:173
+msgid "Aufstellung speichern"
+msgstr "Save line-up"
+
+#: ../../../aufstellung.php:175
+msgid "Torwart:"
+msgstr "Goalkeeper:"
+
+#: ../../../aufstellung.php:183
+msgid "Abwehr:"
+msgstr "Defender:"
+
+#: ../../../aufstellung.php:212
+msgid "Mittelfeld:"
+msgstr "Midfield:"
+
+#: ../../../aufstellung.php:241
+msgid "Sturm:"
+msgstr "Forward:"
 
 #: ../../../aufstellung.php:260 ../../../kader.php:153
 msgid "Aqua"
@@ -1264,6 +1284,22 @@ msgstr "Silver"
 #: ../../../aufstellung.php:268 ../../../kader.php:161
 msgid "Grün"
 msgstr "Green"
+
+#: ../../../aufstellung.php:269
+msgid "Farbe aufstellen"
+msgstr "Field players with color"
+
+#: ../../../aufstellung.php:269 ../../../aufstellung.php:280
+msgid "Bist Du sicher?"
+msgstr "Are you sure?"
+
+#: ../../../aufstellung.php:280
+msgid "Aufstellung übernehmen"
+msgstr "Copy line-up"
+
+#: ../../../aufstellung.php:282
+msgid "Meine Spieler"
+msgstr "My players"
 
 #: ../../../aufstellung.php:287 ../../../beobachtung.php:37
 #: ../../../entwicklung.php:11 ../../../kader.php:56
@@ -1341,29 +1377,30 @@ msgstr "injured or suspended players"
 #: ../../../ligaTauschWuensche.php:67 ../../../liveZentrale.php:156
 #: ../../../marktschreier.php:60 ../../../namensaenderung.php:168
 #: ../../../neueAccounts.php:67 ../../../notizen.php:58 ../../../pokal.php:243
-#: ../../../postausgang.php:16 ../../../spielbericht.php:327
-#: ../../../spieler_historie.php:130 ../../../stat_5jahresWertung.php:61
-#: ../../../stat_cupsieger.php:69 ../../../stat_dauerbrenner.php:65
-#: ../../../stat_ergebnisverlauf.php:69 ../../../stat_geldwert.php:78
-#: ../../../stat_geschichte.php:82 ../../../stat_juengste_kader.php:69
-#: ../../../stat_ligaTausch.php:45 ../../../stat_meiste_titel.php:92
-#: ../../../stat_meiste_zuschauer.php:88 ../../../stat_meister.php:64
-#: ../../../stat_pokalsieger.php:42 ../../../stat_reichste_ligen.php:41
-#: ../../../stat_saisonverlauf.php:46 ../../../stat_staerkste_ligen_a.php:41
+#: ../../../postausgang.php:16 ../../../protokoll.php:102
+#: ../../../spielbericht.php:327 ../../../spieler_historie.php:130
+#: ../../../stat_5jahresWertung.php:61 ../../../stat_cupsieger.php:69
+#: ../../../stat_dauerbrenner.php:65 ../../../stat_ergebnisverlauf.php:69
+#: ../../../stat_geldwert.php:78 ../../../stat_geschichte.php:82
+#: ../../../stat_juengste_kader.php:69 ../../../stat_ligaTausch.php:45
+#: ../../../stat_meiste_titel.php:92 ../../../stat_meiste_zuschauer.php:88
+#: ../../../stat_meister.php:64 ../../../stat_pokalsieger.php:42
+#: ../../../stat_reichste_ligen.php:41 ../../../stat_saisonverlauf.php:46
+#: ../../../stat_staerkste_ligen_a.php:41
 #: ../../../stat_staerkste_ligen_k.php:41
 #: ../../../stat_staerkste_ligen_r.php:41 ../../../stat_torjaegerliste.php:78
 #: ../../../stat_transfer_uebersicht.php:72
 #: ../../../stat_treuesteSpieler.php:79
 #: ../../../stat_wertvollste_spieler.php:69
 #: ../../../stat_wertvollste_teams.php:89 ../../../taktik.php:183
-#: ../../../tipps_des_tages.php:37 ../../../top_manager.php:115
+#: ../../../tipps_des_tages.php:40 ../../../top_manager.php:115
 #: ../../../transferliste.php:42 ../../../ver_buchungen.php:64
 #: ../../../ver_lotto.php:153 ../../../vertraege.php:88
 #: ../../../vertrag_verlaengern.php:132 ../../../wio.php:56
 msgid "Du musst angemeldet sein, um diese Seite aufrufen zu können!"
 msgstr "Please sign in to your personal account in order to access this page!"
 
-#: ../../../beobachtung.php:2
+#: ../../../beobachtung.php:2 ../../../zz2.php:169
 msgid "Beobachtung"
 msgstr "Watch list"
 
@@ -1403,28 +1440,32 @@ msgstr "Delete marked"
 #: ../../../beobachtung.php:103 ../../../entwicklung.php:50
 #: ../../../geloeschteAccounts.php:24 ../../../gruendeFuerLoeschung.php:24
 #: ../../../neueAccounts.php:49 ../../../postausgang.php:83
-#: ../../../top_manager.php:98 ../../../ver_buchungen.php:47
+#: ../../../protokoll.php:84 ../../../top_manager.php:98
+#: ../../../ver_buchungen.php:47
 msgid "Erste"
 msgstr "First"
 
 #: ../../../beobachtung.php:104 ../../../entwicklung.php:51
 #: ../../../geloeschteAccounts.php:25 ../../../gruendeFuerLoeschung.php:25
 #: ../../../neueAccounts.php:50 ../../../postausgang.php:84
-#: ../../../top_manager.php:99 ../../../ver_buchungen.php:48
+#: ../../../protokoll.php:85 ../../../top_manager.php:99
+#: ../../../ver_buchungen.php:48
 msgid "Vorherige"
 msgstr "Previous"
 
 #: ../../../beobachtung.php:115 ../../../entwicklung.php:62
 #: ../../../geloeschteAccounts.php:36 ../../../gruendeFuerLoeschung.php:36
 #: ../../../neueAccounts.php:61 ../../../postausgang.php:95
-#: ../../../top_manager.php:110 ../../../ver_buchungen.php:59
+#: ../../../protokoll.php:96 ../../../top_manager.php:110
+#: ../../../ver_buchungen.php:59
 msgid "Nächste"
 msgstr "Next"
 
 #: ../../../beobachtung.php:116 ../../../entwicklung.php:63
 #: ../../../geloeschteAccounts.php:37 ../../../gruendeFuerLoeschung.php:37
 #: ../../../neueAccounts.php:62 ../../../postausgang.php:96
-#: ../../../top_manager.php:111 ../../../ver_buchungen.php:60
+#: ../../../protokoll.php:97 ../../../top_manager.php:111
+#: ../../../ver_buchungen.php:60
 msgid "Letzte"
 msgstr "Last"
 
@@ -1523,6 +1564,7 @@ msgstr ""
 "Please enable JavaScript in your browser in order to be able to use the chat!"
 
 #: ../../../chat_reports.php:2 ../../../chat_reports.php:18
+#: ../../../zz2.php:257
 msgid "Chat-Reports"
 msgstr "Chat reports"
 
@@ -1541,9 +1583,10 @@ msgstr "Report by"
 #: ../../../chat_reports.php:54 ../../../entwicklung.php:14
 #: ../../../freundeWerben.php:15 ../../../kalender.php:45
 #: ../../../lig_testspiele_liste.php:42 ../../../ligaTausch.php:193
-#: ../../../postausgang.php:39 ../../../spielbericht.php:289
-#: ../../../spieler_historie.php:27 ../../../spieler_historie.php:95
-#: ../../../stat_ligaTausch.php:12 ../../../stat_transfer_uebersicht.php:43
+#: ../../../postausgang.php:39 ../../../protokoll.php:55
+#: ../../../spielbericht.php:289 ../../../spieler_historie.php:27
+#: ../../../spieler_historie.php:95 ../../../stat_ligaTausch.php:12
+#: ../../../stat_transfer_uebersicht.php:43
 msgid "Datum"
 msgstr "Date"
 
@@ -1580,7 +1623,7 @@ msgstr "Team 2"
 
 #: ../../../cup.php:134 ../../../ligaTauschWuensche.php:63
 #: ../../../liveZentrale.php:153 ../../../namensaenderung.php:60
-#: ../../../notizen.php:52 ../../../pokal.php:196
+#: ../../../notizen.php:52 ../../../pokal.php:196 ../../../protokoll.php:79
 msgid "Hinweis:"
 msgstr "Notice:"
 
@@ -1590,8 +1633,13 @@ msgid ""
 msgstr "The numbers in the square brackets indicate each team's league."
 
 #: ../../../einstellungen.php:2 ../../../einstellungen.php:264
+#: ../../../zz2.php:152
 msgid "Einstellungen"
 msgstr "Settings"
+
+#: ../../../einstellungen.php:57
+msgid "Urlaub abbrechen"
+msgstr "Cancel vacation"
 
 #: ../../../einstellungen.php:74
 msgid ""
@@ -1667,7 +1715,11 @@ msgstr "Short vacation (1-10 days):"
 msgid "Langer Urlaub (11-30 Tage):"
 msgstr "Long vacation (11-30 days):"
 
-#: ../../../einstellungen.php:246
+#: ../../../einstellungen.php:240
+msgid "Beantragen"
+msgstr "Request"
+
+#: ../../../einstellungen.php:246 ../../../einstellungen.php:252
 msgid "Passwort ändern"
 msgstr "Change password"
 
@@ -1678,6 +1730,18 @@ msgid ""
 msgstr ""
 "With the following form, you can change your password for this game. Please "
 "fill out all the fields."
+
+#: ../../../einstellungen.php:249
+msgid "Altes Passwort:"
+msgstr "Old password:"
+
+#: ../../../einstellungen.php:250
+msgid "Neues Passwort:"
+msgstr "New password:"
+
+#: ../../../einstellungen.php:251
+msgid "Neues Passwort (Bestätigung):"
+msgstr "New password (verification):"
 
 #: ../../../einstellungen.php:255
 msgid "Account löschen"
@@ -1707,7 +1771,11 @@ msgstr "What I liked:"
 msgid "Das hat mir nicht gefallen:"
 msgstr "What I didn't like:"
 
-#: ../../../entwicklung.php:2 ../../../entwicklung.php:4
+#: ../../../einstellungen.php:261
+msgid "Account endgültig löschen"
+msgstr "Delete account permanently"
+
+#: ../../../entwicklung.php:2 ../../../entwicklung.php:4 ../../../zz2.php:179
 msgid "Entwicklung"
 msgstr "Development"
 
@@ -1822,6 +1890,7 @@ msgid "Prämie noch nicht ausgezahlt"
 msgstr "Bonus not paid yet"
 
 #: ../../../geloeschteAccounts.php:2 ../../../geloeschteAccounts.php:10
+#: ../../../zz2.php:258
 msgid "Gelöschte Accounts"
 msgstr "Deleted accounts"
 
@@ -1847,7 +1916,7 @@ msgstr "Involved"
 #: ../../../stat_meiste_titel.php:71 ../../../stat_reichste_ligen.php:20
 #: ../../../stat_staerkste_ligen_a.php:20
 #: ../../../stat_staerkste_ligen_k.php:20
-#: ../../../stat_staerkste_ligen_r.php:20
+#: ../../../stat_staerkste_ligen_r.php:20 ../../../zz2.php:186
 msgid "Liga"
 msgstr "League"
 
@@ -1868,6 +1937,7 @@ msgid "Gesperrte Teamnamen"
 msgstr "Blocked team names"
 
 #: ../../../gruendeFuerLoeschung.php:2 ../../../gruendeFuerLoeschung.php:10
+#: ../../../zz2.php:260
 msgid "Gründe für Löschung"
 msgstr "Reasons for deletion"
 
@@ -1911,7 +1981,7 @@ msgstr "User"
 msgid "Letzter Login"
 msgstr "Last sign-in"
 
-#: ../../../kader.php:2
+#: ../../../kader.php:2 ../../../zz2.php:178
 msgid "Kader"
 msgstr "Squad"
 
@@ -1955,7 +2025,7 @@ msgstr "Position"
 msgid "Besetzung"
 msgstr "Composition"
 
-#: ../../../kalender.php:2
+#: ../../../kalender.php:2 ../../../zz2.php:181
 msgid "Kalender"
 msgstr "Calendar"
 
@@ -2033,7 +2103,8 @@ msgid "Pokal: Finale"
 msgstr "International Cup: Final"
 
 #: ../../../lig_testspiele_liste.php:2 ../../../lig_testspiele_liste.php:37
-#: ../../../lig_testspiele_liste.php:78
+#: ../../../lig_testspiele_liste.php:78 ../../../zz2.php:189
+#: ../../../zz2.php:205
 msgid "Testspiele"
 msgstr "Friendly matches"
 
@@ -2130,7 +2201,7 @@ msgstr "Sent requests"
 #: ../../../stat_juengste_kader.php:48 ../../../stat_meiste_titel.php:68
 #: ../../../stat_meiste_zuschauer.php:48 ../../../stat_meister.php:42
 #: ../../../stat_treuesteSpieler.php:36 ../../../stat_wertvollste_teams.php:48
-#: ../../../top_manager.php:51 ../../../wio.php:6
+#: ../../../top_manager.php:51 ../../../wio.php:6 ../../../zz2.php:174
 msgid "Team"
 msgstr "Team"
 
@@ -2223,7 +2294,7 @@ msgstr "Cancel friendship"
 msgid "Diesen User nicht mehr ignorieren"
 msgstr "Stop ignoring this user"
 
-#: ../../../marktschreier.php:2
+#: ../../../marktschreier.php:2 ../../../zz2.php:171
 msgid "Marktschreier"
 msgstr "Market barker"
 
@@ -2253,7 +2324,7 @@ msgstr "Your message"
 msgid "Angebote auf dem Markt"
 msgstr "Offers on the market"
 
-#: ../../../multiSperre.php:3 ../../../multiSperre.php:5
+#: ../../../multiSperre.php:3 ../../../multiSperre.php:5 ../../../zz2.php:256
 msgid "Multi-Accounts"
 msgstr "Multiple accounts"
 
@@ -2306,6 +2377,7 @@ msgid "Du kannst den Namen Deines Klubs nur alle 30 Tage ändern."
 msgstr "You can change your club's name every 30 days only."
 
 #: ../../../neueAccounts.php:2 ../../../neueAccounts.php:10
+#: ../../../zz2.php:259
 msgid "Neue Accounts"
 msgstr "New accounts"
 
@@ -2333,7 +2405,7 @@ msgstr "This manager has been contacted already"
 msgid "Dieser Manager wurde bisher noch nicht angeschrieben"
 msgstr "This manager has not been contacted yet"
 
-#: ../../../notizen.php:2 ../../../notizen.php:49
+#: ../../../notizen.php:2 ../../../notizen.php:49 ../../../zz2.php:151
 msgid "Notizen"
 msgstr "Notes"
 
@@ -2349,6 +2421,10 @@ msgstr "You will always see the latest 25 notes only."
 #: ../../../notizen.php:53
 msgid "Neue Notiz erstellen"
 msgstr "Add new note"
+
+#: ../../../notizen.php:55
+msgid "Speichern"
+msgstr "Save"
 
 #: ../../../passwort_vergessen.php:3 ../../../passwort_vergessen.php:106
 msgid "Passwort vergessen"
@@ -2474,7 +2550,26 @@ msgstr "Subject"
 msgid "Empfänger"
 msgstr "Recipient"
 
-#: ../../../regeln.php:2 ../../../zz3.php:8
+#: ../../../protokoll.php:2 ../../../protokoll.php:20
+#: ../../../protokoll.php:101 ../../../zz2.php:150
+msgid "Protokoll"
+msgstr "Records"
+
+#: ../../../protokoll.php:48
+msgid "Filtern"
+msgstr "Filter"
+
+#: ../../../protokoll.php:56
+msgid "Ereignis"
+msgstr "Event"
+
+#: ../../../protokoll.php:79
+msgid ""
+"Die Ereignisse sind nach Datum geordnet, d.h. die neueste Meldung steht ganz "
+"oben."
+msgstr ""
+
+#: ../../../regeln.php:2 ../../../zz2.php:214 ../../../zz3.php:8
 msgid "Regeln"
 msgstr "Rules"
 
@@ -2690,7 +2785,7 @@ msgstr ""
 
 #: ../../../regeln.php:68
 msgid "Teil IV: Aufgaben und Funktion des Ballmanager-Teams"
-msgstr "Part IV: Tasks and duties of the Staff"
+msgstr "Part IV: Tasks and duties of the support staff"
 
 #: ../../../regeln.php:70
 msgid ""
@@ -3118,7 +3213,7 @@ msgstr "Transfer fee"
 
 #: ../../../spieler_historie.php:91
 msgid "Letzte Gebote [Sichtbar fürs Team]"
-msgstr "Latest bids [Visible for Staff]"
+msgstr "Latest bids [Visible for support staff]"
 
 #: ../../../spieler_historie.php:96
 msgid "Bieter-IP"
@@ -3192,7 +3287,7 @@ msgstr ""
 "in the final?"
 
 #: ../../../stat_cupsieger.php:45 ../../../stat_meister.php:41
-#: ../../../stat_pokalsieger.php:19
+#: ../../../stat_pokalsieger.php:19 ../../../zz2.php:184
 msgid "Saison"
 msgstr "Season"
 
@@ -3531,7 +3626,7 @@ msgid ""
 "angezeigt werden."
 msgstr ""
 
-#: ../../../taktik.php:2
+#: ../../../taktik.php:2 ../../../zz2.php:177
 msgid "Taktik"
 msgstr "Tactics"
 
@@ -3696,7 +3791,7 @@ msgid ""
 msgstr ""
 
 #: ../../../tipps_des_tages.php:2 ../../../tipps_des_tages.php:13
-#: ../../../tipps_des_tages.php:36
+#: ../../../tipps_des_tages.php:39
 msgid "Tipps des Tages"
 msgstr "Hints of the Day"
 
@@ -3713,6 +3808,10 @@ msgid ""
 "Hier findest Du alle <i>Tipps des Tages</i> - gesammelt auf einer Seite."
 msgstr ""
 "Here you find all <i>Hints of the Day</i> - collected on a single page."
+
+#: ../../../top_manager.php:2 ../../../top_manager.php:19
+msgid "Rangliste"
+msgstr "Ranking"
 
 #: ../../../top_manager.php:32
 msgid "Meine Position"
@@ -3751,6 +3850,7 @@ msgid "Du bietest im Moment keinen Spieler zum Verkauf an."
 msgstr "Right now, you don't offer any player for sale."
 
 #: ../../../ver_buchungen.php:2 ../../../ver_buchungen.php:4
+#: ../../../zz2.php:196
 msgid "Buchungen"
 msgstr "Transactions"
 
@@ -3769,7 +3869,7 @@ msgstr "Transaction date"
 msgid "Verwendungszweck"
 msgstr "Designated use"
 
-#: ../../../ver_lotto.php:2
+#: ../../../ver_lotto.php:2 ../../../zz2.php:199
 msgid "Lotto"
 msgstr "Lottery"
 
@@ -3865,7 +3965,7 @@ msgstr "Last prizes"
 msgid "Höchste Gewinne"
 msgstr "Highest prizes"
 
-#: ../../../vertraege.php:2 ../../../vertraege.php:4
+#: ../../../vertraege.php:2 ../../../vertraege.php:4 ../../../zz2.php:180
 msgid "Verträge"
 msgstr "Contracts"
 
@@ -3911,7 +4011,7 @@ msgstr ""
 "team is assigned to you. We will then inform you via email and you can start "
 "playing instantly."
 
-#: ../../../wio.php:2 ../../../wio.php:4
+#: ../../../wio.php:2 ../../../wio.php:4 ../../../zz2.php:246
 msgid "Wer ist online?"
 msgstr "Who is online?"
 
@@ -3926,6 +4026,169 @@ msgstr "Action"
 #: ../../../wio.php:37
 msgid "Support-Team"
 msgstr "Support staff"
+
+#: ../../../zz2.php:1
+msgid ""
+"Übernimm beim Online-Fußball-Manager Dein eigenes Team als Trainer und "
+"Manager! Lasse alle anderen Manager hinter Dir und hole Dir Pokalsieg und "
+"Meisterschaft!"
+msgstr ""
+
+#: ../../../zz2.php:4
+msgid "Diese Funktion ist mit dem Demo-Account leider nicht verfügbar!"
+msgstr ""
+
+#: ../../../zz2.php:62
+msgid "Startseite"
+msgstr "Homepage"
+
+#: ../../../zz2.php:65
+msgid "Desktop"
+msgstr "Desktop"
+
+#: ../../../zz2.php:68
+msgid "Mobil"
+msgstr "Mobile"
+
+#: ../../../zz2.php:147
+msgid "Büro"
+msgstr "Office"
+
+#: ../../../zz2.php:149
+msgid "Zentrale"
+msgstr "Base"
+
+#: ../../../zz2.php:153 ../../../zz2.php:218
+msgid "Logout"
+msgstr "Sign out"
+
+#: ../../../zz2.php:156 ../../../zz2.php:159
+msgid "Ranking"
+msgstr "Ranking"
+
+#: ../../../zz2.php:160
+msgid "Statistiken"
+msgstr "Statistics"
+
+#: ../../../zz2.php:161
+msgid "Manager-Wahl"
+msgstr "Manager of the Year"
+
+#: ../../../zz2.php:165
+msgid "Transfers"
+msgstr "Transfers"
+
+#: ../../../zz2.php:167
+msgid "Kaufen"
+msgstr "Buy"
+
+#: ../../../zz2.php:168
+msgid "Leihen"
+msgstr "Loan"
+
+#: ../../../zz2.php:170
+msgid "Abgeschlossen"
+msgstr "Closed"
+
+#: ../../../zz2.php:187
+msgid "Int. Pokal"
+msgstr "International Cup"
+
+#: ../../../zz2.php:188
+msgid "Nat. Cup"
+msgstr "National Cup"
+
+#: ../../../zz2.php:190
+msgid "Testwünsche"
+msgstr "Friendly offers"
+
+#: ../../../zz2.php:193
+msgid "Verein"
+msgstr "Club"
+
+#: ../../../zz2.php:195
+msgid "Finanzen"
+msgstr "Finance"
+
+#: ../../../zz2.php:197
+msgid "Personal"
+msgstr "Personnel"
+
+#: ../../../zz2.php:198
+msgid "Stadion"
+msgstr "Stadium"
+
+#: ../../../zz2.php:204
+msgid "Leihgaben"
+msgstr "Loans"
+
+#: ../../../zz2.php:206
+msgid "Ligatausch"
+msgstr "League swap"
+
+#: ../../../zz2.php:209 ../../../zz2.php:211
+msgid "Support"
+msgstr "Support"
+
+#: ../../../zz2.php:212
+msgid "Post ans Team"
+msgstr "Contact the staff"
+
+#: ../../../zz2.php:213
+msgid "Kurztipps"
+msgstr "Short hints"
+
+#: ../../../zz2.php:215
+msgid "Archiv"
+msgstr "Archive"
+
+#: ../../../zz2.php:226
+msgid "Login"
+msgstr "Sign in"
+
+#: ../../../zz2.php:230
+msgid "E-Mail / Username:"
+msgstr "Email / username:"
+
+#: ../../../zz2.php:231 ../../../zz2.php:241
+msgid "Passwort:"
+msgstr "Password:"
+
+#: ../../../zz2.php:236
+msgid "Passwort vergessen?"
+msgstr "Forgot password?"
+
+#: ../../../zz2.php:239
+msgid "Demo-Account"
+msgstr "Demo account"
+
+#: ../../../zz2.php:241
+msgid "Username:"
+msgstr "Username:"
+
+#: ../../../zz2.php:250
+msgid "Mein Profil"
+msgstr "My profile"
+
+#: ../../../zz2.php:254
+msgid "Support-Menü"
+msgstr "Support staff menu"
+
+#: ../../../zz2.php:261
+msgid "Kontrollzentrum"
+msgstr "Control center"
+
+#: ../../../zz2.php:266
+msgid "Tipp des Tages"
+msgstr "Hint of the Day"
+
+#: ../../../zz2.php:266
+msgid "Alle"
+msgstr "Show all"
+
+#: ../../../zz2.php:279
+msgid "Nächste Spiele"
+msgstr "Next matches"
 
 #: ../../../zz3.php:7
 msgid "Sprache:"
@@ -3971,6 +4234,650 @@ msgstr "Most expensive transfers"
 #: ../../../zzsubnav_statistik.php:24
 msgid "Torjägerliste"
 msgstr "Top scorers"
+
+#: ../../../tipps_des_tages.php.txt:2
+msgid ""
+"Leihe Dir Spieler von anderen Klubs aus: Leihgaben sind günstige "
+"Verstärkungen für Dein Team."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:3
+msgid ""
+"Gerade schwächere Teams können mit erhöhter Aggressivität technische "
+"Schwächen ausgleichen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:4
+msgid ""
+"Testspiele sind günstige Möglichkeiten, zusätzliche Erfahrung zu sammeln. "
+"Frage einfach bei anderen Managern an, indem Du in ihrem Profil einen Tag "
+"auswählst und eine Anfrage machst."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:5
+msgid "Wenn Du oft mit hohem Druck spielst, werden Deine Spieler schnell müde."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:6
+msgid ""
+"Im Kalender kannst Du sehen, wann wichtige Spiele anstehen. Schone Deine "
+"Stars gegebenenfalls vorher."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:7
+msgid "Nutze Deinen Heimvorteil im eigenen Stadion - besonders im Pokal!"
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:8
+msgid ""
+"Fitness-Trainer und der Physiotherapeut sind sehr teuer. Beide sind auch nur "
+"für sehr reiche Vereine gedacht, Du kannst also auch sehr gut ohne diese "
+"Assistenten erfolgreich sein."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:9
+msgid ""
+"Verleihe Spieler, die bei Dir keine Einsätze bekommen. Bei anderen Klubs "
+"können sie Erfahrung sammeln und dadurch stärker werden."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:10
+msgid ""
+"Denke beim Kauf von alten Spielern daran, dass sie vielleicht bald ihre "
+"Karriere beenden."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:11
+msgid ""
+"In der Rangliste (unter <i>Statistiken</i>) findest Du eine Liste mit allen "
+"Usern im Spiel."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:12
+msgid ""
+"Es gibt keine &quot;perfekte&quot; Taktik. Wähle die Taktik je nach Gegner "
+"und Stärken Deines Teams aus."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:13
+msgid ""
+"Schaue öfters mal alle Deine Verträge nach. Häufig kannst Du bei einigen "
+"Spielern Geld einsparen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:14
+msgid ""
+"Denke immer daran, die Verträge Deiner Spieler rechtzeitig zu verlängern. Du "
+"findest im Büro eine Liste mit Verträgen, die bald enden."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:15
+msgid ""
+"10-12 Uhr: Cupspiele<br />14-16 Uhr: Ligaspiele<br />18-20 Uhr: "
+"Pokalspiele<br />22-24 Uhr: Testspiele"
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:16
+msgid ""
+"Verletzungen haben keinen Einfluss auf den weiteren Spielverlauf, da "
+"automatisch ein Ersatzspieler eingewechselt wird."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:17
+msgid ""
+"Im Spielbericht findest Du Noten nach dem deutschen System (1-6). Sie "
+"bewerten die einzelnen Mannschaftsteile der Teams."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:18
+msgid ""
+"Spieler ab 31 Jahren werden mit der Zeit schwächer. Deshalb sind sie auf dem "
+"Transfermarkt günstiger."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:19
+msgid ""
+"Du kannst Deinen Sponsor zu Beginn jeder Saison wechseln. Der Vertrag läuft "
+"immer bis Saisonende. Wenn Du noch keinen Sponsor ausgewählt hast, bekommst "
+"Du als Prämie jeweils 500.000 €."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:20
+msgid ""
+"Wenn Du einen Spieler in der aktuellen Saison schon mehr als 6 Mal "
+"eingesetzt hast, dann kannst Du ihn nicht mehr verleihen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:21
+msgid ""
+"Zwischen 2 Teams darf es pro Saison höchstens 2 Transfers geben. Achte bei "
+"Deinen Käufen und Leihgaben darauf."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:22
+msgid ""
+"Bevor ein Spieler verkauft werden kann, muss er in Deinem Verein 6 Spiele "
+"absolviert haben. Dabei ist es egal, ob es sich um Liga-, Test-, Cup- oder "
+"Pokalspiele gehandelt hat."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:23
+msgid ""
+"Die meisten Spieler beenden im Alter von ca. 34 Jahren ihre Karriere. Denke "
+"bei Deiner Planung daran."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:24
+msgid ""
+"Der <i>Einsatz in Auktionen</i> zeigt dir, wie viel Du gerade in offenen "
+"Auktionen bietest."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:25
+msgid ""
+"Die Frische beschreibt, wie gut die körperliche Verfassung eines Spielers "
+"ist. Sie kann einen Wert zwischen 0 und 100 Prozent haben."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:26
+msgid ""
+"Je häufiger ein Spieler eingesetzt wird und je höher der Druck (Taktik) ist, "
+"desto mehr Frische verliert er."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:27
+msgid ""
+"Du erhältst alle 3 Tage Nachwuchsspieler aus Deiner Jugendabteilung. Die "
+"Qualität wird von Deinem Jugendtrainer beeinflusst."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:28
+msgid ""
+"Jedes Team muss immer mindestens 13 Spieler im Kader haben, die nicht auf "
+"dem Transfermarkt angeboten werden."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:29
+msgid ""
+"Bei jedem Foul im Spiel besteht das Risiko, dass der foulende Spieler eine "
+"Karte bekommt."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:30
+msgid ""
+"Nach einer Roten Karte verliert ein Team 10% seiner Stärke, nach einer "
+"Gelben 2%."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:31
+msgid ""
+"Beim <i>BM-Lotto</i> wird 4 aus 15 gespielt. Das heißt, man muss aus der "
+"Zahlenreihe von 1 bis 15 insgesamt 4 Zahlen tippen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:32
+msgid ""
+"Chancen beim <i>BM-Lotto</i>:<br />- 4 Richtige = 1:1365<br />- 3 Richtige = "
+"33:1365<br />- 2 Richtige = 330:1365"
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:33
+#, php-format
+msgid ""
+"Ein Lottoschein für einen Tag kostet 1 Mio. Euro, 75% davon gehen in den "
+"Jackpot."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:34
+msgid ""
+"Dein persönliches Maximalgebot bei Auktionen hängt davon ab, wie lange Du "
+"schon beim Ballmanager dabei bist."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:35
+msgid ""
+"Spieler wechseln erst nach Saisonende in die Torjägerliste der neuen Liga, "
+"nicht direkt nach dem Transfer."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:36
+msgid "Die TV-Gelder werden an den ersten Spieltagen jeder Saison verteilt."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:37
+msgid ""
+"Liga-Tabellen werden immer für 30 Minuten gespeichert, Änderungen sind also "
+"nicht sofort sichtbar."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:38
+msgid ""
+"Themen im Forum, die ein Daumen-Symbol haben, sind Top-Themen. Sie bleiben "
+"immer oben und sind praktisch &quot;festgepinnt&quot;."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:39
+msgid ""
+"In den <i>Pokal</i> kommen die Erst- und Zweitplatzierten jedes Landes. Dazu "
+"noch die Drittplatzierten der besten Ligen nach der 5-Jahres-Wertung."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:40
+msgid ""
+"Auch freie (vereinslose) Spieler werden auf dem Transfermarkt angeboten. Sie "
+"sind allerdings relativ teuer."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:41
+msgid ""
+"Wenn Du Schulden hast, kannst Du keine Spieler mehr auf dem Transfermarkt "
+"kaufen. Auch Dein Stadion kannst Du nicht mehr weiter ausbauen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:42
+msgid ""
+"Bei Leihgaben übernimmt der Ausleihende, also der vorübergehende Besitzer, "
+"das Gehalt eines Spielers."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:43
+msgid ""
+"Leih-Prämien können vom verleihenden Team angeboten werden. Das ausleihende "
+"Team bekommt sie für jeden Pflichtspiel-Einsatz des Spielers überwiesen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:44
+msgid ""
+"Der <i>Manager der Saison</i> ist eine Auszeichnung für den erfolgreichsten "
+"Manager der vergangenen Saison. Er wird durch eine Abstimmung von allen "
+"Managern gewählt."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:45
+msgid ""
+"Der Titel <i>Manager der Saison</i> bringt keine finanziellen Vorteile für "
+"den Sieger, Du kannst also auch einen Konkurrenten wählen, ohne Nachteile "
+"dadurch zu haben."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:46
+msgid ""
+"Das <i>4-4-2</i> ist das einzige Spielsystem beim Ballmanager. Trotzdem "
+"kannst Du viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-"
+"Einstellungen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:47
+msgid ""
+"Bei jeder Auktion gibt es ein Mindestgebot. Das verhindert, dass Du einen "
+"anderen Verein mit nur 1 Euro überbieten kannst."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:48
+msgid ""
+"Die Aufstellungsstärke bezieht sich auf die Aufstellung für Ligaspiele. Sie "
+"ist die Summe der Spielstärken in der Aufstellung."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:49
+msgid ""
+"Bei jedem Deiner Heimspiele kommen Fans in Dein Stadion und zahlen Eintritt. "
+"Es können natürlich nur so viele Zuschauer kommen, wie Deine Stadiongröße "
+"erlaubt."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:50
+msgid ""
+"Deine Zuschauerzahlen hängen unter anderem vom Fanbetreuer, Deinem "
+"Stadiongelände, dem Ticketpreis, Deinem Renommee und dem Gegner ab."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:51
+msgid ""
+"Spieler können sich bei Einsätzen verletzen. Das Risiko hängt dabei von "
+"ihrer Frische ab. Je niedriger die Frische eines Spielers ist, desto höher "
+"ist die Wahrscheinlichkeit, dass er sich verletzt."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:52
+msgid ""
+"Du kannst alle 30 Tage einen Kurzurlaub und alle 60 Tage einen langen Urlaub "
+"nehmen. In dieser Zeit übernimmt der Computer die Aufstellung für "
+"Pflichtspiele und schützt Dich vor der automatischen Löschung."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:53
+msgid "Für jeden Spieler, den Du kaufst, musst Du 5% Transfersteuer zahlen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:54
+msgid ""
+"Jeder Manager hat die Möglichkeit, Testspiele mit anderen Vereinen "
+"auszutragen. Allerdings muss dafür an den Verband eine Entschädigung gezahlt "
+"werden, damit das Spiel genehmigt wird."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:55
+msgid ""
+"Sponsoren zahlen für Testspiele keine Prämien, da die Werbewirkung für sie "
+"nicht gegeben ist."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:56
+msgid ""
+"Auf Anweisung des Vorstandes werden die Fans bei Testspielen ohne Tickets "
+"ins Stadion gelassen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:57
+msgid ""
+"Der Scout Deines Teams beobachtet Spieler und schätzt deren Talent ein. Er "
+"kann die Spieler sowohl überschätzen als auch unterschätzen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:58
+msgid ""
+"Je höher die Kompetenz Deines Scouts ist, also je mehr Geld du für ihn "
+"ausgibst, desto genauer werden seine Schätzungen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:59
+msgid ""
+"Wenn Du Schulden hast, musst Du keinen Kredit aufnehmen. Du musst auch keine "
+"Zinsen zahlen. Es passiert nichts Schlimmes, Du solltest nur versuchen, "
+"diese Schulden schnell wieder loszuwerden."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:60
+msgid ""
+"Mit Sanktionen kann das Team unfaires und unpassendes Verhalten bestrafen. "
+"Wer gegen die Regeln verstößt, kann verschiedene Strafen bekommen, unter "
+"anderem Transfersperren und Geldstrafen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:61
+msgid ""
+"Eine Saison beim Ballmanager dauert 22 Tage. Nach 11 Hinrunden- und 11 "
+"Rückrundenspielen endet eine Saison und die nächste beginnt. Dabei gibt es "
+"keinen Tag Pause zwischen den beiden Saisons."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:62
+msgid ""
+"Du kannst mit dem <i>Team-Tausch</i> Dein Team an einen anderen Manager "
+"übergeben. Du findest ihn unter <i>Einstellungen</i>."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:63
+msgid ""
+"Das Renommee eines Vereins ist der Maßstab für den Erfolg. Jedes Team hat "
+"eine Punktzahl, die angibt, wie angesehen der Klub zurzeit ist. Dabei "
+"spielen unter anderem Meistertitel, Cup- und Pokalsiege sowie die Qualität "
+"der Spieler eine Rolle."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:64
+msgid ""
+"Für den <i>Cup</i> qualifizieren sich die 16 renommiertesten Teams eines "
+"Landes (Freilos). Die restlichen 32 Teams müssen eine Quali-Runde spielen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:65
+msgid ""
+"Klicke im Büro unter <i>Jugendabteilung</i> auf die gesuchte Position, um "
+"die Besetzung Deines Kaders zu sehen und um die Position zu ändern."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:66
+msgid ""
+"Für unvollständige Aufstellungen in Liga-, Cup- und Pokalspielen musst Du "
+"Deinem Sponsor eine Entschädigung zahlen. Sie wird direkt von Deinen Prämien "
+"für das betroffene Spiel abgezogen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:67
+msgid ""
+"Am Anfang einer neuen Saison kann es beim Renommee zu leichten Sprüngen "
+"kommen. Denn die vorletzte Saison fällt zu diesem Zeitpunkt aus der "
+"Bewertung heraus."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:68
+msgid ""
+"Die <i>Kaderstärke</i> ist die durchschnittliche Stärke aller Spieler in "
+"Deinem Kader."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:69
+msgid ""
+"Bei den Buchungen wird unter &quot;Gehalt&quot; die Bezahlung der Spieler "
+"und Assistenten zusammengefasst."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:70
+msgid "Der Kontostand hat keine Auswirkungen auf das Renommee Deines Klubs."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:71
+msgid ""
+"Durch ein hohes Renommee kannst Du eines von 16 Freilosen für die erste "
+"Cuprunde bekommen."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:72
+msgid ""
+"Du möchtest in einem anderen Land spielen? Dann nutze den Ligatausch "
+"(Spieltag 1-5)! Klicke dazu im Menü einfach unter <i>Anfragen</i> auf "
+"<i>Ligatausch</i>."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:73
+msgid ""
+"Wenn Du einen Spieler verliehen hast und der Manager des anderen Teams "
+"aufhört, kommt dein Spieler sofort zurück."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:74
+msgid ""
+"Im Pokal gibt es 1 Mio. Euro zusätzliche Antrittsprämie vom Sponsor, im Cup "
+"500.000 Euro."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:75
+msgid "Zu Beginn jeder Saison haben alle Spieler wieder 100% Frische."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:76
+msgid ""
+"Unter <i>Anfragen</i> &raquo; <i>Testspiele</i> kannst Du einstellen, ob Du "
+"Anfragen für Testspiele erhalten möchtest oder nicht."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:77
+msgid ""
+"Auf der Seite <i>Community</i> &raquo; <i>Freunde</i> verwaltest Du sowohl "
+"Deine Freundesliste als auch deine Ignorier-Liste."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:78
+msgid ""
+"Bei Punktgleichheit in der Liga zählt die bessere Tordifferenz, danach die "
+"geschossenen Tore. Ansonsten entscheidet das Los."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:79
+msgid ""
+"Jugendspieler haben am Anfang immer schon 50 bis 90 Prozent ihrer möglichen "
+"Maximalstärke erreicht."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:80
+msgid ""
+"Der Jugendtrainer beeinflusst den Trainingseifer Deiner Jugendspieler und "
+"die maximale Stärke, die sie jemals erreichen können."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:81
+msgid ""
+"Mit einem Jugendtrainer der Stufe 1 können Deine Nachwuchsspieler höchstens "
+"eine Maximalstärke von 5,9 erreichen. Mit besseren Jugendtrainern sind auch "
+"höhere Maximalstärken möglich."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:82
+msgid ""
+"Zwischen den 4 Spielphasen bleibt Zeit, um die Aufstellung und Taktik zu "
+"ändern. Die Spiele werden immer automatisch simuliert, Du musst sie also "
+"nicht erst selber starten."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:83
+msgid ""
+"Für den Spielausgang spielen die Stärken der einzelnen Spieler eine Rolle, "
+"deren Frischewerte, die Zusammensetzung der Mannschaftsteile und natürlich "
+"Deine Taktik."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:84
+msgid ""
+"Es spielt keine Rolle, ob Du einen Spieler auf der linken oder auf der "
+"rechten Seite aufstellst. Die Spieler sind alle beidfüßig stark. "
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:85
+msgid ""
+"Wenn Du irgendwo im Spiel auf das Ergebnis einer Partie klickst, gelangst Du "
+"zum ausführlichen Spielbericht mit Kommentaren und Statistiken."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:86
+msgid ""
+"Unter <i>Finanzen</i> steht in Deiner Prognose, dass Du negative "
+"Sponsorengelder bekommst? Dann liegt das wahrscheinlich an den Strafen für "
+"unvollständige Aufstellungen. Hochgerechnet für die ganze Saison ergibt das "
+"ein Minus."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:87
+msgid ""
+"Je angesehener Dein Klub ist, desto mehr Geld wirst Du von den Sponsoren "
+"bekommen. Achte also auf Dein Renommee."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:88
+msgid ""
+"Die RKPs sind Ranking-Punkte, die Deinen sportlichen Erfolg bewerten. In "
+"jedem Spiel gewinnst oder verlierst Du RKPs. Dabei kommt es auf das Ergebnis "
+"und die Stärke des Gegners an."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:89
+msgid ""
+"Die einzelnen Wettbewerbe werden für die RKP-Wertung unterschiedlich "
+"gewichtet: Pokal=180%, Cup=120%, Liga=100%. Testspiele haben keinen Einfluss "
+"auf die Wertung."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:90
+msgid ""
+"Zu den Pflichtspielen gehören Liga-, Cup- und Pokalspiele. Testspiele sind "
+"keine Pflichtspiele!"
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:91
+msgid ""
+"Du möchtest Deine Meinung in das Spiel einbringen und aktiv mitentscheiden? "
+"Dann stelle uns doch einfach Deine Ideen im <a href=\"/support.php"
+"\">Supportbereich</a> vor!"
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:92
+msgid ""
+"Bei Transfers, an denen Du selbst nicht beteiligt bist (Spieler-Wechsel "
+"unter fremden Teams), sind Ablösesummen immer geschätzt."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:93
+msgid "Die Ziehung der Lottozahlen findet täglich kurz nach 00:00 Uhr statt."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:94
+msgid ""
+"Deine Spieler erholen sich während den Spielen gut. Deshalb bekommen sie "
+"jeden Tag wieder 1% Frische (Prozentpunkt) dazu."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:95
+msgid ""
+"Je stärker Deine Aufstellung ist, desto stärker werden auch Amateurspieler "
+"sein, die automatisch eingesetzt werden, wenn Du eine unvollständige "
+"Aufstellung hast."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:96
+msgid ""
+"Du warst bei einer Auktion für einige Zeit der Höchstbietende, aber am Ende "
+"ging der Spieler an ein anderes Team - anscheinend für weniger Geld? "
+"<i>siehe Tipp #091</i>"
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:97
+msgid ""
+"Wenn ein Spieler in einer Saison schon ein Pokalspiel gemacht hat, kann er "
+"(nach einem Transfer) für andere Klubs keine Pokalspiele mehr bestreiten."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:98
+msgid ""
+"Wenn man 9 Tage nicht online war, wird man von seinem Verein entlassen. "
+"Diese Frist wird pro Monat, den man schon dabei ist, um einen Tag verlängert."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:99
+msgid ""
+"Achte auf die Moral Deiner Spieler! Wenn ein Profi unzufrieden wird, möchte "
+"er vielleicht seinen Vertrag nicht verlängern."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:100
+msgid ""
+"Denke bei Transfers oder Vertragsverlängerungen daran, dass die Moral des "
+"Spielers dadurch beeinflusst wird. Er möchte schließlich bei Dir im Team "
+"spielen und braucht Sicherheit."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:101
+msgid ""
+"Täglich verlieren Deine Spieler 1% Moral. Aber für jeden Pflichtspiel-"
+"Einsatz bekommen sie auch wieder 1,8% dazu, für jedes Testspiel 1,0%."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:102
+msgid ""
+"Spieler, die Du von einem Verein außerhalb Europas kaufst, haben immer 100% "
+"Moral."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:103
+msgid ""
+"Beim Anbieten eines Spielers zur Leihgabe verliert er sofort 10% Moral. Aber "
+"wenn er dann verliehen wird und ein neues Team bekommt, gewinnt er wieder 5% "
+"Moral."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:104
+#, php-format
+msgid ""
+"Bei Vertragsverlängerungen kann die Moral eines Spielers um bis zu "
+"10% steigen - je nach Gehalt und Laufzeit des Vertrages."
+msgstr ""
+
+#: ../../../tipps_des_tages.php.txt:105
+msgid ""
+"In Derbys, also wenn beide Teams aus derselben Stadt kommen, spielen die "
+"Teams immer besonders offensiv und mit viel Aggressivität. Deshalb kommen "
+"natürlich auch mehr Zuschauer!"
+msgstr ""
 
 #~ msgid "Neuigkeiten"
 #~ msgstr "News"

@@ -1,8 +1,7 @@
-<meta name="description" content="Übernimm beim Online-Fußball-Manager Dein eigenes Team als Trainer und Manager! Lasse alle anderen Manager hinter Dir und hole Dir Pokalsieg und Meisterschaft!" />
-<meta name="keywords" content="fußball,fussball,manager,online-fußball-manager,online,browser,spiel,game,browserspiel,browsergame" />
+<meta name="description" content="<?php echo _('Übernimm beim Online-Fußball-Manager Dein eigenes Team als Trainer und Manager! Lasse alle anderen Manager hinter Dir und hole Dir Pokalsieg und Meisterschaft!'); ?>" />
 <script type="text/javascript">
 function noDemoPopup() {
-	alert('<?php echo _('Diese Funktion ist mit dem Demo-Account leider nicht verfügbar!');?>);
+	alert('<?php echo _('Diese Funktion ist mit dem Demo-Account leider nicht verfügbar!'); ?>');
 	return false;
 }
 </script>
@@ -66,9 +65,9 @@ if (isMobile()) {
 	echo '<li><a href="http://www.ballmanager.de/">'._('Desktop').'</a></li>';
 }
 else {
-	echo '<li><a href="http://m.ballmanager.de/">'_('Mobil')'</a></li>';
+	echo '<li><a href="http://m.ballmanager.de/">'._('Mobil').'</a></li>';
 }
-echo '<li><a href="/android_app.php">'_('Android™-App')'</a></li>';
+echo '<li><a href="/android_app.php">'._('Android™-App').'</a></li>';
 ?>
 <li<?php if ($_SERVER['SCRIPT_NAME'] == '/tour.php') { echo ' id="current"'; } ?>><a href="#" onclick="document.getElementById('lusername').value = 'Demo'; document.getElementById('lpassword').value = 'demo'; document.getElementById('login_form').submit(); return false;">Demo-Account</a></li>
 <?php } else { ?>
@@ -150,8 +149,8 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 		<li><a href="/"><?php echo _('Zentrale'); ?></a></li>
 		<?php if ($cookie_team != '__'.$cookie_id) { ?><li><a href="/protokoll.php"><?php echo _('Protokoll'); ?></a></li><?php } ?>
 		<li><a href="/notizen.php"><?php echo _('Notizen'); ?></a></li>
-		<?php if (isMobile()) { ?><li><a href="/logout.php"><?php echo _('Logout'); ?></a></li><?php } ?>
 		<li><a href="/einstellungen.php"><?php echo _('Einstellungen'); ?></a></li>
+        <?php if (isMobile()) { ?><li><a href="/logout.php"><?php echo _('Logout'); ?></a></li><?php } ?>
 	</ul>
 </li>
 <?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 1, 5) == 'stat_' OR $_SERVER['SCRIPT_NAME'] == '/top_manager.php' OR $_SERVER['SCRIPT_NAME'] == '/manager_der_saison.php') { echo ' id="current"'; } ?>><a href="/top_manager.php"><?php echo _('Ranking'); ?></a>

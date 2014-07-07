@@ -76,7 +76,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </tbody>
 </table>
 </p>
-<p><strong><?php echo _('Hinweis:').'</strong> '_('Die Ereignisse sind nach Datum geordnet, d.h. die neueste Meldung steht ganz oben.'); ?></p>
+<p><strong><?php echo _('Hinweis:').'</strong> '._('Die Ereignisse sind nach Datum geordnet, d.h. die neueste Meldung steht ganz oben.'); ?></p>
 <?php
 echo '<div class="pagebar">';
 $wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS

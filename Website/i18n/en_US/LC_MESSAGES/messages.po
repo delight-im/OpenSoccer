@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-07-07 20:03+0100\n"
-"PO-Revision-Date: 2014-07-07 20:23+0100\n"
+"POT-Creation-Date: 2014-07-08 08:00+0100\n"
+"PO-Revision-Date: 2014-07-08 08:55+0100\n"
 "Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -528,7 +528,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:240
 msgid "Schwach geschossen."
-msgstr ""
+msgstr "Weakly shot."
 
 #: ../../../aa_spieltag_simulation.php:241
 msgid "Sensationelle Parade!"
@@ -548,7 +548,7 @@ msgstr "Over the goal!"
 
 #: ../../../aa_spieltag_simulation.php:247
 msgid "XYZ schießt drüber!"
-msgstr ""
+msgstr "XYZ shoots over!"
 
 #: ../../../aa_spieltag_simulation.php:248
 msgid "In die Wolken!"
@@ -568,7 +568,7 @@ msgstr "XYZ only hits the post."
 
 #: ../../../aa_spieltag_simulation.php:252
 msgid "Schwacher Schuss vom Mittelfeldspieler!"
-msgstr ""
+msgstr "Weak shot by the midfielder!"
 
 #: ../../../aa_spieltag_simulation.php:253
 msgid "Der Stürmer setzt den Elfmeter an die Latte!"
@@ -608,15 +608,15 @@ msgstr "Direct free kick!"
 
 #: ../../../aa_spieltag_simulation.php:267
 msgid "Freistoß an der Strafraumgrenze."
-msgstr ""
+msgstr "Free kick from the penalty line."
 
 #: ../../../aa_spieltag_simulation.php:268
 msgid "Der Schiedsrichter entscheidet auf Freistoß, direkt."
-msgstr ""
+msgstr "The referee awards a free kick, direct."
 
 #: ../../../aa_spieltag_simulation.php:269
 msgid "Direkter Freistoß vor dem Strafraum. 6 Mann in der Mauer."
-msgstr ""
+msgstr "Direct free kick in front of the penalty box. 6 men in the wall."
 
 #: ../../../aa_spieltag_simulation.php:273
 msgid "Per Kopfball geklärt."
@@ -661,7 +661,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:283
 msgid "Ballverlust im Mittelfeld."
-msgstr ""
+msgstr "Turnover in the midfield."
 
 #: ../../../aa_spieltag_simulation.php:284
 msgid "XYZ macht Druck und holt sich den Ball wieder."
@@ -669,11 +669,11 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:285
 msgid "Perfektes Pressing, Ballverlust."
-msgstr ""
+msgstr "Perfect forward pressing, turnover."
 
 #: ../../../aa_spieltag_simulation.php:286
 msgid "XYZ steht zu gut."
-msgstr ""
+msgstr "XYZ keeps it too tight."
 
 #: ../../../aa_spieltag_simulation.php:287
 msgid "Keine Anspielstation."
@@ -741,11 +741,11 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:308
 msgid "Der Ball wird abgefälscht ..."
-msgstr ""
+msgstr "The ball is deflected ..."
 
 #: ../../../aa_spieltag_simulation.php:310
 msgid "Der Ball wird verlängert."
-msgstr ""
+msgstr "The ball is flicked on."
 
 #: ../../../aa_spieltag_simulation.php:311
 msgid "Zur Seite gelegt und Schuss!"
@@ -761,7 +761,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:316
 msgid "Abgefälschter Schuss."
-msgstr ""
+msgstr "Deflect shot."
 
 #: ../../../aa_spieltag_simulation.php:317
 msgid "Der Ball streift die Mauer."
@@ -894,23 +894,23 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:360
 msgid "XYZ netzt mit Glück ein. Der Torwart war dran."
-msgstr ""
+msgstr "XYZ nets with a bit of luck. The keeper was almost there."
 
 #: ../../../aa_spieltag_simulation.php:361
 msgid "XYZ trifft."
-msgstr ""
+msgstr "XYZ hits."
 
 #: ../../../aa_spieltag_simulation.php:362
 msgid "Tor des Tages!"
-msgstr ""
+msgstr "Goal of the day!"
 
 #: ../../../aa_spieltag_simulation.php:363
 msgid "Direkt unter die Querlatte. Tor!"
-msgstr ""
+msgstr "Right into the roof of the net. Goal!"
 
 #: ../../../aa_spieltag_simulation.php:364
 msgid "XYZ netzt ein."
-msgstr ""
+msgstr "XYZ nets."
 
 #: ../../../aa_spieltag_simulation.php:365
 msgid "Tor!"
@@ -926,23 +926,23 @@ msgstr "Gooolaso!"
 
 #: ../../../aa_spieltag_simulation.php:368
 msgid "Der Ball kullert irgendwie ins Tor!"
-msgstr ""
+msgstr "The ball somehow wobbles into the net!"
 
 #: ../../../aa_spieltag_simulation.php:369
 msgid "Der Ball geht ins Tor!"
-msgstr ""
+msgstr "The ball goes into the net!"
 
 #: ../../../aa_spieltag_simulation.php:370
 msgid "Abstauber ins Tor!"
-msgstr ""
+msgstr "Tap-in into the goal!"
 
 #: ../../../aa_spieltag_simulation.php:371
 msgid "Nachschuss und ... Tor!"
-msgstr ""
+msgstr "Follow-up shot and ... Goal!"
 
 #: ../../../aa_spieltag_simulation.php:372
 msgid "Keine Chance für den Keeper!"
-msgstr ""
+msgstr "The keeper doesn't stand a chance!"
 
 #: ../../../aa_spieltag_simulation.php:373
 msgid "Treffer!"
@@ -959,15 +959,15 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:376
 msgid "Was für ein Treffer!"
-msgstr ""
+msgstr "What a strike!"
 
 #: ../../../aa_spieltag_simulation.php:377
 msgid "Sensationelles Tor!"
-msgstr ""
+msgstr "Spectacular goal!"
 
 #: ../../../aa_spieltag_simulation.php:378
 msgid "Unglaublich! Toooor!"
-msgstr ""
+msgstr "Unbelievable! Goooaaal!"
 
 #: ../../../aa_spieltag_simulation.php:379
 msgid "Tor für XYZ!"
@@ -975,15 +975,15 @@ msgstr "Goal for XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:382
 msgid "Der Schuss wird vom Verteidiger abgeblockt."
-msgstr ""
+msgstr "The shot is blocked by the defender."
 
 #: ../../../aa_spieltag_simulation.php:383
 msgid "Der Abwehrspieler kann noch an den Pfosten abfälschen."
-msgstr ""
+msgstr "The defender barely manages to deflect against the post."
 
 #: ../../../aa_spieltag_simulation.php:384
 msgid "Der Stürmer verzieht leicht nach links."
-msgstr ""
+msgstr "The forward slightly fires wide to the left."
 
 #: ../../../aa_spieltag_simulation.php:385
 msgid "Das war knapp, der Schuss geht über die Latte."
@@ -995,11 +995,11 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:389
 msgid "Der Ball knallt an den Pfosten. Ein Raunen geht durch das Stadion."
-msgstr ""
+msgstr "The ball strikes the post. A murmur goes through the crowd."
 
 #: ../../../aa_spieltag_simulation.php:391
 msgid "Der Ball knallt ans Lattenkreuz."
-msgstr ""
+msgstr "The ball crashes into the corner of the goalpost!"
 
 #: ../../../aa_spieltag_simulation.php:392
 msgid "Der Stürmer kommt angerauscht und schlägt ein wunderbares Luftloch."
@@ -1019,11 +1019,11 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:398
 msgid "Der Keeper wehrt den Ball mit den Fäusten ab."
-msgstr ""
+msgstr "The keeper beats the ball off with his fists."
 
 #: ../../../aa_spieltag_simulation.php:399
 msgid "Der Torwart wehrt den Ball ab."
-msgstr ""
+msgstr "The keeper averts the ball."
 
 #: ../../../aa_spieltag_simulation.php:400
 msgid "Der Schlussmann kann den Ball mit einer herrlichen Parade retten."
@@ -1088,31 +1088,31 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:417
 msgid "Abseits! Die Spieler können es kaum glauben."
-msgstr ""
+msgstr "Offside! The players cannot really believe it."
 
 #: ../../../aa_spieltag_simulation.php:418
 msgid "Der Spieler steht im Abseits."
-msgstr ""
+msgstr "The player is in an offside position."
 
 #: ../../../aa_spieltag_simulation.php:421
 msgid "XYZ kontert."
-msgstr ""
+msgstr "XYZ counterattacks."
 
 #: ../../../aa_spieltag_simulation.php:422
 msgid "Schneller Gegenangriff von XYZ."
-msgstr ""
+msgstr "Fast counterattack by XYZ."
 
 #: ../../../aa_spieltag_simulation.php:423
 msgid "Sofort der Konter von XYZ."
-msgstr ""
+msgstr "Immediate break by XYZ."
 
 #: ../../../aa_spieltag_simulation.php:424
 msgid "Konterchance für XYZ."
-msgstr ""
+msgstr "Chance on the break for XYZ."
 
 #: ../../../aa_spieltag_simulation.php:425
 msgid "Kontermöglichkeit für XYZ."
-msgstr ""
+msgstr "Chance on the counterattack for XYZ."
 
 #: ../../../aa_spieltag_simulation.php:426
 msgid "XYZ hat sofort wieder die Kugel und geht in die Offensive."
@@ -1140,15 +1140,15 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:434
 msgid "Ball im Aus. Einwurf."
-msgstr ""
+msgstr "The ball is out. Throw-in."
 
 #: ../../../aa_spieltag_simulation.php:435
 msgid "Der Ball geht ins Aus."
-msgstr ""
+msgstr "The ball goes out."
 
 #: ../../../aa_spieltag_simulation.php:436
 msgid "Die Kugel rollt ins Aus. Einwurf."
-msgstr ""
+msgstr "The ball rolls out. Throw-in."
 
 #: ../../../aa_spieltag_simulation.php:437
 msgid "Einwurf tief in der gegnerischen Hälfte."
@@ -1156,11 +1156,11 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:440
 msgid "Der Gegner hat den Ball."
-msgstr ""
+msgstr "The opponent gets the ball."
 
 #: ../../../aa_spieltag_simulation.php:441
 msgid "Ballbesitz für den Gegner."
-msgstr ""
+msgstr "Ball possession for the opponent."
 
 #: ../../../aa_spieltag_simulation.php:782
 msgid "Ticketpreis:"
@@ -1186,7 +1186,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:1070
 msgid "Der Schiedsrichter pfeift das Spiel ab."
-msgstr ""
+msgstr "The referee blows the final whistle."
 
 #: ../../../android_app.php:2 ../../../android_app.php:19 ../../../zz2.php:70
 msgid "Android™-App"
@@ -1546,6 +1546,7 @@ msgstr ""
 "shown throughout the game. You can be recognized from this name."
 
 #: ../../../chat.php:2 ../../../wio.php:6 ../../../wio.php:38
+#: ../../../zz2.php:249
 msgid "Chat"
 msgstr "Chat"
 
@@ -1791,11 +1792,11 @@ msgstr "New"
 msgid "Höhepunkt"
 msgstr "Peak"
 
-#: ../../../freunde.php:2 ../../../freunde.php:67
+#: ../../../freunde.php:2 ../../../freunde.php:67 ../../../zz2.php:248
 msgid "Freunde"
 msgstr "Friends"
 
-#: ../../../freunde.php:9
+#: ../../../freunde.php:9 ../../../zz2.php:248
 msgid "Anfragen"
 msgstr "Requests"
 
@@ -2538,7 +2539,7 @@ msgstr ""
 msgid "Postausgang"
 msgstr "Outbox"
 
-#: ../../../postausgang.php:30
+#: ../../../postausgang.php:30 ../../../zz2.php:247
 msgid "Posteingang"
 msgstr "Inbox"
 
@@ -2765,7 +2766,7 @@ msgstr "Part III: Forbidden usernames"
 
 #: ../../../regeln.php:62
 msgid "obszöne Usernamen"
-msgstr ""
+msgstr "obscene usernames"
 
 #: ../../../regeln.php:63
 msgid "Usernamen, die beleidigend gegenüber Personen oder Gruppen sind"
@@ -2773,7 +2774,7 @@ msgstr ""
 
 #: ../../../regeln.php:64
 msgid "rassistische Usernamen"
-msgstr ""
+msgstr "racist usernames"
 
 #: ../../../regeln.php:65
 msgid "Usernamen, die Internetadressen enthalten"
@@ -3083,7 +3084,7 @@ msgstr "Additional information:"
 
 #: ../../../registrieren.php:4 ../../../registrieren.php:6
 msgid "Registrierung - Daten prüfen"
-msgstr ""
+msgstr "Sign up - Verify information"
 
 #: ../../../registrieren.php:73
 msgid ""
@@ -4033,10 +4034,17 @@ msgid ""
 "Manager! Lasse alle anderen Manager hinter Dir und hole Dir Pokalsieg und "
 "Meisterschaft!"
 msgstr ""
+"Take over your own team as a coach and executive in this online soccer "
+"manager! Leave all the other managers in the dust and win the cup and league "
+"trophies!"
 
 #: ../../../zz2.php:4
 msgid "Diese Funktion ist mit dem Demo-Account leider nicht verfügbar!"
-msgstr ""
+msgstr "This feature is not available with the demo account, unfortunately!"
+
+#: ../../../zz2.php:25
+msgid "Top-Manager"
+msgstr "Top managers"
 
 #: ../../../zz2.php:62
 msgid "Startseite"
@@ -4165,6 +4173,14 @@ msgstr "Demo account"
 #: ../../../zz2.php:241
 msgid "Username:"
 msgstr "Username:"
+
+#: ../../../zz2.php:247
+msgid "ungelesen"
+msgstr "unread"
+
+#: ../../../zz2.php:249
+msgid "online"
+msgstr "online"
 
 #: ../../../zz2.php:250
 msgid "Mein Profil"

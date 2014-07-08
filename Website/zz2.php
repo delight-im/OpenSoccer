@@ -22,7 +22,7 @@ function noDemoPopup() {
 <div id="header">
 <div class="logo_top" style="position:relative"><img src="/images/logo260x60.png" alt="Ballmanager - Online-Fußball-Manager" title="Ballmanager - Online-Fußball-Manager" width="260" style="border:0; width:260px; height:60px" />
 <?php
-$topWidget = '<h1>Top-Manager</h1>';
+$topWidget = '<h1>'._('Top-Manager').'</h1>';
 $topWidget .= '<div class="left-box navBlockLinks">';
 $topWidget1 = "SELECT a.ids, a.username, a.team, a.status, b.name, b.elo FROM ".$prefix."users AS a JOIN ".$prefix."teams AS b ON a.team = b.ids ORDER BY b.elo DESC LIMIT 0, 5";
 $topWidget2 = mysql_query($topWidget1);
@@ -244,9 +244,9 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 <?php } else { ?>
 <div id="top_box_nav">
 <a href="/wio.php" class="blue"><?php echo _('Wer ist online?'); ?></a>
-<a href="/posteingang.php" class="lightgrey">Posteingang (<?php echo (isset($_SESSION['last_pn_anzahl']) ? $_SESSION['last_pn_anzahl'] : 0); ?> ungelesen)</a>
-<a href="/freunde.php" class="red">Freunde (<?php echo (isset($_SESSION['last_freunde_anzahl']) ? $_SESSION['last_freunde_anzahl'] : 0); ?> Anfragen)</a>
-<a href="/chat.php" class="grey">Chat (<?php echo (isset($_SESSION['last_chatter_anzahl']) ? $_SESSION['last_chatter_anzahl'] : 0); ?> online)</a>
+<a href="/posteingang.php" class="lightgrey"><?php echo _('Posteingang'); ?> (<?php echo (isset($_SESSION['last_pn_anzahl']) ? $_SESSION['last_pn_anzahl'] : 0); ?> <?php echo _('ungelesen'); ?>)</a>
+<a href="/freunde.php" class="red"><?php echo _('Freunde'); ?> (<?php echo (isset($_SESSION['last_freunde_anzahl']) ? $_SESSION['last_freunde_anzahl'] : 0); ?> <?php echo _('Anfragen'); ?>)</a>
+<a href="/chat.php" class="grey"><?php echo _('Chat'); ?> (<?php echo (isset($_SESSION['last_chatter_anzahl']) ? $_SESSION['last_chatter_anzahl'] : 0); ?> <?php echo _('online'); ?>)</a>
 <a href="/manager.php?id=<?php echo $cookie_id; ?>" class="green"><?php echo _('Mein Profil'); ?></a>
 </div>
 <?php

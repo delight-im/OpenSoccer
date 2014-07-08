@@ -54,7 +54,7 @@ if (mysql_num_rows($get_urlaub5) > 0) {
 	$get_urlaub6 = mysql_fetch_assoc($get_urlaub5);
 	if ($get_urlaub6['ende'] > time()) {
         $aktueller_urlaub = '<p>Du hast zurzeit Urlaub, und zwar bis zum '.date('d.m.Y', $get_urlaub6['ende']).'.</p>';
-		$aktueller_urlaub .= '<form action="/einstellungen.php" method="post" accept-charset="utf-8"><input type="hidden" name="urlaub_abbrechen" value="1" /><input type="submit" value="'._('Urlaub abbrechen')." onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')" /></form>';
+		$aktueller_urlaub .= '<form action="/einstellungen.php" method="post" accept-charset="utf-8"><input type="hidden" name="urlaub_abbrechen" value="1" /><input type="submit" value="'._('Urlaub abbrechen').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')" /></form>';
 	}
 	else {
 		$aktueller_urlaub = '';

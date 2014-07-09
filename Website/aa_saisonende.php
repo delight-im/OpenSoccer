@@ -1,5 +1,4 @@
 <?php if (!isset($_GET['mode'])) { include 'zzserver.php'; } ?>
-<?php include 'zzfunctions.php'; ?>
 <?php
 set_time_limit(0);
 $sql1 = "SELECT gespielt FROM ".$prefix."ligen LIMIT 0, 1";

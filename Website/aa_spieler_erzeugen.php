@@ -1,5 +1,4 @@
 <?php if (!isset($_GET['mode'])) { include 'zzserver.php'; } ?>
-<?php include 'zzfunctions.php'; ?>
 <?php
 function getRandomStrength($min, $max) {
 	$ln_low = log($min, M_E);

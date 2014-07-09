@@ -4,7 +4,6 @@ header("Cache-Control: no-cache");
 ini_set('session.use_trans_sid', 0);
 include 'zzserver.php';
 include 'zzcookie.php';
-include 'zzfunctions.php';
 ob_start();
 
 // BLAETTERN ANFANG

@@ -1,5 +1,4 @@
 <?php if (!isset($_GET['mode'])) { include 'zzserver.php'; } ?>
-<?php include 'zzfunctions.php'; ?>
 <?php
 function sgn($number) {
 	if ($number == 0) {

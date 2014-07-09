@@ -34,7 +34,7 @@ if (mysql_num_rows($torj2) > 0) {
     echo' alt="" />';
 }
 else {
-	echo _('Noch keine Daten verfügbar!')';
+	echo _('Noch keine Daten verfügbar!');
 }
 ?>
 </p>

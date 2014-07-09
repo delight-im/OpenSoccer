@@ -7,7 +7,7 @@ Demo: http://www.ballmanager.de/
 ## Setup
 
  1. Put the PHP files up on a web server
- 2. Set up an empty MySQL database
+ 2. Set up an empty MySQL database with collation `utf8_general_ci` and privileges `SELECT, INSERT, UPDATE, DELETE, DROP`
  3. Run the SQL from [Database/STRUCTURE.sql](Database/STRUCTURE.sql) to create the database structure
  4. Run the SQL from [Database/DATA.sql](Database/DATA.sql) to add the initial data for the game
  5. Edit [Website/config.example.php](Website/config.example.php) so that it matches your installation and rename it to `Website/config.php`

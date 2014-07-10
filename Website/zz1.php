@@ -18,9 +18,9 @@ if (isset($_GET['setLocale'])) {
     I18N::changeLanguage($_GET['setLocale']);
 }
 I18N::init('messages', './i18n', 'en_US', array(
-    '/(^de(-.*?)?$)/i' => 'de_DE',
-    '/(^en(-.*?)?$)/i' => 'en_US',
-    '/(^es(-.*?)?$)/i' => 'es_ES'
+    '/^de((-|_).*?)?$/i' => 'de_DE',
+    '/^en((-|_).*?)?$/i' => 'en_US',
+    '/^es((-|_).*?)?$/i' => 'es_ES'
 ));
 
 // INFO-BOXEN-ARRAY ANFANG

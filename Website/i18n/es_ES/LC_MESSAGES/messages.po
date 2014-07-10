@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-07-07 22:13-0300\n"
-"PO-Revision-Date: 2014-07-09 04:31+0100\n"
-"Last-Translator: Marco <marco1@live.de>\n"
+"POT-Creation-Date: 2014-07-09 13:59-0300\n"
+"PO-Revision-Date: 2014-07-10 00:06-0300\n"
+"Last-Translator: Cosme12 <test@example.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:13
 msgid "wegen einer Muskelzerrung"
-msgstr "debido a un tirón muscular"
+msgstr "debido a un tirÃ³n muscular"
 
 #: ../../../aa_spieltag_simulation.php:14
 msgid "aufgrund einer Verstauchung"
@@ -32,25 +32,25 @@ msgid "aufgrund eines Muskelfaserrisses"
 msgstr "debido a un desgarro muscular"
 
 #: ../../../aa_spieltag_simulation.php:17
-msgid "wegen eines Bänderrisses"
+msgid "wegen eines BÃ¤nderrisses"
 msgstr "a causa de una rotura de ligamentos"
 
 #: ../../../aa_spieltag_simulation.php:18
 msgid "aufgrund eines Knorpelschadens"
-msgstr "debido a una lesión en el cartílago"
+msgstr "debido a una lesiÃ³n en el cartÃ­lago"
 
 #: ../../../aa_spieltag_simulation.php:19
 msgid "durch einen Knochenbruch"
 msgstr "por una fractura"
 
 #: ../../../aa_spieltag_simulation.php:77
-msgid "Anstoß!"
-msgstr "¡Saque inicial!"
+msgid "AnstoÃŸ!"
+msgstr "Â¡Saque inicial!"
 
 #: ../../../aa_spieltag_simulation.php:78
 msgid "Das Publikum ist gut gelaunt beim Anpfiff des heutigen Spiels."
 msgstr ""
-"El público esperaba con ansias el comienzo del encuentro, que arranca con el "
+"El pÃºblico esperaba con ansias el comienzo del encuentro, que arranca con el "
 "pase inicial."
 
 #: ../../../aa_spieltag_simulation.php:79
@@ -58,23 +58,23 @@ msgid "Das Spiel beginnt."
 msgstr "El partido comienza."
 
 #: ../../../aa_spieltag_simulation.php:80
-msgid "Das Spiel fängt mit dem Anstoß vor begeisterten Zuschauern an."
-msgstr "Frente a un emocionado público, el árbitro de comienzo al partido."
+msgid "Das Spiel fÃ¤ngt mit dem AnstoÃŸ vor begeisterten Zuschauern an."
+msgstr "Frente a un emocionado pÃºblico, el Ã¡rbitro de comienzo al partido."
 
 #: ../../../aa_spieltag_simulation.php:81
 msgid "Bei windigem und kaltem Wetter beginnt das Spiel."
-msgstr "Con un clima frío y ventoso, comienza el partido."
+msgstr "Con un clima frÃ­o y ventoso, comienza el partido."
 
 #: ../../../aa_spieltag_simulation.php:82
-msgid "Dunkle Wolken bildeten sich, als die Spieler das Feld betraten. Anstoß."
+msgid "Dunkle Wolken bildeten sich, als die Spieler das Feld betraten. AnstoÃŸ."
 msgstr ""
 "Con el cielo lleno de nubes amenazantes de lluvia, comienza el partido."
 
 #: ../../../aa_spieltag_simulation.php:83
 msgid ""
-"Die Sonne scheint, das Gras ist grün und das Publikum freut sich aufs Spiel."
+"Die Sonne scheint, das Gras ist grÃ¼n und das Publikum freut sich aufs Spiel."
 msgstr ""
-"Con un sol radiante, el pasto en perfecto estado y el público impaciente, "
+"Con un sol radiante, el pasto en perfecto estado y el pÃºblico impaciente, "
 "comienza el partido."
 
 #: ../../../aa_spieltag_simulation.php:84
@@ -82,16 +82,16 @@ msgid ""
 "Das Spielfeld ist etwas nass nach einigen Tagen Regen. Die erste Halbzeit "
 "beginnt."
 msgstr ""
-"El campo aun sigue húmedo despues de tantos días de lluvias. Comienza el "
+"El campo aun sigue hÃºmedo despues de tantos dÃ­as de lluvias. Comienza el "
 "segundo tiempo."
 
 #: ../../../aa_spieltag_simulation.php:85
 msgid "Los geht's mit der ersten Halbzeit!"
-msgstr "¡Y aquí comienza el segundo tiempo!"
+msgstr "Â¡Y aquÃ­ comienza el segundo tiempo!"
 
 #: ../../../aa_spieltag_simulation.php:88
 msgid "Halbzeit!"
-msgstr "¡Termina el primer tiempo!"
+msgstr "Â¡Termina el primer tiempo!"
 
 #: ../../../aa_spieltag_simulation.php:89
 msgid "Der Wind nimmt zu, die zweite Halbzeit beginnt."
@@ -99,7 +99,7 @@ msgstr "El viento esta aumentando, comienza el segundo tiempo."
 
 #: ../../../aa_spieltag_simulation.php:90
 msgid "Los geht's mit der zweiten Halbzeit!"
-msgstr "¡Empieza el segundo tiempo!"
+msgstr "Â¡Empieza el segundo tiempo!"
 
 #: ../../../aa_spieltag_simulation.php:91
 msgid "Anpfiff zur zweiten Halbzeit."
@@ -111,7 +111,7 @@ msgstr "Finaliza la primera parte de este encuentro."
 
 #: ../../../aa_spieltag_simulation.php:93
 msgid ""
-"Die Spieler der Gäste sehen konzentrierter aus zu Beginn der zweiten "
+"Die Spieler der GÃ¤ste sehen konzentrierter aus zu Beginn der zweiten "
 "Halbzeit."
 msgstr ""
 "Los jugadores del equipo visitante parecen mas concentrados al inicio del "
@@ -119,16 +119,16 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:94
 msgid "Der Schiedsrichter pfeift zur zweiten Halbzeit."
-msgstr "El árbitro da inicio al segundo tiempo."
+msgstr "El Ã¡rbitro da inicio al segundo tiempo."
 
 #: ../../../aa_spieltag_simulation.php:95
 msgid ""
 "Die Spieler des Gastgebers winken den Zuschauern zu, das Spiel geht weiter."
-msgstr "El equipo local saluda a su público al arranque del segundo tiempo."
+msgstr "El equipo local saluda a su pÃºblico al arranque del segundo tiempo."
 
 #: ../../../aa_spieltag_simulation.php:96
 msgid ""
-"Die Spieler des Gastgebers sehen frischer aus, währen die das Spielfeld zur "
+"Die Spieler des Gastgebers sehen frischer aus, wÃ¤hren die das Spielfeld zur "
 "zweiten Halbzeit betreten."
 msgstr ""
 "El equipo local parece mas relajado cuando entra al campo para el segundo "
@@ -148,7 +148,7 @@ msgstr "XYZ presiona."
 
 #: ../../../aa_spieltag_simulation.php:102
 #: ../../../aa_spieltag_simulation.php:445
-msgid "Ballbesitz für XYZ."
+msgid "Ballbesitz fÃ¼r XYZ."
 msgstr "XYZ controla la pelota."
 
 #: ../../../aa_spieltag_simulation.php:103
@@ -157,11 +157,11 @@ msgid "XYZ hat den Ball."
 msgstr "La posecion de la pelota es de XYZ."
 
 #: ../../../aa_spieltag_simulation.php:106
-msgid "Der Ballführende spielt den öffnenden Pass."
+msgid "Der BallfÃ¼hrende spielt den Ã¶ffnenden Pass."
 msgstr "XYZ domina la pelota."
 
 #: ../../../aa_spieltag_simulation.php:107
-msgid "Den Mitspieler mit einem öffnenden Pass bedient."
+msgid "Den Mitspieler mit einem Ã¶ffnenden Pass bedient."
 msgstr "Excelente finta en el mediocampo"
 
 #: ../../../aa_spieltag_simulation.php:108
@@ -170,10 +170,10 @@ msgstr "Fuerte pase cruzado."
 
 #: ../../../aa_spieltag_simulation.php:109
 msgid "Pass zum Mitspieler."
-msgstr "Pase al compañero."
+msgstr "Pase al compaÃ±ero."
 
 #: ../../../aa_spieltag_simulation.php:110
-msgid "Schönes Dribbling im Mittelfeld."
+msgid "SchÃ¶nes Dribbling im Mittelfeld."
 msgstr "Buen regateo en el mediocampo."
 
 #: ../../../aa_spieltag_simulation.php:111
@@ -185,19 +185,19 @@ msgid "Pass von der linken Seite nach innen."
 msgstr "Pase hacia el centro desde el extremo izquierdo."
 
 #: ../../../aa_spieltag_simulation.php:113
-msgid "Der Mitspieler steht völlig frei."
-msgstr "El compañero esta totalmente libre."
+msgid "Der Mitspieler steht vÃ¶llig frei."
+msgstr "El compaÃ±ero esta totalmente libre."
 
 #: ../../../aa_spieltag_simulation.php:114
-msgid "Schöner Pass zum Mitspieler."
-msgstr "Gran pase al compañero."
+msgid "SchÃ¶ner Pass zum Mitspieler."
+msgstr "Gran pase al compaÃ±ero."
 
 #: ../../../aa_spieltag_simulation.php:115
-msgid "Der präzise Pass kommt genau im richtigen Moment an."
+msgid "Der prÃ¤zise Pass kommt genau im richtigen Moment an."
 msgstr "El pase preciso que llega con lo justo."
 
 #: ../../../aa_spieltag_simulation.php:116
-msgid "Der Ballführende spielt einen feinen Pass nach vorne."
+msgid "Der BallfÃ¼hrende spielt einen feinen Pass nach vorne."
 msgstr ""
 "Excelente pase hacia adelante por parte del jugador que llevaba la pelota."
 
@@ -206,27 +206,27 @@ msgid "Sehenswertes Dribbling."
 msgstr "Una finta que vale la pena ver."
 
 #: ../../../aa_spieltag_simulation.php:118
-msgid "Schöne Ballstafette in den eigenen Reihen."
+msgid "SchÃ¶ne Ballstafette in den eigenen Reihen."
 msgstr "Buena serie de pases en su mediocampo"
 
 #: ../../../aa_spieltag_simulation.php:119
 msgid "Schneller Doppelpass im Mittelfeld."
-msgstr "Rápido uno-dos en el mediocampo"
+msgstr "RÃ¡pido uno-dos en el mediocampo"
 
 #: ../../../aa_spieltag_simulation.php:120
-msgid "Schönes Dribbling."
+msgid "SchÃ¶nes Dribbling."
 msgstr "Buena finta. "
 
 #: ../../../aa_spieltag_simulation.php:121
 msgid "Herrliche Kombination der Offensiv-Spieler."
-msgstr "Hermosa combinación por parte de los delanteros."
+msgstr "Hermosa combinaciÃ³n por parte de los delanteros."
 
 #: ../../../aa_spieltag_simulation.php:122
-msgid "Der ungenaue Pass kommt mit Glück an."
+msgid "Der ungenaue Pass kommt mit GlÃ¼ck an."
 msgstr "El pase impreciso llega de todos modos."
 
 #: ../../../aa_spieltag_simulation.php:123
-msgid "Unpräzises Anspiel, aber der Gegner kommt zu spät."
+msgid "UnprÃ¤zises Anspiel, aber der Gegner kommt zu spÃ¤t."
 msgstr "Pase impreciso que el oponente no llega a interceptar."
 
 #: ../../../aa_spieltag_simulation.php:124
@@ -235,10 +235,10 @@ msgstr "Los jugadores atacan a toda velocidad"
 
 #: ../../../aa_spieltag_simulation.php:125
 msgid "Guter Querpass zum Teamkollegen."
-msgstr "Buen pase para sus compañeros de equipo."
+msgstr "Buen pase para sus compaÃ±eros de equipo."
 
 #: ../../../aa_spieltag_simulation.php:128
-msgid "Schöne Vorlage."
+msgid "SchÃ¶ne Vorlage."
 msgstr "Buena asistencia."
 
 #: ../../../aa_spieltag_simulation.php:129
@@ -258,11 +258,11 @@ msgid "Der Mitspieler dribbelt einen, nein zwei, Spieler aus."
 msgstr "El jugador deja pasa uno, no, dos jugadores."
 
 #: ../../../aa_spieltag_simulation.php:133
-msgid "Der Mitspieler wird schön in Szene gesetzt."
+msgid "Der Mitspieler wird schÃ¶n in Szene gesetzt."
 msgstr "Muy buena puesta en escena por parte del jugador."
 
 #: ../../../aa_spieltag_simulation.php:134
-msgid "Der Angreifer lässt seine Gegenspieler stehen."
+msgid "Der Angreifer lÃ¤sst seine Gegenspieler stehen."
 msgstr "El jugador atacante se deshace de sus oponentes."
 
 #: ../../../aa_spieltag_simulation.php:135
@@ -270,44 +270,44 @@ msgid "Geschickt freigespielt."
 msgstr "Gana habilmente."
 
 #: ../../../aa_spieltag_simulation.php:136
-msgid "Schönes Dribbling des Stürmers."
+msgid "SchÃ¶nes Dribbling des StÃ¼rmers."
 msgstr "Buena finta del delantero."
 
 #: ../../../aa_spieltag_simulation.php:137
-msgid "Der Stürmer wird herrlich von seinem Mitspieler bedient."
-msgstr "El delantero recive un maravilloso pase por parte de su compañero."
+msgid "Der StÃ¼rmer wird herrlich von seinem Mitspieler bedient."
+msgstr "El delantero recive un maravilloso pase por parte de su compaÃ±ero."
 
 #: ../../../aa_spieltag_simulation.php:138
-msgid "Steilpass auf den linken Flügel."
+msgid "Steilpass auf den linken FlÃ¼gel."
 msgstr "Pelota larga para que vayan por la izquierda."
 
 #: ../../../aa_spieltag_simulation.php:139
-msgid "Der Spieler lässt seinen Gegner stehen."
-msgstr "El jugador deja atrás a su oponente."
+msgid "Der Spieler lÃ¤sst seinen Gegner stehen."
+msgstr "El jugador deja atrÃ¡s a su oponente."
 
 #: ../../../aa_spieltag_simulation.php:140
 msgid "Der Spieler tunnelt seinen Gegner."
 msgstr "El jugador le hace un tunel a su oponente."
 
 #: ../../../aa_spieltag_simulation.php:141
-msgid "Dribbling über den halben Platz."
-msgstr "Regateo a través del mediocampo."
+msgid "Dribbling Ã¼ber den halben Platz."
+msgstr "Regateo a travÃ©s del mediocampo."
 
 #: ../../../aa_spieltag_simulation.php:143
-msgid "Steilpass auf den rechten Flügel."
+msgid "Steilpass auf den rechten FlÃ¼gel."
 msgstr "Pelota larga para que vayan por la derecha."
 
 #: ../../../aa_spieltag_simulation.php:144
-msgid "Den Kollegen mustergültig freigespielt."
-msgstr "Pase perfecto al compañero."
+msgid "Den Kollegen mustergÃ¼ltig freigespielt."
+msgstr "Pase perfecto al compaÃ±ero."
 
 #: ../../../aa_spieltag_simulation.php:145
-msgid "Traumpass auf den linken Flügelspieler."
-msgstr "Un pase fantástico al extremo izquierdo."
+msgid "Traumpass auf den linken FlÃ¼gelspieler."
+msgstr "Un pase fantÃ¡stico al extremo izquierdo."
 
 #: ../../../aa_spieltag_simulation.php:146
-msgid "Traumpass auf den rechten Flügelspieler."
-msgstr "Un pase fantástico al extremo derecho."
+msgid "Traumpass auf den rechten FlÃ¼gelspieler."
+msgstr "Un pase fantÃ¡stico al extremo derecho."
 
 #: ../../../aa_spieltag_simulation.php:147
 msgid "Traumpass in die Spitze."
@@ -319,18 +319,18 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:149
 msgid "Der kreuzende Mitspieler wird geschickt."
-msgstr ""
+msgstr "El jugador cruza y corta el pase."
 
 #: ../../../aa_spieltag_simulation.php:150
 msgid "Der Angreifer wird halblinks geschickt."
-msgstr ""
+msgstr "El delantero recive la pelota en la mitad izquierda."
 
 #: ../../../aa_spieltag_simulation.php:151
 msgid "Der Angreifer wird halbrechts geschickt."
-msgstr ""
+msgstr "El delantero recive la pelota en la mitad derecha."
 
 #: ../../../aa_spieltag_simulation.php:152
-msgid "Steilpass auf den Stürmer, der jetzt alleine aufs Tor zuläuft."
+msgid "Steilpass auf den StÃ¼rmer, der jetzt alleine aufs Tor zulÃ¤uft."
 msgstr "Pase largo al delantero, que ahora corre solo con la pelota."
 
 #: ../../../aa_spieltag_simulation.php:153
@@ -338,7 +338,7 @@ msgid "Die Offensivabteilung arbeitet eine Chance heraus."
 msgstr "El delantero crea una oportunidad."
 
 #: ../../../aa_spieltag_simulation.php:154
-msgid "Jetzt wirds gefährlich ..."
+msgid "Jetzt wirds gefÃ¤hrlich ..."
 msgstr "Ahora se vuelve peligroso..."
 
 #: ../../../aa_spieltag_simulation.php:155
@@ -346,7 +346,7 @@ msgid "Zuspiel in die Spitze."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:156
-msgid "Langer Pass auf den Stürmer."
+msgid "Langer Pass auf den StÃ¼rmer."
 msgstr "Pase largo al delantero."
 
 #: ../../../aa_spieltag_simulation.php:157
@@ -354,7 +354,7 @@ msgid "Flanke aus dem Halbfeld."
 msgstr "Cruza desde el mediocampo"
 
 #: ../../../aa_spieltag_simulation.php:158
-msgid "Schöne Flanke von rechts."
+msgid "SchÃ¶ne Flanke von rechts."
 msgstr "Gran cruze por la derecha."
 
 #: ../../../aa_spieltag_simulation.php:159
@@ -362,7 +362,7 @@ msgid "Tolle Flanke von links."
 msgstr "Grandioso cruze por la izquierda."
 
 #: ../../../aa_spieltag_simulation.php:160
-msgid "Schöne Flanke von links."
+msgid "SchÃ¶ne Flanke von links."
 msgstr "Gran cruze por la izquierda."
 
 #: ../../../aa_spieltag_simulation.php:161
@@ -370,7 +370,7 @@ msgid "Tolle Flanke von rechts."
 msgstr "Grandioso cruze por la derecha."
 
 #: ../../../aa_spieltag_simulation.php:162
-msgid "Schöne Flanke."
+msgid "SchÃ¶ne Flanke."
 msgstr "Buen cruze."
 
 #: ../../../aa_spieltag_simulation.php:163
@@ -378,67 +378,67 @@ msgid "Gute Flanke."
 msgstr "Gran cruze."
 
 #: ../../../aa_spieltag_simulation.php:164
-msgid "Der Flügelspieler flankt auf den Stürmer."
+msgid "Der FlÃ¼gelspieler flankt auf den StÃ¼rmer."
 msgstr "El jugador del extremo cruza la pelota hacia el delantero."
 
 #: ../../../aa_spieltag_simulation.php:165
-msgid "Der Spieler legt perfekt für seinen Teamkollegen auf."
-msgstr "El jugador habilita perfectamente a sus compañeros de equipo."
+msgid "Der Spieler legt perfekt fÃ¼r seinen Teamkollegen auf."
+msgstr "El jugador habilita perfectamente a sus compaÃ±eros de equipo."
 
 #: ../../../aa_spieltag_simulation.php:166
-msgid "Der Angreifer legt für seinen Mitspieler zurück."
-msgstr "El delantero se detiene a esperar a sus compañeros."
+msgid "Der Angreifer legt fÃ¼r seinen Mitspieler zurÃ¼ck."
+msgstr "El delantero se detiene a esperar a sus compaÃ±eros."
 
 #: ../../../aa_spieltag_simulation.php:197
 msgid "Der Torwart hat den Ball sicher."
 msgstr "El arquero atrapa la pelota con seguridad."
 
 #: ../../../aa_spieltag_simulation.php:198
-msgid "Der Torwart von XYZ hält."
+msgid "Der Torwart von XYZ hÃ¤lt."
 msgstr "El arquero de XYZ salva."
 
 #: ../../../aa_spieltag_simulation.php:199
 msgid "Der Ball fliegt Richtung Eckfahne."
-msgstr "La pelota vuela hacia el banderín de córner."
+msgstr "La pelota vuela hacia el banderÃ­n de cÃ³rner."
 
 #: ../../../aa_spieltag_simulation.php:200
-msgid "Leichte Aufgabe für den Schlussmann von XYZ."
-msgstr "Tarea fácil para el arquero de XYZ."
+msgid "Leichte Aufgabe fÃ¼r den Schlussmann von XYZ."
+msgstr "Tarea fÃ¡cil para el arquero de XYZ."
 
 #: ../../../aa_spieltag_simulation.php:201
-msgid "Kein Problem für den Torhüter."
+msgid "Kein Problem fÃ¼r den TorhÃ¼ter."
 msgstr "No hay problema para el arquero."
 
 #: ../../../aa_spieltag_simulation.php:202
-msgid "Der Keeper fängt den Ball locker ab."
+msgid "Der Keeper fÃ¤ngt den Ball locker ab."
 msgstr "El arquero atrapa la pelota con destreza."
 
 #: ../../../aa_spieltag_simulation.php:205
 msgid "Glanzparade vom Schlussmann!"
-msgstr "¡Excelente atajada del arquero!"
+msgstr "Â¡Excelente atajada del arquero!"
 
 #: ../../../aa_spieltag_simulation.php:206
-msgid "Was für ein Reflex!"
-msgstr "¡Qué reflejos!"
+msgid "Was fÃ¼r ein Reflex!"
+msgstr "Â¡QuÃ© reflejos!"
 
 #: ../../../aa_spieltag_simulation.php:207
-msgid "Souverän gehalten."
+msgid "SouverÃ¤n gehalten."
 msgstr "Atrapa con seguridad."
 
 #: ../../../aa_spieltag_simulation.php:210
 msgid "Grobes Foul!"
-msgstr "¡Dura falta!"
+msgstr "Â¡Dura falta!"
 
 #: ../../../aa_spieltag_simulation.php:211
 msgid "Foul von XYZ."
 msgstr "Falta de XYZ."
 
 #: ../../../aa_spieltag_simulation.php:212
-msgid "Bösartiges Foul des Abwehrspielers!"
-msgstr "¡Fuerte falta del defensor!"
+msgid "BÃ¶sartiges Foul des Abwehrspielers!"
+msgstr "Â¡Fuerte falta del defensor!"
 
 #: ../../../aa_spieltag_simulation.php:213
-msgid "Der Verteidiger setzt zur Grätsche an."
+msgid "Der Verteidiger setzt zur GrÃ¤tsche an."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:214
@@ -446,25 +446,25 @@ msgid "Handspiel von XYZ."
 msgstr "Mano de XYZ."
 
 #: ../../../aa_spieltag_simulation.php:215
-msgid "Diese Grätsche ging nur in die Beine des Gegners."
+msgid "Diese GrÃ¤tsche ging nur in die Beine des Gegners."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:216
 msgid "Den Ball wollte er mit dieser Aktion sicher nicht holen. Grobes Foul!"
-msgstr "Claramente no quería detener la pelota en esa jugada. ¡Dura falta!"
+msgstr "Claramente no querÃ­a detener la pelota en esa jugada. Â¡Dura falta!"
 
 #: ../../../aa_spieltag_simulation.php:217
 msgid ""
-"Was für eine Schwalbe! Hat der Schiedsrichter da etwa mehr gesehen als wir?"
+"Was fÃ¼r eine Schwalbe! Hat der Schiedsrichter da etwa mehr gesehen als wir?"
 msgstr ""
-"¡Qué clavado tan descarado! ¿El árbitro vio algo más que nosotros no vimos?"
+"Â¡QuÃ© clavado tan descarado! Â¿El Ã¡rbitro vio algo mÃ¡s que nosotros no vimos?"
 
 #: ../../../aa_spieltag_simulation.php:218
-msgid "War das wirklich ein Foul? Da kann man drüber streiten."
-msgstr "¿Fué eso una falta realmente? Claramente discutible."
+msgid "War das wirklich ein Foul? Da kann man drÃ¼ber streiten."
+msgstr "Â¿FuÃ© eso una falta realmente? Claramente discutible."
 
 #: ../../../aa_spieltag_simulation.php:219
-msgid "Der Stürmer wird von den Beinen geholt."
+msgid "Der StÃ¼rmer wird von den Beinen geholt."
 msgstr "El delantero de derribado."
 
 #: ../../../aa_spieltag_simulation.php:220
@@ -488,7 +488,7 @@ msgid "Das sah nach einem Revanchefoul aus."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:225
-msgid "Der Angreifer wird umgestoßen."
+msgid "Der Angreifer wird umgestoÃŸen."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:228
@@ -497,26 +497,26 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:229
 msgid "Elfmeter!"
-msgstr "¡Penal!"
+msgstr "Â¡Penal!"
 
 #: ../../../aa_spieltag_simulation.php:230
 msgid "Der Unparteiische entscheidet auf Elfmeter."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:231
-msgid "Strafstoß!"
-msgstr ""
+msgid "StrafstoÃŸ!"
+msgstr "Â¡Tiro de penal!"
 
 #: ../../../aa_spieltag_simulation.php:232
-msgid "Strafstoß für XYZ!"
-msgstr ""
+msgid "StrafstoÃŸ fÃ¼r XYZ!"
+msgstr "Â¡Tiro de penal para XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:233
-msgid "Elfmeter für XYZ!"
-msgstr ""
+msgid "Elfmeter fÃ¼r XYZ!"
+msgstr "Â¡Penalti para XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:236
-msgid "Der Torwart springt in die richtige Ecke ... und hält!"
+msgid "Der Torwart springt in die richtige Ecke ... und hÃ¤lt!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:237
@@ -524,7 +524,7 @@ msgid "Der Torwart bleibt stehen - Gehalten! Schwacher Schuss."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:238
-msgid "Der Schlussmann von XYZ hält!"
+msgid "Der Schlussmann von XYZ hÃ¤lt!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:239
@@ -548,87 +548,87 @@ msgid "Toll gehalten vom Torwart!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:246
-msgid "Drüber!"
-msgstr ""
+msgid "DrÃ¼ber!"
+msgstr "Â¡Por arriba del travesaÃ±o!"
 
 #: ../../../aa_spieltag_simulation.php:247
-msgid "XYZ schießt drüber!"
-msgstr ""
+msgid "XYZ schieÃŸt drÃ¼ber!"
+msgstr "Â¡XYZ dispara alto!"
 
 #: ../../../aa_spieltag_simulation.php:248
 msgid "In die Wolken!"
-msgstr ""
+msgstr "Â¡A las nubes!"
 
 #: ../../../aa_spieltag_simulation.php:249
 msgid "An den Pfosten!"
-msgstr ""
+msgstr "Â¡Contra el palo!"
 
 #: ../../../aa_spieltag_simulation.php:250
-msgid "XYZ schießt daneben!"
-msgstr ""
+msgid "XYZ schieÃŸt daneben!"
+msgstr "Â¡XYZ falla el penal!"
 
 #: ../../../aa_spieltag_simulation.php:251
 msgid "XYZ trifft nur den Pfosten."
-msgstr ""
+msgstr "Â¡XYZ solamente golpea el poste!"
 
 #: ../../../aa_spieltag_simulation.php:252
 msgid "Schwacher Schuss vom Mittelfeldspieler!"
-msgstr ""
+msgstr "Â¡DÃ©bil disparo del mediocampista!"
 
 #: ../../../aa_spieltag_simulation.php:253
-msgid "Der Stürmer setzt den Elfmeter an die Latte!"
+msgid "Der StÃ¼rmer setzt den Elfmeter an die Latte!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:254
 msgid "Er vergibt die Chance!"
-msgstr ""
+msgstr "Â¡Se pierde la oportunidad!"
 
 #: ../../../aa_spieltag_simulation.php:255
 msgid "Das war knapp. Da fehlten nur Zentimeter."
-msgstr ""
+msgstr "Eso estuvo cerca. Â¡FallÃ³ por centÃ­metros!"
 
 #: ../../../aa_spieltag_simulation.php:256
 msgid "Der geht daneben!"
-msgstr ""
+msgstr "Â¡El disparo pasÃ³ muy cerca!"
 
 #: ../../../aa_spieltag_simulation.php:259
-msgid "Indirekter Freistoß für XYZ!"
-msgstr "¡Tiro libre indirecto para XYZ!"
+msgid "Indirekter FreistoÃŸ fÃ¼r XYZ!"
+msgstr "Â¡Tiro libre indirecto para XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:260
-msgid "Indirekter Freistoß!"
-msgstr "¡Tiro libre indirecto!"
+msgid "Indirekter FreistoÃŸ!"
+msgstr "Â¡Tiro libre indirecto!"
 
 #: ../../../aa_spieltag_simulation.php:261
-msgid "Der Schiedsrichter entscheidet auf Freistoß, indirekt."
+msgid "Der Schiedsrichter entscheidet auf FreistoÃŸ, indirekt."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:265
-msgid "Direkter Freistoß für XYZ!"
-msgstr "¡Tiro libre directo para XYZ!"
+msgid "Direkter FreistoÃŸ fÃ¼r XYZ!"
+msgstr "Â¡Tiro libre directo para XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:266
-msgid "Direkter Freistoß!"
-msgstr "¡Tiro libre directo!"
+msgid "Direkter FreistoÃŸ!"
+msgstr "Â¡Tiro libre directo!"
 
 #: ../../../aa_spieltag_simulation.php:267
-msgid "Freistoß an der Strafraumgrenze."
+msgid "FreistoÃŸ an der Strafraumgrenze."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:268
-msgid "Der Schiedsrichter entscheidet auf Freistoß, direkt."
+msgid "Der Schiedsrichter entscheidet auf FreistoÃŸ, direkt."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:269
-msgid "Direkter Freistoß vor dem Strafraum. 6 Mann in der Mauer."
+msgid "Direkter FreistoÃŸ vor dem Strafraum. 6 Mann in der Mauer."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:273
-msgid "Per Kopfball geklärt."
+msgid "Per Kopfball geklÃ¤rt."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:274
-msgid "XYZ klärt."
+msgid "XYZ klÃ¤rt."
 msgstr "XYZ despeja."
 
 #: ../../../aa_spieltag_simulation.php:275
@@ -636,7 +636,7 @@ msgid "Schuss geht daneben."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:276
-msgid "Der Abwehrspieler klärt."
+msgid "Der Abwehrspieler klÃ¤rt."
 msgstr "El defensor despeja."
 
 #: ../../../aa_spieltag_simulation.php:277
@@ -647,7 +647,7 @@ msgstr ""
 #: ../../../aa_spieltag_simulation.php:325
 #: ../../../aa_spieltag_simulation.php:386
 msgid ""
-"Der Schuss geht auf die Tribüne. Hoffentlich hat sich kein Zuschauer "
+"Der Schuss geht auf die TribÃ¼ne. Hoffentlich hat sich kein Zuschauer "
 "verletzt."
 msgstr ""
 
@@ -655,7 +655,7 @@ msgstr ""
 #: ../../../aa_spieltag_simulation.php:326
 #: ../../../aa_spieltag_simulation.php:387
 msgid ""
-"Der Schuss geht auf die Tribüne. Die Fans freuen sich über den gefangenen "
+"Der Schuss geht auf die TribÃ¼ne. Die Fans freuen sich Ã¼ber den gefangenen "
 "Ball."
 msgstr ""
 
@@ -666,7 +666,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:283
 msgid "Ballverlust im Mittelfeld."
-msgstr ""
+msgstr "Pierde la pelota en el mediocampo."
 
 #: ../../../aa_spieltag_simulation.php:284
 msgid "XYZ macht Druck und holt sich den Ball wieder."
@@ -674,7 +674,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:285
 msgid "Perfektes Pressing, Ballverlust."
-msgstr ""
+msgstr "Exelente presiÃ³n, recupera la poseciÃ³n."
 
 #: ../../../aa_spieltag_simulation.php:286
 msgid "XYZ steht zu gut."
@@ -682,18 +682,18 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:287
 msgid "Keine Anspielstation."
-msgstr ""
+msgstr "Nadie abierto."
 
 #: ../../../aa_spieltag_simulation.php:288
-msgid "Unnötiger Fehlpass!"
-msgstr ""
+msgid "UnnÃ¶tiger Fehlpass!"
+msgstr "Â¡Mal pase innecesario!"
 
 #: ../../../aa_spieltag_simulation.php:289
 msgid "Erstklassig verteidigt von XYZ."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:290
-msgid "Schön verteidigt von XYZ."
+msgid "SchÃ¶n verteidigt von XYZ."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:291
@@ -710,7 +710,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:294
 msgid "Da ist kein Durchkommen."
-msgstr ""
+msgstr "XYZ devuelve la pelota hacia atrÃ¡s."
 
 #: ../../../aa_spieltag_simulation.php:295
 msgid "Die Verteidigung von XYZ steht sicher."
@@ -730,26 +730,26 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:299
 msgid "Fehlpass. Der Gegner hat den Ball."
-msgstr ""
+msgstr "Pase mal dirigido. El oponente toma el control de la pelota."
 
 #: ../../../aa_spieltag_simulation.php:300
 msgid "Der Gegner holt sich den Ball wieder."
-msgstr ""
+msgstr "El oponente recupera la pelota."
 
 #: ../../../aa_spieltag_simulation.php:303
 msgid "Ein Spieler von XYZ kommt zum Kopfball."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:304
-msgid "Per Kopf in den Strafraum verlängert."
+msgid "Per Kopf in den Strafraum verlÃ¤ngert."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:308
-msgid "Der Ball wird abgefälscht ..."
-msgstr ""
+msgid "Der Ball wird abgefÃ¤lscht ..."
+msgstr "La pelota es desviada..."
 
 #: ../../../aa_spieltag_simulation.php:310
-msgid "Der Ball wird verlängert."
+msgid "Der Ball wird verlÃ¤ngert."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:311
@@ -758,22 +758,22 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:314
 msgid "Flachschuss."
-msgstr ""
+msgstr "Dispara bajo."
 
 #: ../../../aa_spieltag_simulation.php:315
 msgid "Da war noch jemand dran."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:316
-msgid "Abgefälschter Schuss."
-msgstr ""
+msgid "AbgefÃ¤lschter Schuss."
+msgstr "Disparo desviado."
 
 #: ../../../aa_spieltag_simulation.php:317
 msgid "Der Ball streift die Mauer."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:318
-msgid "Schöne Freistoß-Variante."
+msgid "SchÃ¶ne FreistoÃŸ-Variante."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:319
@@ -781,7 +781,7 @@ msgid "Der Ball geht durch die Mauer."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:320
-msgid "Schön um die Mauer gezirkelt."
+msgid "SchÃ¶n um die Mauer gezirkelt."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:323
@@ -793,7 +793,7 @@ msgid "Der Schuss geht daneben."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:327
-msgid "Der Schuss geht weit drüber."
+msgid "Der Schuss geht weit drÃ¼ber."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:328
@@ -813,11 +813,11 @@ msgid "Kopfball und ..."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:335
-msgid "Der Angreifer schließt perfekt ins kurze Eck ab."
+msgid "Der Angreifer schlieÃŸt perfekt ins kurze Eck ab."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:336
-msgid "Der Stürmer zirkelt den Ball ins lange Eck."
+msgid "Der StÃ¼rmer zirkelt den Ball ins lange Eck."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:338
@@ -825,7 +825,7 @@ msgid "XYZ setzt einen Schuss flach ins lange Eck."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:340
-msgid "Der Stürmer kommt am langen Eck unbedrängt zum Kopfball."
+msgid "Der StÃ¼rmer kommt am langen Eck unbedrÃ¤ngt zum Kopfball."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:341
@@ -842,7 +842,7 @@ msgid "Schuss aus spitzem Winkel."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:344
-msgid "Schuss aus dem Rückraum."
+msgid "Schuss aus dem RÃ¼ckraum."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:345
@@ -850,7 +850,7 @@ msgid "Ein Versuch aus der Distanz!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:346
-msgid "Der Stürmer versucht den Ball über den Torwart zu lupfen."
+msgid "Der StÃ¼rmer versucht den Ball Ã¼ber den Torwart zu lupfen."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:347
@@ -858,7 +858,7 @@ msgid "Der Angreifer donnert den Ball mit einem Seitfallzieher aufs Tor."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:348
-msgid "Jetzt muss er nur noch den Keeper überwinden ..."
+msgid "Jetzt muss er nur noch den Keeper Ã¼berwinden ..."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:349
@@ -866,11 +866,11 @@ msgid "Nur noch der Torwart steht vor dem Angreifer."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:350
-msgid "Der Angreifer versucht, den Torwart mit einem Heber zu überwinden."
+msgid "Der Angreifer versucht, den Torwart mit einem Heber zu Ã¼berwinden."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:351
-msgid "Kaltschnäuziger Abschluss."
+msgid "KaltschnÃ¤uziger Abschluss."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:352
@@ -882,7 +882,7 @@ msgid "Der passt genau!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:356
-msgid "Den hätte der Keeper haben müssen!"
+msgid "Den hÃ¤tte der Keeper haben mÃ¼ssen!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:357
@@ -890,7 +890,7 @@ msgid "Der Ball donnert ins Netz!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:358
-msgid "Keine Chance für den Keeper, der Ball flatterte zu sehr!"
+msgid "Keine Chance fÃ¼r den Keeper, der Ball flatterte zu sehr!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:359
@@ -898,28 +898,28 @@ msgid "Der Torwart springt ... und kommt nicht mehr dran. Tor!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:360
-msgid "XYZ netzt mit Glück ein. Der Torwart war dran."
+msgid "XYZ netzt mit GlÃ¼ck ein. Der Torwart war dran."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:361
 msgid "XYZ trifft."
-msgstr ""
+msgstr "XYZ acierta."
 
 #: ../../../aa_spieltag_simulation.php:362
 msgid "Tor des Tages!"
-msgstr ""
+msgstr "Â¡Gol del dÃ­a!"
 
 #: ../../../aa_spieltag_simulation.php:363
 msgid "Direkt unter die Querlatte. Tor!"
-msgstr ""
+msgstr "Derecho al techo de la red. Â¡Gol!"
 
 #: ../../../aa_spieltag_simulation.php:364
 msgid "XYZ netzt ein."
-msgstr ""
+msgstr "XYZ combierte."
 
 #: ../../../aa_spieltag_simulation.php:365
 msgid "Tor!"
-msgstr "¡Gol!"
+msgstr "Â¡Gol!"
 
 #: ../../../aa_spieltag_simulation.php:366
 msgid "Ein super Tor!"
@@ -927,35 +927,35 @@ msgstr "Un gol espectacular."
 
 #: ../../../aa_spieltag_simulation.php:367
 msgid "Gooolaso!"
-msgstr "¡Gooolaso!"
+msgstr "Â¡Gooolaso!"
 
 #: ../../../aa_spieltag_simulation.php:368
 msgid "Der Ball kullert irgendwie ins Tor!"
-msgstr ""
+msgstr "La pelota golpea contra la red!"
 
 #: ../../../aa_spieltag_simulation.php:369
 msgid "Der Ball geht ins Tor!"
-msgstr ""
+msgstr "La pelota alcanza la red!"
 
 #: ../../../aa_spieltag_simulation.php:370
 msgid "Abstauber ins Tor!"
-msgstr ""
+msgstr "La pelota rebota contra el fondo del arco!"
 
 #: ../../../aa_spieltag_simulation.php:371
 msgid "Nachschuss und ... Tor!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:372
-msgid "Keine Chance für den Keeper!"
-msgstr ""
+msgid "Keine Chance fÃ¼r den Keeper!"
+msgstr "Â¡El arquero no tuvo ninguna oportunidad!"
 
 #: ../../../aa_spieltag_simulation.php:373
 msgid "Treffer!"
-msgstr ""
+msgstr "Â¡Gooolazo!"
 
 #: ../../../aa_spieltag_simulation.php:374
 msgid "Toooor!"
-msgstr "¡Gooool!"
+msgstr "Â¡Gooool!"
 
 #: ../../../aa_spieltag_simulation.php:375
 msgid ""
@@ -963,35 +963,35 @@ msgid ""
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:376
-msgid "Was für ein Treffer!"
-msgstr ""
+msgid "Was fÃ¼r ein Treffer!"
+msgstr "Â¡QuÃ© golpe!"
 
 #: ../../../aa_spieltag_simulation.php:377
 msgid "Sensationelles Tor!"
-msgstr ""
+msgstr "Â¡Sensacional gol!"
 
 #: ../../../aa_spieltag_simulation.php:378
 msgid "Unglaublich! Toooor!"
-msgstr ""
+msgstr "Â¡Increible! Â¡Gooool!"
 
 #: ../../../aa_spieltag_simulation.php:379
-msgid "Tor für XYZ!"
-msgstr ""
+msgid "Tor fÃ¼r XYZ!"
+msgstr "Â¡Gol para XYZ!"
 
 #: ../../../aa_spieltag_simulation.php:382
 msgid "Der Schuss wird vom Verteidiger abgeblockt."
-msgstr ""
+msgstr "Â¡El disparo es bloqueado por el defensor!"
 
 #: ../../../aa_spieltag_simulation.php:383
-msgid "Der Abwehrspieler kann noch an den Pfosten abfälschen."
-msgstr ""
+msgid "Der Abwehrspieler kann noch an den Pfosten abfÃ¤lschen."
+msgstr "El defensor apenas logra desviar la pelota hacia el poste."
 
 #: ../../../aa_spieltag_simulation.php:384
-msgid "Der Stürmer verzieht leicht nach links."
-msgstr ""
+msgid "Der StÃ¼rmer verzieht leicht nach links."
+msgstr "El delantero dispara levemente desviado hacia la izquierda."
 
 #: ../../../aa_spieltag_simulation.php:385
-msgid "Das war knapp, der Schuss geht über die Latte."
+msgid "Das war knapp, der Schuss geht Ã¼ber die Latte."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:388
@@ -1000,42 +1000,42 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:389
 msgid "Der Ball knallt an den Pfosten. Ein Raunen geht durch das Stadion."
-msgstr ""
+msgstr "La pelota golpea el palo. Un murmullo recorre todo el estadio."
 
 #: ../../../aa_spieltag_simulation.php:391
 msgid "Der Ball knallt ans Lattenkreuz."
-msgstr ""
+msgstr "La pelota golpea la esquina del arco."
 
 #: ../../../aa_spieltag_simulation.php:392
-msgid "Der Stürmer kommt angerauscht und schlägt ein wunderbares Luftloch."
+msgid "Der StÃ¼rmer kommt angerauscht und schlÃ¤gt ein wunderbares Luftloch."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:393
-msgid "Ball zur Ecke geklärt."
+msgid "Ball zur Ecke geklÃ¤rt."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:396
 msgid "Gehalten!"
-msgstr ""
+msgstr "Atajada!"
 
 #: ../../../aa_spieltag_simulation.php:397
 msgid "Tolle Parade vom Torwart."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:398
-msgid "Der Keeper wehrt den Ball mit den Fäusten ab."
-msgstr ""
+msgid "Der Keeper wehrt den Ball mit den FÃ¤usten ab."
+msgstr "El arquero rechaza la pelota con sus puÃ±os en alto."
 
 #: ../../../aa_spieltag_simulation.php:399
 msgid "Der Torwart wehrt den Ball ab."
-msgstr ""
+msgstr "El arquero ataja la pelota."
 
 #: ../../../aa_spieltag_simulation.php:400
 msgid "Der Schlussmann kann den Ball mit einer herrlichen Parade retten."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:401
-msgid "Der Torhüter fliegt ... und hält! Tolle Parade!"
+msgid "Der TorhÃ¼ter fliegt ... und hÃ¤lt! Tolle Parade!"
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:402
@@ -1043,11 +1043,11 @@ msgid "Der Torwart klatscht nur ab, aber der Nachschuss geht vorbei."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:403
-msgid "Der Schlussmann fängt sicher."
+msgid "Der Schlussmann fÃ¤ngt sicher."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:404
-msgid "Der Torhüter vereitelt die Chance mit einem tollen Reflex."
+msgid "Der TorhÃ¼ter vereitelt die Chance mit einem tollen Reflex."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:405
@@ -1057,18 +1057,18 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:408
 msgid "Abseits."
-msgstr "Posición adelantada."
+msgstr "PosiciÃ³n adelantada."
 
 #: ../../../aa_spieltag_simulation.php:409
 msgid "XYZ im Abseits."
 msgstr "XYZ en offside."
 
 #: ../../../aa_spieltag_simulation.php:410
-msgid "Schönes Tor von XYZ, doch leider Abseits."
+msgid "SchÃ¶nes Tor von XYZ, doch leider Abseits."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:411
-msgid "Ein Spieler von XYZ läuft ins Abseits."
+msgid "Ein Spieler von XYZ lÃ¤uft ins Abseits."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:412
@@ -1077,7 +1077,7 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:413
 msgid "XYZ ist im Abseits."
-msgstr ""
+msgstr "XYZ en posiciÃ³n adelantada."
 
 #: ../../../aa_spieltag_simulation.php:414
 msgid "Der Spieler von XYZ wird in Abseitsposition angespielt."
@@ -1092,32 +1092,32 @@ msgid "Der Referee entscheidet auf Abseitsstellung."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:417
-msgid "Abseits! Die Spieler können es kaum glauben."
-msgstr ""
+msgid "Abseits! Die Spieler kÃ¶nnen es kaum glauben."
+msgstr "Â¡Offside! El jugador no lo puede cree."
 
 #: ../../../aa_spieltag_simulation.php:418
 msgid "Der Spieler steht im Abseits."
-msgstr ""
+msgstr "El jugador esta en una clara posiciÃ³n adelantada."
 
 #: ../../../aa_spieltag_simulation.php:421
 msgid "XYZ kontert."
-msgstr ""
+msgstr "XYZ contraataca."
 
 #: ../../../aa_spieltag_simulation.php:422
 msgid "Schneller Gegenangriff von XYZ."
-msgstr ""
+msgstr "Un rÃ¡pido contraataque de XYZ."
 
 #: ../../../aa_spieltag_simulation.php:423
 msgid "Sofort der Konter von XYZ."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:424
-msgid "Konterchance für XYZ."
-msgstr ""
+msgid "Konterchance fÃ¼r XYZ."
+msgstr "Corte inmediato de XYZ."
 
 #: ../../../aa_spieltag_simulation.php:425
-msgid "Kontermöglichkeit für XYZ."
-msgstr ""
+msgid "KontermÃ¶glichkeit fÃ¼r XYZ."
+msgstr "Oportunidad de contraataque de XYZ."
 
 #: ../../../aa_spieltag_simulation.php:426
 msgid "XYZ hat sofort wieder die Kugel und geht in die Offensive."
@@ -1136,7 +1136,7 @@ msgid "Direkter Konter von XYZ."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:430
-msgid "Schönes Konterspiel von XYZ."
+msgid "SchÃ¶nes Konterspiel von XYZ."
 msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:431
@@ -1145,27 +1145,27 @@ msgstr ""
 
 #: ../../../aa_spieltag_simulation.php:434
 msgid "Ball im Aus. Einwurf."
-msgstr ""
+msgstr "La pelota se va. Lateral."
 
 #: ../../../aa_spieltag_simulation.php:435
 msgid "Der Ball geht ins Aus."
-msgstr ""
+msgstr "La pelota se va por la banda."
 
 #: ../../../aa_spieltag_simulation.php:436
 msgid "Die Kugel rollt ins Aus. Einwurf."
-msgstr ""
+msgstr "La pelota rueda hacia afuera. Lateral."
 
 #: ../../../aa_spieltag_simulation.php:437
-msgid "Einwurf tief in der gegnerischen Hälfte."
-msgstr ""
+msgid "Einwurf tief in der gegnerischen HÃ¤lfte."
+msgstr "Pase en profundidad hacia el campo contrario."
 
 #: ../../../aa_spieltag_simulation.php:440
 msgid "Der Gegner hat den Ball."
-msgstr ""
+msgstr "El oponente tiene la pelota."
 
 #: ../../../aa_spieltag_simulation.php:441
-msgid "Ballbesitz für den Gegner."
-msgstr ""
+msgid "Ballbesitz fÃ¼r den Gegner."
+msgstr "La poseciÃ³n de la pelota es para el oponente."
 
 #: ../../../aa_spieltag_simulation.php:782
 msgid "Ticketpreis:"
@@ -1176,7 +1176,7 @@ msgid ""
 "Die Zeitschrift &quot;Bolzblatt&quot; bewertet die Leistung der Teams wie "
 "folgt:"
 msgstr ""
-"La revista &quot;Bolzblatt&quot; evalúa el desempeño de los equipos de la "
+"La revista &quot;Bolzblatt&quot; evalÃºa el desempeÃ±o de los equipos de la "
 "siguiente manera:"
 
 #: ../../../aa_spieltag_simulation.php:977
@@ -1194,8 +1194,8 @@ msgid "Der Schiedsrichter pfeift das Spiel ab."
 msgstr ""
 
 #: ../../../android_app.php:2 ../../../android_app.php:19 ../../../zz2.php:70
-msgid "Android™-App"
-msgstr "Android™-App"
+msgid "Androidâ„¢-App"
+msgstr "Androidâ„¢-App"
 
 #: ../../../android_app.php:20
 msgid ""
@@ -1208,37 +1208,37 @@ msgstr ""
 #: ../../../android_app.php:22
 msgid ""
 "Aktiviere unter <em>Einstellungen</em> &raquo; <em>Anwendungen</em> das "
-"Kästchen bei &quot;Unbekannte Quellen&quot;, damit Du die Ballmanager-App "
+"KÃ¤stchen bei &quot;Unbekannte Quellen&quot;, damit Du die Ballmanager-App "
 "von dieser Seite aus installieren kannst."
 msgstr ""
 
 #: ../../../android_app.php:23
 msgid ""
-"Lade <a href=\"/Ballmanager.apk\">diese Datei</a> auf Dein Gerät und öffne "
+"Lade <a href=\"/Ballmanager.apk\">diese Datei</a> auf Dein GerÃ¤t und Ã¶ffne "
 "Sie - die Installation startet automatisch."
 msgstr ""
 
 #: ../../../android_app.php:24
 msgid ""
-"Auf Geräten bis einschließlich Android 2.3.3 findest Du alle Bereiche des "
-"Spiels im Menü, das sich öffnet, wenn Du die Menü-Taste Deines Gerätes "
-"drückst. Auf Geräten ab Android 3.0 findest Du alles im Menü am oberen Rand "
-"des Bildschirms. Über die drei Punkte/Striche, die übereinander zu sehen "
-"sind, kannst Du die restlichen Menü-Einträge anzeigen lassen."
+"Auf GerÃ¤ten bis einschlieÃŸlich Android 2.3.3 findest Du alle Bereiche des "
+"Spiels im MenÃ¼, das sich Ã¶ffnet, wenn Du die MenÃ¼-Taste Deines GerÃ¤tes "
+"drÃ¼ckst. Auf GerÃ¤ten ab Android 3.0 findest Du alles im MenÃ¼ am oberen Rand "
+"des Bildschirms. Ãœber die drei Punkte/Striche, die Ã¼bereinander zu sehen "
+"sind, kannst Du die restlichen MenÃ¼-EintrÃ¤ge anzeigen lassen."
 msgstr ""
-"En los dispositivos de Android 2.3.3, puedes encontrar todas las áreas del "
-"juego en el menú que se abre al pulsar el botón de menú de tu dispositivo. "
-"En dispositivos con Android 3.0, se puede encontrar todo en el menú de la "
-"parte superior de la pantalla. El botón con los tres puntos / líneas, una "
-"encima de la otra, para ver el resto de las entradas del menú."
+"En los dispositivos de Android 2.3.3, puedes encontrar todas las Ã¡reas del "
+"juego en el menÃº que se abre al pulsar el botÃ³n de menÃº de tu dispositivo. "
+"En dispositivos con Android 3.0, se puede encontrar todo en el menÃº de la "
+"parte superior de la pantalla. El botÃ³n con los tres puntos / lÃ­neas, una "
+"encima de la otra, para ver el resto de las entradas del menÃº."
 
 #: ../../../aufstellung.php:2 ../../../aufstellung.php:37 ../../../zz2.php:176
 msgid "Aufstellung"
-msgstr "Formación"
+msgstr "FormaciÃ³n"
 
 #: ../../../aufstellung.php:173
 msgid "Aufstellung speichern"
-msgstr "Guardar formación"
+msgstr "Guardar formaciÃ³n"
 
 #: ../../../aufstellung.php:175
 msgid "Torwart:"
@@ -1289,7 +1289,7 @@ msgid "Silber"
 msgstr "Plateado"
 
 #: ../../../aufstellung.php:268 ../../../kader.php:161
-msgid "Grün"
+msgid "GrÃ¼n"
 msgstr "Verde"
 
 #: ../../../aufstellung.php:269
@@ -1298,10 +1298,10 @@ msgstr ""
 
 #: ../../../aufstellung.php:269 ../../../aufstellung.php:280
 msgid "Bist Du sicher?"
-msgstr ""
+msgstr "Â¿EstÃ¡s seguro?"
 
 #: ../../../aufstellung.php:280
-msgid "Aufstellung übernehmen"
+msgid "Aufstellung Ã¼bernehmen"
 msgstr ""
 
 #: ../../../aufstellung.php:282
@@ -1326,7 +1326,7 @@ msgstr "ED"
 #: ../../../aufstellung.php:290 ../../../beobachtung.php:41
 #: ../../../kader.php:60 ../../../stat_staerkste_ligen_a.php:21
 #: ../../../stat_staerkste_ligen_k.php:21 ../../../vertraege.php:13
-msgid "Stärke"
+msgid "StÃ¤rke"
 msgstr "Fuerza"
 
 #: ../../../aufstellung.php:291
@@ -1340,12 +1340,12 @@ msgstr "MO"
 #: ../../../aufstellung.php:340 ../../../beobachtung.php:119
 #: ../../../entwicklung.php:43 ../../../kader.php:164
 #: ../../../vertraege.php:86
-msgid "Überschriften:"
+msgid "Ãœberschriften:"
 msgstr "Encabezados:"
 
 #: ../../../aufstellung.php:340
 msgid "SE: Startelf, MT: Mannschaftsteil, AL: Alter, FR: Frische, MO: Moral"
-msgstr "SE: titulares, MT: posición, AL: edad, FR: frescura, MO: moral"
+msgstr "SE: titulares, MT: posiciÃ³n, AL: edad, FR: frescura, MO: moral"
 
 #: ../../../aufstellung.php:341 ../../../beobachtung.php:120
 #: ../../../entwicklung.php:44 ../../../kader.php:165
@@ -1363,7 +1363,7 @@ msgstr "Negrita:"
 
 #: ../../../aufstellung.php:342
 msgid "Aufgestellte Spieler"
-msgstr "Jugadores en formación"
+msgstr "Jugadores en formaciÃ³n"
 
 #: ../../../aufstellung.php:343
 msgid "Rote Schrift:"
@@ -1399,17 +1399,18 @@ msgstr "jugadores lesionados o suspendidos"
 #: ../../../stat_transfer_uebersicht.php:72
 #: ../../../stat_treuesteSpieler.php:79
 #: ../../../stat_wertvollste_spieler.php:69
-#: ../../../stat_wertvollste_teams.php:89 ../../../taktik.php:183
+#: ../../../stat_wertvollste_teams.php:89
+#: ../../../stat_zuschauerverlauf.php:44 ../../../taktik.php:183
 #: ../../../tipps_des_tages.php:40 ../../../top_manager.php:115
 #: ../../../transferliste.php:42 ../../../ver_buchungen.php:64
 #: ../../../ver_lotto.php:153 ../../../vertraege.php:88
 #: ../../../vertrag_verlaengern.php:132 ../../../wio.php:56
-msgid "Du musst angemeldet sein, um diese Seite aufrufen zu können!"
-msgstr "Debes estar conectado para ver esta página!"
+msgid "Du musst angemeldet sein, um diese Seite aufrufen zu kÃ¶nnen!"
+msgstr "Debes estar conectado para ver esta pÃ¡gina!"
 
 #: ../../../beobachtung.php:2 ../../../zz2.php:169
 msgid "Beobachtung"
-msgstr "Observación"
+msgstr "ObservaciÃ³n"
 
 #: ../../../beobachtung.php:17
 msgid ""
@@ -1441,7 +1442,7 @@ msgid "Noch"
 msgstr ""
 
 #: ../../../beobachtung.php:95 ../../../postausgang.php:75
-msgid "Markierte löschen"
+msgid "Markierte lÃ¶schen"
 msgstr "Eliminar seleccionados"
 
 #: ../../../beobachtung.php:103 ../../../entwicklung.php:50
@@ -1465,7 +1466,7 @@ msgstr "Anterior"
 #: ../../../neueAccounts.php:61 ../../../postausgang.php:95
 #: ../../../protokoll.php:96 ../../../top_manager.php:110
 #: ../../../ver_buchungen.php:59
-msgid "Nächste"
+msgid "NÃ¤chste"
 msgstr "Siguiente"
 
 #: ../../../beobachtung.php:116 ../../../entwicklung.php:63
@@ -1474,11 +1475,11 @@ msgstr "Siguiente"
 #: ../../../protokoll.php:97 ../../../top_manager.php:111
 #: ../../../ver_buchungen.php:60
 msgid "Letzte"
-msgstr "Último"
+msgstr "Ãšltimo"
 
 #: ../../../beobachtung.php:119 ../../../entwicklung.php:43
 msgid "MT: Mannschaftsteil"
-msgstr "MT: posición"
+msgstr "MT: posiciÃ³n"
 
 #: ../../../bp_nicht_eingeloggt.php:2 ../../../bp_nicht_eingeloggt.php:4
 msgid "Nicht eingeloggt"
@@ -1486,15 +1487,15 @@ msgstr "Sin conectar"
 
 #: ../../../bp_nicht_eingeloggt.php:5
 msgid ""
-"Im Moment bist Du leider nicht eingeloggt. Bitte logge Dich über die "
+"Im Moment bist Du leider nicht eingeloggt. Bitte logge Dich Ã¼ber die "
 "Bigpoint-Seite beim Ballmanager ein, damit Du spielen kannst."
 msgstr ""
 
 #: ../../../bp_username_waehlen.php:12
 msgid ""
-"Dein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30):"
+"Dein Managername darf nur die folgenden Zeichen enthalten (LÃ¤nge: 3-30):"
 msgstr ""
-"Su nombre de Mánager sólo puede contener los siguientes caracteres "
+"Su nombre de MÃ¡nager sÃ³lo puede contener los siguientes caracteres "
 "(longitud: 3-30):"
 
 #: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
@@ -1502,12 +1503,12 @@ msgid "Buchstaben:"
 msgstr "Letras:"
 
 #: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
-msgid "A-Z und Umlaute (groß und klein)"
+msgid "A-Z und Umlaute (groÃŸ und klein)"
 msgstr "A-Z (superior e inferior)"
 
 #: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
 msgid "Zahlen:"
-msgstr "Números"
+msgstr "NÃºmeros"
 
 #: ../../../bp_username_waehlen.php:13 ../../../registrieren.php:74
 msgid "Sonderzeichen:"
@@ -1527,33 +1528,34 @@ msgstr "Por favor, vuelve a intentarlo."
 
 #: ../../../bp_username_waehlen.php:35 ../../../bp_username_waehlen.php:48
 msgid ""
-"Du hast schon einen Benutzernamen und kannst deshalb hier keinen wählen."
+"Du hast schon einen Benutzernamen und kannst deshalb hier keinen wÃ¤hlen."
 msgstr "Ya tienes un nombre de usuario y por lo tanto no puedes elegir otro."
 
 #: ../../../bp_username_waehlen.php:39 ../../../bp_username_waehlen.php:41
-msgid "Benutzernamen wählen"
+msgid "Benutzernamen wÃ¤hlen"
 msgstr "Elige un nombre de usuario"
 
 #: ../../../bp_username_waehlen.php:43
 msgid ""
 "Willkommen beim Ballmanager! Du stehst jetzt erst einmal auf der Warteliste. "
-"Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - "
-"erhältst Du eine Nachricht von uns bei Bigpoint."
+"Sobald ein Team fÃ¼r Dich frei wird - und das wird nicht lange dauern - "
+"erhÃ¤ltst Du eine Nachricht von uns bei Bigpoint."
 msgstr ""
 "Bienvenidos a Ballmanager! Ahora te encuentras en nuestra lista de espera. "
-"Tan pronto como un equipo esté disponible - y esto no tomará mucho tiempo - "
-"recibirás una notificación de nuestra parte en Bigpoint."
+"Tan pronto como un equipo estÃ© disponible - y esto no tomarÃ¡ mucho tiempo - "
+"recibirÃ¡s una notificaciÃ³n de nuestra parte en Bigpoint."
 
 #: ../../../bp_username_waehlen.php:44
 msgid ""
 "Damit es dann sofort losgehen kann, brauchst Du jetzt noch einen "
-"Benutzernamen. Dieser Name wird überall im Spiel angezeigt, Du bist daran zu "
+"Benutzernamen. Dieser Name wird Ã¼berall im Spiel angezeigt, Du bist daran zu "
 "erkennen."
 msgstr ""
-"Para empezar, sólo necesitas un nombre de usuario. Este nombre se mostrará a "
-"lo largo del juego. Serás reconocido bajo este nombre."
+"Para empezar, sÃ³lo necesitas un nombre de usuario. Este nombre se mostrarÃ¡ a "
+"lo largo del juego. SerÃ¡s reconocido bajo este nombre."
 
 #: ../../../chat.php:2 ../../../wio.php:6 ../../../wio.php:38
+#: ../../../zz2.php:249
 msgid "Chat"
 msgstr "Chat"
 
@@ -1562,12 +1564,12 @@ msgid "Chatter:"
 msgstr "Conectados:"
 
 #: ../../../chat.php:101
-msgid "Nächster Chat-Abend:"
+msgid "NÃ¤chster Chat-Abend:"
 msgstr "Siguiente charla de la tarde:"
 
 #: ../../../chat.php:119
 msgid ""
-"Bitte aktiviere JavaScript in Deinem Browser, um den Chat nutzen zu können!"
+"Bitte aktiviere JavaScript in Deinem Browser, um den Chat nutzen zu kÃ¶nnen!"
 msgstr ""
 "Por favor habilita Javascript en tu navegador para poder utilizar el chat!"
 
@@ -1578,7 +1580,7 @@ msgstr "Reportes del Chat"
 
 #: ../../../chat_reports.php:30
 msgid "Kein Protokoll gefunden!"
-msgstr "¡Sin notificaciones!"
+msgstr "Â¡Sin notificaciones!"
 
 #: ../../../chat_reports.php:52
 msgid "Gemeldet"
@@ -1608,14 +1610,14 @@ msgstr "Torneo nacional"
 
 #: ../../../cup.php:5 ../../../liveZentrale.php:6
 #: ../../../stat_cupsieger.php:13
-msgid "Land wählen"
-msgstr "Elige un país"
+msgid "Land wÃ¤hlen"
+msgstr "Elige un paÃ­s"
 
 #: ../../../cup.php:37
 msgid ""
-"Es gibt eine Qualifikation und danach fünf Runden, die jeweils ausgelost "
+"Es gibt eine Qualifikation und danach fÃ¼nf Runden, die jeweils ausgelost "
 "werden. In einem KO-Spiel pro Runde ermitteln die Teams den Sieger, der dann "
-"die nächste Runde erreicht."
+"die nÃ¤chste Runde erreicht."
 msgstr ""
 
 #: ../../../cup.php:119
@@ -1636,12 +1638,12 @@ msgstr "Notas:"
 msgid ""
 "Die Zahlen in den eckigen Klammern geben die Liga des jeweiligen Teams an."
 msgstr ""
-"Los números entre corchetes indican la liga de los respectivos equipos."
+"Los nÃºmeros entre corchetes indican la liga de los respectivos equipos."
 
 #: ../../../einstellungen.php:2 ../../../einstellungen.php:264
 #: ../../../zz2.php:152
 msgid "Einstellungen"
-msgstr "Configuración"
+msgstr "ConfiguraciÃ³n"
 
 #: ../../../einstellungen.php:57
 msgid "Urlaub abbrechen"
@@ -1649,23 +1651,23 @@ msgstr "Cancelar vacaciones"
 
 #: ../../../einstellungen.php:74
 msgid ""
-"Dein Passwort konnte leider nicht geändert werden. Bitte versuche es noch "
+"Dein Passwort konnte leider nicht geÃ¤ndert werden. Bitte versuche es noch "
 "einmal!"
 msgstr ""
-"Desafortunadamente, tu contraseña no se ha podido cambiar. Por favor, "
-"¡vuelve a intentarlo!"
+"Desafortunadamente, tu contraseÃ±a no se ha podido cambiar. Por favor, "
+"Â¡vuelve a intentarlo!"
 
 #: ../../../einstellungen.php:88
-msgid "Dein Passwort wurde erfolgreich geändert!"
-msgstr "¡Tu contraseña fue cambiada exitosamente!"
+msgid "Dein Passwort wurde erfolgreich geÃ¤ndert!"
+msgstr "Â¡Tu contraseÃ±a fue cambiada exitosamente!"
 
 #: ../../../einstellungen.php:93
-msgid "Dein altes und neues Passwort dürfen nicht übereinstimmen!"
-msgstr ""
+msgid "Dein altes und neues Passwort dÃ¼rfen nicht Ã¼bereinstimmen!"
+msgstr "Su contraseÃ±a antigua y la nueva deben ser diferentes!"
 
 #: ../../../einstellungen.php:97
-msgid "Bitte gib mindestens 6 Zeichen für das Passwort ein!"
-msgstr ""
+msgid "Bitte gib mindestens 6 Zeichen fÃ¼r das Passwort ein!"
+msgstr "Por favor, introduce un mÃ­nimo de 6 caracteres para la contraseÃ±a!"
 
 #: ../../../einstellungen.php:105
 msgid "Du kannst leider keinen Urlaub beantragen, der so lange dauert."
@@ -1673,23 +1675,23 @@ msgstr ""
 
 #: ../../../einstellungen.php:126
 msgid "Dein Urlaub wurde genehmigt!"
-msgstr "¡Tus vacaciones han sido aceptadas!"
+msgstr "Â¡Tus vacaciones han sido aceptadas!"
 
 #: ../../../einstellungen.php:150 ../../../regeln.php:104
 msgid "E-Mail-Adresse"
-msgstr "Dirección de correo electrónico"
+msgstr "DirecciÃ³n de correo electrÃ³nico"
 
 #: ../../../einstellungen.php:151
 msgid "Du bist mit der folgenden E-Mail-Adresse registriert:"
-msgstr "Te has registrado con la siguiente dirección de correo electrónico:"
+msgstr "Te has registrado con la siguiente direcciÃ³n de correo electrÃ³nico:"
 
 #: ../../../einstellungen.php:154
-msgid "Vereinsnamen ändern"
+msgid "Vereinsnamen Ã¤ndern"
 msgstr "Cambiar el nombre del equipo"
 
 #: ../../../einstellungen.php:159
-msgid "Managernamen ändern"
-msgstr "Cambiar el nombre de mánager"
+msgid "Managernamen Ã¤ndern"
+msgstr "Cambiar el nombre de mÃ¡nager"
 
 #: ../../../einstellungen.php:163
 msgid "Urlaub beantragen"
@@ -1698,13 +1700,13 @@ msgstr "Solicitar vacaciones"
 #: ../../../einstellungen.php:166
 msgid ""
 "Mit dem folgenden Formular kannst Du Urlaub beantragen. In Deiner "
-"Urlaubszeit kannst Du nicht automatisch gelöscht werden. Außerdem verwaltet "
-"der Computer Deine Aufstellung und verlängert alle Spieler-Verträge, die "
-"während Deines Urlaubs auslaufen würden."
+"Urlaubszeit kannst Du nicht automatisch gelÃ¶scht werden. AuÃŸerdem verwaltet "
+"der Computer Deine Aufstellung und verlÃ¤ngert alle Spieler-VertrÃ¤ge, die "
+"wÃ¤hrend Deines Urlaubs auslaufen wÃ¼rden."
 msgstr ""
 "Con el siguiente formulario, puedes solicitar unas vacaciones. En tu tiempo "
-"de vacaciones, estarás protegido contra el borrado automático. Aparte de "
-"eso, la computadora se encargará de tus formaciones y extenderá los "
+"de vacaciones, estarÃ¡s protegido contra el borrado automÃ¡tico. Aparte de "
+"eso, la computadora se encargarÃ¡ de tus formaciones y extenderÃ¡ los "
 "contratos de los jugadores en caso expiren durante tus vacaciones."
 
 #: ../../../einstellungen.php:176 ../../../einstellungen.php:194
@@ -1717,73 +1719,73 @@ msgstr "Ya puedes solicitar unas nuevas vacaciones."
 
 #: ../../../einstellungen.php:189
 msgid "Kurzurlaub (1-10 Tage):"
-msgstr "Vacaciones cortas (1-10 días):"
+msgstr "Vacaciones cortas (1-10 dÃ­as):"
 
 #: ../../../einstellungen.php:207
 msgid "Langer Urlaub (11-30 Tage):"
-msgstr "Vacaciones largas (11-30 días):"
+msgstr "Vacaciones largas (11-30 dÃ­as):"
 
 #: ../../../einstellungen.php:240
 msgid "Beantragen"
 msgstr "Solicitar"
 
 #: ../../../einstellungen.php:246 ../../../einstellungen.php:252
-msgid "Passwort ändern"
-msgstr "Cambiar contraseña"
+msgid "Passwort Ã¤ndern"
+msgstr "Cambiar contraseÃ±a"
 
 #: ../../../einstellungen.php:247
 msgid ""
-"Mit dem folgenden Formular kannst Du Dein Passwort beim Ballmanager ändern. "
-"Dazu musst Du alle Felder ausfüllen."
+"Mit dem folgenden Formular kannst Du Dein Passwort beim Ballmanager Ã¤ndern. "
+"Dazu musst Du alle Felder ausfÃ¼llen."
 msgstr ""
-"Con este formulario puedes cambiar tu contraseña del juego. Por favor, llena "
+"Con este formulario puedes cambiar tu contraseÃ±a del juego. Por favor, llena "
 "todos los campos."
 
 #: ../../../einstellungen.php:249
 msgid "Altes Passwort:"
-msgstr "Antigua contraseña"
+msgstr "Antigua contraseÃ±a"
 
 #: ../../../einstellungen.php:250
 msgid "Neues Passwort:"
-msgstr "Nueva contraseña"
+msgstr "Nueva contraseÃ±a"
 
 #: ../../../einstellungen.php:251
-msgid "Neues Passwort (Bestätigung):"
-msgstr ""
+msgid "Neues Passwort (BestÃ¤tigung):"
+msgstr "Nueva contraseÃ±a (confirmar):"
 
 #: ../../../einstellungen.php:255
-msgid "Account löschen"
+msgid "Account lÃ¶schen"
 msgstr "Eliminar cuenta"
 
 #: ../../../einstellungen.php:256
 msgid ""
 "Du bist Dir wirklich sicher, dass Du Deinen Account hier beim Ballmanager "
-"löschen möchtest? Das ist sehr schade, aber wir akzeptieren das natürlich."
+"lÃ¶schen mÃ¶chtest? Das ist sehr schade, aber wir akzeptieren das natÃ¼rlich."
 msgstr ""
-"¿Estás seguro de que quieres eliminar tu cuenta de este juego? Es una "
-"lástima, pero lo aceptamos de todos modos."
+"Â¿EstÃ¡s seguro de que quieres eliminar tu cuenta de este juego? Es una "
+"lÃ¡stima, pero lo aceptamos de todos modos."
 
 #: ../../../einstellungen.php:257
 msgid ""
-"Wir würden uns freuen, wenn Du uns noch mitteilen würdest, was Dir hier "
+"Wir wÃ¼rden uns freuen, wenn Du uns noch mitteilen wÃ¼rdest, was Dir hier "
 "gefallen hat und was noch nicht so gut war."
 msgstr ""
 
 #: ../../../einstellungen.php:259
 msgid "Das war gut:"
-msgstr "Lo que si me gustó:"
+msgstr "Lo que si me gustÃ³:"
 
 #: ../../../einstellungen.php:260
 msgid "Das hat mir nicht gefallen:"
-msgstr "Lo que no me gustó:"
+msgstr "Lo que no me gustÃ³:"
 
 #: ../../../einstellungen.php:261
-msgid "Account endgültig löschen"
+msgid "Account endgÃ¼ltig lÃ¶schen"
 msgstr "Eliminar cuenta permanentemente"
 
 #: ../../../entwicklung.php:2 ../../../entwicklung.php:4 ../../../zz2.php:179
 msgid "Entwicklung"
-msgstr ""
+msgstr "Progreso"
 
 #: ../../../entwicklung.php:15
 msgid "Alt"
@@ -1794,14 +1796,14 @@ msgid "Neu"
 msgstr "Nuevo"
 
 #: ../../../entwicklung.php:33
-msgid "Höhepunkt"
+msgid "HÃ¶hepunkt"
 msgstr ""
 
-#: ../../../freunde.php:2 ../../../freunde.php:67
+#: ../../../freunde.php:2 ../../../freunde.php:67 ../../../zz2.php:248
 msgid "Freunde"
 msgstr "Amigos"
 
-#: ../../../freunde.php:9
+#: ../../../freunde.php:9 ../../../zz2.php:248
 msgid "Anfragen"
 msgstr "Solicitudes"
 
@@ -1811,7 +1813,7 @@ msgstr "Solicitudes"
 #: ../../../stat_meiste_titel.php:67 ../../../top_manager.php:50
 #: ../../../wio.php:6 ../../../wio.php:38
 msgid "Manager"
-msgstr "Mánager"
+msgstr "MÃ¡nager"
 
 #: ../../../freunde.php:9
 msgid "Aktionen"
@@ -1819,25 +1821,25 @@ msgstr "Acciones"
 
 #: ../../../freunde.php:29
 msgid ""
-"Wenn Du Deine Freunde zu dieser Liste hinzufügen möchtest, dann öffne bitte "
+"Wenn Du Deine Freunde zu dieser Liste hinzufÃ¼gen mÃ¶chtest, dann Ã¶ffne bitte "
 "das Profil des jeweiligen Managers und klicke unten auf den Link &quot;"
 "Freundschaft anbieten&quot;."
 msgstr ""
 "Si deseas agregar a tus amigos a esta lista, por favor abre el perfil del "
-"mánager y elige la opción &quot;Enviar solicitud de amistad&quot;."
+"mÃ¡nager y elige la opciÃ³n &quot;Enviar solicitud de amistad&quot;."
 
 #: ../../../freunde.php:31 ../../../freunde.php:52
 msgid "Letzte Aktion"
-msgstr "Última acción"
+msgstr "Ãšltima acciÃ³n"
 
 #: ../../../freunde.php:50
 msgid ""
-"Wenn Du User zu dieser Liste hinzufügen möchtest, dann öffne bitte das "
+"Wenn Du User zu dieser Liste hinzufÃ¼gen mÃ¶chtest, dann Ã¶ffne bitte das "
 "Profil des jeweiligen Managers und klicke unten auf den Link &quot;Diesen "
 "User ignorieren&quot;."
 msgstr ""
 "Si deseas agregar usuarios a esta lista, por favor abre el perfil del "
-"mánager y elige la opción &quot;Ignorar este usuario&quot;."
+"mÃ¡nager y elige la opciÃ³n &quot;Ignorar este usuario&quot;."
 
 #: ../../../freundeWerben.php:2 ../../../freundeWerben.php:4
 msgid "Freunde einladen"
@@ -1845,7 +1847,7 @@ msgstr "Invita amigos"
 
 #: ../../../freundeWerben.php:6
 msgid "Deine Freunde sind noch nicht beim Ballmanager?"
-msgstr "Tus amigos no son parte del juego todavía?"
+msgstr "Tus amigos no son parte del juego todavÃ­a?"
 
 #: ../../../freundeWerben.php:6
 msgid "Dann nutze den folgenden Link, um sie einzuladen."
@@ -1853,12 +1855,12 @@ msgstr "Usa el siguiente enlace para invitarlos."
 
 #: ../../../freundeWerben.php:6
 msgid ""
-"Wenn sie sich nach Deiner Empfehlung über den Link registrieren, bekommt "
-"<strong>ihr beide</strong> jeweils <strong>7,5 Mio.</strong> als Prämie aufs "
+"Wenn sie sich nach Deiner Empfehlung Ã¼ber den Link registrieren, bekommt "
+"<strong>ihr beide</strong> jeweils <strong>7,5 Mio.</strong> als PrÃ¤mie aufs "
 "Vereinskonto:"
 msgstr ""
 "Si se registran bajo tu recomendacion por medio del enlace, <strong>ambos</"
-"strong> recibirán <strong>7,5 Mio.</strong> como bonus para su club:"
+"strong> recibirÃ¡n <strong>7,5 Mio.</strong> como bonus para su club:"
 
 #: ../../../freundeWerben.php:8
 msgid "Tipp:"
@@ -1866,14 +1868,14 @@ msgstr "Consejo:"
 
 #: ../../../freundeWerben.php:9
 msgid ""
-"Dein Verein erhält die Prämie, sobald der andere Manager seine Manager-"
-"Prüfung abgeschlossen hat. Voraussetzung ist allerdings, dass Dein Account "
+"Dein Verein erhÃ¤lt die PrÃ¤mie, sobald der andere Manager seine Manager-"
+"PrÃ¼fung abgeschlossen hat. Voraussetzung ist allerdings, dass Dein Account "
 "und der geworbene Account nicht vom selben Computer aus gesteuert werden."
 msgstr ""
 
 #: ../../../freundeWerben.php:10
 msgid "Geworbene Manager"
-msgstr "Mánagers invitados"
+msgstr "MÃ¡nagers invitados"
 
 #: ../../../freundeWerben.php:16
 msgid "Geworben"
@@ -1881,33 +1883,33 @@ msgstr "Invitado"
 
 #: ../../../freundeWerben.php:24
 msgid "Du hast bisher noch keine User geworben!"
-msgstr "Aún no has invitado ningun usuario!"
+msgstr "AÃºn no has invitado ningun usuario!"
 
 #: ../../../freundeWerben.php:32
-msgid "Prämie erhalten"
+msgid "PrÃ¤mie erhalten"
 msgstr "Bonus recividos"
 
 #: ../../../freundeWerben.php:35
-msgid "Prämie noch nicht ausgezahlt"
+msgid "PrÃ¤mie noch nicht ausgezahlt"
 msgstr "Bonus no pagados"
 
 #: ../../../geloeschteAccounts.php:2 ../../../geloeschteAccounts.php:10
 #: ../../../zz2.php:258
-msgid "Gelöschte Accounts"
+msgid "GelÃ¶schte Accounts"
 msgstr "Cuentas eliminadas"
 
 #: ../../../geloeschteAccounts.php:11
 msgid ""
-"Die folgenden Accounts wurden zuletzt gelöscht. Entweder war der Manager "
+"Die folgenden Accounts wurden zuletzt gelÃ¶scht. Entweder war der Manager "
 "nicht mehr aktiv oder er hat seinen Account unter &quot;Einstellungen&quot; "
-"gelöscht."
+"gelÃ¶scht."
 msgstr ""
-"Las siguientes cuentas fueron las últimas en ser eliminadas. O bien el "
-"mánager no estaba activo o se eliminó la cuenta de forma manual en la "
-"sección &quot;Configuración&quot;."
+"Las siguientes cuentas fueron las Ãºltimas en ser eliminadas. O bien el "
+"mÃ¡nager no estaba activo o se eliminÃ³ la cuenta de forma manual en la "
+"secciÃ³n &quot;ConfiguraciÃ³n&quot;."
 
 #: ../../../geloeschteAccounts.php:12
-msgid "Gelöscht"
+msgid "GelÃ¶scht"
 msgstr "Eliminada"
 
 #: ../../../geloeschteAccounts.php:12
@@ -1923,16 +1925,16 @@ msgid "Liga"
 msgstr "Liga"
 
 #: ../../../geloeschterAccount.php:2 ../../../geloeschterAccount.php:4
-msgid "Gelöschter Account"
+msgid "GelÃ¶schter Account"
 msgstr "Eliminar cuenta"
 
 #: ../../../geloeschterAccount.php:5
 msgid ""
-"Du hast Deinen Account beim Ballmanager gelöscht. Deshalb kannst Du leider "
+"Du hast Deinen Account beim Ballmanager gelÃ¶scht. Deshalb kannst Du leider "
 "nicht mehr mitspielen."
 msgstr ""
 "Ha borrado tu cuenta en este juego. Por lo tanto ya no puedes jugar ni "
-"competir más."
+"competir mÃ¡s."
 
 #: ../../../gesperrteTeamnamen.php:2 ../../../gesperrteTeamnamen.php:4
 msgid "Gesperrte Teamnamen"
@@ -1940,20 +1942,20 @@ msgstr "Nombre de equipos bloqueados"
 
 #: ../../../gruendeFuerLoeschung.php:2 ../../../gruendeFuerLoeschung.php:10
 #: ../../../zz2.php:260
-msgid "Gründe für Löschung"
-msgstr "Razones de la eliminación"
+msgid "GrÃ¼nde fÃ¼r LÃ¶schung"
+msgstr "Razones de la eliminaciÃ³n"
 
 #: ../../../gruendeFuerLoeschung.php:11
 msgid ""
-"Warum haben sich die User beim Ballmanager gelöscht? Lies nach, was ihnen "
+"Warum haben sich die User beim Ballmanager gelÃ¶scht? Lies nach, was ihnen "
 "gefallen und hat und was nicht."
 msgstr ""
-"¿Por qué los usuarios han borrado sus cuentas en este juego? Lee aquí que "
-"les ha gustado y lo que se debe mejorar en su opinión."
+"Â¿Por quÃ© los usuarios han borrado sus cuentas en este juego? Lee aquÃ­ que "
+"les ha gustado y lo que se debe mejorar en su opiniÃ³n."
 
 #: ../../../gruendeFuerLoeschung.php:12
-msgid "Löschdatum"
-msgstr "Fecha de eliminación"
+msgid "LÃ¶schdatum"
+msgstr "Fecha de eliminaciÃ³n"
 
 #: ../../../gruendeFuerLoeschung.php:12
 msgid "Positiv"
@@ -1964,8 +1966,8 @@ msgid "Negativ"
 msgstr "Negativo"
 
 #: ../../../index.php:315
-msgid "Kostenloser Online-Fußball-Manager"
-msgstr "Mánager de Futbol Online Gratuito"
+msgid "Kostenloser Online-FuÃŸball-Manager"
+msgstr "MÃ¡nager de Futbol Online Gratuito"
 
 #: ../../../ipInfo.php:2 ../../../ipInfo.php:42
 msgid "IP-Info"
@@ -1981,11 +1983,11 @@ msgstr "Usuario"
 
 #: ../../../ipInfo.php:16 ../../../neueAccounts.php:12
 msgid "Letzter Login"
-msgstr "Última conexión"
+msgstr "Ãšltima conexiÃ³n"
 
 #: ../../../kader.php:2 ../../../zz2.php:178
 msgid "Kader"
-msgstr ""
+msgstr "Plantel"
 
 #: ../../../kader.php:57
 msgid "TS"
@@ -2008,8 +2010,8 @@ msgid ""
 "MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, PS: Pflichtspiele "
 "(Tore), MW: Marktwert in Millionen Euro"
 msgstr ""
-"PT: posición, TS: estado de transferencia, AG: edad, OM: partidos oficiales "
-"(goles), MV: valor de mercado en millones €"
+"PT: posiciÃ³n, TS: estado de transferencia, AG: edad, OM: partidos oficiales "
+"(goles), MV: valor de mercado en millones â‚¬"
 
 #: ../../../kader.php:166
 msgid "Durchgestrichen:"
@@ -2021,7 +2023,7 @@ msgstr ""
 
 #: ../../../kader.php:171
 msgid "Position"
-msgstr "Posición"
+msgstr "PosiciÃ³n"
 
 #: ../../../kader.php:172
 msgid "Besetzung"
@@ -2032,7 +2034,7 @@ msgid "Kalender"
 msgstr "Calendario"
 
 #: ../../../kalender.php:46
-msgid "Anstoß"
+msgid "AnstoÃŸ"
 msgstr "Saque inicial"
 
 #: ../../../kalender.php:47
@@ -2050,10 +2052,10 @@ msgstr "Copa Internacional: Preliminares (ida)"
 
 #: ../../../kalender.php:53
 msgid "Cup: Qualifikation"
-msgstr "Copa Nacional: Clasificación"
+msgstr "Copa Nacional: ClasificaciÃ³n"
 
 #: ../../../kalender.php:54
-msgid "Pokal: Vorrunde (Rückspiel)"
+msgid "Pokal: Vorrunde (RÃ¼ckspiel)"
 msgstr "Copa Internacional: Preliminares (vuelta)"
 
 #: ../../../kalender.php:55
@@ -2065,7 +2067,7 @@ msgid "Pokal: Achtelfinale (Hinspiel)"
 msgstr "Copa Internacional: Octavos de final (ida)"
 
 #: ../../../kalender.php:57
-msgid "Pokal: Achtelfinale (Rückspiel)"
+msgid "Pokal: Achtelfinale (RÃ¼ckspiel)"
 msgstr "Copa Internacional: Octavos de final (vuelta)"
 
 #: ../../../kalender.php:58
@@ -2077,7 +2079,7 @@ msgid "Pokal: Viertelfinale (Hinspiel)"
 msgstr "Copa Internacional: Cuartos de final (ida)"
 
 #: ../../../kalender.php:60
-msgid "Pokal: Viertelfinale (Rückspiel)"
+msgid "Pokal: Viertelfinale (RÃ¼ckspiel)"
 msgstr "Copa Internacional: Cuartos de final (vuelta)"
 
 #: ../../../kalender.php:60
@@ -2093,7 +2095,7 @@ msgid "Cup: Halbfinale"
 msgstr "Copa Nacional: Semifinal"
 
 #: ../../../kalender.php:62
-msgid "Pokal: Halbfinale (Rückspiel)"
+msgid "Pokal: Halbfinale (RÃ¼ckspiel)"
 msgstr "Copa Internacional: Semifinal (vuelta)"
 
 #: ../../../kalender.php:63
@@ -2111,7 +2113,7 @@ msgid "Testspiele"
 msgstr "Amistosos"
 
 #: ../../../lig_testspiele_liste.php:14
-msgid "Spieltag auswählen"
+msgid "Spieltag auswÃ¤hlen"
 msgstr ""
 
 #: ../../../lig_testspiele_liste.php:43
@@ -2119,7 +2121,7 @@ msgid "Heim"
 msgstr "Local"
 
 #: ../../../lig_testspiele_liste.php:44
-msgid "Auswärts"
+msgid "AuswÃ¤rts"
 msgstr "Visitante"
 
 #: ../../../ligaTausch.php:2 ../../../ligaTausch.php:4
@@ -2128,53 +2130,53 @@ msgstr "Intercambio de ligas"
 
 #: ../../../ligaTausch.php:6 ../../../ligaTauschWuensche.php:2
 #: ../../../ligaTauschWuensche.php:51 ../../../ligaTauschWuensche.php:66
-msgid "Tausch-Wünsche"
-msgstr "Intercambio-configuración"
+msgid "Tausch-WÃ¼nsche"
+msgstr "Intercambio-configuraciÃ³n"
 
 #: ../../../ligaTausch.php:13
 msgid "Wichtig: Vor Liga-Tausch erst lesen:"
-msgstr "Atención: por favor lee antes de intercambiar ligas:"
+msgstr "AtenciÃ³n: por favor lee antes de intercambiar ligas:"
 
 #: ../../../ligaTausch.php:15
 msgid ""
-"Dann ist der Liga-Tausch genau das Richtige für Dich! Tausche einfach mit "
-"einem anderen Manager die Liga, der gerne in Deiner Liga spielen würde."
+"Dann ist der Liga-Tausch genau das Richtige fÃ¼r Dich! Tausche einfach mit "
+"einem anderen Manager die Liga, der gerne in Deiner Liga spielen wÃ¼rde."
 msgstr ""
-"Entonces el cambio de la liga es exactamente lo que buscas! Sólo intercambia "
-"ligas con otro mánager que quiere jugar en tu liga."
+"Entonces el cambio de la liga es exactamente lo que buscas! SÃ³lo intercambia "
+"ligas con otro mÃ¡nager que quiere jugar en tu liga."
 
 #: ../../../ligaTausch.php:16
 msgid ""
-"Versendete Anfragen verfallen automatisch nach 24h. Kläre deshalb am besten "
+"Versendete Anfragen verfallen automatisch nach 24h. KlÃ¤re deshalb am besten "
 "vorher schon per Post mit dem anderen Manager, ob Interesse an einem Tausch "
 "besteht."
 msgstr ""
-"Las solicitudes enviadas vencen automáticamente después de 24 horas. Es por "
-"ello que recomendamos discutir con el otro mánager de antemano si están "
+"Las solicitudes enviadas vencen automÃ¡ticamente despuÃ©s de 24 horas. Es por "
+"ello que recomendamos discutir con el otro mÃ¡nager de antemano si estÃ¡n "
 "interesados en un intercambio."
 
 #: ../../../ligaTausch.php:17
 msgid ""
 "Wenn beide Manager einem Tausch zustimmen, dann werden die Namen der Teams "
-"getauscht und Du spielst alle Wettbewerbe (Liga, Pokal, Cup und Test) für "
+"getauscht und Du spielst alle Wettbewerbe (Liga, Pokal, Cup und Test) fÃ¼r "
 "das andere Team zu Ende. Der Rest (Spieler, Konto, Titel usw.) bleibt "
 "gleich. Beachte also, dass Testspiele, die Du eventuell schon vereinbart "
 "hast, nicht zum neuen Verein mitgenommen werden."
 msgstr ""
-"Si ambos mánagers están de acuerdo con el cambio, los nombres de los dos "
-"equipos se cambiarán y estarás jugando todas las competiciones (liga, copa "
+"Si ambos mÃ¡nagers estÃ¡n de acuerdo con el cambio, los nombres de los dos "
+"equipos se cambiarÃ¡n y estarÃ¡s jugando todas las competiciones (liga, copa "
 "nacional e internacional, los amistosos) para el otro equipo hasta el final "
 "de la temporada. El resto (jugadores, cuenta, logros, etc) no van a cambiar. "
-"Así que por favor ten en cuenta que no llevaras los amistosas con tu nuevo "
+"AsÃ­ que por favor ten en cuenta que no llevaras los amistosas con tu nuevo "
 "equipo en caso de que ya hubieses arreglado alguno para esta temporada."
 
 #: ../../../ligaTausch.php:29
 msgid ""
-"Der Verband erlaubt einen Liga-Tausch nur an den ersten fünf Spieltagen. "
-"Bitte warte bis zur nächsten Saison."
+"Der Verband erlaubt einen Liga-Tausch nur an den ersten fÃ¼nf Spieltagen. "
+"Bitte warte bis zur nÃ¤chsten Saison."
 msgstr ""
-"La asociación permite solo un intercambio de liga en los primeros cinco días "
-"de cada temporada. Por favor, espere hasta la próxima temporada."
+"La asociaciÃ³n permite solo un intercambio de liga en los primeros cinco dÃ­as "
+"de cada temporada. Por favor, espere hasta la prÃ³xima temporada."
 
 #: ../../../ligaTausch.php:179
 msgid "Anfrage versenden"
@@ -2182,13 +2184,13 @@ msgstr "Enviar solicitud"
 
 #: ../../../ligaTausch.php:180
 msgid ""
-"Falls Du wirklich die Liga tauschen möchtest, gib bitte hier den Namen des "
+"Falls Du wirklich die Liga tauschen mÃ¶chtest, gib bitte hier den Namen des "
 "Teams an, mit dem Du tauschen willst. Unbeantwortete Anfragen verfallen nach "
 "24 Stunden."
 msgstr ""
-"Si está seguro de que deseas intercambiar ligas, por favor escribe el nombre "
-"del equipo aquí con el que quieres intercambiar. Las solicitudes que no se "
-"aceptan dentro de 24 horas expirarán automáticamente."
+"Si estÃ¡ seguro de que deseas intercambiar ligas, por favor escribe el nombre "
+"del equipo aquÃ­ con el que quieres intercambiar. Las solicitudes que no se "
+"aceptan dentro de 24 horas expirarÃ¡n automÃ¡ticamente."
 
 #: ../../../ligaTausch.php:182
 msgid "Teamname:"
@@ -2208,7 +2210,7 @@ msgid "Team"
 msgstr "Equipo"
 
 #: ../../../ligaTausch.php:193
-msgid "Verfällt"
+msgid "VerfÃ¤llt"
 msgstr "Vence"
 
 #: ../../../ligaTauschWuensche.php:33
@@ -2225,7 +2227,7 @@ msgstr "Sin preferencias"
 
 #: ../../../ligaTauschWuensche.php:52
 msgid "Land"
-msgstr "País"
+msgstr "PaÃ­s"
 
 #: ../../../ligaTauschWuensche.php:52
 msgid "Wunsch"
@@ -2233,10 +2235,10 @@ msgstr "Preferencias"
 
 #: ../../../ligaTauschWuensche.php:63
 msgid ""
-"Jeder Eintrag wird nach 22 Tagen wieder gelöscht, kann dann aber erneut "
+"Jeder Eintrag wird nach 22 Tagen wieder gelÃ¶scht, kann dann aber erneut "
 "eingestellt werden."
 msgstr ""
-"Cada entrada se eliminarán después de 22 días, pero puedes añadir otra "
+"Cada entrada se eliminarÃ¡n despuÃ©s de 22 dÃ­as, pero puedes aÃ±adir otra "
 "nuevamente."
 
 #: ../../../liveZentrale.php:2 ../../../liveZentrale.php:35
@@ -2245,7 +2247,7 @@ msgid "LIVE-Zentrale"
 msgstr "Centro en VIVO"
 
 #: ../../../liveZentrale.php:36
-msgid "Zurzeit läuft leider kein Spiel, von dem live berichtet werden kann."
+msgid "Zurzeit lÃ¤uft leider kein Spiel, von dem live berichtet werden kann."
 msgstr "En este momento, no hay partidos que podamos transmitir en vivo."
 
 #: ../../../liveZentrale.php:37
@@ -2302,19 +2304,19 @@ msgstr ""
 
 #: ../../../marktschreier.php:6
 msgid ""
-"Du möchtest dafür sorgen, dass einer Deiner Spieler verliehen wird? Du hast "
-"noch nicht genügend Angebote? Dann bist Du hier genau richtig!"
+"Du mÃ¶chtest dafÃ¼r sorgen, dass einer Deiner Spieler verliehen wird? Du hast "
+"noch nicht genÃ¼gend Angebote? Dann bist Du hier genau richtig!"
 msgstr ""
 
 #: ../../../marktschreier.php:7
 msgid ""
-"Hier kannst Du für Deine Spieler werben - und hoffen, dass Dich jemand hört. "
+"Hier kannst Du fÃ¼r Deine Spieler werben - und hoffen, dass Dich jemand hÃ¶rt. "
 "Wenn Du Erfolg haben willst, solltest Du wiederkehren - denn alte Angebote "
 "verschwinden schnell!"
 msgstr ""
-"Aquí puedes anunciar tus jugadores - y esperar que alguien te oiga. Si "
-"quieres tener éxito, vuelve regularmente - porque las ofertas viejas "
-"desaparecerán rápidamente!"
+"AquÃ­ puedes anunciar tus jugadores - y esperar que alguien te oiga. Si "
+"quieres tener Ã©xito, vuelve regularmente - porque las ofertas viejas "
+"desaparecerÃ¡n rÃ¡pidamente!"
 
 #: ../../../marktschreier.php:36 ../../../pokal.php:80 ../../../pokal.php:218
 msgid "Deine Nachricht"
@@ -2333,17 +2335,17 @@ msgid ""
 "Wir denken, dass niemand wirklich mehr als 4 Freunde oder Verwandte hat, die "
 "am selben Anschluss spielen. Um Betrug vorzubeugen, begrenzen wir das Ganze "
 "deshalb auf 4 aktive Mitspieler. Und Du hast diese Grenze leider "
-"überschritten ..."
+"Ã¼berschritten ..."
 msgstr ""
-"Creemos que nadie realmente tiene más de cuatro amigos o miembros de la "
-"familia que juegan desde la misma conexión a internet. Con el fin de "
+"Creemos que nadie realmente tiene mÃ¡s de cuatro amigos o miembros de la "
+"familia que juegan desde la misma conexiÃ³n a internet. Con el fin de "
 "prevenir los abusos, estamos limitando esto a cuatro personas jugando "
-"activamente. Y por desgracia se ha cruzado este límite..."
+"activamente. Y por desgracia se ha cruzado este lÃ­mite..."
 
 #: ../../../multiSperre.php:8
 msgid ""
-"Das bedeutet für Dich: Du kannst Dich erst mal nicht mehr einloggen. Deine "
-"Teams können also nicht mehr betreut werden. Wir bitten Dich, das zu "
+"Das bedeutet fÃ¼r Dich: Du kannst Dich erst mal nicht mehr einloggen. Deine "
+"Teams kÃ¶nnen also nicht mehr betreut werden. Wir bitten Dich, das zu "
 "akzeptieren."
 msgstr ""
 
@@ -2353,26 +2355,26 @@ msgid ""
 "uns bitte unter der folgenden E-Mail-Adresse:"
 msgstr ""
 "En caso de que pienses que has sido suspendido de forma incorrecta, por "
-"favor contáctanos via email a la siguiente dirección:"
+"favor contÃ¡ctanos via email a la siguiente direcciÃ³n:"
 
 #: ../../../namensaenderung.php:2 ../../../namensaenderung.php:23
 #: ../../../namensaenderung.php:167
-msgid "Namensänderung"
+msgid "NamensÃ¤nderung"
 msgstr "Cambiar nombre"
 
 #: ../../../namensaenderung.php:58
 msgid ""
-"Auf dieser Seite kannst Du den Namen Deines Vereins ändern. Du kannst den "
-"Namen einer Stadt und einen beliebigen Zusatz aus der Liste wählen, der vor "
-"oder nach dem Städtenamen stehen kann."
+"Auf dieser Seite kannst Du den Namen Deines Vereins Ã¤ndern. Du kannst den "
+"Namen einer Stadt und einen beliebigen Zusatz aus der Liste wÃ¤hlen, der vor "
+"oder nach dem StÃ¤dtenamen stehen kann."
 msgstr ""
-"En esta página, puedes cambiar el nombre de tu equipo. Elige el nombre de "
-"una ciudad y un título adicional que puede ir antes o después del nombre de "
+"En esta pÃ¡gina, puedes cambiar el nombre de tu equipo. Elige el nombre de "
+"una ciudad y un tÃ­tulo adicional que puede ir antes o despuÃ©s del nombre de "
 "la ciudad."
 
 #: ../../../namensaenderung.php:60
-msgid "Du kannst den Namen Deines Klubs nur alle 30 Tage ändern."
-msgstr "Puedes cambiar el nombre de tu equipo cada 30 días."
+msgid "Du kannst den Namen Deines Klubs nur alle 30 Tage Ã¤ndern."
+msgstr "Puedes cambiar el nombre de tu equipo cada 30 dÃ­as."
 
 #: ../../../neueAccounts.php:2 ../../../neueAccounts.php:10
 #: ../../../zz2.php:259
@@ -2384,12 +2386,12 @@ msgid ""
 "Die folgenden Accounts wurden zuletzt neu registriert. Nicht alle Manager "
 "haben schon ein Team bekommen."
 msgstr ""
-"Las siguientes cuentas fueron las últimas en registrarse. No todos los "
-"mánagers ya tienen su equipo."
+"Las siguientes cuentas fueron las Ãºltimas en registrarse. No todos los "
+"mÃ¡nagers ya tienen su equipo."
 
 #: ../../../neueAccounts.php:12
 msgid "Registriert"
-msgstr "Regístrate"
+msgstr "RegÃ­strate"
 
 #: ../../../neueAccounts.php:12
 msgid "Geworben von"
@@ -2397,11 +2399,11 @@ msgstr "Invitado por"
 
 #: ../../../neueAccounts.php:37
 msgid "Dieser Manager wurde bereits angeschrieben"
-msgstr "Este mánager ya ha sido contactado"
+msgstr "Este mÃ¡nager ya ha sido contactado"
 
 #: ../../../neueAccounts.php:40
 msgid "Dieser Manager wurde bisher noch nicht angeschrieben"
-msgstr "Este mánager aún no fue contactado"
+msgstr "Este mÃ¡nager aÃºn no fue contactado"
 
 #: ../../../notizen.php:2 ../../../notizen.php:49 ../../../zz2.php:151
 msgid "Notizen"
@@ -2409,11 +2411,11 @@ msgstr "Notas"
 
 #: ../../../notizen.php:6
 msgid "Es sind nur 250 Zeichen erlaubt. Diese Grenze hast Du jetzt erreicht!"
-msgstr "Has excedido el limite máximo de 250 caracteres."
+msgstr "Has excedido el limite mÃ¡ximo de 250 caracteres."
 
 #: ../../../notizen.php:52
 msgid "Es werden immer nur die letzten 25 Notizen angezeigt."
-msgstr "Solo verás las últimas 25 notas."
+msgstr "Solo verÃ¡s las Ãºltimas 25 notas."
 
 #: ../../../notizen.php:53
 msgid "Neue Notiz erstellen"
@@ -2425,36 +2427,36 @@ msgstr "Guardar"
 
 #: ../../../passwort_vergessen.php:3 ../../../passwort_vergessen.php:106
 msgid "Passwort vergessen"
-msgstr "¿Olvidaste tu contraseña?"
+msgstr "Â¿Olvidaste tu contraseÃ±a?"
 
 #: ../../../passwort_vergessen.php:23
 msgid ""
 "Dein neues Passwort wurde aktiviert. Du kannst Dich jetzt damit einloggen."
-msgstr "Tu nueva contraseña ha sido activada. Ya puedes iniciar sesión."
+msgstr "Tu nueva contraseÃ±a ha sido activada. Ya puedes iniciar sesiÃ³n."
 
 #: ../../../passwort_vergessen.php:26
 msgid ""
 "Das Passwort konnte nicht aktiviert werden. Bitte rufe den Link noch einmal "
 "auf oder fordere ein neues Passwort an."
 msgstr ""
-"Tu contraseña no se pudo activar. Por favor usa el enlace de activación una "
-"vez más, o solicita una nueva contraseña."
+"Tu contraseÃ±a no se pudo activar. Por favor usa el enlace de activaciÃ³n una "
+"vez mÃ¡s, o solicita una nueva contraseÃ±a."
 
 #: ../../../passwort_vergessen.php:45
 msgid ""
-"Für diese E-Mail-Adresse wurde in den letzten 5 Stunden schon ein Passwort "
+"FÃ¼r diese E-Mail-Adresse wurde in den letzten 5 Stunden schon ein Passwort "
 "angefordert."
 msgstr ""
-"Por esta dirección de correo electrónico, una contraseña nueva ya se ha "
-"solicitada en las últimas 5 horas."
+"Por esta direcciÃ³n de correo electrÃ³nico, una contraseÃ±a nueva ya se ha "
+"solicitada en las Ãºltimas 5 horas."
 
 #: ../../../passwort_vergessen.php:49
 msgid ""
 "Wenn Du kein neues Passwort angefordert hast, wurde diese Funktion von "
 "jemand anderem missbraucht. Die Anfrage kam von der folgenden IP-Adresse:"
 msgstr ""
-"Si no has solicitado una nueva contraseña, esta característica ha sido "
-"abusado por otra persona. La solicitud ha sido enviada desde la dirección IP "
+"Si no has solicitado una nueva contraseÃ±a, esta caracterÃ­stica ha sido "
+"abusado por otra persona. La solicitud ha sido enviada desde la direcciÃ³n IP "
 "siguiente:"
 
 #: ../../../passwort_vergessen.php:97
@@ -2462,42 +2464,42 @@ msgid ""
 "Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren "
 "Informationen zu."
 msgstr ""
-"El proceso ha sido exitoso. Ahora te estamos enviando un correo electrónico "
-"con más información."
+"El proceso ha sido exitoso. Ahora te estamos enviando un correo electrÃ³nico "
+"con mÃ¡s informaciÃ³n."
 
 #: ../../../passwort_vergessen.php:102
 msgid ""
 "Es konnte kein User mit der angegebenen E-Mail-Adresse gefunden werden. "
 "Bitte versuche es noch einmal."
 msgstr ""
-"No hemos podido encontrar ningún usuario con esa dirección de correo "
-"electrónico. Por favor, intenta de nuevo."
+"No hemos podido encontrar ningÃºn usuario con esa direcciÃ³n de correo "
+"electrÃ³nico. Por favor, intenta de nuevo."
 
 #: ../../../passwort_vergessen.php:108
 msgid ""
 "Du hast Dein Passwort vergessen? Dann gib hier bitte einfach die E-Mail-"
 "Adresse ein, mit der Du Dich registriert hast. Wir schicken Dir dann eine E-"
-"Mail mit weiteren Informationen, damit Du ein neues Passwort wählen kannst."
+"Mail mit weiteren Informationen, damit Du ein neues Passwort wÃ¤hlen kannst."
 msgstr ""
-"¿Olvidaste tu contraseña? Solo introduce tu dirección de correo electrónico "
-"a continuación que utilizaste para registrarte y te enviaremos un correo "
-"electrónico con más información acerca de cómo restablecer su contraseña."
+"Â¿Olvidaste tu contraseÃ±a? Solo introduce tu direcciÃ³n de correo electrÃ³nico "
+"a continuaciÃ³n que utilizaste para registrarte y te enviaremos un correo "
+"electrÃ³nico con mÃ¡s informaciÃ³n acerca de cÃ³mo restablecer su contraseÃ±a."
 
 #: ../../../passwort_vergessen.php:109
 msgid "Wichtig:"
-msgstr "Atención:"
+msgstr "AtenciÃ³n:"
 
 #: ../../../passwort_vergessen.php:109
 msgid ""
-"Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang "
-"gültig. Danach musst Du die E-Mail erneut anfordern."
+"Der Link in der E-Mail, die wir Dir senden, ist nur fÃ¼nf Stunden lang "
+"gÃ¼ltig. Danach musst Du die E-Mail erneut anfordern."
 msgstr ""
-"El enlace que te enviamos en el correo electrónico es válido sólo por cinco "
-"horas. Después de eso debes solicitarlo de nuevo."
+"El enlace que te enviamos en el correo electrÃ³nico es vÃ¡lido sÃ³lo por cinco "
+"horas. DespuÃ©s de eso debes solicitarlo de nuevo."
 
 #: ../../../passwort_vergessen.php:111
 msgid "E-Mail-Adresse:"
-msgstr "Dirección de correo electrónico:"
+msgstr "DirecciÃ³n de correo electrÃ³nico:"
 
 #: ../../../pokal.php:2 ../../../pokal.php:66 ../../../pokal.php:242
 msgid "Internationaler Pokal"
@@ -2505,21 +2507,21 @@ msgstr ""
 
 #: ../../../pokal.php:67
 msgid ""
-"Für diesen Wettbewerb qualifizieren sich die 32 besten Teams des Spiels. Das "
+"FÃ¼r diesen Wettbewerb qualifizieren sich die 32 besten Teams des Spiels. Das "
 "sind alle Erstplatzierten, alle Zweitplatzierten und dazu die sechs besten "
 "Drittplatzierten."
 msgstr ""
 
 #: ../../../pokal.php:68
 msgid ""
-"Es gibt fünf Runden, die jeweils ausgelost werden. In einem Hin- und einem "
-"Rückspiel mit Auswärtstorregel ermitteln die Teams den Sieger, der dann die "
-"nächste Runde erreicht."
+"Es gibt fÃ¼nf Runden, die jeweils ausgelost werden. In einem Hin- und einem "
+"RÃ¼ckspiel mit AuswÃ¤rtstorregel ermitteln die Teams den Sieger, der dann die "
+"nÃ¤chste Runde erreicht."
 msgstr ""
 
 #: ../../../pokal.php:84 ../../../pokal.php:222
 msgid "Manager-Talk"
-msgstr "Charla de Mánagers"
+msgstr "Charla de MÃ¡nagers"
 
 #: ../../../pokal.php:196
 msgid "Spiele mit Beteiligung aus dem eigenen Land werden grau hinterlegt."
@@ -2529,7 +2531,7 @@ msgstr ""
 msgid "Postausgang"
 msgstr "Bandeja de salida"
 
-#: ../../../postausgang.php:30
+#: ../../../postausgang.php:30 ../../../zz2.php:247
 msgid "Posteingang"
 msgstr "Bandeja de entrada"
 
@@ -2538,7 +2540,7 @@ msgid "Betreff"
 msgstr "Asunto"
 
 #: ../../../postausgang.php:38
-msgid "Empfänger"
+msgid "EmpfÃ¤nger"
 msgstr "Receptor"
 
 #: ../../../protokoll.php:2 ../../../protokoll.php:20
@@ -2569,42 +2571,42 @@ msgid "Regeln akzeptieren"
 msgstr "Aceptar las reglas"
 
 #: ../../../regeln.php:20
-msgid "Bitte bestätigen"
+msgid "Bitte bestÃ¤tigen"
 msgstr "Por favor confirma"
 
 #: ../../../regeln.php:21
 msgid "Ich habe die unten stehenden Regeln gelesen"
-msgstr "He leído las reglas siguientes"
+msgstr "He leÃ­do las reglas siguientes"
 
 #: ../../../regeln.php:25
 msgid ""
 "Du kannst leider nur am Spiel teilnehmen, wenn Du unsere aktuellen Regeln "
 "akzeptierst. Ansonsten empfehlen wir Dir, Deinen Account unter &quot;"
-"Einstellungen&quot; zu löschen."
+"Einstellungen&quot; zu lÃ¶schen."
 msgstr ""
-"Sólo puedes participar en este juego si aceptas las reglas del juego. De lo "
+"SÃ³lo puedes participar en este juego si aceptas las reglas del juego. De lo "
 "contrario, te recomendamos que borres tu cuenta en \"Ajustes\"."
 
 #: ../../../regeln.php:30
 msgid "Nutzungsregeln"
-msgstr "Términos de uso"
+msgstr "TÃ©rminos de uso"
 
 #: ../../../regeln.php:31
 msgid ""
 "Diese Nutzungsbedingungen (&quot;Regeln&quot;) legen fest, wie Du (&quot;der "
 "User&quot;) die Webseite unter www.ballmanager.de (&quot;Ballmanager&quot;) "
-"nutzen darfst. Mit der Nutzung dieser Webseite erklärst Du, dass Du mit den "
+"nutzen darfst. Mit der Nutzung dieser Webseite erklÃ¤rst Du, dass Du mit den "
 "Regeln auf dieser Seite einverstanden bist."
 msgstr ""
-"Estos términos de uso (% quot; las Reglas \") determinan como debes (\" el "
+"Estos tÃ©rminos de uso (% quot; las Reglas \") determinan como debes (\" el "
 "Usuario \") utilizar este sitio web y todos los servicios ofrecidos en "
-"nuestras páginas (\" la solicitud \"). Mediante el uso de esta solicitud "
-"declaras estar de acuerdo con las Reglas que figuran en esta página."
+"nuestras pÃ¡ginas (\" la solicitud \"). Mediante el uso de esta solicitud "
+"declaras estar de acuerdo con las Reglas que figuran en esta pÃ¡gina."
 
 #: ../../../regeln.php:32
 msgid ""
-"Bitte lies die Regeln sorgfältig durch, denn sie müssen eingehalten werden, "
-"damit alles fair bleibt und jeder Spaß am Spiel hat."
+"Bitte lies die Regeln sorgfÃ¤ltig durch, denn sie mÃ¼ssen eingehalten werden, "
+"damit alles fair bleibt und jeder SpaÃŸ am Spiel hat."
 msgstr ""
 "Por favor consulta las Reglas cuidadosamente, ya que deben ser respetadas y "
 "seguidas con el fin de hacer un juego limpio y divertido para todo el mundo."
@@ -2616,14 +2618,14 @@ msgstr "Parte I: Comportamiento general"
 #: ../../../regeln.php:35
 msgid ""
 "Pro Person ist nur ein einziger Account (Benutzerkonto) erlaubt. Freunde und "
-"Verwandte dürfen natürlich mitspielen, auch wenn sie vom gleichen "
+"Verwandte dÃ¼rfen natÃ¼rlich mitspielen, auch wenn sie vom gleichen "
 "Internetanschluss aus spielen."
 msgstr ""
 
 #: ../../../regeln.php:36
 msgid ""
 "Im Spiel kann mit anderen Usern kommuniziert werden. Dabei sollte man auf "
-"einen höflichen Umgangston achten und sich an die <a href=\"http://de."
+"einen hÃ¶flichen Umgangston achten und sich an die <a href=\"http://de."
 "wikipedia.org/wiki/Netiquette\">Netiquette</a> halten."
 msgstr ""
 
@@ -2635,32 +2637,32 @@ msgstr ""
 
 #: ../../../regeln.php:38
 msgid ""
-"Die Veröffentlichung privater Inhalte (Post etc.) oder realer Namen von "
-"anderen Usern ohne deren Einverständnis ist nicht gestattet."
+"Die VerÃ¶ffentlichung privater Inhalte (Post etc.) oder realer Namen von "
+"anderen Usern ohne deren EinverstÃ¤ndnis ist nicht gestattet."
 msgstr ""
 
 #: ../../../regeln.php:39
 msgid ""
-"Team-Mitglieder dürfen nicht (persönlich) angegriffen werden, ihre "
+"Team-Mitglieder dÃ¼rfen nicht (persÃ¶nlich) angegriffen werden, ihre "
 "Entscheidungen sind zu akzeptieren."
 msgstr ""
 
 #: ../../../regeln.php:40
 msgid ""
-"Kritik im Forum muss sachlich erfolgen und darf keine persönliche Wertung "
-"enthalten. Jeder soll sich seine Meinung selbst bilden können, &quot;"
-"Meinungsmache&quot; ist nicht erwünscht."
+"Kritik im Forum muss sachlich erfolgen und darf keine persÃ¶nliche Wertung "
+"enthalten. Jeder soll sich seine Meinung selbst bilden kÃ¶nnen, &quot;"
+"Meinungsmache&quot; ist nicht erwÃ¼nscht."
 msgstr ""
 
 #: ../../../regeln.php:41
 msgid ""
 "Du versicherst, dass Du andere Personen (vor allem andere User) nicht "
-"beleidigen oder belästigen wirst."
+"beleidigen oder belÃ¤stigen wirst."
 msgstr ""
 
 #: ../../../regeln.php:42
 msgid ""
-"Du bist dazu verpflichtet, Deine Zugangsdaten zu schützen und diese geheim "
+"Du bist dazu verpflichtet, Deine Zugangsdaten zu schÃ¼tzen und diese geheim "
 "zu halten, sodass Dritte keinen Zugang zu Deinem Account haben."
 msgstr ""
 
@@ -2679,20 +2681,20 @@ msgstr ""
 
 #: ../../../regeln.php:46
 msgid ""
-"Das Einstellen von jugendgefährdenden, gewaltverherrlichenden oder in "
+"Das Einstellen von jugendgefÃ¤hrdenden, gewaltverherrlichenden oder in "
 "sonstiger Weise rechtsverletzenden Inhalten ist strengstens verboten."
 msgstr ""
 
 #: ../../../regeln.php:47
 msgid ""
-"In allen Bereichen, in denen öffentlich kommuniziert werden kann, sind nur "
-"deutsche und englische Mitteilungen erlaubt. Denn die Kommunikation soll für "
+"In allen Bereichen, in denen Ã¶ffentlich kommuniziert werden kann, sind nur "
+"deutsche und englische Mitteilungen erlaubt. Denn die Kommunikation soll fÃ¼r "
 "jeden User nachvollziehbar bleiben."
 msgstr ""
 
 #: ../../../regeln.php:49
 msgid "Teil II: Verhalten in der Spielwelt"
-msgstr ""
+msgstr "Parte II: Comportamiento en el entorno del juego"
 
 #: ../../../regeln.php:51
 msgid ""
@@ -2702,13 +2704,13 @@ msgstr ""
 
 #: ../../../regeln.php:52
 msgid ""
-"Es ist nicht erlaubt, bei der Wahl zum <i>Manager der Saison</i> für Manager "
+"Es ist nicht erlaubt, bei der Wahl zum <i>Manager der Saison</i> fÃ¼r Manager "
 "abzustimmen, die vom selben Internetanschluss aus spielen."
 msgstr ""
 
 #: ../../../regeln.php:53
 msgid ""
-"Es ist verboten, absichtlich schwache (oder sogar unvollständige) "
+"Es ist verboten, absichtlich schwache (oder sogar unvollstÃ¤ndige) "
 "Aufstellungen einzustellen, um anderen Teams dadurch einen Vorteil zu "
 "verschaffen."
 msgstr ""
@@ -2721,74 +2723,74 @@ msgstr ""
 
 #: ../../../regeln.php:55
 msgid ""
-"Es dürfen keine Spieler (virtuell) von Teams gekauft oder geliehen werden, "
-"die jemandem gehören, der am gleichen Internetanschluss spielt."
+"Es dÃ¼rfen keine Spieler (virtuell) von Teams gekauft oder geliehen werden, "
+"die jemandem gehÃ¶ren, der am gleichen Internetanschluss spielt."
 msgstr ""
 
 #: ../../../regeln.php:56
 msgid ""
-"Es darf kein Ligatausch mit Teams durchgeführt werden, die jemandem gehören, "
+"Es darf kein Ligatausch mit Teams durchgefÃ¼hrt werden, die jemandem gehÃ¶ren, "
 "der am gleichen Internetanschluss spielt."
 msgstr ""
 
 #: ../../../regeln.php:57
 msgid ""
-"Es ist nicht gestattet, andere User nach ihrer Scout-Schätzung zu fragen."
+"Es ist nicht gestattet, andere User nach ihrer Scout-SchÃ¤tzung zu fragen."
 msgstr ""
 
 #: ../../../regeln.php:58
-msgid "Zwischen zwei Teams darf es pro Saison höchstens zwei Transfers geben."
+msgid "Zwischen zwei Teams darf es pro Saison hÃ¶chstens zwei Transfers geben."
 msgstr ""
 
 #: ../../../regeln.php:60
 msgid "Teil III: Verbotene Usernamen"
-msgstr ""
+msgstr "Parte III: Nombres de usuarios prohibidos"
 
 #: ../../../regeln.php:62
-msgid "obszöne Usernamen"
-msgstr ""
+msgid "obszÃ¶ne Usernamen"
+msgstr "nombre de usuario obsceno"
 
 #: ../../../regeln.php:63
-msgid "Usernamen, die beleidigend gegenüber Personen oder Gruppen sind"
-msgstr ""
+msgid "Usernamen, die beleidigend gegenÃ¼ber Personen oder Gruppen sind"
+msgstr "los nombres de usuario que sean ofensivos para las personas o grupos"
 
 #: ../../../regeln.php:64
 msgid "rassistische Usernamen"
-msgstr ""
+msgstr "nombre de usuario racista"
 
 #: ../../../regeln.php:65
 msgid "Usernamen, die Internetadressen enthalten"
 msgstr ""
 
 #: ../../../regeln.php:66
-msgid "Usernamen, die dem Namen eines realen Vereins ähneln"
+msgid "Usernamen, die dem Namen eines realen Vereins Ã¤hneln"
 msgstr ""
 
 #: ../../../regeln.php:68
 msgid "Teil IV: Aufgaben und Funktion des Ballmanager-Teams"
-msgstr ""
+msgstr "Parte IV: El papel y la funciÃ³n del equipo de Ballmanager"
 
 #: ../../../regeln.php:70
 msgid ""
-"Sämtliche Inhalte, die von Usern selbst eingestellt wurden, können vom Team "
-"ohne Angabe von Gründen gelöscht werden."
+"SÃ¤mtliche Inhalte, die von Usern selbst eingestellt wurden, kÃ¶nnen vom Team "
+"ohne Angabe von GrÃ¼nden gelÃ¶scht werden."
 msgstr ""
 
 #: ../../../regeln.php:71
 msgid ""
-"Das Team legt Sanktionen fest, wenn begründeter Verdacht eines Verstoßes "
+"Das Team legt Sanktionen fest, wenn begrÃ¼ndeter Verdacht eines VerstoÃŸes "
 "gegen die hier aufgelisteten Regeln besteht. Es kann auch der Zugriff auf "
 "bestimmte Funktionen des Spiels gesperrt werden."
 msgstr ""
 
 #: ../../../regeln.php:72
 msgid ""
-"Usernamen können vom Team geändert werden, sofern sie gegen <i>Regel III</i> "
-"verstoßen."
+"Usernamen kÃ¶nnen vom Team geÃ¤ndert werden, sofern sie gegen <i>Regel III</i> "
+"verstoÃŸen."
 msgstr ""
 
 #: ../../../regeln.php:73
-msgid "Das Team unterstützt User bei Fragen oder Problemen."
+msgid "Das Team unterstÃ¼tzt User bei Fragen oder Problemen."
 msgstr ""
 
 #: ../../../regeln.php:74
@@ -2800,21 +2802,23 @@ msgstr ""
 #: ../../../regeln.php:75
 msgid ""
 "Das Team soll immer mit gutem Beispiel vorangehen, geduldig und fair sein."
-msgstr ""
+msgstr "El equipo siempre debe dar un buen ejemplo, ser paciente y justo."
 
 #: ../../../regeln.php:76
 msgid ""
-"Jedes Teammitglied muss gegenüber den anderen Usern der Community Respekt in "
+"Jedes Teammitglied muss gegenÃ¼ber den anderen Usern der Community Respekt in "
 "Wort und Tat zeigen."
 msgstr ""
+"Cada miembro del equipo debe ser responsable ante los otros usuarios de la "
+"comunidad tanto en las palabras como en los hechos."
 
 #: ../../../regeln.php:78
 msgid "Teil V: Ballmanager"
-msgstr ""
+msgstr "Parte V: Ballmanager"
 
 #: ../../../regeln.php:80
 msgid ""
-"Alle Geldwerte im Spiel sind Teil der virtuellen Währung. Eine Auszahlung "
+"Alle Geldwerte im Spiel sind Teil der virtuellen WÃ¤hrung. Eine Auszahlung "
 "dieses Guthabens ist ausgeschlossen."
 msgstr ""
 
@@ -2824,84 +2828,84 @@ msgid ""
 "haben keinen Bezug zu realen Ligen."
 msgstr ""
 "Todos los clubes, jugadores y patrocinadores son ficticios y no tienen "
-"ninguna relación con las ligas reales."
+"ninguna relaciÃ³n con las ligas reales."
 
 #: ../../../regeln.php:82
 msgid ""
-"Das Spiel wird ständig weiterentwickelt und Funktionen verändert, "
-"hinzugefügt oder entfernt."
+"Das Spiel wird stÃ¤ndig weiterentwickelt und Funktionen verÃ¤ndert, "
+"hinzugefÃ¼gt oder entfernt."
 msgstr ""
 
 #: ../../../regeln.php:83
 msgid ""
-"Ballmanager behält sich vor, den Zugang ohne Angabe von Gründen zu sperren "
-"bzw. Accounts zu löschen. Dabei ist auch keine Benachrichtigung im Voraus "
-"nötig."
+"Ballmanager behÃ¤lt sich vor, den Zugang ohne Angabe von GrÃ¼nden zu sperren "
+"bzw. Accounts zu lÃ¶schen. Dabei ist auch keine Benachrichtigung im Voraus "
+"nÃ¶tig."
 msgstr ""
 
 #: ../../../regeln.php:84
 msgid ""
-"Es wird keine Garantie für die Verfügbarkeit des Spiels übernommen. Es gibt "
+"Es wird keine Garantie fÃ¼r die VerfÃ¼gbarkeit des Spiels Ã¼bernommen. Es gibt "
 "keinen Anspruch auf bestimmte Funktionen oder deren Aktualisierung."
 msgstr ""
 
 #: ../../../regeln.php:85
 msgid ""
-"Für alle Aktivitäten, die mit einem Account stattfinden, ist ausschließlich "
+"FÃ¼r alle AktivitÃ¤ten, die mit einem Account stattfinden, ist ausschlieÃŸlich "
 "der User verantwortlich, der diesen Account registriert hat. Zu diesen "
-"Aktivitäten zählen vor allem selbst eingestellte Beiträge und die "
+"AktivitÃ¤ten zÃ¤hlen vor allem selbst eingestellte BeitrÃ¤ge und die "
 "Kommunikation im Spiel."
 msgstr ""
 
 #: ../../../regeln.php:86
 msgid ""
-"Es wird keine Gewähr für die Richtigkeit, Aktualität und Vollständigkeit der "
-"bereitgestellten Informationen übernommen."
+"Es wird keine GewÃ¤hr fÃ¼r die Richtigkeit, AktualitÃ¤t und VollstÃ¤ndigkeit der "
+"bereitgestellten Informationen Ã¼bernommen."
 msgstr ""
 
 #: ../../../regeln.php:87
 msgid ""
-"Diese Webseite (und auch jeder Teil davon) darf ausschließlich mit "
+"Diese Webseite (und auch jeder Teil davon) darf ausschlieÃŸlich mit "
 "Webbrowsern aufgerufen werden. Die Verwendung von anderen Programmen ist "
 "nicht gestattet."
 msgstr ""
 
 #: ../../../regeln.php:88
-msgid "Ballmanager behält sich vor, diese Regeln jederzeit ändern zu können."
+msgid "Ballmanager behÃ¤lt sich vor, diese Regeln jederzeit Ã¤ndern zu kÃ¶nnen."
 msgstr ""
 
 #: ../../../regeln.php:90 ../../../zz3.php:10
 msgid "Datenschutz"
-msgstr "Política de Privacidad"
+msgstr "PolÃ­tica de Privacidad"
 
 #: ../../../regeln.php:91
 msgid "Keine Weitergabe der Daten:"
-msgstr ""
+msgstr "Privacidad de los datos:"
 
 #: ../../../regeln.php:92
 msgid ""
 "Die Betreiber der Webseite unter www.ballmanager.de (&quot;"
-"Ballmanager&quot;) geben grundsätzlich keine Daten von Benutzern an Dritte "
-"weiter. Ausnahmen sind Fälle, in denen Ballmanager.de gesetzlich oder durch "
-"Entscheidungen von Gerichten dazu verpflichtet ist, und Fälle, in denen die "
-"Daten zur Strafverfolgung benötigt werden."
+"Ballmanager&quot;) geben grundsÃ¤tzlich keine Daten von Benutzern an Dritte "
+"weiter. Ausnahmen sind FÃ¤lle, in denen Ballmanager.de gesetzlich oder durch "
+"Entscheidungen von Gerichten dazu verpflichtet ist, und FÃ¤lle, in denen die "
+"Daten zur Strafverfolgung benÃ¶tigt werden."
 msgstr ""
 
 #: ../../../regeln.php:93
-msgid "Akzeptieren der Datenschutzerklärung:"
-msgstr "Acepto la política de privacidad:"
+msgid "Akzeptieren der DatenschutzerklÃ¤rung:"
+msgstr "Acepto la polÃ­tica de privacidad:"
 
 #: ../../../regeln.php:94
 msgid ""
-"Mit dem Nutzen dieser Webseite erklärt sich der User mit dieser "
-"Datenschutzerklärung einverstanden. Die Verarbeitung und Nutzung der "
-"personenbezogenen Daten wird gemäß dieser Datenschutzerklärung und der "
-"gesetzlichen Bestimmungen durchgeführt."
+"Mit dem Nutzen dieser Webseite erklÃ¤rt sich der User mit dieser "
+"DatenschutzerklÃ¤rung einverstanden. Die Verarbeitung und Nutzung der "
+"personenbezogenen Daten wird gemÃ¤ÃŸ dieser DatenschutzerklÃ¤rung und der "
+"gesetzlichen Bestimmungen durchgefÃ¼hrt."
 msgstr ""
 
 #: ../../../regeln.php:95
 msgid "IP-Adresse"
-msgstr "Dirección de IP"
+msgstr "DirecciÃ³n de IP"
 
 #: ../../../regeln.php:96
 msgid ""
@@ -2909,7 +2913,7 @@ msgid ""
 "die IP-Adresse des Users in anonymisierter Form gespeichert. Zum einen wird "
 "die aktuelle IP-Adresse als MD5-Hash (Beispiel: "
 "d41d8cd98f00b204e9800998ecf8427e) gespeichert. Zum anderen wird die IP-"
-"Adresse gespeichert, nachdem die letzten beiden Oktetts gelöscht wurden "
+"Adresse gespeichert, nachdem die letzten beiden Oktetts gelÃ¶scht wurden "
 "(Beispiel: 123.123.XXX.XXX)."
 msgstr ""
 
@@ -2923,8 +2927,8 @@ msgid ""
 msgstr "El encabezado User-Agent del navegador web se almacena en cada visita."
 
 #: ../../../regeln.php:99
-msgid "Persönliche Daten bei der Registrierung"
-msgstr ""
+msgid "PersÃ¶nliche Daten bei der Registrierung"
+msgstr "InformaciÃ³n personal cuando te registras"
 
 #: ../../../regeln.php:100
 msgid "Bei der Registrierung werden die folgenden Daten gespeichert:"
@@ -2936,13 +2940,13 @@ msgstr "Usuario"
 
 #: ../../../regeln.php:103
 msgid "Passwort"
-msgstr "Contraseña"
+msgstr "ContraseÃ±a"
 
 #: ../../../regeln.php:106
 msgid ""
-"Diese Daten sind erforderlich, damit die Registrierung möglich ist danach "
-"weitere Funktionen zur Verfügung stehen. Diese Informationen können aber "
-"vollständig entfernt werden, indem der eigene Account gelöscht wird."
+"Diese Daten sind erforderlich, damit die Registrierung mÃ¶glich ist danach "
+"weitere Funktionen zur VerfÃ¼gung stehen. Diese Informationen kÃ¶nnen aber "
+"vollstÃ¤ndig entfernt werden, indem der eigene Account gelÃ¶scht wird."
 msgstr ""
 
 #: ../../../regeln.php:107
@@ -2951,7 +2955,7 @@ msgstr ""
 
 #: ../../../regeln.php:108
 msgid ""
-"In Verbindung mit Protokoll-Dateien werden die folgenden Daten über jeden "
+"In Verbindung mit Protokoll-Dateien werden die folgenden Daten Ã¼ber jeden "
 "Besucher gespeichert:"
 msgstr ""
 
@@ -2968,18 +2972,18 @@ msgid "Status der Abrufe (Erfolg / Fehler)"
 msgstr ""
 
 #: ../../../regeln.php:113
-msgid "Menge der übertragenen Daten"
+msgid "Menge der Ã¼bertragenen Daten"
 msgstr ""
 
 #: ../../../regeln.php:114
 msgid "gesendeter User-Agent-Header"
-msgstr ""
+msgstr "Cabezera de User-Agent enviada"
 
 #: ../../../regeln.php:116
 msgid ""
 "Alle diese Daten werden jedoch anonym gespeichert. Das bedeutet, dass die IP-"
 "Adresse nicht dazu gespeichert wird und die oben genannten Daten nicht mit "
-"dem Besucher in Verbindung gebracht werden können."
+"dem Besucher in Verbindung gebracht werden kÃ¶nnen."
 msgstr ""
 
 #: ../../../regeln.php:117
@@ -2988,10 +2992,10 @@ msgstr "Terceros:"
 
 #: ../../../regeln.php:118
 msgid ""
-"Wir greifen auf Amazon als Drittanbieter zurück, um Anzeigen zu schalten, "
+"Wir greifen auf Amazon als Drittanbieter zurÃ¼ck, um Anzeigen zu schalten, "
 "wenn Sie unsere Website besuchen. Lesen Sie dazu bitte auch die <a href="
 "\"http://www.amazon.de/gp/help/customer/display.html?"
-"ie=UTF8&nodeId=3312401\">Datenschutzerklärung von Amazon</a>."
+"ie=UTF8&nodeId=3312401\">DatenschutzerklÃ¤rung von Amazon</a>."
 msgstr ""
 
 #: ../../../regeln.php:120
@@ -2999,38 +3003,62 @@ msgid ""
 "Diese Website benutzt Google Analytics, einen Webanalysedienst der Google "
 "Inc. (&quot;Google&quot;). Google Analytics verwendet sog. &quot;"
 "Cookies&quot;, Textdateien, die auf Ihrem Computer gespeichert werden und "
-"eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den "
-"Cookie erzeugten Informationen über Ihre Benutzung dieser Website "
-"(einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA "
-"übertragen und dort gespeichert. Google wird diese Informationen benutzen, "
-"um Ihre Nutzung der Website auszuwerten, um Reports über die "
-"Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere "
+"eine Analyse der Benutzung der Website durch Sie ermÃ¶glichen. Die durch den "
+"Cookie erzeugten Informationen Ã¼ber Ihre Benutzung dieser Website "
+"(einschlieÃŸlich Ihrer IP-Adresse) wird an einen Server von Google in den USA "
+"Ã¼bertragen und dort gespeichert. Google wird diese Informationen benutzen, "
+"um Ihre Nutzung der Website auszuwerten, um Reports Ã¼ber die "
+"WebsiteaktivitÃ¤ten fÃ¼r die Websitebetreiber zusammenzustellen und um weitere "
 "mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen "
 "zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte "
-"übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese "
+"Ã¼bertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese "
 "Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-"
-"Adresse mit anderen Daten von Google in Verbindung bringen. Sie können die "
+"Adresse mit anderen Daten von Google in Verbindung bringen. Sie kÃ¶nnen die "
 "Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser-"
 "Software verhindern. Wir weisen Sie allerdings darauf hin, dass Sie in "
-"diesem Fall möglicherweise nicht alle Funktionen dieser Website in vollem "
-"Umfang nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit "
-"der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor "
+"diesem Fall mÃ¶glicherweise nicht alle Funktionen dieser Website in vollem "
+"Umfang nutzen kÃ¶nnen. Durch die Nutzung dieser Website erklÃ¤ren Sie sich mit "
+"der Bearbeitung der Ã¼ber Sie erhobenen Daten durch Google in der zuvor "
 "beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden. "
 "Der Datenerhebung und -speicherung <a href=\"http://tools.google.com/dlpage/"
-"gaoptout?hl=de\">kann jederzeit mit Wirkung für die Zukunft widersprochen "
+"gaoptout?hl=de\">kann jederzeit mit Wirkung fÃ¼r die Zukunft widersprochen "
 "werden</a>. Angesichts der Diskussion um den Einsatz von Analysetools mit "
-"vollständigen IP-Adressen möchten wir darauf hinweisen, dass diese Website "
+"vollstÃ¤ndigen IP-Adressen mÃ¶chten wir darauf hinweisen, dass diese Website "
 "Google Analytics mit der Erweiterung &quot;anonymizeIp&quot; verwendet und "
-"daher IP-Adressen nur gekürzt weiterverarbeitet werden, um eine direkte "
-"Personenbeziehbarkeit auszuschließen."
+"daher IP-Adressen nur gekÃ¼rzt weiterverarbeitet werden, um eine direkte "
+"Personenbeziehbarkeit auszuschlieÃŸen."
 msgstr ""
+"Esta pÃ¡gina web utiliza Google Analytics, un servicio de anÃ¡lisis web de "
+"Google Inc. (\"Google\"). Google Analytics utiliza \"cookies\", archivos de "
+"texto que se almacenan en su ordenador y permiten un anÃ¡lisis de su uso del "
+"sitio web. La informaciÃ³n que genera la cookie acerca de su uso del sitio "
+"(incluyendo su direcciÃ³n IP) serÃ¡ transmitida a un servidor de Google en EE."
+"UU. donde queda almacenada. Google usarÃ¡ esta informaciÃ³n para evaluar su "
+"uso del sitio, recopilando informes de la actividad de la web para "
+"operadores de sitios web y proporcionar a otros con el sitio web y los "
+"servicios relacionados con Internet. Google no podrÃ¡ transmitir dicha "
+"informaciÃ³n a terceros a menos que requerido por la ley o cuando dichos "
+"terceros procesen la informaciÃ³n por cuenta de Google. Google no asociarÃ¡ su "
+"direcciÃ³n IP con ningÃºn otro dato del que disponga Google. Usted puede "
+"rechazar el uso de cookies, mediante la selecciÃ³n de la configuraciÃ³n "
+"apropiada de su navegador. Se seÃ±ala, sin embargo, que es posible que no "
+"pueda utilizar todas las funciones de este sitio web en toda su extensiÃ³n. "
+"Al utilizar este sitio, usted estÃ¡ de acuerdo con el tratamiento de "
+"informaciÃ³n acerca de Usted por Google en la forma descrita anteriormente y "
+"para el referido fin. La recogida y almacenamiento de datos <a href=\"http://"
+"tools.google.com/dlpage/gaoptout?hl=de\"> puede ser revocado en cualquier "
+"momento con efecto para el futuro </ a>. Teniendo en cuenta el debate sobre "
+"el uso de herramientas de anÃ¡lisis con direcciones IP completas, nos "
+"gustarÃ­a seÃ±alar que este sitio web utiliza Google Analytics con la "
+"extensiÃ³n \"anonymizeIp\" y, por tanto, se procesarÃ¡n las direcciones IP "
+"sÃ³lo acortado a excluir a un personal directo."
 
 #: ../../../regeln.php:122
 msgid ""
 "Da auf dieser Seite teilweise Werbung durch Google Adsense angezeigt wird, "
 "speichert Ihr Browser eventuell ein von Google Inc. oder Dritten gesendetes "
 "Cookie. Dieses Cookie kann durch Google Inc. oder Dritte ausgelesen werden. "
-"Um dieses Cookie zu löschen oder die Cookiebehandlung generell zu verändern, "
+"Um dieses Cookie zu lÃ¶schen oder die Cookiebehandlung generell zu verÃ¤ndern, "
 "konsultieren Sie bitte die Hilfe Ihres Browsers. In der Regel finden sich "
 "diese Einstellungen unter Extras &raquo; Einstellungen &raquo; Datenschutz "
 "(Firefox) oder unter Extras &raquo; Internetoptionen &raquo; Datenschutz "
@@ -3038,13 +3066,13 @@ msgid ""
 msgstr ""
 
 #: ../../../regeln.php:123
-msgid "Änderungen an dieser Datenschutzerklärung:"
-msgstr "Modificaciones a esta declaración de privacidad:"
+msgid "Ã„nderungen an dieser DatenschutzerklÃ¤rung:"
+msgstr "Modificaciones a esta declaraciÃ³n de privacidad:"
 
 #: ../../../regeln.php:124
 msgid ""
-"Ballmanager behält sich vor, jederzeit Änderungen an dieser "
-"Datenschutzerklärung durchzuführen."
+"Ballmanager behÃ¤lt sich vor, jederzeit Ã„nderungen an dieser "
+"DatenschutzerklÃ¤rung durchzufÃ¼hren."
 msgstr ""
 
 #: ../../../regeln.php:125
@@ -3054,53 +3082,54 @@ msgstr "Sitios relacionados:"
 #: ../../../regeln.php:126
 msgid ""
 "Auf den einzelnen Seiten dieses Projekts sind verschiedene externe Webseiten "
-"verlinkt. Für diese Seiten gilt die obige Erklärung nicht und Ballmanager "
-"ist nicht für die Seiten verantwortlich."
+"verlinkt. FÃ¼r diese Seiten gilt die obige ErklÃ¤rung nicht und Ballmanager "
+"ist nicht fÃ¼r die Seiten verantwortlich."
 msgstr ""
 
 #: ../../../regeln.php:127
 msgid "Weitere Informationen:"
-msgstr "Información adicional"
+msgstr "InformaciÃ³n adicional"
 
 #: ../../../registrieren.php:4 ../../../registrieren.php:6
-msgid "Registrierung - Daten prüfen"
+msgid "Registrierung - Daten prÃ¼fen"
 msgstr "Registro - Comprobar los datos"
 
 #: ../../../registrieren.php:73
 msgid ""
-"Dein Managername darf nur die folgenden Zeichen enthalten (Länge: 3-30)."
+"Dein Managername darf nur die folgenden Zeichen enthalten (LÃ¤nge: 3-30)."
 msgstr ""
-"Tu nombre de usuario sólo puede contener los siguientes caracteres "
+"Tu nombre de usuario sÃ³lo puede contener los siguientes caracteres "
 "(longitud: 3-30)."
 
 #: ../../../registrieren.php:76 ../../../registrieren.php:80
 #: ../../../registrieren.php:84
 msgid "Bitte klicke hier und versuche es noch einmal."
-msgstr "Has clic aquí y vuelve a intentarlo."
+msgstr "Has clic aquÃ­ y vuelve a intentarlo."
 
 #: ../../../registrieren.php:79
-msgid "Du hast keine gültige E-Mail-Adresse angegeben."
-msgstr ""
+msgid "Du hast keine gÃ¼ltige E-Mail-Adresse angegeben."
+msgstr "No has introducido una direcciÃ³n de correo electrÃ³nico vÃ¡lida."
 
 #: ../../../registrieren.php:83
-msgid "E-Mail-Adressen von diesem Anbieter können leider nicht genutzt werden."
+msgid "E-Mail-Adressen von diesem Anbieter kÃ¶nnen leider nicht genutzt werden."
 msgstr ""
 "Desafortunadamente, no se pueden utilizar las direcciones de correo "
-"electrónico de este proveedor."
+"electrÃ³nico de este proveedor."
 
 #: ../../../registrieren.php:91
 msgid "Dein Team und die Liga kannst Du Dir beim ersten Login frei aussuchen."
 msgstr ""
+"Puedes elegir tu equipo y la liga libremente en el primer inicio de sesiÃ³n."
 
 #: ../../../registrieren.php:93
 msgid ""
 "Du kannst die Registrierung an dieser Stelle noch abbrechen. Deine Daten "
 "wurden noch nicht gespeichert."
-msgstr "Aún puedes cancelar tu registro. Tus datos no se ha guardado todavia."
+msgstr "AÃºn puedes cancelar tu registro. Tus datos no se ha guardado todavia."
 
 #: ../../../spielbericht.php:115
 msgid "Zur LIVE-Zentrale"
-msgstr ""
+msgstr "Ir al Centro en VIVO"
 
 #: ../../../spielbericht.php:258
 msgid "Herzlich willkommen im Stadion. Heute findet das Spiel zwischen "
@@ -3108,7 +3137,7 @@ msgstr "Bienvenidos al estadio. El partido de hoy es entre"
 
 #: ../../../spielbericht.php:282
 msgid "Bereich"
-msgstr "Sección"
+msgstr "SecciÃ³n"
 
 #: ../../../spielbericht.php:283
 msgid "Wert"
@@ -3116,7 +3145,7 @@ msgstr "Valor"
 
 #: ../../../spielbericht.php:287
 msgid "Begegnung"
-msgstr ""
+msgstr "Encuentro"
 
 #: ../../../spielbericht.php:290
 msgid "Wettbewerb"
@@ -3124,19 +3153,19 @@ msgstr "Competicion"
 
 #: ../../../spielbericht.php:291
 msgid "Zuschauer"
-msgstr "Público"
+msgstr "PÃºblico"
 
 #: ../../../spielbericht.php:292
 msgid "Tore (Heim)"
 msgstr "Goles (local)"
 
 #: ../../../spielbericht.php:293
-msgid "Tore (Auswärts)"
+msgid "Tore (AuswÃ¤rts)"
 msgstr "Goles (visitante)"
 
 #: ../../../spielbericht.php:294
 msgid "Ballbesitz"
-msgstr "Posesión del balón"
+msgstr "PosesiÃ³n del balÃ³n"
 
 #: ../../../spielbericht.php:295
 msgid "Fouls"
@@ -3144,10 +3173,10 @@ msgstr "Faltas"
 
 #: ../../../spielbericht.php:296
 msgid "Abseits"
-msgstr "Posición adelantada"
+msgstr "PosiciÃ³n adelantada"
 
 #: ../../../spielbericht.php:297
-msgid "Schüsse"
+msgid "SchÃ¼sse"
 msgstr "Remates"
 
 #: ../../../spielbericht.php:298
@@ -3155,7 +3184,7 @@ msgid "Gelb (Heim)"
 msgstr "Tarjetas amarillas (local)"
 
 #: ../../../spielbericht.php:299
-msgid "Gelb (Auswärts)"
+msgid "Gelb (AuswÃ¤rts)"
 msgstr "Tarjetas amarillas (visitante)"
 
 #: ../../../spielbericht.php:300
@@ -3163,7 +3192,7 @@ msgid "Rot (Heim)"
 msgstr "Tarjetas rojas (local)"
 
 #: ../../../spielbericht.php:301
-msgid "Rot (Auswärts)"
+msgid "Rot (AuswÃ¤rts)"
 msgstr "Tarjetas rojas (visitante)"
 
 #: ../../../spielbericht.php:307
@@ -3171,7 +3200,7 @@ msgid "Kommentar des Reporters"
 msgstr "Relato del periodista"
 
 #: ../../../spielbericht.php:313
-msgid "Mögliche RKP-Veränderungen"
+msgid "MÃ¶gliche RKP-VerÃ¤nderungen"
 msgstr "Posibles cambios de RKP"
 
 #: ../../../spieler_historie.php:19 ../../../spieler_historie.php:21
@@ -3191,16 +3220,16 @@ msgid "Zu"
 msgstr "Para"
 
 #: ../../../spieler_historie.php:30 ../../../stat_transfer_uebersicht.php:42
-msgid "Ablöse"
+msgid "AblÃ¶se"
 msgstr "Taza de transferencia"
 
 #: ../../../spieler_historie.php:91
-msgid "Letzte Gebote [Sichtbar fürs Team]"
-msgstr ""
+msgid "Letzte Gebote [Sichtbar fÃ¼rs Team]"
+msgstr "Ãšltimas apuestas [visibles por el Soporte]"
 
 #: ../../../spieler_historie.php:96
 msgid "Bieter-IP"
-msgstr ""
+msgstr "IP del postor:"
 
 #: ../../../spieler_historie.php:97 ../../../ver_buchungen.php:13
 msgid "Betrag"
@@ -3209,49 +3238,54 @@ msgstr "Cantidad"
 #: ../../../stat_5jahresWertung.php:2 ../../../stat_5jahresWertung.php:13
 #: ../../../zzsubnav_statistik.php:6
 msgid "5-Jahres-Wertung"
-msgstr "Ranking 5 años"
+msgstr "Ranking 5 aÃ±os"
 
 #: ../../../stat_5jahresWertung.php:15
 msgid ""
 "Auf dieser Seite sind alle ersten Ligen aufgelistet, sortiert nach ihrem "
-"Erfolg im Pokal. Dabei zählen die Punkte, die die Teams in den letzten 5 "
+"Erfolg im Pokal. Dabei zÃ¤hlen die Punkte, die die Teams in den letzten 5 "
 "Saisons geholt haben."
 msgstr ""
 
 #: ../../../stat_5jahresWertung.php:16
 msgid ""
-"Für einen Sieg im Pokal bekommt jedes Land 2 Punkte, für ein Unentschieden 1 "
-"Punkt. Die Punktzahl wird am Ende durch die Anzahl der Teams für das Land "
+"FÃ¼r einen Sieg im Pokal bekommt jedes Land 2 Punkte, fÃ¼r ein Unentschieden 1 "
+"Punkt. Die Punktzahl wird am Ende durch die Anzahl der Teams fÃ¼r das Land "
 "geteilt."
 msgstr ""
 
 #: ../../../stat_5jahresWertung.php:17
 msgid ""
-"Auf Grundlage dieser 5-Jahres-Wertung werden die Startplätze im Pokal "
-"vergeben: Die ersten 6 Länder bekommen 3 Startplätze, die restlichen Länder "
+"Auf Grundlage dieser 5-Jahres-Wertung werden die StartplÃ¤tze im Pokal "
+"vergeben: Die ersten 6 LÃ¤nder bekommen 3 StartplÃ¤tze, die restlichen LÃ¤nder "
 "2."
 msgstr ""
 
 #: ../../../stat_5jahresWertung.php:23
 msgid "GES"
-msgstr ""
+msgstr "PTL"
 
 #: ../../../stat_5jahresWertung.php:58
-msgid "Erklärungen:"
+msgid "ErklÃ¤rungen:"
 msgstr "Explicaciones:"
 
 #: ../../../stat_5jahresWertung.php:58
 msgid ""
 "Die erste Spalte gibt die Platzierung an, die zweite die Liga, die dritte "
 "(&quot;GES&quot;) die Gesamtpunktzahl der letzten 5 Saisons und die "
-"folgenden fünf Spalten die einzelnen Punktzahlen für die letzten Saisons."
+"folgenden fÃ¼nf Spalten die einzelnen Punktzahlen fÃ¼r die letzten Saisons."
 msgstr ""
+"La primera columna indica el ranking, la segunda muestra la liga, la tercera "
+"(&quot;PTL&quot;) es para los puntos totales desde las Ãºltimas 5 temporadas "
+"y las siguientes cinco columnas indican los puntos de las Ãºltimas temporadas."
 
 #: ../../../stat_5jahresWertung.php:59
 msgid ""
-"Bei Punktgleichheit (GES) zwischen zwei Ländern entscheidet das neueste "
+"Bei Punktgleichheit (GES) zwischen zwei LÃ¤ndern entscheidet das neueste "
 "Saisonergebnis, in dem es eine Differenz gibt."
 msgstr ""
+"En caso de igualdad (PTL) entre ambos paÃ­ses, el Ãºltimo resultado de la "
+"temporada en la que hay una diferencia decide."
 
 #: ../../../stat_cupsieger.php:2 ../../../stat_cupsieger.php:39
 #: ../../../stat_cupsieger.php:68
@@ -3260,7 +3294,7 @@ msgstr "Ganadores Copa Nacional"
 
 #: ../../../stat_cupsieger.php:40
 msgid "Welches Teams haben den Cup schon gewonnen? Wer war ihr Finalgegner?"
-msgstr "¿Qué equipos han ganado la Copa Nacional? ¿Contra quién fue su final?"
+msgstr "Â¿QuÃ© equipos han ganado la Copa Nacional? Â¿Contra quiÃ©n fue su final?"
 
 #: ../../../stat_cupsieger.php:45 ../../../stat_meister.php:41
 #: ../../../stat_pokalsieger.php:19 ../../../zz2.php:184
@@ -3278,16 +3312,16 @@ msgstr "Rivales en la final"
 #: ../../../stat_dauerbrenner.php:2 ../../../stat_dauerbrenner.php:13
 #: ../../../stat_dauerbrenner.php:64 ../../../zzsubnav_statistik.php:8
 msgid "Dauerbrenner"
-msgstr ""
+msgstr "Jugadores mÃ¡s indispensables."
 
 #: ../../../stat_dauerbrenner.php:14
 msgid ""
-"Welche Spieler hatten die meisten Einsätze in dieser Saison? Wer ist am "
-"häufigsten für sein Team aufgelaufen?"
+"Welche Spieler hatten die meisten EinsÃ¤tze in dieser Saison? Wer ist am "
+"hÃ¤ufigsten fÃ¼r sein Team aufgelaufen?"
 msgstr ""
 
 #: ../../../stat_dauerbrenner.php:22 ../../../stat_treuesteSpieler.php:37
-msgid "Einsätze"
+msgid "EinsÃ¤tze"
 msgstr "Presentaciones"
 
 #: ../../../stat_ergebnisverlauf.php:2 ../../../stat_ergebnisverlauf.php:6
@@ -3298,15 +3332,15 @@ msgstr "Curso de los resultados"
 #: ../../../stat_ergebnisverlauf.php:7
 msgid ""
 "Dieses Liniendiagramm zeigt die Entwicklung Deiner Ergebnisse in der "
-"aktuellen Saison. Hinweis: Die Daten können erst nach zwei Spielen angezeigt "
+"aktuellen Saison. Hinweis: Die Daten kÃ¶nnen erst nach zwei Spielen angezeigt "
 "werden."
 msgstr ""
 
 #: ../../../stat_ergebnisverlauf.php:59 ../../../stat_ergebnisverlauf.php:63
 #: ../../../stat_saisonverlauf.php:36 ../../../stat_saisonverlauf.php:40
 #: ../../../stat_zuschauerverlauf.php:37
-msgid "Noch keine Daten verfügbar!"
-msgstr "¡No hay datos disponibles!"
+msgid "Noch keine Daten verfÃ¼gbar!"
+msgstr "Â¡No hay datos disponibles!"
 
 #: ../../../stat_geldwert.php:2 ../../../stat_geldwert.php:6
 #: ../../../stat_geldwert.php:77 ../../../zzsubnav_statistik.php:26
@@ -3319,7 +3353,7 @@ msgid "Geschichte"
 msgstr "Historia"
 
 #: ../../../stat_geschichte.php:6
-msgid "Tabelle wählen"
+msgid "Tabelle wÃ¤hlen"
 msgstr "Elige una tabla"
 
 #: ../../../stat_geschichte.php:53
@@ -3347,8 +3381,8 @@ msgstr "Diferencia"
 
 #: ../../../stat_juengste_kader.php:2 ../../../stat_juengste_kader.php:41
 #: ../../../stat_juengste_kader.php:68 ../../../zzsubnav_statistik.php:13
-msgid "Jüngste Kader"
-msgstr "Planteles más jóvenes"
+msgid "JÃ¼ngste Kader"
+msgstr "Planteles mÃ¡s jÃ³venes"
 
 #: ../../../stat_juengste_kader.php:16 ../../../stat_meiste_titel.php:16
 #: ../../../stat_meiste_zuschauer.php:16 ../../../stat_torjaegerliste.php:24
@@ -3360,8 +3394,8 @@ msgstr "Todas las ligas"
 
 #: ../../../stat_juengste_kader.php:42
 msgid ""
-"Welche Vereine setzen am stärksten auf die Jugend? Die folgende Liste zeigt "
-"die Teams mit den jüngsten Kadern. Bedingung: mindestens 17 Spieler im Kader."
+"Welche Vereine setzen am stÃ¤rksten auf die Jugend? Die folgende Liste zeigt "
+"die Teams mit den jÃ¼ngsten Kadern. Bedingung: mindestens 17 Spieler im Kader."
 msgstr ""
 
 #: ../../../stat_ligaTausch.php:2 ../../../stat_ligaTausch.php:5
@@ -3389,18 +3423,18 @@ msgstr "Mayores triunfos"
 #: ../../../stat_transfer_uebersicht.php:6
 #: ../../../stat_wertvollste_spieler.php:13
 #: ../../../stat_wertvollste_teams.php:13
-msgid "Liga wählen"
+msgid "Liga wÃ¤hlen"
 msgstr "Elige una Liga"
 
 #: ../../../stat_meiste_titel.php:61
 msgid ""
 "In dieser Tabelle sind die 20 Teams mit den meisten gewonnenen Titeln "
-"aufgelistet. Pokalsiege, Cupsiege und Meisterschaften werden für das Ranking "
+"aufgelistet. Pokalsiege, Cupsiege und Meisterschaften werden fÃ¼r das Ranking "
 "einfach addiert."
 msgstr ""
-"En esta tabla, se enumeran los 20 equipos con más títulos ganados. Copas, "
+"En esta tabla, se enumeran los 20 equipos con mÃ¡s tÃ­tulos ganados. Copas, "
 "victorias internacionales y campeonatos de liga simplemente se muestran por "
-"orden de puntuación."
+"orden de puntuaciÃ³n."
 
 #: ../../../stat_meiste_titel.php:69
 msgid "Titel"
@@ -3417,17 +3451,17 @@ msgstr "Copa Internacional"
 #: ../../../stat_meiste_zuschauer.php:2 ../../../stat_meiste_zuschauer.php:41
 #: ../../../stat_meiste_zuschauer.php:87 ../../../zzsubnav_statistik.php:15
 msgid "Meiste Zuschauer"
-msgstr "Mayo público"
+msgstr "Mayo pÃºblico"
 
 #: ../../../stat_meiste_zuschauer.php:42
 msgid ""
-"Hier sind die Teams mit dem höchsten Zuschauerschnitt in der aktuellen "
+"Hier sind die Teams mit dem hÃ¶chsten Zuschauerschnitt in der aktuellen "
 "Saison aufgelistet."
 msgstr ""
 
 #: ../../../stat_meiste_zuschauer.php:49
 msgid "Zuschauer i.D."
-msgstr "Público promedio"
+msgstr "PÃºblico promedio"
 
 #: ../../../stat_meister.php:2 ../../../stat_meister.php:35
 #: ../../../stat_meister.php:63 ../../../zzsubnav_statistik.php:16
@@ -3455,7 +3489,7 @@ msgstr "Ligas mas ricas"
 #: ../../../stat_reichste_ligen.php:14
 msgid ""
 "In welcher Liga spielen die reichsten Teams? Diese Statistik zeigt den "
-"Durschnitt der Kontostände."
+"Durschnitt der KontostÃ¤nde."
 msgstr ""
 
 #: ../../../stat_reichste_ligen.php:21
@@ -3470,40 +3504,40 @@ msgstr "Curso de la temporada"
 #: ../../../stat_saisonverlauf.php:7
 msgid ""
 "Dieses Liniendiagramm zeigt die Entwicklung Deines Tabellenplatzes in der "
-"aktuellen Saison. Hinweis: Die Daten können erst nach zwei Spielen angezeigt "
+"aktuellen Saison. Hinweis: Die Daten kÃ¶nnen erst nach zwei Spielen angezeigt "
 "werden."
 msgstr ""
 
 #: ../../../stat_staerkste_ligen_a.php:2
 #: ../../../stat_staerkste_ligen_a.php:12 ../../../zzsubnav_statistik.php:20
-msgid "Stärkste Ligen - Aufstellung"
-msgstr "Ligas más fuertes - Formación"
+msgid "StÃ¤rkste Ligen - Aufstellung"
+msgstr "Ligas mÃ¡s fuertes - FormaciÃ³n"
 
 #: ../../../stat_staerkste_ligen_a.php:14
 msgid ""
-"Jedes Team besitzt eine Aufstellungsstärke. Am Durchschnitt dieser Stärken "
-"innerhalb der einzelnen Ligen wird hier deren Stärke gemessen."
+"Jedes Team besitzt eine AufstellungsstÃ¤rke. Am Durchschnitt dieser StÃ¤rken "
+"innerhalb der einzelnen Ligen wird hier deren StÃ¤rke gemessen."
 msgstr ""
 
 #: ../../../stat_staerkste_ligen_k.php:2
 #: ../../../stat_staerkste_ligen_k.php:12 ../../../zzsubnav_statistik.php:21
-msgid "Stärkste Ligen - Kader"
-msgstr "Ligas más fuertes - Equipos"
+msgid "StÃ¤rkste Ligen - Kader"
+msgstr "Ligas mÃ¡s fuertes - Equipos"
 
 #: ../../../stat_staerkste_ligen_k.php:14
 msgid ""
-"Jedes Team besitzt eine Kaderstärke. Am Durchschnitt dieser Stärken "
-"innerhalb der einzelnen Ligen wird hier deren Stärke gemessen."
+"Jedes Team besitzt eine KaderstÃ¤rke. Am Durchschnitt dieser StÃ¤rken "
+"innerhalb der einzelnen Ligen wird hier deren StÃ¤rke gemessen."
 msgstr ""
 
 #: ../../../stat_staerkste_ligen_r.php:2 ../../../zzsubnav_statistik.php:22
-msgid "Stärkste Ligen - RKP"
-msgstr "Ligas más fuertes - RKP"
+msgid "StÃ¤rkste Ligen - RKP"
+msgstr "Ligas mÃ¡s fuertes - RKP"
 
 #: ../../../stat_staerkste_ligen_r.php:14
 msgid ""
-"Jedes Team besitzt eine Punktzahl fürs Ranking, RKP genannt. Am Durchschnitt "
-"dieser RKP-Zahlen innerhalb der einzelnen Ligen wird hier deren Stärke "
+"Jedes Team besitzt eine Punktzahl fÃ¼rs Ranking, RKP genannt. Am Durchschnitt "
+"dieser RKP-Zahlen innerhalb der einzelnen Ligen wird hier deren StÃ¤rke "
 "gemessen."
 msgstr ""
 
@@ -3513,19 +3547,19 @@ msgstr "RKP"
 
 #: ../../../stat_torjaegerliste.php:2 ../../../stat_torjaegerliste.php:15
 #: ../../../stat_torjaegerliste.php:49 ../../../stat_torjaegerliste.php:77
-msgid "Torjäger"
+msgid "TorjÃ¤ger"
 msgstr "Goleador"
 
 #: ../../../stat_torjaegerliste.php:50
 msgid ""
-"In dieser Torjägerliste sind die erfolgreichsten Torschützen aller Ligen "
+"In dieser TorjÃ¤gerliste sind die erfolgreichsten TorschÃ¼tzen aller Ligen "
 "aufgelistet."
 msgstr ""
 
 #: ../../../stat_transfer_uebersicht.php:2
 #: ../../../stat_transfer_uebersicht.php:34
 #: ../../../stat_transfer_uebersicht.php:71
-msgid "Transfer-Übersicht"
+msgid "Transfer-Ãœbersicht"
 msgstr "Zona de Transferencias"
 
 #: ../../../stat_transfer_uebersicht.php:35
@@ -3534,26 +3568,26 @@ msgid ""
 "Es werden jedoch nur Spieler angezeigt, die nach dem Transfer weiterhin in "
 "Europa gespielt haben."
 msgstr ""
-"Esta tabla muestra las 20 transferencias más caras esta temporada. Sin "
-"embargo, sólo se muestran los jugadores, que han seguido jugando después de "
+"Esta tabla muestra las 20 transferencias mÃ¡s caras esta temporada. Sin "
+"embargo, sÃ³lo se muestran los jugadores, que han seguido jugando despuÃ©s de "
 "la transferencia en Europa."
 
 #: ../../../stat_transfer_uebersicht.php:41
-msgid "Käufer"
+msgid "KÃ¤ufer"
 msgstr "Comprador"
 
 #: ../../../stat_transfer_uebersicht.php:59
-msgid "Außerhalb Europas"
+msgid "AuÃŸerhalb Europas"
 msgstr "Fuera de Europa"
 
 #: ../../../stat_treuesteSpieler.php:2 ../../../stat_treuesteSpieler.php:12
 #: ../../../zzsubnav_statistik.php:25
 msgid "Treueste Spieler"
-msgstr "Jugadores más leales"
+msgstr "Jugadores mÃ¡s leales"
 
 #: ../../../stat_treuesteSpieler.php:29
 msgid ""
-"Welche Spieler haben über mehrere Saisons die meisten Einsätze für ihren "
+"Welche Spieler haben Ã¼ber mehrere Saisons die meisten EinsÃ¤tze fÃ¼r ihren "
 "Verein absolviert? Welche Spieler sind die treuesten?"
 msgstr ""
 
@@ -3561,7 +3595,7 @@ msgstr ""
 #: ../../../stat_wertvollste_spieler.php:41
 #: ../../../stat_wertvollste_spieler.php:68 ../../../zzsubnav_statistik.php:27
 msgid "Wertvollste Spieler"
-msgstr "Jugadores más costosos"
+msgstr "Jugadores mÃ¡s costosos"
 
 #: ../../../stat_wertvollste_spieler.php:42
 msgid ""
@@ -3578,7 +3612,7 @@ msgstr "Valor de mercado"
 #: ../../../stat_wertvollste_teams.php:41
 #: ../../../stat_wertvollste_teams.php:88 ../../../zzsubnav_statistik.php:28
 msgid "Wertvollste Teams"
-msgstr "Equipos más costosos"
+msgstr "Equipos mÃ¡s costosos"
 
 #: ../../../stat_wertvollste_teams.php:42
 msgid ""
@@ -3588,24 +3622,24 @@ msgid ""
 msgstr ""
 
 #: ../../../stat_zuschauerverlauf.php:2 ../../../stat_zuschauerverlauf.php:7
-#: ../../../zzsubnav_statistik.php:29
+#: ../../../stat_zuschauerverlauf.php:43 ../../../zzsubnav_statistik.php:29
 msgid "Zuschauerverlauf"
-msgstr "Asistencia de público"
+msgstr "Asistencia de pÃºblico"
 
 #: ../../../stat_zuschauerverlauf.php:8
 msgid ""
 "Dieses Liniendiagramm zeigt die Entwicklung Deiner Zuschauerzahlen in der "
-"aktuellen Saison. Hinweis: Die Daten können erst nach dem zweiten Heimspiel "
+"aktuellen Saison. Hinweis: Die Daten kÃ¶nnen erst nach dem zweiten Heimspiel "
 "angezeigt werden."
 msgstr ""
 
 #: ../../../taktik.php:2 ../../../zz2.php:177
 msgid "Taktik"
-msgstr "Tácticas"
+msgstr "TÃ¡cticas"
 
 #: ../../../taktik.php:93 ../../../taktik.php:175
 msgid "Ausrichtung:"
-msgstr "Orientación"
+msgstr "OrientaciÃ³n"
 
 #: ../../../taktik.php:95
 msgid "Defensiv"
@@ -3628,12 +3662,12 @@ msgid "Langsam"
 msgstr "Lento"
 
 #: ../../../taktik.php:104
-msgid "Gemäßigt"
+msgid "GemÃ¤ÃŸigt"
 msgstr "Moderado"
 
 #: ../../../taktik.php:105
 msgid "Schnell"
-msgstr "Rápido"
+msgstr "RÃ¡pido"
 
 #: ../../../taktik.php:109 ../../../taktik.php:177
 msgid "Passdistanz:"
@@ -3669,7 +3703,7 @@ msgstr "Arriesgado"
 
 #: ../../../taktik.php:125 ../../../taktik.php:179
 msgid "Druck:"
-msgstr "Presión:"
+msgstr "PresiÃ³n:"
 
 #: ../../../taktik.php:127 ../../../taktik.php:135
 msgid "Niedrig"
@@ -3684,42 +3718,42 @@ msgid "Hoch"
 msgstr "Alta"
 
 #: ../../../taktik.php:133 ../../../taktik.php:180
-msgid "Aggressivität:"
+msgid "AggressivitÃ¤t:"
 msgstr "Agresividad:"
 
 #: ../../../taktik.php:151
 msgid ""
-"Hier kannst Du die aktuell ausgewählte Taktik als Vorlage speichern. Du "
+"Hier kannst Du die aktuell ausgewÃ¤hlte Taktik als Vorlage speichern. Du "
 "kannst auch eine Vorlage laden, die dann die aktuelle Taktik ersetzt."
 msgstr ""
 
 #: ../../../taktik.php:173
-msgid "Erklärungen zu den einzelnen Einstellungen"
-msgstr ""
+msgid "ErklÃ¤rungen zu den einzelnen Einstellungen"
+msgstr "ExplicaciÃ³n de los ajustes"
 
 #: ../../../taktik.php:174
 msgid ""
-"Wähle oben einfach aus jeder der sechs Auswahllisten deine bevorzugte "
+"WÃ¤hle oben einfach aus jeder der sechs Auswahllisten deine bevorzugte "
 "Einstellung aus. Du solltest die Taktiken - je nach Gegner - anpassen, um "
 "das Beste aus deiner Mannschaft rauszuholen. Die Taktik, die gespeichert "
-"ist, während ein Spiel simuliert wird, wird für dieses Spiel auch "
-"angewendet. Du hast für jeden Teil drei Auswahlmöglichkeiten. Im Folgenden "
-"werden davon die äußeren Möglichkeiten erklärt, die mittleren stellen immer "
+"ist, wÃ¤hrend ein Spiel simuliert wird, wird fÃ¼r dieses Spiel auch "
+"angewendet. Du hast fÃ¼r jeden Teil drei AuswahlmÃ¶glichkeiten. Im Folgenden "
+"werden davon die Ã¤uÃŸeren MÃ¶glichkeiten erklÃ¤rt, die mittleren stellen immer "
 "nur einen Mittelweg dar."
 msgstr ""
 
 #: ../../../taktik.php:175
 msgid ""
-"Die Einstellung \"Offensiv\" wird den Angriff Deines Teams stärken. Dein "
+"Die Einstellung \"Offensiv\" wird den Angriff Deines Teams stÃ¤rken. Dein "
 "Team wird aber nicht mehr so viel Wert auf die Verteidigung legen, weshalb "
-"diese schwächer wird. Mit \"Defensiv\" bewirkst Du genau das Gegenteil: Die "
-"Verteidigung wird stärker, der Angriff schwächer."
+"diese schwÃ¤cher wird. Mit \"Defensiv\" bewirkst Du genau das Gegenteil: Die "
+"Verteidigung wird stÃ¤rker, der Angriff schwÃ¤cher."
 msgstr ""
 
 #: ../../../taktik.php:176
 msgid ""
 "Mit der Einstellung \"Schnell\" werden mehr Angriffe Deines Teams "
-"erfolgreich verlaufen und durch die Abwehr kommen, dafür steigt aber auch "
+"erfolgreich verlaufen und durch die Abwehr kommen, dafÃ¼r steigt aber auch "
 "das Risiko, vom Gegner ausgekontert zu werden. Wenn Dein Team \"Langsam\" "
 "spielt, wird es schwerer, Torchancen herauszuspielen. Der Vorteil ist "
 "jedoch, dass Dein Gegner Dich nicht so leicht auskontern kann."
@@ -3731,13 +3765,13 @@ msgid ""
 "die gegnerische Abwehr kommen und zu Torchancen werden. Allerdings sind die "
 "Torchancen dann nicht so gut. Die Auswahl \"Lang\" bewirkt, dass weniger "
 "Torchancen enstehen, aber wenn eine Chance entsteht, dann ist sie auch sehr "
-"gut. Ein weiterer Nachteil: Du wirst häufiger im Abseits stehen."
+"gut. Ein weiterer Nachteil: Du wirst hÃ¤ufiger im Abseits stehen."
 msgstr ""
 
 #: ../../../taktik.php:178
 msgid ""
-"Wenn du \"Riskant\" spielst, wirst Du nicht mehr Torschuss-Möglichkeiten "
-"bekommen als sonst, aber die Chancen werden besser. Dafür steigt aber auch "
+"Wenn du \"Riskant\" spielst, wirst Du nicht mehr Torschuss-MÃ¶glichkeiten "
+"bekommen als sonst, aber die Chancen werden besser. DafÃ¼r steigt aber auch "
 "die Kontergefahr stark an. Bei der Spielweise \"Sicher\" wirst Du wenige "
 "gute Chancen bekommen. Allerdings ist dann auch die Kontergefahr sehr "
 "niedrig."
@@ -3746,19 +3780,19 @@ msgstr ""
 #: ../../../taktik.php:179
 msgid ""
 "Wenn Deine Mannschaft \"Viel\" Druck macht, wirst Du Dir viele Konterchancen "
-"erarbeiten können. Leider brauchen Deine Spieler auch viel Kondition, um "
-"diese Spielweise durchhalten zu können. Die Frische Deiner Spieler wird so "
-"also stärker sinken. Falls der Druck, den Dein Team erzeugt, \"Niedrig\" "
+"erarbeiten kÃ¶nnen. Leider brauchen Deine Spieler auch viel Kondition, um "
+"diese Spielweise durchhalten zu kÃ¶nnen. Die Frische Deiner Spieler wird so "
+"also stÃ¤rker sinken. Falls der Druck, den Dein Team erzeugt, \"Niedrig\" "
 "ist, wird das Spiel nicht so anstrengend. Dein Gegner wird aber auch weniger "
-"Fehler machen, sodass Du weniger Konterchancen erhältst."
+"Fehler machen, sodass Du weniger Konterchancen erhÃ¤ltst."
 msgstr ""
 
 #: ../../../taktik.php:180
 msgid ""
 "Bei der Auswahl \"Hoch\" wirst Du viele gegnerische Angriffe durch Fouls "
 "unterbrechen, wodurch auch gute Chancen des Gegners zunichte gemacht werden. "
-"Allerdings erhält der Gegner so auch mehr Freistoß-Möglichkeiten, aus denen "
-"Tore enstehen können. Falls die Aggressivität Deines Teams \"Niedrig\" ist, "
+"Allerdings erhÃ¤lt der Gegner so auch mehr FreistoÃŸ-MÃ¶glichkeiten, aus denen "
+"Tore enstehen kÃ¶nnen. Falls die AggressivitÃ¤t Deines Teams \"Niedrig\" ist, "
 "werden Deine Spieler weniger Fouls begehen (fairer spielen), gute Chancen "
 "des Gegners werden sie aber auch seltener mit unfairen Mitteln stoppen."
 msgstr ""
@@ -3766,7 +3800,7 @@ msgstr ""
 #: ../../../tipps_des_tages.php:2 ../../../tipps_des_tages.php:13
 #: ../../../tipps_des_tages.php:39
 msgid "Tipps des Tages"
-msgstr "Consejo del día"
+msgstr "Consejo del dÃ­a"
 
 #: ../../../tipps_des_tages.php:5
 msgid "Tipps durchsuchen"
@@ -3774,7 +3808,7 @@ msgstr "Buscar consejos"
 
 #: ../../../tipps_des_tages.php:16
 msgid "Tipps des Tages zum Thema"
-msgstr "Consejo del día sobre el tema"
+msgstr "Consejo del dÃ­a sobre el tema"
 
 #: ../../../tipps_des_tages.php:19
 msgid ""
@@ -3787,18 +3821,18 @@ msgstr "Ranking"
 
 #: ../../../top_manager.php:32
 msgid "Meine Position"
-msgstr "Mi posición"
+msgstr "Mi posiciÃ³n"
 
 #: ../../../top_manager.php:38
 msgid "Mein Land"
-msgstr "Mi país"
+msgstr "Mi paÃ­s"
 
 #: ../../../top_manager.php:45
 msgid ""
 "Welcher Manager ist der erfolgreichste? Die Rangliste zeigt alle Manager, "
 "geordnet nach dem RKP ihrer Vereine."
 msgstr ""
-"¿Qué mánager es el más exitoso? El ranking muestra todos los gerentes "
+"Â¿QuÃ© mÃ¡nager es el mÃ¡s exitoso? El ranking muestra todos los gerentes "
 "ordenados por los RKP de sus clubes."
 
 #: ../../../transferliste.php:2
@@ -3810,7 +3844,7 @@ msgid "Gebote"
 msgstr "Ofertas"
 
 #: ../../../transferliste.php:12
-msgid "Höchstgebot"
+msgid "HÃ¶chstgebot"
 msgstr "Mejor oferta"
 
 #: ../../../transferliste.php:13
@@ -3819,7 +3853,7 @@ msgstr "Final"
 
 #: ../../../transferliste.php:22
 msgid "Du bietest im Moment keinen Spieler zum Verkauf an."
-msgstr "En este momento no estas ofreciendo ningún jugador a la venta."
+msgstr "En este momento no estas ofreciendo ningÃºn jugador a la venta."
 
 #: ../../../ver_buchungen.php:2 ../../../ver_buchungen.php:4
 #: ../../../zz2.php:196
@@ -3829,12 +3863,12 @@ msgstr "Transacciones"
 #: ../../../ver_buchungen.php:6
 msgid ""
 "In dieser Tabelle sind alle Buchungen aufgelistet, die in der aktuellen "
-"Saison durchgeführt wurden."
+"Saison durchgefÃ¼hrt wurden."
 msgstr "Esta tabla muestra todas las transacciones hechas esta temporada."
 
 #: ../../../ver_buchungen.php:11
 msgid "Buchungstag"
-msgstr "Fecha de transacción"
+msgstr "Fecha de transacciÃ³n"
 
 #: ../../../ver_buchungen.php:12
 msgid "Verwendungszweck"
@@ -3842,7 +3876,7 @@ msgstr "Uso destinado"
 
 #: ../../../ver_lotto.php:2 ../../../zz2.php:199
 msgid "Lotto"
-msgstr "Lotería"
+msgstr "LoterÃ­a"
 
 #: ../../../ver_lotto.php:8
 msgid "Januar"
@@ -3853,7 +3887,7 @@ msgid "Februar"
 msgstr "Febrero"
 
 #: ../../../ver_lotto.php:10
-msgid "März"
+msgid "MÃ¤rz"
 msgstr "Marzo"
 
 #: ../../../ver_lotto.php:11
@@ -3894,31 +3928,31 @@ msgstr "Diciembre"
 
 #: ../../../ver_lotto.php:29
 msgid "Lotto vom:"
-msgstr "Lotería del:"
+msgstr "LoterÃ­a del:"
 
 #: ../../../ver_lotto.php:54
-msgid "Du hast für 1.000.000 € einen Lottoschein eingelöst."
-msgstr "Has comprado un billete de lotería por  €1.000.000"
+msgid "Du hast fÃ¼r 1.000.000 â‚¬ einen Lottoschein eingelÃ¶st."
+msgstr "Has comprado un billete de loterÃ­a por  â‚¬1.000.000"
 
 #: ../../../ver_lotto.php:57
-msgid "Du hast zur Feier des Tages einen kostenlosen Lottoschein eingelöst."
-msgstr "Redimiste un billete de lotería libre para celebrar el día."
+msgid "Du hast zur Feier des Tages einen kostenlosen Lottoschein eingelÃ¶st."
+msgstr "Redimiste un billete de loterÃ­a libre para celebrar el dÃ­a."
 
 #: ../../../ver_lotto.php:87
 msgid "Jackpot:"
 msgstr "Pozo acumulado:"
 
 #: ../../../ver_lotto.php:103
-msgid "Für 1.000.000€ einlösen"
-msgstr "Canjear por  €1.000.000"
+msgid "FÃ¼r 1.000.000â‚¬ einlÃ¶sen"
+msgstr "Canjear por  â‚¬1.000.000"
 
 #: ../../../ver_lotto.php:106
-msgid "Kostenlos einlösen"
+msgid "Kostenlos einlÃ¶sen"
 msgstr "Canjear gratis"
 
 #: ../../../ver_lotto.php:113
 msgid "Du hast heute schon getippt. Deine Zahlen:"
-msgstr "Ya has apostado hoy. Tus números son:"
+msgstr "Ya has apostado hoy. Tus nÃºmeros son:"
 
 #: ../../../ver_lotto.php:116
 msgid "Heute schon getippt"
@@ -3926,18 +3960,18 @@ msgstr "Apostado hoy"
 
 #: ../../../ver_lotto.php:126
 msgid "Zahlen von gestern"
-msgstr "Números de ayer"
+msgstr "NÃºmeros de ayer"
 
 #: ../../../ver_lotto.php:128
 msgid "Letzte Gewinne"
-msgstr "Últimos premios"
+msgstr "Ãšltimos premios"
 
 #: ../../../ver_lotto.php:142
-msgid "Höchste Gewinne"
+msgid "HÃ¶chste Gewinne"
 msgstr "Premios mas altos"
 
 #: ../../../vertraege.php:2 ../../../vertraege.php:4 ../../../zz2.php:180
-msgid "Verträge"
+msgid "VertrÃ¤ge"
 msgstr "Contratos"
 
 #: ../../../vertraege.php:14
@@ -3949,23 +3983,23 @@ msgid "Vertrag"
 msgstr "Contrato"
 
 #: ../../../vertraege.php:75
-msgid "Verlängern"
+msgid "VerlÃ¤ngern"
 msgstr "Ampliar"
 
 #: ../../../vertraege.php:86
-msgid "AL: Alter, MO: Moral, GE: Gehalt pro Saison in Millionen €"
-msgstr "AL: edad, MO: moral, ST: salario por temporada en millones €"
+msgid "AL: Alter, MO: Moral, GE: Gehalt pro Saison in Millionen â‚¬"
+msgstr "AL: edad, MO: moral, ST: salario por temporada en millones â‚¬"
 
 #: ../../../vertrag_verlaengern.php:78 ../../../vertrag_verlaengern.php:80
-msgid "Vertrag verlängern:"
+msgid "Vertrag verlÃ¤ngern:"
 msgstr "Extender contrato:"
 
 #: ../../../vertrag_verlaengern.php:129
-msgid "Zurück zur Vertragsübersicht"
-msgstr "Volver a la visión general de contratos"
+msgid "ZurÃ¼ck zur VertragsÃ¼bersicht"
+msgstr "Volver a la visiÃ³n general de contratos"
 
 #: ../../../vertrag_verlaengern.php:129
-msgid "Zurück zum Spielerprofil"
+msgid "ZurÃ¼ck zum Spielerprofil"
 msgstr "Volver al perfil del jugador"
 
 #: ../../../warteliste.php:2 ../../../warteliste.php:4
@@ -3976,15 +4010,15 @@ msgstr "Lista de espera"
 msgid ""
 "Zurzeit stehst Du noch auf der Warteliste. Es wird aber nicht lange dauern, "
 "bis Dir ein Team zugeteilt wird. Dann informieren wir Dich per E-Mail "
-"darüber und Du kannst sofort losspielen."
+"darÃ¼ber und Du kannst sofort losspielen."
 msgstr ""
-"Actualmente te encuentras en la lista de espera. No pasará mucho hasta que "
-"te asignemos un equipo. Te notificaremos via email y podrás continuar "
+"Actualmente te encuentras en la lista de espera. No pasarÃ¡ mucho hasta que "
+"te asignemos un equipo. Te notificaremos via email y podrÃ¡s continuar "
 "jugando instantaneamente."
 
 #: ../../../wio.php:2 ../../../wio.php:4 ../../../zz2.php:246
 msgid "Wer ist online?"
-msgstr "¿Quién esta conectado?"
+msgstr "Â¿QuiÃ©n esta conectado?"
 
 #: ../../../wio.php:6 ../../../wio.php:38
 msgid "Aktiv"
@@ -4000,14 +4034,18 @@ msgstr "Soporte"
 
 #: ../../../zz2.php:1
 msgid ""
-"Übernimm beim Online-Fußball-Manager Dein eigenes Team als Trainer und "
+"Ãœbernimm beim Online-FuÃŸball-Manager Dein eigenes Team als Trainer und "
 "Manager! Lasse alle anderen Manager hinter Dir und hole Dir Pokalsieg und "
 "Meisterschaft!"
 msgstr ""
 
 #: ../../../zz2.php:4
-msgid "Diese Funktion ist mit dem Demo-Account leider nicht verfügbar!"
-msgstr "¡Esta función no esta disponible en la cuenta demo!"
+msgid "Diese Funktion ist mit dem Demo-Account leider nicht verfÃ¼gbar!"
+msgstr "Â¡Esta funciÃ³n no esta disponible en la cuenta demo!"
+
+#: ../../../zz2.php:25
+msgid "Top-Manager"
+msgstr "Mejores mÃ¡nagers"
 
 #: ../../../zz2.php:62
 msgid "Startseite"
@@ -4022,7 +4060,7 @@ msgid "Mobil"
 msgstr "Celulares"
 
 #: ../../../zz2.php:147
-msgid "Büro"
+msgid "BÃ¼ro"
 msgstr "Oficina"
 
 #: ../../../zz2.php:149
@@ -4039,11 +4077,11 @@ msgstr "Ranking"
 
 #: ../../../zz2.php:160
 msgid "Statistiken"
-msgstr "Estadísticas"
+msgstr "EstadÃ­sticas"
 
 #: ../../../zz2.php:161
 msgid "Manager-Wahl"
-msgstr "Mánager del Año"
+msgstr "MÃ¡nager del AÃ±o"
 
 #: ../../../zz2.php:165
 msgid "Transfers"
@@ -4055,7 +4093,7 @@ msgstr "Comprar"
 
 #: ../../../zz2.php:168
 msgid "Leihen"
-msgstr "Préstamo"
+msgstr "PrÃ©stamo"
 
 #: ../../../zz2.php:170
 msgid "Abgeschlossen"
@@ -4063,14 +4101,14 @@ msgstr "Cerrado"
 
 #: ../../../zz2.php:187
 msgid "Int. Pokal"
-msgstr "Copa Inter."
+msgstr "Copa Internacional"
 
 #: ../../../zz2.php:188
 msgid "Nat. Cup"
-msgstr "Copa Nac."
+msgstr "Copa Nacional"
 
 #: ../../../zz2.php:190
-msgid "Testwünsche"
+msgid "TestwÃ¼nsche"
 msgstr "Ofertas de amistosos"
 
 #: ../../../zz2.php:193
@@ -4091,7 +4129,7 @@ msgstr "Estadio"
 
 #: ../../../zz2.php:204
 msgid "Leihgaben"
-msgstr "Préstamos"
+msgstr "PrÃ©stamos"
 
 #: ../../../zz2.php:206
 msgid "Ligatausch"
@@ -4103,11 +4141,11 @@ msgstr "Soporte"
 
 #: ../../../zz2.php:212
 msgid "Post ans Team"
-msgstr "Soporte"
+msgstr "Equipo de soporte"
 
 #: ../../../zz2.php:213
 msgid "Kurztipps"
-msgstr "Consejos rápidos"
+msgstr "Consejos rÃ¡pidos"
 
 #: ../../../zz2.php:215
 msgid "Archiv"
@@ -4115,7 +4153,7 @@ msgstr "Archivo"
 
 #: ../../../zz2.php:226
 msgid "Login"
-msgstr "Iniciar sesión"
+msgstr "Iniciar sesiÃ³n"
 
 #: ../../../zz2.php:230
 msgid "E-Mail / Username:"
@@ -4123,11 +4161,11 @@ msgstr "E-Mail / Usuario:"
 
 #: ../../../zz2.php:231 ../../../zz2.php:241
 msgid "Passwort:"
-msgstr "Contraseña:"
+msgstr "ContraseÃ±a:"
 
 #: ../../../zz2.php:236
 msgid "Passwort vergessen?"
-msgstr "¿Olvidaste tu contraseña?"
+msgstr "Â¿Olvidaste tu contraseÃ±a?"
 
 #: ../../../zz2.php:239
 msgid "Demo-Account"
@@ -4137,12 +4175,20 @@ msgstr "Cuenta-Demo"
 msgid "Username:"
 msgstr "Usuario:"
 
+#: ../../../zz2.php:247
+msgid "ungelesen"
+msgstr "no leÃ­dos"
+
+#: ../../../zz2.php:249
+msgid "online"
+msgstr "conectados"
+
 #: ../../../zz2.php:250
 msgid "Mein Profil"
 msgstr "Mi perfil"
 
 #: ../../../zz2.php:254
-msgid "Support-Menü"
+msgid "Support-MenÃ¼"
 msgstr "Soporte Menu"
 
 #: ../../../zz2.php:261
@@ -4151,15 +4197,15 @@ msgstr "Panel de control"
 
 #: ../../../zz2.php:266
 msgid "Tipp des Tages"
-msgstr "Consejo del día"
+msgstr "Consejo del dÃ­a"
 
 #: ../../../zz2.php:266
 msgid "Alle"
 msgstr "Todos"
 
 #: ../../../zz2.php:279
-msgid "Nächste Spiele"
-msgstr "Próximos partidos"
+msgid "NÃ¤chste Spiele"
+msgstr "PrÃ³ximos partidos"
 
 #: ../../../zz3.php:7
 msgid "Sprache:"
@@ -4171,7 +4217,7 @@ msgstr "Contacto"
 
 #: ../../../zz3.php:11
 msgid "Open Source"
-msgstr "Código abierto"
+msgstr "CÃ³digo abierto"
 
 #: ../../../zz3.php:12
 msgid ""
@@ -4180,12 +4226,12 @@ msgid ""
 "niemals Auszahlungen."
 msgstr ""
 "Todos los clubes, jugadores y patrocinadores son ficticios y no tienen "
-"ninguna relación con las ligas reales. El dinero es sólo virtual y nunca se "
+"ninguna relaciÃ³n con las ligas reales. El dinero es sÃ³lo virtual y nunca se "
 "efectuan pagos."
 
 #: ../../../zzsubnav_statistik.php:1
-msgid "Statistik wählen"
-msgstr "Seleccionar estadísticas"
+msgid "Statistik wÃ¤hlen"
+msgstr "Seleccionar estadÃ­sticas"
 
 #: ../../../zzsubnav_statistik.php:7
 msgid "Cup-Sieger"
@@ -4201,34 +4247,35 @@ msgstr "Ganadores de Copas Mundiales"
 
 #: ../../../zzsubnav_statistik.php:23
 msgid "Teuerste Transfers"
-msgstr "Transferencias más costosas"
+msgstr "Transferencias mÃ¡s costosas"
 
 #: ../../../zzsubnav_statistik.php:24
-msgid "Torjägerliste"
+msgid "TorjÃ¤gerliste"
 msgstr "Mejores puntajes"
 
 #: ../../../tipps_des_tages.php.txt:2
 msgid ""
-"Leihe Dir Spieler von anderen Klubs aus: Leihgaben sind günstige "
-"Verstärkungen für Dein Team."
+"Leihe Dir Spieler von anderen Klubs aus: Leihgaben sind gÃ¼nstige "
+"VerstÃ¤rkungen fÃ¼r Dein Team."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:3
 msgid ""
-"Gerade schwächere Teams können mit erhöhter Aggressivität technische "
-"Schwächen ausgleichen."
+"Gerade schwÃ¤chere Teams kÃ¶nnen mit erhÃ¶hter AggressivitÃ¤t technische "
+"SchwÃ¤chen ausgleichen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:4
 msgid ""
-"Testspiele sind günstige Möglichkeiten, zusätzliche Erfahrung zu sammeln. "
+"Testspiele sind gÃ¼nstige MÃ¶glichkeiten, zusÃ¤tzliche Erfahrung zu sammeln. "
 "Frage einfach bei anderen Managern an, indem Du in ihrem Profil einen Tag "
-"auswählst und eine Anfrage machst."
+"auswÃ¤hlst und eine Anfrage machst."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:5
-msgid "Wenn Du oft mit hohem Druck spielst, werden Deine Spieler schnell müde."
+msgid "Wenn Du oft mit hohem Druck spielst, werden Deine Spieler schnell mÃ¼de."
 msgstr ""
+"Si a menudo juegas con presiÃ³n alta , los jugadores se cansan rÃ¡pidamente."
 
 #: ../../../tipps_des_tages.php.txt:6
 msgid ""
@@ -4239,18 +4286,19 @@ msgstr ""
 #: ../../../tipps_des_tages.php.txt:7
 msgid "Nutze Deinen Heimvorteil im eigenen Stadion - besonders im Pokal!"
 msgstr ""
+"Utiliza tu ventaja de local en tu propio estadio - en especial en la Copa!"
 
 #: ../../../tipps_des_tages.php.txt:8
 msgid ""
 "Fitness-Trainer und der Physiotherapeut sind sehr teuer. Beide sind auch nur "
-"für sehr reiche Vereine gedacht, Du kannst also auch sehr gut ohne diese "
+"fÃ¼r sehr reiche Vereine gedacht, Du kannst also auch sehr gut ohne diese "
 "Assistenten erfolgreich sein."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:9
 msgid ""
-"Verleihe Spieler, die bei Dir keine Einsätze bekommen. Bei anderen Klubs "
-"können sie Erfahrung sammeln und dadurch stärker werden."
+"Verleihe Spieler, die bei Dir keine EinsÃ¤tze bekommen. Bei anderen Klubs "
+"kÃ¶nnen sie Erfahrung sammeln und dadurch stÃ¤rker werden."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:10
@@ -4267,20 +4315,20 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:12
 msgid ""
-"Es gibt keine &quot;perfekte&quot; Taktik. Wähle die Taktik je nach Gegner "
-"und Stärken Deines Teams aus."
+"Es gibt keine &quot;perfekte&quot; Taktik. WÃ¤hle die Taktik je nach Gegner "
+"und StÃ¤rken Deines Teams aus."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:13
 msgid ""
-"Schaue öfters mal alle Deine Verträge nach. Häufig kannst Du bei einigen "
+"Schaue Ã¶fters mal alle Deine VertrÃ¤ge nach. HÃ¤ufig kannst Du bei einigen "
 "Spielern Geld einsparen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:14
 msgid ""
-"Denke immer daran, die Verträge Deiner Spieler rechtzeitig zu verlängern. Du "
-"findest im Büro eine Liste mit Verträgen, die bald enden."
+"Denke immer daran, die VertrÃ¤ge Deiner Spieler rechtzeitig zu verlÃ¤ngern. Du "
+"findest im BÃ¼ro eine Liste mit VertrÃ¤gen, die bald enden."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:15
@@ -4303,15 +4351,15 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:18
 msgid ""
-"Spieler ab 31 Jahren werden mit der Zeit schwächer. Deshalb sind sie auf dem "
-"Transfermarkt günstiger."
+"Spieler ab 31 Jahren werden mit der Zeit schwÃ¤cher. Deshalb sind sie auf dem "
+"Transfermarkt gÃ¼nstiger."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:19
 msgid ""
-"Du kannst Deinen Sponsor zu Beginn jeder Saison wechseln. Der Vertrag läuft "
-"immer bis Saisonende. Wenn Du noch keinen Sponsor ausgewählt hast, bekommst "
-"Du als Prämie jeweils 500.000 €."
+"Du kannst Deinen Sponsor zu Beginn jeder Saison wechseln. Der Vertrag lÃ¤uft "
+"immer bis Saisonende. Wenn Du noch keinen Sponsor ausgewÃ¤hlt hast, bekommst "
+"Du als PrÃ¤mie jeweils 500.000 â‚¬."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:20
@@ -4322,8 +4370,8 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:21
 msgid ""
-"Zwischen 2 Teams darf es pro Saison höchstens 2 Transfers geben. Achte bei "
-"Deinen Käufen und Leihgaben darauf."
+"Zwischen 2 Teams darf es pro Saison hÃ¶chstens 2 Transfers geben. Achte bei "
+"Deinen KÃ¤ufen und Leihgaben darauf."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:22
@@ -4347,20 +4395,20 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:25
 msgid ""
-"Die Frische beschreibt, wie gut die körperliche Verfassung eines Spielers "
+"Die Frische beschreibt, wie gut die kÃ¶rperliche Verfassung eines Spielers "
 "ist. Sie kann einen Wert zwischen 0 und 100 Prozent haben."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:26
 msgid ""
-"Je häufiger ein Spieler eingesetzt wird und je höher der Druck (Taktik) ist, "
+"Je hÃ¤ufiger ein Spieler eingesetzt wird und je hÃ¶her der Druck (Taktik) ist, "
 "desto mehr Frische verliert er."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:27
 msgid ""
-"Du erhältst alle 3 Tage Nachwuchsspieler aus Deiner Jugendabteilung. Die "
-"Qualität wird von Deinem Jugendtrainer beeinflusst."
+"Du erhÃ¤ltst alle 3 Tage Nachwuchsspieler aus Deiner Jugendabteilung. Die "
+"QualitÃ¤t wird von Deinem Jugendtrainer beeinflusst."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:28
@@ -4377,13 +4425,13 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:30
 msgid ""
-"Nach einer Roten Karte verliert ein Team 10% seiner Stärke, nach einer "
+"Nach einer Roten Karte verliert ein Team 10% seiner StÃ¤rke, nach einer "
 "Gelben 2%."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:31
 msgid ""
-"Beim <i>BM-Lotto</i> wird 4 aus 15 gespielt. Das heißt, man muss aus der "
+"Beim <i>BM-Lotto</i> wird 4 aus 15 gespielt. Das heiÃŸt, man muss aus der "
 "Zahlenreihe von 1 bis 15 insgesamt 4 Zahlen tippen."
 msgstr ""
 
@@ -4396,29 +4444,31 @@ msgstr ""
 #: ../../../tipps_des_tages.php.txt:33
 #, php-format
 msgid ""
-"Ein Lottoschein für einen Tag kostet 1 Mio. Euro, 75% davon gehen in den "
+"Ein Lottoschein fÃ¼r einen Tag kostet 1 Mio. Euro, 75% davon gehen in den "
 "Jackpot."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:34
 msgid ""
-"Dein persönliches Maximalgebot bei Auktionen hängt davon ab, wie lange Du "
+"Dein persÃ¶nliches Maximalgebot bei Auktionen hÃ¤ngt davon ab, wie lange Du "
 "schon beim Ballmanager dabei bist."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:35
 msgid ""
-"Spieler wechseln erst nach Saisonende in die Torjägerliste der neuen Liga, "
+"Spieler wechseln erst nach Saisonende in die TorjÃ¤gerliste der neuen Liga, "
 "nicht direkt nach dem Transfer."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:36
 msgid "Die TV-Gelder werden an den ersten Spieltagen jeder Saison verteilt."
 msgstr ""
+"El dinero que genera la televisiÃ³n se distribuirÃ¡ en los primeros dÃ­as de "
+"partido de cada temporada."
 
 #: ../../../tipps_des_tages.php.txt:37
 msgid ""
-"Liga-Tabellen werden immer für 30 Minuten gespeichert, Änderungen sind also "
+"Liga-Tabellen werden immer fÃ¼r 30 Minuten gespeichert, Ã„nderungen sind also "
 "nicht sofort sichtbar."
 msgstr ""
 
@@ -4448,27 +4498,29 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:42
 msgid ""
-"Bei Leihgaben übernimmt der Ausleihende, also der vorübergehende Besitzer, "
+"Bei Leihgaben Ã¼bernimmt der Ausleihende, also der vorÃ¼bergehende Besitzer, "
 "das Gehalt eines Spielers."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:43
 msgid ""
-"Leih-Prämien können vom verleihenden Team angeboten werden. Das ausleihende "
-"Team bekommt sie für jeden Pflichtspiel-Einsatz des Spielers überwiesen."
+"Leih-PrÃ¤mien kÃ¶nnen vom verleihenden Team angeboten werden. Das ausleihende "
+"Team bekommt sie fÃ¼r jeden Pflichtspiel-Einsatz des Spielers Ã¼berwiesen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:44
 msgid ""
-"Der <i>Manager der Saison</i> ist eine Auszeichnung für den erfolgreichsten "
+"Der <i>Manager der Saison</i> ist eine Auszeichnung fÃ¼r den erfolgreichsten "
 "Manager der vergangenen Saison. Er wird durch eine Abstimmung von allen "
-"Managern gewählt."
+"Managern gewÃ¤hlt."
 msgstr ""
+"El <i>MÃ¡nager de la Temporada</ i> es un premio para el tÃ©cnico mÃ¡s exitoso "
+"la temporada pasada. Es elegido por el voto de todos los usuarios."
 
 #: ../../../tipps_des_tages.php.txt:45
 msgid ""
-"Der Titel <i>Manager der Saison</i> bringt keine finanziellen Vorteile für "
-"den Sieger, Du kannst also auch einen Konkurrenten wählen, ohne Nachteile "
+"Der Titel <i>Manager der Saison</i> bringt keine finanziellen Vorteile fÃ¼r "
+"den Sieger, Du kannst also auch einen Konkurrenten wÃ¤hlen, ohne Nachteile "
 "dadurch zu haben."
 msgstr ""
 
@@ -4478,60 +4530,65 @@ msgid ""
 "kannst Du viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-"
 "Einstellungen."
 msgstr ""
+"El <i> 4-4-2 </ i> es la Ãºnica formaciÃ³n disponible en Ballmanager. Sin "
+"embargo, puedes generar un gran impacto en tu equipo a travÃ©s de la extensa "
+"configuraciÃ³n tÃ¡ctica con la que dispones."
 
 #: ../../../tipps_des_tages.php.txt:47
 msgid ""
 "Bei jeder Auktion gibt es ein Mindestgebot. Das verhindert, dass Du einen "
-"anderen Verein mit nur 1 Euro überbieten kannst."
+"anderen Verein mit nur 1 Euro Ã¼berbieten kannst."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:48
 msgid ""
-"Die Aufstellungsstärke bezieht sich auf die Aufstellung für Ligaspiele. Sie "
-"ist die Summe der Spielstärken in der Aufstellung."
+"Die AufstellungsstÃ¤rke bezieht sich auf die Aufstellung fÃ¼r Ligaspiele. Sie "
+"ist die Summe der SpielstÃ¤rken in der Aufstellung."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:49
 msgid ""
 "Bei jedem Deiner Heimspiele kommen Fans in Dein Stadion und zahlen Eintritt. "
-"Es können natürlich nur so viele Zuschauer kommen, wie Deine Stadiongröße "
+"Es kÃ¶nnen natÃ¼rlich nur so viele Zuschauer kommen, wie Deine StadiongrÃ¶ÃŸe "
 "erlaubt."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:50
 msgid ""
-"Deine Zuschauerzahlen hängen unter anderem vom Fanbetreuer, Deinem "
-"Stadiongelände, dem Ticketpreis, Deinem Renommee und dem Gegner ab."
+"Deine Zuschauerzahlen hÃ¤ngen unter anderem vom Fanbetreuer, Deinem "
+"StadiongelÃ¤nde, dem Ticketpreis, Deinem Renommee und dem Gegner ab."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:51
 msgid ""
-"Spieler können sich bei Einsätzen verletzen. Das Risiko hängt dabei von "
-"ihrer Frische ab. Je niedriger die Frische eines Spielers ist, desto höher "
+"Spieler kÃ¶nnen sich bei EinsÃ¤tzen verletzen. Das Risiko hÃ¤ngt dabei von "
+"ihrer Frische ab. Je niedriger die Frische eines Spielers ist, desto hÃ¶her "
 "ist die Wahrscheinlichkeit, dass er sich verletzt."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:52
 msgid ""
 "Du kannst alle 30 Tage einen Kurzurlaub und alle 60 Tage einen langen Urlaub "
-"nehmen. In dieser Zeit übernimmt der Computer die Aufstellung für "
-"Pflichtspiele und schützt Dich vor der automatischen Löschung."
+"nehmen. In dieser Zeit Ã¼bernimmt der Computer die Aufstellung fÃ¼r "
+"Pflichtspiele und schÃ¼tzt Dich vor der automatischen LÃ¶schung."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:53
-msgid "Für jeden Spieler, den Du kaufst, musst Du 5% Transfersteuer zahlen."
+msgid "FÃ¼r jeden Spieler, den Du kaufst, musst Du 5% Transfersteuer zahlen."
 msgstr ""
+"Por cada jugador que compras, debes pagar un impuesto de transferencia del "
+"5%."
 
 #: ../../../tipps_des_tages.php.txt:54
 msgid ""
-"Jeder Manager hat die Möglichkeit, Testspiele mit anderen Vereinen "
-"auszutragen. Allerdings muss dafür an den Verband eine Entschädigung gezahlt "
+"Jeder Manager hat die MÃ¶glichkeit, Testspiele mit anderen Vereinen "
+"auszutragen. Allerdings muss dafÃ¼r an den Verband eine EntschÃ¤digung gezahlt "
 "werden, damit das Spiel genehmigt wird."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:55
 msgid ""
-"Sponsoren zahlen für Testspiele keine Prämien, da die Werbewirkung für sie "
+"Sponsoren zahlen fÃ¼r Testspiele keine PrÃ¤mien, da die Werbewirkung fÃ¼r sie "
 "nicht gegeben ist."
 msgstr ""
 
@@ -4543,14 +4600,14 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:57
 msgid ""
-"Der Scout Deines Teams beobachtet Spieler und schätzt deren Talent ein. Er "
-"kann die Spieler sowohl überschätzen als auch unterschätzen."
+"Der Scout Deines Teams beobachtet Spieler und schÃ¤tzt deren Talent ein. Er "
+"kann die Spieler sowohl Ã¼berschÃ¤tzen als auch unterschÃ¤tzen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:58
 msgid ""
-"Je höher die Kompetenz Deines Scouts ist, also je mehr Geld du für ihn "
-"ausgibst, desto genauer werden seine Schätzungen."
+"Je hÃ¶her die Kompetenz Deines Scouts ist, also je mehr Geld du fÃ¼r ihn "
+"ausgibst, desto genauer werden seine SchÃ¤tzungen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:59
@@ -4563,60 +4620,60 @@ msgstr ""
 #: ../../../tipps_des_tages.php.txt:60
 msgid ""
 "Mit Sanktionen kann das Team unfaires und unpassendes Verhalten bestrafen. "
-"Wer gegen die Regeln verstößt, kann verschiedene Strafen bekommen, unter "
+"Wer gegen die Regeln verstÃ¶ÃŸt, kann verschiedene Strafen bekommen, unter "
 "anderem Transfersperren und Geldstrafen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:61
 msgid ""
 "Eine Saison beim Ballmanager dauert 22 Tage. Nach 11 Hinrunden- und 11 "
-"Rückrundenspielen endet eine Saison und die nächste beginnt. Dabei gibt es "
+"RÃ¼ckrundenspielen endet eine Saison und die nÃ¤chste beginnt. Dabei gibt es "
 "keinen Tag Pause zwischen den beiden Saisons."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:62
 msgid ""
 "Du kannst mit dem <i>Team-Tausch</i> Dein Team an einen anderen Manager "
-"übergeben. Du findest ihn unter <i>Einstellungen</i>."
+"Ã¼bergeben. Du findest ihn unter <i>Einstellungen</i>."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:63
 msgid ""
-"Das Renommee eines Vereins ist der Maßstab für den Erfolg. Jedes Team hat "
+"Das Renommee eines Vereins ist der MaÃŸstab fÃ¼r den Erfolg. Jedes Team hat "
 "eine Punktzahl, die angibt, wie angesehen der Klub zurzeit ist. Dabei "
-"spielen unter anderem Meistertitel, Cup- und Pokalsiege sowie die Qualität "
+"spielen unter anderem Meistertitel, Cup- und Pokalsiege sowie die QualitÃ¤t "
 "der Spieler eine Rolle."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:64
 msgid ""
-"Für den <i>Cup</i> qualifizieren sich die 16 renommiertesten Teams eines "
-"Landes (Freilos). Die restlichen 32 Teams müssen eine Quali-Runde spielen."
+"FÃ¼r den <i>Cup</i> qualifizieren sich die 16 renommiertesten Teams eines "
+"Landes (Freilos). Die restlichen 32 Teams mÃ¼ssen eine Quali-Runde spielen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:65
 msgid ""
-"Klicke im Büro unter <i>Jugendabteilung</i> auf die gesuchte Position, um "
-"die Besetzung Deines Kaders zu sehen und um die Position zu ändern."
+"Klicke im BÃ¼ro unter <i>Jugendabteilung</i> auf die gesuchte Position, um "
+"die Besetzung Deines Kaders zu sehen und um die Position zu Ã¤ndern."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:66
 msgid ""
-"Für unvollständige Aufstellungen in Liga-, Cup- und Pokalspielen musst Du "
-"Deinem Sponsor eine Entschädigung zahlen. Sie wird direkt von Deinen Prämien "
-"für das betroffene Spiel abgezogen."
+"FÃ¼r unvollstÃ¤ndige Aufstellungen in Liga-, Cup- und Pokalspielen musst Du "
+"Deinem Sponsor eine EntschÃ¤digung zahlen. Sie wird direkt von Deinen PrÃ¤mien "
+"fÃ¼r das betroffene Spiel abgezogen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:67
 msgid ""
-"Am Anfang einer neuen Saison kann es beim Renommee zu leichten Sprüngen "
-"kommen. Denn die vorletzte Saison fällt zu diesem Zeitpunkt aus der "
+"Am Anfang einer neuen Saison kann es beim Renommee zu leichten SprÃ¼ngen "
+"kommen. Denn die vorletzte Saison fÃ¤llt zu diesem Zeitpunkt aus der "
 "Bewertung heraus."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:68
 msgid ""
-"Die <i>Kaderstärke</i> ist die durchschnittliche Stärke aller Spieler in "
+"Die <i>KaderstÃ¤rke</i> ist die durchschnittliche StÃ¤rke aller Spieler in "
 "Deinem Kader."
 msgstr ""
 
@@ -4628,41 +4685,43 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:70
 msgid "Der Kontostand hat keine Auswirkungen auf das Renommee Deines Klubs."
-msgstr ""
+msgstr "El saldo de la cuenta no tiene impacto en la reputaciÃ³n de tu club."
 
 #: ../../../tipps_des_tages.php.txt:71
 msgid ""
-"Durch ein hohes Renommee kannst Du eines von 16 Freilosen für die erste "
+"Durch ein hohes Renommee kannst Du eines von 16 Freilosen fÃ¼r die erste "
 "Cuprunde bekommen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:72
 msgid ""
-"Du möchtest in einem anderen Land spielen? Dann nutze den Ligatausch "
-"(Spieltag 1-5)! Klicke dazu im Menü einfach unter <i>Anfragen</i> auf "
+"Du mÃ¶chtest in einem anderen Land spielen? Dann nutze den Ligatausch "
+"(Spieltag 1-5)! Klicke dazu im MenÃ¼ einfach unter <i>Anfragen</i> auf "
 "<i>Ligatausch</i>."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:73
 msgid ""
 "Wenn Du einen Spieler verliehen hast und der Manager des anderen Teams "
-"aufhört, kommt dein Spieler sofort zurück."
+"aufhÃ¶rt, kommt dein Spieler sofort zurÃ¼ck."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:74
 msgid ""
-"Im Pokal gibt es 1 Mio. Euro zusätzliche Antrittsprämie vom Sponsor, im Cup "
+"Im Pokal gibt es 1 Mio. Euro zusÃ¤tzliche AntrittsprÃ¤mie vom Sponsor, im Cup "
 "500.000 Euro."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:75
 msgid "Zu Beginn jeder Saison haben alle Spieler wieder 100% Frische."
 msgstr ""
+"Al comienzo de cada temporada, todos los jugadores recuperan el 100% de "
+"frescura."
 
 #: ../../../tipps_des_tages.php.txt:76
 msgid ""
 "Unter <i>Anfragen</i> &raquo; <i>Testspiele</i> kannst Du einstellen, ob Du "
-"Anfragen für Testspiele erhalten möchtest oder nicht."
+"Anfragen fÃ¼r Testspiele erhalten mÃ¶chtest oder nicht."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:77
@@ -4673,60 +4732,60 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:78
 msgid ""
-"Bei Punktgleichheit in der Liga zählt die bessere Tordifferenz, danach die "
+"Bei Punktgleichheit in der Liga zÃ¤hlt die bessere Tordifferenz, danach die "
 "geschossenen Tore. Ansonsten entscheidet das Los."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:79
 msgid ""
-"Jugendspieler haben am Anfang immer schon 50 bis 90 Prozent ihrer möglichen "
-"Maximalstärke erreicht."
+"Jugendspieler haben am Anfang immer schon 50 bis 90 Prozent ihrer mÃ¶glichen "
+"MaximalstÃ¤rke erreicht."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:80
 msgid ""
 "Der Jugendtrainer beeinflusst den Trainingseifer Deiner Jugendspieler und "
-"die maximale Stärke, die sie jemals erreichen können."
+"die maximale StÃ¤rke, die sie jemals erreichen kÃ¶nnen."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:81
 msgid ""
-"Mit einem Jugendtrainer der Stufe 1 können Deine Nachwuchsspieler höchstens "
-"eine Maximalstärke von 5,9 erreichen. Mit besseren Jugendtrainern sind auch "
-"höhere Maximalstärken möglich."
+"Mit einem Jugendtrainer der Stufe 1 kÃ¶nnen Deine Nachwuchsspieler hÃ¶chstens "
+"eine MaximalstÃ¤rke von 5,9 erreichen. Mit besseren Jugendtrainern sind auch "
+"hÃ¶here MaximalstÃ¤rken mÃ¶glich."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:82
 msgid ""
 "Zwischen den 4 Spielphasen bleibt Zeit, um die Aufstellung und Taktik zu "
-"ändern. Die Spiele werden immer automatisch simuliert, Du musst sie also "
+"Ã¤ndern. Die Spiele werden immer automatisch simuliert, Du musst sie also "
 "nicht erst selber starten."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:83
 msgid ""
-"Für den Spielausgang spielen die Stärken der einzelnen Spieler eine Rolle, "
-"deren Frischewerte, die Zusammensetzung der Mannschaftsteile und natürlich "
+"FÃ¼r den Spielausgang spielen die StÃ¤rken der einzelnen Spieler eine Rolle, "
+"deren Frischewerte, die Zusammensetzung der Mannschaftsteile und natÃ¼rlich "
 "Deine Taktik."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:84
 msgid ""
 "Es spielt keine Rolle, ob Du einen Spieler auf der linken oder auf der "
-"rechten Seite aufstellst. Die Spieler sind alle beidfüßig stark. "
+"rechten Seite aufstellst. Die Spieler sind alle beidfÃ¼ÃŸig stark. "
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:85
 msgid ""
 "Wenn Du irgendwo im Spiel auf das Ergebnis einer Partie klickst, gelangst Du "
-"zum ausführlichen Spielbericht mit Kommentaren und Statistiken."
+"zum ausfÃ¼hrlichen Spielbericht mit Kommentaren und Statistiken."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:86
 msgid ""
 "Unter <i>Finanzen</i> steht in Deiner Prognose, dass Du negative "
-"Sponsorengelder bekommst? Dann liegt das wahrscheinlich an den Strafen für "
-"unvollständige Aufstellungen. Hochgerechnet für die ganze Saison ergibt das "
+"Sponsorengelder bekommst? Dann liegt das wahrscheinlich an den Strafen fÃ¼r "
+"unvollstÃ¤ndige Aufstellungen. Hochgerechnet fÃ¼r die ganze Saison ergibt das "
 "ein Minus."
 msgstr ""
 
@@ -4740,25 +4799,25 @@ msgstr ""
 msgid ""
 "Die RKPs sind Ranking-Punkte, die Deinen sportlichen Erfolg bewerten. In "
 "jedem Spiel gewinnst oder verlierst Du RKPs. Dabei kommt es auf das Ergebnis "
-"und die Stärke des Gegners an."
+"und die StÃ¤rke des Gegners an."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:89
 msgid ""
-"Die einzelnen Wettbewerbe werden für die RKP-Wertung unterschiedlich "
+"Die einzelnen Wettbewerbe werden fÃ¼r die RKP-Wertung unterschiedlich "
 "gewichtet: Pokal=180%, Cup=120%, Liga=100%. Testspiele haben keinen Einfluss "
 "auf die Wertung."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:90
 msgid ""
-"Zu den Pflichtspielen gehören Liga-, Cup- und Pokalspiele. Testspiele sind "
+"Zu den Pflichtspielen gehÃ¶ren Liga-, Cup- und Pokalspiele. Testspiele sind "
 "keine Pflichtspiele!"
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:91
 msgid ""
-"Du möchtest Deine Meinung in das Spiel einbringen und aktiv mitentscheiden? "
+"Du mÃ¶chtest Deine Meinung in das Spiel einbringen und aktiv mitentscheiden? "
 "Dann stelle uns doch einfach Deine Ideen im <a href=\"/support.php"
 "\">Supportbereich</a> vor!"
 msgstr ""
@@ -4766,67 +4825,67 @@ msgstr ""
 #: ../../../tipps_des_tages.php.txt:92
 msgid ""
 "Bei Transfers, an denen Du selbst nicht beteiligt bist (Spieler-Wechsel "
-"unter fremden Teams), sind Ablösesummen immer geschätzt."
+"unter fremden Teams), sind AblÃ¶sesummen immer geschÃ¤tzt."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:93
-msgid "Die Ziehung der Lottozahlen findet täglich kurz nach 00:00 Uhr statt."
+msgid "Die Ziehung der Lottozahlen findet tÃ¤glich kurz nach 00:00 Uhr statt."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:94
 msgid ""
-"Deine Spieler erholen sich während den Spielen gut. Deshalb bekommen sie "
+"Deine Spieler erholen sich wÃ¤hrend den Spielen gut. Deshalb bekommen sie "
 "jeden Tag wieder 1% Frische (Prozentpunkt) dazu."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:95
 msgid ""
-"Je stärker Deine Aufstellung ist, desto stärker werden auch Amateurspieler "
-"sein, die automatisch eingesetzt werden, wenn Du eine unvollständige "
+"Je stÃ¤rker Deine Aufstellung ist, desto stÃ¤rker werden auch Amateurspieler "
+"sein, die automatisch eingesetzt werden, wenn Du eine unvollstÃ¤ndige "
 "Aufstellung hast."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:96
 msgid ""
-"Du warst bei einer Auktion für einige Zeit der Höchstbietende, aber am Ende "
-"ging der Spieler an ein anderes Team - anscheinend für weniger Geld? "
+"Du warst bei einer Auktion fÃ¼r einige Zeit der HÃ¶chstbietende, aber am Ende "
+"ging der Spieler an ein anderes Team - anscheinend fÃ¼r weniger Geld? "
 "<i>siehe Tipp #091</i>"
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:97
 msgid ""
 "Wenn ein Spieler in einer Saison schon ein Pokalspiel gemacht hat, kann er "
-"(nach einem Transfer) für andere Klubs keine Pokalspiele mehr bestreiten."
+"(nach einem Transfer) fÃ¼r andere Klubs keine Pokalspiele mehr bestreiten."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:98
 msgid ""
 "Wenn man 9 Tage nicht online war, wird man von seinem Verein entlassen. "
-"Diese Frist wird pro Monat, den man schon dabei ist, um einen Tag verlängert."
+"Diese Frist wird pro Monat, den man schon dabei ist, um einen Tag verlÃ¤ngert."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:99
 msgid ""
-"Achte auf die Moral Deiner Spieler! Wenn ein Profi unzufrieden wird, möchte "
-"er vielleicht seinen Vertrag nicht verlängern."
+"Achte auf die Moral Deiner Spieler! Wenn ein Profi unzufrieden wird, mÃ¶chte "
+"er vielleicht seinen Vertrag nicht verlÃ¤ngern."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:100
 msgid ""
-"Denke bei Transfers oder Vertragsverlängerungen daran, dass die Moral des "
-"Spielers dadurch beeinflusst wird. Er möchte schließlich bei Dir im Team "
+"Denke bei Transfers oder VertragsverlÃ¤ngerungen daran, dass die Moral des "
+"Spielers dadurch beeinflusst wird. Er mÃ¶chte schlieÃŸlich bei Dir im Team "
 "spielen und braucht Sicherheit."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:101
 msgid ""
-"Täglich verlieren Deine Spieler 1% Moral. Aber für jeden Pflichtspiel-"
-"Einsatz bekommen sie auch wieder 1,8% dazu, für jedes Testspiel 1,0%."
+"TÃ¤glich verlieren Deine Spieler 1% Moral. Aber fÃ¼r jeden Pflichtspiel-"
+"Einsatz bekommen sie auch wieder 1,8% dazu, fÃ¼r jedes Testspiel 1,0%."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:102
 msgid ""
-"Spieler, die Du von einem Verein außerhalb Europas kaufst, haben immer 100% "
+"Spieler, die Du von einem Verein auÃŸerhalb Europas kaufst, haben immer 100% "
 "Moral."
 msgstr ""
 
@@ -4840,15 +4899,15 @@ msgstr ""
 #: ../../../tipps_des_tages.php.txt:104
 #, php-format
 msgid ""
-"Bei Vertragsverlängerungen kann die Moral eines Spielers um bis zu "
+"Bei VertragsverlÃ¤ngerungen kann die Moral eines Spielers um bis zu "
 "10% steigen - je nach Gehalt und Laufzeit des Vertrages."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:105
 msgid ""
 "In Derbys, also wenn beide Teams aus derselben Stadt kommen, spielen die "
-"Teams immer besonders offensiv und mit viel Aggressivität. Deshalb kommen "
-"natürlich auch mehr Zuschauer!"
+"Teams immer besonders offensiv und mit viel AggressivitÃ¤t. Deshalb kommen "
+"natÃ¼rlich auch mehr Zuschauer!"
 msgstr ""
 
 #~ msgid "Neuigkeiten"

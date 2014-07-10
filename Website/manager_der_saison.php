@@ -1,11 +1,11 @@
 <?php include 'zz1.php'; ?>
-<title>Manager der Saison | Ballmanager.de</title>
+<title><?php echo _('Manager der Saison'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Manager der Saison</h1>
+<h1><?php echo _('Manager der Saison'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p>Am 1. und 2. Spieltag jeder Saison wählen die Manager aus allen Ligen den &quot;Manager der Saison&quot;. Wer hat Deiner Meinung nach den Titel
-verdient? Welcher Manager hat in der abgelaufenen Saison das Beste aus seinem Team rausgeholt?</p>
-<p>Es können leider nur Manager teilnehmen, die schon mindestens 22 Tage lang dabei sind.</p>
+<p><?php echo _('Am 1. und 2. Spieltag jeder Saison wählen die Manager aus allen Ligen den &quot;Manager der Saison&quot;. Wer hat Deiner Meinung nach den Titel
+verdient? Welcher Manager hat in der abgelaufenen Saison das Beste aus seinem Team rausgeholt?'); ?></p>
+<p><?php echo _('Es können leider nur Manager teilnehmen, die schon mindestens 22 Tage lang dabei sind.'); ?></p>
 <?php
 setTaskDone('check_mds');
 $schon_gewaehlt1 = "SELECT COUNT(*) FROM ".$prefix."users_mds_sieger WHERE saison = ".$cookie_saison;
@@ -21,61 +21,61 @@ $sql5 = mysql_query($sql4);
 $sql6 = mysql_result($sql5, 0);
 if ($sql3['regdate'] > $timeout) {
 	$tage_dabei = round((time()-$sql3['regdate'])/86400);
-	addInfoBox('Du bist erst '.$tage_dabei.' Tage dabei und deshalb nicht stimmberechtigt.');
+	addInfoBox(__('Du bist erst %1$d Tage dabei und deshalb nicht stimmberechtigt.', $tage_dabei);
 }
 elseif ($sql6 == 1 || $cookie_id == DEMO_USER_ID) {
-	addInfoBox('Du hast schon abgestimmt!');
+	addInfoBox(_('Du hast schon abgestimmt!'));
 }
 else {
 ?>
 <form action="/manager_der_saison.php" method="get" accept-charset="utf-8">
 <p><select name="tabellenplatz" size="1" style="width:200px">
-	<option value="no">Jeder Tabellenplatz</option>
-	<option value="01-03">1. bis 3.</option>
-	<option value="04-06">4. bis 6.</option>
-	<option value="07-09">7. bis 9.</option>
-	<option value="10-12">10. bis 12.</option>
+	<option value="no"><?php echo _('Jeder Tabellenplatz'); ?></option>
+	<option value="01-03"><?php echo _('1. bis 3.'); ?></option>
+	<option value="04-06"><?php echo _('4. bis 6.'); ?></option>
+	<option value="07-09"><?php echo _('7. bis 9.'); ?></option>
+	<option value="10-12"><?php echo _('10. bis 12.'); ?></option>
 </select></p>
 <p><select name="pokalergebnis" size="1" style="width:200px">
-	<option value="no">Jedes Pokal-Ergebnis</option>
-	<option value="1">mind. Vorrunde</option>
-	<option value="2">mind. Achtelfinale</option>
-	<option value="3">mind. Viertelfinale</option>
-	<option value="4">mind. Halbfinale</option>
-	<option value="5">Finale</option>
+	<option value="no"><?php echo _('Jedes Pokal-Ergebnis'); ?></option>
+	<option value="1"><?php echo _('mind. Vorrunde'); ?></option>
+	<option value="2"><?php echo _('mind. Achtelfinale'); ?></option>
+	<option value="3"><?php echo _('mind. Viertelfinale'); ?></option>
+	<option value="4"><?php echo _('mind. Halbfinale'); ?></option>
+	<option value="5"><?php echo _('Finale'); ?></option>
 </select></p>
 <p><select name="cupergebnis" size="1" style="width:200px">
-	<option value="no">Jedes Cup-Ergebnis</option>
-	<option value="1">mind. Vorrunde</option>
-	<option value="2">mind. Achtelfinale</option>
-	<option value="3">mind. Viertelfinale</option>
-	<option value="4">mind. Halbfinale</option>
-	<option value="5">Finale</option>
+	<option value="no"><?php echo _('Jedes Cup-Ergebnis'); ?></option>
+	<option value="1"><?php echo _('mind. Vorrunde'); ?></option>
+	<option value="2"><?php echo _('mind. Achtelfinale'); ?></option>
+	<option value="3"><?php echo _('mind. Viertelfinale'); ?></option>
+	<option value="4"><?php echo _('mind. Halbfinale'); ?></option>
+	<option value="5"><?php echo _('Finale'); ?></option>
 </select></p>
 <p><select name="bilanz" size="1" style="width:200px">
-	<option value="no">Jede Bilanz</option>
-	<option value="000-010">0 bis 10 Mio € Gewinn</option>
-	<option value="010-030">10 bis 30 Mio € Gewinn</option>
-	<option value="030-060">30 bis 60 Mio € Gewinn</option>
-	<option value="060-100">60 bis 100 Mio € Gewinn</option>
-	<option value="100-150">100 bis 150 Mio € Gewinn</option>
-	<option value="150-210">150 bis 210 Mio € Gewinn</option>
-	<option value="210-280">210 bis 280 Mio € Gewinn</option>
-	<option value="280-360">280 bis 360 Mio € Gewinn</option>
-	<option value="360-450">360 bis 450 Mio € Gewinn</option>
-	<option value="450-550">450 bis 550 Mio € Gewinn</option>
+	<option value="no"><?php echo _('Jede Bilanz'); ?></option>
+	<option value="000-010"><?php echo _('0 bis 10 Mio € Gewinn'); ?></option>
+	<option value="010-030"><?php echo _('10 bis 30 Mio € Gewinn'); ?></option>
+	<option value="030-060"><?php echo _('30 bis 60 Mio € Gewinn'); ?></option>
+	<option value="060-100"><?php echo _('60 bis 100 Mio € Gewinn'); ?></option>
+	<option value="100-150"><?php echo _('100 bis 150 Mio € Gewinn'); ?></option>
+	<option value="150-210"><?php echo _('150 bis 210 Mio € Gewinn'); ?></option>
+	<option value="210-280"><?php echo _('210 bis 280 Mio € Gewinn'); ?></option>
+	<option value="280-360"><?php echo _('280 bis 360 Mio € Gewinn'); ?></option>
+	<option value="360-450"><?php echo _('360 bis 450 Mio € Gewinn'); ?></option>
+	<option value="450-550"><?php echo _('450 bis 550 Mio € Gewinn'); ?></option>
 </select></p>
-<p><input type="submit" value="Suchen" /></p>
+<p><input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Manager</th>
-<th scope="col">Liga</th>
-<th scope="col">Pokal</th>
-<th scope="col">Bilanz</th>
-<th scope="col">Wahl</th>
+<th scope="col"><?php echo _('Manager'); ?></th>
+<th scope="col"><?php echo _('Liga'); ?></th>
+<th scope="col"><?php echo _('Pokal'); ?></th>
+<th scope="col"><?php echo _('Bilanz'); ?></th>
+<th scope="col"><?php echo _('Wahl'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -87,15 +87,15 @@ if (isset($_GET['wahl_id']) && isset($_GET['sec_id'])) {
         $wahl1 = "INSERT INTO ".$prefix."users_mds (manager, voter) VALUES ('".$wahl_id."', '".$cookie_id."')";
         $wahl2 = mysql_query($wahl1);
         if ($wahl2 == FALSE) {
-        	addInfoBox('Du hast schon abgestimmt!');
+        	addInfoBox(_('Du hast schon abgestimmt!'));
         }
         else {
-        	addInfoBox('Danke, Deine Stimme wurde gezählt!');
+        	addInfoBox(_('Danke, Deine Stimme wurde gezählt!'));
     		$_SESSION['mds_abgestimmt'] = TRUE;
         }
 	}
 	else {
-		addInfoBox('Deine Stimme war leider ungültig. Bitte versuche es noch einmal.');
+		addInfoBox(_('Deine Stimme war leider ungültig. Bitte versuche es noch einmal.'));
 	}
 }
 // FILTER ANFANG
@@ -159,8 +159,8 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<td>'.displayUsername($sql3['username'], $sql3['ids']).' (<a href="/team.php?id='.$sql3['team'].'">'.$sql3['name'].'</a>)</td>';
 	echo '<td class="link"><a href="'.$link_zur_tabelle.'">'.$lo3['platz'].'. ('.$lo3['punkte'].' PKT)</a></td>';
 	echo '<td>'.pokalrunde_wort($sql3['vorjahr_pokalrunde']).'</td>';
-	echo '<td>'.$bilanz.' Mio</td>';
-	echo '<td class="link"><a href="/manager_der_saison.php?wahl_id='.$sql3['ids'].'&amp;sec_id='.$sec_id.'" onclick="return confirm(\'Bist Du sicher?\')">Klicken</a></td>';
+	echo '<td>'.__('%2$d Mio', $bilanz).'</td>';
+	echo '<td class="link"><a href="/manager_der_saison.php?wahl_id='.$sql3['ids'].'&amp;sec_id='.$sec_id.'" onclick="return confirm('._('\'Bist Du sicher?\'').')">'._('Klicken').'</a></td>';
 	echo '</tr>';
 	$counter++;
 }
@@ -183,8 +183,8 @@ else {
 		$sql7 = mysql_query($sql6);
 	}
 	// AUSWERTUNG ENDE
-	echo '<h1>Bisherige Sieger</h1>';
-	echo '<p><table><thead><tr class="odd"><th scope="col">Saison</th><th scope="col">Manager</th><th scope="col">Stimmen</th></tr></thead><tbody>';
+	echo '<h1>'._('Bisherige Sieger').'</h1>';
+	echo '<p><table><thead><tr class="odd"><th scope="col">'._('Saison').'</th><th scope="col">'._('Manager').'</th><th scope="col">'._('Stimmen').'</th></tr></thead><tbody>';
 	$get1 = "SELECT a.saison, a.ids, b.username, a.stimmen FROM ".$prefix."users_mds_sieger AS a JOIN ".$prefix."users AS b ON a.ids = b.ids ORDER BY a.saison DESC";
 	$get2 = mysql_query($get1);
 	$counter = 0;
@@ -207,6 +207,6 @@ else {
 }
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

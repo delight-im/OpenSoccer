@@ -33,13 +33,22 @@ if ($live_scoring_spieltyp_laeuft == $spieltypTaktik && $eigene_spiele3 != 0) {
 }
 else { ?>
 <?php
+function validateTacticsValue($value) {
+    $value = intval($value);
+    if ($value < 1 || $value > 3) {
+        return 2;
+    }
+    else {
+        return $value;
+    }
+}
 if (count($_POST) > 5 && $cookie_id != DEMO_USER_ID) {
-	if (isset($_POST['ausrichtung'])) { $ausrichtung = intval(trim($_POST['ausrichtung'])); } else { $ausrichtung = 2; }
-	if (isset($_POST['geschw_auf'])) { $geschw_auf = intval(trim($_POST['geschw_auf'])); } else { $geschw_auf = 2; }
-	if (isset($_POST['pass_auf'])) { $pass_auf = intval(trim($_POST['pass_auf'])); } else { $pass_auf = 2; }
-	if (isset($_POST['risk_pass'])) { $risk_pass = intval(trim($_POST['risk_pass'])); } else { $risk_pass = 2; }
-	if (isset($_POST['druck'])) { $druck = intval(trim($_POST['druck'])); } else { $druck = 2; }
-	if (isset($_POST['aggress'])) { $aggress = intval(trim($_POST['aggress'])); } else { $aggress = 2; }
+	if (isset($_POST['ausrichtung'])) { $ausrichtung = validateTacticsValue(trim($_POST['ausrichtung'])); } else { $ausrichtung = 2; }
+	if (isset($_POST['geschw_auf'])) { $geschw_auf = validateTacticsValue(trim($_POST['geschw_auf'])); } else { $geschw_auf = 2; }
+	if (isset($_POST['pass_auf'])) { $pass_auf = validateTacticsValue(trim($_POST['pass_auf'])); } else { $pass_auf = 2; }
+	if (isset($_POST['risk_pass'])) { $risk_pass = validateTacticsValue(trim($_POST['risk_pass'])); } else { $risk_pass = 2; }
+	if (isset($_POST['druck'])) { $druck = validateTacticsValue(trim($_POST['druck'])); } else { $druck = 2; }
+	if (isset($_POST['aggress'])) { $aggress = validateTacticsValue(trim($_POST['aggress'])); } else { $aggress = 2; }
 	$up1 = "UPDATE ".$prefix."taktiken SET ausrichtung = ".$ausrichtung.", geschw_auf = ".$geschw_auf.", pass_auf = ".$pass_auf.", risk_pass = ".$risk_pass.", druck = ".$druck.", aggress = ".$aggress." WHERE team = '".$cookie_team."' AND spieltyp = '".$spieltypTaktik."'";
 	$up2 = mysql_query($up1);
 	if ($spieltypTaktik == 'Test') {

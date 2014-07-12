@@ -12,7 +12,7 @@ function checkAll(quelle) {
 }
 </script>
 <?php include 'zz2.php'; ?>
-<h1>Beobachtung</h1>
+<h1><?php echo _('Beobachtung'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p><?php echo _('Die folgenden Spieler stehen auf Deiner Beobachtungsliste. Mit einem Klick auf den Namen kommst Du zum Spielerprofil. Wenn der Spieler zu verkaufen
 oder zu verleihen ist, dann ist der Transferstatus auch verlinkt.'); ?></p>
@@ -94,7 +94,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 <p><select name="markedAction" size="1" style="width:200px">
 	<option value="DEL"><?php echo _('Markierte löschen'); ?></option>
 </select></p>
-<p><input type="submit" value="Ausführen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+<p><input type="submit" value="<?php echo _('Ausführen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
 </form>
 <?php
 echo '<div class="pagebar">';

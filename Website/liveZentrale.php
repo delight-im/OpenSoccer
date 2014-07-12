@@ -27,7 +27,7 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <?php } ?>
 <?php
@@ -105,9 +105,9 @@ else {
 		echo '<thead>';
 		echo '<tr>';
 		echo '<th scope="col">&nbsp;</th>';
-		echo '<th scope="col">Team 1</th>';
-		echo '<th scope="col">Team 2</th>';
-		echo '<th scope="col">LIVE</th>';
+		echo '<th scope="col">'._('Team 1').'</th>';
+		echo '<th scope="col">'._('Team 2').'</th>';
+		echo '<th scope="col">'._('LIVE').'</th>';
 		echo '<th scope="col">&nbsp;</th>';
 		echo '</tr>';
 		echo '</thead>';
@@ -129,7 +129,7 @@ else {
 			echo '>';
 			echo '<td>';
 			if (isset($kontaktListe[$resultEntry[1]]) OR isset($kontaktListe[$resultEntry[2]])) { // Spiel eines Freundes
-				echo '<img src="/images/protokoll/Spieler.png" alt="!" title="Spiel eines Freundes" />';
+				echo '<img src="/images/protokoll/Spieler.png" alt="!" title="'._('Spiel eines Freundes').'" />';
 			}
 			else {
 				echo '&nbsp;';

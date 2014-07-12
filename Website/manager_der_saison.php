@@ -21,7 +21,7 @@ $sql5 = mysql_query($sql4);
 $sql6 = mysql_result($sql5, 0);
 if ($sql3['regdate'] > $timeout) {
 	$tage_dabei = round((time()-$sql3['regdate'])/86400);
-	addInfoBox(__('Du bist erst %1$d Tage dabei und deshalb nicht stimmberechtigt.', $tage_dabei);
+	addInfoBox(__('Du bist erst %d Tage dabei und deshalb nicht stimmberechtigt.', $tage_dabei));
 }
 elseif ($sql6 == 1 || $cookie_id == DEMO_USER_ID) {
 	addInfoBox(_('Du hast schon abgestimmt!'));
@@ -67,7 +67,6 @@ else {
 </select></p>
 <p><input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -159,7 +158,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<td>'.displayUsername($sql3['username'], $sql3['ids']).' (<a href="/team.php?id='.$sql3['team'].'">'.$sql3['name'].'</a>)</td>';
 	echo '<td class="link"><a href="'.$link_zur_tabelle.'">'.$lo3['platz'].'. ('.$lo3['punkte'].' PKT)</a></td>';
 	echo '<td>'.pokalrunde_wort($sql3['vorjahr_pokalrunde']).'</td>';
-	echo '<td>'.__('%2$d Mio', $bilanz).'</td>';
+	echo '<td>'.__('%s Mio', $bilanz).'</td>';
 	echo '<td class="link"><a href="/manager_der_saison.php?wahl_id='.$sql3['ids'].'&amp;sec_id='.$sec_id.'" onclick="return confirm('._('\'Bist Du sicher?\'').')">'._('Klicken').'</a></td>';
 	echo '</tr>';
 	$counter++;
@@ -167,7 +166,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <?php } ?>
 <?php
 } // cookie_spieltag

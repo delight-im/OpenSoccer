@@ -14,12 +14,12 @@
 <?php
 // NUR EIGENE SPIELER ODER ALLE ANFANG
 $onlyShowOwnSQL = "";
-$onlyShowOwnLink = '<a href="/stat_treuesteSpieler.php?own=1" class="pagenava">Meine Spieler</a>';
+$onlyShowOwnLink = '<a href="/stat_treuesteSpieler.php?own=1" class="pagenava">'._('Meine Spieler').'</a>';
 $onlyShowOwnCache = '';
 if (isset($_GET['own'])) {
 	if ($_GET['own'] == '1') {
 		$onlyShowOwnSQL = " WHERE a.team = '".$cookie_team."'";
-		$onlyShowOwnLink = '<a href="/stat_treuesteSpieler.php?own=0" class="pagenava">Alle Spieler</a>';
+		$onlyShowOwnLink = '<a href="/stat_treuesteSpieler.php?own=0" class="pagenava">'._('Alle Spieler.'</a>';
 		$onlyShowOwnCache = $cookie_team;
 	}
 }

@@ -1,9 +1,9 @@
 <?php if (isset($_GET['id'])) { ?>
 <?php include 'zz1.php'; ?>
-<title>Post | Ballmanager.de</title>
+<title><?php echo _('Post'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 
-<?php if ($loggedin == 0) { echo '<h1>Post</h1><p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>'; } else { ?>
+<?php if ($loggedin == 0) { echo '<h1>'._('Post').'</h1><p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>'; } else { ?>
 <?php
 $post = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 $sql1 = "SELECT ".$prefix."pn.ids, von, an, titel, inhalt, zeit, username, in_reply_to FROM ".$prefix."pn LEFT JOIN ".$prefix."users ON ".$prefix."pn.von = ".$prefix."users.ids WHERE ".$prefix."pn.ids = '".$post."' AND (an = '".$cookie_id."' OR von = '".$cookie_id."')";
@@ -29,7 +29,7 @@ else {
 }
 // "RE: " EINFUEGEN, WENN NICHT SCHON ANTWORT WAR ENDE
 if ($sql3['von'] != '18a393b5e23e2b9b4da106b06d8235f3') {
-	echo '<strong><a href="/post_schreiben.php?id='.$sql3['von'].'&amp;betreff='.urlencode($temp).'&amp;in_reply_to='.$sql3['ids'].'">Antworten</a> | <a href="/post_schreiben.php?id='.$sql3['von'].'">Neue Nachricht</a></strong>';
+	echo '<strong><a href="/post_schreiben.php?id='.$sql3['von'].'&amp;betreff='.urlencode($temp).'&amp;in_reply_to='.$sql3['ids'].'">'._('Antworten').'</a> | <a href="/post_schreiben.php?id='.$sql3['von'].'">'._('Neue Nachricht').'</a></strong>';
 }
 echo '</p>';
 if ($sql3['in_reply_to'] != '') {
@@ -37,7 +37,7 @@ if ($sql3['in_reply_to'] != '') {
 	$ur2 = mysql_query($ur1);
 	if (mysql_num_rows($ur2) != 0) {
 		$ur3 = mysql_fetch_assoc($ur2);
-		echo '<h1>Ursprüngliche Nachricht</h1>';
+		echo '<h1>'._('Ursprüngliche Nachricht').'</h1>';
 		echo '<p>'.autoLink(hideTeamCode($ur3['inhalt'], $_SESSION['status'])).'</p>';
 	}
 }

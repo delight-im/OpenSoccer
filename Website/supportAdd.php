@@ -1,9 +1,9 @@
 <?php include 'zz1.php'; ?>
-<title>Support: Neue Anfrage | Ballmanager.de</title>
+<title><?php echo _('Support: Neue Anfrage'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Support: Neue Anfrage</h1>
+<h1><?php echo _('Support: Neue Anfrage'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p style="text-align:right"><a href="/support.php" class="pagenava">Zurück zur Hauptseite</a></p>
+<p style="text-align:right"><a href="/support.php" class="pagenava"><?php echo _('Zurück zur Hauptseite'); ?></a></p>
 <?php
 // CHAT-SPERREN ANFANG
 $blockCom1 = "SELECT MAX(chatSperre) FROM ".$prefix."helferLog WHERE managerBestrafen = '".$cookie_id."'";
@@ -12,7 +12,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
 		include 'zz3.php';
 		exit;
 	}
@@ -26,26 +26,26 @@ if ($sql3 <= 5) {
 ?>
 	<form action="/support.php" method="post" accept-charset="utf-8">
 	<?php if ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') { ?>
-		<p><label for="newVisibility">Wer soll die Anfrage sehen können?</label><select name="visibility" id="newVisibility" size="1" style="width:200px">
-			<option value="0">Jeder User</option>
-			<option value="1">Nur Support-Team</option>
+		<p><label for="newVisibility"><?php echo _('Wer soll die Anfrage sehen können?'); ?></label><select name="visibility" id="newVisibility" size="1" style="width:200px">
+			<option value="0"><?php echo _('Jeder User'); ?></option>
+			<option value="1"><?php echo _('Nur Support-Team'); ?></option>
 		</select></p>
 	<?php } ?>
-	<p><label for="newCategory">Was für eine Anfrage möchtest Du erstellen?</label><select name="category" id="newCategory" size="1" style="width:200px">
-		<option>Frage</option>
-		<option>Fehlerbericht</option>
-		<option>Vorschlag</option>
+	<p><label for="newCategory"><?php echo _('Was für eine Anfrage möchtest Du erstellen?'); ?></label><select name="category" id="newCategory" size="1" style="width:200px">
+		<option><?php echo _('Frage'); ?></option>
+		<option><?php echo _('Fehlerbericht'); ?></option>
+		<option><?php echo _('Vorschlag'); ?></option>
 	</select></p>
-	<p><label for="newTitle">Deine Anfrage (max. 150 Zeichen):</label><input type="text" name="title" id="newTitle" style="width:200px" /></p>
-	<p><label for="newDescription">Möchtest Du Deine Anfrage noch genauer beschreiben ... ?</label><textarea name="description" id="newDescription" cols="10" rows="10" style="width:350px; height:200px"></textarea></p>
-	<p><input type="submit" value="Anfrage erstellen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+	<p><label for="newTitle"><?php echo _('Deine Anfrage (max. 150 Zeichen):); ?></label><input type="text" name="title" id="newTitle" style="width:200px" /></p>
+	<p><label for="newDescription"><?php echo _('Möchtest Du Deine Anfrage noch genauer beschreiben ... ?); ?></label><textarea name="description" id="newDescription" cols="10" rows="10" style="width:350px; height:200px"></textarea></p>
+	<p><input type="submit" value="<?php echo _('Anfrage erstellen); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
 	</form>
 <?php }
 else {
-	echo '<p>Du hast heute schon '.$sql3.' neue Anfragen erstellt. Da nur 5 pro Tag erlaubt sind, bitten wir Dich, etwas zu warten. Später kannst Du gerne wieder eine neue Anfrage erstellen.</p>';
+	echo '<p>'.__('Du hast heute schon %d neue Anfragen erstellt. Da nur 5 pro Tag erlaubt sind, bitten wir Dich, etwas zu warten. Später kannst Du gerne wieder eine neue Anfrage erstellen.', $sql3).'</p>';
 }
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

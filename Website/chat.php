@@ -39,7 +39,7 @@ if (mysql_num_rows($sql2) > 0) {
 	$sql3 = mysql_fetch_assoc($sql2);
 	$chatSperreBis = $sql3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
 		include 'zz3.php';
 		exit;
 	}
@@ -72,7 +72,7 @@ function talkTo(username) {
 </script>
 <?php } ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Chat</h1>
+<h1><?php echo _('Chat'); ?></h1>
 <?php
 // NAECHSTER CHAT ABEND ANFANG
 $heute_tag = date('d', time());
@@ -86,8 +86,8 @@ while (date('w', $chatAbendTime) != 0 OR date('W', $chatAbendTime) % 2 != 0) {
 $timeout = getTimestamp('-1 hour');
 $up1 = "DELETE FROM ".$prefix."chatroom WHERE zeit < ".$timeout;
 $up2 = mysql_query($up1);
-echo '<p><strong>REPORT Username</strong> schreiben, um einen User zu melden (nur bei <a href="/regeln.php">Regelverstoß</a>)<br />';
-echo '<strong>Usernamen anklicken</strong>, um einen User direkt anzusprechen';
+echo '<p><strong>'._('REPORT Username').'</strong> '.__('schreiben, um einen User zu melden (nur bei %s', '<a href="/regeln.php">'._('Regelverstoß').'</a>)').'<br />';
+echo '<strong>'._('Usernamen anklicken').'</strong>, '._('um einen User direkt anzusprechen');
 $timeout = getTimestamp('-120 seconds');
 $whosOn1 = "SELECT ids, username FROM ".$prefix."users WHERE last_chat > ".$timeout;
 $whosOn2 = mysql_query($whosOn1);
@@ -114,12 +114,12 @@ echo '<p>
 </p>';
 ?>
 <form name="chatform" action="" method="post" accept-charset="utf-8">
-<p><input type="text" name="nachricht" id="nachricht" style="width:300px" /> <input type="submit" value="Senden" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> senden(document.chatform.nachricht.value);" /></p>
+<p><input type="text" name="nachricht" id="nachricht" style="width:300px" /> <input type="submit" value="<?php echo _('Senden'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> senden(document.chatform.nachricht.value);" /></p>
 </form>
 <div id="nachrichten"><noscript><?php echo _('Bitte aktiviere JavaScript in Deinem Browser, um den Chat nutzen zu können!'); ?></noscript></div>
 <div id="contain"></div>
 <?php } else { ?>
-<h1>Chat</h1>
+<h1><?php echo _('Chat'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

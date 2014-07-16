@@ -11,7 +11,7 @@
 -->
 </style>
 <?php include 'zz2.php'; ?>
-<h1>Kader</h1>
+<h1><?php echo _('Kader'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 if (isset($_POST['positionToSearch'])) {
@@ -25,7 +25,7 @@ if (isset($_POST['positionToSearch'])) {
 			case 'M': $whatIsSearched = 'Mittelfeldspieler'; break;
 			case 'S': $whatIsSearched = 'Stürmer'; break;
 		}
-		addInfoBox('Dein Jugendtrainer sucht ab sofort '.$whatIsSearched.'.');
+		addInfoBox(__('Dein Jugendtrainer sucht ab sofort %s.', $whatIsSearched);
 	}
 }
 ?>
@@ -114,10 +114,10 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$schaetzungVomScout = schaetzungVomScout($cookie_team, $cookie_scout, $sql3['ids'], $sql3['talent'], $sql3['staerke'], $cookie_team);
 	echo '<td>'.$sql3['position'].'</td><td>'.$transferstatus.'</td><td class="link"><a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a></td><td>'.floor($sql3['wiealt']/365).'</td><td>'.number_format($sql3['staerke'], 1, ',', '.').' <span style="color:#999">('.number_format($schaetzungVomScout, 1, ',', '.').')</span></td>';
 	if ($sql3['team'] != $cookie_team) {
-		echo '<td colspan="2">Verliehen</td>';
+		echo '<td colspan="2">'._('Verliehen').'</td>';
 	}
 	elseif ($sql3['leiher'] != 'keiner') {
-		echo '<td colspan="2">Ausgeliehen</td>';
+		echo '<td colspan="2">'._('Ausgeliehen').'</td>';
 	}
 	else {
 		echo '<td>'.$sql3['spiele'].' (';
@@ -143,8 +143,8 @@ if (count($gesamtMarktwertWerte) > 0) {
 else {
 	$gMarktwert = 0;
 }
-echo '<tr><td colspan="8">Team-Alter: '.number_format($dAlter, 1, ',', '.').' Jahre</td></tr>';
-echo '<tr class="odd"><td colspan="8">Team-Marktwert: '.number_format($gMarktwert, 0, ',', '.').' €</td></tr>';
+echo '<tr><td colspan="8">'.__('Team-Alter: %s Jahre', number_format($dAlter, 1, ",", ".")).'</td></tr>';
+echo '<tr class="odd"><td colspan="8">'.__('Team-Marktwert: %s €', number_format($gMarktwert, 0, ",", ".")).'</td></tr>';
 ?>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ echo '<tr class="odd"><td colspan="8">Team-Marktwert: '.number_format($gMarktwer
 	<option value="Rot"><?php echo _('Rot'); ?></option>
 	<option value="Silber"><?php echo _('Silber'); ?></option>
 	<option value="Gruen"><?php echo _('Grün'); ?></option>
-</select> <input type="submit" value="Ausgewählte Spieler markieren"<?php echo noDemoClick($cookie_id); ?> /></p>
+</select> <input type="submit" value="<?php echo _('Ausgewählte Spieler markieren'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
 <p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, PS: Pflichtspiele (Tore), MW: Marktwert in Millionen Euro'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
@@ -228,10 +228,10 @@ else {
 }
 echo '<form action="/kader.php" method="post" accept-charset="utf-8">';
 echo '<p><select name="positionToSearch" size="1" style="width:200px">';
-	echo '<option value="T"'; if ($currentlySearching == 'T') { echo ' selected="selected"'; } echo '>Torwart suchen</option>';
-	echo '<option value="A"'; if ($currentlySearching == 'A') { echo ' selected="selected"'; } echo '>Abwehr suchen</option>';
-	echo '<option value="M"'; if ($currentlySearching == 'M') { echo ' selected="selected"'; } echo '>Mittelfeld suchen</option>';
-	echo '<option value="S"'; if ($currentlySearching == 'S') { echo ' selected="selected"'; } echo '>Sturm suchen</option>';
+	echo '<option value="T"'; if ($currentlySearching == 'T') { echo ' selected="selected"'; } echo '>'._('Torwart suchen').'</option>';
+	echo '<option value="A"'; if ($currentlySearching == 'A') { echo ' selected="selected"'; } echo '>'._('Abwehr suchen').'</option>';
+	echo '<option value="M"'; if ($currentlySearching == 'M') { echo ' selected="selected"'; } echo '>'._('Mittelfeld suchen').'</option>';
+	echo '<option value="S"'; if ($currentlySearching == 'S') { echo ' selected="selected"'; } echo '>'._('Sturm suchen').'</option>';
 echo '</select> <input type="submit" value="Festlegen"'.noDemoClick($cookie_id).' /></p>';
 echo '</form>';
 // FESTLEGEN WAS GESUCHT WERDEN SOLL ENDE

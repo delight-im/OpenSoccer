@@ -13,7 +13,7 @@
 <?php
 if ($live_scoring_spieltyp_laeuft != '') {
 	echo '<h1>'._('Torjäger').'</h1>';
-	echo '<p>Zurzeit laufen '.$live_scoring_spieltyp_laeuft.'spiele. Deshalb kannst Du leider die Torjäger-Liste nicht ansehen. Bitte warte, bis die Spiele beendet sind.</p>';
+	echo '<p>'.__('Zurzeit laufen %s spiele. Deshalb kannst Du leider die Torjäger-Liste nicht ansehen. Bitte warte, bis die Spiele beendet sind.', $live_scoring_spieltyp_laeuft).'</p>';
 	include 'zz3.php';
 	exit;
 }
@@ -44,7 +44,7 @@ if ($live_scoring_spieltyp_laeuft != '') {
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Torjäger'); ?></h1>
 <p><?php echo _('In dieser Torjägerliste sind die erfolgreichsten Torschützen aller Ligen aufgelistet.'); ?></p>

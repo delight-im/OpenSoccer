@@ -27,7 +27,6 @@ echo '<p style="text-align:right">'.$onlyShowOwnLink.'</p>';
 // NUR EIGENE SPIELER ODER ALLE ENDE
 ?>
 <p><?php echo _('Welche Spieler haben über mehrere Saisons die meisten Einsätze für ihren Verein absolviert? Welche Spieler sind die treuesten?'); ?></p>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -74,7 +73,6 @@ $tmp_liga_cache = '';
 ?>
 </tbody>
 </table>
-</p>
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>

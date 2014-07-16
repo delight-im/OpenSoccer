@@ -13,7 +13,7 @@
 <?php
 if ($live_scoring_spieltyp_laeuft != '') {
 	echo '<h1>'._('Torjäger').'</h1>';
-	echo '<p>'.__('Zurzeit laufen %s spiele. Deshalb kannst Du leider die Torjäger-Liste nicht ansehen. Bitte warte, bis die Spiele beendet sind.', $live_scoring_spieltyp_laeuft).'</p>';
+	echo '<p>'.__('Zurzeit laufen %s-Spiele. Deshalb kannst Du leider die Torjäger-Liste nicht ansehen. Bitte warte, bis die Spiele beendet sind.', $live_scoring_spieltyp_laeuft).'</p>';
 	include 'zz3.php';
 	exit;
 }
@@ -48,7 +48,6 @@ if ($live_scoring_spieltyp_laeuft != '') {
 </form>
 <h1><?php echo _('Torjäger'); ?></h1>
 <p><?php echo _('In dieser Torjägerliste sind die erfolgreichsten Torschützen aller Ligen aufgelistet.'); ?></p>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -72,7 +71,6 @@ while ($torj3 = mysql_fetch_assoc($torj2)) {
 ?>
 </tbody>
 </table>
-</p>
 <?php } else { ?>
 <h1><?php echo _('Torjäger'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>

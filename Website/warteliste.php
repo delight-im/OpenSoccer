@@ -6,7 +6,7 @@
 <?php
 if (isset($_GET['since'])) {
 	$since = bigintval($_GET['since']);
-    echo '<p>Du hast Dich am '.date('d.m.Y, H:i', $since).' Uhr registriert.</p>';
+    echo '<p>'.__('Du hast Dich am %s Uhr registriert.', date('d.m.Y, H:i', $since)).' </p>';
 }
 ?>
 <?php include 'zz3.php'; ?>

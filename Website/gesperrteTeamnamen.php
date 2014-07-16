@@ -80,7 +80,7 @@ while ($sql6 = mysql_fetch_assoc($sql5)) {
 }
 ?>
 </select></p>
-<p><input type="submit" value="Namen sperren"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><input type="submit" value="<?php echo _('Namen sperren'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
 <?php } ?>
 <ul>

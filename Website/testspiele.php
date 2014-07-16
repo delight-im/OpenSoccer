@@ -3,7 +3,7 @@
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
-function getTestspielPreis($liga, $team) {
+function getTestspielPreis($liga) {
 	global $prefix;
 	$bql1 = "SELECT name FROM ".$prefix."ligen WHERE ids = '".$liga."'";
 	$bql2 = mysql_query($bql1);
@@ -74,7 +74,7 @@ echo '</form>';
 // FESTLEGEN WAS GESUCHT WERDEN SOLL ENDE
 ?>
 <h1><?php echo _('Entschädigung (Verband)'); ?></h1>
-<p><?php echo __('Damit ein Testspiel genehmigt wird, musst Du %d € an den Verband zahlen.', number_format(getTestspielPreis($cookie_liga, $cookie_team), 0, ',', '.')); ?></p>
+<p><?php echo __('Damit ein Testspiel genehmigt wird, musst Du %s € an den Verband zahlen.', number_format(getTestspielPreis($cookie_liga), 0, ',', '.')); ?></p>
 <h1><?php echo _('Erhaltene Anfragen'); ?></h1>
 <?php
 // MEHRERE TESTSPIELE PRO TAG VERHINDERN ANFANG
@@ -85,7 +85,7 @@ while ($an3 = mysql_fetch_assoc($an2)) {
 	$testspiel_tage[] = $an3['datum'];
 }
 // MEHRERE TESTSPIELE PRO TAG VERHINDERN ENDE
-if ($getkonto4 < getTestspielPreis($cookie_liga, $cookie_team)) {
+if ($getkonto4 < getTestspielPreis($cookie_liga)) {
 	echo '<p>'._('Zurzeit hast Du leider nicht genug Geld, um Testspiele vereinbaren zu können.').'</p>';
 }
 else {
@@ -96,7 +96,7 @@ else {
 	$an2 = mysql_query($an1);
 	$an2a = mysql_num_rows($an2);
 	if ($an2a > 0) {
-		echo '<p>'._('<strong>Wichtig:</strong> Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das Spiel genehmigt wird.').'</p>';
+		echo '<p><strong>'._('Wichtig:').'</strong> '._('Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das Spiel genehmigt wird.').'</p>';
 		echo '<p><table><thead><tr class="odd"><th scope="col">'._('Anfragender').'</th><th scope="col">'._('Datum').'</th><th scope="col">'._('Aktion').'</th></tr></thead><tbody>';
 		while ($an3 = mysql_fetch_assoc($an2)) {
 			if (in_array($an3['datum'], $testspiel_tage) && $an3['datum'] > time()) { // wenn an dem Tag schon ein Testspiel ist
@@ -134,7 +134,7 @@ $an1 = "SELECT ".$prefix."testspiel_anfragen.team2, ".$prefix."testspiel_anfrage
 $an2 = mysql_query($an1);
 $an2a = mysql_num_rows($an2);
 if ($an2a > 0) {
-	echo '<p>'._('<strong>Wichtig:</strong> Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das Spiel genehmigt wird.').'</p>';
+	echo '<p><strong>'._('Wichtig:').'</strong> '._('Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das Spiel genehmigt wird.').'</p>';
 	echo '<p><table><thead><tr class="odd"><th scope="col">'._('Anfrage an').'</th><th scope="col">'._('Spiel-Datum').'</th><th scope="col">'._('Aktion').'</th></tr></thead><tbody>';
     while ($an3 = mysql_fetch_assoc($an2)) {
         echo '<tr><td class="link"><a href="/team.php?id='.$an3['team2'].'">'.$an3['name'].'</a></td><td>'.date('d.m.Y', $an3['datum']).'</td><td class="link"><a href="/testspiele.php?recall='.$an3['team2'].'" onclick="return confirm(\'Bist Du sicher?\')">Zurückziehen</a></td>';

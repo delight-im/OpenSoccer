@@ -25,7 +25,7 @@ if (isset($_POST['positionToSearch'])) {
 			case 'M': $whatIsSearched = 'Mittelfeldspieler'; break;
 			case 'S': $whatIsSearched = 'Stürmer'; break;
 		}
-		addInfoBox(__('Dein Jugendtrainer sucht ab sofort %s.', $whatIsSearched);
+		addInfoBox(__('Dein Jugendtrainer sucht ab sofort %s.', $whatIsSearched));
 	}
 }
 ?>

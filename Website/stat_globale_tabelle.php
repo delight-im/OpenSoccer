@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Globale Tabelle | Ballmanager.de</title>
+<title><?php echo _('Globale Tabelle'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {
@@ -12,24 +12,24 @@
 <?php if ($loggedin == 1) { ?>
 <?php
 if ($live_scoring_spieltyp_laeuft != '') {
-	echo '<h1>Globale Tabelle</h1>';
-	echo '<p>Zurzeit laufen '.$live_scoring_spieltyp_laeuft.'spiele. Deshalb kannst Du leider die globale Tabelle nicht ansehen. Bitte warte, bis die Spiele beendet sind.</p>';
+	echo '<h1>'.('Globale Tabelle').'</h1>';
+	echo '<p>'.('Zurzeit laufen %s spiele. Deshalb kannst Du leider die globale Tabelle nicht ansehen. Bitte warte, bis die Spiele beendet sind.', $live_scoring_spieltyp_laeuft).'</p>';
 	include 'zz3.php';
 	exit;
 }
 ?>
-<h1>Globale Tabelle</h1>
-<p>In dieser Tabelle sind die erfolgreichsten Teams der aktuellen Saison aufgelistet, nach ihren Punkten und Toren aus der Liga sortiert. Dabei zählen alle Siege gleich viel - und Drittligisten können schon einmal vor Erstligisten stehen.</p>
+<h1><?php echo _('Globale Tabelle'); ?></h1>
+<p><?php echo _('In dieser Tabelle sind die erfolgreichsten Teams der aktuellen Saison aufgelistet, nach ihren Punkten und Toren aus der Liga sortiert. Dabei zählen alle Siege gleich viel - und Drittligisten können schon einmal vor Erstligisten stehen.'); ?></p>
 <p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Team</th>
-<th scope="col">S-U-N</th>
-<th scope="col">TO</th>
-<th scope="col">DI</th>
-<th scope="col">PT</th>
+<th scope="col"><?php echo _('Team'); ?></th>
+<th scope="col"><?php echo _('S-U-N'); ?></th>
+<th scope="col"><?php echo _('TO'); ?></th>
+<th scope="col"><?php echo _('DI'); ?></th>
+<th scope="col"><?php echo _('PT'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -51,10 +51,10 @@ while ($torj3 = mysql_fetch_assoc($torj2)) {
 ?>
 </tbody>
 </table>
-<p><strong>Überschriften:</strong> S-U-N: Siege/Unentschieden/Niederlagen, TO: Tore, DI: Differenz, PT: Punkte</p>
+<p><?php echo _('<strong>Überschriften:</strong> S-U-N: Siege/Unentschieden/Niederlagen, TO: Tore, DI: Differenz, PT: Punkte'); ?></p>
 </p>
 <?php } else { ?>
-<h1>Globale Tabelle</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Globale Tabelle'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

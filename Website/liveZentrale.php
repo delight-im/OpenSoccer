@@ -47,7 +47,7 @@ else {
 	// FREUNDESLISTE LADEN ENDE
 	if (!isset($temp_land)) { $temp_land = ''; }
 	echo '<h1>LIVE-Zentrale: '.$live_scoring_spieltyp_laeuft.' ('.$live_scoring_min_gespielt.'. Minute)</h1>';
-	echo '<p style="text-align:right"><a href="'.$_SERVER['REQUEST_URI'].'" onclick="window.location.reload(); return false" class="pagenava">Aktualisieren</a></p>';
+	echo '<p style="text-align:right"><a href="'.$_SERVER['REQUEST_URI'].'" onclick="window.location.reload(); return false" class="pagenava">'.('Aktualisieren').'</a></p>';
 	function extract_kommentar_ergebnis($kommentar) {
 			$ergebnis_str = '';
 			$ergebnisPattern = '/ \[([0-9]+:[0-9]+)\]/i';
@@ -150,7 +150,7 @@ else {
 }
 ?>
 <p><strong><?php echo _('Farben:').'</strong> '._('Rot: LIVE, Schwarz: Beendet'); ?></p>
-<p><strong><?php echo _('Hinweis:'); ?></strong> Spiele Deiner <a href="/freunde.php">Freunde</a> sind mit einem Symbol vor den Teamnamen gekennzeichnet. Deine eigenen Spiele sind fett markiert.</p>
+<p><strong><?php echo _('Hinweis:'); ?></strong> <?php echo __('Spiele Deiner %s sind mit einem Symbol vor den Teamnamen gekennzeichnet. Deine eigenen Spiele sind fett markiert.', '<a href="/freunde.php">'._('Freunde').'</a>'); ?></p>
 <?php } else { ?>
 <h1><?php echo _('LIVE-Zentrale'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>

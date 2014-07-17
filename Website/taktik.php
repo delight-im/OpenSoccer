@@ -29,7 +29,7 @@ $eigene_spiele1 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE typ = '".$live_s
 $eigene_spiele2 = mysql_query($eigene_spiele1);
 $eigene_spiele3 = mysql_result($eigene_spiele2, 0);
 if ($live_scoring_spieltyp_laeuft == $spieltypTaktik && $eigene_spiele3 != 0) {
-	echo '<p>'._('Zurzeit läuft ein %s spiel. Deshalb kannst Du diese Taktik gerade nicht ändern.', $live_scoring_spieltyp_laeuft).'</p>';
+	echo '<p>'.__('Zurzeit läuft ein %s-Spiel. Deshalb kannst Du diese Taktik gerade nicht ändern.', $live_scoring_spieltyp_laeuft).'</p>';
 }
 else { ?>
 <?php
@@ -79,7 +79,7 @@ if (isset($_POST['vorlageLoeschen']) && $cookie_id != DEMO_USER_ID) {
 		addInfoBox(_('Die Vorlage konnte nicht gelöscht werden. Bitte versuche es noch einmal.'));
 	}
 	else {
-		addInfoBox(__('Die Vorlage &quot;%s&quot; wurde gelöscht.', $vorlageLoeschen);
+		addInfoBox(__('Die Vorlage &quot;%s&quot; wurde gelöscht.', $vorlageLoeschen));
 	}
 }
 $tue1 = "SELECT ausrichtung, geschw_auf, pass_auf, risk_pass, druck, aggress FROM ".$prefix."taktiken WHERE team = '".$cookie_team."' AND spieltyp = '".$spieltypTaktik."'";
@@ -93,7 +93,7 @@ if (isset($_POST['vorlageSpeichern']) && $cookie_id != DEMO_USER_ID) {
 		addInfoBox(_('Deine Taktik konnte nicht als Vorlage gespeichert werden. Bitte versuche es noch einmal. Du darfst jeden Namen nur ein Mal benutzen.'));
 	}
 	else {
-		addInfoBox(_('Deine Taktik wurde als Vorlage mit dem Namen &quot;%s&quot; gespeichert.', $vorlageSpeichern));
+		addInfoBox(__('Deine Taktik wurde als Vorlage mit dem Namen &quot;%s&quot; gespeichert.', $vorlageSpeichern));
 	}
 }
 ?>
@@ -168,7 +168,7 @@ while ($tmp3 = mysql_fetch_assoc($tmp2)) {
 </select> <input type="submit" value="<?php echo _('Laden'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <form action="/taktik.php?spieltypTaktik=<?php echo $spieltypTaktik; ?>" method="POST" accept-charset="utf-8">
-<p><input type="text" name="vorlageSpeichern" value="<?php echo _('Name für neue Vorlage ...'); ?>" style="width:200px" onfocus="if(this.value == 'Name für neue Vorlage ...') this.value = ''" /> <input type="submit" value="<?php echo _('Speichern'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
+<p><input type="text" name="vorlageSpeichern" value="<?php echo _('Name für neue Vorlage ...'); ?>" style="width:200px" onfocus="if(this.value == '<?php echo _('Name für neue Vorlage ...'); ?>') this.value = ''" /> <input type="submit" value="<?php echo _('Speichern'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <form action="/taktik.php?spieltypTaktik=<?php echo $spieltypTaktik; ?>" method="POST" accept-charset="utf-8">
 <p><select name="vorlageLoeschen" size="1" style="width:200px">

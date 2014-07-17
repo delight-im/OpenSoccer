@@ -134,7 +134,7 @@ $letzteZeit = 0;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$aktuelleZeit = date('d.m.Y', $sql3['zeit']);
 	if ($aktuelleZeit != $letzteZeit) { echo '<li>------- '.$aktuelleZeit.' -------</li>'; }
-	echo '<li><a href="/team.php?id='.$sql3['team'].'">'.$sql3['name'].'</a> ('.$sql3['richtige'].' '.('Richtige').') &raquo; '.number_format($sql3['summe'], 0, ',', '.').' €</li>';
+	echo '<li><a href="/team.php?id='.$sql3['team'].'">'.$sql3['name'].'</a> ('.__('%d Richtige', $sql3['richtige']).') &raquo; '.number_format($sql3['summe'], 0, ',', '.').' €</li>';
 	$letzteZeit = $aktuelleZeit;
 }
 ?>
@@ -145,7 +145,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 $sql1 = "SELECT a.team, a.summe, a.richtige, b.name FROM ".$prefix."lotto_gewinner AS a JOIN ".$prefix."teams AS b ON a.team = b.ids ORDER BY summe DESC LIMIT 0, 10";
 $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {
-	echo '<li><a href="/team.php?id='.$sql3['team'].'">'.$sql3['name'].'</a> ('.$sql3['richtige'].' '.('Richtige').') &raquo; '.number_format($sql3['summe'], 0, ',', '.').' €</li>';
+	echo '<li><a href="/team.php?id='.$sql3['team'].'">'.$sql3['name'].'</a> ('.__('%d Richtige', $sql3['richtige']).') &raquo; '.number_format($sql3['summe'], 0, ',', '.').' €</li>';
 }
 ?>
 </ul>

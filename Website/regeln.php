@@ -20,7 +20,7 @@ if ($loggedin == 1) {
 			echo '<option value="0">- '._('Bitte bestätigen').' -</option>';
 			echo '<option value="1">'._('Ich habe die unten stehenden Regeln gelesen').'</option>';
 			echo '</select></p>';
-			echo '<p><input type="submit" value="Regeln akzeptieren"'.noDemoClick($cookie_id).' /></p>';
+			echo '<p><input type="submit" value="'._('Regeln akzeptieren').'"'.noDemoClick($cookie_id).' /></p>';
 			echo '</form>';
 			echo '<p>'._('Du kannst leider nur am Spiel teilnehmen, wenn Du unsere aktuellen Regeln akzeptierst. Ansonsten empfehlen wir Dir, Deinen Account unter &quot;Einstellungen&quot; zu löschen.').'</p>';
 		}

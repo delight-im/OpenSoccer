@@ -42,7 +42,7 @@ if (isset($_POST['username']) && isset($_SESSION['bp_username'])) {
 <?php if (isset($schon_vergeben_message)) { echo $schon_vergeben_message; } ?>
 <p><?php echo _('Willkommen beim Ballmanager! Du stehst jetzt erst einmal auf der Warteliste. Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - erhältst Du eine Nachricht von uns bei Bigpoint.'); ?></p>
 <p><?php echo _('Damit es dann sofort losgehen kann, brauchst Du jetzt noch einen Benutzernamen. Dieser Name wird überall im Spiel angezeigt, Du bist daran zu erkennen.'); ?></p>
-<p><?php echo _('Trage Deinen gewünschten Namen in das Textfeld unten ein und klicke anschließend auf &quot;Fertig&quot;.'); ?> Bitte halte Dich bei der Wahl Deines Namens aber an <a href="/regeln.php" onclick="window.open('/regeln.php'); return false">diese Regeln</a>.</p>
+<p><?php echo _('Trage Deinen gewünschten Namen in das Textfeld unten ein und klicke anschließend auf &quot;Fertig&quot;.'); ?> <?php echo __('Bitte halte Dich bei der Wahl Deines Namens aber an %s.', '<a href="/regeln.php" onclick="window.open(\'/regeln.php\'); return false">'._('diese Regeln').'</a>'); ?></p>
 <?php
 if (substr($_SESSION['username'], 0, 3) != 'BP_') {
 	echo '<p><strong>'._('Du hast schon einen Benutzernamen und kannst deshalb hier keinen wählen.').'</strong></p>';

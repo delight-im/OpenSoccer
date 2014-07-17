@@ -86,7 +86,7 @@ while (date('w', $chatAbendTime) != 0 OR date('W', $chatAbendTime) % 2 != 0) {
 $timeout = getTimestamp('-1 hour');
 $up1 = "DELETE FROM ".$prefix."chatroom WHERE zeit < ".$timeout;
 $up2 = mysql_query($up1);
-echo '<p><strong>'._('REPORT Username').'</strong> '.__('schreiben, um einen User zu melden (nur bei %s', '<a href="/regeln.php">'._('Regelverstoß').'</a>)').'<br />';
+echo '<p><strong>REPORT '._('Username').'</strong> '.__('schreiben, um einen User zu melden (nur bei %s)', '<a href="/regeln.php">'._('Regelverstoß').'</a>').'<br />';
 echo '<strong>'._('Usernamen anklicken').'</strong>, '._('um einen User direkt anzusprechen');
 $timeout = getTimestamp('-120 seconds');
 $whosOn1 = "SELECT ids, username FROM ".$prefix."users WHERE last_chat > ".$timeout;

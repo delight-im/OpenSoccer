@@ -9,7 +9,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 $tm1 = "SELECT name FROM ".$prefix."teams WHERE ids = '".$sql3['team']."'";
 $tm2 = mysql_query($tm1);
 if (mysql_num_rows($tm2) == 0) {
-	$aktuellerVerein = 'außerhalb Europas';
+	$aktuellerVerein = _('außerhalb Europas');
 }
 else {
 	$tm3 = mysql_fetch_assoc($tm2);
@@ -31,7 +31,7 @@ else {
 </tr>
 </thead>
 <tbody>
-<tr><td>jetzt</td><td colspan="3"><?php echo $aktuellerVerein; ?></td></tr>
+<tr><td><?php echo _('jetzt'); ?></td><td colspan="3"><?php echo $aktuellerVerein; ?></td></tr>
 <?php
 function createTeamLink($ids, $name) {
 	$str = '';
@@ -39,7 +39,7 @@ function createTeamLink($ids, $name) {
 		$str .= '<a href="/team.php?id='.$ids.'">';
 	}
 	if ($name == '') {
-		$str .= 'außerhalb Europas';
+		$str .= _('außerhalb Europas');
 	}
 	else {
 		$str .= $name;
@@ -80,7 +80,7 @@ $youthTeam2 = mysql_query($youthTeam1);
 if (mysql_num_rows($youthTeam2) == 1) {
 	$youthTeam3 = mysql_fetch_assoc($youthTeam2);
 	if ($counter % 2 == 0) { echo '<tr>'; } else { echo '<tr class="odd">'; }
-	echo '<td>Jugend</td><td colspan="3"><a href="/team.php?id='.$sql3['jugendTeam'].'">'.$youthTeam3['name'].'</a></td>';
+	echo '<td>'._('Jugend').'</td><td colspan="3"><a href="/team.php?id='.$sql3['jugendTeam'].'">'.$youthTeam3['name'].'</a></td>';
 	echo '</tr>';
 }
 // JUGEND-TEAM ENDE
@@ -114,7 +114,7 @@ while ($a3 = mysql_fetch_assoc($a2)) {
 	echo '</td>';
 	echo '<td class="link"><a href="/ipInfo.php?ip='.urlencode($a3['bieterIP']).'">'.$a3['bieterIP'].'</a></td>';
 	if ($a3['betrag'] == 1) {
-		echo '<td>Leihe</td>';
+		echo '<td>'._('Leihe').'</td>';
 	}
 	else {
 		echo '<td>'.number_format($a3['betrag'], 0, ',', '.').' €</td>';

@@ -2,7 +2,7 @@
 if (!isset($_GET['id']) OR !isset($_GET['typ'])) { exit; }
 include 'zzserver.php';
 include 'zzcookie.php';
-function getTestspielPreis($liga, $team) {
+function getTestspielPreis($liga) {
 	global $prefix;
 	$bql1 = "SELECT name FROM ".$prefix."ligen WHERE ids = '".$liga."'";
 	$bql2 = mysql_query($bql1);
@@ -21,6 +21,10 @@ function getTestspielPreis($liga, $team) {
 		return 1000000;
 	}
 }
+function isFriendlyDateValid($matchTime) {
+    global $cookie_spieltag;
+    return $matchTime > time() && $matchTime < (time() + 3600 * 24 * (22 - $cookie_spieltag));
+}
 $team = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 $typ = mysql_real_escape_string(trim(strip_tags($_GET['typ'])));
 if ($cookie_id != DEMO_USER_ID) {
@@ -35,36 +39,43 @@ if ($cookie_id != DEMO_USER_ID) {
 		$team1_ids = $gt3['ids'];
 		$testspiel_preis_der_andere = getTestspielPreis($team1_liga, $team1_ids);
 		$datum_spiel = $gt3['datum'];
-		// HAT EINER DER BEIDEN SCHON EIN SPIEL AN DEM TAG ANFANG
-		$yetBelegt1 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE (team1 = '".$cookie_teamname."' OR team2 = '".$cookie_teamname."') AND datum = ".$datum_spiel." AND typ = 'Test'";
-		$yetBelegt2 = mysql_query($yetBelegt1);
-		$yetBelegt3 = mysql_result($yetBelegt2, 0);
-		$yetBelegt4 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE (team1 = '".$team1_name."' OR team2 = '".$team1_name."') AND datum = ".$datum_spiel." AND typ = 'Test'";
-		$yetBelegt5 = mysql_query($yetBelegt4);
-		$yetBelegt6 = mysql_result($yetBelegt5, 0);
-		// HAT EINER DER BEIDEN SCHON EIN SPIEL AN DEM TAG ENDE
-		$gt1 = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$cookie_team."' AND datum = ".$datum_spiel;
-		$gt2 = mysql_query($gt1);
-		$gt1 = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$team."' AND datum = ".$datum_spiel;
-		$gt2 = mysql_query($gt1);
-		if ($yetBelegt3 == 0 && $yetBelegt6 == 0) {
-			$gt1 = "INSERT INTO ".$prefix."spiele (liga, datum, team1, team2, typ) VALUES ('Testspiel', ".$datum_spiel.", '".$team1_name."', '".$cookie_teamname."', 'Test')";
-			$gt2 = mysql_query($gt1);
-			// GEBUEHR ABBUCHEN ANFANG
-			$abb1 = "UPDATE ".$prefix."teams SET konto = konto-".$testspiel_preis_ich." WHERE ids = '".$cookie_team."'";
-			$abb2 = mysql_query($abb1);
-			$abb3 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Testspiel', -".$testspiel_preis_ich.", '".time()."')";
-			$abb4 = mysql_query($abb3);
-			$abb1 = "UPDATE ".$prefix."teams SET konto = konto-".$testspiel_preis_der_andere." WHERE ids = '".$team."'";
-			$abb2 = mysql_query($abb1);
-			$abb3 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$team."', 'Testspiel', -".$testspiel_preis_der_andere.", '".time()."')";
-			$abb4 = mysql_query($abb3);
-			$antworttext = 'angenommen';
-			// GEBUEHR ABBUCHEN ENDE
-		}
-		else {
-			$antworttext = 'ablehnen lassen, weil der Termin schon belegt war';
-		}
+
+        $gt1 = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$cookie_team."' AND datum = ".$datum_spiel;
+        $gt2 = mysql_query($gt1);
+        $gt1 = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$team."' AND datum = ".$datum_spiel;
+        $gt2 = mysql_query($gt1);
+
+        if (isFriendlyDateValid($datum_spiel)) {
+            // HAT EINER DER BEIDEN SCHON EIN SPIEL AN DEM TAG ANFANG
+            $yetBelegt1 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE (team1 = '".$cookie_teamname."' OR team2 = '".$cookie_teamname."') AND datum = ".$datum_spiel." AND typ = 'Test'";
+            $yetBelegt2 = mysql_query($yetBelegt1);
+            $yetBelegt3 = mysql_result($yetBelegt2, 0);
+            $yetBelegt4 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE (team1 = '".$team1_name."' OR team2 = '".$team1_name."') AND datum = ".$datum_spiel." AND typ = 'Test'";
+            $yetBelegt5 = mysql_query($yetBelegt4);
+            $yetBelegt6 = mysql_result($yetBelegt5, 0);
+            // HAT EINER DER BEIDEN SCHON EIN SPIEL AN DEM TAG ENDE
+            if ($yetBelegt3 == 0 && $yetBelegt6 == 0) {
+                $gt1 = "INSERT INTO ".$prefix."spiele (liga, datum, team1, team2, typ) VALUES ('Testspiel', ".$datum_spiel.", '".$team1_name."', '".$cookie_teamname."', 'Test')";
+                $gt2 = mysql_query($gt1);
+                // GEBUEHR ABBUCHEN ANFANG
+                $abb1 = "UPDATE ".$prefix."teams SET konto = konto-".$testspiel_preis_ich." WHERE ids = '".$cookie_team."'";
+                $abb2 = mysql_query($abb1);
+                $abb3 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Testspiel', -".$testspiel_preis_ich.", '".time()."')";
+                $abb4 = mysql_query($abb3);
+                $abb1 = "UPDATE ".$prefix."teams SET konto = konto-".$testspiel_preis_der_andere." WHERE ids = '".$team."'";
+                $abb2 = mysql_query($abb1);
+                $abb3 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$team."', 'Testspiel', -".$testspiel_preis_der_andere.", '".time()."')";
+                $abb4 = mysql_query($abb3);
+                $antworttext = 'angenommen';
+                // GEBUEHR ABBUCHEN ENDE
+            }
+            else {
+                $antworttext = 'ablehnen lassen, weil der Termin schon belegt war';
+            }
+        }
+        else {
+            $antworttext = 'ablehnen lassen, weil der Termin nicht passt';
+        }
 		if (isset($_SESSION['last_testspiele_anzahl'])) {
 			$_SESSION['last_testspiele_anzahl']--;
 		}

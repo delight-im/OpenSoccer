@@ -44,7 +44,7 @@ while ($wunschLand3 = mysql_fetch_assoc($wunschLand2)) {
 	echo '>'.$wunschLand3['land'].'</option>';
 }
 echo '</select></p>';
-echo '<p><input type="submit" value="Speichern"'.noDemoClick($cookie_id).' /></p>';
+echo '<p><input type="submit" value="'.('Speichern').'"'.noDemoClick($cookie_id).' /></p>';
 echo '</form>';
 $sql1 = "SELECT teamID, teamName, landNoch, landWunsch FROM ".$prefix."ligaChangeWuensche ORDER BY landWunsch ASC";
 $sql2 = mysql_query($sql1);

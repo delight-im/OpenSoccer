@@ -70,11 +70,11 @@ if ($cookie_id != DEMO_USER_ID) {
                 // GEBUEHR ABBUCHEN ENDE
             }
             else {
-                $antworttext = 'ablehnen lassen, weil der Termin schon belegt war';
+                $antworttext = _('ablehnen lassen, weil der Termin schon belegt war');
             }
         }
         else {
-            $antworttext = 'ablehnen lassen, weil der Termin nicht passt';
+            $antworttext = _('ablehnen lassen, weil der Termin nicht passt');
         }
 		if (isset($_SESSION['last_testspiele_anzahl'])) {
 			$_SESSION['last_testspiele_anzahl']--;
@@ -91,10 +91,10 @@ if ($cookie_id != DEMO_USER_ID) {
 		exit;
 	}
 	// PROTOKOLL ANFANG
-	$formulierung = 'Du hast eine Anfrage für ein Testspiel '.$antworttext.'.';
+	$formulierung = __('Du hast eine Anfrage für ein Testspiel %s.', $antworttext);
 	$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Termine', ".time().")";
 	$sql8 = mysql_query($sql7);
-	$formulierung = '<a href="/team.php?id='.$cookie_team.'">'.$cookie_teamname.'</a> hat Dein Angebot für ein Testspiel '.$antworttext.'.';
+	$formulierung = '<a href="/team.php?id='.$cookie_team.'">'.$cookie_teamname.'</a> '__('hat Dein Angebot für ein Testspiel %s.', $antworttext);
 	$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$team."', '".$formulierung."', 'Termine', ".time().")";
 	$sql8 = mysql_query($sql7);
 	// PROTOKOLL ENDE

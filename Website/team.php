@@ -16,7 +16,7 @@ $sql2a = mysql_num_rows($sql2);
 if ($sql2a == 0) { exit; }
 $sql3 = mysql_fetch_assoc($sql2);
 ?>
-<title>Team: <?php echo $sql3['name']; ?> | Ballmanager.de</title>
+<title><?php echo _('Team:').' '.$sql3['name']; ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .verletzter_spieler td {
@@ -25,26 +25,26 @@ $sql3 = mysql_fetch_assoc($sql2);
 -->
 </style>
 <?php include 'zz2.php'; ?>
-<h1>Team: <?php echo $sql3['name']; ?></h1>
+<h1><?php echo _('Team:').' '.$sql3['name']; ?></h1>
 	<?php
 	if ($loggedin == 1 && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) {
 		echo '<p style="text-align:right">';
-		echo '<a href="/namensaenderung.php?team='.$clearid.'" class="pagenava">Vereinsnamen ändern</a>';
-		echo '<a href="/protokoll.php?team='.$clearid.'" class="pagenava">Protokoll ansehen</a>';
+		echo '<a href="/namensaenderung.php?team='.$clearid.'" class="pagenava">'.('Vereinsnamen ändern').'</a>';
+		echo '<a href="/protokoll.php?team='.$clearid.'" class="pagenava">'.('Protokoll ansehen').'</a>';
 		echo '</p>';
 	}
 	?>
 <p style="text-align:right">
-	<a href="/lig_transfers.php?team=<?php echo $clearid; ?>" class="pagenava">Transfers dieses Teams</a>
-	<a href="/kalender.php?team=<?php echo $clearid; ?>" class="pagenava">Zum Spielplan</a>
+	<a href="/lig_transfers.php?team=<?php echo $clearid; ?>" class="pagenava"><?php echo _('Transfers dieses Teams'); ?></a>
+	<a href="/kalender.php?team=<?php echo $clearid; ?>" class="pagenava"><?php echo _('Zum Spielplan'); ?></a>
 </p>
 <?php if ($loggedin == 1) { ?>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Bereich</th>
-<th scope="col">Wert</th>
+<th scope="col"><?php echo _('Bereich'); ?></th>
+<th scope="col"><?php echo _('Wert'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -67,23 +67,23 @@ $vql1 = "SELECT ids, username, status FROM ".$prefix."users WHERE team = '".$cle
 $vql2 = mysql_query($vql1);
 $vql4 = mysql_num_rows($vql2);
 if ($vql4 == 0) { $last_managed = date('d.m.Y H:i', $sql3['last_managed']); $strainer = '<td>Computer ('.$last_managed.')</td>'; } else { $vql3 = mysql_fetch_assoc($vql2); $strainer = '<td class="link">'.displayUsername($vql3['username'], $vql3['ids']).'</td>'; }
-echo '<tr class="odd"><td>Trainer</td>'.$strainer.'</tr>';
-echo '<tr><td>Manager</td>'.$strainer.'</tr>';
-echo '<tr class="odd"><td>Finanzlage</td><td>'.kontoToWort($sql3['konto']).'</td></tr>';
-echo '<tr><td>Land</td><td class="link"><a href="/lig_tabelle.php?liga='.$sql3['liga'].'">'.$tql3['name'].'</a></td></tr>';
-echo '<tr class="odd"><td>Liga (Vorjahr)</td><td>'.$sql3['rank'].'. ('.$sql3['vorjahr_platz'].'.)</td></tr>';
-echo '<tr><td>Pokal (Vorjahr)</td><td>'.pokalrunde_wort($sql3['pokalrunde']).' ('.pokalrunde_wort($sql3['vorjahr_pokalrunde']).')</td></tr>';
-echo '<tr class="odd"><td>Cup (Vorjahr)</td><td>'.cuprunde_wort($sql3['cuprunde']).' ('.cuprunde_wort($sql3['vorjahr_cuprunde']).')</td></tr>';
-echo '<tr><td>Kaderstärke</td><td>'.number_format($sql3['staerke'], 1, ',', '.').'</td></tr>';
-echo '<tr class="odd"><td>Aufstellungsstärke</td><td>'.number_format($sql3['aufstellung'], 1, ',', '.').'</td></tr>';
-echo '<tr><td>Meisterschaft</td><td>'.$sql3['meisterschaften'].'x</td></tr>';
-echo '<tr class="odd"><td>Pokalsieg</td><td>'.$sql3['pokalsiege'].'x</td></tr>';
-echo '<tr><td>Cupsieg</td><td>'.$sql3['cupsiege'].'x</td></tr>';
-echo '<tr class="odd"><td>RKP (Vorjahr)</td><td>'.number_format($sql3['elo'], 0, ',', '.').' ('.number_format($sql3['vorjahr_elo'], 0, ',', '.').') Punkte</td></tr>';
-echo '<tr><td>Testspiele</td><td>';
-if ($live_scoring_spieltyp_laeuft == 'Test') { echo '?'; } else { echo $sql3['friendlies_ges'].' ('.$sql3['friendlies'].' Siege)'; }
+echo '<tr class="odd"><td>'._('Trainer').'</td>'.$strainer.'</tr>';
+echo '<tr><td>'._('Manager').'</td>'.$strainer.'</tr>';
+echo '<tr class="odd"><td>'._('Finanzlage').'</td><td>'.kontoToWort($sql3['konto']).'</td></tr>';
+echo '<tr><td>'._('Land').'</td><td class="link"><a href="/lig_tabelle.php?liga='.$sql3['liga'].'">'.$tql3['name'].'</a></td></tr>';
+echo '<tr class="odd"><td>'._('Liga (Vorjahr)').'</td><td>'.$sql3['rank'].'. ('.$sql3['vorjahr_platz'].'.)</td></tr>';
+echo '<tr><td>'._('Pokal (Vorjahr)').'</td><td>'.pokalrunde_wort($sql3['pokalrunde']).' ('.pokalrunde_wort($sql3['vorjahr_pokalrunde']).')</td></tr>';
+echo '<tr class="odd"><td>'._('Cup (Vorjahr)').'</td><td>'.cuprunde_wort($sql3['cuprunde']).' ('.cuprunde_wort($sql3['vorjahr_cuprunde']).')</td></tr>';
+echo '<tr><td>'._('Kaderstärke').'</td><td>'.number_format($sql3['staerke'], 1, ',', '.').'</td></tr>';
+echo '<tr class="odd"><td>'._('Aufstellungsstärke').'</td><td>'.number_format($sql3['aufstellung'], 1, ',', '.').'</td></tr>';
+echo '<tr><td>'._('Meisterschaft').'</td><td>'.$sql3['meisterschaften'].'x</td></tr>';
+echo '<tr class="odd"><td>'._('Pokalsieg').'</td><td>'.$sql3['pokalsiege'].'x</td></tr>';
+echo '<tr><td>'._('Cupsieg').'</td><td>'.$sql3['cupsiege'].'x</td></tr>';
+echo '<tr class="odd"><td>'._('RKP (Vorjahr)').'</td><td>'.number_format($sql3['elo'], 0, ',', '.').' ('.number_format($sql3['vorjahr_elo'], 0, ',', '.').') '._('Punkte').'</td></tr>';
+echo '<tr><td>'._('Testspiele').'</td><td>';
+if ($live_scoring_spieltyp_laeuft == 'Test') { echo '?'; } else { echo $sql3['friendlies_ges'].' ('.$sql3['friendlies'].' '._('Siege').')'; }
 echo '</td></tr>';
-echo '<tr class="odd"><td>Stadion</td><td>'.number_format($stadion3['plaetze'], 0, ',', '.').' Plätze</td></tr>';
+echo '<tr class="odd"><td>'._('Stadion').'</td><td>'.number_format($stadion3['plaetze'], 0, ',', '.').' '._('Plätze').'</td></tr>';
 ?>
 </tbody>
 </table>
@@ -99,42 +99,42 @@ else {
 }
 // TROPHAEEN-RAUM ANFANG
 if ($sql3['meisterschaften'] > 0 OR $sql3['pokalsiege'] > 0 OR $sql3['cupsiege'] > 0) {
-	echo '<h1>Trophäen-Raum</h1><p>';
+	echo '<h1>'._('Trophäen-Raum').'</h1><p>';
 	if ($sql3['meisterschaften'] > 0) {
 		for ($i = 0; $i < $sql3['meisterschaften']; $i++) {
-			echo '<img src="/images/trophaee_liga.png" alt="Meisterschaft" title="Meisterschaft" /> ';
+			echo '<img src="/images/trophaee_liga.png" alt="Meisterschaft" title="'._('Meisterschaft').'" /> ';
 		}
 	}
 	if ($sql3['pokalsiege'] > 0) {
 		for ($i = 0; $i < $sql3['pokalsiege']; $i++) {
-			echo '<img src="/images/trophaee_pokal.png" alt="Pokalsieg" title="Pokalsieg" /> ';
+			echo '<img src="/images/trophaee_pokal.png" alt="Pokalsieg" title="'._('Pokalsieg').'" /> ';
 		}
 	}
 	if ($sql3['cupsiege'] > 0) {
 		for ($i = 0; $i < $sql3['cupsiege']; $i++) {
-			echo '<img src="/images/trophaee_cup.png" alt="Cupsieg" title="Cupsieg" /> ';
+			echo '<img src="/images/trophaee_cup.png" alt="Cupsieg" title="'._('Cupsieg').'" /> ';
 		}
 	}
 	if ($mdsSiege4 > 0) {
 		for ($i = 0; $i < $mdsSiege4; $i++) {
-			echo '<img src="/images/trophaee_mds.png" alt="Manager der Saison" title="Manager der Saison" /> ';
+			echo '<img src="/images/trophaee_mds.png" alt="Manager der Saison" title="'._('Manager der Saison').'" /> ';
 		}
 	}
 	echo '</p>';
 }
 // TROPHAEEN-RAUM ENDE
 ?>
-<h1>Kader</h1>
+<h1><?php echo _('Kader'); ?></h1>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">MT</th>
-<th scope="col">TS</th>
-<th scope="col">Name</th>
-<th scope="col">AL</th>
-<th scope="col">Stärke</th>
-<th scope="col">FR</th>
+<th scope="col"><?php echo _('MT'); ?></th>
+<th scope="col"><?php echo _('TS'); ?></th>
+<th scope="col"><?php echo _('Name'); ?></th>
+<th scope="col"><?php echo _('AL'); ?></th>
+<th scope="col"><?php echo _('Stärke'); ?></th>
+<th scope="col"><?php echo _('FR'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -182,16 +182,16 @@ if (count($gesamtMarktwertWerte) > 0) {
 else {
 	$gMarktwert = 0;
 }
-echo '<tr><td colspan="6">Team-Alter: '.number_format($dAlter, 1, ',', '.').' Jahre</td></tr>';
-echo '<tr class="odd"><td colspan="6">Team-Marktwert: '.number_format($gMarktwert, 0, ',', '.').' €</td></tr>';
+echo '<tr><td colspan="6">'.__('Team-Alter: %d Jahre', number_format($dAlter, 1, ',', '.')).'</td></tr>';
+echo '<tr class="odd"><td colspan="6">'.__('Team-Marktwert: %d €', number_format($gMarktwert, 0, ',', '.')).'</td></tr>';
 ?>
 </tbody>
 </table>
 </p>
-<p><strong>Überschriften:</strong> MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, FR: Frische</p>
-<p><strong>Mannschaftsteile:</strong> T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm</p>
-<p><strong>Durchgestrichen:</strong> verletzte oder gesperrte Spieler</p>
+<p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, FR: Frische'); ?></p>
+<p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
+<p><strong><?php echo _('Durchgestrichen:').'</strong> '._('verletzte oder gesperrte Spieler'); ?></p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

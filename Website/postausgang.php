@@ -12,7 +12,7 @@ function checkAll(quelle) {
 }
 </script>
 <?php include 'zz2.php'; ?>
-<h1>Postausgang</h1>
+<h1><?php echo _('Postausgang'); ?></h1>
 <?php if ($loggedin == 0) { echo '<p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>'; } else { ?>
 <?php
 if (isset($_POST['auswahl']) && $cookie_id != DEMO_USER_ID) {
@@ -23,7 +23,7 @@ if (isset($_POST['auswahl']) && $cookie_id != DEMO_USER_ID) {
 			$del1 = "DELETE FROM ".$prefix."pn WHERE geloescht_von = 1 AND geloescht_an = 1";
 			mysql_query($del1);
 		}
-		addInfoBox('Es wurden '.count($_POST['auswahl']).' Nachrichten aus Deinem Postausgang gelöscht.');
+		addInfoBox(__('Es wurden %d Nachrichten aus Deinem Postausgang gelöscht.', count($_POST['auswahl'])));
 	}
 }
 ?>
@@ -63,7 +63,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '>';
 	echo '<td><input type="checkbox" name="auswahl[]" value="'.$sql3['ids'].'" /></td>';
 	echo '<td class="link"><a href="/post.php?id='.$sql3['ids'].'">'.$sql3['titel'].'</a></td>';
-	echo (isset($sql3['username']) ? '<td class="link">'.displayUsername($sql3['username'], $sql3['an']) : '<td>Gelöschter User').'</td>';
+	echo (isset($sql3['username']) ? '<td class="link">'.displayUsername($sql3['username'], $sql3['an']) : '<td>'._('Gelöschter User')).'</td>';
 	echo '<td>'.date('d.m.y H:i', $sql3['zeit']).'</td>';
 	echo '</tr>';
 }
@@ -74,7 +74,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 <p><select name="markedAction" size="1" style="width:200px">
 	<option value="DEL"><?php echo _('Markierte löschen'); ?></option>
 </select></p>
-<p><input type="submit" value="Ausführen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?');" /></p>
+<p><input type="submit" value="<?php echo _('Ausführen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>');" /></p>
 </form>
 <?php
 echo '<div class="pagebar">';

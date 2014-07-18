@@ -20,7 +20,7 @@ if ($showTeam == $cookie_team) { // if the event log for one's own club is to be
 	echo '<h1>'._('Protokoll').'</h1>';
 }
 else { // if the event log for another user's club is to be shown by the support staff
-	echo '<h1>Protokoll für '.htmlspecialchars($showTeamName).'</h1>';
+	echo '<h1>'.__('Protokoll für %s', htmlspecialchars($showTeamName)).'</h1>';
 }
 
 setTaskDone('check_logs');
@@ -68,7 +68,7 @@ $counter = 0;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if ($counter % 2 == 0) { echo '<tr>'; } else { echo '<tr class="odd">'; }
 	echo '<td><img src="/images/protokoll/'.$sql3['typ'].'.png" alt="'.$sql3['typ'].'" title="'.$sql3['typ'].'" /></td>';
-	echo '<td><span title="'.date('d.m.Y H:i', $sql3['zeit']).' Uhr">'.date('d.m.Y', $sql3['zeit']).'</span></td><td>'.$sql3['text'].'</a></td>';
+	echo '<td><span title="'.date('d.m.Y H:i', $sql3['zeit']).' '._('Uhr').'">'.date('d.m.Y', $sql3['zeit']).'</span></td><td>'.$sql3['text'].'</a></td>';
 	echo '</tr>';
 	$counter++;
 }

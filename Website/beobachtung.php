@@ -24,7 +24,7 @@ if (isset($_POST['markedAction'])) {
 				$sql1 = "DELETE FROM ".$prefix."transfermarkt_watch WHERE team = '".$cookie_team."' AND spieler_id = '".$markedEntry."'";
 				$sql2 = mysql_query($sql1);
 			}
-			addInfoBox('Es wurden '.count($_POST['auswahl']).' Spieler von Deiner Beobachtungsliste gelöscht.');
+			addInfoBox(_('Es wurden %d Spieler von Deiner Beobachtungsliste gelöscht.', count($_POST['auswahl']));
 		}
 	}
 }
@@ -54,17 +54,17 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<td><input type="checkbox" name="auswahl[]" value="'.$sql3['spieler_id'].'" /></td>';
 	echo '<td>'.$sql3['position'].'</td>';
 	echo '<td class="link"><a href="/spieler.php?id='.$sql3['spieler_id'].'">'.$sql3['spieler_name'].'</a></td><td>';
-	if ($sql3['transfermarkt'] == 0) { echo 'Unverkäuflich'; }
-	elseif ($sql3['transfermarkt'] == 1) { echo '<a href="/transfermarkt_auktion.php?id='.$sql3['spieler_id'].'">Zum Verkauf</a>'; }
-	elseif ($sql3['transfermarkt'] > 999998) { echo '<a href="/spieler.php?id='.$sql3['spieler_id'].'">Zur Leihgabe</a>'; }
+	if ($sql3['transfermarkt'] == 0) { echo _('Unverkäuflich'); }
+	elseif ($sql3['transfermarkt'] == 1) { echo '<a href="/transfermarkt_auktion.php?id='.$sql3['spieler_id'].'">'._('Zum Verkauf').'</a>'; }
+	elseif ($sql3['transfermarkt'] > 999998) { echo '<a href="/spieler.php?id='.$sql3['spieler_id'].'">'._('Zur Leihgabe').'</a>'; }
 	echo '</td>';
 	echo '<td>'.floor($sql3['wiealt']/365).'</td>';
 	echo '<td>'.number_format($sql3['staerke'], 1, ',', '.').'</td>';
 	if ($sql3['bieter_highest'] == $cookie_team) {
-		echo '<td><img src="/images/erfolg.png" alt="+" title="Du bist zurzeit der Höchstbietende" /></td>';
+		echo '<td><img src="/images/erfolg.png" alt="+" title="'._('Du bist zurzeit der Höchstbietende').'" /></td>';
 	}
 	else {
-		echo '<td><img src="/images/fehler.png" alt="-" title="Du bist nicht der Höchstbietende" /></td>';
+		echo '<td><img src="/images/fehler.png" alt="-" title="'._('Du bist nicht der Höchstbietende').'" /></td>';
 	}
 	echo '<td>';
 	if (is_null($sql3['ende'])) {
@@ -94,7 +94,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 <p><select name="markedAction" size="1" style="width:200px">
 	<option value="DEL"><?php echo _('Markierte löschen'); ?></option>
 </select></p>
-<p><input type="submit" value="<?php echo _('Ausführen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+<p><input type="submit" value="<?php echo _('Ausführen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <?php
 echo '<div class="pagebar">';

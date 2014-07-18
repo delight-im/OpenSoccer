@@ -27,14 +27,14 @@ $eloTeam2 = $tid2['elo'];
 $tid2 = $tid2['ids'];
 // LIVE-SCORING ANFANG
 if ($sql3['typ'] == $live_scoring_spieltyp_laeuft && date('d.m.Y', time()) == date('d.m.Y', $sql3['datum'])) {
-	$live_scoring_meldung = '<span style="color:red">Spiel läuft</span>';
+	$live_scoring_meldung = '<span style="color:red">'._('Spiel läuft').'</span>';
 }
 else {
 	$live_scoring_meldung = '';
 }
 // LIVE-SCORING ENDE
 ?>
-<title><?php echo $sql3['team1']; ?> - <?php echo $sql3['team2']; ?> <?php if ($live_scoring_meldung != '') { echo 'LIVE'; } else { echo $sql3['ergebnis']; } ?> | Ballmanager.de</title>
+<title><?php echo $sql3['team1']; ?> - <?php echo $sql3['team2']; ?> <?php if ($live_scoring_meldung != '') { echo _('LIVE'); } else { echo $sql3['ergebnis']; } ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 div.matchReport {
@@ -89,8 +89,8 @@ div.matchReport span.teamRight {
 <?php include 'zz2.php'; ?>
 <?php
 if ($live_scoring_meldung != '') {
-	$score1 = 'LI';
-	$score2 = 'VE';
+	$score1 = _('LI');
+	$score2 = _('VE');
 }
 else {
 	$scores = explode(':', $sql3['ergebnis']);
@@ -111,7 +111,7 @@ echo '</div>';
 <?php
 if ($live_scoring_meldung != '') {
 	echo '<p style="text-align:right">';
-	echo '<a href="/spielbericht.php?id='.$sql3['id'].'" onclick="location.reload(); return false" class="pagenava">Aktualisieren</a> ';
+	echo '<a href="/spielbericht.php?id='.$sql3['id'].'" onclick="location.reload(); return false" class="pagenava">'.('Aktualisieren').'</a>';
 	echo '<a href="/liveZentrale.php" class="pagenava">'._('Zur LIVE-Zentrale').'</a>';
 	echo '</p>';
 }

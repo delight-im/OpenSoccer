@@ -75,7 +75,7 @@ $sql2 = mysql_query($sql1);
 $blaetter3 = anzahl_datensaetze_gesamt($sql1);
 $counter = $start+1;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
-	$showUsername = 'Computer';
+	$showUsername = _('Computer');
 	$usernameCSS = '';
 	if (!is_null($sql3['username']) && !is_null($sql3['username'])) {
 		$showUsername = displayUsername($sql3['username'], $sql3['ids']);

@@ -1,9 +1,9 @@
 <?php include 'zz1.php'; ?>
-<title>Finanzen | Ballmanager.de</title>
+<title><?php echo _('Finanzen'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Finanzen</h1>
+<h1><?php echo _('Finanzen'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p>Hier im Finanz-Bereich findest Du eine Bilanz für die aktuelle Saison. Durch Transfers, Austausch von Personal und Stadionausbau kann die Prognose vom tatsächlichen Saisonergebnis abweichen.</p>
+<p><?php echo _('Hier im Finanz-Bereich findest Du eine Bilanz für die aktuelle Saison. Durch Transfers, Austausch von Personal und Stadionausbau kann die Prognose vom tatsächlichen Saisonergebnis abweichen.'); ?></p>
 <?php
 setTaskDone('finance_prognosis');
 // WERTE INITIALISIEREN ANFANG
@@ -87,38 +87,38 @@ function showSymbolIcon($which) {
 <thead>
 <tr class="odd">
 <th scope="col" style="width:22px; padding:2px 0 2px 4px;">&nbsp;</th>
-<th scope="col">Bereich</th>
-<th scope="col">Einnahmen</th>
-<th scope="col">Ausgaben</th>
+<th scope="col"><?php echo _('Bereich'); ?></th>
+<th scope="col"><?php echo _('Einnahmen'); ?></th>
+<th scope="col"><?php echo _('Ausgaben'); ?></th>
 </tr>
 </thead>
 <tbody>
-<tr><?php echo showSymbolIcon('tvgelder'); ?><td>TV-Gelder</td><td style="text-align:right"><?php echo number_format($daten3['tv_ein'], 0, ',', '.'); ?> €</td><td style="text-align:right">0 €</td></tr>
-<tr class="odd"><?php echo showSymbolIcon('sponsor'); ?><td class="link"><a href="/sponsoren.php">Sponsor <sup>2)</sup></a></td><td style="text-align:right"><?php echo showKontostand($sponsor_einkommen).' €'; ?></td><td style="text-align:right">0 €</td></tr>
-<tr><?php echo showSymbolIcon('spieler'); ?><td class="link"><a href="/vertraege.php">Spielergehälter <sup>2)</sup></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($gehalt3, 0, ',', '.'); ?> €</td></tr>
-<tr class="odd"><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php">Jugendtrainer <sup>2)</sup></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($ausgaben_jugendtrainer, 0, ',', '.'); ?> €</td></tr>
-<tr><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php">Fanbetreuer <sup>2)</sup></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($ausgaben_fanbetreuer, 0, ',', '.'); ?> €</td></tr>
-<tr class="odd"><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php">Scout <sup>2)</sup></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($ausgaben_scout, 0, ',', '.'); ?> €</td></tr>
-<tr><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php">Fitness-Trainer</a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($fitnesstrainer3, 0, ',', '.'); ?> €</td></tr>
-<tr class="odd"><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php">Physiotherapeut</a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($physiotherapeut, 0, ',', '.'); ?> €</td></tr>
-<tr><?php echo showSymbolIcon('transfers'); ?><td class="link"><a href="/lig_transfers.php?team=<?php echo $cookie_team; ?>">Transfers</a></td><td style="text-align:right"><?php echo number_format($einnahmen_transfers, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($ausgaben_transfers, 0, ',', '.'); ?> €</td></tr>
-<tr class="odd"><?php echo showSymbolIcon('steuer'); ?><td>Ablösesteuer</td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($abloesesteuer3, 0, ',', '.'); ?> €</td></tr>
-<tr><?php echo showSymbolIcon('stadion'); ?><td class="link"><a href="/ver_stadion.php">Stadion <sup>2)</sup></a></td><td style="text-align:right"><?php echo number_format($einnahmen_stadion, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($ausgaben_stadion, 0, ',', '.'); ?> €</td></tr>
-<tr class="odd"><?php echo showSymbolIcon('transfers'); ?><td class="link"><a href="/leihgaben.php">Leihprämien <sup>2)</sup></a></td><td style="text-align:right"><?php echo number_format($leihPraemien_ein, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($leihPraemien_aus, 0, ',', '.'); ?> €</td></tr>
-<tr><?php echo showSymbolIcon('sonstiges'); ?><td>Sonstiges <sup>3)</sup></td><td style="text-align:right"><?php echo number_format($sonstiges_ein, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($sonstiges_aus, 0, ',', '.'); ?> €</td></tr>
+<tr><?php echo showSymbolIcon('tvgelder'); ?><td><?php echo _('TV-Gelder'); ?></td><td style="text-align:right"><?php echo number_format($daten3['tv_ein'], 0, ',', '.'); ?> €</td><td style="text-align:right">0 €</td></tr>
+<tr class="odd"><?php echo showSymbolIcon('sponsor'); ?><td class="link"><a href="/sponsoren.php"><?php echo _('Sponsor'); ?> <sup>2)</sup></a></td><td style="text-align:right"><?php echo showKontostand($sponsor_einkommen).' €'; ?></td><td style="text-align:right">0 €</td></tr>
+<tr><?php echo showSymbolIcon('spieler'); ?><td class="link"><a href="/vertraege.php"><?php echo _('Spielergehälter'); ?> <sup>2)</sup></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($gehalt3, 0, ',', '.'); ?> €</td></tr>
+<tr class="odd"><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php"><?php echo _('Jugendtrainer'); ?> <sup>2)</sup></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($ausgaben_jugendtrainer, 0, ',', '.'); ?> €</td></tr>
+<tr><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php"><?php echo _('Fanbetreuer'); ?> <sup>2)</sup></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($ausgaben_fanbetreuer, 0, ',', '.'); ?> €</td></tr>
+<tr class="odd"><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php"><?php echo _('Scout'); ?> <sup>2)</sup></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($ausgaben_scout, 0, ',', '.'); ?> €</td></tr>
+<tr><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php"><?php echo _('Fitness-Trainer'); ?></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($fitnesstrainer3, 0, ',', '.'); ?> €</td></tr>
+<tr class="odd"><?php echo showSymbolIcon('personal'); ?><td class="link"><a href="/ver_personal.php"><?php echo _('Physiotherapeut'); ?></a></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($physiotherapeut, 0, ',', '.'); ?> €</td></tr>
+<tr><?php echo showSymbolIcon('transfers'); ?><td class="link"><a href="/lig_transfers.php?team=<?php echo $cookie_team; ?>"><?php echo _('Transfers'); ?></a></td><td style="text-align:right"><?php echo number_format($einnahmen_transfers, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($ausgaben_transfers, 0, ',', '.'); ?> €</td></tr>
+<tr class="odd"><?php echo showSymbolIcon('steuer'); ?><td><?php echo _('Ablösesteuer'); ?></td><td style="text-align:right">0 €</td><td style="text-align:right"><?php echo number_format($abloesesteuer3, 0, ',', '.'); ?> €</td></tr>
+<tr><?php echo showSymbolIcon('stadion'); ?><td class="link"><a href="/ver_stadion.php"><?php echo _('Stadion'); ?> <sup>2)</sup></a></td><td style="text-align:right"><?php echo number_format($einnahmen_stadion, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($ausgaben_stadion, 0, ',', '.'); ?> €</td></tr>
+<tr class="odd"><?php echo showSymbolIcon('transfers'); ?><td class="link"><a href="/leihgaben.php"><?php echo _('Leihprämien'); ?> <sup>2)</sup></a></td><td style="text-align:right"><?php echo number_format($leihPraemien_ein, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($leihPraemien_aus, 0, ',', '.'); ?> €</td></tr>
+<tr><?php echo showSymbolIcon('sonstiges'); ?><td><?php echo _('Sonstiges'); ?> <sup>3)</sup></td><td style="text-align:right"><?php echo number_format($sonstiges_ein, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($sonstiges_aus, 0, ',', '.'); ?> €</td></tr>
 <tr><td>&nbsp;</td><td>&nbsp;</td><td style="text-align:right"><?php echo number_format($bilanzEinnahmen, 0, ',', '.'); ?> €</td><td style="text-align:right"><?php echo number_format($bilanzAusgaben, 0, ',', '.'); ?> €</td></tr>
 <tr class="odd"><td colspan="4">&nbsp;</td></tr>
-<tr><td colspan="4">Aktueller Kontostand: <?php echo showKontostand($daten3['konto']).' €'; ?></td></tr>
-<tr class="odd"><td colspan="4">Alter Kontostand <sup>1)</sup>: <?php echo number_format($daten3['vorjahr_konto'], 0, ',', '.'); ?> €</td></tr>
-<tr><td colspan="4">Voraussichtlicher Gewinn <sup>2)</sup>: <?php if ($bilanz > 0) { echo '+'; } echo showKontostand($bilanz); ?> €</td></tr>
-<tr class="odd"><td colspan="4">Erwarteter Kontostand am Ende der Saison <sup>2)</sup>: <?php echo showKontostand($naechster_kontostand).' €'; ?></td></tr>
+<tr><td colspan="4"><?php echo _('Aktueller Kontostand:'); ?> <?php echo showKontostand($daten3['konto']).' €'; ?></td></tr>
+<tr class="odd"><td colspan="4"><?php echo _('Alter Kontostand'); ?> <sup>1)</sup>: <?php echo number_format($daten3['vorjahr_konto'], 0, ',', '.'); ?> €</td></tr>
+<tr><td colspan="4"><?php echo _('Voraussichtlicher Gewinn'); ?> <sup>2)</sup>: <?php if ($bilanz > 0) { echo '+'; } echo showKontostand($bilanz); ?> €</td></tr>
+<tr class="odd"><td colspan="4"><?php echo _('Erwarteter Kontostand am Ende der Saison'); ?> <sup>2)</sup>: <?php echo showKontostand($naechster_kontostand).' €'; ?></td></tr>
 </tbody>
 </table>
 </p>
-<p><sup>1)</sup> Dieser Wert gibt den Kontostand an, den Dein Team direkt vor dem Saisonwechsel hatte, also am Ende der letzten Saison.</p>
-<p><sup>2)</sup> Dieser Wert ist eine Hochrechnung für die gesamte Saison</p>
-<p><sup>3)</sup> Lotto, Testspiele, Entlassungen, Sanktionen</p>
+<p><sup>1)</sup> <?php echo _('Dieser Wert gibt den Kontostand an, den Dein Team direkt vor dem Saisonwechsel hatte, also am Ende der letzten Saison.'); ?></p>
+<p><sup>2)</sup> <?php echo _('Dieser Wert ist eine Hochrechnung für die gesamte Saison'); ?></p>
+<p><sup>3)</sup> <?php echo _('Lotto, Testspiele, Entlassungen, Sanktionen'); ?></p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

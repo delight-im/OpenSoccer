@@ -23,19 +23,19 @@ if ($cookie_teamname == $showTeamName) { // if the name of one's own club is to 
 	echo '<h1>'._('Namensänderung').'</h1>';
 }
 else { // if the name of another user's club is to be changed by the support staff
-    echo '<h1>Namensänderung für '.htmlspecialchars($showTeamName).'</h1>';
+    echo '<h1>'.__('Namensänderung für %s', htmlspecialchars($showTeamName)).'</h1>';
 }
 
 // CHECK IF USER IS ALLOWED TO CHANGE TEAM NAME AGAIN BEGIN
 if ($_SESSION['status'] != 'Helfer' && $_SESSION['status'] != 'Admin') {
 	$changeLockDuration = 2592000;
 	$changeLockUnit = 86400;
-	$changeLockUnitStr = 'Tagen';
+	$changeLockUnitStr = _('Tagen');
 }
 else {
 	$changeLockDuration = 1800;
 	$changeLockUnit = 60;
-	$changeLockUnitStr = 'Minuten';
+	$changeLockUnitStr = _('Minuten');
 }
 $letzteAenderung1 = "SELECT MAX(zeit) FROM ".$prefix."vNameChanges WHERE team = '".$showTeam."' AND sperre = 1";
 $letzteAenderung2 = mysql_query($letzteAenderung1);
@@ -48,7 +48,7 @@ else {
 }
 if ($letzteAenderungVor < $changeLockDuration) { // check time limit for team name changing lock
 	$lastTeamNameChange = round($letzteAenderungVor / $changeLockUnit);
-	addInfoBox('Der Name Deines Vereins wurde zuletzt vor '.$lastTeamNameChange.' '.$changeLockUnitStr.' geändert. Du kannst ihn in '.intval(30-$lastTeamNameChange).' '.$changeLockUnitStr.' das nächste Mal ändern.');
+	addInfoBox(__('Der Name Deines Vereins wurde zuletzt vor %1$d %2$d geändert. Du kannst ihn in %3$d %4$d das nächste Mal ändern.', $lastTeamNameChange, $changeLockUnitStr, intval(30-$lastTeamNameChange), $changeLockUnitStr));
 	include 'zz3.php';
 	exit;
 }
@@ -56,7 +56,7 @@ if ($letzteAenderungVor < $changeLockDuration) { // check time limit for team na
 
 ?>
 <p><?php echo _('Auf dieser Seite kannst Du den Namen Deines Vereins ändern. Du kannst den Namen einer Stadt und einen beliebigen Zusatz aus der Liste wählen, der vor oder nach dem Städtenamen stehen kann.'); ?></p>
-<p>Hier fehlt ein Städtename, den Du gerne dabei hättest? Dann <a href="/post_schreiben.php?id=c4ca4238a0b923820dcc509a6f75849b">sag uns Bescheid</a>, vielleicht kommt er dann dazu!</p>
+<p><?php echo __('Hier fehlt ein Städtename, den Du gerne dabei hättest? Dann %s, vielleicht kommt er dann dazu!', '<a href="/post_schreiben.php?id=c4ca4238a0b923820dcc509a6f75849b">'._('sag uns Bescheid').'</a>'); ?></p>
 <p><strong><?php echo _('Hinweis:').'</strong> '._('Du kannst den Namen Deines Klubs nur alle 30 Tage ändern.'); ?></p>
 <?php
 if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != DEMO_USER_ID) {
@@ -66,7 +66,7 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 		$stadt = mysql_real_escape_string(trim(strip_tags($_POST['stadt'])));
 		if (in_array($kuerzel1, $kuerzelListe) OR in_array($kuerzel2, $kuerzelListe)) {
 			if ($kuerzel1 != '' && $kuerzel2 != '') {
-				addInfoBox('Du darfst nur <i>einen</i> Zusatz für den Namen wählen. Bitte entscheide Dich für einen und versuche es noch einmal.');
+				addInfoBox(_('Du darfst nur <i>einen</i> Zusatz für den Namen wählen. Bitte entscheide Dich für einen und versuche es noch einmal.'));
 			}
 			else {
 				if ($kuerzel2 == '') {
@@ -82,13 +82,13 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 					$sperrListe[] = $sperrListe3['zusatz'];
 				}
 				if (in_array($kuerzel1, $sperrListe) OR in_array($kuerzel2, $sperrListe)) {
-					addInfoBox('Dieser Name steht auf der Sperrliste, weil er einem realen Vereins-Namen zu sehr ähnelt. Bitte versuche es noch einmal mit einem anderen Namen.');
+					addInfoBox(_('Dieser Name steht auf der Sperrliste, weil er einem realen Vereins-Namen zu sehr ähnelt. Bitte versuche es noch einmal mit einem anderen Namen.'));
 				}
 				else {
 					$sql1 = "UPDATE man_teams SET name = '".$neuerName."' WHERE name = '".$showTeamName."'";
 					$sql2 = mysql_query($sql1);
 					if ($sql2 == FALSE) {
-						addInfoBox('Dieser Name ist leider schon vergeben. Bitte versuche es noch einmal mit einem anderen Namen.');
+						addInfoBox(_('Dieser Name ist leider schon vergeben. Bitte versuche es noch einmal mit einem anderen Namen.'));
 					}
 					else {
 						$sql3 = "INSERT INTO ".$prefix."vNameChanges (team, zeit, vonName, zuName) VALUES ('".$showTeam."', ".time().", '".$showTeamName."', '".$neuerName."')";
@@ -115,7 +115,7 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 							$_SESSION['teamname'] = $neuerName; // change the name in the session as well
 							$cookie_teamname = $neuerName; // and for the rest of the current page
 							$showTeamName = $neuerName; // just to be consistent
-							addInfoBox('Dein Verein heißt jetzt: '.$neuerName);
+							addInfoBox(_('Dein Verein heißt jetzt:').' '.$neuerName);
 						}
 						else { // if the name of another user's club was changed by the support staff
 							addInfoBox($showTeamName.' heißt jetzt: '.$neuerName);
@@ -126,11 +126,11 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 			}
 		}
 		else {
-			addInfoBox('Du musst <i>einen</i> Zusatz wählen. Bitte versuche es noch einmal.');
+			addInfoBox(_('Du musst <i>einen</i> Zusatz wählen. Bitte versuche es noch einmal.'));
 		}
 	}
 	else {
-		addInfoBox('Du kannst den Namen Deines Vereins nur außerhalb der Spielzeiten ändern. Zurzeit laufen '.$live_scoring_spieltyp_laeuft.'spiele.');
+		addInfoBox(__('Du kannst den Namen Deines Vereins nur außerhalb der Spielzeiten ändern. Zurzeit laufen %s spiele.', $live_scoring_spieltyp_laeuft);
 	}
 }
 ?>
@@ -160,7 +160,7 @@ foreach ($kuerzelListe as $kuerzel) {
 }
 ?>
 </select></p>
-<p><input type="submit" value="Namen ändern"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><input type="submit" value="<?php echo _('Namen ändern'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
 <?php } ?>
 <?php } else { ?>

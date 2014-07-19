@@ -1,7 +1,7 @@
 <?php include 'zz1.php'; ?>
-<title>Sponsoren | Ballmanager.de</title>
+<title><?php echo _('Sponsoren'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Sponsoren</h1>
+<h1><?php echo _('Sponsoren'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <?php
@@ -35,7 +35,7 @@ if (isset($_GET['id']) && $cookie_id != DEMO_USER_ID) {
             $upd4 = "UPDATE ".$prefix."teams SET sponsor = ".intval($_GET['id']).", sponsor_a = ".$earnings[0].", sponsor_s = ".$earnings[1]." WHERE ids = '".$cookie_team."'";
             $upd5 = mysql_query($upd4);
             // PROTOKOLL ANFANG
-            $formulierung = 'Du hast '.$upd3['name'].' als Sponsor gewählt: Antrittsprämie '.number_format($earnings[0], 0, ',', '.').' € und Siegprämie '.number_format($earnings[1], 0, ',', '.').' €.';
+            $formulierung = __('Du hast %1$s als Sponsor gewählt: Antrittsprämie %2$d € und Siegprämie %3$d €.', $upd3['name'], number_format($earnings[0], 0, ',', '.'), number_format($earnings[1], 0, ',', '.'));
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Finanzen', '".time()."')";
             $sql8 = mysql_query($sql7);
             // PROTOKOLL ENDE
@@ -54,8 +54,8 @@ if ($spon3 != 0) {
 	$spon5 = mysql_query($spon4);
 	$spon6 = mysql_fetch_assoc($spon5);
 	$spon6 = $spon6['name'];
-	echo '<p>Du hast für die aktuelle Saison '.$spon6.' als Sponsor ausgewählt.</p>';
-	echo '<p>Als Antrittsprämie bekommst Du '.number_format($spon3a['sponsor_a'], 0, ',', '.').' € und als Siegprämie '.number_format($spon3a['sponsor_s'], 0, ',', '.').' €.</p>';
+	echo '<p>'.__('Du hast für die aktuelle Saison %s als Sponsor ausgewählt.', $spon6).'</p>';
+	echo '<p>'.__('Als Antrittsprämie bekommst Du %1$d € und als Siegprämie %2$d €.', number_format($spon3a['sponsor_a'], 0, ',', '.'), number_format($spon3a['sponsor_s'], 0, ',', '.')).'</p>';
 }
 else {
 ?>
@@ -63,10 +63,10 @@ else {
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Sponsor</th>
-<th scope="col">Antrittsprämie</th>
-<th scope="col">Siegprämie</th>
-<th scope="col">Vertrag</th>
+<th scope="col"><?php echo _('Sponsor'); ?></th>
+<th scope="col"><?php echo _('Antrittsprämie'); ?></th>
+<th scope="col"><?php echo _('Siegprämie'); ?></th>
+<th scope="col"><?php echo _('Vertrag'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -77,26 +77,26 @@ $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$angebote_vom_sponsor = get_sponsoren_angebot($sql3['prozentsatz'], $getelo3);
 	echo '<tr><td>'.$sql3['name'].'</td><td>'.number_format($angebote_vom_sponsor[0], 0, ',', '.').' €</td><td>'.number_format($angebote_vom_sponsor[1], 0, ',', '.').' €</td><td>';
-	echo '<a href="/sponsoren.php?id='.$sql3['id'].'" onclick="return confirm(\'Bist Du sicher?\')">Abschließen</a></td></tr>';
+	echo '<a href="/sponsoren.php?id='.$sql3['id'].'" onclick="return confirm('._('\'Bist Du sicher?\'').')">'._('Abschließen').'</a></td></tr>';
 	$rechner_optionen .= '<option value="'.$sql3['id'].'">'.$sql3['name'].'</option>';
 }
 ?>
 </tbody>
 </table>
 </p>
-<h1>Rechner</h1>
-<p>Mit diesem Rechner kannst Du Dir ausrechnen lassen, wie viel Du von einem Sponsor bekommen würdest. Wähle dazu bitte einen Sponsor
-und die erwartete Anzahl von Siegen aus.</p>
+<h1><?php echo _('Rechner'); ?></h1>
+<p><?php echo _('Mit diesem Rechner kannst Du Dir ausrechnen lassen, wie viel Du von einem Sponsor bekommen würdest. Wähle dazu bitte einen Sponsor
+und die erwartete Anzahl von Siegen aus.'); ?></p>
 <form action="/sponsoren.php" method="post" accept-charset="utf-8">
 <p><select name="rechner_sponsor" size="1" style="width:200px"><?php echo $rechner_optionen; ?></select></p>
 <p><select name="rechner_siege" size="1" style="width:200px">
 <?php
 for ($i = 0; $i <= 22; $i++) {
-	echo '<option value="'.$i.'">'.$i.' Siege</option>';
+	echo '<option value="'.$i.'">'.$i.' '._('Siege').'</option>';
 }
 ?>
 </select></p>
-<p><input type="submit" value="Rechnen" /></p>
+<p><input type="submit" value="<?php echo _('Rechnen'); ?>" /></p>
 </form>
 <?php
 if (isset($_POST['rechner_sponsor']) && isset($_POST['rechner_siege'])) {
@@ -108,12 +108,12 @@ if (isset($_POST['rechner_sponsor']) && isset($_POST['rechner_siege'])) {
 	$angebote_vom_sponsor = get_sponsoren_angebot($r3['prozentsatz'], $getelo3);
 	$angebote_vom_sponsor[0] = $angebote_vom_sponsor[0]*22;
 	$angebote_vom_sponsor[1] = $angebote_vom_sponsor[1]*$rechner_siege;
-	echo '<p style="color:red">'.$r3['name'].' würde Dir bei '.$rechner_siege.' Siegen '.number_format($angebote_vom_sponsor[0], 0, ',', '.').' € an Antrittsprämien und '.number_format($angebote_vom_sponsor[1], 0, ',', '.').' € an Siegprämien zahlen.</p>';
+	echo '<p style="color:red">'.$r3['name'].' '.__('würde Dir bei %1$d Siegen %2$d € an Antrittsprämien und %3$d € an Siegprämien zahlen.', $rechner_siege, number_format($angebote_vom_sponsor[0], 0, ',', '.'), number_format($angebote_vom_sponsor[1], 0, ',', '.')).'</p>';
 }
 ?>
 <?php } ?>
 <?php } ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

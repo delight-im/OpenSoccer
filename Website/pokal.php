@@ -52,7 +52,7 @@ if (isset($_POST['nachricht']) && $cookie_id != DEMO_USER_ID) {
 		$sql3 = mysql_fetch_assoc($sql2);
 		$chatSperreBis = $sql3['MAX(chatSperre)'];
 		if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-			addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+			addInfoBox(__('Du bist noch bis zum %1$d Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team.').'</a>');
 			include 'zz3.php';
 			exit;
 		}
@@ -79,7 +79,7 @@ if (file_exists($tmp_dateiname)) {
 			?>
 <h1><?php echo _('Deine Nachricht'); ?></h1>
 <form action="/pokal.php" method="post" accept-charset="utf-8">
-<p><input type="text" name="nachricht" style="width:80%" /> <input type="submit" value="Eintragen"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><input type="text" name="nachricht" style="width:80%" /> <input type="submit" value="<?php echo _('Eintragen'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
 <h1><?php echo _('Manager-Talk'); ?></h1>
 <?php
@@ -131,11 +131,11 @@ $wrij1 = "SELECT id, team1, team2, ergebnis, liga, kennung, typ, datum FROM ".$p
 $wrij2 = mysql_query($wrij1);
 while ($wrij3 = mysql_fetch_assoc($wrij2)) {
 	switch ($wrij3['liga']) {
-		case 'Pokal_Runde_1': $rundenarray = 'Vorrunde'; break;
-		case 'Pokal_Runde_2': $rundenarray = 'Achtelfinale'; break;
-		case 'Pokal_Runde_3': $rundenarray = 'Viertelfinale'; break;
-		case 'Pokal_Runde_4': $rundenarray = 'Halbfinale'; break;
-		case 'Pokal_Runde_5': $rundenarray = 'Finale'; break;
+		case 'Pokal_Runde_1': $rundenarray = _('Vorrunde'); break;
+		case 'Pokal_Runde_2': $rundenarray = _('Achtelfinale'); break;
+		case 'Pokal_Runde_3': $rundenarray = _('Viertelfinale'); break;
+		case 'Pokal_Runde_4': $rundenarray = _('Halbfinale'); break;
+		case 'Pokal_Runde_5': $rundenarray = _('Finale'); break;
 		default: $rundenarray = ''; break;
 	}
 	if ($rundenarray != '') {
@@ -188,7 +188,7 @@ for ($i = 1; $i <= 6; $i++) {
 	$spielliste = $spiels['value'];
 	if (count($spielliste) == 0) { continue; }
 	$tmp_liga_cache .= '<h1>'.$spiels['key'].'</h1>';
-	$tmp_liga_cache .= '<p><table><thead><tr class="odd"><th scope="col">Team 1</th><th scope="col">&nbsp;</th><th scope="col">Team 2</th><th scope="col">&nbsp;</th><th scope="col">H</th><th scope="col">R</th></tr></thead><tbody>';
+	$tmp_liga_cache .= '<p><table><thead><tr class="odd"><th scope="col">'._('Team 1').'</th><th scope="col">&nbsp;</th><th scope="col">'._('Team 2').'</th><th scope="col">&nbsp;</th><th scope="col">'._('H').'</th><th scope="col">'._('R').'</th></tr></thead><tbody>';
 	foreach ($spielliste as $spiel) {
 		$tmp_liga_cache .= '<tr class="land_'.$laender[$team_ids[$spiel['team1']][1]].' land_'.$laender[$team_ids[$spiel['team2']][1]].'"><td class="link"><a href="/team.php?id='.$team_ids[$spiel['team1']][0].'">'.$spiel['team1'].'</a></td><td><img src="/images/flaggen/'.$laender[$team_ids[$spiel['team1']][1]].'.png" alt="" /></td><td class="link"><a href="/team.php?id='.$team_ids[$spiel['team2']][0].'">'.$spiel['team2'].'</a></td><td><img src="/images/flaggen/'.$laender[$team_ids[$spiel['team2']][1]].'.png" alt="" /></td><td class="link">'.$spiel['ergebnis1'].'</td><td class="link">'.$spiel['ergebnis2'].'</td></tr>';
 	}
@@ -217,7 +217,7 @@ echo str_replace($cookie_teamname, $ersatz_temp, $tmp_liga_cache);
 ?>
 <h1><?php echo _('Deine Nachricht'); ?></h1>
 <form action="/pokal.php" method="post" accept-charset="utf-8">
-<p><input type="text" name="nachricht" style="width:80%" /> <input type="submit" value="Eintragen"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><input type="text" name="nachricht" style="width:80%" /> <input type="submit" value="<?php echo _('Eintragen'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
 <h1><?php echo _('Manager-Talk'); ?></h1>
 <?php
@@ -233,7 +233,7 @@ $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<p><b>'.displayUsername($sql3['username'], $sql3['user']).' schrieb am '.date('d.m.Y, H:i', $sql3['zeit']).':';
 	if ($sql3['user'] == $cookie_id OR $_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
-		echo ' <a href="/pokal.php?delEntry='.$sql3['id'].'">[Löschen]</a>';
+		echo ' <a href="/pokal.php?delEntry='.$sql3['id'].'">'._('[Löschen]').'</a>';
 	}
 	echo '</b><br />'.$sql3['nachricht'].'</p>';
 }

@@ -47,7 +47,6 @@ if (isset($_GET['filter'])) {
 	?>
 </select> <input type="submit" value="<?php echo _('Filtern'); ?>" /></p>
 </form>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -68,14 +67,13 @@ $counter = 0;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if ($counter % 2 == 0) { echo '<tr>'; } else { echo '<tr class="odd">'; }
 	echo '<td><img src="/images/protokoll/'.$sql3['typ'].'.png" alt="'.$sql3['typ'].'" title="'.$sql3['typ'].'" /></td>';
-	echo '<td><span title="'.date('d.m.Y H:i', $sql3['zeit']).' '._('Uhr').'">'.date('d.m.Y', $sql3['zeit']).'</span></td><td>'.$sql3['text'].'</a></td>';
+	echo '<td><span title="'.date('d.m.Y H:i', $sql3['zeit']).'">'.date('d.m.Y', $sql3['zeit']).'</span></td><td>'.$sql3['text'].'</a></td>';
 	echo '</tr>';
 	$counter++;
 }
 ?>
 </tbody>
 </table>
-</p>
 <p><strong><?php echo _('Hinweis:').'</strong> '._('Die Ereignisse sind nach Datum geordnet, d.h. die neueste Meldung steht ganz oben.'); ?></p>
 <?php
 echo '<div class="pagebar">';

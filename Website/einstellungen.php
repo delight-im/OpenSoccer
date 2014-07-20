@@ -53,8 +53,8 @@ $get_urlaub5 = mysql_query($get_urlaub4);
 if (mysql_num_rows($get_urlaub5) > 0) {
 	$get_urlaub6 = mysql_fetch_assoc($get_urlaub5);
 	if ($get_urlaub6['ende'] > time()) {
-        $aktueller_urlaub = '<p>'.__('Du hast zurzeit Urlaub, und zwar bis zum %d.', date('d.m.Y', $get_urlaub6['ende'])).'</p>';
-		$aktueller_urlaub .= '<form action="/einstellungen.php" method="post" accept-charset="utf-8"><input type="hidden" name="urlaub_abbrechen" value="1" /><input type="submit" value="'._('Urlaub abbrechen').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')" /></form>';
+        $aktueller_urlaub = '<p>'.__('Du hast zurzeit Urlaub, und zwar bis zum %s.', date('d.m.Y', $get_urlaub6['ende'])).'</p>';
+        $aktueller_urlaub .= '<form action="/einstellungen.php" method="post" accept-charset="utf-8"><input type="hidden" name="urlaub_abbrechen" value="1" /><input type="submit" value="'._('Urlaub abbrechen').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')" /></form>';
 	}
 	else {
 		$aktueller_urlaub = '';
@@ -132,7 +132,7 @@ if (isset($_POST['urlaub_ende']) && $cookie_id != DEMO_USER_ID) {
 		if (mysql_num_rows($get_urlaub5) > 0) {
 			$get_urlaub6 = mysql_fetch_assoc($get_urlaub5);
 			if ($get_urlaub6['ende'] > time()) {
-                $aktueller_urlaub = '<p>'.__('Du hast zurzeit Urlaub, und zwar bis zum %d.', date('d.m.Y', $get_urlaub6['ende'])).'</p>';
+                $aktueller_urlaub = '<p>'.__('Du hast zurzeit Urlaub, und zwar bis zum %s.', date('d.m.Y', $get_urlaub6['ende'])).'</p>';
 			}
 			else {
 				$aktueller_urlaub = '';
@@ -194,7 +194,7 @@ if ($get_urlaub8['last_urlaub_lang'] == 0) {
     $letzter_urlaub = _('noch keinen Urlaub');
 }
 else {
-    $letzter_urlaub = __('zuletzt am %d einen langen Urlaub', date('d.m.Y', $get_urlaub8['last_urlaub_lang']));
+    $letzter_urlaub = __('zuletzt am %s einen langen Urlaub', date('d.m.Y', $get_urlaub8['last_urlaub_lang']));
 }
 if ($get_urlaub8['last_urlaub_lang'] < $timeout) {
 	$naechste_moeglichkeit = _('Du kannst jetzt neuen Urlaub beantragen.');
@@ -202,7 +202,7 @@ if ($get_urlaub8['last_urlaub_lang'] < $timeout) {
 }
 else {
 	$days_to_wait = ceil(abs($get_urlaub8['last_urlaub_lang']-$timeout)/3600/24);
-    $naechste_moeglichkeit = _('Du musst noch %d Tage warten, bis Du wieder Urlaub beantragen kannst.', $days_to_wait);
+    $naechste_moeglichkeit = __('Du musst noch %d Tage warten, bis Du wieder Urlaub beantragen kannst.', $days_to_wait);
 }
 echo '<p><strong>'._('Langer Urlaub (11-30 Tage):').'</strong> '.__('Du hast %1$s beantragt. %2$s', $letzter_urlaub, $naechste_moeglichkeit);
 // LANGER URLAUB ENDE

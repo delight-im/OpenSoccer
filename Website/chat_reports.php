@@ -66,7 +66,7 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 			echo '<td class="link">'.displayUsername($sql3['reporterNick'], $sql3['reporter']).'</td>';
 			echo '<td class="link"><a href="/chat_reports.php?user='.urlencode($sql3['user']).'&amp;reporter='.urlencode($sql3['reporter']).'&amp;datum='.urlencode($sql3['datum']).'">'.$sql3['datum'].'</a></td>';
 			if ($sql3['sperrRelevant'] == 1) {
-				echo '<td class="link"><a href="/chat_reports.php?seite='.intval($seite).'&amp;aufheben='.urlencode($sql3['user']).'&amp;reporter='.urlencode($sql3['reporter']).'&amp;datum='.urlencode($sql3['datum']).'" onclick="return confirm('._('\'Bist Du sicher?\'').')">'._('Aufheben').'</a></td>';
+				echo '<td class="link"><a href="/chat_reports.php?seite='.intval($seite).'&amp;aufheben='.urlencode($sql3['user']).'&amp;reporter='.urlencode($sql3['reporter']).'&amp;datum='.urlencode($sql3['datum']).'" onclick="return confirm(\''._('Bist Du sicher?').'\')">'._('Aufheben').'</a></td>';
 			}
 			else {
 				echo '<td>&nbsp;</td>';

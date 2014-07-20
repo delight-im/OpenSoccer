@@ -35,7 +35,7 @@ if ($loggedin == 1) {
 					$upKon2 = mysql_query($upKon1);
 					$buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Ablöse', ".$sql3['marktwert'].", ".time().")";
 					$buch2 = mysql_query($buch1);
-					$formulierung = __('Du hast den Spieler %1$s für %2$d € an einen Verein außerhalb Europas verkauft.', '<a href="/spieler.php?id='.$spieler_id.'">'.$spielerName.'</a>', number_format($sql3['marktwert'], 0, ',', '.'));
+					$formulierung = __('Du hast den Spieler %1$s für %2$s € an einen Verein außerhalb Europas verkauft.', '<a href="/spieler.php?id='.$spieler_id.'">'.$spielerName.'</a>', number_format($sql3['marktwert'], 0, ',', '.'));
 					$free1 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Transfers', '".time()."')";
 					$free2 = mysql_query($free1);
 					$move1 = "INSERT INTO ".$prefix."transfers (spieler, besitzer, bieter, datum, gebot, damaligerWert, spiele_verein, damaligeStaerke) VALUES ('".$spieler_id."', '".$cookie_team."', 'AUSSERHALB_EU', ".time().", ".$sql3['marktwert'].", ".$sql3['marktwert'].", ".$sql3['spiele_verein'].", ".$sql3['staerke'].")";

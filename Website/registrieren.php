@@ -86,8 +86,8 @@ elseif (in_blacklist(getMailHost($uMail), $mailHostBlacklist)) {
 else {
 ?>
 <form method="post" action="/registrierung.php" accept-charset="utf-8" class="imtext">
-<p><?php echo __('Ich möchte als %1$s mitspielen. Das Spiel ist zu 100% kostenlos. Meine E-Mail-Adresse ist %2$s. An diese Adresse soll mir jetzt gleich ein Passwort zugeschickt werden, mit dem ich mich dann einloggen kann.', '<strong>'.$uName.'</strong>', '<strong>'.$uMail.'</strong>'); ?></p>
-<p><?php echo __('Die %1$s und die %2$s des Spiels habe ich gelesen und ich akzeptiere diese.', '<a target="_blank" href="/regeln.php#datenschutz">'._('Datenschutzrichtlinien').'</a>', '<a target="_blank" href="/regeln.php#regeln">'._('Regeln').'</a>'; ?></p>
+<p><?php echo __('Ich möchte als %1$s mitspielen. Das Spiel ist zu 100%% kostenlos. Meine E-Mail-Adresse ist %2$s. An diese Adresse soll mir jetzt gleich ein Passwort zugeschickt werden, mit dem ich mich dann einloggen kann.', '<strong>'.$uName.'</strong>', '<strong>'.$uMail.'</strong>'); ?></p>
+<p><?php echo __('Die %1$s und die %2$s des Spiels habe ich gelesen und ich akzeptiere diese.', '<a target="_blank" href="/regeln.php#datenschutz">'._('Datenschutzrichtlinien').'</a>', '<a target="_blank" href="/regeln.php#regeln">'._('Regeln').'</a>'); ?></p>
 <p><?php echo _('Dein Team und die Liga kannst Du Dir beim ersten Login frei aussuchen.'); ?></p>
 <p><input type="hidden" name="reg_benutzername" id="reg_benutzername" value="<?php echo $uName; ?>" /><input type="hidden" name="reg_email" id="reg_email" value="<?php echo $uMail; ?>" /><input type="submit" value="<?php echo _('Jetzt mit diesen Daten registrieren'); ?>" /></p>
 <p><?php echo _('Du kannst die Registrierung an dieser Stelle noch abbrechen. Deine Daten wurden noch nicht gespeichert.'); ?></p>

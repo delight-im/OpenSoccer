@@ -49,21 +49,13 @@ if ($cookie_team != '__'.$cookie_id) {
 		addInfoBox(__('Die folgenden %1$s sind unvollständig: %2$s', '<a class="inText" href="/aufstellung.php">'._('Aufstellungen').'</a>', substr($unvollstaendigStr, 0, -2)));
 	}
 	if ($auslauf3 != 0) {
-		$showInfoText = _('In den nächsten drei Tagen').' ';
-		if ($auslauf3 == 1) {
-			$showInfoText .= 'läuft <a class="inText" href="/vertraege.php">1 Vertrag';
-		}
-		else {
-			$showInfoText .= 'laufen <a class="inText" href="/vertraege.php">'.$auslauf3.' Verträge';
-		}
-		$showInfoText .= '</a> aus.';
-		addInfoBox($showInfoText);
+		addInfoBox(__('In den nächsten drei Tagen laufen %s aus.', __('<a class="inText" href="/vertraege.php">%d Verträge</a>', $auslauf3)));
 	}
 	if ($myteam3['sponsor'] == 0) {
 		addInfoBox(__('Du hast für die aktuelle Saison noch keinen Vertrag mit einem Sponsor abgeschlossen. %s', '<a class="inText" href="/sponsoren.php">'._('Klicke hier, um jetzt einen Vertrag abzuschließen.').'</a>'));
 	}
 	if ($laufende_spiele3 != 0) {
-		addInfoBox(__('LIVE: %1$s spiele von heute! %2$s', $live_scoring_spieltyp_laeuft, '<a class="inText" href="/liveZentrale.php">&raquo; '._('Zur LIVE-Zentrale').'</a>'));
+		addInfoBox(__('LIVE: %1$s-spiele von heute! %2$s', $live_scoring_spieltyp_laeuft, '<a class="inText" href="/liveZentrale.php">&raquo; '._('Zur LIVE-Zentrale').'</a>'));
 	}
 	if ($_SESSION['mds_abgestimmt'] == FALSE) {
 		addInfoBox(__('Die Wahl zum &quot;Manager der Saison&quot; läuft! %s', '<a class="inText" href="/manager_der_saison.php">&raquo; '._('Jetzt abstimmen').'</a>'));
@@ -78,7 +70,7 @@ if ($cookie_team != '__'.$cookie_id) {
         <a class="pagenava" href="/freundeWerben.php"><?php echo _('Freunde einladen'); ?></a>
     </p>
     <p style="text-align:left; margin-bottom:0;">
-        <img style="width:16px; height:16px; vertical-align:middle;" src="http://www.ballmanager.de/images/icon_spieler.png" width="16" alt="Freunde einladen"><?php echo _('Lade Deine Freunde ein und erhalte 7,5 Mio. Bonus!'); ?>
+        <img style="width:16px; height:16px; vertical-align:middle;" src="http://www.ballmanager.de/images/icon_spieler.png" width="16" alt="<?php echo _('Freunde einladen'); ?>"> <?php echo _('Lade Deine Freunde ein und erhalte 7,5 Mio. Bonus!'); ?>
     </p>
     <div style="clear:both;"></div>
 	<table>
@@ -127,6 +119,7 @@ if ($cookie_team != '__'.$cookie_id) {
 			case 2: $nextYouth = _('morgen'); $nextYouthDay = $cookie_spieltag+1; break;
 			case 1: $nextYouth = _('übermorgen'); $nextYouthDay = $cookie_spieltag+2; break;
 			case 0: $nextYouth = _('heute'); $nextYouthDay = $cookie_spieltag; break;
+            default: throw new Exception('Invalid next youth index: '.$daysUntilNextYouth);
 		}
 	}
 	else {
@@ -145,7 +138,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		}
 		?>
 	</a></td></tr>
-	<tr><td colspan="2"><?php echo '<img style="vertical-align: middle;" alt="Systemzeit" src="/images/clock.gif" width="16" /> '._('Saison').' '.$cookie_saison.' &middot; '._('Spieltag').' '.$cookie_spieltag.' &middot; '.date('d.m.Y, H:i', time()).' '._('Uhr'); ?></td></tr>
+	<tr><td colspan="2"><?php echo '<img style="vertical-align: middle;" alt="Systemzeit" src="/images/clock.gif" width="16" /> '.__('Saison %d', $cookie_saison).' &middot; '.__('Spieltag %d', $cookie_spieltag).' &middot; '.__('%s Uhr', date('d.m.Y, H:i')); ?></td></tr>
 	</tbody>
 	</table>
 	<?php
@@ -164,8 +157,7 @@ if ($cookie_team != '__'.$cookie_id) {
 	if ($auslauf2a > 0) {
 	?>
 	<h1><?php echo _('Kürzeste Verträge'); ?></h1>
-	<p><span><?php echo _('Die Verträge der folgenden Spieler laufen als Nächstes aus. Du solltest sie rechtzeitig verlängern, damit die Spieler bei Deinem'); ?>
-	<?php echo _('Verein bleiben:'); ?></span>
+    <p><?php echo _('Die Verträge der folgenden Spieler laufen als Nächstes aus. Du solltest sie rechtzeitig verlängern, damit die Spieler bei Deinem Verein bleiben:'); ?></p>
 	<table>
 	<thead>
 	<tr class="odd">
@@ -184,7 +176,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		echo '><td class="link"><a href="/spieler.php?id='.$auslauf3['ids'].'">'.$auslauf3['vorname'].' '.$auslauf3['nachname'].'</a></td><td>'.floor($auslauf3['wiealt']/365).'</td><td>'.date('d.m.Y', $auslauf3['vertrag']).'</td><td>'.number_format($auslauf3['gehalt'], 0, ',', '.').' €</td></tr>';
 		$counter++;
 	} // while auslauf3
-	echo '</tbody></table></p>';
+	echo '</tbody></table>';
 	} // if auslauf2a > 0
 	echo '<h1>'._('Suche nach Teams oder Managern').'</h1>';
 	echo '<form action="/index.php" method="get" accept-charset="utf-8">';
@@ -213,7 +205,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		echo '</ul>';
 	}
 	echo '<h1>'._('Fairplay und Multi-Accounts').'</h1>';
-	echo '<p>'._('Wie im Sport genießt auch bei uns das Fairplay absolute Priorität.').'</p><p>'._('Pro Person ist nur ein Account erlaubt. Bekannte, Freunde oder die geliebte Familie dürfen natürlich vom selben Internet-Anschluss aus mitspielen.</p><p>Solltest Du aber gemeinsam mit Anderen einen Rechner benutzen, unterliegt dieses Vorgehen einer Auflage, welche das Fairplay gewährleisten und schützen soll:<br />Unter allen diesen Accounts sind jegliche Aktivitäten, die einem der Accounts einen Vorteil verschaffen können, untersagt. Ansonsten genießen diese Accounts selbstverständlich die gleichen Rechte, Pflichten und Spielfunktionen wie die Einzelspieler.').'</p>';
+	echo '<p>'._('Wie im Sport genießt auch bei uns das Fairplay absolute Priorität.').'</p><p>'._('Pro Person ist nur ein Account erlaubt. Bekannte, Freunde oder die geliebte Familie dürfen natürlich vom selben Internet-Anschluss aus mitspielen.').'</p><p>'._('Solltest Du aber gemeinsam mit Anderen einen Rechner benutzen, unterliegt dieses Vorgehen einer Auflage, welche das Fairplay gewährleisten und schützen soll:').'<br />'.('Unter allen diesen Accounts sind jegliche Aktivitäten, die einem der Accounts einen Vorteil verschaffen können, untersagt. Ansonsten genießen diese Accounts selbstverständlich die gleichen Rechte, Pflichten und Spielfunktionen wie die Einzelspieler.').'</p>';
 }
 else {
 	if (isset($_GET['newUser']) && isset($_GET['selectTeam']) && isset($_GET['verify'])) {
@@ -262,7 +254,7 @@ else {
 		}
 	}
 	if ($cookie_team != 'c10992567e8f511ff789d1164fd3612e' && $cookie_team != '18a393b5e23e2b9b4da106b06d8235f3') {
-		echo '<h1>'._('Herzlich Willkommen').', '.$cookie_username.'!</h1>';
+		echo '<h1>'.__('Herzlich Willkommen, %s!', $cookie_username).'</h1>';
 		$lastManagedTimeout = getTimestamp('-3 days');
 		$getleerLimit = (isset($_GET['show_all'])) ? 624 : 65;
 		$getleer1 = "SELECT a.ids, a.name, a.liga, b.name AS ligaName FROM ".$prefix."teams AS a JOIN ".$prefix."ligen AS b ON a.liga = b.ids WHERE a.ids NOT IN (SELECT team FROM ".$prefix."users) AND a.last_managed > ".$lastManagedTimeout." ORDER BY b.level ASC LIMIT 0, ".$getleerLimit;
@@ -277,7 +269,7 @@ else {
 				echo '>';
 				echo '<td class="link"><a href="/team.php?id='.$getleer3['ids'].'">'.$getleer3['name'].'</a></td>';
 				echo '<td class="link"><a href="/lig_tabelle.php?liga='.$getleer3['liga'].'">'.$getleer3['ligaName'].'</a></td>';
-				echo '<td class="link"><a href="/?newUser=1&amp;selectTeam='.$getleer3['ids'].'&amp;verify='.md5($getleer3['ids']).'" onclick="return confirm('._('\'Bist Du sicher?\'').');">'._('Team wählen').'</a></td>';
+				echo '<td class="link"><a href="/?newUser=1&amp;selectTeam='.$getleer3['ids'].'&amp;verify='.md5($getleer3['ids']).'" onclick="return confirm(\''._('Bist Du sicher?').'\');">'._('Team wählen').'</a></td>';
 				echo '</tr>';
 				$counter++;
 			}
@@ -314,7 +306,7 @@ else {
 <?php } else { ?>
 <h1><?php echo _('Kostenloser Online-Fußball-Manager'); ?></h1>
 <p><strong><?php echo _('Du bist der Trainer. Du bist der Manager. Du hast alles in der Hand!'); ?></strong></p>
-<p>+ Übernimm Deinen eigenen Fußballklub!<br />+ jeden Tag 1 bis 4 Spiele (Liga + Pokal)<br />+ einfach im Browser managen &mdash; keine Installation<br />+ garantiert kostenlos &mdash; auch in Zukunft<br />+ keine Premium-Accounts &mdash; gleiche Chancen für alle<br />+ schneller Einstieg<br />+ langfristiger Spielspaß<br />+ tolle Community<br />+ wenig Zeitaufwand<br />+ LIVE-Spiele &mdash; spannend bis zum Ende<br />+ Urlaubsvertretung durch den Computer (10-30 Tage)</p>
+<p>+ <?php echo _('Übernimm Deinen eigenen Fußballklub!'); ?><br />+ <?php echo _('jeden Tag 1 bis 4 Spiele (Liga + Pokal)'); ?><br />+ <?php echo _('einfach im Browser managen &mdash; keine Installation'); ?><br />+ <?php echo _('garantiert kostenlos &mdash; auch in Zukunft'); ?><br />+ <?php echo _('keine Premium-Accounts &mdash; gleiche Chancen für alle'); ?><br />+ <?php echo _('schneller Einstieg'); ?><br />+ <?php echo _('langfristiger Spielspaß'); ?><br />+ <?php echo _('tolle Community'); ?><br />+ <?php echo _('wenig Zeitaufwand'); ?><br />+ <?php echo _('LIVE-Spiele &mdash; spannend bis zum Ende'); ?><br />+ <?php echo _('Urlaubsvertretung durch den Computer (10-30 Tage)'); ?></p>
 <h1><?php echo _('Jetzt registrieren'); ?></h1>
 <form method="post" action="/registrieren.php" accept-charset="utf-8" class="imtext">
 <p><?php echo _('Dein gewünschter Managername:'); ?><br /><input type="text" name="reg_benutzername" id="reg_benutzername" style="width:200px" /></p>

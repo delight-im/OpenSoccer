@@ -19,7 +19,7 @@ else {
 	$chosenTeam = $cookie_teamname;
 }
 ?>
-<h1><?php echo __('Saison %d', $cookie_saison); ?> - <?php echo __('Spiele von %d', $chosenTeam); ?></h1>
+<h1><?php echo __('Saison %d', $cookie_saison); ?> - <?php echo __('Spiele von %s', $chosenTeam); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('team_calender');

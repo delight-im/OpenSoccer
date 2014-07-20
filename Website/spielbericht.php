@@ -89,8 +89,11 @@ div.matchReport span.teamRight {
 <?php include 'zz2.php'; ?>
 <?php
 if ($live_scoring_meldung != '') {
-	$score1 = _('LI');
-	$score2 = _('VE');
+    $scoreStr = _('LIVE');
+    // cut string in two halves (LI...VE)
+    $scoreHalf = ceil(mb_strlen($scoreStr) / 2);
+	$score1 = mb_substr($scoreStr, 0, $scoreHalf);
+	$score2 = mb_substr($scoreStr, $scoreHalf);
 }
 else {
 	$scores = explode(':', $sql3['ergebnis']);
@@ -111,7 +114,7 @@ echo '</div>';
 <?php
 if ($live_scoring_meldung != '') {
 	echo '<p style="text-align:right">';
-	echo '<a href="/spielbericht.php?id='.$sql3['id'].'" onclick="location.reload(); return false" class="pagenava">'.('Aktualisieren').'</a>';
+	echo '<a href="/spielbericht.php?id='.$sql3['id'].'" onclick="location.reload(); return false" class="pagenava">'._('Aktualisieren').'</a>';
 	echo '<a href="/liveZentrale.php" class="pagenava">'._('Zur LIVE-Zentrale').'</a>';
 	echo '</p>';
 }

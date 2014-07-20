@@ -38,10 +38,10 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 			$sql1 = "UPDATE ".$prefix."chatroomReportedUsers SET sperrRelevant = 0 WHERE user = '".$q1."' AND reporter = '".$q2."' AND datum = '".$q3."' LIMIT 1";
 			$sql2 = mysql_query($sql1);
 			if (mysql_affected_rows() == 1) {
-				addInfoBox('Die Sperre durch den ausgewählten Report wurde aufgehoben.');
+				addInfoBox(_('Die Sperre durch den ausgewählten Report wurde aufgehoben.'));
 			}
 			else {
-				addInfoBox('Es konnte kein Report gefunden werden, dessen Sperre aufgehoben werden soll.');
+				addInfoBox(_('Es konnte kein Report gefunden werden, dessen Sperre aufgehoben werden soll.'));
 			}
 		}
 		echo '<p>';
@@ -66,7 +66,7 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 			echo '<td class="link">'.displayUsername($sql3['reporterNick'], $sql3['reporter']).'</td>';
 			echo '<td class="link"><a href="/chat_reports.php?user='.urlencode($sql3['user']).'&amp;reporter='.urlencode($sql3['reporter']).'&amp;datum='.urlencode($sql3['datum']).'">'.$sql3['datum'].'</a></td>';
 			if ($sql3['sperrRelevant'] == 1) {
-				echo '<td class="link"><a href="/chat_reports.php?seite='.intval($seite).'&amp;aufheben='.urlencode($sql3['user']).'&amp;reporter='.urlencode($sql3['reporter']).'&amp;datum='.urlencode($sql3['datum']).'" onclick="return confirm(\'Bist Du sicher?\')">Aufheben</a></td>';
+				echo '<td class="link"><a href="/chat_reports.php?seite='.intval($seite).'&amp;aufheben='.urlencode($sql3['user']).'&amp;reporter='.urlencode($sql3['reporter']).'&amp;datum='.urlencode($sql3['datum']).'" onclick="return confirm('._('\'Bist Du sicher?\'').')">'._('Aufheben').'</a></td>';
 			}
 			else {
 				echo '<td>&nbsp;</td>';
@@ -79,8 +79,8 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 		echo '<div class="pagebar">';
 		$wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS
 		$vorherige = $seite-1;
-		if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite=1">Erste</a> '; } else { echo '<span class="this-page">Erste</span>'; }
-		if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$vorherige.'">Vorherige</a> '; } else { echo '<span class="this-page">Vorherige</span> '; }
+		if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite=1">'._('Erste').'</a> '; } else { echo '<span class="this-page">'._('Erste').'</span>'; }
+		if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$vorherige.'">'._('Vorherige').'</a> '; } else { echo '<span class="this-page">'._('Vorherige').'</span> '; }
 		$naechste = $seite+1;
 		$vor4 = $seite-4; if ($vor4 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$vor4.'">'.$vor4.'</a> '; }
 		$vor3 = $seite-3; if ($vor3 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$vor3.'">'.$vor3.'</a> '; }
@@ -91,8 +91,8 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 		$nach2 = $seite+2; if ($nach2 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$nach2.'">'.$nach2.'</a> '; }
 		$nach3 = $seite+3; if ($nach3 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$nach3.'">'.$nach3.'</a> '; }
 		$nach4 = $seite+4; if ($nach4 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$nach4.'">'.$nach4.'</a> '; }
-		if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$naechste.'">Nächste</a> '; } else { echo '<span class="this-page">Nächste</span> '; }
-		if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.ceil($wieviel_seiten).'">Letzte</a>'; } else { echo '<span clss="this-page">Letzte</span>'; }
+		if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.$naechste.'">'._('Nächste').'</a> '; } else { echo '<span class="this-page">'._('Nächste').'</span> '; }
+		if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 		echo '</div>';
 	}
 }

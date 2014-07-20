@@ -19,7 +19,7 @@ else {
 	$chosenTeam = $cookie_teamname;
 }
 ?>
-<h1>Saison <?php echo $cookie_saison; ?> - Spiele von <?php echo $chosenTeam; ?></h1>
+<h1><?php echo __('Saison %d', $cookie_saison); ?> - <?php echo __('Spiele von %d', $chosenTeam); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('team_calender');
@@ -34,7 +34,7 @@ if (isset($_GET['typ'])) {
 }
 echo '<p style="text-align:right">';
 $standardLink = '<a href="/kalender.php?team='.$chosenTeamID.'&amp;typ=';
-echo $standardLink.'" class="pagenava'; if ($filterTyp == '') { echo ' aktiv'; } echo '">Alle</a> '.$standardLink.'Cup" class="pagenava'; if ($filterTyp == 'Cup') { echo ' aktiv'; } echo '">Cup</a> '.$standardLink.'Liga" class="pagenava'; if ($filterTyp == 'Liga') { echo ' aktiv'; } echo '">Liga</a> '.$standardLink.'Pokal" class="pagenava'; if ($filterTyp == 'Pokal') { echo ' aktiv'; } echo '">Pokal</a> '.$standardLink.'Test" class="pagenava'; if ($filterTyp == 'Test') { echo ' aktiv'; } echo '">Test</a>';
+echo $standardLink.'" class="pagenava'; if ($filterTyp == '') { echo ' aktiv'; } echo '">'._('Alle').'</a> '.$standardLink.'Cup" class="pagenava'; if ($filterTyp == 'Cup') { echo ' aktiv'; } echo '">'._('Cup').'</a> '.$standardLink.'Liga" class="pagenava'; if ($filterTyp == 'Liga') { echo ' aktiv'; } echo '">'._('Liga').'</a> '.$standardLink.'Pokal" class="pagenava'; if ($filterTyp == 'Pokal') { echo ' aktiv'; } echo '">'._('Pokal').'</a> '.$standardLink.'Test" class="pagenava'; if ($filterTyp == 'Test') { echo ' aktiv'; } echo '">'._('Test').'</a>';
 echo ' <a href="/team.php?id='.$chosenTeamID.'" class="pagenava">'.('Zum Teamprofil').'</a>';
 echo '</p>';
 // TYPEN FILTER ENDE

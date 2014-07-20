@@ -2,12 +2,12 @@
 <?php
 if (!isset($_GET['id'])) { exit; }
 function kontoToWort($konto) {
-	if ($konto < -30000000) { return 'sehr schlecht'; }
-	elseif ($konto < 0) { return 'schlecht'; }
-	elseif ($konto < 30000000) { return 'solide'; }
-	elseif ($konto < 60000000) { return 'gut'; }
-	elseif ($konto < 90000000) { return 'sehr gut'; }
-	else { return 'hervorragend'; }
+	if ($konto < -30000000) { return _('sehr schlecht'); }
+	elseif ($konto < 0) { return _('schlecht'); }
+	elseif ($konto < 30000000) { return _('solide'); }
+	elseif ($konto < 60000000) { return _('gut'); }
+	elseif ($konto < 90000000) { return _('sehr gut'); }
+	else { return _('hervorragend'); }
 }
 $clearid = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 $sql1 = "SELECT name, rank, konto, staerke, pokalrunde, vorjahr_pokalrunde, cuprunde, vorjahr_cuprunde, vorjahr_platz, aufstellung, liga, vorjahr_elo, elo, meisterschaften, pokalsiege, cupsiege, friendlies, friendlies_ges, last_managed FROM ".$prefix."teams WHERE ids = '".$clearid."'";
@@ -29,8 +29,8 @@ $sql3 = mysql_fetch_assoc($sql2);
 	<?php
 	if ($loggedin == 1 && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) {
 		echo '<p style="text-align:right">';
-		echo '<a href="/namensaenderung.php?team='.$clearid.'" class="pagenava">'.('Vereinsnamen ändern').'</a>';
-		echo '<a href="/protokoll.php?team='.$clearid.'" class="pagenava">'.('Protokoll ansehen').'</a>';
+		echo '<a href="/namensaenderung.php?team='.$clearid.'" class="pagenava">'._('Vereinsnamen ändern').'</a>';
+		echo '<a href="/protokoll.php?team='.$clearid.'" class="pagenava">'._('Protokoll ansehen').'</a>';
 		echo '</p>';
 	}
 	?>
@@ -39,7 +39,6 @@ $sql3 = mysql_fetch_assoc($sql2);
 	<a href="/kalender.php?team=<?php echo $clearid; ?>" class="pagenava"><?php echo _('Zum Spielplan'); ?></a>
 </p>
 <?php if ($loggedin == 1) { ?>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -79,15 +78,14 @@ echo '<tr class="odd"><td>'._('Aufstellungsstärke').'</td><td>'.number_format($
 echo '<tr><td>'._('Meisterschaft').'</td><td>'.$sql3['meisterschaften'].'x</td></tr>';
 echo '<tr class="odd"><td>'._('Pokalsieg').'</td><td>'.$sql3['pokalsiege'].'x</td></tr>';
 echo '<tr><td>'._('Cupsieg').'</td><td>'.$sql3['cupsiege'].'x</td></tr>';
-echo '<tr class="odd"><td>'._('RKP (Vorjahr)').'</td><td>'.number_format($sql3['elo'], 0, ',', '.').' ('.number_format($sql3['vorjahr_elo'], 0, ',', '.').') '._('Punkte').'</td></tr>';
+echo '<tr class="odd"><td>'._('RKP (Vorjahr)').'</td><td>'.__('%1$s (%2$s) Punkte', number_format($sql3['elo'], 0, ',', '.'), number_format($sql3['vorjahr_elo'], 0, ',', '.')).'</td></tr>';
 echo '<tr><td>'._('Testspiele').'</td><td>';
-if ($live_scoring_spieltyp_laeuft == 'Test') { echo '?'; } else { echo $sql3['friendlies_ges'].' ('.$sql3['friendlies'].' '._('Siege').')'; }
+if ($live_scoring_spieltyp_laeuft == 'Test') { echo '?'; } else { __('%1$s (%2$s Siege)', $sql3['friendlies_ges'], $sql3['friendlies']); }
 echo '</td></tr>';
-echo '<tr class="odd"><td>'._('Stadion').'</td><td>'.number_format($stadion3['plaetze'], 0, ',', '.').' '._('Plätze').'</td></tr>';
+echo '<tr class="odd"><td>'._('Stadion').'</td><td>'.__('%s Plätze', number_format($stadion3['plaetze'], 0, ',', '.')).'</td></tr>';
 ?>
 </tbody>
 </table>
-</p>
 <?php
 if (isset($vql3['username'])) {
 	$mdsSiege1 = "SELECT COUNT(*) FROM ".$prefix."users_mds_sieger WHERE ids = '".mysql_real_escape_string($vql3['ids'])."'";
@@ -125,7 +123,6 @@ if ($sql3['meisterschaften'] > 0 OR $sql3['pokalsiege'] > 0 OR $sql3['cupsiege']
 // TROPHAEEN-RAUM ENDE
 ?>
 <h1><?php echo _('Kader'); ?></h1>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -182,12 +179,11 @@ if (count($gesamtMarktwertWerte) > 0) {
 else {
 	$gMarktwert = 0;
 }
-echo '<tr><td colspan="6">'.__('Team-Alter: %d Jahre', number_format($dAlter, 1, ',', '.')).'</td></tr>';
-echo '<tr class="odd"><td colspan="6">'.__('Team-Marktwert: %d €', number_format($gMarktwert, 0, ',', '.')).'</td></tr>';
+echo '<tr><td colspan="6">'.__('Team-Alter: %s Jahre', number_format($dAlter, 1, ',', '.')).'</td></tr>';
+echo '<tr class="odd"><td colspan="6">'.__('Team-Marktwert: %s €', number_format($gMarktwert, 0, ',', '.')).'</td></tr>';
 ?>
 </tbody>
 </table>
-</p>
 <p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, FR: Frische'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
 <p><strong><?php echo _('Durchgestrichen:').'</strong> '._('verletzte oder gesperrte Spieler'); ?></p>

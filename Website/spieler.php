@@ -35,7 +35,7 @@ $watch1 = "SELECT COUNT(*) FROM ".$prefix."transfermarkt_watch WHERE team = '".$
 $watch2 = mysql_query($watch1);
 $watch3 = mysql_result($watch2, 0);
 ?>
-<title>Spieler: <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
+<title><?php echo _('Spieler:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .selectVisible {
@@ -59,45 +59,45 @@ if (isset($_GET['action'])) {
 }
 if (isset($_GET['sellSuccess'])) {
 	$sellPrice = number_format($_GET['sellSuccess'], 0, ',', '.');
-	addInfoBox('Du hast den Spieler erfolgreich für '.$sellPrice.' € verkauft.');
+	addInfoBox(__('Du hast den Spieler erfolgreich für %d € verkauft.', $sellPrice));
 }
-echo '<p style="text-align:right"><a href="/transfermarkt_watch.php?id='.$sql3['ids'].'" class="pagenava" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')">';
+echo '<p style="text-align:right"><a href="/transfermarkt_watch.php?id='.$sql3['ids'].'" class="pagenava" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')">';
 if ($watch3 == 0) {
-    echo 'Spieler beobachten';
+    echo _('Spieler beobachten');
 }
 else {
-    echo 'Beobachtung beenden';
+    echo _('Beobachtung beenden');
 }
-echo '</a> <a href="/spieler_historie.php?id='.$sql3['ids'].'" class="pagenava">Zur Historie</a></p>';
+echo '</a> <a href="/spieler_historie.php?id='.$sql3['ids'].'" class="pagenava">'._('Zur Historie').'</a></p>';
 ?>
 <p>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Bereich</th>
-<th scope="col">Wert</th>
+<th scope="col"><?php echo _('Bereich'); ?></th>
+<th scope="col"><?php echo _('Wert'); ?></th>
 </tr>
 </thead>
 <tbody>
 <?php
 $schaetzungVomScout = schaetzungVomScout($cookie_team, $cookie_scout, $_GET['id'], $sql3['talent'], $sql3['staerke'], $sql3['team']);
-echo '<tr class="odd"><td>Position</td><td>';
-    if ($sql3['position'] == 'T') { echo 'Torwart'; }
-    elseif ($sql3['position'] == 'A') { echo 'Abwehr'; }
-    elseif ($sql3['position'] == 'M') { echo 'Mittelfeld'; }
-    elseif ($sql3['position'] == 'S') { echo 'Sturm'; }
+echo '<tr class="odd"><td>'._('Position').'</td><td>';
+    if ($sql3['position'] == 'T') { echo _('Torwart'); }
+    elseif ($sql3['position'] == 'A') { echo _('Abwehr'); }
+    elseif ($sql3['position'] == 'M') { echo _('Mittelfeld'); }
+    elseif ($sql3['position'] == 'S') { echo _('Sturm'); }
 echo '</td></tr>';
 $alter_in_jahren = floor($sql3['wiealt']/365);
 echo '<tr><td>Alter</td><td>'.$alter_in_jahren.' Jahre</td></tr>';
-echo '<tr class="odd"><td>Stärke</td><td>'.number_format($sql3['staerke'], 1, ',', '.').'</td></tr>';
+echo '<tr class="odd"><td>'._('Stärke').'</td><td>'.number_format($sql3['staerke'], 1, ',', '.').'</td></tr>';
 if ($sql3['team'] == 'frei') {
 	$sql3['frische'] = getRegularFreshness($cookie_spieltag);
 }
-echo '<tr><td>Frische</td><td><img src="/images/balken/'.round($sql3['frische']).'.png" alt="'.round($sql3['frische']).'%" title="'.round($sql3['frische']).'%" width="104" /></td></tr>';
-echo '<tr class="odd"><td>Moral</td><td><img src="/images/balken/'.round($sql3['moral']).'.png" alt="'.round($sql3['moral']).'%" title="'.round($sql3['moral']).'%" width="104" /></td></tr>';
-echo '<tr><td>Marktwert</td><td>'.number_format($sql3['marktwert'], 0, ',', '.').' €</td></tr>';
+echo '<tr><td>'._('Frische').'</td><td><img src="/images/balken/'.round($sql3['frische']).'.png" alt="'.round($sql3['frische']).'%" title="'.round($sql3['frische']).'%" width="104" /></td></tr>';
+echo '<tr class="odd"><td>'._('Moral').'</td><td><img src="/images/balken/'.round($sql3['moral']).'.png" alt="'.round($sql3['moral']).'%" title="'.round($sql3['moral']).'%" width="104" /></td></tr>';
+echo '<tr><td>'._('Marktwert').'</td><td>'.number_format($sql3['marktwert'], 0, ',', '.').' €</td></tr>';
 if ($sql3['team'] == $cookie_team) {
-	echo '<tr class="odd"><td>Gehalt / Saison</td><td>'.number_format($sql3['gehalt'], 0, ',', '.').' €</td></tr>';
+	echo '<tr class="odd"><td>'._('Gehalt / Saison').'</td><td>'.number_format($sql3['gehalt'], 0, ',', '.').' €</td></tr>';
 }
 elseif ($sql3['team'] != 'frei') {
 	$sosi = 0;
@@ -109,63 +109,63 @@ elseif ($sql3['team'] != 'frei') {
 	elseif ($sql3['gehalt'] > 999) { $sosi = 3; }
 	elseif ($sql3['gehalt'] > 99) { $sosi = 2; }
 	$sidfhisudhfuo = round($sql3['gehalt']/pow(10, $sosi))*pow(10, $sosi);
-	echo '<tr class="odd"><td>Gehalt / Saison</td><td>ca. '.number_format($sidfhisudhfuo, 0, ',', '.').' €</td></tr>';
+	echo '<tr class="odd"><td>'._('Gehalt / Saison').'</td><td>ca. '.number_format($sidfhisudhfuo, 0, ',', '.').' €</td></tr>';
 }
 if ($sql3['team'] == 'frei') {
-	echo '<tr><td>Team</td><td>außerhalb Europas</td></tr>';
+	echo '<tr><td>'._('Team').'</td><td>'._('außerhalb Europas').'</td></tr>';
 }
 else {
-	echo '<tr><td>Team</td><td class="link"><a href="/team.php?id='.$sql3['team'].'">'.$tm3['name'].'</a></td></tr>';
+	echo '<tr><td>'._('Team').'</td><td class="link"><a href="/team.php?id='.$sql3['team'].'">'.$tm3['name'].'</a></td></tr>';
 }
-echo '<tr class="odd"><td>Vertrag bis</td><td>';
-	if ($sql3['team'] != 'frei') { echo date('d.m.Y H:i', $sql3['vertrag']); } else { echo 'unbekannt'; }
+echo '<tr class="odd"><td>'._('Vertrag bis').'</td><td>';
+	if ($sql3['team'] != 'frei') { echo date('d.m.Y H:i', $sql3['vertrag']); } else { echo _('unbekannt'); }
 	echo '</td></tr>';
 if ($sql3['team'] == 'frei') {
-	echo '<tr><td>Transferstatus</td><td>unbekannt</td></tr>';
+	echo '<tr><td>'._('Transferstatus').'</td><td>'._('unbekannt').'</td></tr>';
 }
 else {
-	echo '<tr><td>Transferstatus</td><td>';
+	echo '<tr><td>'._('Transferstatus').'</td><td>';
 	if ($sql3['transfermarkt'] == 0) {
 		if ($sql3['leiher'] != 'keiner') {
-			echo 'Ausgeliehen';
+			echo _('Ausgeliehen');
 		}
 		else {
-			echo 'Unverkäuflich';
+			echo _('Unverkäuflich');
 		}
 	}
 	elseif ($sql3['transfermarkt'] == 1) {
-		echo '<a href="/transfermarkt_auktion.php?id='.$sql3['ids'].'">Zur Auktion</a>';
+		echo '<a href="/transfermarkt_auktion.php?id='.$sql3['ids'].'">'._('Zur Auktion').'</a>';
 	}
 	elseif ($sql3['transfermarkt'] > 999998) {
 		$getLeihPos1 = "SELECT COUNT(*) FROM man_spieler WHERE transfermarkt > 999998 AND ((staerke > ".$sql3['staerke'].") OR (staerke = ".$sql3['staerke']." AND id < ".$sql3['id']."))";
 		$getLeihPos2 = mysql_query($getLeihPos1);
 		$getLeihPos3 = mysql_result($getLeihPos2, 0);
 		$getLeihPage = floor($getLeihPos3/$eintraege_pro_seite)+1;
-		echo '<a href="/transfermarkt_leihe.php?seite='.$getLeihPage.'&amp;mark='.$sql3['ids'].'">Zur Leihgabe</a>';
+		echo '<a href="/transfermarkt_leihe.php?seite='.$getLeihPage.'&amp;mark='.$sql3['ids'].'">'._('Zur Leihgabe').'</a>';
 	}
 	echo '</td></tr>';
 }
-echo '<tr class="odd"><td>Spiele für Verein</td><td>'.$sql3['spiele_verein'].'</td></tr>';
-echo '<tr><td>Pflichtspiele (Tore)</td><td>'.$sql3['spiele'].' (';
+echo '<tr class="odd"><td>'._('Spiele für Verein').'</td><td>'.$sql3['spiele_verein'].'</td></tr>';
+echo '<tr><td>'._('Pflichtspiele (Tore)').'</td><td>'.$sql3['spiele'].' (';
 if ($live_scoring_spieltyp_laeuft == '') { echo $sql3['tore']; } else { echo '?'; }
 echo ')</td></tr>';
-echo '<tr class="odd"><td>Gesundheit</td><td>';
-if ($sql3['verletzung'] == 0) { echo 'Gesund'; } else { echo '<span style="color:red">Verletzt ('.$sql3['verletzung'].' Tag'; if ($sql3['verletzung'] > 1) { echo 'e'; } echo ')</span>'; }
+echo '<tr class="odd"><td>'._('Gesundheit').'</td><td>';
+if ($sql3['verletzung'] == 0) { echo _('Gesund'); } else { echo '<span style="color:red">Verletzt ('.$sql3['verletzung'].' Tag'; if ($sql3['verletzung'] > 1) { echo 'e'; } echo ')</span>'; }
 echo '</td></tr>';
-echo '<tr><td>Pokal-Sperre</td><td>';
+echo '<tr><td>'._('Pokal-Sperre').'</td><td>';
 if ($sql3['pokalNurFuer'] == '') {
-	echo 'Nein';
+	echo _('Nein');
 }
 else {
 	if ($sql3['pokalNurFuer'] == $sql3['team']) {
-		echo 'nach Transfer'; // noch nicht
+		echo _('nach Transfer'); // noch nicht
 	}
 	else {
-		echo 'Ja'; // jetzt schon
+		echo _('Ja'); // jetzt schon
 	}
 }
 echo '</td></tr>';
-echo '<tr class="odd"><td>Talent</td><td>';
+echo '<tr class="odd"><td>'._('Talent').'</td><td>';
 $talentStars = round($schaetzungVomScout/9.9*5);
 for ($stars_full = 1; $stars_full <= $talentStars; $stars_full++) {
 	echo '<img src="/images/stern.png" alt="+" width="16" />';
@@ -175,17 +175,17 @@ for ($stars_empty = ($talentStars+1); $stars_empty <= 5; $stars_empty++) {
 }
 echo '</td></tr>';
 if ($schaetzungVomScout <= $sql3['staerke']) {
-	echo '<tr><td colspan="2">Dein Scout glaubt, dass dieser Spieler seinen Höhepunkt bereits erreicht hat.</td></tr>';
+	echo '<tr><td colspan="2">'._('Dein Scout glaubt, dass dieser Spieler seinen Höhepunkt bereits erreicht hat.').'</td></tr>';
 }
 else {
-	echo '<tr><td colspan="2">Dein Scout glaubt, dass dieser Spieler eine Stärke von '.number_format($schaetzungVomScout, 1, ',', '.').' erreichen kann.</td></tr>';
+	echo '<tr><td colspan="2">'.__('Dein Scout glaubt, dass dieser Spieler eine Stärke von %d erreichen kann.', number_format($schaetzungVomScout, 1, ',', '.')).'</td></tr>';
 }
 if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
 	if ($sql3['marktwert'] > 0) {
-		echo '<tr class="odd"><td colspan="2" class="link"><a href="/vertrag_verlaengern.php?id='.$sql3['ids'].'">Vertrag verlängern</a></td></tr>';
+		echo '<tr class="odd"><td colspan="2" class="link"><a href="/vertrag_verlaengern.php?id='.$sql3['ids'].'">'._('Vertrag verlängern').'</a></td></tr>';
 	}
 	else {
-		echo '<tr class="odd"><td colspan="2">Der Spieler bietet Dir noch keine Vertragsverlängerung an.</td></tr>';
+		echo '<tr class="odd"><td colspan="2">'._('Der Spieler bietet Dir noch keine Vertragsverlängerung an.').'</td></tr>';
 	}
 	if ($sql3['jugendTeam'] == $sql3['team'] && $sql3['gehalt'] % 100000 == 0) {
 		$entlassungskosten = 0; // Jugendspieler umsonst entlassen
@@ -194,10 +194,10 @@ if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
 		$entlassungskosten = $sql3['gehalt']*ceil(($sql3['vertrag']-time())/86400/22)/2;
 	}
 	if ($sql3['vertrag'] < getTimestamp('+48 hours')) {
-		echo '<tr><td colspan="2">Der Vertrag des Spielers läuft aus, Du kannst ihn deshalb nicht mehr entlassen</td></tr>';
+		echo '<tr><td colspan="2">'._('Der Vertrag des Spielers läuft aus, Du kannst ihn deshalb nicht mehr entlassen').'</td></tr>';
 	}
 	else {
-		echo '<tr><td colspan="2" class="link"><a href="/spieler_entlassen.php?id='.$sql3['ids'].'" onclick="return confirm(\'Bist Du sicher?\')">Für '.number_format($entlassungskosten, 0, ',', '.').' € entlassen</a></td></tr>';
+		echo '<tr><td colspan="2" class="link"><a href="/spieler_entlassen.php?id='.$sql3['ids'].'" onclick="return confirm('._('\'Bist Du sicher?\'').')">Für '.number_format($entlassungskosten, 0, ',', '.').' € entlassen</a></td></tr>';
 	}
 }
 ?>
@@ -208,28 +208,28 @@ if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
 if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner' && $sql3['marktwert'] > 0) {
 	if (($sql3['spiele_verein'] > 5 && $alter_in_jahren < 34) OR ($sql3['spiele'] <= 6 && $alter_in_jahren < 34)) {
 		if ($_SESSION['transferGesperrt'] == FALSE) {
-			echo '<h1>Transfermarkt</h1>';
+			echo '<h1>'._('Transfermarkt').'</h1>';
 			if ($sql3['transfermarkt'] == 0) {
-				echo '<p>Du kannst diesen Spieler auf dem Transfermarkt verkaufen oder ihn zur Leihgabe anbieten. Wenn Du ihn zum Verkauf anbietest, wird er direkt gegen eine Ablöse an ein anderes Team verkauft. Wenn Du den Spieler zur Leihgabe anbietest, kannst Du später noch die Angebote prüfen und entscheiden, ob Du eins davon annimmst.</p>';
+				echo '<p>'._('Du kannst diesen Spieler auf dem Transfermarkt verkaufen oder ihn zur Leihgabe anbieten. Wenn Du ihn zum Verkauf anbietest, wird er direkt gegen eine Ablöse an ein anderes Team verkauft. Wenn Du den Spieler zur Leihgabe anbietest, kannst Du später noch die Angebote prüfen und entscheiden, ob Du eins davon annimmst.').'</p>';
 				if ($sql3['spiele_verein'] > 5 && $alter_in_jahren < 34) {
 					echo '<form action="/transfermarkt_aktion.php" method="post" accept-charset="utf-8">';
 					echo '<p><select id="aukTyp" name="typ" size="1">';
-					echo '<option value="Kauf">Verkauf für '.number_format($sql3['marktwert'], 0, ',', '.').' €</option>';
-					echo '</select> <input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="Jetzt verkaufen" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')" /></p>';
+					echo '<option value="Kauf">'._('Verkauf für').' '.number_format($sql3['marktwert'], 0, ',', '.').' €</option>';
+					echo '</select> <input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Jetzt verkaufen').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')" /></p>';
 					echo '</form>';
 				}
 				if ($sql3['spiele'] <= 6 && $alter_in_jahren < 34) { // 6er-Leihgaben-Sperre
 					echo '<form action="/transfermarkt_aktion.php" method="post" accept-charset="utf-8">';
 					echo '<p><select id="aukTyp" name="typ" size="1">';
-					echo '<option value="999999">zur Leihgabe (ohne Prämie)</option>';
-					echo '<option value="5000000">zur Leihgabe (50.000 Prämie p.P.)</option>';
-					echo '<option value="10000000">zur Leihgabe (100.000 Prämie p.P.)</option>';
-					echo '<option value="15000000">zur Leihgabe (150.000 Prämie p.P.)</option>';
-					echo '<option value="20000000">zur Leihgabe (200.000 Prämie p.P.)</option>';
-					echo '<option value="25000000">zur Leihgabe (250.000 Prämie p.P.)</option>';
-					echo '<option value="30000000">zur Leihgabe (300.000 Prämie p.P.)</option>';
-					echo '<option value="35000000">zur Leihgabe (350.000 Prämie p.P.)</option>';
-					echo '</select> <input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="Anbieten zur Leihgabe" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')" /></p>';
+					echo '<option value="999999">'._('zur Leihgabe (ohne Prämie)').'</option>';
+					echo '<option value="5000000">'._('zur Leihgabe (50.000 Prämie p.P.)').'</option>';
+					echo '<option value="10000000">'._('zur Leihgabe (100.000 Prämie p.P.)').'</option>';
+					echo '<option value="15000000">'._('zur Leihgabe (150.000 Prämie p.P.)').'</option>';
+					echo '<option value="20000000">'._('zur Leihgabe (200.000 Prämie p.P.)').'</option>';
+					echo '<option value="25000000">'._('zur Leihgabe (250.000 Prämie p.P.)').'</option>';
+					echo '<option value="30000000">'._('zur Leihgabe (300.000 Prämie p.P.)').'</option>';
+					echo '<option value="35000000">'._('zur Leihgabe (350.000 Prämie p.P.)').'</option>';
+					echo '</select> <input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Anbieten zur Leihgabe').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')" /></p>';
 					echo '</form>';
 				}
 			}
@@ -238,26 +238,26 @@ if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner' && $sql3['markt
 				$gcnt2 = mysql_query($gcnt1);
 				$gcnt3 = mysql_fetch_assoc($gcnt2);
 				if ($gcnt3['gebote'] == 0) {
-					echo '<p>Du bietest diesen Spieler bereits auf dem Transfermarkt an. Du kannst dieses Angebot aber abbrechen: Möchtest Du das Angebot auf dem Transfermarkt abbrechen?</p>';
+					echo '<p>'._('Du bietest diesen Spieler bereits auf dem Transfermarkt an. Du kannst dieses Angebot aber abbrechen: Möchtest Du das Angebot auf dem Transfermarkt abbrechen?').'</p>';
 					echo '<form action="/transfermarkt_aktion.php" method="post" accept-charset="utf-8">';
 					echo '<p><select name="abbrechen" size="1" style="width:400px">';
-					echo '<option value="Nein">Nein, ich möchte nichts tun.</option>';
-					echo '<option value="Ja">Ja, ich möchte den Spieler nicht weiter anbieten.</option>';
+					echo '<option value="Nein">'._('Nein, ich möchte nichts tun.').'</option>';
+					echo '<option value="Ja">'._('Ja, ich möchte den Spieler nicht weiter anbieten.').'</option>';
 					echo '</select></p>';
-					echo '<p><input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="Absenden" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')" /></p>';
+					echo '<p><input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Absenden').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')" /></p>';
 					echo '</form>';
 				}
 			}
 		}
 	}
 	else {
-		echo '<h1>Spieler anbieten</h1>';
-		echo '<p>Dein Spieler muss für Deinen Verein mindestens 6 Spiele absolviert haben, bevor Du ihn verkaufen kannst. Damit Du ihn verleihen kannst, darf er höchstens 6 Einsätze in der aktuellen Saison haben.</p>';
-		echo '<p>Spieler, die über 33 Jahre alt sind, können grundsätzlich nicht mehr verkauft oder verliehen werden.</p>';
+		echo '<h1>'._('Spieler anbieten').'</h1>';
+		echo '<p>'._('Dein Spieler muss für Deinen Verein mindestens 6 Spiele absolviert haben, bevor Du ihn verkaufen kannst. Damit Du ihn verleihen kannst, darf er höchstens 6 Einsätze in der aktuellen Saison haben.').'</p>';
+		echo '<p>'._('Spieler, die über 33 Jahre alt sind, können grundsätzlich nicht mehr verkauft oder verliehen werden.').'</p>';
 	}
 }
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

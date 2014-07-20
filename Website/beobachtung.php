@@ -24,7 +24,7 @@ if (isset($_POST['markedAction'])) {
 				$sql1 = "DELETE FROM ".$prefix."transfermarkt_watch WHERE team = '".$cookie_team."' AND spieler_id = '".$markedEntry."'";
 				$sql2 = mysql_query($sql1);
 			}
-			addInfoBox(_('Es wurden %d Spieler von Deiner Beobachtungsliste gelöscht.', count($_POST['auswahl']));
+			addInfoBox(__('Es wurden %d Spieler von Deiner Beobachtungsliste gelöscht.', count($_POST['auswahl'])));
 		}
 	}
 }

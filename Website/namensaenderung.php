@@ -130,7 +130,7 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 		}
 	}
 	else {
-		addInfoBox(__('Du kannst den Namen Deines Vereins nur außerhalb der Spielzeiten ändern. Zurzeit laufen %s spiele.', $live_scoring_spieltyp_laeuft);
+		addInfoBox(__('Du kannst den Namen Deines Vereins nur außerhalb der Spielzeiten ändern. Zurzeit laufen %s-Spiele.', $live_scoring_spieltyp_laeuft));
 	}
 }
 ?>

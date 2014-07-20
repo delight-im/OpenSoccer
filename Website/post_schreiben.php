@@ -1,21 +1,21 @@
 <?php include 'zz1.php'; ?>
-<title>Post schreiben | Ballmanager.de</title>
+<title><?php echo _('Post schreiben'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 
 <?php
 if (isset($_POST['titel']) && isset($_POST['inhalt']) && isset($_POST['an']) && isset($_POST['in_reply_to']) && isset($_POST['secHash']) && $cookie_id != DEMO_USER_ID) {
-	echo '<h1>Post geschrieben</h1><p>';
+	echo '<h1>'._('Post geschrieben').'</h1><p>';
 	if ($loggedin == 0) {
-		echo '<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>';
+		echo '<p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>';
 		if (strlen($_POST['inhalt']) > 0) {
-			echo '<p><strong>Dies ist der Text, den Du schreiben wolltest:</strong></p>';
+			echo '<p><strong>'._('Dies ist der Text, den Du schreiben wolltest:').'</strong></p>';
 			echo '<p>'.trim(nl2br(strip_tags($_POST['inhalt']))).'</p>';
 		}
 	}
 	else if (trim($_POST['an']) == '18a393b5e23e2b9b4da106b06d8235f3') { // Post an Ballmanager
-		echo '<p>Du kannst diesem Manager nicht direkt eine Nachricht schicken!</p>';
+		echo '<p>'._('Du kannst diesem Manager nicht direkt eine Nachricht schicken!').'</p>';
 		if (strlen($_POST['inhalt']) > 0) {
-			echo '<p><strong>Dies ist der Text, den Du schreiben wolltest:</strong></p>';
+			echo '<p><strong>'._('Dies ist der Text, den Du schreiben wolltest:').'</strong></p>';
 			echo '<p>'.trim(nl2br(strip_tags($_POST['inhalt']))).'</p>';
 		}
 	}
@@ -32,7 +32,7 @@ if (isset($_POST['titel']) && isset($_POST['inhalt']) && isset($_POST['an']) && 
 			$sql2 = mysql_query($sql1);
 			$uup1 = "UPDATE ".$prefix."pn SET ids = MD5(id) WHERE ids = ''";
 			$uup2 = mysql_query($uup1);
-			echo 'Die Post wurde erfolgreich versendet. Eine Kopie wurde in Deinem Postausgang gespeichert.';
+			echo _('Die Post wurde erfolgreich versendet. Eine Kopie wurde in Deinem Postausgang gespeichert.');
 			if ($loggedin == 1) {
 				if (isset($_SESSION['status'])) {
 					if ($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') {
@@ -60,7 +60,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			}
 		}
 		else {
-			echo 'Deine Post konnte leider nicht versendet werden. Du musst alle Felder ausfüllen. Bitte versuche es noch einmal.';
+			echo _('Deine Post konnte leider nicht versendet werden. Du musst alle Felder ausfüllen. Bitte versuche es noch einmal.');
 		}
 	}
 	echo '</p>';
@@ -68,7 +68,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	exit;
 }
 elseif (isset($_GET['id'])) {
-	echo '<h1>Post schreiben</h1>';
+	echo '<h1>'._('Post schreiben').'</h1>';
 	$an = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 	if ($loggedin == 1 AND $an != $cookie_id) {
 		$em1 = "SELECT username, status FROM ".$prefix."users WHERE ids = '".$an."'";
@@ -90,11 +90,11 @@ elseif (isset($_GET['id'])) {
 		}
 		// CHAT-SPERREN ENDE
 		if ($an == '18a393b5e23e2b9b4da106b06d8235f3') {
-			echo '<p style="text-align:right"><a href="/manager.php?id='.$an.'" class="pagenava">Zurück zum Profil</a></p>';
-			echo '<p>Du kannst diesem Manager nicht direkt eine Nachricht schicken! Bitte wähle ein Mitglied des Support-Teams aus, dem du schreiben möchtest.</p>';
+			echo '<p style="text-align:right"><a href="/manager.php?id='.$an.'" class="pagenava">'._('Zurück zum Profil').'</a></p>';
+			echo '<p>'._('Du kannst diesem Manager nicht direkt eine Nachricht schicken! Bitte wähle ein Mitglied des Support-Teams aus, dem du schreiben möchtest.').'</p>';
 		}
 		else {
-			echo '<p style="text-align:right"><a href="/manager.php?id='.$an.'" class="pagenava">Zurück zum Profil</a></p>';
+			echo '<p style="text-align:right"><a href="/manager.php?id='.$an.'" class="pagenava">'._('Zurück zum Profil').'</a></p>';
 			if (isset($_GET['betreff'])) {
 				$betreff = trim(htmlentities(utf8_decode($_GET['betreff'])));
 				$betreff_sperre = ' readonly="readonly"';
@@ -116,24 +116,24 @@ elseif (isset($_GET['id'])) {
 				$ur2 = mysql_query($ur1);
 				if (mysql_num_rows($ur2) != 0) {
 					$ur3 = mysql_fetch_assoc($ur2);
-					$in_reply_toStr .= '<h1>Ursprüngliche Nachricht</h1>';
+					$in_reply_toStr .= '<h1>'._('Ursprüngliche Nachricht').'</h1>';
 					$in_reply_toStr .= '<p>'.$ur3['inhalt'].'</p>';
 				}
 			}
 			echo '<form method="post" action="/post_schreiben.php" accept-charset="utf-8">';
 			if (strpos($betreff, 'RE: [Teampost]') === 0 && ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin')) {
-				echo '<p>Absender:<br /><input type="text" size="50" name="absender_r" value="Ballmanager" readonly="readonly" /></p>';
+				echo '<p>'._('Absender:').'<br /><input type="text" size="50" name="absender_r" value="Ballmanager" readonly="readonly" /></p>';
 			}
-			echo '<p>Empfänger:<br /><input type="text" size="50" name="empfaenger_r" value="'.$em3['username'].'" readonly="readonly" /></p>';
-			echo '<p>Betreff:<br /><input type="text" size="50" name="titel" value="'.$betreff.'"'.$betreff_sperre.' /></p>';
-			echo '<p>Inhalt:<br /><textarea rows="10" cols="50" name="inhalt"></textarea></p>';
-			echo '<p><input type="hidden" name="secHash" value="'.md5('29'.$cookie_id.$an.'1992').'" /><input type="hidden" name="an" value="'.$an.'" /><input type="hidden" name="in_reply_to" value="'.$in_reply_to.'" /><input type="submit" value="Senden"'.noDemoClick($cookie_id).' /></p>';
+			echo '<p>'._('Empfänger:').'<br /><input type="text" size="50" name="empfaenger_r" value="'.$em3['username'].'" readonly="readonly" /></p>';
+			echo '<p>'._('Betreff:').'<br /><input type="text" size="50" name="titel" value="'.$betreff.'"'.$betreff_sperre.' /></p>';
+			echo '<p>'._('Inhalt:').'<br /><textarea rows="10" cols="50" name="inhalt"></textarea></p>';
+			echo '<p><input type="hidden" name="secHash" value="'.md5('29'.$cookie_id.$an.'1992').'" /><input type="hidden" name="an" value="'.$an.'" /><input type="hidden" name="in_reply_to" value="'.$in_reply_to.'" /><input type="submit" value="'._('Senden').'"'.noDemoClick($cookie_id).' /></p>';
 			echo '</form>';
 			echo $in_reply_toStr;
 		}
 	}
 	else {
-		echo '<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>';
+		echo '<p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>';
 	}
 }
 ?>

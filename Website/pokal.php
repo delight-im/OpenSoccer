@@ -52,7 +52,7 @@ if (isset($_POST['nachricht']) && $cookie_id != DEMO_USER_ID) {
 		$sql3 = mysql_fetch_assoc($sql2);
 		$chatSperreBis = $sql3['MAX(chatSperre)'];
 		if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-			addInfoBox(__('Du bist noch bis zum %1$d Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i'), $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team.').'</a>');
+			addInfoBox(__('Du bist noch bis zum %1$d für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team.').'</a>'));
 			include 'zz3.php';
 			exit;
 		}

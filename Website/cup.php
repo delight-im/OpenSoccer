@@ -30,10 +30,10 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Nationaler Cup'); ?></h1>
-<p>Für diesen Wettbewerb qualifizieren sich die 32 besten Teams aus <?php echo $temp_land; ?>, 16 davon durch ein Freilos. Von Liga 1 bis 4 - jeder hat die Chance auf den Cup-Sieg.</p>
+<p><?php echo __('Für diesen Wettbewerb qualifizieren sich die 32 besten Teams aus %s 16 davon durch ein Freilos. Von Liga 1 bis 4 - jeder hat die Chance auf den Cup-Sieg.', $temp_land); ?></p>
 <p><?php echo _('Es gibt eine Qualifikation und danach fünf Runden, die jeweils ausgelost werden. In einem KO-Spiel pro Runde ermitteln die Teams den Sieger, der dann die nächste Runde erreicht.'); ?></p>
 <?php
 $temp = FALSE;

@@ -217,24 +217,24 @@ function abloeseSchaetzen($cookie_team='', $betrag=0, $kaeufer='', $verkaeufer='
 }
 function pokalrunde_wort($runde) {
 	switch ($runde) {
-		case 1: $wort = 'Vorrunde'; break;
-		case 2: $wort = 'Achtelfinale'; break;
-		case 3: $wort = 'Viertelfinale'; break;
-		case 4: $wort = 'Halbfinale'; break;
-		case 5: $wort = 'Finale'; break;
-		case 6: $wort = 'Sieger'; break;
+		case 1: $wort = _('Vorrunde'); break;
+		case 2: $wort = _('Achtelfinale'); break;
+		case 3: $wort = _('Viertelfinale'); break;
+		case 4: $wort = _('Halbfinale'); break;
+		case 5: $wort = _('Finale'); break;
+		case 6: $wort = _('Sieger'); break;
 		default: $wort = '-'; break;
 	}
 	return $wort;
 }
 function cuprunde_wort($runde) {
 	switch ($runde) {
-		case 1: $wort = 'Qualifikation'; break;
-		case 2: $wort = 'Vorrunde'; break;
-		case 3: $wort = 'Achtelfinale'; break;
-		case 4: $wort = 'Viertelfinale'; break;
-		case 5: $wort = 'Halbfinale'; break;
-		case 6: $wort = 'Finale'; break;
+		case 1: $wort = _('Qualifikation'); break;
+		case 2: $wort = _('Vorrunde'); break;
+		case 3: $wort = _('Achtelfinale'); break;
+		case 4: $wort = _('Viertelfinale'); break;
+		case 5: $wort = _('Halbfinale'); break;
+		case 6: $wort = _('Finale'); break;
 		default: $wort = '-'; break;
 	}
 	return $wort;

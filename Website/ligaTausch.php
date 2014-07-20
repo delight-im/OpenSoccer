@@ -31,7 +31,7 @@ elseif ($cookie_spieltag > 5) {
 	exit;
 }
 elseif ($live_scoring_spieltyp_laeuft != '') {
-	echo '<p><strong>Zurzeit laufen %s spiele. Deshalb kannst Du leider keine Liga-Wechsel durchführen. Bitte warte, bis die Spiele beendet sind.', $live_scoring_spieltyp_laeuft).'</strong></p>';
+	echo '<p><strong>'.__('Zurzeit laufen %s-Spiele. Deshalb kannst Du leider keine Liga-Wechsel durchführen. Bitte warte, bis die Spiele beendet sind.', $live_scoring_spieltyp_laeuft).'</strong></p>';
 	include 'zz3.php';
 	exit;
 }

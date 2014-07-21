@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Tabelle | Liga | Ballmanager.de</title>
+<title><?php echo _('Tabelle | Liga'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .team_<?php echo md5($cookie_teamname); ?> {
@@ -51,7 +51,7 @@ if (isset($_GET['slide'])) {
 ?>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 0) { ?>
-<h1>Liga</h1><p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p><?php include 'zz3.php'; exit; ?>
+<h1><?php echo _('Liga').'</h1><p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p><?php include 'zz3.php'; exit; ?>
 <?php } else { ?>
 <?php
 setTaskDone('league_standings');
@@ -63,7 +63,7 @@ if (isset($_POST['nachricht']) && isset($_POST['liga']) && $cookie_id != DEMO_US
 		$sql3 = mysql_fetch_assoc($sql2);
 		$chatSperreBis = $sql3['MAX(chatSperre)'];
 		if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-			addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+			addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
 			include 'zz3.php';
 			exit;
 		}
@@ -75,7 +75,7 @@ if (isset($_POST['nachricht']) && isset($_POST['liga']) && $cookie_id != DEMO_US
 	$sql2 = mysql_query($sql1);
 }
 ?>
-<h1>Liga auswählen</h1>
+<h1><?php echo _('Liga auswählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
     <?php
@@ -88,7 +88,7 @@ if (isset($_POST['nachricht']) && isset($_POST['liga']) && $cookie_id != DEMO_US
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <?php
 $temp = FALSE;
@@ -107,31 +107,31 @@ if ($temp == FALSE) {
 ?>
 <?php
 if ($cookie_spieltag > 11) { // Hinrunden-Tabelle der aktuellen Saison
-	$linkText = 'Hinrunde';
+	$linkText = _('Hinrunde');
 	$linkURL = '/stat_geschichte.php?saison_spieltag='.$cookie_saison.'-11&liga='.$temp_liga;
 }
 else { // End-Tabelle der letzten Saison
-	$linkText = 'Letzte Saison';
+	$linkText = _('Letzte Saison');
 	$linkURL = '/stat_geschichte.php?saison_spieltag='.intval($cookie_saison-1).'-22&liga='.$temp_liga;
 }
 $tmp_liga_cache = '';
 $tmp_liga_cache .= '
-<h1>Tabelle</h1>
-<p style="text-align:right"><a href="/stat_torjaegerliste.php?liga='.$temp_liga.'" class="pagenava">Torjäger</a> <a href="'.$linkURL.'" class="pagenava">'.$linkText.'</a></p>
+<h1>'._('Tabelle').'</h1>
+<p style="text-align:right"><a href="/stat_torjaegerliste.php?liga='.$temp_liga.'" class="pagenava">'._('Torjäger').'</a> <a href="'.$linkURL.'" class="pagenava">'.$linkText.'</a></p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Team</th>
-<th scope="col">SP</th>';
+<th scope="col">'._('Team').'</th>
+<th scope="col">'._('SP').'</th>';
 if (!isMobile()) {
-	$tmp_liga_cache .= '<th scope="col">S-U-N</th>';
+	$tmp_liga_cache .= '<th scope="col">'._('S-U-N').'</th>';
 }
-$tmp_liga_cache .= '<th scope="col">TO</th>';
+$tmp_liga_cache .= '<th scope="col">'._('TO').'</th>';
 if (!isMobile()) {
-	$tmp_liga_cache .= '<th scope="col">DI</th>';
+	$tmp_liga_cache .= '<th scope="col">'._('DI').'</th>';
 }
-$tmp_liga_cache .= '<th scope="col">PT</th>
+$tmp_liga_cache .= '<th scope="col">'._('PT').'</th>
 </tr>
 </thead>
 <tbody>';
@@ -180,12 +180,12 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	}
 	$tmp_liga_cache .= '</td><td class="link"><a href="/team.php?id='.$sql3['ids'].'">'.$sql3['name'].' ('.number_format($sql3['aufstellung'], 1, ',', '.').')';
 	if ($sql3['vorjahr_liga'] == $liga3['ids']) {
-		if ($sql3['vorjahr_platz'] == 1) { $tmp_liga_cache .= ' [M]'; }
+		if ($sql3['vorjahr_platz'] == 1) { $tmp_liga_cache .= ' '._('[M]'); }
         if ($sql3['pokalrunde'] > 0) { $tmp_liga_cache .= ' [P]'; }
 	}
 	else {
-		if ($sql3['vorjahr_platz'] < 4) { $tmp_liga_cache .= ' [AU]'; }
-		if ($sql3['vorjahr_platz'] > 9) { $tmp_liga_cache .= ' [AB]'; }
+		if ($sql3['vorjahr_platz'] < 4) { $tmp_liga_cache .= ' '._('[AU]'); }
+		if ($sql3['vorjahr_platz'] > 9) { $tmp_liga_cache .= ' '._('[AB]'); }
 	}
 	$tmp_liga_cache .= '</a></td><td>'.$liga3['gespielt'].'</td>';
 	if (!isMobile()) {
@@ -203,29 +203,29 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 $tmp_liga_cache .= '
 </tbody>
 </table>
-<p><strong>Erklärung:</strong> ';
+<p><strong>'._('Erklärung:').'</strong> ';
 if (substr($liga3['name'], -1) == 1) {
-	$tmp_liga_cache .= 'Platz 1: Meister, Platz 1-';
+	$tmp_liga_cache .= _('Platz 1: Meister, Platz 1-');
 	if ($jahresWertung3 <= 6) { $tmp_liga_cache .= '3'; } else { $tmp_liga_cache .= '2'; }
-	$tmp_liga_cache .= ': Pokalplätze, Platz 10-12: Abstiegsplätze';
-	$tmp_liga_cache .= '</p><p><strong>In eckigen Klammern:</strong> M=Meister, AU=Aufsteiger, P=Pokalteilnehmer</p>';
+	$tmp_liga_cache .= ': '._('Pokalplätze, Platz 10-12: Abstiegsplätze');
+	$tmp_liga_cache .= '</p><p><strong>'._('In eckigen Klammern:').'</strong> '._('M=Meister, AU=Aufsteiger, P=Pokalteilnehmer').'</p>';
 }
 elseif (substr($liga3['name'], -1) == 2) {
-	$tmp_liga_cache .= 'Platz 1-3: Aufstiegsplätze, Platz 10-12: Abstiegsplätze';
-	$tmp_liga_cache .= '</p><p><strong>In eckigen Klammern:</strong> AU=Aufsteiger, AB=Absteiger</p>';
+	$tmp_liga_cache .= _('Platz 1-3: Aufstiegsplätze, Platz 10-12: Abstiegsplätze');
+	$tmp_liga_cache .= '</p><p><strong>'._('In eckigen Klammern:').'</strong> '._('AU=Aufsteiger, AB=Absteiger').'</p>';
 }
 else {
-	$tmp_liga_cache .= 'Platz 1-3: Aufstiegsplätze';
-	$tmp_liga_cache .= '</p><p><strong>In eckigen Klammern:</strong> AB=Absteiger</p>';
+	$tmp_liga_cache .= _('Platz 1-3: Aufstiegsplätze');
+	$tmp_liga_cache .= '</p><p><strong>'._('In eckigen Klammern:').'</strong> '._('AB=Absteiger').'</p>';
 }
-$tmp_liga_cache .= '<p><strong>Überschriften:</strong> SP: Spiele, S-U-N: Siege/Unentschieden/Niederlagen, TO: Tore, DI: Differenz, PT: Punkte</p>';
+$tmp_liga_cache .= '<p><strong>'._('Überschriften:').'</strong> '._('SP: Spiele, S-U-N: Siege/Unentschieden/Niederlagen, TO: Tore, DI: Differenz, PT: Punkte').'</p>';
 $datei = fopen($tmp_dateiname, 'w+');
 fwrite($datei, $tmp_liga_cache);
 fclose($datei);
 echo $tmp_liga_cache;
 }
 ?>
-<h1>Ergebnisse (<?php echo $slideResults; ?>. Spieltag)</h1>
+<h1><?php echo __('Ergebnisse (%s Spieltag)', $slideResults); ?></h1>
 <form action="/lig_tabelle.php" method="get" accept-charset="utf-8">
 <p style="text-align:right">
 	<input type="hidden" name="liga" value="<?php echo $temp_liga; ?>" /><select name="slide" size="1" style="width:120px">
@@ -237,16 +237,16 @@ echo $tmp_liga_cache;
 			echo '>Spieltag '.$i.'</option>';
 		}
 		?>
-	</select> <input type="submit" value="Anzeigen" />
+	</select> <input type="submit" value="<?php echo _('Anzeigen'); ?>" />
 </p>
 </form>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Datum</th>
-<th scope="col">Heim</th>
-<th scope="col">Auswärts</th>
-<th scope="col">Ergebnis</th>
+<th scope="col"><?php echo _('Datum'); ?></th>
+<th scope="col"><?php echo _('Heim'); ?></th>
+<th scope="col"><?php echo _('Auswärts'); ?></th>
+<th scope="col"><?php echo _('Ergebnis'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -266,7 +266,7 @@ while ($erg3 = mysql_fetch_assoc($erg2)) {
 	if ($counter % 2 == 0) { echo '<tr class="team_'.md5($erg3['team1']).' team_'.md5($erg3['team2']).'">'; } else { echo '<tr class="odd team_'.md5($erg3['team1']).' team_'.md5($erg3['team2']).'">'; }
     // LIVE ODER ERGEBNIS ANFANG
     if ($erg3['typ'] == $live_scoring_spieltyp_laeuft && date('d', time()) == date('d', $erg3['datum'])) {
-        $ergebnis_live = 'LIVE';
+        $ergebnis_live = _('LIVE');
     }
     else {
         $ergebnis_live = $erg3['ergebnis'];
@@ -279,11 +279,11 @@ while ($erg3 = mysql_fetch_assoc($erg2)) {
 echo '</tbody>';
 echo '</table>';
 ?>
-<h1>Deine Nachricht</h1>
+<h1><?php echo _('Deine Nachricht'); ?></h1>
 <form action="/lig_tabelle.php" method="post" accept-charset="utf-8">
-<p><input type="text" name="nachricht" style="width:80%" /> <input type="hidden" name="liga" value="<?php echo $temp_liga; ?>" /><input type="submit" value="Eintragen"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><input type="text" name="nachricht" style="width:80%" /> <input type="hidden" name="liga" value="<?php echo $temp_liga; ?>" /><input type="submit" value="<?php echo _('Eintragen'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
-<h1>Manager-Talk</h1>
+<h1><?php echo _('Manager-Talk'); ?></h1>
 <?php
 if (isset($_GET['delEntry']) && $cookie_id != DEMO_USER_ID) {
 	$delEntry = mysql_real_escape_string(trim(strip_tags($_GET['delEntry'])));
@@ -297,7 +297,7 @@ $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<p><b>'.displayUsername($sql3['username'], $sql3['user']).' schrieb am '.date('d.m.Y, H:i', $sql3['zeit']).':';
 	if ($sql3['user'] == $cookie_id OR $_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
-		echo ' <a href="/lig_tabelle.php?liga='.mysql_real_escape_string($temp_liga).'&amp;delEntry='.$sql3['id'].'">[Löschen]</a>';
+		echo ' <a href="/lig_tabelle.php?liga='.mysql_real_escape_string($temp_liga).'&amp;delEntry='.$sql3['id'].'">'._('[Löschen]').'</a>';
 	}
 	echo '</b><br />'.$sql3['nachricht'].'</p>';
 }

@@ -2,16 +2,16 @@
 if (!isset($_POST['reg_email']) OR !isset($_POST['reg_benutzername'])) { exit; }
 ?>
 <?php include 'zz1.php'; ?>
-<title>Registriert | Ballmanager.de</title>
+<title><?php echo _('Registriert'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 
-<h1>Registriert</h1>
+<h1><?php echo _('Registriert'); ?></h1>
 <?php
 function email_senden($email, $username, $password, $activeIP='0.0.0.0') {
     global $config;
 	$empfaenger = $email;
-	$betreff = 'Ballmanager: Willkommen';
-	$nachricht = "Hallo ".$username.",\n\nDu hast Dich erfolgreich auf www.ballmanager.de registriert. Bitte logge Dich jetzt mit Deinen Benutzerdaten ein, um Deinen Account zu aktivieren. Und dann kann es auch schon losgehen ...\n\nDamit Du Dich anmelden kannst, findest Du hier noch einmal Deine Benutzerdaten:\n\nE-Mail: ".$email."\nBenutzername: ".$username."\nPasswort: ".$password."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
+	$betreff = _('Ballmanager: Willkommen');
+		$nachricht = "Hallo ".$username.",\n\nDu hast Dich erfolgreich auf www.ballmanager.de registriert. Bitte logge Dich jetzt mit Deinen Benutzerdaten ein, um Deinen Account zu aktivieren. Und dann kann es auch schon losgehen ...\n\nDamit Du Dich anmelden kannst, findest Du hier noch einmal Deine Benutzerdaten:\n\nE-Mail: ".$email."\nBenutzername: ".$username."\nPasswort: ".$password."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
 	if ($config['PHP_MAILER']) {
 		require './phpmailer/PHPMailerAutoload.php';
 		$mail = new PHPMailer(); // create a new object
@@ -66,12 +66,12 @@ if (strlen($_POST['reg_email']) > 0 && strlen($_POST['reg_benutzername']) > 0) {
 				}
 				$fehler_gemacht = FALSE;
 				if ($config['isLocalInstallation']) {
-					echo '<p><strong>Dein Passwort lautet:</strong> '.htmlspecialchars($password).'</p>';
-					echo '<p>Du brauchst dieses Passwort unbedingt für den ersten Login. Danach kannst Du es in den Einstellungen ändern, wenn Du möchtest.</p>';
+					echo '<p><strong>'._('Dein Passwort lautet:').'</strong> '.htmlspecialchars($password).'</p>';
+					echo '<p>'._('Du brauchst dieses Passwort unbedingt für den ersten Login. Danach kannst Du es in den Einstellungen ändern, wenn Du möchtest.').'</p>';
 				}
 				else {
-					echo '<p>Vielen Dank, die Registrierung war erfolgreich! Wir senden Dir nun an die angegebene Adresse eine E-Mail mit Deinem Passwort zu. Mit dem Benutzernamen und dem zugeschickten Passwort kannst Du Dich danach einloggen.</p>';
-					echo '<p>Logge Dich am besten ganz schnell ein - dann kannst Du dir das beste Team sichern! Viel Spaß!</p>';
+					echo '<p>'._('Vielen Dank, die Registrierung war erfolgreich! Wir senden Dir nun an die angegebene Adresse eine E-Mail mit Deinem Passwort zu. Mit dem Benutzernamen und dem zugeschickten Passwort kannst Du Dich danach einloggen.').'</p>';
+					echo '<p>'._('Logge Dich am besten ganz schnell ein - dann kannst Du dir das beste Team sichern! Viel Spaß!').'</p>';
 					email_senden($email, $username, $password, $last_ip);
 				}
 			}
@@ -79,7 +79,7 @@ if (strlen($_POST['reg_email']) > 0 && strlen($_POST['reg_benutzername']) > 0) {
     }
 }
 if ($fehler_gemacht == TRUE) {
-	echo '<p>Die Registrierung konnte leider nicht abgeschlossen werden. Der Benutzername oder die E-Mail-Adresse ist ungültig oder schon vergeben. <a href="/index.php">Bitte versuche es noch einmal.</a></p>';
+	echo '<p>'._('Die Registrierung konnte leider nicht abgeschlossen werden. Der Benutzername oder die E-Mail-Adresse ist ungültig oder schon vergeben.').' <a href="/index.php">'._('Bitte versuche es noch einmal.').'</a></p>';
 }
 ?>
 <?php include 'zz3.php'; ?>

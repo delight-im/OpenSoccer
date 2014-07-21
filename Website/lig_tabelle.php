@@ -51,7 +51,7 @@ if (isset($_GET['slide'])) {
 ?>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 0) { ?>
-<h1><?php echo _('Liga').'</h1><p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p><?php include 'zz3.php'; exit; ?>
+<?php echo '<h1>'._('Liga').'</h1><p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>'; ?><?php include 'zz3.php'; exit; ?>
 <?php } else { ?>
 <?php
 setTaskDone('league_standings');
@@ -205,9 +205,7 @@ $tmp_liga_cache .= '
 </table>
 <p><strong>'._('Erklärung:').'</strong> ';
 if (substr($liga3['name'], -1) == 1) {
-	$tmp_liga_cache .= _('Platz 1: Meister, Platz 1-');
-	if ($jahresWertung3 <= 6) { $tmp_liga_cache .= '3'; } else { $tmp_liga_cache .= '2'; }
-	$tmp_liga_cache .= ': '._('Pokalplätze, Platz 10-12: Abstiegsplätze');
+	$tmp_liga_cache .= _('Platz 1: Meister, Platz 1-%d: Pokalplätze, Platz 10-12: Abstiegsplätze', ($jahresWertung3 <= 6 ? 3 : 2));
 	$tmp_liga_cache .= '</p><p><strong>'._('In eckigen Klammern:').'</strong> '._('M=Meister, AU=Aufsteiger, P=Pokalteilnehmer').'</p>';
 }
 elseif (substr($liga3['name'], -1) == 2) {
@@ -225,7 +223,7 @@ fclose($datei);
 echo $tmp_liga_cache;
 }
 ?>
-<h1><?php echo __('Ergebnisse (%s Spieltag)', $slideResults); ?></h1>
+<h1><?php echo __('Ergebnisse (%s. Spieltag)', $slideResults); ?></h1>
 <form action="/lig_tabelle.php" method="get" accept-charset="utf-8">
 <p style="text-align:right">
 	<input type="hidden" name="liga" value="<?php echo $temp_liga; ?>" /><select name="slide" size="1" style="width:120px">

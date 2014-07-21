@@ -18,17 +18,15 @@ $database = NULL;
 define('CONFIG_INSTALL_DATE', '2008-09-25');
 
 $config = array();
-$config['PHP_MAILER'] = false; // whether to use PHPMailer (with SMTP) instead of the mail() function
-if ($config['PHP_MAILER']) {
-    $config['SMTP_HOST'] = ''; // SMTP server address
-    $config['SMTP_PORT'] = ''; // SMTP server port
-    $config['SMTP_USER'] = ''; // SMTP username
-    $config['SMTP_PASS'] = ''; // SMTP password
-    $config['SMTP_FROM'] = ''; // sender address
-    $config['SMTP_AUTH'] = true; // whether SMTP requires authentication
-    $config['SMTP_SECURE'] = ''; // for PHPMailer->SMTPSecure
-    $config['SMTP_CHARSET'] = 'UTF-8'; // mail charset
-}
+define('CONFIG_EMAIL_PHP_MAILER', false); // whether to use PHPMailer (with SMTP) instead of the mail() function
+define('CONFIG_EMAIL_HOST', ''); // SMTP server address
+define('CONFIG_EMAIL_PORT', ''); // SMTP server port
+define('CONFIG_EMAIL_USER', ''); // SMTP username
+define('CONFIG_EMAIL_PASS', ''); // SMTP password
+define('CONFIG_EMAIL_FROM', ''); // sender address
+define('CONFIG_EMAIL_AUTH', true); // whether SMTP requires authentication
+define('CONFIG_EMAIL_SECURE', ''); // for PHPMailer->SMTPSecure
+define('CONFIG_EMAIL_CHARSET', 'UTF-8'); // mail charset
 $config['isLocalInstallation'] = false;
 
 ?>

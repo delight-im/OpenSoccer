@@ -25,7 +25,6 @@ function dayAndMonth($timestamp = 0) {
 		case '12': return $out.'Dezember';
 		default: return date('d.m.Y', $timestamp);
 	}
-	return $out;
 }
 if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 	$profileIDSQL = "WHERE last_login > ".getTimestamp('-14 days');
@@ -42,6 +41,9 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 			addInfoBox('Es ist nur ein einziger E-Mail-Versand pro Tag möglich!');
 		}
 	}
+    else {
+        $emailText = '';
+    }
 	if (isset($_GET['approveMail']) && isset($_GET['approveToken'])) {
 		$approveMailID = intval(trim($_GET['approveMail']));
 		$approveTokenIst = trim($_GET['approveToken']);
@@ -60,33 +62,33 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 							$empfaenger = $email;
 							$betreff = 'Ballmanager: News vom '.dayAndMonth();
 							$nachricht = "Lieber Manager,\n\n".$bodyText."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
-							if($config['PHP_MAILER']){
+							if (CONFIG_EMAIL_PHP_MAILER) {
 								require './phpmailer/PHPMailerAutoload.php';
-								if(!empty($bcc)){
-									foreach($bcc as $adresse){
-										$mail->AddBCC($adresse);
-									}
-								}
 								$mail = new PHPMailer(); // create a new object
-								$mail->CharSet= $config['SMTP_CHARSET'];
+								$mail->CharSet= CONFIG_EMAIL_CHARSET;
 								$mail->IsSMTP();
-								$mail->SMTPAuth = $config['SMTP_AUTH'];
-								$mail->SMTPSecure = $config['SMTP_SECURE'];
-								$mail->Host = $config['SMTP_HOST'];
-								$mail->Port = $config['SMTP_PORT'];
-								$mail->Username = $config['SMTP_USER'];
-								$mail->Password = $config['SMTP_PASS'];
-								$mail->SetFrom($config['SMTP_FROM']);
+								$mail->SMTPAuth = CONFIG_EMAIL_AUTH;
+								$mail->SMTPSecure = CONFIG_EMAIL_SECURE;
+								$mail->Host = CONFIG_EMAIL_HOST;
+								$mail->Port = CONFIG_EMAIL_PORT;
+								$mail->Username = CONFIG_EMAIL_USER;
+								$mail->Password = CONFIG_EMAIL_PASS;
+								$mail->SetFrom(CONFIG_EMAIL_FROM);
 								$mail->Subject = $betreff;
 								$mail->Body = $nachricht;
 								$mail->AddAddress($empfaenger);
+                                if (!empty($bcc)){
+                                    foreach($bcc as $bccAddress){
+                                        $mail->AddBCC($bccAddress);
+                                    }
+                                }
 								$mail->Send();
 							}
 							else{
 								$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8";
 								if(!empty($bcc)){
 									$header.="\r\nBCC: ";
-									foreach($bcc as $index => $adresse){
+									foreach ($bcc as $index => $adresse){
 										$header.=$adresse;
 										if($index!=0) $header.=', ';
 									}
@@ -359,11 +361,11 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 function zahleEntschaedigung($teamID, $betrag, $reason = '') {
 	global $prefix, $cookie_id;
 	$sql1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$teamID."', 'Entschädigung', ".$betrag.", ".time().")";
-	$sql2 = mysql_query($sql1);
+	mysql_query($sql1);
 	$sql1 = "UPDATE ".$prefix."teams SET konto = konto+".$betrag." WHERE ids = '".$teamID."'";
-	$sql2 = mysql_query($sql1);
+	mysql_query($sql1);
 	$sql1 = "INSERT INTO ".$prefix."compensations (helferID, zeit, teamID, reason, betrag) VALUES ('".mysql_real_escape_string(trim($cookie_id))."', ".time().", '".$teamID."', '".$reason."', ".$betrag.")";
-	$sql2 = mysql_query($sql1);
+	mysql_query($sql1);
 }
 if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 	$getBackendMails1 = "SELECT a.id, a.user, b.username, a.zeit, a.text, a.votes, a.voters FROM ".$prefix."backendEmails_pending AS a JOIN ".$prefix."users AS b ON a.user = b.ids WHERE a.votes < 3 ORDER BY a.zeit ASC";

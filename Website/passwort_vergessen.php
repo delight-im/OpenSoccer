@@ -71,18 +71,18 @@ $nachricht .= '
 -----------
 '.$aip;
 }
-if($config['PHP_MAILER']){
+if (CONFIG_EMAIL_PHP_MAILER) {
 	require './phpmailer/PHPMailerAutoload.php';
 	$mail = new PHPMailer(); // create a new object
-	$mail->CharSet = $config['SMTP_CHARSET'];
+	$mail->CharSet = CONFIG_EMAIL_CHARSET;
 	$mail->IsSMTP();
-	$mail->SMTPAuth = $config['SMTP_AUTH'];
-	$mail->SMTPSecure = $config['SMTP_SECURE'];
-	$mail->Host = $config['SMTP_HOST'];
-	$mail->Port = $config['SMTP_PORT'];
-	$mail->Username = $config['SMTP_USER'];
-	$mail->Password = $config['SMTP_PASS'];
-	$mail->SetFrom($config['SMTP_FROM']);
+	$mail->SMTPAuth = CONFIG_EMAIL_AUTH;
+	$mail->SMTPSecure = CONFIG_EMAIL_SECURE;
+	$mail->Host = CONFIG_EMAIL_HOST;
+	$mail->Port = CONFIG_EMAIL_PORT;
+	$mail->Username = CONFIG_EMAIL_USER;
+	$mail->Password = CONFIG_EMAIL_PASS;
+	$mail->SetFrom(CONFIG_EMAIL_FROM);
 	$mail->Subject = $betreff;
 	$mail->Body = $nachricht;
 	$mail->AddAddress($empfaenger);

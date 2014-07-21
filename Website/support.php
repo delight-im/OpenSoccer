@@ -20,7 +20,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox(__('Du bist noch bis zum %d Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team.').'</a>'));
+		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team.').'</a>'));
 		include 'zz3.php';
 		exit;
 	}
@@ -97,7 +97,7 @@ if (isset($_GET['q'])) {
 		$isSearchPage = TRUE;
 	}
 }
-if ($isSearchPage == TRUE) { echo '<h1>'._('Aktuelle Anfragen zum Thema').' &quot;'.$q.'&quot;</h1>'; } else { echo '<h1>'._('Aktuelle Anfragen').'</h1>'; }
+if ($isSearchPage == TRUE) { echo '<h1>'.__('Aktuelle Anfragen zum Thema &quot;%s&quot;', $q).'</h1>'; } else { echo '<h1>'._('Aktuelle Anfragen').'</h1>'; }
 if (isset($_GET['mark'])) {
 	if ($_GET['mark'] == 'read') {
 		$markRead1 = "INSERT IGNORE INTO ".$prefix."supportRead (userID, anfrageID) SELECT '".$cookie_id."' AS user, id FROM ".$prefix."supportRequests WHERE open = 1";
@@ -201,7 +201,7 @@ else {
 			}
 			elseif (isset($listVoted[$sql3['id']])) {
 				$pVotes = round($sql3['pro']/($sql3['pro']+$sql3['contra'])*100);
-				echo '<img src="/images/balken/'.$pVotes.'.png" alt="'.$pVotes.'%" title="'.$pVotes.'% '._('sind für diesen Vorschlag').'" />';
+				echo '<img src="/images/balken/'.$pVotes.'.png" alt="'.$pVotes.'%" title="'.__('%d%% sind für diesen Vorschlag', $pVotes).'" />';
 			}
 			else {
 				echo '<img src="/images/balken/undefined.png" alt="???" title="'._('Du hast diesen Vorschlag noch nicht bewertet').'" />';
@@ -258,9 +258,9 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<tr>';
 	echo '<td>'.$counter.'.</td>';
 	echo '<td class="link">'.$displayUsername.'</td>';
-	echo '<td><b>'.$sql3['replies'].'</b> '._('insgesamt').'</td>';
-	echo '<td><b>'.$sql3['fastReplies'].'</b> '._('schnelle').'</td>';
-	echo '<td><b>'.$sql3['thanksReceived'].'</b> '._('Stimmen erhalten').'</td>';
+	echo '<td>'.__('<b>%d</b> insgesamt', $sql3['replies']).'</td>';
+	echo '<td>'.__('<b>%d</b> schnelle', $sql3['fastReplies']).'</td>';
+	echo '<td>'.__('<b>%d</b> Stimmen erhalten', $sql3['thanksReceived']).'</td>';
 	echo '</tr>';
 	$counter++;
 }

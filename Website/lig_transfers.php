@@ -43,7 +43,6 @@ echo '<h1>'.$pageTitle.'</h1>';
 echo $ligaNav;
 // IN EIGENE LIGA ODER IN ALLE LIGEN ENDE
 ?>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -123,7 +122,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <p><strong><?php echo _('Hinweis:').'</strong> '._('Die Transfers sind nach Datum geordnet, d.h. der letzte Transfer steht ganz oben. In der Spalte hinter der Ablöse steht, ob die Ablöse über oder unter dem Marktwert lag.') ?></p>
 <p><strong><?php echo _('Leihprämien:').'</strong> '._('Bei Leihgaben kannst Du die Höhe der Prämie sehen, indem Du mit der Maus über das Wort &quot;Leihgabe&quot; fährst.') ?></p>
 <p><strong><?php echo _('Tipp:').'</strong> '._('Fahre mit der Maus über den Spielernamen, um das Datum mit genauer Uhrzeit zu sehen.') ?></p>

@@ -205,7 +205,7 @@ $tmp_liga_cache .= '
 </table>
 <p><strong>'._('Erklärung:').'</strong> ';
 if (substr($liga3['name'], -1) == 1) {
-	$tmp_liga_cache .= _('Platz 1: Meister, Platz 1-%d: Pokalplätze, Platz 10-12: Abstiegsplätze', ($jahresWertung3 <= 6 ? 3 : 2));
+	$tmp_liga_cache .= __('Platz 1: Meister, Platz 1-%d: Pokalplätze, Platz 10-12: Abstiegsplätze', ($jahresWertung3 <= 6 ? 3 : 2));
 	$tmp_liga_cache .= '</p><p><strong>'._('In eckigen Klammern:').'</strong> '._('M=Meister, AU=Aufsteiger, P=Pokalteilnehmer').'</p>';
 }
 elseif (substr($liga3['name'], -1) == 2) {

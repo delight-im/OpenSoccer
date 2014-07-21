@@ -59,9 +59,9 @@ if (isset($_GET['action'])) {
 }
 if (isset($_GET['sellSuccess'])) {
 	$sellPrice = number_format($_GET['sellSuccess'], 0, ',', '.');
-	addInfoBox(__('Du hast den Spieler erfolgreich für %d € verkauft.', $sellPrice));
+	addInfoBox(__('Du hast den Spieler erfolgreich für %s € verkauft.', $sellPrice));
 }
-echo '<p style="text-align:right"><a href="/transfermarkt_watch.php?id='.$sql3['ids'].'" class="pagenava" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')">';
+echo '<p style="text-align:right"><a href="/transfermarkt_watch.php?id='.$sql3['ids'].'" class="pagenava" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')">';
 if ($watch3 == 0) {
     echo _('Spieler beobachten');
 }
@@ -70,7 +70,6 @@ else {
 }
 echo '</a> <a href="/spieler_historie.php?id='.$sql3['ids'].'" class="pagenava">'._('Zur Historie').'</a></p>';
 ?>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -178,7 +177,7 @@ if ($schaetzungVomScout <= $sql3['staerke']) {
 	echo '<tr><td colspan="2">'._('Dein Scout glaubt, dass dieser Spieler seinen Höhepunkt bereits erreicht hat.').'</td></tr>';
 }
 else {
-	echo '<tr><td colspan="2">'.__('Dein Scout glaubt, dass dieser Spieler eine Stärke von %d erreichen kann.', number_format($schaetzungVomScout, 1, ',', '.')).'</td></tr>';
+	echo '<tr><td colspan="2">'.__('Dein Scout glaubt, dass dieser Spieler eine Stärke von %s erreichen kann.', number_format($schaetzungVomScout, 1, ',', '.')).'</td></tr>';
 }
 if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
 	if ($sql3['marktwert'] > 0) {
@@ -197,13 +196,12 @@ if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
 		echo '<tr><td colspan="2">'._('Der Vertrag des Spielers läuft aus, Du kannst ihn deshalb nicht mehr entlassen').'</td></tr>';
 	}
 	else {
-		echo '<tr><td colspan="2" class="link"><a href="/spieler_entlassen.php?id='.$sql3['ids'].'" onclick="return confirm('._('\'Bist Du sicher?\'').')">Für '.number_format($entlassungskosten, 0, ',', '.').' € entlassen</a></td></tr>';
+		echo '<tr><td colspan="2" class="link"><a href="/spieler_entlassen.php?id='.$sql3['ids'].'" onclick="return confirm(\''._('Bist Du sicher?').'\')">'.__('Für %s € entlassen', number_format($entlassungskosten, 0, ',', '.')).'</a></td></tr>';
 	}
 }
 ?>
 </tbody>
 </table>
-</p>
 <?php
 if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner' && $sql3['marktwert'] > 0) {
 	if (($sql3['spiele_verein'] > 5 && $alter_in_jahren < 34) OR ($sql3['spiele'] <= 6 && $alter_in_jahren < 34)) {
@@ -214,22 +212,22 @@ if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner' && $sql3['markt
 				if ($sql3['spiele_verein'] > 5 && $alter_in_jahren < 34) {
 					echo '<form action="/transfermarkt_aktion.php" method="post" accept-charset="utf-8">';
 					echo '<p><select id="aukTyp" name="typ" size="1">';
-					echo '<option value="Kauf">'._('Verkauf für').' '.number_format($sql3['marktwert'], 0, ',', '.').' €</option>';
-					echo '</select> <input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Jetzt verkaufen').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')" /></p>';
+					echo '<option value="Kauf">'.__('Verkauf für %s €', number_format($sql3['marktwert'], 0, ',', '.')).'</option>';
+					echo '</select> <input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Jetzt verkaufen').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')" /></p>';
 					echo '</form>';
 				}
 				if ($sql3['spiele'] <= 6 && $alter_in_jahren < 34) { // 6er-Leihgaben-Sperre
 					echo '<form action="/transfermarkt_aktion.php" method="post" accept-charset="utf-8">';
 					echo '<p><select id="aukTyp" name="typ" size="1">';
 					echo '<option value="999999">'._('zur Leihgabe (ohne Prämie)').'</option>';
-					echo '<option value="5000000">'._('zur Leihgabe (50.000 Prämie p.P.)').'</option>';
-					echo '<option value="10000000">'._('zur Leihgabe (100.000 Prämie p.P.)').'</option>';
-					echo '<option value="15000000">'._('zur Leihgabe (150.000 Prämie p.P.)').'</option>';
-					echo '<option value="20000000">'._('zur Leihgabe (200.000 Prämie p.P.)').'</option>';
-					echo '<option value="25000000">'._('zur Leihgabe (250.000 Prämie p.P.)').'</option>';
-					echo '<option value="30000000">'._('zur Leihgabe (300.000 Prämie p.P.)').'</option>';
-					echo '<option value="35000000">'._('zur Leihgabe (350.000 Prämie p.P.)').'</option>';
-					echo '</select> <input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Anbieten zur Leihgabe').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')" /></p>';
+					echo '<option value="5000000">'.__('zur Leihgabe (%s Prämie p.P.)', '50.000').'</option>';
+					echo '<option value="10000000">'.__('zur Leihgabe (%s Prämie p.P.)', '100.000').'</option>';
+					echo '<option value="15000000">'.__('zur Leihgabe (%s Prämie p.P.)', '150.000').'</option>';
+					echo '<option value="20000000">'.__('zur Leihgabe (%s Prämie p.P.)', '200.000').'</option>';
+					echo '<option value="25000000">'.__('zur Leihgabe (%s Prämie p.P.)', '250.000').'</option>';
+					echo '<option value="30000000">'.__('zur Leihgabe (%s Prämie p.P.)', '300.000').'</option>';
+					echo '<option value="35000000">'.__('zur Leihgabe (%s Prämie p.P.)', '350.000').'</option>';
+					echo '</select> <input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Anbieten zur Leihgabe').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')" /></p>';
 					echo '</form>';
 				}
 			}
@@ -244,7 +242,7 @@ if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner' && $sql3['markt
 					echo '<option value="Nein">'._('Nein, ich möchte nichts tun.').'</option>';
 					echo '<option value="Ja">'._('Ja, ich möchte den Spieler nicht weiter anbieten.').'</option>';
 					echo '</select></p>';
-					echo '<p><input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Absenden').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm('._('\'Bist Du sicher?\'').')" /></p>';
+					echo '<p><input type="hidden" name="spieler" value="'.$sql3['ids'].'" /><input type="submit" value="'._('Absenden').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')" /></p>';
 					echo '</form>';
 				}
 			}

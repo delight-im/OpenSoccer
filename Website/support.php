@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Support | Ballmanager.de</title>
+<title><?php echo _('Support'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .ungelesen td {
@@ -20,20 +20,20 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+		addInfoBox(__('Du bist noch bis zum %d Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team.').'</a>'));
 		include 'zz3.php';
 		exit;
 	}
 }
 // CHAT-SPERREN ENDE
 ?>
-<h1>Unser Support-Bereich</h1>
-<p style="text-align:right"><a href="/support.php?mark=read" class="pagenava" onclick="return confirm('Bist Du sicher?')">Alle als gelesen markieren</a> <a href="/support.php" class="pagenava">Support-Hauptseite</a> <a href="/supportAdd.php" class="pagenava">Neue Anfrage</a></p>
-<p>Du hast Vorschläge, wie wir den Ballmanager besser gestalten können? Du hast noch Fragen zum Spiel oder Du hast einen Fehler gefunden?</p>
-<p>Auf dieser Seite kannst Du Ideen und Fragen eintragen und die Einträge von anderen Usern bewerten und kommentieren. Vielen Dank für Deine Hilfe!</p>
-<h1>Anfragen durchsuchen</h1>
+<h1><?php echo _('Unser Support-Bereich'); ?></h1>
+<p style="text-align:right"><a href="/support.php?mark=read" class="pagenava" onclick="return confirm('<?php echo _('Bist Du sicher?'); ?>')"><?php echo _('Alle als gelesen markieren'); ?></a> <a href="/support.php" class="pagenava"><?php echo _('Support-Hauptseite'); ?></a> <a href="/supportAdd.php" class="pagenava"><?php echo _('Neue Anfrage'); ?></a></p>
+<p><?php echo _('Du hast Vorschläge, wie wir den Ballmanager besser gestalten können? Du hast noch Fragen zum Spiel oder Du hast einen Fehler gefunden?'); ?></p>
+<p><?php echo _('Auf dieser Seite kannst Du Ideen und Fragen eintragen und die Einträge von anderen Usern bewerten und kommentieren. Vielen Dank für Deine Hilfe!'); ?></p>
+<h1><?php echo _('Anfragen durchsuchen'); ?></h1>
 <form action="/support.php" method="get" accept-charset="utf-8">
-<p><input type="text" name="q" style="width:200px" /> <input type="submit" value="Suchen" /></p>
+<p><input type="text" name="q" style="width:200px" /> <input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
 <?php
 // ANFRAGE LÖSCHEN ANFANG
@@ -50,7 +50,7 @@ if (isset($_GET['del']) && ($_SESSION['status'] == 'Admin' OR $_SESSION['status'
 			$sql2 = mysql_query($sql1) or die(mysql_error());
 			$sql1 = "DELETE FROM ".$prefix."supportVotes WHERE request = ".$delID;
 			$sql2 = mysql_query($sql1) or die(mysql_error());
-			addInfoBox('Die ausgewählte Anfrage wurde vollständig gelöscht.');
+			addInfoBox(_('Die ausgewählte Anfrage wurde vollständig gelöscht.'));
 		}
 	}
 }
@@ -80,12 +80,12 @@ if (isset($_POST['category']) && isset($_POST['title']) && isset($_POST['descrip
 	$sql1 = "INSERT INTO ".$prefix."supportRequests (category, title, description, timeAdded, lastAction, author, visibilityLevel) VALUES ('".$newCategory."', '".$newTitle."', '".$newDescription."', ".time().", ".time().", '".$cookie_id."', ".$newVisibility.")";
 	$sql2 = mysql_query($sql1);
 	if ($sql2 == FALSE) {
-		addInfoBox('Sorry, Du kannst nicht zwei Anfragen mit dem gleichen Titel erstellen.');
+		addInfoBox(_('Sorry, Du kannst nicht zwei Anfragen mit dem gleichen Titel erstellen.'));
 	}
 	else {
 		$sql1 = "INSERT INTO ".$prefix."supportVotes (request, userID, vote) VALUES (".mysql_insert_id().", '".$cookie_id."', 1)";
 		$sql2 = mysql_query($sql1);
-		addInfoBox('Danke, Deine Anfrage wurde erstellt.');
+		addInfoBox(_('Danke, Deine Anfrage wurde erstellt.'));
 	}
 }
 // NEUE ANFRAGE ERSTELLEN ENDE
@@ -97,26 +97,26 @@ if (isset($_GET['q'])) {
 		$isSearchPage = TRUE;
 	}
 }
-if ($isSearchPage == TRUE) { echo '<h1>Aktuelle Anfragen zum Thema &quot;'.$q.'&quot;</h1>'; } else { echo '<h1>Aktuelle Anfragen</h1>'; }
+if ($isSearchPage == TRUE) { echo '<h1>'._('Aktuelle Anfragen zum Thema').' &quot;'.$q.'&quot;</h1>'; } else { echo '<h1>'._('Aktuelle Anfragen').'</h1>'; }
 if (isset($_GET['mark'])) {
 	if ($_GET['mark'] == 'read') {
 		$markRead1 = "INSERT IGNORE INTO ".$prefix."supportRead (userID, anfrageID) SELECT '".$cookie_id."' AS user, id FROM ".$prefix."supportRequests WHERE open = 1";
 		$markRead2 = mysql_query($markRead1);
 		if ($markRead2 == FALSE) {
-			addInfoBox('Es konnten nicht alle Themen als gelesen markiert werden (E073).');
+			addInfoBox(_('Es konnten nicht alle Themen als gelesen markiert werden (E073).'));
 		}
 		else {
 			//$_SESSION['last_forumneu_anzahl'] = 0;
-			addInfoBox('Alle Themen wurden als gelesen markiert.');
+			addInfoBox(_('Alle Themen wurden als gelesen markiert.'));
 		}
 	}
 }
 if (isset($_GET['msg'])) {
 	if ($_GET['msg'] == 'replied') {
-		addInfoBox('Danke, Dein Kommentar wurde gespeichert.');
+		addInfoBox(_('Danke, Dein Kommentar wurde gespeichert.'));
 	}
 	elseif ($_GET['msg'] == 'edited') {
-		addInfoBox('Danke, Dein Kommentar wurde geändert.');
+		addInfoBox(_('Danke, Dein Kommentar wurde geändert.'));
 	}
 }
 function time_rel_s($zeitstempel) {
@@ -140,9 +140,9 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Bewertung</th>
-<th scope="col">Anfrage</th>
-<th scope="col">Aktivität</th>
+<th scope="col"><?php echo _('Bewertung'); ?></th>
+<th scope="col"><?php echo _('Anfrage'); ?></th>
+<th scope="col"><?php echo _('Aktivität'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -163,7 +163,7 @@ $sql1 .= " ORDER BY open DESC, lastAction DESC LIMIT ".$start.", ".$eintraege_pr
 $sql2 = mysql_query($sql1);
 if ($sql2 == FALSE) { exit; }
 if (mysql_num_rows($sql2) == 0) {
-	echo '<tr><td colspan="3">Es gibt noch keine Anfragen. <a href="/supportAdd.php">Mache den Anfang!</a></td></tr>';
+	echo '<tr><td colspan="3">'.__('Es gibt noch keine Anfragen %s.', '<a href="/supportAdd.php">'._('Mache den Anfang!').'</a>').'</td></tr>';
 	echo '</tbody>';
 	echo '</table>';
 }
@@ -182,14 +182,14 @@ else {
 		if ($sql3['open'] != 1) {
 			echo '<td>&nbsp;</td><td colspan="2"><strong>';
 			if ($sql3['open'] == 0) {
-				echo 'Umgesetzt';
+				echo _('Umgesetzt');
 			}
 			else {
 				if ($sql3['category'] == 'Vorschlag') {
-					echo 'Abgelehnt';
+					echo _('Abgelehnt');
 				}
 				else {
-					echo 'Geklärt';
+					echo _('Geklärt');
 				}
 			}
 			echo ':</strong> <a href="/supportRequest.php?id='.id2secure($sql3['id']).'">'.$sql3['title'].'</a></td>';
@@ -197,18 +197,18 @@ else {
 		else {
 			echo '<td>';
 			if ($sql3['category'] != 'Vorschlag') {
-				echo '<img src="/images/balken/50.png" alt="Frage/Fehlerbericht" title="Frage / Fehlerbericht" />';
+				echo '<img src="/images/balken/50.png" alt="Frage/Fehlerbericht" title="'._('Frage / Fehlerbericht').'" />';
 			}
 			elseif (isset($listVoted[$sql3['id']])) {
 				$pVotes = round($sql3['pro']/($sql3['pro']+$sql3['contra'])*100);
-				echo '<img src="/images/balken/'.$pVotes.'.png" alt="'.$pVotes.'%" title="'.$pVotes.'% sind für diesen Vorschlag" />';
+				echo '<img src="/images/balken/'.$pVotes.'.png" alt="'.$pVotes.'%" title="'.$pVotes.'% '._('sind für diesen Vorschlag').'" />';
 			}
 			else {
-				echo '<img src="/images/balken/undefined.png" alt="???" title="Du hast diesen Vorschlag noch nicht bewertet" />';
+				echo '<img src="/images/balken/undefined.png" alt="???" title="'._('Du hast diesen Vorschlag noch nicht bewertet').'" />';
 			}
 			echo '</td>';
-			echo '<td class="link"><a href="/supportRequest.php?id='.id2secure($sql3['id']).'" title="Zur Anfrage mit Beschreibung">'.$sql3['title'].'</a></td>';
-			echo '<td class="link"><a href="/supportRequest.php?id='.id2secure($sql3['id']).'#lastComment" title="Zum letzten Kommentar">'.time_rel_s($sql3['lastAction']).'</a></td>';
+			echo '<td class="link"><a href="/supportRequest.php?id='.id2secure($sql3['id']).'" title="'._('Zur Anfrage mit Beschreibung').'">'.$sql3['title'].'</a></td>';
+			echo '<td class="link"><a href="/supportRequest.php?id='.id2secure($sql3['id']).'#lastComment" title="'._('Zum letzten Kommentar').'">'.time_rel_s($sql3['lastAction']).'</a></td>';
 		}
 		echo '</tr>';
 	}
@@ -219,8 +219,8 @@ else {
 	echo '<div class="pagebar">';
 	$wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS
 	$vorherige = $seite-1;
-	if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite=1">Erste</a> '; } else { echo '<span class="this-page">Erste</span>'; }
-	if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$vorherige.'">Vorherige</a> '; } else { echo '<span class="this-page">Vorherige</span> '; }
+	if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite=1">'._('Erste').'</a> '; } else { echo '<span class="this-page">'._('Erste').'</span>'; }
+	if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$vorherige.'">'._('Vorherige').'</a> '; } else { echo '<span class="this-page">'._('Vorherige').'</span> '; }
 	$naechste = $seite+1;
 	$vor4 = $seite-4; if ($vor4 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$vor4.'">'.$vor4.'</a> '; }
 	$vor3 = $seite-3; if ($vor3 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$vor3.'">'.$vor3.'</a> '; }
@@ -231,20 +231,20 @@ else {
 	$nach2 = $seite+2; if ($nach2 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$nach2.'">'.$nach2.'</a> '; }
 	$nach3 = $seite+3; if ($nach3 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$nach3.'">'.$nach3.'</a> '; }
 	$nach4 = $seite+4; if ($nach4 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$nach4.'">'.$nach4.'</a> '; }
-	if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$naechste.'">Nächste</a> '; } else { echo '<span class="this-page">Nächste</span> '; }
-	if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.ceil($wieviel_seiten).'">Letzte</a>'; } else { echo '<span clss="this-page">Letzte</span>'; }
+	if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.$naechste.'">'._('Nächste').'</a> '; } else { echo '<span class="this-page">'._('Nächste').'</span> '; }
+	if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?q='.$q.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 	echo '</div>';
 	// PAGE-NAVIGATION ENDE
 }
 ?>
-<h1>Aktive Manager in diesem Bereich</h1>
+<h1><?php echo _('Aktive Manager in diesem Bereich'); ?></h1>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col">Manager</th>
-<th scope="col" colspan="2">Antworten</th>
-<th scope="col">&quot;Guter Kommentar&quot;</th>
+<th scope="col"><?php echo _('Manager'); ?></th>
+<th scope="col" colspan="2"><?php echo _('Antworten'); ?></th>
+<th scope="col">&quot;<?php echo _('Guter Kommentar'); ?>&quot;</th>
 </tr>
 </thead>
 <tbody>
@@ -258,9 +258,9 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<tr>';
 	echo '<td>'.$counter.'.</td>';
 	echo '<td class="link">'.$displayUsername.'</td>';
-	echo '<td><b>'.$sql3['replies'].'</b> insgesamt</td>';
-	echo '<td><b>'.$sql3['fastReplies'].'</b> schnelle</td>';
-	echo '<td><b>'.$sql3['thanksReceived'].'</b> Stimmen erhalten</td>';
+	echo '<td><b>'.$sql3['replies'].'</b> '._('insgesamt').'</td>';
+	echo '<td><b>'.$sql3['fastReplies'].'</b> '._('schnelle').'</td>';
+	echo '<td><b>'.$sql3['thanksReceived'].'</b> '._('Stimmen erhalten').'</td>';
 	echo '</tr>';
 	$counter++;
 }
@@ -271,7 +271,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 $myRequests1 = "SELECT id, title FROM man_supportRequests WHERE author = '".$cookie_id."' ORDER BY id DESC LIMIT 0, 5";
 $myRequests2 = mysql_query($myRequests1);
 if (mysql_num_rows($myRequests2) > 0) {
-	echo '<h1>Meine letzten Anfragen</h1><ul>';
+	echo '<h1>'._('Meine letzten Anfragen').'</h1><ul>';
 	while ($myRequests3 = mysql_fetch_assoc($myRequests2)) {
 		echo '<li><a href="/supportRequest.php?id='.id2secure($myRequests3['id']).'">'.$myRequests3['title'].'</a></li>';
 	}
@@ -279,7 +279,7 @@ if (mysql_num_rows($myRequests2) > 0) {
 }
 ?>
 <?php } else { ?>
-<h1>Support</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Support'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

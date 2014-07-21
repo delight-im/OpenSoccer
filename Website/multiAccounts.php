@@ -15,25 +15,27 @@ echo '</form>';
 if (isset($_POST['connectAction']) && isset($_POST['user1ID']) && isset($_POST['user2ID'])) {
 	$tempUser1ID = mysql_real_escape_string(trim(strip_tags($_POST['user1ID'])));
 	$tempUser2ID = mysql_real_escape_string(trim(strip_tags($_POST['user2ID'])));
-	$markNotice = 'Das Team-Mitglied '.$cookie_username.' hat ';
 	if ($_POST['connectAction'] == 'create') {
 		$connectAction1 = "INSERT INTO ".$prefix."users_multis (user1, user2, found_time) VALUES ('".$tempUser1ID."', '".$tempUser2ID."', ".time()."),('".$tempUser2ID."', '".$tempUser1ID."', ".time().")";
 		$connectAction2 = mysql_query($connectAction1);
 		$multiChangesType = 'connect';
-		$markNotice .= _('die folgenden User als Multi-Accounts verknüpft:').'<br />';
+		$markNotice = _('Das Team-Mitglied %s hat die folgenden User als Multi-Accounts verknüpft:', $cookie_username).'<br />';
 		addInfoBox(_('Die beiden User wurden im System als Multi-Accounts verknüpft.'));
 	}
 	elseif ($_POST['connectAction'] == 'delete') {
 		$connectAction1 = "DELETE FROM ".$prefix."users_multis WHERE (user1 = '".$tempUser1ID."' AND user2 = '".$tempUser2ID."') OR (user1 = '".$tempUser2ID."' AND user2 = '".$tempUser1ID."')";
 		$connectAction2 = mysql_query($connectAction1);
 		$multiChangesType = 'unconnect';
-		$markNotice .= _('die Verknüpfung der folgenden User als Multi-Accounts gelöst:').'<br />';
+		$markNotice = _('Das Team-Mitglied %s hat die Verknüpfung der folgenden User als Multi-Accounts gelöst:', $cookie_username).'<br />';
 		addInfoBox(_('Die Verknüpfung der beiden User im System als Multi-Accounts wurde gelöst.'));
 	}
+    else {
+        throw new Exception('Unknown connect option: '.$_POST['connectAction']);
+    }
 	$multiChanges1 = "INSERT INTO ".$prefix."multiChanges (helfer, zeit, user1, user2, type) VALUES ('".$cookie_id."', ".time().", '".$tempUser1ID."', '".$tempUser2ID."', '".$multiChangesType."')";
 	$multiChanges2 = mysql_query($multiChanges1);
 	// ANDERE HELFER INFORMIEREN ANFANG
-	$markNotice .= '<a href="/manager.php?id='.$tempUser1ID.'">'._('User 1').'</a> + <a href="/manager.php?id='.$tempUser2ID.'">'._('User 2').'</a><br /><br />.'_('[Nachricht vom System]');
+	$markNotice .= '<a href="/manager.php?id='.$tempUser1ID.'">'._('User 1').'</a> + <a href="/manager.php?id='.$tempUser2ID.'">'._('User 2').'</a><br /><br />'._('[Nachricht vom System]');
 	$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('18a393b5e23e2b9b4da106b06d8235f3', '18a393b5e23e2b9b4da106b06d8235f3', 'Multi-Markierung', '".mysql_real_escape_string($markNotice)."', ".time().", '')";
 	$sql2 = mysql_query($sql1);
 	// ANDERE HELFER INFORMIEREN ENDE
@@ -45,7 +47,7 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 	$sql1 = "SELECT ids FROM ".$prefix."users WHERE username = '".$user1Name."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) {
-		addInfoBox(__('Der User %s konnte nicht gefunden werden.', $user1Name);
+		addInfoBox(__('Der User %s konnte nicht gefunden werden.', $user1Name));
 		include 'zz3.php';
 		exit;
 	}
@@ -56,7 +58,7 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 	$sql1 = "SELECT ids FROM ".$prefix."users WHERE username = '".$user2Name."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) {
-		addInfoBox(__('Der User %s konnte nicht gefunden werden.', $user2Name);
+		addInfoBox(__('Der User %s konnte nicht gefunden werden.', $user2Name));
 		include 'zz3.php';
 		exit;
 	}
@@ -94,13 +96,13 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 $sql1 = "SELECT found_time FROM ".$prefix."users_multis WHERE user1 = '".$user1ID."' AND user2 = '".$user2ID."'";
 $sql2 = mysql_query($sql1);
 if (mysql_num_rows($sql2) == 0) {
-	echo '<p>'._('Die beiden User %1$s und %2$s sind im System noch nicht verknüpft.', $user1Name, $user2Name).'</p>';
+	echo '<p>'.__('Die beiden User %1$s und %2$s sind im System noch nicht verknüpft.', $user1Name, $user2Name).'</p>';
 	echo '<p>'._('Wenn Du durch den IP-Vergleich der Meinung bist, dass es sich um Multi-Accounts handelt, kannst Du die beiden User jetzt im System verknüpfen.').'</p>';
 	echo '<form action="/multiAccounts.php?user1='.urlencode($user1Name).'&user2='.urlencode($user2Name).'" method="post" accept-charset="utf-8">';
 	echo '<input type="hidden" name="user1ID" value="'.$user1ID.'" />';
 	echo '<input type="hidden" name="user2ID" value="'.$user2ID.'" />';
 	echo '<input type="hidden" name="connectAction" value="create" />';
-	echo '<p><input type="submit" value="'._('Verknüpfung erstellen').'" onclick="return confirm('._('\'Bist Du sicher?\'').')" /></p>';
+	echo '<p><input type="submit" value="'._('Verknüpfung erstellen').'" onclick="return confirm(\''._('Bist Du sicher?').'\')" /></p>';
 	echo '</form>';
 }
 else {
@@ -111,14 +113,13 @@ else {
 	echo '<input type="hidden" name="user1ID" value="'.$user1ID.'" />';
 	echo '<input type="hidden" name="user2ID" value="'.$user2ID.'" />';
 	echo '<input type="hidden" name="connectAction" value="delete" />';
-	echo '<p><input type="submit" value="'._('Verknüpfung lösen').'" onclick="return confirm('._('\'Bist Du sicher?\'').')" /></p>';
+	echo '<p><input type="submit" value="'._('Verknüpfung lösen').'" onclick="return confirm(\''._('Bist Du sicher?').'\')" /></p>';
 	echo '</form>';
 }
 ?>
 <p></p>
-<h1><?php echo _('IP-Adressen %s Treffer', count($multiIPs)); ?></h1>
-<p><?php echo _('Die folgende Liste zeigt, wann die beiden User %1$s und %2$s mit welcher IP-Adresse eingeloggt waren. Wenn Du mit der Maus über ein Datum mit Uhrzeit fährst, siehst Du die Browser-Informationen dieses Nutzers.', $user1Name, $user2Name); ?> </p>
-<p>
+<h1><?php echo __('IP-Adressen (%d Treffer)', count($multiIPs)); ?></h1>
+<p><?php echo __('Die folgende Liste zeigt, wann die beiden User %1$s und %2$s mit welcher IP-Adresse eingeloggt waren. Wenn Du mit der Maus über ein Datum mit Uhrzeit fährst, siehst Du die Browser-Informationen dieses Nutzers.', $user1Name, $user2Name); ?> </p>
 <table>
 <thead>
 <tr class="odd">
@@ -165,7 +166,6 @@ foreach ($bothIPs as $bothIP=>$userData) {
 ?>
 </tbody>
 </table>
-</p>
 <?php
 } // if isset user1 AND isset user2
 else {

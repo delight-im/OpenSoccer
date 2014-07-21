@@ -82,7 +82,6 @@ function showSymbolIcon($which) {
 	return '<td style="width:22px; padding:2px 0 2px 4px;"><img src="/images/icon_'.$which.'.png" alt="O" width="18" style="width:18px; height:18px; border:0;" /></td>';
 }
 ?>
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -114,7 +113,6 @@ function showSymbolIcon($which) {
 <tr class="odd"><td colspan="4"><?php echo _('Erwarteter Kontostand am Ende der Saison'); ?> <sup>2)</sup>: <?php echo showKontostand($naechster_kontostand).' €'; ?></td></tr>
 </tbody>
 </table>
-</p>
 <p><sup>1)</sup> <?php echo _('Dieser Wert gibt den Kontostand an, den Dein Team direkt vor dem Saisonwechsel hatte, also am Ende der letzten Saison.'); ?></p>
 <p><sup>2)</sup> <?php echo _('Dieser Wert ist eine Hochrechnung für die gesamte Saison'); ?></p>
 <p><sup>3)</sup> <?php echo _('Lotto, Testspiele, Entlassungen, Sanktionen'); ?></p>

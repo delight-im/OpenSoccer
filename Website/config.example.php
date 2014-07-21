@@ -14,6 +14,9 @@ mysql_select_db($database['name']) or die ('Datenbank existiert nicht!');
 // remove the database variable's content again
 $database = NULL;
 
+// the installation date (UTC) of this game instance in YYYY-MM-DD format (ISO 8601)
+define('CONFIG_INSTALL_DATE', '2008-09-25');
+
 $config = array();
 $config['PHP_MAILER'] = false; // whether to use PHPMailer (with SMTP) instead of the mail() function
 if ($config['PHP_MAILER']) {

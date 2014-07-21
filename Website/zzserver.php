@@ -365,7 +365,7 @@ class GameTime {
     private static $matchDay;
 
     public static function init() {
-        $installDate = 1222336800;
+        $installDate = strtotime(CONFIG_INSTALL_DATE.' 12:00:00');
         // if it's summer time (DST) right now
         if (date('I') != 1) { $installDate += 3600; }
         $daysPassed = round((getTimestamp() - $installDate) / 86400);

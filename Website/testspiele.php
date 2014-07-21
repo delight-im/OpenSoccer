@@ -103,10 +103,10 @@ else {
 				$dl1 = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team2 = '".$cookie_team."' AND datum = '".$an3['datum']."'";
 				$dl2 = mysql_query($dl1);
 				// PROTOKOLL ANFANG
-				$formulierung = 'Dein Co-Trainer hat eine Anfrage für ein Testspiel abgelehnt.';
+				$formulierung = _('Dein Co-Trainer hat eine Anfrage für ein Testspiel abgelehnt.');
 				$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Termine', ".time().")";
 				$sql8 = mysql_query($sql7);
-				$formulierung = 'Der Co-Trainer von <a href="/team.php?id='.$cookie_team.'">'.$cookie_teamname.'</a> hat Dein Angebot für ein Testspiel abgelehnt.';
+				$formulierung = __('Der Co-Trainer von %s hat Dein Angebot für ein Testspiel abgelehnt.', '<a href="/team.php?id='.$cookie_team.'">'.$cookie_teamname.'</a>');
 				$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$an3['team1']."', '".$formulierung."', 'Termine', ".time().")";
 				$sql8 = mysql_query($sql7);
 				// PROTOKOLL ENDE
@@ -162,7 +162,7 @@ if ($an2a > 0) { echo '<p><table><thead><tr class="odd"><th scope="col">'._('Geg
         }
         // LIVE ODER ERGEBNIS ANFANG
         if ($an3['typ'] == $live_scoring_spieltyp_laeuft && date('d', time()) == date('d', $an3['datum'])) {
-            $ergebnis_live = 'LIVE';
+            $ergebnis_live = _('LIVE');
         }
         else {
             $ergebnis_live = $an3_ergebnis;

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Transfers | Ballmanager.de</title>
+<title><?php echo _('Transfers'); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .gebotDrueber {
@@ -17,8 +17,8 @@
 $addSql = "";
 $ligaGetValue = 'all';
 $teamGetValue = '';
-$ligaNav = '<p style="text-align:right"><a href="/lig_transfers.php?liga=own" class="pagenava">In eigene Liga</a></p>';
-$pageTitle = 'Transfers';
+$ligaNav = '<p style="text-align:right"><a href="/lig_transfers.php?liga=own" class="pagenava">'._('In eigene Liga').'</a></p>';
+$pageTitle = _('Transfers');
 if (isset($_GET['team'])) {
 	$teamGetValue = mysql_real_escape_string(trim(strip_tags($_GET['team'])));
 	if ($teamGetValue != '') {
@@ -28,7 +28,7 @@ if (isset($_GET['team'])) {
 			$getTeamName3 = mysql_fetch_assoc($getTeamName2);
 			$pageTitle = 'Transfers von '.$getTeamName3['name'];
 			$addSql = " WHERE a.bieter = '".$teamGetValue."' OR a.besitzer = '".$teamGetValue."'";
-			$ligaNav = '<p style="text-align:right"><a href="/team.php?id='.$teamGetValue.'" class="pagenava">Zum Teamprofil</a></p>';
+			$ligaNav = '<p style="text-align:right"><a href="/team.php?id='.$teamGetValue.'" class="pagenava">'._('Zum Teamprofil').'</a></p>';
 		}
 	}
 }
@@ -36,7 +36,7 @@ if (isset($_GET['liga'])) {
 	if ($_GET['liga'] == 'own') {
 		$ligaGetValue = 'own';
 		$addSql = " JOIN ".$prefix."teams AS c ON a.bieter = c.ids WHERE c.liga = '".$cookie_liga."'";
-		$ligaNav = '<p style="text-align:right"><a href="/lig_transfers.php" class="pagenava">In alle Ligen</a></p>';
+		$ligaNav = '<p style="text-align:right"><a href="/lig_transfers.php" class="pagenava">'._('In alle Ligen').'</a></p>';
 	}
 }
 echo '<h1>'.$pageTitle.'</h1>';
@@ -47,11 +47,11 @@ echo $ligaNav;
 <table>
 <thead>
 <tr class="odd">
-<th scope="col" title="Name des Spielers">Spieler</th>
-<th scope="col" title="Geschätzte Ablösesumme">Ablöse ca.</th>
-<th scope="col" title="Ablösesumme im Verhältnis zum Marktwert">&nbsp;</th>
-<th scope="col" title="Altes Team des Spielers">Von</th>
-<th scope="col" title="Neues Team des Spielers">Zu</th>
+<th scope="col" title="<?php echo _('Name des Spielers').'">'._('Spieler'); ?></th>
+<th scope="col" title="<?php echo _('Geschätzte Ablösesumme').'">'._('Ablöse ca.'); ?></th>
+<th scope="col" title="<?php echo _('Ablösesumme im Verhältnis zum Marktwert'); ?>">&nbsp;</th>
+<th scope="col" title="<?php echo _('Altes Team des Spielers').'">'._('Von'); ?></th>
+<th scope="col" title="<?php echo _('Neues Team des Spielers').'">'._('Zu'); ?></th>
 </tr>
 </thead>
 <tbody>
@@ -124,15 +124,15 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </tbody>
 </table>
 </p>
-<p><strong>Hinweis:</strong> Die Transfers sind nach Datum geordnet, d.h. der letzte Transfer steht ganz oben. In der Spalte hinter der Ablöse steht, ob die Ablöse über oder unter dem Marktwert lag.</p>
-<p><strong>Leihprämien:</strong> Bei Leihgaben kannst Du die Höhe der Prämie sehen, indem Du mit der Maus über das Wort &quot;Leihgabe&quot; fährst.</p>
-<p><strong>Tipp:</strong> Fahre mit der Maus über den Spielernamen, um das Datum mit genauer Uhrzeit zu sehen.</p>
+<p><strong><?php echo _('Hinweis:').'</strong> '._('Die Transfers sind nach Datum geordnet, d.h. der letzte Transfer steht ganz oben. In der Spalte hinter der Ablöse steht, ob die Ablöse über oder unter dem Marktwert lag.') ?></p>
+<p><strong><?php echo _('Leihprämien:').'</strong> '._('Bei Leihgaben kannst Du die Höhe der Prämie sehen, indem Du mit der Maus über das Wort &quot;Leihgabe&quot; fährst.') ?></p>
+<p><strong><?php echo _('Tipp:').'</strong> '._('Fahre mit der Maus über den Spielernamen, um das Datum mit genauer Uhrzeit zu sehen.') ?></p>
 <?php
 echo '<div class="pagebar">';
 $wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS
 $vorherige = $seite-1;
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite=1">Erste</a> '; } else { echo '<span class="this-page">Erste</span>'; }
-if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$vorherige.'">Vorherige</a> '; } else { echo '<span class="this-page">Vorherige</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite=1">'._('Erste').'</a> '; } else { echo '<span class="this-page">'._('Erste').'</span>'; }
+if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$vorherige.'">'._('Vorherige').'</a> '; } else { echo '<span class="this-page">'._('Vorherige').'</span> '; }
 $naechste = $seite+1;
 $vor4 = $seite-4; if ($vor4 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$vor4.'">'.$vor4.'</a> '; }
 $vor3 = $seite-3; if ($vor3 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$vor3.'">'.$vor3.'</a> '; }
@@ -143,12 +143,12 @@ $nach1 = $seite+1; if ($nach1 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['
 $nach2 = $seite+2; if ($nach2 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$nach2.'">'.$nach2.'</a> '; }
 $nach3 = $seite+3; if ($nach3 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$nach3.'">'.$nach3.'</a> '; }
 $nach4 = $seite+4; if ($nach4 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$nach4.'">'.$nach4.'</a> '; }
-if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$naechste.'">Nächste</a> '; } else { echo '<span class="this-page">Nächste</span> '; }
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.ceil($wieviel_seiten).'">Letzte</a>'; } else { echo '<span clss="this-page">Letzte</span>'; }
+if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.$naechste.'">'._('Nächste').'</a> '; } else { echo '<span class="this-page">'._('Nächste').'</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
 <?php } else { ?>
-<h1>Transfers</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Transfers'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

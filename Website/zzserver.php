@@ -4,6 +4,10 @@ header('content-type: text/html; charset=utf-8');
 ignore_user_abort(true);
 include 'config.php';
 
+// connect to the database
+mysql_connect(CONFIG_DATABASE_HOST, CONFIG_DATABASE_USERNAME, CONFIG_DATABASE_PASSWORD) or die ('Falsche MySQL-Daten!');
+mysql_select_db(CONFIG_DATABASE_NAME) or die ('Datenbank existiert nicht!');
+
 // ERROR REPORTING BEGIN
 error_reporting(E_ALL);
 ini_set('display_errors', 'stdout');

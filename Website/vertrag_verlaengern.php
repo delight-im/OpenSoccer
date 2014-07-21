@@ -89,9 +89,9 @@ if ($sql3['vertrag'] < getTimestamp('+22 days') && (($sql3['wiealt']+16.5909091*
 	$optionsList .= '<p><input type="radio" name="laufzeit" value="22"';
 	if ($isFirstPossibleOption) {
 		$optionsList .= ' checked="checked"';
-		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$d € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).' </p>';
+		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$s € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).'</p>';
 	}
-	$optionsList .= ' /> '.__('22 Tage mit %d € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[0])), 0, ',', '.')).'</p>';
+	$optionsList .= ' /> '.__('22 Tage mit %s € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[0])), 0, ',', '.')).'</p>';
 	$isFirstPossibleOption = FALSE;
 }
 if ($sql3['vertrag'] < getTimestamp('+44 days') && (($sql3['wiealt']+16.5909091*44)/365) < 35 && $sql3['moral'] >= 70) {
@@ -99,9 +99,9 @@ if ($sql3['vertrag'] < getTimestamp('+44 days') && (($sql3['wiealt']+16.5909091*
 	$optionsList .= '<p><input type="radio" name="laufzeit" value="44"';
 	if ($isFirstPossibleOption) {
 		$optionsList .= ' checked="checked"';
-		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$d € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).'</p>';
+		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$s € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).'</p>';
 	}
-	$optionsList .= ' /> '.__('44 Tage mit %d € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[1])), 0, ',', '.')).'</p>';
+	$optionsList .= ' /> '.__('44 Tage mit %s € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[1])), 0, ',', '.')).'</p>';
 	$isFirstPossibleOption = FALSE;
 }
 if ($sql3['vertrag'] < getTimestamp('+66 days') && (($sql3['wiealt']+16.5909091*66)/365) < 35 && $sql3['moral'] >= 90) {
@@ -109,9 +109,9 @@ if ($sql3['vertrag'] < getTimestamp('+66 days') && (($sql3['wiealt']+16.5909091*
 	$optionsList .= '<p><input type="radio" name="laufzeit" value="66"';
 	if ($isFirstPossibleOption) {
 		$optionsList .= ' checked="checked"';
-		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$d € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).' </p>';
+		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$s € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).'</p>';
 	}
-	$optionsList .= ' /> '.__('66 Tage mit %d € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[2])), 0, ',', '.')).'</p>';
+	$optionsList .= ' /> '.__('66 Tage mit %s € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[2])), 0, ',', '.')).'</p>';
 	$isFirstPossibleOption = FALSE;
 }
 ?>
@@ -125,7 +125,7 @@ if ($sql3['vertrag'] < getTimestamp('+66 days') && (($sql3['wiealt']+16.5909091*
 </form>
 <?php } else { ?>
 </form>
-<p><?php echo __('Der Spieler %s möchte seinen Vertrag zurzeit nicht verlängern und hat Dir deshalb kein Angebot gemacht. Vielleicht ist er unzufrieden in Deinem Team. Achte auf seine Moral!', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>'); ?> </p>
+<p><?php echo __('Der Spieler %s möchte seinen Vertrag zurzeit nicht verlängern und hat Dir deshalb kein Angebot gemacht. Vielleicht ist er unzufrieden in Deinem Team. Achte auf seine Moral!', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>'); ?></p>
 <p><a href="/vertraege.php"><?php echo _('Zurück zur Vertragsübersicht'); ?></a><br /><?php echo '<a href="/spieler.php?id='.$sql3['ids'].'">'._('Zurück zum Spielerprofil').'</a>'; ?></p>
 <?php } ?>
 <?php } else { ?>

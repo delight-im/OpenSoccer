@@ -131,7 +131,7 @@ if ((isset($_POST['lusername']) && isset($_POST['lpassword'])) OR $valid_bigpoin
 			// BIGPOINT NUTZERNAMEN ENDE
 			// MANAGER DER SAISON ANFANG
 			$_SESSION['mds_abgestimmt'] = TRUE; // vielleicht nicht moeglich
-			if ($cookie_spieltag <= 3) {
+			if (GameTime::getMatchDay() <= 3) {
 				$timeout = getTimestamp('-22 days');
 				if ($lologin4['regdate'] < $timeout) {
 					// WENN WAHLBERECHTIGT ANFANG

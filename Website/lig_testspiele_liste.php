@@ -22,7 +22,7 @@ else {
 	$chosenStamp = mktime(23, 00, 00, date('m', time()), date('d', time()), date('Y', time()));
 }
 for ($i = 1; $i <= 22; $i++) {
-	$abzugTemp = '-'.intval($cookie_spieltag-$i).' days';
+	$abzugTemp = '-'.intval(GameTime::getMatchDay()-$i).' days';
 	$abzug = getTimestamp($abzugTemp);
 	$abzugStamp = mktime(23, 00, 00, date('m', $abzug), date('d', $abzug), date('Y', $abzug));
 	$abzugStr = $i.'. Spieltag ('.date('d.m.Y', $abzugStamp).')';

@@ -18,12 +18,12 @@ $sonstiges_aus = 0;
 $sonstiges_ein = 0;
 $ausgaben_stadion = 0;
 // WERTE INITIALISIEREN ENDE
-$buchungsBeginn = endOfDay(getTimestamp('-'.$cookie_spieltag.' days'));
+$buchungsBeginn = endOfDay(getTimestamp('-'.GameTime::getMatchDay().' days'));
 $spe1 = "SELECT verwendungszweck, SUM(betrag), AVG(betrag) FROM ".$prefix."buchungen WHERE team = '".$cookie_team."' AND zeit > ".$buchungsBeginn." AND betrag != 0 GROUP BY verwendungszweck";
 $spe2 = mysql_query($spe1);
 while ($spe3 = mysql_fetch_assoc($spe2)) {
 	switch ($spe3['verwendungszweck']) {
-		case 'Sponsoring': if ($cookie_spieltag != 0) { $sponsor_einkommen = $spe3['AVG(betrag)']*22; } break;
+		case 'Sponsoring': if (GameTime::getMatchDay() != 0) { $sponsor_einkommen = $spe3['AVG(betrag)']*22; } break;
 		case 'Transfersteuer': $abloesesteuer3 = -$spe3['SUM(betrag)']; break;
 		case 'Regenerations-Camp': $fitnesstrainer3 = -$spe3['SUM(betrag)']; break;
 		case 'Physiotherapeut': $physiotherapeut = -$spe3['SUM(betrag)']; break;
@@ -40,8 +40,8 @@ while ($spe3 = mysql_fetch_assoc($spe2)) {
 	}
 }
 // HOCHRECHNUNG FUER GANZE SAISON ANFANG
-$leihPraemien_aus = $leihPraemien_aus/$cookie_spieltag*22;
-$leihPraemien_ein = $leihPraemien_ein/$cookie_spieltag*22;
+$leihPraemien_aus = $leihPraemien_aus/GameTime::getMatchDay()*22;
+$leihPraemien_ein = $leihPraemien_ein/GameTime::getMatchDay()*22;
 // HOCHRECHNUNG FUER GANZE SAISON ENDE
 $daten1 = "SELECT jugendarbeit, fanbetreuer, scout, konto, vorjahr_konto, stadion_aus, tv_ein, fanaufkommen FROM ".$prefix."teams WHERE ids = '".$cookie_team."'";
 $daten2 = mysql_query($daten1);

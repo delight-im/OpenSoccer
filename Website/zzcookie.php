@@ -29,8 +29,6 @@ else {
 	$cookie_liga = '';
 	$cookie_team = '';
 	$cookie_teamname = '';
-	$cookie_saison = 0;
-	$cookie_spieltag = 0;
 	$cookie_scout = 0;
 }
 if ($loggedin == 1) {

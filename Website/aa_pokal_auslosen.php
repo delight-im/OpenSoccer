@@ -1,13 +1,13 @@
 <?php
 if (!isset($_GET['mode'])) { include 'zzserver.php'; }
-if ($cookie_spieltag < 2 OR $cookie_spieltag > 21) { exit; }
+if (GameTime::getMatchDay() < 2 OR GameTime::getMatchDay() > 21) { exit; }
 if (date('H', time()) == 18 OR date('H', time()) == 19) { exit; } // Live-Spiele
 $plan1 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE typ = 'Pokal' AND simuliert = 0";
 $plan2 = mysql_query($plan1);
 $plan2a = mysql_result($plan2, 0);
 if ($plan2a > 0) { exit; } // wenn noch ausstehende Spiele da sind, abbrechen
 $startzeit = mktime(19, 0, 0, date('m', time()), date('d', time()), date('Y', time()));
-$startzeit = getTimestamp('+'.intval(4-$cookie_spieltag).' days', $startzeit); // erster Pokal-Spieltag ist der 4. Liga-Spieltag
+$startzeit = getTimestamp('+'.intval(4-GameTime::getMatchDay()).' days', $startzeit); // erster Pokal-Spieltag ist der 4. Liga-Spieltag
 // WELCHE RUNDE ANFANG
 $wrij1 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE typ = 'Pokal' AND simuliert = 1";
 $wrij2 = mysql_query($wrij1);

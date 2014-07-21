@@ -356,11 +356,32 @@ function hideTeamCode($text, $userStatus='Benutzer') {
 function cleanCSSclass($text) {
 	return preg_replace('/[^a-z0-9]/i', '_', $text);
 }
-// BERECHNUNG VON SPIELTAG UND SAISON MIT FESTEM ANHALTSPUNKT ANFANG
-$anhaltsPunkt = date('I') == 1 ? 1260352800 : 1260356400; // 09 December 2009 12:00:00 (Spieltag 1 von Saison 20)
-$differenz = round((getTimestamp()-$anhaltsPunkt)/86400); // Tage nach diesem Anhaltspunkt
-$vergangeneSaisons = floor($differenz/22);
-$cookie_spieltag = $differenz-$vergangeneSaisons*22+1;
-$cookie_saison = 20+$vergangeneSaisons;
-// BERECHNUNG VON SPIELTAG UND SAISON MIT FESTEM ANHALTSPUNKT ENDE
+
+class GameTime {
+
+    const MATCH_DAYS_PER_SEASON = 22;
+
+    private static $season;
+    private static $matchDay;
+
+    public static function init() {
+        $installDate = 1222336800;
+        // if it's summer time (DST) right now
+        if (date('I') != 1) { $installDate += 3600; }
+        $daysPassed = round((getTimestamp() - $installDate) / 86400);
+        self::$season = floor($daysPassed / self::MATCH_DAYS_PER_SEASON);
+        self::$matchDay = $daysPassed - self::$season * self::MATCH_DAYS_PER_SEASON + 1;
+    }
+
+    public static function getSeason() {
+        return self::$season;
+    }
+
+    public static function getMatchDay() {
+        return self::$matchDay;
+    }
+
+}
+GameTime::init();
+
 ?>

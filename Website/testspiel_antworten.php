@@ -22,8 +22,8 @@ function getTestspielPreis($liga) {
 	}
 }
 function isFriendlyDateValid($matchTime) {
-    global $cookie_spieltag;
-    return $matchTime > time() && $matchTime < (time() + 3600 * 24 * (22 - $cookie_spieltag));
+    global GameTime::getMatchDay();
+    return $matchTime > time() && $matchTime < (time() + 3600 * 24 * (22 - GameTime::getMatchDay()));
 }
 $team = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 $typ = mysql_real_escape_string(trim(strip_tags($_GET['typ'])));

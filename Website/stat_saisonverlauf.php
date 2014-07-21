@@ -7,7 +7,7 @@
 <p><?php echo _('Dieses Liniendiagramm zeigt die Entwicklung Deines Tabellenplatzes in der aktuellen Saison. Hinweis: Die Daten können erst nach zwei Spielen angezeigt werden.'); ?></p>
 <p>
 <?php
-$torj1 = "SELECT spieltag, platz FROM ".$prefix."geschichte_tabellen WHERE liga = '".$cookie_liga."' AND saison = ".$cookie_saison." AND team = '".$cookie_teamname."' ORDER BY spieltag ASC";
+$torj1 = "SELECT spieltag, platz FROM ".$prefix."geschichte_tabellen WHERE liga = '".$cookie_liga."' AND saison = ".GameTime::getSeason()." AND team = '".$cookie_teamname."' ORDER BY spieltag ASC";
 $torj2 = mysql_query($torj1);
 if (mysql_num_rows($torj2) >= 2) {
 	$wertemenge = '';

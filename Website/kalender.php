@@ -19,7 +19,7 @@ else {
 	$chosenTeam = $cookie_teamname;
 }
 ?>
-<h1><?php echo __('Saison %d', $cookie_saison); ?> - <?php echo __('Spiele von %s', $chosenTeam); ?></h1>
+<h1><?php echo __('Saison %d', GameTime::getSeason()); ?> - <?php echo __('Spiele von %s', $chosenTeam); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('team_calender');
@@ -75,7 +75,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 		echo '<td>&nbsp;</td>';
 	}
 	else { // neuer Tag
-		$currentSpieltag = $cookie_spieltag-round((time()-$sql3['datum'])/86400);
+		$currentSpieltag = GameTime::getMatchDay()-round((time()-$sql3['datum'])/86400);
 		echo '<td style="font-weight:bold;">'.$currentDate.'</td>';
 		echo '<td colspan="3" style="font-weight:bold;">Spieltag '.$currentSpieltag.'</td></tr><tr><td>&nbsp;</td>'; // Zeile mit Spieltag einschieben
 		$counter++; // Zeilen-Counter erhöhen

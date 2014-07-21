@@ -113,12 +113,12 @@ if ($cookie_team != '__'.$cookie_id) {
 		?>
 	</a></td></tr>
 	<?php
-	if ($cookie_spieltag < 22) {
-		$daysUntilNextYouth = intval($cookie_spieltag % 3);
+	if (GameTime::getMatchDay() < 22) {
+		$daysUntilNextYouth = intval(GameTime::getMatchDay() % 3);
 		switch ($daysUntilNextYouth) {
-			case 2: $nextYouth = _('morgen'); $nextYouthDay = $cookie_spieltag+1; break;
-			case 1: $nextYouth = _('übermorgen'); $nextYouthDay = $cookie_spieltag+2; break;
-			case 0: $nextYouth = _('heute'); $nextYouthDay = $cookie_spieltag; break;
+			case 2: $nextYouth = _('morgen'); $nextYouthDay = GameTime::getMatchDay()+1; break;
+			case 1: $nextYouth = _('übermorgen'); $nextYouthDay = GameTime::getMatchDay()+2; break;
+			case 0: $nextYouth = _('heute'); $nextYouthDay = GameTime::getMatchDay(); break;
             default: throw new Exception('Invalid next youth index: '.$daysUntilNextYouth);
 		}
 	}
@@ -138,7 +138,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		}
 		?>
 	</a></td></tr>
-	<tr><td colspan="2"><?php echo '<img style="vertical-align: middle;" alt="Systemzeit" src="/images/clock.gif" width="16" /> '.__('Saison %d', $cookie_saison).' &middot; '.__('Spieltag %d', $cookie_spieltag).' &middot; '.__('%s Uhr', date('d.m.Y, H:i')); ?></td></tr>
+	<tr><td colspan="2"><?php echo '<img style="vertical-align: middle;" alt="Systemzeit" src="/images/clock.gif" width="16" /> '.__('Saison %d', GameTime::getSeason()).' &middot; '.__('Spieltag %d', GameTime::getMatchDay()).' &middot; '.__('%s Uhr', date('d.m.Y, H:i')); ?></td></tr>
 	</tbody>
 	</table>
 	<?php
@@ -222,14 +222,14 @@ else {
 					addInfoBox(_('Sorry, ein anderer Manager war leider schneller: Er hat Dir das Team weggeschnappt! Bitte versuche es mit einem anderen Team ...'));
 				}
 				else {
-					$maxFrische = floor(98.5-1.75*$cookie_spieltag);
+					$maxFrische = floor(98.5-1.75*GameTime::getMatchDay());
 					$tu1 = "UPDATE ".$prefix."teams SET konto = 5000000, vorjahr_konto = 5000000, meisterschaften = 0, pokalsiege = 0, cupsiege = 0, friendlies = 0, friendlies_ges = 0 WHERE ids = '".$newUser_selectTeam."'";
 					$tu2 = mysql_query($tu1);
 					// SPIELER VOM TRANSFERMARKT HOLEN ANFANG
 					$tm1 = "DELETE FROM ".$prefix."transfermarkt WHERE besitzer = '".$newUser_selectTeam."'";
 					$tm2 = mysql_query($tm1);
 					$tm3 = "UPDATE ".$prefix."spieler SET transfermarkt = 0, verletzung = 0";
-					if ($cookie_spieltag < 22) {
+					if (GameTime::getMatchDay() < 22) {
 						$tm3 .= ", frische = ".$maxFrische;
 					}
 					$tm3 .= " WHERE team = '".$newUser_selectTeam."'";

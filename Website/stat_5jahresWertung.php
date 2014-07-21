@@ -21,11 +21,11 @@
 <th scope="col">&nbsp;</th>
 <th scope="col"><?php echo _('Liga'); ?></th>
 <th scope="col"><?php echo _('GES'); ?></th>
-<th scope="col"><?php echo $cookie_saison; ?></th>
-<th scope="col"><?php echo intval($cookie_saison-1); ?></th>
-<th scope="col"><?php echo intval($cookie_saison-2); ?></th>
-<th scope="col"><?php echo intval($cookie_saison-3); ?></th>
-<th scope="col"><?php echo intval($cookie_saison-4); ?></th>
+<th scope="col"><?php echo GameTime::getSeason(); ?></th>
+<th scope="col"><?php echo intval(GameTime::getSeason()-1); ?></th>
+<th scope="col"><?php echo intval(GameTime::getSeason()-2); ?></th>
+<th scope="col"><?php echo intval(GameTime::getSeason()-3); ?></th>
+<th scope="col"><?php echo intval(GameTime::getSeason()-4); ?></th>
 </tr>
 </thead>
 <tbody>

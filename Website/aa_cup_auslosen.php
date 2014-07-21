@@ -6,7 +6,7 @@ $landToSimulate3 = mysql_fetch_assoc($landToSimulate2);
 $landToSimulate4 = mysql_real_escape_string($landToSimulate3['land']);
 $sql1 = "UPDATE ".$prefix."ligen SET lastCupSelection = ".time()." WHERE land = '".$landToSimulate4."'";
 mysql_query($sql1);
-if ($cookie_spieltag < 2 OR $cookie_spieltag > 22) { exit; }
+if (GameTime::getMatchDay() < 2 OR GameTime::getMatchDay() > 22) { exit; }
 if (date('H', time()) == 10 OR date('H', time()) == 11) { exit; } // Live-Spiele
 $landCnt1 = "SELECT simuliert FROM ".$prefix."spiele WHERE typ = 'Cup' AND land = '".$landToSimulate4."'";
 $landCnt2 = mysql_query($landCnt1);
@@ -16,7 +16,7 @@ while ($landCnt3 = mysql_fetch_assoc($landCnt2)) {
 }
 if ($landCnt[0] > 0) { exit; } // wenn noch ausstehende Spiele da sind, abbrechen
 $startzeit = mktime(11, 0, 0, date('m', time()), date('d', time()), date('Y', time()));
-$startzeit = getTimestamp('+'.intval(4-$cookie_spieltag).' days', $startzeit); // erster Cup-Spieltag ist der 4. Liga-Spieltag
+$startzeit = getTimestamp('+'.intval(4-GameTime::getMatchDay()).' days', $startzeit); // erster Cup-Spieltag ist der 4. Liga-Spieltag
 // WELCHE RUNDE ANFANG
 switch ($landCnt[1]) {
 	case 0: $naechste_runde = 1; break; // noch kein Spiel

@@ -1135,7 +1135,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if ($to_simulate == 'Pokal') {
 		$pokalNurFuerSQL = ", pokalNurFuer = team";
 	}
-	if ($cookie_spieltag >= 22) { // Spieler ermüden am letzten Spieltag nicht mehr
+	if (GameTime::getMatchDay() >= 22) { // Spieler ermüden am letzten Spieltag nicht mehr
 		$erschoepungswert1 = 0;
 		$erschoepungswert2 = 0;
 	}
@@ -1165,7 +1165,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 				// TORE ENDE
 				// VERLETZUNGEN ANFANG
 				if (count($frischeWerteTeam1) == 0) { $frischeAvgTeam1 = 0; } else { $frischeAvgTeam1 = array_sum($frischeWerteTeam1)/count($frischeWerteTeam1); }
-				if ($cookie_spieltag < 3 || $cookie_spieltag >= 22) { $frischeAvgTeam1 = 100; } // an den ersten beiden Spieltagen und am letzten keine Verletzungen
+				if (GameTime::getMatchDay() < 3 || GameTime::getMatchDay() >= 22) { $frischeAvgTeam1 = 100; } // an den ersten beiden Spieltagen und am letzten keine Verletzungen
 				$risikoFuerVerletzungTeam1 = floor((100-$frischeAvgTeam1)*1.35);
 				if (Chance_Percent($risikoFuerVerletzungTeam1)) {
 					asort($verletzungenVorauswahlTeam1, SORT_NUMERIC);
@@ -1227,7 +1227,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 				// TORE ENDE
 				// VERLETZUNGEN ANFANG
 				if (count($frischeWerteTeam2) == 0) { $frischeAvgTeam2 = 0; } else { $frischeAvgTeam2 = array_sum($frischeWerteTeam2)/count($frischeWerteTeam2); }
-				if ($cookie_spieltag < 3 || $cookie_spieltag >= 22) { $frischeAvgTeam2 = 100; } // an den ersten beiden Spieltagen und am letzten keine Verletzungen
+				if (GameTime::getMatchDay() < 3 || GameTime::getMatchDay() >= 22) { $frischeAvgTeam2 = 100; } // an den ersten beiden Spieltagen und am letzten keine Verletzungen
 				$risikoFuerVerletzungTeam2 = floor((100-$frischeAvgTeam2)*1.35);
 				if (Chance_Percent($risikoFuerVerletzungTeam2)) {
 					asort($verletzungenVorauswahlTeam2, SORT_NUMERIC);

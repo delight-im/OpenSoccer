@@ -37,13 +37,13 @@ else {
 	$temp_liga = '9bf31c7ff062936a96d3c8bd1f8f2ff3';
 }
 // ERGEBNISSE FUER TAG DAVOR ODER DANACH ANFANG
-$slideResults = $cookie_spieltag;
+$slideResults = GameTime::getMatchDay();
 $slide = 0;
 if (isset($_GET['slide'])) {
 	$slide = intval($_GET['slide']);
-	$slideResults = $cookie_spieltag+$slide;
+	$slideResults = GameTime::getMatchDay()+$slide;
 	if ($slideResults < 1 OR $slideResults > 22) {
-		$slideResults = $cookie_spieltag;
+		$slideResults = GameTime::getMatchDay();
 		$slide = 0;
 	}
 }
@@ -106,13 +106,13 @@ if (file_exists($tmp_dateiname)) {
 if ($temp == FALSE) {
 ?>
 <?php
-if ($cookie_spieltag > 11) { // Hinrunden-Tabelle der aktuellen Saison
+if (GameTime::getMatchDay() > 11) { // Hinrunden-Tabelle der aktuellen Saison
 	$linkText = _('Hinrunde');
-	$linkURL = '/stat_geschichte.php?saison_spieltag='.$cookie_saison.'-11&liga='.$temp_liga;
+	$linkURL = '/stat_geschichte.php?saison_spieltag='.GameTime::getSeason().'-11&liga='.$temp_liga;
 }
 else { // End-Tabelle der letzten Saison
 	$linkText = _('Letzte Saison');
-	$linkURL = '/stat_geschichte.php?saison_spieltag='.intval($cookie_saison-1).'-22&liga='.$temp_liga;
+	$linkURL = '/stat_geschichte.php?saison_spieltag='.intval(GameTime::getSeason()-1).'-22&liga='.$temp_liga;
 }
 $tmp_liga_cache = '';
 $tmp_liga_cache .= '
@@ -229,7 +229,7 @@ echo $tmp_liga_cache;
 	<input type="hidden" name="liga" value="<?php echo $temp_liga; ?>" /><select name="slide" size="1" style="width:120px">
 		<?php
 		for ($i = 1; $i <= 22; $i++) {
-			$slideSteps = intval($i-$cookie_spieltag);
+			$slideSteps = intval($i-GameTime::getMatchDay());
 			echo '<option value="'.$slideSteps.'"';
 			if ($i == $slideResults) { echo ' selected="selected"'; }
 			echo '>Spieltag '.$i.'</option>';

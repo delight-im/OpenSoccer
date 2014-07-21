@@ -8,10 +8,10 @@ verdient? Welcher Manager hat in der abgelaufenen Saison das Beste aus seinem Te
 <p><?php echo _('Es können leider nur Manager teilnehmen, die schon mindestens 22 Tage lang dabei sind.'); ?></p>
 <?php
 setTaskDone('check_mds');
-$schon_gewaehlt1 = "SELECT COUNT(*) FROM ".$prefix."users_mds_sieger WHERE saison = ".$cookie_saison;
+$schon_gewaehlt1 = "SELECT COUNT(*) FROM ".$prefix."users_mds_sieger WHERE saison = ".GameTime::getSeason();
 $schon_gewaehlt2 = mysql_query($schon_gewaehlt1);
 $schon_gewaehlt3 = mysql_result($schon_gewaehlt2, 0);
-if ($cookie_spieltag <= 3 && $schon_gewaehlt3 == 0) {
+if (GameTime::getMatchDay() <= 3 && $schon_gewaehlt3 == 0) {
 $timeout = getTimestamp('-22 days');
 $sql1 = "SELECT regdate FROM ".$prefix."users WHERE ids = '".$cookie_id."'";
 $sql2 = mysql_query($sql1);
@@ -147,12 +147,12 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if (in_array($sql3['team'], $multiListe)) { continue; }
 	$sec_id = md5('29'.$cookie_id.'1992'); // hash damit link nur fuer diesen user gueltig ist
 	// LIGA-PLATZIERUNG VOM LETZTEN JAHR HOLEN ANFANG
-	$lo1 = "SELECT platz, punkte FROM ".$prefix."geschichte_tabellen WHERE liga = '".$sql3['vorjahr_liga']."' AND saison = ".intval($cookie_saison-1)." AND spieltag = 22 AND team = '".mysql_real_escape_string($sql3['name'])."'";
+	$lo1 = "SELECT platz, punkte FROM ".$prefix."geschichte_tabellen WHERE liga = '".$sql3['vorjahr_liga']."' AND saison = ".intval(GameTime::getSeason()-1)." AND spieltag = 22 AND team = '".mysql_real_escape_string($sql3['name'])."'";
 	$lo2 = mysql_query($lo1);
 	$lo3 = mysql_fetch_assoc($lo2);
 	// LIGA-PLATZIERUNG VOM LETZTEN JAHR HOLEN ENDE
 	if ($counter % 2 == 1) { echo '<tr>'; } else { echo '<tr class="odd">'; }
-	$link_zur_tabelle = '/stat_geschichte.php?saison_spieltag='.intval($cookie_saison-1).'-22&liga='.$sql3['vorjahr_liga'];
+	$link_zur_tabelle = '/stat_geschichte.php?saison_spieltag='.intval(GameTime::getSeason()-1).'-22&liga='.$sql3['vorjahr_liga'];
 	$bilanz = round($sql3['gewinnGeld']/1000000);
 	if ($bilanz > 0) { $bilanz = '+'.$bilanz; }
 	echo '<td>'.displayUsername($sql3['username'], $sql3['ids']).' (<a href="/team.php?id='.$sql3['team'].'">'.$sql3['name'].'</a>)</td>';
@@ -166,16 +166,16 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-<?php } ?>
 <?php
-} // cookie_spieltag
+}
+}
 else {
 	// AUSWERTUNG ANFANG
 	$sql1 = "SELECT a.manager, b.username, (COUNT(*)/(SELECT COUNT(*) FROM ".$prefix."users_mds)*100) AS prozent FROM ".$prefix."users_mds AS a JOIN ".$prefix."users AS b ON a.manager = b.ids GROUP BY a.manager ORDER BY prozent DESC, b.regdate DESC LIMIT 0, 1";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) == 1) {
 		$sql3 = mysql_fetch_assoc($sql2);
-		$sql4 = "INSERT INTO ".$prefix."users_mds_sieger (saison, ids, username, stimmen) VALUES (".$cookie_saison.", '".$sql3['manager']."', '".mysql_real_escape_string($sql3['username'])."', ".$sql3['prozent'].")";
+		$sql4 = "INSERT INTO ".$prefix."users_mds_sieger (saison, ids, username, stimmen) VALUES (".GameTime::getSeason().", '".$sql3['manager']."', '".mysql_real_escape_string($sql3['username'])."', ".$sql3['prozent'].")";
 		$sql5 = mysql_query($sql4);
 		$sql6 = "TRUNCATE TABLE ".$prefix."users_mds";
 		$sql7 = mysql_query($sql6);

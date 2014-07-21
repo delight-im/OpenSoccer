@@ -140,7 +140,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
     	// WEITERE SPIELERDATEN HOLEN ENDE
         $vertragsende = endOfDay(getTimestamp('+29 days')); // 29 Tage
 		$neuesGehalt = round(pow(($sql3['betrag_highest']/1000), (1.385+0.006*3)));
-        $sql4 = "UPDATE ".$prefix."spieler SET transfermarkt = 0, leiher = 'keiner', vertrag = ".$vertragsende.", gehalt = ".$neuesGehalt.", startelf_Liga = 0, startelf_Pokal = 0, startelf_Cup = 0, startelf_Test = 0, spiele_verein = 0, moral = 100, frische = ".getRegularFreshness($cookie_spieltag).", team = '".$sql3['bieter_highest']."' WHERE ids = '".$sql3['spieler']."'";
+        $sql4 = "UPDATE ".$prefix."spieler SET transfermarkt = 0, leiher = 'keiner', vertrag = ".$vertragsende.", gehalt = ".$neuesGehalt.", startelf_Liga = 0, startelf_Pokal = 0, startelf_Cup = 0, startelf_Test = 0, spiele_verein = 0, moral = 100, frische = ".getRegularFreshness(GameTime::getMatchDay()).", team = '".$sql3['bieter_highest']."' WHERE ids = '".$sql3['spieler']."'";
         $sql5 = mysql_query($sql4);
         $move1 = "INSERT INTO ".$prefix."transfers (spieler, besitzer, bieter, datum, gebot, damaligerWert, spiele_verein, damaligeStaerke) VALUES ('".$sql3['spieler']."', '".$sql3['besitzer']."', '".$sql3['bieter_highest']."', ".time().", ".$sql3['betrag_highest'].", ".$getmanager3['marktwert'].", ".$getmanager3['spiele_verein'].", ".$getmanager3['staerke'].")";
         $move2 = mysql_query($move1);

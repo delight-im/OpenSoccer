@@ -90,7 +90,7 @@ $alter_in_jahren = floor($sql3['wiealt']/365);
 echo '<tr><td>Alter</td><td>'.$alter_in_jahren.' Jahre</td></tr>';
 echo '<tr class="odd"><td>'._('Stärke').'</td><td>'.number_format($sql3['staerke'], 1, ',', '.').'</td></tr>';
 if ($sql3['team'] == 'frei') {
-	$sql3['frische'] = getRegularFreshness($cookie_spieltag);
+	$sql3['frische'] = getRegularFreshness(GameTime::getMatchDay());
 }
 echo '<tr><td>'._('Frische').'</td><td><img src="/images/balken/'.round($sql3['frische']).'.png" alt="'.round($sql3['frische']).'%" title="'.round($sql3['frische']).'%" width="104" /></td></tr>';
 echo '<tr class="odd"><td>'._('Moral').'</td><td><img src="/images/balken/'.round($sql3['moral']).'.png" alt="'.round($sql3['moral']).'%" title="'.round($sql3['moral']).'%" width="104" /></td></tr>';

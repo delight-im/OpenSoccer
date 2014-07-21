@@ -17,7 +17,7 @@ function choosePosition() {
 // KONFIGURATION ANFANG
 $in_33_tagen = endOfDay(getTimestamp('+33 days'));
 $spieltage_mit_aktion = array(3, 6, 9, 12, 15, 18, 21);
-if (!in_array($cookie_spieltag, $spieltage_mit_aktion)) { exit; }
+if (!in_array(GameTime::getMatchDay(), $spieltage_mit_aktion)) { exit; }
 $datum_stamp = mktime(0, 0, 0, date('m', time()), date('d', time()), date('Y', time()));
 $datum_stamp_alt = getTimestamp('-36 hours', $datum_stamp); // vor 1,5 Tagen
 $vor1 = "SELECT name FROM ".$prefix."namen_pool WHERE typ = 1";

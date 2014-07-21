@@ -207,7 +207,7 @@ if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 		$zm2a = mysql_result($zm2, 0);
 		if ($_GET['id'] != $cookie_id) {
 			if ($zm2a == 0) {
-				$gesp3_noch = 21-$cookie_spieltag;
+				$gesp3_noch = 21-GameTime::getMatchDay();
 				if ($gesp3_noch < 3) {
 					echo '<h1>Testspiel vereinbaren</h1><p><strong>Zu spät:</strong> In dieser Saison können leider keine Testspiele mehr vereinbart werden.</p>';
 				}

@@ -15,7 +15,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 			$tore = $sql6['tore'];
 			$gegentore = $sql6['gegentore'];
 			$in1 = "INSERT INTO ".$prefix."geschichte_tabellen (saison, spieltag, liga, team, platz, punkte, tore, gegentore) ";
-			$in1 .= "VALUES (".$cookie_saison.", ".$cookie_spieltag.", '".$sql3['ids']."', '".$team."', ".$counter.", ".$punkte.", ".$tore.", ".$gegentore.")";
+			$in1 .= "VALUES (".GameTime::getSeason().", ".GameTime::getMatchDay().", '".$sql3['ids']."', '".$team."', ".$counter.", ".$punkte.", ".$tore.", ".$gegentore.")";
 			$in2 = mysql_query($in1);
 		}
         $counter++;

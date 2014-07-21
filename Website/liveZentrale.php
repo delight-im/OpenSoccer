@@ -2,7 +2,7 @@
 <title><?php echo _('LIVE-Zentrale'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<?php if ($live_scoring_spieltyp_laeuft == 'Liga' OR ($live_scoring_spieltyp_laeuft == 'Cup' && $cookie_spieltag < 15)) { ?>
+<?php if ($live_scoring_spieltyp_laeuft == 'Liga' OR ($live_scoring_spieltyp_laeuft == 'Cup' && GameTime::getMatchDay() < 15)) { ?>
 <h1><?php echo _('Land wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="land" size="1" style="width:200px">
@@ -70,7 +70,7 @@ else {
 	}
 	if ($minMinute < 0) { $minMinute = 0; }
 	$sql1 = "SELECT a.spiel, a.minute, a.kommentar, b.team1, b.team2, b.liga FROM ".$prefix."spiele_kommentare AS a JOIN ".$prefix."spiele AS b ON a.spiel = b.id ";
-	if ($live_scoring_spieltyp_laeuft == 'Liga' OR ($live_scoring_spieltyp_laeuft == 'Cup' && $cookie_spieltag < 15)) { // nur bei Ligaspielen und Cup bis Viertelfinale
+	if ($live_scoring_spieltyp_laeuft == 'Liga' OR ($live_scoring_spieltyp_laeuft == 'Cup' && GameTime::getMatchDay() < 15)) { // nur bei Ligaspielen und Cup bis Viertelfinale
 		$sql1 .= "WHERE b.land = '".$temp_land."' AND ";
 	}
 	else {

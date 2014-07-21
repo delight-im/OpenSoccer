@@ -25,7 +25,7 @@ if ($daysToWait > 0) {
 	include 'zz3.php';
 	exit;
 }
-elseif ($cookie_spieltag > 5) {
+elseif (GameTime::getMatchDay() > 5) {
 	echo '<p><strong>'._('Der Verband erlaubt einen Liga-Tausch nur an den ersten fünf Spieltagen. Bitte warte bis zur nächsten Saison.').'</strong></p>';
 	include 'zz3.php';
 	exit;

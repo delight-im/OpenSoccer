@@ -75,17 +75,7 @@ if (isset($_POST['preis']) && $cookie_id != DEMO_USER_ID) {
 	}
 }
 
-// kurzname, vollname, 1_pro_x_zuschauer, kosten_pro_1
-$gebaeude_a = array(
-    array('parkplatz', 'Parkplatz', 7500, 30000),
-    array('ubahn', 'U-Bahn', 40000, 90000),
-    array('restaurant', 'Restaurant', 15000, 320000),
-    array('bierzelt', 'Bierzelt', 20000, 74000),
-    array('pizzeria', 'Pizzeria', 12000, 90000),
-    array('imbissstand', 'Imbissstand', 10000, 45000),
-    array('vereinsmuseum', 'Vereinsmuseum', 50000, 655000),
-    array('fanshop', 'Fanshop', 30000, 160000),
-);
+require_once('./classes/StadiumBuildings.php');
 
 if (isset($_POST['umfeld_bearbeiten']) && $cookie_id != DEMO_USER_ID) {
     $stadiumSeats1 = $sql1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$cookie_team."'";
@@ -93,7 +83,7 @@ if (isset($_POST['umfeld_bearbeiten']) && $cookie_id != DEMO_USER_ID) {
     $stadiumSeats3 = mysql_result($stadiumSeats2, 0);
     $stadiumSeats3 = intval($stadiumSeats3);
     $buildingSQL = "";
-    foreach ($gebaeude_a as $gebaeude) {
+    foreach (StadiumBuildings::getList() as $gebaeude) {
         if (isset($_POST[$gebaeude[0]])) {
             $value = intval($_POST[$gebaeude[0]]) > 0 ? ceil($stadiumSeats3 / $gebaeude[2]) : 0;
             $buildingSQL .= mysql_real_escape_string($gebaeude[0])." = ".$value;
@@ -176,7 +166,6 @@ echo '<img src="'.$selectedStadionPhoto[1].'" alt="Dein Stadion" title="Dein Sta
 <tr><td colspan="2">Zuschauer beim letzten Spiel: <?php echo number_format($sql6, 0, ',', '.'); ?></td></tr>
 </tbody>
 </table>
-</p>
 <h1>Namen ändern</h1>
 <form action="/ver_stadion.php" method="post" accept-charset="utf-8">
 <p><select name="kuerzel1" size="1" style="width:100px"><option value="">&nbsp;-&nbsp;</option>
@@ -241,7 +230,7 @@ foreach ($stadiumAffixes as $stadiumAffix) {
 <form action="/ver_stadion.php" method="post" accept-charset="utf-8">
 <p>
 <?php
-foreach ($gebaeude_a as $tm) {
+foreach (StadiumBuildings::getList() as $tm) {
 	$anzahl = ceil($sql3['plaetze']/$tm[2]);
 	$kosten = round($tm[3]*$anzahl);
 	echo '<input type="checkbox" name="'.$tm[0].'" value="'.$anzahl.'" ';

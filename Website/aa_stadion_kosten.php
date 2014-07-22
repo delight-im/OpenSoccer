@@ -30,18 +30,8 @@ if (mysql_affected_rows() > 0) {
 		// KOSTEN ANFANG
 		$kosten = 1550000+$sql6['plaetze']*250;
 		// GELAENDE ANFANG
-        // kurzname, vollname, 1_pro_x_zuschauer, kosten_pro_1
-        $gebaeude_a = array(
-            array('parkplatz', 'Parkplatz', 7500, 30000),
-            array('ubahn', 'U-Bahn', 40000, 90000),
-            array('restaurant', 'Restaurant', 15000, 320000),
-            array('bierzelt', 'Bierzelt', 20000, 74000),
-            array('pizzeria', 'Pizzeria', 12000, 90000),
-            array('imbissstand', 'Imbissstand', 10000, 45000),
-            array('vereinsmuseum', 'Vereinsmuseum', 50000, 655000),
-            array('fanshop', 'Fanshop', 30000, 160000),
-        );
-        foreach ($gebaeude_a as $tm) {
+        require_once('./classes/StadiumBuildings.php');
+        foreach (StadiumBuildings::getList() as $tm) {
             $tempwert = round($tm[3]*$sql6[$tm[0]]); // letzter Faktor = Anzahl der Gebaeude-Einheiten
             $kosten += $tempwert;
         }

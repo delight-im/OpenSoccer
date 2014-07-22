@@ -74,16 +74,36 @@ if (isset($_POST['preis']) && $cookie_id != DEMO_USER_ID) {
 			setTaskDone('ticket_prices');
 	}
 }
+
+// kurzname, vollname, 1_pro_x_zuschauer, kosten_pro_1
+$gebaeude_a = array(
+    array('parkplatz', 'Parkplatz', 7500, 30000),
+    array('ubahn', 'U-Bahn', 40000, 90000),
+    array('restaurant', 'Restaurant', 15000, 320000),
+    array('bierzelt', 'Bierzelt', 20000, 74000),
+    array('pizzeria', 'Pizzeria', 12000, 90000),
+    array('imbissstand', 'Imbissstand', 10000, 45000),
+    array('vereinsmuseum', 'Vereinsmuseum', 50000, 655000),
+    array('fanshop', 'Fanshop', 30000, 160000),
+);
+
 if (isset($_POST['umfeld_bearbeiten']) && $cookie_id != DEMO_USER_ID) {
-	if (isset($_POST['parkplatz'])) { $ub_parkplatz = intval($_POST['parkplatz']); } else { $ub_parkplatz = 0; }
-	if (isset($_POST['ubahn'])) { $ub_ubahn = intval($_POST['ubahn']); } else { $ub_ubahn = 0; }
-	if (isset($_POST['restaurant'])) { $ub_restaurant = intval($_POST['restaurant']); } else { $ub_restaurant = 0; }
-	if (isset($_POST['bierzelt'])) { $ub_bierzelt = intval($_POST['bierzelt']); } else { $ub_bierzelt = 0; }
-	if (isset($_POST['pizzeria'])) { $ub_pizzeria = intval($_POST['pizzeria']); } else { $ub_pizzeria = 0; }
-	if (isset($_POST['imbissstand'])) { $ub_imbissstand = intval($_POST['imbissstand']); } else { $ub_imbissstand = 0; }
-	if (isset($_POST['vereinsmuseum'])) { $ub_vereinsmuseum = intval($_POST['vereinsmuseum']); } else { $ub_vereinsmuseum = 0; }
-	if (isset($_POST['fanshop'])) { $ub_fanshop = intval($_POST['fanshop']); } else { $ub_fanshop = 0; }
-	$sql1 = "UPDATE ".$prefix."stadien SET parkplatz = ".$ub_parkplatz.", ubahn = ".$ub_ubahn.", restaurant = ".$ub_restaurant.", bierzelt = ".$ub_bierzelt.", pizzeria = ".$ub_pizzeria.", imbissstand = ".$ub_imbissstand.", vereinsmuseum = ".$ub_vereinsmuseum.", fanshop = ".$ub_fanshop." WHERE team = '".$cookie_team."'";
+    $stadiumSeats1 = $sql1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$cookie_team."'";
+    $stadiumSeats2 = mysql_query($stadiumSeats1);
+    $stadiumSeats3 = mysql_result($stadiumSeats2, 0);
+    $stadiumSeats3 = intval($stadiumSeats3);
+    $buildingSQL = "";
+    foreach ($gebaeude_a as $gebaeude) {
+        if (isset($_POST[$gebaeude[0]])) {
+            $value = intval($_POST[$gebaeude[0]]) > 0 ? ceil($stadiumSeats3 / $gebaeude[2]) : 0;
+            $buildingSQL .= mysql_real_escape_string($gebaeude[0])." = ".$value;
+        }
+        else {
+            $buildingSQL .= mysql_real_escape_string($gebaeude[0])." = 0";
+        }
+        $buildingSQL .= ", ";
+    }
+	$sql1 = "UPDATE ".$prefix."stadien SET ".mb_substr($buildingSQL, 0, -2)." WHERE team = '".$cookie_team."'";
 	$sql2 = mysql_query($sql1);
 }
 if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != DEMO_USER_ID) {
@@ -221,25 +241,13 @@ foreach ($stadiumAffixes as $stadiumAffix) {
 <form action="/ver_stadion.php" method="post" accept-charset="utf-8">
 <p>
 <?php
-// kurzname, vollname, 1_pro_x_zuschauer, kosten_pro_1
-$gebaeude_a = array(
-	array('parkplatz', 'Parkplatz', 7500, 30000),
-	array('ubahn', 'U-Bahn', 40000, 90000),
-	array('restaurant', 'Restaurant', 15000, 320000),
-	array('bierzelt', 'Bierzelt', 20000, 74000),
-	array('pizzeria', 'Pizzeria', 12000, 90000),
-	array('imbissstand', 'Imbissstand', 10000, 45000),
-	array('vereinsmuseum', 'Vereinsmuseum', 50000, 655000),
-	array('fanshop', 'Fanshop', 30000, 160000),
-);
 foreach ($gebaeude_a as $tm) {
 	$anzahl = ceil($sql3['plaetze']/$tm[2]);
 	$kosten = round($tm[3]*$anzahl);
 	echo '<input type="checkbox" name="'.$tm[0].'" value="'.$anzahl.'" ';
 	if ($sql3[$tm[0]] > 0) { echo 'checked="checked" '; }
 	echo '/> ';
-	if ($anzahl < 10) { echo '0'; }
-	echo $anzahl.'x '.$tm[1].' &raquo; '.number_format($kosten, 0, ',', '.').' € / Saison<br />';
+	echo '<strong>'.($anzahl < 10 ? '0' : '').$anzahl.'&times; '.$tm[1].'</strong> &mdash; '.number_format($kosten, 0, ',', '.').' € / Saison<br />';
 }
 ?>
 </p>

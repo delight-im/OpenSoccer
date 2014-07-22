@@ -693,6 +693,7 @@ CREATE TABLE `man_stadien` (
   `imbissstand` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `vereinsmuseum` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `fanshop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `underConstructionUntil` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `team` (`team`),
   KEY `plaetze` (`plaetze`),

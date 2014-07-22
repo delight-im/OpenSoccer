@@ -1,33 +1,42 @@
 <?php include 'zz1.php'; ?>
 <?php
-define('GEHALTSHOEHE', 1.395);
-function prozentstufen($spieler_alter) {
-    if ($spieler_alter < 26) {
-        $prozentstufen = array(1, 3, 5);
+
+define('SALARY_AMOUNT_FACTOR', 1.395);
+define('GAME_DAYS_TO_REAL_DAYS_RATIO', 365 / 22);
+
+function getPercentageLevels($playerAge) {
+    if ($playerAge < 26) {
+        // young players want short contracts
+        return array(0.006, 0.018, 0.03);
     }
     else {
-        $prozentstufen = array(5, 3, 1);
+        // old players want long contracts
+        return array(0.03, 0.018, 0.006);
     }
-    return $prozentstufen;
 }
+
+function getNewSalary($marketValue, $percentageLevel) {
+    return pow(($marketValue / 1000), (SALARY_AMOUNT_FACTOR + $percentageLevel));
+}
+
 if (isset($_POST['laufzeit']) && isset($_POST['spieler'])) {
 	$laufzeit = mysql_real_escape_string(trim(strip_tags($_POST['laufzeit'])));
 	$spieler_id = mysql_real_escape_string(trim(strip_tags($_POST['spieler'])));
-	if ($laufzeit >= 22 && $laufzeit <= 66) {
+	if ($laufzeit == 22 || $laufzeit == 44 || $laufzeit == 66) {
 		if ($cookie_id != DEMO_USER_ID) {
 			$laufzeit_end = endOfDay(getTimestamp('+'.$laufzeit.' days'));
 			$ina = "SELECT marktwert, wiealt, vertrag FROM ".$prefix."spieler WHERE ids = '".$spieler_id."' AND team = '".$cookie_team."'";
 			$inb = mysql_query($ina);
 			if (mysql_num_rows($inb) == 0) { exit; }
 			$inc = mysql_fetch_assoc($inb);
-			$prozentstufen = prozentstufen(round($inc['wiealt']/365));
+			$pLevels = getPercentageLevels(round($inc['wiealt']/365));
 			switch ($laufzeit) {
-				case 22: $nn = $prozentstufen[0]; break;
-				case 44: $nn = $prozentstufen[1]; break;
-				case 66: $nn = $prozentstufen[2]; break;
-				default: $nn = max($prozentstufen);
+				case 22: $percentageLevel = $pLevels[0]; break;
+				case 44: $percentageLevel = $pLevels[1]; break;
+				case 66: $percentageLevel = $pLevels[2]; break;
+				default: throw new Exception('Invalid contract duration: '.$laufzeit);
 			}
-			$neuer_marktwert = round(pow(($inc['marktwert']/1000), (GEHALTSHOEHE+0.006*$nn)));
+			$newSalary = round(getNewSalary($inc['marktwert'], $percentageLevel));
 			$moralPlus = "";
 			$verlaengerungUmTage = ($laufzeit_end-$inc['vertrag'])/3600/24;
 			if ($verlaengerungUmTage > 44) {
@@ -39,7 +48,7 @@ if (isset($_POST['laufzeit']) && isset($_POST['spieler'])) {
 			elseif ($verlaengerungUmTage > 11) {
 				$moralPlus = ", moral = moral+5";
 			}
-			$in1 = "UPDATE ".$prefix."spieler SET gehalt = ".$neuer_marktwert.", vertrag = ".$laufzeit_end.$moralPlus." WHERE ids = '".$spieler_id."' AND team = '".$cookie_team."'";
+			$in1 = "UPDATE ".$prefix."spieler SET gehalt = ".$newSalary.", vertrag = ".$laufzeit_end.$moralPlus." WHERE ids = '".$spieler_id."' AND team = '".$cookie_team."'";
 			$in2 = mysql_query($in1);
 			$limitMoral1 = "UPDATE ".$prefix."spieler SET moral = 100 WHERE ids = '".$spieler_id."' AND moral > 100";
 			$limitMoral2 = mysql_query($limitMoral1);
@@ -73,7 +82,7 @@ if ($sql2a == 0) { exit; }
 $sql3 = mysql_fetch_assoc($sql2);
 if ($sql3['marktwert'] == 0) { exit; }
 if ($sql3['leiher'] != 'keiner') { exit; }
-$prozentstufen = prozentstufen(round($sql3['wiealt']/365));
+$pLevels = getPercentageLevels(round($sql3['wiealt']/365));
 ?>
 <title><?php echo _('Vertrag verlängern:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
@@ -81,42 +90,33 @@ $prozentstufen = prozentstufen(round($sql3['wiealt']/365));
 <?php if ($loggedin == 1) { ?>
 <form action="/vertrag_verlaengern.php" method="post" accept-charset="utf-8" class="imtext">
 <?php
-$moeglich = 0;
-$optionsList = '';
-$isFirstPossibleOption = TRUE;
-if ($sql3['vertrag'] < getTimestamp('+22 days') && (($sql3['wiealt']+16.5909091*22)/365) < 35 && $sql3['moral'] >= 50) {
-	$moeglich++;
-	$optionsList .= '<p><input type="radio" name="laufzeit" value="22"';
-	if ($isFirstPossibleOption) {
-		$optionsList .= ' checked="checked"';
-		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$s € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).'</p>';
-	}
-	$optionsList .= ' /> '.__('22 Tage mit %s € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[0])), 0, ',', '.')).'</p>';
-	$isFirstPossibleOption = FALSE;
+
+function getContractOption($durationDays, $minMoraleRequired, $percentageLevel, $playerData, $isDefault) {
+    $out = '';
+    $durationDays = intval($durationDays);
+    if ($playerData['vertrag'] < getTimestamp('+'.$durationDays.' days') && (($playerData['wiealt'] + GAME_DAYS_TO_REAL_DAYS_RATIO * $durationDays) / 365) < 35 && $playerData['moral'] >= $minMoraleRequired) {
+        if ($isDefault) {
+            $out .= '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$s € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$playerData['ids'].'">'.$playerData['vorname'].' '.$playerData['nachname'].'</a>', number_format($playerData['gehalt'], 0, ',', '.')).'</p>';
+        }
+        $out .= '<p><input type="radio" name="laufzeit" value="'.$durationDays.'"';
+        if ($isDefault) {
+            $out .= ' checked="checked"';
+        }
+        $salaryPreviewStr = number_format(getNewSalary($playerData['marktwert'], $percentageLevel), 0, ',', '.');
+        $out .= ' /> '.__('%1$d Tage mit %2$s € Gehalt pro Saison', $durationDays, $salaryPreviewStr).'</p>';
+        return $out;
+    }
+    return '';
 }
-if ($sql3['vertrag'] < getTimestamp('+44 days') && (($sql3['wiealt']+16.5909091*44)/365) < 35 && $sql3['moral'] >= 70) {
-	$moeglich++;
-	$optionsList .= '<p><input type="radio" name="laufzeit" value="44"';
-	if ($isFirstPossibleOption) {
-		$optionsList .= ' checked="checked"';
-		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$s € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).'</p>';
-	}
-	$optionsList .= ' /> '.__('44 Tage mit %s € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[1])), 0, ',', '.')).'</p>';
-	$isFirstPossibleOption = FALSE;
-}
-if ($sql3['vertrag'] < getTimestamp('+66 days') && (($sql3['wiealt']+16.5909091*66)/365) < 35 && $sql3['moral'] >= 90) {
-	$moeglich++;
-	$optionsList .= '<p><input type="radio" name="laufzeit" value="66"';
-	if ($isFirstPossibleOption) {
-		$optionsList .= ' checked="checked"';
-		echo '<p>'.__('Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags gemacht. Zurzeit verdient er %2$s € pro Saison. Wenn Du mit einem der Angebote einverstanden bist, wähle es aus und klicke anschließend auf <i>Abschließen</i>.', '<a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a>', number_format($sql3['gehalt'], 0, ',', '.')).'</p>';
-	}
-	$optionsList .= ' /> '.__('66 Tage mit %s € Gehalt/Saison', number_format(pow(($sql3['marktwert']/1000), (GEHALTSHOEHE+0.006*$prozentstufen[2])), 0, ',', '.')).'</p>';
-	$isFirstPossibleOption = FALSE;
-}
+
+$contractOptionsHTML = '';
+$contractOptionsHTML .= getContractOption(22, 50, $pLevels[0], $sql3, $contractOptionsHTML == '');
+$contractOptionsHTML .= getContractOption(44, 70, $pLevels[1], $sql3, $contractOptionsHTML == '');
+$contractOptionsHTML .= getContractOption(66, 90, $pLevels[2], $sql3, $contractOptionsHTML == '');
+
 ?>
-<?php if ($moeglich != 0) { ?>
-<?php echo $optionsList; ?>
+<?php if ($contractOptionsHTML != '') { ?>
+<?php echo $contractOptionsHTML; ?>
 <p>
 <?php if (isset($_SERVER['HTTP_REFERER'])) { if ($_SERVER['HTTP_REFERER'] == 'http://www.ballmanager.de/vertraege.php') { ?><input type="hidden" name="returnToVertraege" value="1" /><?php } } ?>
 <input type="hidden" name="spieler" value="<?php echo $sql3['ids']; ?>" />

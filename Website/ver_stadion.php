@@ -7,6 +7,7 @@
 define('CONSTRUCTION_TIME_EXTEND', 3600 * 24 * 16.75);
 define('CONSTRUCTION_TIME_SHRINK', 3600 * 24 * 12);
 define('CONSTRUCTION_TIME_BUILDINGS', 3600 * 24 * 7.25);
+define('STADIUM_MAX_SEATS', 100000);
 
 function getPhrases($words, $maxTerms = 5) {
 	$compositions = array();
@@ -46,47 +47,69 @@ if (isset($_POST['plaetze']) && isset($_POST['art']) && $cookie_id != DEMO_USER_
 		$plaetze_neu = intval($_POST['plaetze']);
 		if ($plaetze_neu > 0) {
             $preis = 11880000+$plaetze_neu*1200;
-            if (($val3['plaetze']+$plaetze_neu) <= 100000 && ($val6['konto']-$preis) >= 0) {
-                $underConstructionUntil = getUnderConstructionUntil($cookie_team);
-                if ($underConstructionUntil <= time()) {
-                    $sql1 = "UPDATE ".$prefix."stadien SET plaetze = plaetze+".$plaetze_neu.", parkplatz = 0, ubahn = 0, restaurant = 0, bierzelt = 0, pizzeria = 0, imbissstand = 0, vereinsmuseum = 0, fanshop = 0, underConstructionUntil = ".intval(time()+CONSTRUCTION_TIME_EXTEND)." WHERE team = '".$cookie_team."'";
-                    $sql2 = mysql_query($sql1);
-                    $sql3 = "UPDATE ".$prefix."teams SET konto = konto-".$preis.", stadion_aus = stadion_aus-".$preis." WHERE ids = '".$cookie_team."'";
-                    $sql4 = mysql_query($sql3);
-                    $buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Bauarbeiten', -".$preis.", '".time()."')";
-                    $buch2 = mysql_query($buch1);
-                    $formulierung = 'Du hast Dein Stadion um '.$plaetze_neu.' Plätze vergrößert.';
-                    $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Stadion', '".time()."')";
-                    $sql8 = mysql_query($sql7);
+            if (($val3['plaetze']+$plaetze_neu) <= STADIUM_MAX_SEATS) {
+                if (($val6['konto']-$preis) >= 0) {
+                    $underConstructionUntil = getUnderConstructionUntil($cookie_team);
+                    if ($underConstructionUntil <= time()) {
+                        $sql1 = "UPDATE ".$prefix."stadien SET plaetze = plaetze+".$plaetze_neu.", parkplatz = 0, ubahn = 0, restaurant = 0, bierzelt = 0, pizzeria = 0, imbissstand = 0, vereinsmuseum = 0, fanshop = 0, underConstructionUntil = ".intval(time()+CONSTRUCTION_TIME_EXTEND)." WHERE team = '".$cookie_team."'";
+                        $sql2 = mysql_query($sql1);
+                        $sql3 = "UPDATE ".$prefix."teams SET konto = konto-".$preis.", stadion_aus = stadion_aus-".$preis." WHERE ids = '".$cookie_team."'";
+                        $sql4 = mysql_query($sql3);
+                        $buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Bauarbeiten', -".$preis.", '".time()."')";
+                        $buch2 = mysql_query($buch1);
+                        $formulierung = 'Du hast Dein Stadion um '.$plaetze_neu.' Plätze vergrößert.';
+                        $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Stadion', '".time()."')";
+                        $sql8 = mysql_query($sql7);
+                    }
+                    else {
+                        addInfoBox('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis '.date('d.m.Y H:i', $underConstructionUntil).' warten.');
+                    }
                 }
                 else {
-                    addInfoBox('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis '.date('d.m.Y H:i', $underConstructionUntil).' warten.');
+                    addInfoBox('Bitte überprüfe Deinen Kontostand. Diese Bauarbeiten scheinen zu teuer zu sein.');
                 }
             }
+            else {
+                addInfoBox(__('Dein Stadion kann nicht mehr als %s Plätze haben.', number_format(STADIUM_MAX_SEATS, 0, ',', '.')));
+            }
 		}
+        else {
+            addInfoBox('Bitte gib an, wie viele Plätze Du umbauen möchtest.');
+        }
 	}
 	elseif ($_POST['art'] == 'verkleinert') {
 		$plaetze_neu = intval($_POST['plaetze']);
 		if ($plaetze_neu > 0) {
             $preis = 3880000+$plaetze_neu*200;
-            if (($val3['plaetze']-$plaetze_neu) >= 0 && ($val6['konto']-$preis) >= 0) {
-                $underConstructionUntil = getUnderConstructionUntil($cookie_team);
-                if ($underConstructionUntil <= time()) {
-                    $sql1 = "UPDATE ".$prefix."stadien SET plaetze = plaetze-".$plaetze_neu.", parkplatz = 0, ubahn = 0, restaurant = 0, bierzelt = 0, pizzeria = 0, imbissstand = 0, vereinsmuseum = 0, fanshop = 0, underConstructionUntil = ".intval(time()+CONSTRUCTION_TIME_SHRINK)." WHERE team = '".$cookie_team."'";
-                    $sql2 = mysql_query($sql1);
-                    $sql3 = "UPDATE ".$prefix."teams SET konto = konto-".$preis.", stadion_aus = stadion_aus-".$preis." WHERE ids = '".$cookie_team."'";
-                    $sql4 = mysql_query($sql3);
-                    $buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Bauarbeiten', -".$preis.", '".time()."')";
-                    $buch2 = mysql_query($buch1);
-                    $formulierung = 'Du hast Dein Stadion um '.$plaetze_neu.' Plätze verkleinert.';
-                    $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Stadion', '".time()."')";
-                    $sql8 = mysql_query($sql7);
+            if (($val3['plaetze']-$plaetze_neu) >= 0) {
+                if (($val6['konto']-$preis) >= 0) {
+                    $underConstructionUntil = getUnderConstructionUntil($cookie_team);
+                    if ($underConstructionUntil <= time()) {
+                        $sql1 = "UPDATE ".$prefix."stadien SET plaetze = plaetze-".$plaetze_neu.", parkplatz = 0, ubahn = 0, restaurant = 0, bierzelt = 0, pizzeria = 0, imbissstand = 0, vereinsmuseum = 0, fanshop = 0, underConstructionUntil = ".intval(time()+CONSTRUCTION_TIME_SHRINK)." WHERE team = '".$cookie_team."'";
+                        $sql2 = mysql_query($sql1);
+                        $sql3 = "UPDATE ".$prefix."teams SET konto = konto-".$preis.", stadion_aus = stadion_aus-".$preis." WHERE ids = '".$cookie_team."'";
+                        $sql4 = mysql_query($sql3);
+                        $buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Bauarbeiten', -".$preis.", '".time()."')";
+                        $buch2 = mysql_query($buch1);
+                        $formulierung = 'Du hast Dein Stadion um '.$plaetze_neu.' Plätze verkleinert.';
+                        $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Stadion', '".time()."')";
+                        $sql8 = mysql_query($sql7);
+                    }
+                    else {
+                        addInfoBox('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis '.date('d.m.Y H:i', $underConstructionUntil).' warten.');
+                    }
                 }
                 else {
-                    addInfoBox('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis '.date('d.m.Y H:i', $underConstructionUntil).' warten.');
+                    addInfoBox('Bitte überprüfe Deinen Kontostand. Diese Bauarbeiten scheinen zu teuer zu sein.');
                 }
             }
+            else {
+                addInfoBox('Dein Stadion kann nicht ohne Sitzplätze gebaut werden.');
+            }
 		}
+        else {
+            addInfoBox('Bitte gib an, wie viele Plätze Du umbauen möchtest.');
+        }
 	}
 }
 if (isset($_POST['preis']) && $cookie_id != DEMO_USER_ID) {

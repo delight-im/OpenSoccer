@@ -65,15 +65,15 @@ if ($cookie_id != DEMO_USER_ID) {
                 $abb2 = mysql_query($abb1);
                 $abb3 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$team."', 'Testspiel', -".$testspiel_preis_der_andere.", '".time()."')";
                 $abb4 = mysql_query($abb3);
-                $antworttext = _('angenommen');
+                $antworttext = 'angenommen';
                 // GEBUEHR ABBUCHEN ENDE
             }
             else {
-                $antworttext = _('ablehnen lassen, weil der Termin schon belegt war');
+                $antworttext = 'ablehnen lassen, weil der Termin schon belegt war';
             }
         }
         else {
-            $antworttext = _('ablehnen lassen, weil der Termin nicht passt');
+            $antworttext = 'ablehnen lassen, weil der Termin nicht passt';
         }
 		if (isset($_SESSION['last_testspiele_anzahl'])) {
 			$_SESSION['last_testspiele_anzahl']--;
@@ -83,17 +83,17 @@ if ($cookie_id != DEMO_USER_ID) {
 		$gt1 = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$team."' AND team2 = '".$cookie_team."'";
 		$gt2 = mysql_query($gt1);
 		if (mysql_affected_rows() == 0) { exit; }
-		$antworttext = _('abgelehnt');
+		$antworttext = 'abgelehnt';
 		$_SESSION['last_testspiele_anzahl']--;
 	}
 	else {
 		exit;
 	}
 	// PROTOKOLL ANFANG
-	$formulierung = __('Du hast eine Anfrage für ein Testspiel %s.', $antworttext);
+	$formulierung = 'Du hast eine Anfrage für ein Testspiel '.$antworttext;
 	$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Termine', ".time().")";
 	$sql8 = mysql_query($sql7);
-	$formulierung = __('%1$s hat Dein Angebot für ein Testspiel %2$s.', '<a href="/team.php?id='.$cookie_team.'">'.$cookie_teamname.'</a>', $antworttext);
+	$formulierung = '<a href="/team.php?id='.$cookie_team.'">'.$cookie_teamname.'</a> hat Dein Angebot für ein Testspiel '.$antworttext;
 	$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$team."', '".$formulierung."', 'Termine', ".time().")";
 	$sql8 = mysql_query($sql7);
 	// PROTOKOLL ENDE

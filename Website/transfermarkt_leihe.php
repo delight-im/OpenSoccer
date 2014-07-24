@@ -1,7 +1,7 @@
 <?php include 'zz1.php'; ?>
-<title>Transfermarkt | Ausleihen | Ballmanager.de</title>
+<title><?php echo _('Transfermarkt | Ausleihen'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Markt durchsuchen</h1>
+<h1><?php echo _('Markt durchsuchen'); ?></h1>
 <?php
 // NUR 2 TRANSFERS ZWISCHEN 2 TEAMS ANFANG
 $transfers_mit_team = array();
@@ -16,52 +16,52 @@ $transfers_mit_team = array_count_values($transfers_mit_team);
 ?>
 <form action="/transfermarkt_leihe.php" method="get" accept-charset="utf-8">
 <p><select name="wiealt" size="1" style="width:200px">
-	<option value="no">Jedes Alter</option>
-	<option value="17-20">17 bis 20 Jahre</option>
-	<option value="17-23">17 bis 23 Jahre</option>
-	<option value="20-23">20 bis 23 Jahre</option>
-	<option value="20-26">20 bis 26 Jahre</option>
-	<option value="23-26">23 bis 26 Jahre</option>
-	<option value="23-29">23 bis 29 Jahre</option>
-	<option value="26-29">26 bis 29 Jahre</option>
-	<option value="26-32">26 bis 32 Jahre</option>
-	<option value="29-32">29 bis 32 Jahre</option>
-	<option value="29-35">29 bis 35 Jahre</option>
-	<option value="32-35">32 bis 35 Jahre</option>
+	<option value="no"><?php echo _('Jedes Alter'); ?></option>
+	<option value="17-20"><?php echo __('%1$d bis %2$d Jahre', '17', '20'); ?></option>
+	<option value="17-23"><?php echo __('%1$d bis %2$d Jahre', '17', '23'); ?></option>
+	<option value="20-23"><?php echo __('%1$d bis %2$d Jahre', '20', '23'); ?></option>
+	<option value="20-26"><?php echo __('%1$d bis %2$d Jahre', '20', '26'); ?></option>
+	<option value="23-26"><?php echo __('%1$d bis %2$d Jahre', '23', '26'); ?></option>
+	<option value="23-29"><?php echo __('%1$d bis %2$d Jahre', '23', '29'); ?></option>
+	<option value="26-29"><?php echo __('%1$d bis %2$d Jahre', '26', '29'); ?></option>
+	<option value="26-32"><?php echo __('%1$d bis %2$d Jahre', '26', '32'); ?></option>
+	<option value="29-32"><?php echo __('%1$d bis %2$d Jahre', '29', '32'); ?></option>
+	<option value="29-35"><?php echo __('%1$d bis %2$d Jahre', '29', '35'); ?></option>
+	<option value="32-35"><?php echo __('%1$d bis %2$d Jahre', '32', '35'); ?></option>
 </select></p>
 <p><select name="position" size="1" style="width:200px">
-	<option value="no">Jede Position</option>
-	<option value="T">Torwart</option>
-	<option value="A">Abwehr</option>
-	<option value="M">Mittelfeld</option>
-	<option value="S">Sturm</option>
+	<option value="no"><?php echo _('Jede Position'); ?></option>
+	<option value="T">T<?php echo _('orwart'); ?></option>
+	<option value="A"><?php echo _('Abwehr'); ?></option>
+	<option value="M"><?php echo _('Mittelfeld'); ?></option>
+	<option value="S"><?php echo _('Sturm'); ?></option>
 </select></p>
 <p><select name="staerke" size="1" style="width:200px">
-	<option value="no">Jede Stärke</option>
-	<option value="0-3">Stärke 0 bis 3</option>
-	<option value="3-6">Stärke 3 bis 6</option>
-	<option value="6-9">Stärke 6 bis 9</option>
-	<option value="0-0">Stärke 0</option>
-	<option value="1-1">Stärke 1</option>
-	<option value="2-2">Stärke 2</option>
-	<option value="3-3">Stärke 3</option>
-	<option value="4-4">Stärke 4</option>
-	<option value="5-5">Stärke 5</option>
-	<option value="6-6">Stärke 6</option>
-	<option value="7-7">Stärke 7</option>
-	<option value="8-8">Stärke 8</option>
-	<option value="9-9">Stärke 9</option>
+	<option value="no"><?php echo _('Jede Stärke'); ?></option>
+	<option value="0-3"><?php echo __('Stärke %1$d bis %2$d', '0', '3'); ?></option>
+	<option value="3-6"><?php echo __('Stärke %1$d bis %2$d', '3', '6'); ?></option>
+	<option value="6-9"><?php echo __('Stärke %1$d bis %2$d', '6', '9'); ?></option>
+	<option value="0-0"><?php echo __('Stärke %d', '0'); ?></option>
+	<option value="1-1"><?php echo __('Stärke %d', '1'); ?></option>
+	<option value="2-2"><?php echo __('Stärke %d', '2'); ?></option>
+	<option value="3-3"><?php echo __('Stärke %d', '3'); ?></option>
+	<option value="4-4"><?php echo __('Stärke %d', '4'); ?></option>
+	<option value="5-5"><?php echo __('Stärke %d', '5'); ?></option>
+	<option value="6-6"><?php echo __('Stärke %d', '6'); ?></option>
+	<option value="7-7"><?php echo __('Stärke %d', '7'); ?></option>
+	<option value="8-8"><?php echo __('Stärke %d', '8'); ?></option>
+	<option value="9-9"><?php echo __('Stärke %d', '9'); ?></option>
 </select></p>
-<p><input type="submit" value="Suchen" /></p>
+<p><input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
-<h1>Transfermarkt | Ausleihen</h1>
+<h1><?php echo _('Transfermarkt | Ausleihen'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 // AM ANFANG NOCH KEINE TRANSFERS ANFANG
 if ($_SESSION['pMaxGebot'] == 0) {
-	echo '<p>Bist Du wirklich sicher, dass Du schon eine Verstärkung für Dein Team brauchst?</p>';
-	echo '<p>Der Vorstand empfiehlt Dir, als neuer Trainer in den ersten zwei Stunden auf Transfers zu verzichten.</p>';
-	echo '<p>Du solltest Dir zuerst einmal <a href="/kader.php">Deinen Kader</a> ansehen und versuchen, eine erste <a href="/aufstellung.php">Mannschaft</a> daraus zu formen.</p>';
+	echo '<p>'._('Bist Du wirklich sicher, dass Du schon eine Verstärkung für Dein Team brauchst?').'</p>';
+	echo '<p>'._('Der Vorstand empfiehlt Dir, als neuer Trainer in den ersten zwei Stunden auf Transfers zu verzichten.').'</p>';
+	echo '<p>'.__('Du solltest Dir zuerst einmal %1$s ansehen und versuchen, eine erste %2$s daraus zu formen.', '<a href="/kader.php">'._('Deinen Kader').'</a>', '<a href="/aufstellung.php">'._('Mannschaft').'</a>').'</p>';
 	include 'zz3.php';
 	exit;
 }
@@ -87,32 +87,32 @@ if (isset($_GET['id']) && $cookie_id != DEMO_USER_ID) {
 				$praemie = bigintval($_GET['praemie']);
 				if ($praemie > 350000) { $praemie = 0; }
 				if ($transfers_mit_team[$anf_besitzer] >= 2) { // nur 2 Transfers
-					addInfoBox('Du kannst den Spieler nicht ausleihen: 2-Transfers-Sperre');
+					addInfoBox(_('Du kannst den Spieler nicht ausleihen: 2-Transfers-Sperre'));
 				}
 				else {
 					$anf1 = "INSERT INTO ".$prefix."transfermarkt_leihe (besitzer, spieler, bieter, praemie, zeit) VALUES ('".$anf_besitzer."', '".$ids."', '".$cookie_teamname."', ".$praemie.", ".time().")";
 					$anf2 = mysql_query($anf1);
 					$transferLog1 = "INSERT INTO ".$prefix."transfers_gebote (spieler, datum, bieter, bieterIP, betrag) VALUES ('".$ids."', ".time().", '".$cookie_team."', '".getUserIP()."', 1)";
 					$transferLog2 = mysql_query($transferLog1);
-					addInfoBox('Deine Anfrage für diesen Spieler wurde gesendet.');
+					addInfoBox(_('Deine Anfrage für diesen Spieler wurde gesendet.'));
 					setTaskDone('market_borrow');
 				}
 			}
 			elseif ($anf03 != 0) {
 				$anf1 = "DELETE FROM ".$prefix."transfermarkt_leihe WHERE spieler = '".$ids."' AND bieter = '".$cookie_teamname."' AND akzeptiert = 0";
 				$anf2 = mysql_query($anf1);
-				addInfoBox('Deine Anfrage wurde zurückgezogen.');
+				addInfoBox(_('Deine Anfrage wurde zurückgezogen.'));
 			}
 		}
 		else {
-			addInfoBox('Du bist noch für den Transfermarkt <a class="inText" href="/sanktionen.php">gesperrt</a>. Wenn Dir unklar ist, warum, frage bitte ein <a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">Team-Mitglied</a>.');
+			addInfoBox(__('Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage bitte ein %2$s.', '<a class="inText" href="/sanktionen.php">'._('gesperrt').'</a>', '<a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">'._('Team-Mitglied').'</a>'));
 		}
 	}
 }
 ?>
 <p>
 <table>
-<thead><tr class="odd"><th scope="col">MT</th><th scope="col">Spieler</th><th scope="col">AL</th><th scope="col">ST</th><th scope="col">Prämie p.P.</th><th scope="col">Aktion</th></tr></thead>
+<thead><tr class="odd"><th scope="col"><?php echo _('MT').'</th><th scope="col">'._('Spieler').'</th><th scope="col">'._('AL').'</th><th scope="col">'._('ST').'</th><th scope="col">'._('Prämie p.P.').'</th><th scope="col">'._('Aktion').'</th></tr></thead>'; ?>
 <tbody>
 <?php
 $entryToMark = '';
@@ -161,7 +161,7 @@ $sql1 = "SELECT a.ids, a.vorname, a.nachname, a.position, a.staerke, a.wiealt, a
 $sql2 = mysql_query($sql1);
 $blaetter3 = anzahl_datensaetze_gesamt($sql1);
 if (mysql_num_rows($sql2) == 0) {
-	echo '<tr><td colspan="6">Zurzeit keine Angebote!</td></tr>';
+	echo '<tr><td colspan="6">'._('Zurzeit keine Angebote!').'</td></tr>';
 }
 else {
     while ($sql3 = mysql_fetch_assoc($sql2)) {
@@ -190,7 +190,7 @@ else {
 			echo '&nbsp;'; // eigener Spieler
 		}
 		elseif (in_array($sql3['ids'], $laufende_verhandlungen)) {
-			echo '<a href="/transfermarkt_leihe.php?id='.$sql3['ids'].'" onclick="return confirm(\'Bist Du sicher?\')">Zurückziehen</a>';
+			echo '<a href="/transfermarkt_leihe.php?id='.$sql3['ids'].'" onclick="return confirm(\''._('Bist Du sicher?').'\')">Zurückziehen</a>';
 		}
 		elseif (in_array($sql3['team'], $multiListe)) {
 			echo '&nbsp;'; // Multi-Account
@@ -200,7 +200,7 @@ else {
 				echo '&nbsp;'; // 2-Transfers-Sperre
 			}
 			else {
-				echo '<a href="/transfermarkt_leihe.php?id='.$sql3['ids'].'&praemie='.$prämieInt.'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')">Anfragen</a>';
+				echo '<a href="/transfermarkt_leihe.php?id='.$sql3['ids'].'&praemie='.$prämieInt.'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\'">Anfragen</a>';
 			}
 		}
 		echo '</td></tr>';
@@ -210,15 +210,15 @@ else {
 </tbody>
 </table>
 </p>
-<p><strong>Hinweis:</strong> Indem Du auf &quot;Anfragen&quot; klickst, schickst Du dem Besitzer des Spielers ein Angebot, den Spieler bis Saisonende zu übernehmen. Der Besitzer des Spielers hat dann die Möglichkeit, das Angebot entweder abzulehnen oder anzunehmen. Wenn er Dein Angebot annimmt, gehört der Spieler sofort Dir (bis Saisonende).</p>
-<p><strong>Überschriften:</strong> MT: Mannschaftsteil, AL: Alter, ST: Stärke</p>
-<p><strong>Mannschaftsteile:</strong> T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm</p>
+<p><strong><?php echo _('Hinweis:').'</strong> '._('Indem Du auf &quot;Anfragen&quot; klickst, schickst Du dem Besitzer des Spielers ein Angebot, den Spieler bis Saisonende zu übernehmen. Der Besitzer des Spielers hat dann die Möglichkeit, das Angebot entweder abzulehnen oder anzunehmen. Wenn er Dein Angebot annimmt, gehört der Spieler sofort Dir (bis Saisonende).'); ?></p>
+<p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, AL: Alter, ST: Stärke'); ?></p>
+<p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
 <?php
 echo '<div class="pagebar">';
 $wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS
 $vorherige = $seite-1;
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite=1">Erste</a> '; } else { echo '<span class="this-page">Erste</span>'; }
-if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$vorherige.'">Vorherige</a> '; } else { echo '<span class="this-page">Vorherige</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite=1">'._('Erste').'</a> '; } else { echo '<span class="this-page">'._('Erste').'</span>'; }
+if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$vorherige.'">'._('Vorherige').'</a> '; } else { echo '<span class="this-page">'._('Vorherige').'</span> '; }
 $naechste = $seite+1;
 $vor4 = $seite-4; if ($vor4 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$vor4.'">'.$vor4.'</a> '; }
 $vor3 = $seite-3; if ($vor3 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$vor3.'">'.$vor3.'</a> '; }
@@ -229,11 +229,11 @@ $nach1 = $seite+1; if ($nach1 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['
 $nach2 = $seite+2; if ($nach2 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$nach2.'">'.$nach2.'</a> '; }
 $nach3 = $seite+3; if ($nach3 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$nach3.'">'.$nach3.'</a> '; }
 $nach4 = $seite+4; if ($nach4 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$nach4.'">'.$nach4.'</a> '; }
-if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$naechste.'">Nächste</a> '; } else { echo '<span class="this-page">Nächste</span> '; }
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.ceil($wieviel_seiten).'">Letzte</a>'; } else { echo '<span clss="this-page">Letzte</span>'; }
+if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.$naechste.'">'._('Nächste').'</a> '; } else { echo '<span class="this-page">'._('Nächste').'</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

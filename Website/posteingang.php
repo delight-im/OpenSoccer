@@ -31,7 +31,7 @@ if (isset($_POST['markedAction']) && $cookie_id != DEMO_USER_ID) {
 				$del1 = "DELETE FROM ".$prefix."pn WHERE geloescht_von = 1 AND geloescht_an = 1";
 				mysql_query($del1);
 			}
-			addInfoBox(_('Es wurden %d Nachrichten aus Deinem Posteingang gelöscht.', count($_POST['auswahl'])));
+			addInfoBox(__('Es wurden %d Nachrichten aus Deinem Posteingang gelöscht.', count($_POST['auswahl'])));
 		}
 	}
 }

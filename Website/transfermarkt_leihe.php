@@ -200,7 +200,7 @@ else {
 				echo '&nbsp;'; // 2-Transfers-Sperre
 			}
 			else {
-				echo '<a href="/transfermarkt_leihe.php?id='.$sql3['ids'].'&praemie='.$prämieInt.'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\'">Anfragen</a>';
+				echo '<a href="/transfermarkt_leihe.php?id='.$sql3['ids'].'&praemie='.$prämieInt.'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')">Anfragen</a>';
 			}
 		}
 		echo '</td></tr>';

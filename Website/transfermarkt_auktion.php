@@ -104,7 +104,7 @@ if ($_SESSION['pMaxGebot'] == 0) {
 // AM ANFANG NOCH KEINE TRANSFERS ENDE
 // TRANSFER-SPERREN ANFANG
 if ($_SESSION['transferGesperrt'] == TRUE) {
-	addInfoBox(__('Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage bitte ein %2$s.', '<a class="inText" href="/sanktionen.php">'._('gesperrt').'</a>', '<a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">'._('Team-Mitglied').'</a>');
+	addInfoBox(__('Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage bitte ein %2$s.', '<a class="inText" href="/sanktionen.php">'._('gesperrt').'</a>', '<a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">'._('Team-Mitglied').'</a>'));
 	include 'zz3.php';
 	exit;
 }
@@ -139,18 +139,18 @@ $cntWatcher3 = mysql_result($cntWatcher2, 0);
 ?>
 <?php
 echo '<p><table>';
-echo '<thead><tr class="odd"><th scope="col" colspan="2"><a href="/spieler.php?id='.$sql3['spieler'].'">'.$spieler_name.' ('.$sql3['gebote'].' '._('Gebote').' / '.$cntWatcher3.' '._('Beobachter').')</a></th></tr></thead>';
+echo '<thead><tr class="odd"><th scope="col" colspan="2"><a href="/spieler.php?id='.$sql3['spieler'].'">'.$spieler_name.' ('.__('%d Gebote', $sql3['gebote']).' / '.__('%d Beobachter', $cntWatcher3).')</a></th></tr></thead>';
 echo '<tbody>';
 echo '<tr><td>'._('Gehalt').'</td><td>'.number_format($sql6['gehalt'], 0, ',', '.').' € / '._('Saison').'</td></tr>';
 echo '<tr class="odd"><td>'._('Besitzer').'</td>'.$teamLink.'</tr>';
 echo '<tr><td>'._('Marktwert').'</td><td>'.number_format($sql6['marktwert'], 0, ',', '.').' €</td></tr>';
 echo '<tr class="odd"><td>'._('Höchstgebot').'</td><td>'.number_format($sql3['betrag_highest'], 0, ',', '.').' € ('._('Ablösesumme').')</td></tr>';
-echo '<tr><td>'.__('Restzeit %1$d Minuten und %2$d Sekunden', '</td><td>'.floor(($sql3['ende']-time())/60), floor(($sql3['ende']-time())%60)).'</td></tr>';
+echo '<tr><td>Restzeit</td><td>'.__('%1$d Minuten und %2$d Sekunden', floor(($sql3['ende']-time())/60), floor(($sql3['ende']-time())%60)).'</td></tr>';
 $mindestgebot = floor($sql6['marktwert']/100);
 $mindestgebot_temp = strlen($mindestgebot)-1;
 $mindestgebot = floor($mindestgebot/pow(10, $mindestgebot_temp))*pow(10, $mindestgebot_temp);
 $maximalgebot = floor($sql6['marktwert']*$_SESSION['pMaxGebot']);
-echo '<tr class="odd"><td colspan="2">'.__('Du musst das alte Gebot um mindestens %d € überbieten!', number_format($mindestgebot, 0, ',', '.')).'</td></tr>';
+echo '<tr class="odd"><td colspan="2">'.__('Du musst das alte Gebot um mindestens %s € überbieten!', number_format($mindestgebot, 0, ',', '.')).'</td></tr>';
 echo '<tr><td colspan="2">Maximalgebot: '.number_format($maximalgebot, 0, ',', '.').' €</td></tr>';
 if ($sql3['besitzer'] == $cookie_team) {
 	echo '<tr class="odd"><td colspan="2">'._('Du kannst nicht für Deine eigenen Spieler bieten!').'</td></tr>';

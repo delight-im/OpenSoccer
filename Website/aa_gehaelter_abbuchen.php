@@ -14,10 +14,10 @@ while ($frei3 = mysql_fetch_assoc($frei2)) {
 	if (($frei3['wiealt']/365) > 34) {
 		$jobsNachKarriere = array('Jugendtrainer', 'Fanbetreuer', 'Talent-Scout', 'PR-Manager', 'Platzwart', 'Kassierer im Fanshop', 'Schatzmeister', 'persönlicher Assistent des Managers', 'Hausmeister', 'Busfahrer');
 		shuffle($jobsNachKarriere);
-		$formulierung = __('Der Spieler %1$s hat seine aktive Zeit beendet und arbeitet nun als %2$s in Deinem Verein.', '<a href="/spieler.php?id='.$frei3['ids'].'">'.$getmanager4.'</a>', $jobsNachKarriere[0]);
+		$formulierung = 'Der Spieler <a href="/spieler.php?id='.$frei3['ids'].'">'.$getmanager4.'</a> hat seine aktive Zeit beendet und arbeitet nun als '.$jobsNachKarriere[0].' in Deinem Verein.';
 	}
 	else {
-		$formulierung = __('Der Vertrag des Spielers %s ist ausgelaufen. Er spielt jetzt außerhalb Europas.', '<a href="/spieler.php?id='.$frei3['ids'].'">'.$getmanager4.'</a>');
+		$formulierung = 'Der Vertrag des Spielers <a href="/spieler.php?id='.$frei3['ids'].'">'.$getmanager4.'</a> ist ausgelaufen. Er spielt jetzt außerhalb Europas.';
 	}
     $free1 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$frei3['team']."', '".$formulierung."', 'Spieler', '".time()."')";
     $free2 = mysql_query($free1);

@@ -34,7 +34,7 @@ else {
 	}
 }
 ?>
-<title>Transfermarkt: <?php echo $spieler_name; ?> | Ballmanager.de</title>
+<title><?php echo __('Transfermarkt: %s', $spieler_name); ?> | Ballmanager.de</title>
 <script type="text/javascript">
 function number_format(number, decimals, dec_point, thousands_sep) {
   var exponent = '';
@@ -95,16 +95,16 @@ function stepGebot(type) {
 <?php
 // AM ANFANG NOCH KEINE TRANSFERS ANFANG
 if ($_SESSION['pMaxGebot'] == 0) {
-	echo '<p>Bist Du wirklich sicher, dass Du schon eine Verstärkung für Dein Team brauchst?</p>';
-	echo '<p>Der Vorstand empfiehlt Dir, als neuer Trainer in den ersten zwei Stunden auf Transfers zu verzichten.</p>';
-	echo '<p>Du solltest Dir zuerst einmal <a href="/kader.php">Deinen Kader</a> ansehen und versuchen, eine erste <a href="/aufstellung.php">Mannschaft</a> daraus zu formen.</p>';
+	echo '<p>'._('Bist Du wirklich sicher, dass Du schon eine Verstärkung für Dein Team brauchst?').'</p>';
+	echo '<p>'._('Der Vorstand empfiehlt Dir, als neuer Trainer in den ersten zwei Stunden auf Transfers zu verzichten.').'</p>';
+	echo '<p>'.__('Du solltest Dir zuerst einmal %1$s ansehen und versuchen, eine erste %2$s daraus zu formen.', '<a href="/kader.php">'._('Deinen Kader').'</a>', '<a href="/aufstellung.php">'._('Mannschaft').'</a>').'</p>';
 	include 'zz3.php';
 	exit;
 }
 // AM ANFANG NOCH KEINE TRANSFERS ENDE
 // TRANSFER-SPERREN ANFANG
 if ($_SESSION['transferGesperrt'] == TRUE) {
-	addInfoBox('Du bist noch für den Transfermarkt <a class="inText" href="/sanktionen.php">gesperrt</a>. Wenn Dir unklar ist, warum, frage bitte ein <a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">Team-Mitglied</a>.');
+	addInfoBox(__('Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage bitte ein %2$s.', '<a class="inText" href="/sanktionen.php">'._('gesperrt').'</a>', '<a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">'._('Team-Mitglied').'</a>');
 	include 'zz3.php';
 	exit;
 }
@@ -139,47 +139,47 @@ $cntWatcher3 = mysql_result($cntWatcher2, 0);
 ?>
 <?php
 echo '<p><table>';
-echo '<thead><tr class="odd"><th scope="col" colspan="2"><a href="/spieler.php?id='.$sql3['spieler'].'">'.$spieler_name.' ('.$sql3['gebote'].' Gebote / '.$cntWatcher3.' Beobachter)</a></th></tr></thead>';
+echo '<thead><tr class="odd"><th scope="col" colspan="2"><a href="/spieler.php?id='.$sql3['spieler'].'">'.$spieler_name.' ('.$sql3['gebote'].' '._('Gebote').' / '.$cntWatcher3.' '._('Beobachter').')</a></th></tr></thead>';
 echo '<tbody>';
-echo '<tr><td>Gehalt</td><td>'.number_format($sql6['gehalt'], 0, ',', '.').' € / Saison</td></tr>';
-echo '<tr class="odd"><td>Besitzer</td>'.$teamLink.'</tr>';
-echo '<tr><td>Marktwert</td><td>'.number_format($sql6['marktwert'], 0, ',', '.').' €</td></tr>';
-echo '<tr class="odd"><td>Höchstgebot</td><td>'.number_format($sql3['betrag_highest'], 0, ',', '.').' € (Ablösesumme)</td></tr>';
-echo '<tr><td>Restzeit</td><td>'.floor(($sql3['ende']-time())/60).' Minuten und '.floor(($sql3['ende']-time())%60).' Sekunden</td></tr>';
+echo '<tr><td>'._('Gehalt').'</td><td>'.number_format($sql6['gehalt'], 0, ',', '.').' € / '._('Saison').'</td></tr>';
+echo '<tr class="odd"><td>'._('Besitzer').'</td>'.$teamLink.'</tr>';
+echo '<tr><td>'._('Marktwert').'</td><td>'.number_format($sql6['marktwert'], 0, ',', '.').' €</td></tr>';
+echo '<tr class="odd"><td>'._('Höchstgebot').'</td><td>'.number_format($sql3['betrag_highest'], 0, ',', '.').' € ('._('Ablösesumme').')</td></tr>';
+echo '<tr><td>'.__('Restzeit %1$d Minuten und %2$d Sekunden', '</td><td>'.floor(($sql3['ende']-time())/60), floor(($sql3['ende']-time())%60)).'</td></tr>';
 $mindestgebot = floor($sql6['marktwert']/100);
 $mindestgebot_temp = strlen($mindestgebot)-1;
 $mindestgebot = floor($mindestgebot/pow(10, $mindestgebot_temp))*pow(10, $mindestgebot_temp);
 $maximalgebot = floor($sql6['marktwert']*$_SESSION['pMaxGebot']);
-echo '<tr class="odd"><td colspan="2">Du musst das alte Gebot um mindestens '.number_format($mindestgebot, 0, ',', '.').' € überbieten!</td></tr>';
+echo '<tr class="odd"><td colspan="2">'.__('Du musst das alte Gebot um mindestens %d € überbieten!', number_format($mindestgebot, 0, ',', '.')).'</td></tr>';
 echo '<tr><td colspan="2">Maximalgebot: '.number_format($maximalgebot, 0, ',', '.').' €</td></tr>';
 if ($sql3['besitzer'] == $cookie_team) {
-	echo '<tr class="odd"><td colspan="2">Du kannst nicht für Deine eigenen Spieler bieten!</td></tr>';
+	echo '<tr class="odd"><td colspan="2">'._('Du kannst nicht für Deine eigenen Spieler bieten!').'</td></tr>';
 }
 elseif (in_array($teamOwnerID, $multiListe)) {
-	echo '<tr class="odd"><td colspan="2">Du kannst nicht für Spieler von Deinen Accounts bieten (Multi-Account).</td></tr>';
+	echo '<tr class="odd"><td colspan="2">'._('Du kannst nicht für Spieler von Deinen Accounts bieten (Multi-Account).').'</td></tr>';
 }
 elseif ($getkonto4 < $sql3['betrag_highest']) {
-    echo '<tr class="odd"><td colspan="2">Du hast nicht genug Geld, um diesen Spieler kaufen zu können!</td></tr>';
+    echo '<tr class="odd"><td colspan="2">'._('Du hast nicht genug Geld, um diesen Spieler kaufen zu können!').'</td></tr>';
 }
 elseif ($n3t3 >= 2) {
-	echo '<tr class="odd"><td colspan="2">Du kannst diesen Spieler nicht verpflichten, da zwischen zwei Vereinen immer nur 2 Transfers pro Saison erlaubt sind.</td></tr>';
+	echo '<tr class="odd"><td colspan="2">'._('Du kannst diesen Spieler nicht verpflichten, da zwischen zwei Vereinen immer nur 2 Transfers pro Saison erlaubt sind.').'</td></tr>';
 }
 else {
 	$bietenHash = md5('29'.betrag_enkodieren($mindestgebot).$teamOwnerID.betrag_enkodieren($sql3['betrag_highest']).betrag_enkodieren($maximalgebot).'1992');
 	echo '<tr class="odd"><td colspan="2"><form action="/transfermarkt_bieten.php" method="post" accept-charset="utf-8"><input type="submit" class="miniButton" name="incGebotButton" value="+" onclick="return stepGebot(\'inc\')" /> <input type="submit" class="miniButton" name="decGebotButton" value="-" onclick="return stepGebot(\'dec\')" /> <input type="hidden" name="wt1" value="'.betrag_enkodieren($mindestgebot).'" /><input type="hidden" name="wt2" value="'.$teamOwnerID.'" /><input type="hidden" name="wt3" value="'.betrag_enkodieren($sql3['betrag_highest']).'" /><input type="hidden" name="wt4" value="'.betrag_enkodieren($maximalgebot).'" /><input type="hidden" name="wt5" value="'.$bietenHash.'" /><input type="text" name="gebot" id="aktuellesGebot" value="'.number_format(ceil($sql3['betrag_highest']+$mindestgebot+1), 0, ',', '.').'" />';
-	echo ' <input type="hidden" name="spieler" value="'.$sql3['spieler'].'" /><input type="submit" value="Betrag bieten" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')" /></form></td></tr>';
+	echo ' <input type="hidden" name="spieler" value="'.$sql3['spieler'].'" /><input type="submit" value="'._('Betrag bieten').'" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')" /></form></td></tr>';
 }
 if ($sql3['bieter_highest'] == $cookie_team) {
-	echo '<tr><td colspan="2" style="color:red">Du bist zurzeit der Höchstbietende!</td></tr>';
+	echo '<tr><td colspan="2" style="color:red">'._('Du bist zurzeit der Höchstbietende!').'</td></tr>';
 }
 echo '</tbody>';
 echo '</table></p>';
-echo '<p><strong>Hinweis:</strong> Der Verein, der die höchste Ablösesumme bietet, bekommt den Spieler automatisch nach Auktionsende. Der Vertrag wird dann erst einmal für 29 Tage mit dem angegebenen Gehalt abgeschlossen.</p><p>Jedes Gebot verlängert die Laufzeit der Auktion um 1 Minute, damit andere Manager noch die Chance haben, mehr zu bieten.</p>';
+echo '<p><strong>'._('Hinweis:').'</strong> '._('Der Verein, der die höchste Ablösesumme bietet, bekommt den Spieler automatisch nach Auktionsende. Der Vertrag wird dann erst einmal für 29 Tage mit dem angegebenen Gehalt abgeschlossen.').'</p><p>'._('Jedes Gebot verlängert die Laufzeit der Auktion um 1 Minute, damit andere Manager noch die Chance haben, mehr zu bieten.').'</p>';
 ?>
-<h1>Dein Maximalgebot</h1>
-<p>Wenn Du neu beim Ballmanager bist, kannst Du nur bis 125% des Marktwertes bieten. Nach 7 Tagen kannst du dann bis 250% bieten. Wenn Du schon 21 Tage dabei bist, kannst Du bis maximal 400% bieten. Schließlich kannst Du ab dem 42. Tag sogar 800% und ab dem 84. Tag bis 1600% bieten, d.h. das Sechzehnfache vom Marktwert eines Spielers.</p>
-<p>Im Moment liegt Deine persönliche Grenze bei <strong><?php echo intval($_SESSION['pMaxGebot']*100); ?>%</strong> des Marktwertes.</p>
+<h1><?php echo _('Dein Maximalgebot'); ?></h1>
+<p><?php echo _('Wenn Du neu beim Ballmanager bist, kannst Du nur bis 125% des Marktwertes bieten. Nach 7 Tagen kannst du dann bis 250% bieten. Wenn Du schon 21 Tage dabei bist, kannst Du bis maximal 400% bieten. Schließlich kannst Du ab dem 42. Tag sogar 800% und ab dem 84. Tag bis 1600% bieten, d.h. das Sechzehnfache vom Marktwert eines Spielers.'); ?></p>
+<p><?php echo __('Im Moment liegt Deine persönliche Grenze bei %s des Marktwertes.', '<strong>'.intval($_SESSION['pMaxGebot']*100).'%</strong>'); ?></p>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -52,7 +52,7 @@ if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
 					$buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Regenerations-Camp', -".$preis.", ".time().")";
 					$buch2 = mysql_query($buch1);
 					// PROTOKOLL ANFANG
-					$formulierung = __('Dein Fitness-Trainer hat ein Regenerations-Camp (%1$d%%) fur %2$d Spieler gebucht.', $temp, $upd2a);
+					$formulierung = __('Dein Fitness-Trainer hat ein Regenerations-Camp (%1$d%%) für %2$d Spieler gebucht.', $temp, $upd2a);
 					$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
 					$sql8 = mysql_query($sql7);
 					// PROTOKOLL ENDE

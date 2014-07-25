@@ -2,6 +2,8 @@
 
 // declare the content type and encoding
 header('Content-Type: text/html; charset=utf-8');
+// prevent clickjacking
+header('X-Frame-Options: sameorigin');
 // remove unnecessary HTTP headers
 header_remove('X-Powered-By');
 

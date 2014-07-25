@@ -297,7 +297,7 @@ else {
 			echo $comments3['text'];
 		}
 		if ($comments3['likes'] > 0 && $comments3['deleted'] == 0) {
-			echo '<br /><strong>'.$comments3['likes'].' '.__('%d Manager finden diesen Kommentar gut', $comments3['likes']).'</strong>';
+			echo '<br /><strong>'.__('%d Manager finden diesen Kommentar gut', $comments3['likes']).'</strong>';
 		}
 		$baseURL = '/supportRequest.php?id='.id2secure($requestID).'&amp;';
 		if ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') {

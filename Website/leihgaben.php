@@ -65,7 +65,7 @@ else {
 						$getmanager3 = mysql_fetch_assoc($getmanager2);
 						$getmanager4 = $getmanager3['vorname'].' '.$getmanager3['nachname'];
 						if ($ac_praemie > 0) {
-							$ac_praemie_str = ' '.__('für %s € pro Pflichtspiel', number_format($ac_praemie, 0, ',', '.');
+							$ac_praemie_str = ' '.__('für %s € pro Pflichtspiel', number_format($ac_praemie, 0, ',', '.'));
 						}
 						else {
 							$ac_praemie_str = ' '._('ohne Prämie');
@@ -151,7 +151,7 @@ $sql2 = mysql_query($sql1);
 if (mysql_num_rows($sql2) > 0) {
 ?>
 <p><?php echo _('Du hast die folgenden Spieler in der aktuellen Saison verliehen. Sie kehren nach Saisonende zu Deinem Verein zurück.'); ?></p>
-<p><table>
+<table>
 <thead>
 <tr class="odd">
 <th scope="col" title="Mannschaftsteil"><?php echo _('MT'); ?></th>
@@ -177,7 +177,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, AL: Alter, ST: Stärke, PS: Pflichtspiele, p.P.: pro Pflichtspiel'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?>
 <?php } else { echo '<p>'._('Du hast in dieser Saison noch keine Spieler verliehen.'); } ?>
@@ -189,7 +188,7 @@ $sql2 = mysql_query($sql1);
 if (mysql_num_rows($sql2) > 0) {
 ?>
 <p><?php echo _('Du hast die folgenden Spieler in der aktuellen Saison von einem anderen Verein ausgeliehen. Sie verlassen Dein Team nach Saisonende wieder.'); ?></p>
-<p><table>
+<table>
 <thead>
 <tr class="odd">
 <th scope="col" title="Mannschaftsteil"><?php echo _('MT'); ?></th>
@@ -215,7 +214,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, AL: Alter, ST: Stärke, PS: Pflichtspiele, TO: Tore, p.P.: pro Pflichtspiel'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?>
 <?php } else { echo '<p>'._('Du hast in dieser Saison noch keine Spieler ausgeliehen.'); } ?>

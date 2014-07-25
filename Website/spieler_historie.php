@@ -16,7 +16,7 @@ else {
 	$aktuellerVerein = '<a href="/team.php?id='.$sql3['team'].'">'.$tm3['name'].'</a>';
 }
 ?>
-<title><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
+<title><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
 <?php if ($loggedin == 1) { ?>

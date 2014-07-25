@@ -35,7 +35,7 @@ $watch1 = "SELECT COUNT(*) FROM ".$prefix."transfermarkt_watch WHERE team = '".$
 $watch2 = mysql_query($watch1);
 $watch3 = mysql_result($watch2, 0);
 ?>
-<title><?php echo _('Spieler:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
+<title><?php echo _('Spieler:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .selectVisible {

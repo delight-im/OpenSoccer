@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo ((isset($_SESSION['status']) && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) ? 'Kontrollzentrum' : 'Sanktionen'); ?> | Ballmanager.de</title>
+<title><?php echo ((isset($_SESSION['status']) && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) ? 'Kontrollzentrum' : 'Sanktionen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -60,8 +60,8 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 						$approveMail5 = mysql_fetch_assoc($approveMail4);
 						function email_senden($email, $bodyText, $bcc = array()) {
 							$empfaenger = $email;
-							$betreff = 'Ballmanager: News vom '.dayAndMonth();
-							$nachricht = "Lieber Manager,\n\n".$bodyText."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
+							$betreff = CONFIG_SITE_NAME.': News vom '.dayAndMonth();
+							$nachricht = "Lieber Manager,\n\n".$bodyText."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\n".CONFIG_SITE_NAME."\n".CONFIG_SITE_DOMAIN."\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf ".CONFIG_SITE_DOMAIN." mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter ".CONFIG_SITE_EMAIL;
 							if (CONFIG_EMAIL_PHP_MAILER) {
 								require './phpmailer/PHPMailerAutoload.php';
 								$mail = new PHPMailer(); // create a new object
@@ -85,7 +85,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 								$mail->Send();
 							}
 							else{
-								$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8";
+								$header = "From: ".CONFIG_SITE_NAME." <".CONFIG_SITE_EMAIL.">\r\nContent-type: text/plain; charset=utf-8";
 								if(!empty($bcc)){
 									$header.="\r\nBCC: ";
 									foreach ($bcc as $index => $adresse){
@@ -102,14 +102,14 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 						$bccList = array();
 						while ($emailUsers3 = mysql_fetch_assoc($emailUsers2)) {
 							if (mb_substr($emailUsers3['email'], 0, 9) != 'GELOESCHT' && mb_strlen($emailUsers3['team']) == 32) {
-								if ($emailUsers3['email'] == 'info@ballmanager.de') {
+								if ($emailUsers3['email'] == CONFIG_SITE_EMAIL) {
 									$bccList[]=trim($emailUsers3['email']);
 									$emailUsersCount++;
 								}
 							}
 						}
 						if(!empty($bccList)){
-							email_senden('info@ballmanager.de', $approveMail5['text'], $bccList);
+							email_senden(CONFIG_SITE_EMAIL, $approveMail5['text'], $bccList);
 							$logBackend1 = "INSERT INTO ".$prefix."backendEmails (zeit, user, text) VALUES (".time().", '".$cookie_id."', '".mysql_real_escape_string($emailText)."')";
                             mysql_query($logBackend1);
 							addInfoBox('Insgesamt '.$emailUsersCount.' E-Mails werden nun versendet ...');
@@ -387,7 +387,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 			echo '<tr>';
 			echo '<td>'.displayUsername($getBackendMails3['username'], $getBackendMails3['user']).'</td>';
 			echo '<td>'.date('d.m.Y H:i', $getBackendMails3['zeit']).'</td>';
-			echo '<td>Lieber Manager,<br /><br />'.nl2br($getBackendMails3['text']).'<br /><br />Wir wünschen Dir noch viel Spaß beim Managen!<br /><br />Sportliche Grüße<br />Das Ballmanager Support-Team<br />www.ballmanager.de<br /><br /><strong>Bestätigungen: '.$getBackendMails3['votes'].' von 3</strong></td>';
+			echo '<td>Lieber Manager,<br /><br />'.nl2br($getBackendMails3['text']).'<br /><br />Wir wünschen Dir noch viel Spaß beim Managen!<br /><br />Sportliche Grüße<br />'.CONFIG_SITE_NAME.'<br />'.CONFIG_SITE_DOMAIN.'<br /><br /><strong>Bestätigungen: '.$getBackendMails3['votes'].' von 3</strong></td>';
 			if (stripos($getBackendMails3['voters'], $cookie_id) === FALSE) {
 				echo '<td><a href="/sanktionen.php?approveMail='.$getBackendMails3['id'].'&approveToken='.md5('ABC'.$getBackendMails3['id'].'567').'&approveMode=1" onclick="return confirm(\'Bist Du sicher?\');">Bestätigen</a> / <a href="/sanktionen.php?approveMail='.$getBackendMails3['id'].'&approveToken='.md5('ABC'.$getBackendMails3['id'].'567').'&approveMode=0" onclick="return confirm(\'Bist Du sicher?\');">Ablehnen</a></td>';
 			}
@@ -401,11 +401,11 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 	}
 	echo '<h1>E-Mail an alle User</h1>';
 	echo '<form action="/sanktionen.php" method="post" accept-charset="utf-8" id="form_email_all_users" style="display:none;">';
-	echo '<p style="font-size:120%; font-weight:bold;">Ballmanager: News vom '.dayAndMonth().'</p>';
+	echo '<p style="font-size:120%; font-weight:bold;">'.CONFIG_SITE_NAME.': News vom '.dayAndMonth().'</p>';
 	echo '<p style="font-size:120%;">Lieber Manager,</p>';
 	echo '<p><textarea name="email_text" style="width:90%; height:300px;"></textarea>';
 	echo '<p style="font-size:120%;">Wir wünschen Dir noch viel Spaß beim Managen!</p>';
-	echo '<p style="font-size:120%;">Sportliche Grüße<br />Das Ballmanager Support-Team<br />www.ballmanager.de</p>';
+	echo '<p style="font-size:120%;">Sportliche Grüße<br />'.CONFIG_SITE_NAME.'<br />'.CONFIG_SITE_DOMAIN.'</p>';
 	echo '<p><input type="submit" value="Zum Versand vorschlagen" onclick="return confirm(\'Bist Du wirklich sicher, dass diese E-Mail genau so an alle aktiven User des Spiels gesendet werden soll?\');" /></p>';
 	echo '</form>';
 	echo '<div id="warning_email_all_users"><p>Über diese Funktion kann eine E-Mail an alle aktiven Manager des Spiels gesendet werden. Der obere und untere Bereich der E-Mail sind schon vorgefertigt und müssen nicht mehr geschrieben werden. Der Text dazwischen kann frei eingegeben werden.</p><p>Diese Funktion steht nur dem Support-Team zur Verfügung und darf nicht missbraucht werden. Die Nutzer wollen nicht mit häufigen E-Mails belästigt werden. Aus Sicherheitsgründen ist nur <em>ein einziger</em> E-Mail-Versand pro Tag möglich. Trotzdem sollte diese Funktion nur so selten wie möglich genutzt werden, am besten gar nicht.</p><p style="text-align:center;"><a href="#" onclick="document.getElementById(\'warning_email_all_users\').style.display = \'none\'; document.getElementById(\'form_email_all_users\').style.display = \'block\'; return false;">Ich habe diese Erklärung sorgfältig gelesen und verstanden!</a></p></div>';

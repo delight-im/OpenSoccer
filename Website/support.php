@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Support'); ?> | Ballmanager.de</title>
+<title><?php echo _('Support'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .ungelesen td {
@@ -20,7 +20,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team.').'</a>'));
+		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team.').'</a>'));
 		include 'zz3.php';
 		exit;
 	}
@@ -29,7 +29,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 ?>
 <h1><?php echo _('Unser Support-Bereich'); ?></h1>
 <p style="text-align:right"><a href="/support.php?mark=read" class="pagenava" onclick="return confirm('<?php echo _('Bist Du sicher?'); ?>')"><?php echo _('Alle als gelesen markieren'); ?></a> <a href="/support.php" class="pagenava"><?php echo _('Support-Hauptseite'); ?></a> <a href="/supportAdd.php" class="pagenava"><?php echo _('Neue Anfrage'); ?></a></p>
-<p><?php echo _('Du hast Vorschläge, wie wir den Ballmanager besser gestalten können? Du hast noch Fragen zum Spiel oder Du hast einen Fehler gefunden?'); ?></p>
+<p><?php echo _('Du hast Vorschläge, wie wir das Spiel besser gestalten können? Du hast noch Fragen zum Spiel oder Du hast einen Fehler gefunden?'); ?></p>
 <p><?php echo _('Auf dieser Seite kannst Du Ideen und Fragen eintragen und die Einträge von anderen Usern bewerten und kommentieren. Vielen Dank für Deine Hilfe!'); ?></p>
 <h1><?php echo _('Anfragen durchsuchen'); ?></h1>
 <form action="/support.php" method="get" accept-charset="utf-8">

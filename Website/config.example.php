@@ -6,12 +6,16 @@ define('CONFIG_DATABASE_USERNAME', 'root');
 define('CONFIG_DATABASE_PASSWORD', '');
 define('CONFIG_DATABASE_NAME', 'ballmanager');
 
-// the installation date (UTC) of this game instance in YYYY-MM-DD format (ISO 8601)
-define('CONFIG_INSTALL_DATE', '2008-09-25');
+// general settings
+define('CONFIG_INSTALL_DATE', '2008-09-25'); // the installation date (UTC) of this game instance in YYYY-MM-DD format (ISO 8601)
+define('CONFIG_IS_LOCAL_INSTALLATION', false); // whether this is an installation on a local computer (no remote server)
+define('CONFIG_USE_HTTPS', false); // whether to use secure connections over HTTPS (SSL/TLS)
+define('CONFIG_USE_HTTPS_HSTS', false); // whether to guarantee and force HTTPS for a long period of time
 
-// sitename and website URL
+// site information
 define('CONFIG_SITE_NAME', 'Ballmanager');
 define('CONFIG_SITE_DOMAIN', 'www.ballmanager.de');
+define('CONFIG_SITE_EMAIL', 'info@ballmanager.de');
 
 define('CONFIG_EMAIL_PHP_MAILER', false); // whether to use PHPMailer (with SMTP) instead of the mail() function
 define('CONFIG_EMAIL_HOST', ''); // SMTP server address
@@ -22,6 +26,5 @@ define('CONFIG_EMAIL_FROM', ''); // sender address
 define('CONFIG_EMAIL_AUTH', true); // whether SMTP requires authentication
 define('CONFIG_EMAIL_SECURE', ''); // for PHPMailer->SMTPSecure
 define('CONFIG_EMAIL_CHARSET', 'UTF-8'); // mail charset
-define('CONFIG_IS_LOCAL_INSTALLATION', false); // whether this is an installation on a local computer (no remote server)
 
 ?>

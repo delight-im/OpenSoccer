@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Chat'); ?> | Ballmanager.de</title>
+<title><?php echo _('Chat'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php if ($loggedin == 1) { ?>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript">
@@ -39,7 +39,7 @@ if (mysql_num_rows($sql2) > 0) {
 	$sql3 = mysql_fetch_assoc($sql2);
 	$chatSperreBis = $sql3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
+		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team').'</a>'));
 		include 'zz3.php';
 		exit;
 	}

@@ -16,7 +16,7 @@ $sql2a = mysql_num_rows($sql2);
 if ($sql2a == 0) { exit; }
 $sql3 = mysql_fetch_assoc($sql2);
 ?>
-<title><?php echo _('Team:').' '.$sql3['name']; ?> | Ballmanager.de</title>
+<title><?php echo _('Team:').' '.$sql3['name']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .verletzter_spieler td {

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Tipps des Tages'); ?> | Ballmanager.de</title>
+<title><?php echo _('Tipps des Tages'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <h1><?php echo _('Tipps durchsuchen'); ?></h1>

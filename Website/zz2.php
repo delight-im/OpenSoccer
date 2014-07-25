@@ -20,7 +20,7 @@ function noDemoPopup() {
 <body>
 <div id="wrap">
 <div id="header">
-<div class="logo_top" style="position:relative"><img src="/images/logo260x60.png" alt="Ballmanager - Online-Fußball-Manager" title="Ballmanager - Online-Fußball-Manager" width="260" style="border:0; width:260px; height:60px" />
+<div class="logo_top" style="position:relative"><img src="/images/logo-260x60.png" alt="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" title="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" width="260" style="border:0; width:260px; height:60px" />
 <?php
 $topWidget = '<h1>'._('Top-Manager').'</h1>';
 $topWidget .= '<div class="left-box navBlockLinks">';
@@ -62,10 +62,10 @@ if (!isset($_SESSION['pMaxGebot'])) { $_SESSION['pMaxGebot'] = 0; }
 <li<?php if ($_SERVER['SCRIPT_NAME'] == '/index.php') { echo ' id="current"'; } ?>><a href="/"><?php echo _('Startseite'); ?></a></li>
 <?php
 if (isMobile()) {
-	echo '<li><a href="http://www.ballmanager.de/">'._('Desktop').'</a></li>';
+	echo '<li><a href="'.getBaseURL().'/">'._('Desktop').'</a></li>';
 }
 else {
-	echo '<li><a href="http://m.ballmanager.de/">'._('Mobil').'</a></li>';
+	echo '<li><a href="'.str_replace('www.', 'm.', getBaseURL()).'/">'._('Mobil').'</a></li>';
 }
 echo '<li><a href="/android_app.php">'._('Android™-App').'</a></li>';
 ?>
@@ -225,7 +225,7 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 <?php if ($loggedin == 0) { ?>
 <h1><?php echo _('Login'); ?></h1>
 <div class="left-box">
-<form action="/login.php" method="post" accept-charset="utf-8" id="login_form" class="imtext">
+<form action="<?php echo getBaseURL(); ?>/login.php" method="post" accept-charset="utf-8" id="login_form" class="imtext">
 <p>
 <label for="lusername"><?php echo _('E-Mail / Username:'); ?></label><input type="text" name="lusername" id="lusername" /><br />
 <label for="lpassword"><?php echo _('Passwort:'); ?></label><input type="password" name="lpassword" id="lpassword" />

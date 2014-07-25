@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Regeln'); ?> | Ballmanager.de</title>
+<title><?php echo _('Regeln'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php
 if ($loggedin == 1) {
@@ -28,7 +28,7 @@ if ($loggedin == 1) {
 }
 ?>
 <h1 id="regeln"><?php echo _('Nutzungsregeln'); ?></h1>
-<p><?php echo _('Diese Nutzungsbedingungen (&quot;Regeln&quot;) legen fest, wie Du (&quot;der User&quot;) die Webseite unter www.ballmanager.de (&quot;Ballmanager&quot;) nutzen darfst. Mit der Nutzung dieser Webseite erklärst Du, dass Du mit den Regeln auf dieser Seite einverstanden bist.'); ?></p>
+<p><?php echo __('Diese Nutzungsbedingungen (&quot;Regeln&quot;) legen fest, wie Du (&quot;der User&quot;) die Webseite unter %1$s (&quot;%2$s&quot;) nutzen darfst. Mit der Nutzung dieser Webseite erklärst Du, dass Du mit den Regeln auf dieser Seite einverstanden bist.', CONFIG_SITE_DOMAIN, CONFIG_SITE_NAME); ?></p>
 <p><?php echo _('Bitte lies die Regeln sorgfältig durch, denn sie müssen eingehalten werden, damit alles fair bleibt und jeder Spaß am Spiel hat.'); ?></p>
 <p><strong><?php echo _('Teil I: Allgemeines Verhalten'); ?></strong></p>
 <ol>
@@ -65,7 +65,7 @@ if ($loggedin == 1) {
 <li><?php echo _('Usernamen, die Internetadressen enthalten'); ?></li>
 <li><?php echo _('Usernamen, die dem Namen eines realen Vereins ähneln'); ?></li>
 </ol>
-<p><strong><?php echo _('Teil IV: Aufgaben und Funktion des Ballmanager-Teams'); ?></strong></p>
+<p><strong><?php echo _('Teil IV: Aufgaben und Funktion des Support-Teams'); ?></strong></p>
 <ol>
 <li><?php echo _('Sämtliche Inhalte, die von Usern selbst eingestellt wurden, können vom Team ohne Angabe von Gründen gelöscht werden.'); ?></li>
 <li><?php echo _('Das Team legt Sanktionen fest, wenn begründeter Verdacht eines Verstoßes gegen die hier aufgelisteten Regeln besteht. Es kann auch der Zugriff auf bestimmte Funktionen des Spiels gesperrt werden.'); ?></li>
@@ -75,25 +75,25 @@ if ($loggedin == 1) {
 <li><?php echo _('Das Team soll immer mit gutem Beispiel vorangehen, geduldig und fair sein.'); ?></li>
 <li><?php echo _('Jedes Teammitglied muss gegenüber den anderen Usern der Community Respekt in Wort und Tat zeigen.'); ?></li>
 </ol>
-<p><strong><?php echo _('Teil V: Ballmanager'); ?></strong></p>
+<p><strong><?php echo _('Teil V: Das Spiel'); ?></strong></p>
 <ol>
 <li><?php echo _('Alle Geldwerte im Spiel sind Teil der virtuellen Währung. Eine Auszahlung dieses Guthabens ist ausgeschlossen.'); ?></li>
 <li><?php echo _('Alle Vereine, Spieler und Sponsoren sowie deren Namen sind frei erfunden und haben keinen Bezug zu realen Ligen.'); ?></li>
 <li><?php echo _('Das Spiel wird ständig weiterentwickelt und Funktionen verändert, hinzugefügt oder entfernt.'); ?></li>
-<li><?php echo _('Ballmanager behält sich vor, den Zugang ohne Angabe von Gründen zu sperren bzw. Accounts zu löschen. Dabei ist auch keine Benachrichtigung im Voraus nötig.'); ?></li>
+<li><?php echo __('%s behält sich vor, den Zugang ohne Angabe von Gründen zu sperren bzw. Accounts zu löschen. Dabei ist auch keine Benachrichtigung im Voraus nötig.', CONFIG_SITE_NAME); ?></li>
 <li><?php echo _('Es wird keine Garantie für die Verfügbarkeit des Spiels übernommen. Es gibt keinen Anspruch auf bestimmte Funktionen oder deren Aktualisierung.'); ?></li>
 <li><?php echo _('Für alle Aktivitäten, die mit einem Account stattfinden, ist ausschließlich der User verantwortlich, der diesen Account registriert hat. Zu diesen Aktivitäten zählen vor allem selbst eingestellte Beiträge und die Kommunikation im Spiel.'); ?></li>
 <li><?php echo _('Es wird keine Gewähr für die Richtigkeit, Aktualität und Vollständigkeit der bereitgestellten Informationen übernommen.'); ?></li>
 <li><?php echo _('Diese Webseite (und auch jeder Teil davon) darf ausschließlich mit Webbrowsern aufgerufen werden. Die Verwendung von anderen Programmen ist nicht gestattet.'); ?></li>
-<li><?php echo _('Ballmanager behält sich vor, diese Regeln jederzeit ändern zu können.'); ?></li>
+<li><?php echo __('%s behält sich vor, diese Regeln jederzeit ändern zu können.', CONFIG_SITE_NAME); ?></li>
 </ol>
 <h1 id="datenschutz"><?php echo _('Datenschutz'); ?></h1>
 <p><strong><?php echo _('Keine Weitergabe der Daten:'); ?></strong><br />
-<?php echo _('Die Betreiber der Webseite unter www.ballmanager.de (&quot;Ballmanager&quot;) geben grundsätzlich keine Daten von Benutzern an Dritte weiter. Ausnahmen sind Fälle, in denen Ballmanager.de gesetzlich oder durch Entscheidungen von Gerichten dazu verpflichtet ist, und Fälle, in denen die Daten zur Strafverfolgung benötigt werden.'); ?></p>
+<?php echo __('Die Betreiber der Webseite unter %1$s (&quot;%2$s&quot;) geben grundsätzlich keine Daten von Benutzern an Dritte weiter. Ausnahmen sind Fälle, in denen %2$s gesetzlich oder durch Entscheidungen von Gerichten dazu verpflichtet ist, und Fälle, in denen die Daten zur Strafverfolgung benötigt werden.', CONFIG_SITE_DOMAIN, CONFIG_SITE_NAME); ?></p>
 <p><strong><?php echo _('Akzeptieren der Datenschutzerklärung:'); ?></strong><br />
 <?php echo _('Mit dem Nutzen dieser Webseite erklärt sich der User mit dieser Datenschutzerklärung einverstanden. Die Verarbeitung und Nutzung der personenbezogenen Daten wird gemäß dieser Datenschutzerklärung und der gesetzlichen Bestimmungen durchgeführt.'); ?></p>
 <p><strong><?php echo _('IP-Adresse'); ?></strong><br />
-<?php echo _('Beim Aufrufen, Lesen und Benutzen von Seiten unter www.ballmanager.de wird die IP-Adresse des Users in anonymisierter Form gespeichert. Zum einen wird die aktuelle IP-Adresse als MD5-Hash (Beispiel: d41d8cd98f00b204e9800998ecf8427e) gespeichert. Zum anderen wird die IP-Adresse gespeichert, nachdem die letzten beiden Oktetts gelöscht wurden (Beispiel: 123.123.XXX.XXX).'); ?></p>
+<?php echo _('Beim Aufrufen, Lesen und Benutzen einzelner Teile der Webseite wird die IP-Adresse des Users in anonymisierter Form gespeichert. Zum einen wird die aktuelle IP-Adresse als MD5-Hash (Beispiel: d41d8cd98f00b204e9800998ecf8427e) gespeichert. Zum anderen wird die IP-Adresse gespeichert, nachdem die letzten beiden Oktetts gelöscht wurden (Beispiel: 123.123.XXX.XXX).'); ?></p>
 <p><strong><?php echo _('User-Agent'); ?></strong><br />
 <?php echo _('Der User-Agent-Header des Webbrowsers wird bei jedem Besuch gespeichert.'); ?></p>
 <p><strong><?php echo _('Persönliche Daten bei der Registrierung'); ?></strong><br />
@@ -121,9 +121,9 @@ if ($loggedin == 1) {
 <p><strong>Google Adsense</strong><br />
 <?php echo _('Da auf dieser Seite teilweise Werbung durch Google Adsense angezeigt wird, speichert Ihr Browser eventuell ein von Google Inc. oder Dritten gesendetes Cookie. Dieses Cookie kann durch Google Inc. oder Dritte ausgelesen werden. Um dieses Cookie zu löschen oder die Cookiebehandlung generell zu verändern, konsultieren Sie bitte die Hilfe Ihres Browsers. In der Regel finden sich diese Einstellungen unter Extras &raquo; Einstellungen &raquo; Datenschutz (Firefox) oder unter Extras &raquo; Internetoptionen &raquo; Datenschutz (Internet Explorer).'); ?>
 <p><strong><?php echo _('Änderungen an dieser Datenschutzerklärung:'); ?></strong><br />
-<?php echo _('Ballmanager behält sich vor, jederzeit Änderungen an dieser Datenschutzerklärung durchzuführen.'); ?></p>
+<?php echo __('%s behält sich vor, jederzeit Änderungen an dieser Datenschutzerklärung durchzuführen.', CONFIG_SITE_NAME); ?></p>
 <p><strong><?php echo _('Verlinkte Webseiten:'); ?></strong><br />
-<?php echo _('Auf den einzelnen Seiten dieses Projekts sind verschiedene externe Webseiten verlinkt. Für diese Seiten gilt die obige Erklärung nicht und Ballmanager ist nicht für die Seiten verantwortlich.'); ?></p>
+<?php echo __('Auf den einzelnen Seiten dieses Projekts sind verschiedene externe Webseiten verlinkt. Für diese Seiten gilt die obige Erklärung nicht und %s ist nicht für die Seiten verantwortlich.', CONFIG_SITE_NAME); ?></p>
 <p><strong><?php echo _('Weitere Informationen:'); ?></strong></p>
 <ul>
 <li><a href="http://de.wikipedia.org/wiki/HTTP-Cookie">Browser-Cookies</a></li>

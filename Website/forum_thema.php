@@ -36,7 +36,7 @@ $sql5a = mysql_num_rows($sql5);
 if ($sql5a == 0) { exit; }
 $sql6 = mysql_fetch_assoc($sql5);
 ?>
-<title><?php echo $sql6['titel']; ?> | Forum | Ballmanager.de</title>
+<title><?php echo $sql6['titel']; ?> | Forum - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo $sql6['titel']; ?> | Forum</h1>
 <?php

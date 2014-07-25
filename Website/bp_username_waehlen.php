@@ -36,11 +36,11 @@ if (isset($_POST['username']) && isset($_SESSION['bp_username'])) {
 	}
 }
 ?>
-<title><?php echo _('Benutzernamen wählen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Benutzernamen wählen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Benutzernamen wählen'); ?></h1>
 <?php if (isset($schon_vergeben_message)) { echo $schon_vergeben_message; } ?>
-<p><?php echo _('Willkommen beim Ballmanager! Du stehst jetzt erst einmal auf der Warteliste. Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - erhältst Du eine Nachricht von uns bei Bigpoint.'); ?></p>
+<p><?php echo _('Willkommen! Du stehst jetzt erst einmal auf der Warteliste. Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - erhältst Du eine Nachricht von uns bei Bigpoint.'); ?></p>
 <p><?php echo _('Damit es dann sofort losgehen kann, brauchst Du jetzt noch einen Benutzernamen. Dieser Name wird überall im Spiel angezeigt, Du bist daran zu erkennen.'); ?></p>
 <p><?php echo _('Trage Deinen gewünschten Namen in das Textfeld unten ein und klicke anschließend auf &quot;Fertig&quot;.'); ?> <?php echo __('Bitte halte Dich bei der Wahl Deines Namens aber an %s.', '<a href="/regeln.php" onclick="window.open(\'/regeln.php\'); return false">'._('diese Regeln').'</a>'); ?></p>
 <?php

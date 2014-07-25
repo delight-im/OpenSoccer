@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Gründe für Löschung'); ?> | Ballmanager.de</title>
+<title><?php echo _('Gründe für Löschung'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -8,7 +8,7 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 	$sql2 = mysql_query($sql1);
 	$blaetter3 = anzahl_datensaetze_gesamt($sql1);
 	echo '<h1>'._('Gründe für Löschung').'</h1>';
-	echo '<p>'._('Warum haben sich die User beim Ballmanager gelöscht? Lies nach, was ihnen gefallen und hat und was nicht.').'</p>';
+	echo '<p>'._('Warum haben sich die User im Spiel gelöscht? Lies nach, was ihnen gefallen und hat und was nicht.').'</p>';
 	echo '<table><thead><tr class="odd"><th scope="col">'._('Manager').'</th><th scope="col">'._('Löschdatum').'</th><th scope="col">'._('Positiv').'</th><th scope="col">'._('Negativ').'</th></tr></thead><tbody>';
 	$counter = 0;
 	while ($sql3 = mysql_fetch_assoc($sql2)) {

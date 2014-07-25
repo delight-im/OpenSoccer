@@ -11,8 +11,12 @@ Header set Cache-Control "max-age=604800"
 RewriteEngine On
 RewriteBase /
 
-RewriteCond %{HTTP_HOST} ^m\.ballmanager\.de$ [NC]
-RewriteRule ^images/Refresh\.php$ images/RefreshMobile.php [NC,L]
+# Force <www> on bare domain (note: list other subdomains than <www> in second line in place of <m>)
+RewriteCond %{HTTP_HOST} !^$
+RewriteCond %{HTTP_HOST} !^(www|m)\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^ballmanager\.de$ [NC]
-RewriteRule ^(.*)$ http://www.ballmanager.de/$1 [NC,R=301,L]
+# Return mobile CSS for <m> subdomain
+RewriteCond %{HTTP_HOST} ^m\.(.*)$ [NC]
+RewriteRule ^images/Refresh\.php$ images/RefreshMobile.php [NC,L]

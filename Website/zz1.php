@@ -50,7 +50,7 @@ function getSpecialOffer() {
 	$today = date('d.m');
 	$ostern = date('d.m', easter_date());
 	switch ($today) {
-		case '13.07': $reason = _('Der Ballmanager hat Geburtstag'); break;
+		case '13.07': $reason = __('%s hat Geburtstag', CONFIG_SITE_NAME); break;
 		case '24.12': $reason = _('Es ist Weihnachten'); break;
 		case '01.01': $reason = _('Das neue Jahr hat begonnen'); break;
 		case '01.05': $reason = _('Es ist Maifeiertag'); break;

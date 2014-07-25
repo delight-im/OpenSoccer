@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Post schreiben'); ?> | Ballmanager.de</title>
+<title><?php echo _('Post schreiben'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 
 <?php
@@ -12,7 +12,7 @@ if (isset($_POST['titel']) && isset($_POST['inhalt']) && isset($_POST['an']) && 
 			echo '<p>'.trim(nl2br(strip_tags($_POST['inhalt']))).'</p>';
 		}
 	}
-	else if (trim($_POST['an']) == OFFICIAL_USER_ID) { // Post an Ballmanager
+	else if (trim($_POST['an']) == OFFICIAL_USER_ID) { // message to official user
 		echo '<p>'._('Du kannst diesem Manager nicht direkt eine Nachricht schicken!').'</p>';
 		if (strlen($_POST['inhalt']) > 0) {
 			echo '<p><strong>'._('Dies ist der Text, den Du schreiben wolltest:').'</strong></p>';
@@ -82,7 +82,7 @@ elseif (isset($_GET['id'])) {
 				$sql3 = mysql_fetch_assoc($sql2);
 				$chatSperreBis = $sql3['MAX(chatSperre)'];
 				if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-					addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+					addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Support-Team.</a>');
 					include 'zz3.php';
 					exit;
 				}
@@ -122,7 +122,7 @@ elseif (isset($_GET['id'])) {
 			}
 			echo '<form method="post" action="/post_schreiben.php" accept-charset="utf-8">';
 			if (strpos($betreff, 'RE: [Teampost]') === 0 && ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin')) {
-				echo '<p>'._('Absender:').'<br /><input type="text" size="50" name="absender_r" value="Ballmanager" readonly="readonly" /></p>';
+				echo '<p>'._('Absender:').'<br /><input type="text" size="50" name="absender_r" value="'.CONFIG_SITE_NAME.'" readonly="readonly" /></p>';
 			}
 			echo '<p>'._('Empfänger:').'<br /><input type="text" size="50" name="empfaenger_r" value="'.$em3['username'].'" readonly="readonly" /></p>';
 			echo '<p>'._('Betreff:').'<br /><input type="text" size="50" name="titel" value="'.$betreff.'"'.$betreff_sperre.' /></p>';

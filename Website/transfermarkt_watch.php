@@ -19,7 +19,7 @@ if ($cookie_id != DEMO_USER_ID) {
 }
 $hadresse = 'Location: /spieler.php?id='.$spieler.'&action=setWatching';
 if (isset($_SERVER['HTTP_REFERER'])) {
-	if ($_SERVER['HTTP_REFERER'] == 'http://www.ballmanager.de/beobachtung.php') {
+	if (stripos($_SERVER['HTTP_REFERER'], '/beobachtung.php') !== false) {
 		$hadresse = 'Location: /beobachtung.php';
 	} 
 }

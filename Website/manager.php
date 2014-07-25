@@ -54,7 +54,7 @@ else {
     $letzte_aktion = _('vor wenigen Sekunden');
 }
 ?>
-<title><?php echo __('Manager: %s', $sql3['username']); ?> | Ballmanager.de</title>
+<title><?php echo __('Manager: %s', $sql3['username']); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <script type="text/javascript">
 function updateTextLength(element) {
 	var counter = document.getElementById('infotext_counter');
@@ -250,7 +250,7 @@ if (isset($_POST['gaestebuch_eintrag']) && $cookie_id != DEMO_USER_ID) {
 		$ban3 = mysql_fetch_assoc($ban2);
 		$chatSperreBis = $ban3['MAX(chatSperre)'];
 		if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-			addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
+			addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team').'</a>'));
 			include 'zz3.php';
 			exit;
 		}

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Einstellungen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Einstellungen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -244,7 +244,7 @@ for ($i = $start_urlaub; $i <= $noch_urlaub; $i++) {
 <?php } ?>
 
 <h1><?php echo _('Passwort ändern'); ?></h1>
-<p><?php echo _('Mit dem folgenden Formular kannst Du Dein Passwort beim Ballmanager ändern. Dazu musst Du alle Felder ausfüllen.'); ?></p>
+<p><?php echo _('Mit dem folgenden Formular kannst Du Dein Passwort ändern. Dazu musst Du alle Felder ausfüllen.'); ?></p>
 <form action="/einstellungen.php" method="post" accept-charset="utf-8">
 <p><?php echo _('Altes Passwort:'); ?><br /><input type="password" name="pw_alt" size="50" /></p>
 <p><?php echo _('Neues Passwort:'); ?><br /><input type="password" name="pw_neu1" size="50" /></p>
@@ -253,7 +253,7 @@ for ($i = $start_urlaub; $i <= $noch_urlaub; $i++) {
 </form>
 
 <h1 id="accDel"><?php echo _('Account löschen'); ?></h1>
-<p><?php echo _('Du bist Dir wirklich sicher, dass Du Deinen Account hier beim Ballmanager löschen möchtest? Das ist sehr schade, aber wir akzeptieren das natürlich.'); ?></p>
+<p><?php echo _('Du bist Dir wirklich sicher, dass Du Deinen Account löschen möchtest? Das ist sehr schade, aber wir akzeptieren das natürlich.'); ?></p>
 <p><?php echo _('Wir würden uns freuen, wenn Du uns noch mitteilen würdest, was Dir hier gefallen hat und was noch nicht so gut war.'); ?></p>
 <form action="/einstellungen.php" method="post" accept-charset="utf-8">
 <p><?php echo _('Das war gut:'); ?><br /><input type="text" name="accDelPlus" style="width:250px" /></p>

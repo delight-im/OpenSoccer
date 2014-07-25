@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Rangliste'); ?> | Ballmanager.de</title>
+<title><?php echo _('Rangliste'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php if ($loggedin == 1) { ?>
 <style type="text/css">
 <!--

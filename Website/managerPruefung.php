@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Manager-Prüfung'); ?> | Ballmanager.de</title>
+<title><?php echo _('Manager-Prüfung'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -25,7 +25,7 @@ if ($stayed3 >= 1) {
 echo '<h1>'._('Manager-Prüfung').'</h1>';
 echo '<p>'._('Der Vorstand Deines Klubs hat viel Vertrauen in Dich. Aber bevor Du Transfers aushandeln darfst, sollst Du erst alle Aufgaben dieser Manager-Prüfung erfolgreich abschließen.').'</p>';
 $html = '<table><thead><tr class="odd"><th scope="col">&nbsp;</th><th scope="col">'._('Prüfung').'</th></tr></thead><tbody>';
-$html .= '<tr><td>'.showErfolg(1).'</td><td>[01] '._('Registriere Dich beim Ballmanager und aktiviere Deinen Account.').'</td></tr>';
+$html .= '<tr><td>'.showErfolg(1).'</td><td>[01] '._('Registriere Dich im Spiel und aktiviere Deinen Account.').'</td></tr>';
 $html .= '<tr class="odd"><td>'.showErfolg(1).'</td><td>[02] '._('Wähle nach dem ersten Login Dein Team und Deine Liga.').'</td></tr>';
 $sql1 = "SELECT a.task, b.id AS done FROM ".$prefix."licenseTasks AS a LEFT JOIN ".$prefix."licenseTasks_Completed AS b ON a.shortName = b.task AND b.user = '".$cookie_id."'";
 $sql2 = mysql_query($sql1);

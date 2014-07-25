@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('IP-Info'); ?> | Ballmanager.de</title>
+<title><?php echo _('IP-Info'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php
 if ($loggedin == 1) {

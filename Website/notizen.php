@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Notizen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Notizen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <script type="text/javascript">
 function laengeStoppen(feld) {
   if (feld.value.length > 240) {

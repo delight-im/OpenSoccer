@@ -1,6 +1,6 @@
 <?php if (isset($_GET['id'])) { ?>
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Post'); ?> | Ballmanager.de</title>
+<title><?php echo _('Post'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 
 <?php if ($loggedin == 0) { echo '<h1>'._('Post').'</h1><p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>'; } else { ?>

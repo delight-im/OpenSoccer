@@ -31,7 +31,7 @@ return _('Nach einer Roten Karte verliert ein Team 10% seiner Stärke, nach eine
 return _('Beim <i>BM-Lotto</i> wird 4 aus 15 gespielt. Das heißt, man muss aus der Zahlenreihe von 1 bis 15 insgesamt 4 Zahlen tippen.');
 return _('Chancen beim <i>BM-Lotto</i>:<br />- 4 Richtige = 1:1365<br />- 3 Richtige = 33:1365<br />- 2 Richtige = 330:1365');
 return _('Ein Lottoschein für einen Tag kostet 1 Mio. Euro, 75% davon gehen in den Jackpot.');
-return _('Dein persönliches Maximalgebot bei Auktionen hängt davon ab, wie lange Du schon beim Ballmanager dabei bist.');
+return _('Dein persönliches Maximalgebot bei Auktionen hängt davon ab, wie lange Du schon dabei bist.');
 return _('Spieler wechseln erst nach Saisonende in die Torjägerliste der neuen Liga, nicht direkt nach dem Transfer.');
 return _('Die TV-Gelder werden an den ersten Spieltagen jeder Saison verteilt.');
 return _('Liga-Tabellen werden immer für 30 Minuten gespeichert, Änderungen sind also nicht sofort sichtbar.');
@@ -43,7 +43,7 @@ return _('Bei Leihgaben übernimmt der Ausleihende, also der vorübergehende Bes
 return _('Leih-Prämien können vom verleihenden Team angeboten werden. Das ausleihende Team bekommt sie für jeden Pflichtspiel-Einsatz des Spielers überwiesen.');
 return _('Der <i>Manager der Saison</i> ist eine Auszeichnung für den erfolgreichsten Manager der vergangenen Saison. Er wird durch eine Abstimmung von allen Managern gewählt.');
 return _('Der Titel <i>Manager der Saison</i> bringt keine finanziellen Vorteile für den Sieger, Du kannst also auch einen Konkurrenten wählen, ohne Nachteile dadurch zu haben.');
-return _('Das <i>4-4-2</i> ist das einzige Spielsystem beim Ballmanager. Trotzdem kannst Du viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-Einstellungen.');
+return _('Das <i>4-4-2</i> ist das einzige verfügbare Spielsystem. Trotzdem kannst Du viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-Einstellungen.');
 return _('Bei jeder Auktion gibt es ein Mindestgebot. Das verhindert, dass Du einen anderen Verein mit nur 1 Euro überbieten kannst.');
 return _('Die Aufstellungsstärke bezieht sich auf die Aufstellung für Ligaspiele. Sie ist die Summe der Spielstärken in der Aufstellung.');
 return _('Bei jedem Deiner Heimspiele kommen Fans in Dein Stadion und zahlen Eintritt. Es können natürlich nur so viele Zuschauer kommen, wie Deine Stadiongröße erlaubt.');
@@ -58,7 +58,7 @@ return _('Der Scout Deines Teams beobachtet Spieler und schätzt deren Talent ei
 return _('Je höher die Kompetenz Deines Scouts ist, also je mehr Geld du für ihn ausgibst, desto genauer werden seine Schätzungen.');
 return _('Wenn Du Schulden hast, musst Du keinen Kredit aufnehmen. Du musst auch keine Zinsen zahlen. Es passiert nichts Schlimmes, Du solltest nur versuchen, diese Schulden schnell wieder loszuwerden.');
 return _('Mit Sanktionen kann das Team unfaires und unpassendes Verhalten bestrafen. Wer gegen die Regeln verstößt, kann verschiedene Strafen bekommen, unter anderem Transfersperren und Geldstrafen.');
-return _('Eine Saison beim Ballmanager dauert 22 Tage. Nach 11 Hinrunden- und 11 Rückrundenspielen endet eine Saison und die nächste beginnt. Dabei gibt es keinen Tag Pause zwischen den beiden Saisons.');
+return _('Eine Saison im Spiel dauert 22 Tage. Nach 11 Hinrunden- und 11 Rückrundenspielen endet eine Saison und die nächste beginnt. Dabei gibt es keinen Tag Pause zwischen den beiden Saisons.');
 return _('Du kannst mit dem <i>Team-Tausch</i> Dein Team an einen anderen Manager übergeben. Du findest ihn unter <i>Einstellungen</i>.');
 return _('Das Renommee eines Vereins ist der Maßstab für den Erfolg. Jedes Team hat eine Punktzahl, die angibt, wie angesehen der Klub zurzeit ist. Dabei spielen unter anderem Meistertitel, Cup- und Pokalsiege sowie die Qualität der Spieler eine Rolle.');
 return _('Für den <i>Cup</i> qualifizieren sich die 16 renommiertesten Teams eines Landes (Freilos). Die restlichen 32 Teams müssen eine Quali-Runde spielen.');

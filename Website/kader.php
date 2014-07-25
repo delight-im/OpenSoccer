@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Kader'); ?> | Ballmanager.de</title>
+<title><?php echo _('Kader'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .verletzt td {

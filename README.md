@@ -2,11 +2,12 @@
 
 Online Soccer Manager
 
-Demo: http://www.ballmanager.de/
+**Live demo:** [www.opensoccer.org](http://www.opensoccer.org/)
 
 ## Setup
 
  1. Put the PHP files up on a web server
+ 2. Add the two subdomains `www` and `m` for your domain
  2. Set up an empty MySQL database with collation `utf8_general_ci` and privileges `SELECT, INSERT, UPDATE, DELETE, DROP`
  3. Run the SQL from [Database/STRUCTURE.sql](Database/STRUCTURE.sql) to create the database structure
  4. Run the SQL from [Database/DATA.sql](Database/DATA.sql) to add the initial data for the game

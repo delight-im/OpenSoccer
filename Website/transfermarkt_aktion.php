@@ -46,7 +46,7 @@ if ($loggedin == 1) {
 					$laengen = array(24, 36, 48, 60, 72);
 					if (in_array($laenge, $laengen)) {
 						if (!isset($cookie_team) OR $cookie_team == '') {
-							echo 'Bitte melde den Fehler E5 im Forum oder unter <info@ballmanager.de>';
+							echo 'Bitte melde den Fehler E5 im Forum oder unter <'.CONFIG_SITE_EMAIL.'>';
 							$phpf1 = "INSERT INTO ".$prefix."php_fehler (datei) VALUES ('transfermarkt_auktion KEIN Team')";
 							$phpf2 = mysql_query($phpf1);
 							exit;

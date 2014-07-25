@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Transfer-Übersicht'); ?> | Ballmanager.de</title>
+<title><?php echo _('Transfer-Übersicht'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>

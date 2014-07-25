@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Chat-Reports'); ?> | Ballmanager.de</title>
+<title><?php echo _('Chat-Reports'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 td.sperrRelevant_1 {

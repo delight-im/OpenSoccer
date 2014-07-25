@@ -29,31 +29,31 @@ $bpUserID = str_replace('BP_', '', $sql3['email']);
 $nachricht = '
 Hallo,
 
-Du hast Dich nun schon eine Weile nicht mehr beim Ballmanager blicken lassen. Am '.date('d.m.Y', $sql3['last_login']).' wurdest Du zuletzt auf dem Trainingsgelaende gesehen. Deine Spieler fuehlen sich schon etwas vernachlaessigt.
+Du hast Dich nun schon eine Weile nicht mehr blicken lassen. Am '.date('d.m.Y', $sql3['last_login']).' wurdest Du zuletzt auf dem Trainingsgelaende gesehen. Deine Spieler fuehlen sich schon etwas vernachlaessigt.
 
 Wenn Du Deinen Posten als Manager behalten möchtest, logge Dich bitte innerhalb der naechsten 2 Tage wieder ein und kuemmere Dich um Dein Team.
 
 Falls Du keine Lust mehr hast, logge Dich bitte nicht mehr ein. Denn in 3 Tagen wird Dein Account dann automatisch geloescht.
 
-Manager, die Ihre Mannschaften seit 9 Tagen nicht mehr betreut haben, werden beim Ballmanager regelmaessig geloescht. So machen wir Platz fuer ehrgeizigere Manager, die wirklich beim Ballmanager spielen wollen.
+Manager, die Ihre Mannschaften seit 9 Tagen nicht mehr betreut haben, werden regelmaessig geloescht. So machen wir Platz fuer ehrgeizige Manager, die wirklich aktiv spielen wollen.
 
 Wenn Du doch noch Lust hast weiterzuspielen, bist Du natuerlich jederzeit willkommen!
 
 Sportliche Gruesse
-Ballmanager
-www.ballmanager.de
+'.CONFIG_SITE_NAME.'
+'.CONFIG_SITE_DOMAIN.'
 
 ---------------
 
-Du erhaeltst diese E-Mail, weil Du Dich ueber Bigpoint beim Ballmanager registriert bist. Du kannst Deinen Account jederzeit loeschen, sodass Du keine E-Mails mehr von uns erhaeltst.';
-$bp_mails1 = "INSERT INTO ".$prefix."bp_mails (bpUserId, userID, mailSubject, mailText, zeit) VALUES ('".$bpUserID."', '".$sql3['ids']."', 'Ballmanager: Keine Lust mehr?', '".$nachricht."', ".time().")";
+Du erhaeltst diese E-Mail, weil Du Dich ueber Bigpoint registriert hast. Du kannst Deinen Account jederzeit loeschen, sodass Du keine E-Mails mehr von uns erhaeltst.';
+$bp_mails1 = "INSERT INTO ".$prefix."bp_mails (bpUserId, userID, mailSubject, mailText, zeit) VALUES ('".$bpUserID."', '".$sql3['ids']."', '".CONFIG_SITE_NAME.": Keine Lust mehr?', '".$nachricht."', ".time().")";
 $bp_mails2 = mysql_query($bp_mails1);
 }
 else {
 	// E-MAIL VERSENDEN ANFANG
 	$empfaenger = $sql3['email'];
-	$betreff = 'Ballmanager: Keine Lust mehr?';
-	$nachricht = "Hallo ".$sql3['username'].",\n\nDu hast Dich nun schon eine Weile nicht mehr beim Ballmanager (www.ballmanager.de) blicken lassen. Am ".date('d.m.Y', $sql3['last_login'])." wurdest Du zuletzt auf dem Trainingsgelände gesehen. Deine Spieler fühlen sich schon etwas vernachlässigt.\n\nAnsonsten wird sich der Vorstand nach einem Nachfolger umsehen und in 3 Tagen einen neuen Manager für Deinen Klub präsentieren.\n\nWenn Du noch Lust hast weiterzuspielen, bist Du natürlich jederzeit herzlich willkommen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
+	$betreff = CONFIG_SITE_NAME.': Keine Lust mehr?';
+	$nachricht = "Hallo ".$sql3['username'].",\n\nDu hast Dich nun schon eine Weile nicht mehr blicken lassen. Am ".date('d.m.Y', $sql3['last_login'])." wurdest Du zuletzt auf dem Trainingsgelände gesehen. Deine Spieler fühlen sich schon etwas vernachlässigt.\n\nAnsonsten wird sich der Vorstand nach einem Nachfolger umsehen und in 3 Tagen einen neuen Manager für Deinen Klub präsentieren.\n\nWenn Du noch Lust hast weiterzuspielen, bist Du natürlich jederzeit herzlich willkommen!\n\nSportliche Grüße\n".CONFIG_SITE_NAME."\n".CONFIG_SITE_DOMAIN."\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf ".CONFIG_SITE_DOMAIN." mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter ".CONFIG_SITE_EMAIL;
 	if (CONFIG_EMAIL_PHP_MAILER) {
 		require './phpmailer/PHPMailerAutoload.php';
 		$mail = new PHPMailer(); // create a new object
@@ -72,7 +72,7 @@ else {
 		$mail->Send();
 	}
 	else{
-		$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8";
+		$header = "From: ".CONFIG_SITE_NAME." <".CONFIG_SITE_EMAIL.">\r\nContent-type: text/plain; charset=utf-8";
 		mail($empfaenger, $betreff, $nachricht, $header);
 	}
 	// E-MAIL VERSENDEN ENDE

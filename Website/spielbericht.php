@@ -34,7 +34,7 @@ else {
 }
 // LIVE-SCORING ENDE
 ?>
-<title><?php echo $sql3['team1']; ?> - <?php echo $sql3['team2']; ?> <?php if ($live_scoring_meldung != '') { echo _('LIVE'); } else { echo $sql3['ergebnis']; } ?> | Ballmanager.de</title>
+<title><?php echo $sql3['team1']; ?> - <?php echo $sql3['team2']; ?> <?php if ($live_scoring_meldung != '') { echo _('LIVE'); } else { echo $sql3['ergebnis']; } ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 div.matchReport {

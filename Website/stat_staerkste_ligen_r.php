@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Stärkste Ligen - RKP'); ?> | Ballmanager.de</title>
+<title><?php echo _('Stärkste Ligen - RKP'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .liga_<?php echo $cookie_liga; ?> {

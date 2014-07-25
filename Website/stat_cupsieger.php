@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Cupsieger'); ?> | Ballmanager.de</title>
+<title><?php echo _('Cupsieger'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .team_<?php echo md5($cookie_teamname); ?> {

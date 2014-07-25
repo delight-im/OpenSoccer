@@ -1,7 +1,7 @@
 <?php if (!isset($_POST['reg_benutzername']) OR !isset($_POST['reg_email'])) { exit; } ?>
 <?php include 'zz1.php'; ?>
 <?php if ($loggedin == 1) { exit; } ?>
-<title><?php echo _('Registrierung - Daten prüfen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Registrierung - Daten prüfen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Registrierung - Daten prüfen'); ?></h1>
 <?php

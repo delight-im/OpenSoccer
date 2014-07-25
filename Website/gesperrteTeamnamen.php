@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Gesperrte Teamnamen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Gesperrte Teamnamen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Gesperrte Teamnamen'); ?></h1>
 <?php if ($loggedin == 1) { ?>

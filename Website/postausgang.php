@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Postausgang'); ?> | Ballmanager.de</title>
+<title><?php echo _('Postausgang'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <script type="text/javascript">
 function checkAll(quelle) {
 	for (i = 0; i < document.forms[0].length; i++) {

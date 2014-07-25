@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('5-Jahres-Wertung'); ?> | Ballmanager.de</title>
+<title><?php echo _('5-Jahres-Wertung'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .tabelle_3startplaetze td, .tabelle_3startplaetze a {

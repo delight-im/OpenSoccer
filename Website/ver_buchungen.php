@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Buchungen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Buchungen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Buchungen'); ?></h1>
 <?php if ($loggedin == 1) { ?>

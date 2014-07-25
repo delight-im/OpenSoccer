@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Zuschauerverlauf'); ?> | Ballmanager.de</title>
+<title><?php echo _('Zuschauerverlauf'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>

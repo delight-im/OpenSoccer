@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Getauschte Ligen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Getauschte Ligen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <h1><?php echo _('Getauschte Ligen'); ?></h1>

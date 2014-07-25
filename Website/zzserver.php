@@ -35,16 +35,15 @@ $prefix = 'man_';
 // SERVER-DATEN
 $kuerzelListe = array('AC', 'AJ', 'AS', 'ASC', 'ASV', 'Athletic', 'Atletico', 'Austria', 'AZ', 'BC', 'BSV', 'BV', 'Calcio', 'CD', 'CF', 'City', 'Club', 'Deportivo', 'Espanyol', 'FC', 'FF', 'FK', 'FSC', 'FSG', 'FV', 'IF', 'KV', 'Olympique', 'OSC', 'PSV', 'Racing', 'Rapid', 'Rapids', 'RC', 'RCD', 'Real', 'Rovers', 'RS', 'SG', 'SK', 'Spartans', 'Sporting', 'SSC', 'Sturm', 'SV', 'TSV', 'TV', 'UD', 'Union', 'United', 'Wanderers');
 $kategorienListe = array('Finanzen', 'Spiele & Taktik', 'Verein & Spieler', 'Accounts', 'Transfers', 'Grundregeln', 'Sonstiges');
-$forum_moderatoren = array('');
-// VERSCHLUESSELUNGEN ANFANG
+
 function isMobile() {
-	if ($_SERVER['SERVER_NAME'] == 'm.ballmanager.de') {
-		return TRUE;
-	}
-	else {
-		return FALSE;
-	}
+	return stripos($_SERVER['SERVER_NAME'], 'm.') !== false;
 }
+
+function getBaseURL() {
+    return (CONFIG_USE_HTTPS ? 'https' : 'http').'://'.CONFIG_SITE_DOMAIN;
+}
+
 function noDemoClick($userID, $inExisting = FALSE) {
 	if ($userID == DEMO_USER_ID) {
 		if ($inExisting) {
@@ -75,7 +74,7 @@ function betrag_dekodieren($kette) {
 	$kette = strrev($kette);
 	return $kette;
 }
-// VERSCHLUESSELUNGEN ENDE
+
 function getTimestamp($shift='', $startTime=-1) {
 	if ($startTime == -1) {
 		$dateTime = new DateTime(); // construct DateTime object with current time

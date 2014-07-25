@@ -11,11 +11,11 @@ if (isset($_POST['logoutOrNot'])) {
     exit;
 }
 ?>
-<title><?php echo _('Ausloggen?'); ?> | Ballmanager.de</title>
+<title><?php echo _('Ausloggen?'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Ausloggen?'); ?></h1>
 <?php if ($loggedin == 1) { ?>
-<p><strong><?php echo _('Du bist neu hier, deshalb fragen wir Dich:').'</strong><br />'._('Was möchtest Du tun? Wie gefällt der Ballmanager Dir bisher?'); ?></p>
+<p><strong><?php echo _('Du bist neu hier, deshalb fragen wir Dich:').'</strong><br />'.__('Was möchtest Du tun? Wie gefällt Dir %s bisher?', CONFIG_SITE_NAME); ?></p>
 <form action="/logoutNewUser.php" method="post" accept-charset="utf-8">
 <p><input type="submit" name="logoutOrNot" value="<?php echo _('Ich komme später wieder - Ausloggen!'); ?>" style="width: 300px" /></p>
 <p><input type="submit" name="logoutOrNot" value="<?php echo _('Ich habe ein Problem oder eine Frage - Hilfe!'); ?>" style="width: 300px" /></p>

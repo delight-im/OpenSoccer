@@ -1,5 +1,5 @@
 <?php
-@session_set_cookie_params(14*3600*24, '/', '.ballmanager.de');
+@session_set_cookie_params(3600 * 24 * 14, '/', str_replace('www.', '.', CONFIG_SITE_DOMAIN), false, true);
 @session_start();
 if (isset($_SESSION['loggedin']) AND $_SESSION['loggedin'] == 1) {
 	$loggedin = $_SESSION['loggedin'];

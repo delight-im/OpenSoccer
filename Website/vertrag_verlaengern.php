@@ -113,7 +113,7 @@ if ($sql3['marktwert'] == 0) { exit; }
 if ($sql3['leiher'] != 'keiner') { exit; }
 $pLevels = getPercentageLevels(round($sql3['wiealt']/365));
 ?>
-<title><?php echo _('Vertrag verlängern:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> | Ballmanager.de</title>
+<title><?php echo _('Vertrag verlängern:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Vertrag verlängern:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
 <?php if ($loggedin == 1) { ?>
@@ -147,7 +147,7 @@ $contractOptionsHTML .= getContractOption(66, $pLevels[2], $sql3, $contractOptio
 <?php if ($contractOptionsHTML != '') { ?>
 <?php echo $contractOptionsHTML; ?>
 <p>
-<?php if (isset($_SERVER['HTTP_REFERER'])) { if ($_SERVER['HTTP_REFERER'] == 'http://www.ballmanager.de/vertraege.php') { ?><input type="hidden" name="returnToVertraege" value="1" /><?php } } ?>
+<?php if (isset($_SERVER['HTTP_REFERER'])) { if (stripos($_SERVER['HTTP_REFERER'], '/vertraege.php') !== false) { ?><input type="hidden" name="returnToVertraege" value="1" /><?php } } ?>
 <input type="hidden" name="spieler" value="<?php echo $sql3['ids']; ?>" />
 <input type="submit" value="<?php echo _('Abschließen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
 </p>

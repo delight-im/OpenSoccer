@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Freunde'); ?> | Ballmanager.de</title>
+<title><?php echo _('Freunde'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -25,7 +25,7 @@ $kontakt1 = "SELECT username, last_login, f2, sortOrder FROM ".$prefix."freunde 
 $kontakt2 = mysql_query($kontakt1);
 $kontakt2a = mysql_num_rows($kontakt2);
 if ($kontakt2a == 0) { $kontakt2a = 'noch keine'; }
-echo '<h1>'.__('Du hast zurzeit %d Freunde beim Ballmanager', $kontakt2a).'</h1>';
+echo '<h1>'.__('Du hast zurzeit %d Freunde im Spiel', $kontakt2a).'</h1>';
 if ($kontakt2a == 'noch keine') { echo '<p>'._('Wenn Du Deine Freunde zu dieser Liste hinzufügen möchtest, dann öffne bitte das Profil des jeweiligen Managers und klicke unten auf den Link &quot;Freundschaft anbieten&quot;.').'</p>'; }
 else {
 	echo '<p><table><thead><tr class="odd"><th scope="col">'._('Manager').'</th><th scope="col">'._('Letzte Aktion').'</th><th scope="col">&nbsp;</th><th scope="col">&nbsp;</th></tr></thead><tbody>';
@@ -46,7 +46,7 @@ $kontakt1 = "SELECT username, last_login, f2, sortOrder FROM ".$prefix."freunde 
 $kontakt2 = mysql_query($kontakt1);
 $kontakt2a = mysql_num_rows($kontakt2);
 if ($kontakt2a == 0) { $kontakt2a = 'noch keine'; }
-echo '<h1>'.__('Du ignorierst zurzeit %d User beim Ballmanager', $kontakt2a).'</h1>';
+echo '<h1>'.__('Du ignorierst zurzeit %d User im Spiel', $kontakt2a).'</h1>';
 if ($kontakt2a == 'noch keine') { echo '<p>'._('Wenn Du User zu dieser Liste hinzufügen möchtest, dann öffne bitte das Profil des jeweiligen Managers und klicke unten auf den Link &quot;Diesen User ignorieren&quot;.').'</p>'; }
 else {
 	echo '<p><table><thead><tr class="odd"><th scope="col">'._('Manager').'</th><th scope="col">'._('Letzte Aktion').'</th><th scope="col">&nbsp;</th><th scope="col">&nbsp;</th></tr></thead><tbody>';

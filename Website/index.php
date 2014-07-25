@@ -2,7 +2,7 @@
 <?php
 define('FACEBOOK_LIKEBOX', '<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fwww.ballmanager.de&amp;width=400&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23ffffff&amp;stream=false&amp;header=false&amp;appId=454258221256761" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:258px;" allowTransparency="true"></iframe>');
 ?>
-<?php if ($loggedin == 1) { ?><title><?php echo _('Büro'); ?> | Ballmanager.de</title><?php } else { ?><title><?php echo _('Online-Fußball-Manager'); ?> | Ballmanager.de</title><?php } ?>
+<?php if ($loggedin == 1) { ?><title><?php echo _('Büro'); ?> - <?php echo CONFIG_SITE_NAME; ?></title><?php } else { ?><title><?php echo _('Online-Fußball-Manager'); ?> - <?php echo CONFIG_SITE_NAME; ?></title><?php } ?>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -70,7 +70,7 @@ if ($cookie_team != '__'.$cookie_id) {
         <a class="pagenava" href="/freundeWerben.php"><?php echo _('Freunde einladen'); ?></a>
     </p>
     <p style="text-align:left; margin-bottom:0;">
-        <img style="width:16px; height:16px; vertical-align:middle;" src="http://www.ballmanager.de/images/icon_spieler.png" width="16" alt="<?php echo _('Freunde einladen'); ?>"> <?php echo _('Lade Deine Freunde ein und erhalte 7,5 Mio. Bonus!'); ?>
+        <img style="width:16px; height:16px; vertical-align:middle;" src="/images/icon_spieler.png" width="16" alt="<?php echo _('Freunde einladen'); ?>"> <?php echo _('Lade Deine Freunde ein und erhalte 7,5 Mio. Bonus!'); ?>
     </p>
     <div style="clear:both;"></div>
 	<table>
@@ -236,8 +236,8 @@ else {
 					$tm4 = mysql_query($tm3);
 					// SPIELER VOM TRANSFERMARKT HOLEN ENDE
 					// WILLKOMMENS-POST SCHICKEN ANFANG
-					$willkommensText = 'Hallo '.$cookie_username.',<br /><br />herzlich willkommen beim Ballmanager. Wir hoffen, du findest Dich hier schnell zurecht.<br />Damit Dir der Einstieg etwas leichter fällt, haben wir viele nützliche <a href="/tipps_des_tages.php">Tipps</a> gesammelt.<br />Wenn Du noch Fragen hast, helfen wir Dir auch gerne im <a href="/chat.php">Chat</a> oder in unserem <a href="/support.php">Support-Bereich</a> weiter.<br />Es wartet eine nette Community auf Dich :)<br /><br />Viel Spaß wünscht<br />das Ballmanager-Team';
-					$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".$cookie_id."', 'Willkommen beim Ballmanager', '".$willkommensText."', '".time()."', '')";
+					$willkommensText = 'Hallo '.$cookie_username.',<br /><br />herzlich willkommen bei '.CONFIG_SITE_NAME.'. Wir hoffen, du findest Dich hier schnell zurecht.<br />Damit Dir der Einstieg etwas leichter fällt, haben wir viele nützliche <a href="/tipps_des_tages.php">Tipps</a> gesammelt.<br />Wenn Du noch Fragen hast, helfen wir Dir auch gerne im <a href="/chat.php">Chat</a> oder in unserem <a href="/support.php">Support-Bereich</a> weiter.<br />Es wartet eine nette Community auf Dich :)<br /><br />Viel Spaß wünscht<br />'.CONFIG_SITE_NAME.'<br />'.CONFIG_SITE_DOMAIN;
+					$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".$cookie_id."', 'Willkommen bei '.CONFIG_SITE_NAME, '".$willkommensText."', '".time()."', '')";
 					$sql2 = mysql_query($sql1);
 					$sql1 = "UPDATE ".$prefix."pn SET ids = MD5(id) WHERE ids = ''";
 					$sql2 = mysql_query($sql1);
@@ -290,7 +290,7 @@ else {
 <?php } else { ?>
 <?php if (isMobile()) { ?>
 <h1><?php echo _('Einloggen mit bestehendem Account'); ?></h1>
-<form action="/login.php" method="post" accept-charset="utf-8" id="login_form" class="imtext">
+<form action="<?php echo getBaseURL(); ?>/login.php" method="post" accept-charset="utf-8" id="login_form" class="imtext">
 <p><?php echo _('E-Mail / Username:'); ?><br /><input type="text" name="lusername" /></p>
 <p><?php echo _('Passwort:'); ?><br /><input type="password" name="lpassword" /></p>
 <p><input type="hidden" name="returnURL" value="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" /><input type="submit" value="<?php echo _('Einloggen'); ?>" /></p>
@@ -314,7 +314,7 @@ else {
 <p><input type="submit" value="<?php echo _('Jetzt kostenlos mitspielen'); ?>" /></p>
 <p><?php echo _('Du kannst Deine Daten anschließend noch einmal prüfen, sie werden noch nicht gespeichert. Du darfst Dich nur ein einziges Mal registrieren und nur einen Verein haben.'); ?></p>
 </form>
-<h1><?php echo _('Gefällt Dir der Ballmanager?'); ?></h1>
+<h1><?php echo __('Gefällt Dir %s?', CONFIG_SITE_NAME); ?></h1>
 <?php echo FACEBOOK_LIKEBOX; ?>
 <?php } ?>
 <?php

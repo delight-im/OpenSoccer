@@ -45,7 +45,7 @@ switch ($sql3['open']) {
 }
 $entryNumber .= ')';
 ?>
-<title><?php echo __('Support: %s', $entryNumber); ?> | Ballmanager.de</title>
+<title><?php echo __('Support: %s', $entryNumber); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .commentBoxBlack, .commentBoxRed, .commentBoxOrange {
@@ -87,7 +87,7 @@ if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3
 		// AUTOR DER ANFRAGE PER POST BENACHRICHTIGEN ANFANG
 		if ($setOpen != 1) {
             $betreff = _('Support: Anfrage #%s', id2secure($sql3['id']));
-            $notifyText = _('Hallo').',<br /><br />'._('vielen Dank für Deine Beteiligung im Support-Forum. Eine Deiner Anfragen wurde jetzt geschlossen, Du findest sie hier:').'<br />http://www.ballmanager.de/supportRequest.php?id='.id2secure($sql3['id']).'<br /><br />'._('Sportliche Grüße').'<br />'._('das Ballmanager-Team');
+            $notifyText = _('Hallo').',<br /><br />'._('vielen Dank für Deine Beteiligung im Support-Forum. Eine Deiner Anfragen wurde jetzt geschlossen, Du findest sie hier:').'<br />http://'.CONFIG_SITE_DOMAIN.'/supportRequest.php?id='.id2secure($sql3['id']).'<br /><br />'._('Sportliche Grüße').'<br />'.CONFIG_SITE_NAME.'<br />'.CONFIG_SITE_DOMAIN;
             $sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".$sql3['author']."', '".$betreff."', '".$notifyText."', ".time().", '')";
 			$sql2 = mysql_query($sql1);
 			$sql1 = "UPDATE ".$prefix."pn SET ids = MD5(id) WHERE ids = ''";
@@ -125,7 +125,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
+		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team').'</a>'));
 		include 'zz3.php';
 		exit;
 	}

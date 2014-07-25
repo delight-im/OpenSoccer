@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Warteliste'); ?> | Ballmanager.de</title>
+<title><?php echo _('Warteliste'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Warteliste'); ?></h1>
 <p><?php echo _('Zurzeit stehst Du noch auf der Warteliste. Es wird aber nicht lange dauern, bis Dir ein Team zugeteilt wird. Dann informieren wir Dich per E-Mail darüber und Du kannst sofort losspielen.'); ?></p>

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Kalender'); ?> | Ballmanager.de</title>
+<title><?php echo _('Kalender'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php
 if (isset($_GET['team'])) {

@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Testspiele'); ?> | Ballmanager.de</title>
+<title><?php echo _('Testspiele'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php if ($loggedin == 1) { ?>
 <style type="text/css">
 <!--

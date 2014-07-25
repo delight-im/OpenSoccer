@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Impressum'); ?> | Ballmanager.de</title>
+<title><?php echo _('Impressum'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Impressum'); ?></h1>
 <?php echo '<p><img src="/images/impressum.png" alt="Impressum" title="Impressum" style="border:0" /></p>'; ?>

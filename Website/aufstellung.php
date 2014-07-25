@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Aufstellung'); ?> | Ballmanager.de</title>
+<title><?php echo _('Aufstellung'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 <?php if (isMobile()) { ?>

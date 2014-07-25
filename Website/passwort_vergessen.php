@@ -1,6 +1,6 @@
 <?php include 'zz1.php'; ?>
 <?php if ($loggedin == 1) { exit; } ?>
-<title><?php echo _('Passwort vergessen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Passwort vergessen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php
 $showPasswordResetForm = true;
@@ -53,18 +53,21 @@ elseif (isset($_POST['email'])) {
 				}
 // E-MAIL VERSENDEN
 $empfaenger = $email;
-$betreff = 'Ballmanager: Passwort vergessen';
+$betreff = CONFIG_SITE_NAME.': Passwort vergessen';
 $nachricht = '
 Hallo '.$username.',
 
-Du hast auf www.Ballmanager.de ein neues Passwort angefordert.
+Du hast auf ein neues Passwort angefordert.
 Dein Neues Passwort lautet: '.$newpw.'
 Du musst das neue Passwort aber noch aktivieren, indem Du den folgenden Link anklickst:
-http://www.ballmanager.de/passwort_vergessen.php?e='.$user.'&k='.$key.'
-Wir wünschen Dir noch viel Spaß beim Ballmanager.
 
-Mit freundlichen Grüßen
-www.ballmanager.de';
+http://'.CONFIG_SITE_DOMAIN.'/passwort_vergessen.php?e='.$user.'&k='.$key.'
+
+Wir wünschen Dir noch viel Spaß beim Managen.
+
+Sportliche Grüße
+'.CONFIG_SITE_NAME.'
+'.CONFIG_SITE_DOMAIN;
 if ($aip != '') {
 $nachricht .= '
 
@@ -89,7 +92,7 @@ if (CONFIG_EMAIL_PHP_MAILER) {
 	$mail->Send();
 }
 else{
-	$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=UTF-8";
+	$header = "From: ".CONFIG_SITE_NAME." <".CONFIG_SITE_EMAIL.">\r\nContent-type: text/plain; charset=UTF-8";
 	mail($empfaenger, $betreff, $nachricht, $header);
 }
 // E-MAIL VERSENDEN

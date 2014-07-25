@@ -2,15 +2,15 @@
 if (!isset($_POST['reg_email']) OR !isset($_POST['reg_benutzername'])) { exit; }
 ?>
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Registriert'); ?> | Ballmanager.de</title>
+<title><?php echo _('Registriert'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 
 <h1><?php echo _('Registriert'); ?></h1>
 <?php
 function email_senden($email, $username, $password) {
 	$empfaenger = $email;
-	$betreff = _('Ballmanager: Willkommen');
-	$nachricht = "Hallo ".$username.",\n\nDu hast Dich erfolgreich auf www.ballmanager.de registriert. Bitte logge Dich jetzt mit Deinen Benutzerdaten ein, um Deinen Account zu aktivieren. Und dann kann es auch schon losgehen ...\n\nDamit Du Dich anmelden kannst, findest Du hier noch einmal Deine Benutzerdaten:\n\nE-Mail: ".$email."\nBenutzername: ".$username."\nPasswort: ".$password."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
+	$betreff = CONFIG_SITE_NAME.': Willkommen';
+	$nachricht = "Hallo ".$username.",\n\nDu hast Dich erfolgreich auf ".CONFIG_SITE_DOMAIN." registriert. Bitte logge Dich jetzt mit Deinen Benutzerdaten ein, um Deinen Account zu aktivieren. Und dann kann es auch schon losgehen ...\n\nDamit Du Dich anmelden kannst, findest Du hier noch einmal Deine Benutzerdaten:\n\nE-Mail: ".$email."\nBenutzername: ".$username."\nPasswort: ".$password."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\n".CONFIG_SITE_NAME."\n".CONFIG_SITE_DOMAIN."\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf ".CONFIG_SITE_DOMAIN." mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter ".CONFIG_SITE_EMAIL;
 	if (CONFIG_EMAIL_PHP_MAILER) {
 		require './phpmailer/PHPMailerAutoload.php';
 		$mail = new PHPMailer(); // create a new object
@@ -29,7 +29,7 @@ function email_senden($email, $username, $password) {
 		$mail->Send();
 	}
 	else{
-		$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8";
+		$header = "From: ".CONFIG_SITE_NAME." <".CONFIG_SITE_EMAIL.">\r\nContent-type: text/plain; charset=utf-8";
 		mail($empfaenger, $betreff, $nachricht, $header);
 	}
 }

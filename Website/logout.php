@@ -22,6 +22,6 @@ if (isset($_SESSION['loggedin'])) {
     }
 }
 $expired = getTimestamp('-1 hour');
-setcookie("PHPSESSID", "", $expired, "/", "ballmanager.de", FALSE, FALSE);
+setcookie("PHPSESSID", "", $expired, "/", str_replace('www.', '.', CONFIG_SITE_DOMAIN), FALSE, TRUE);
 header("Location: ".$hadresse);
 ?>

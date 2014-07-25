@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Wer ist online?'); ?> | Ballmanager.de</title>
+<title><?php echo _('Wer ist online?'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Wer ist online?'); ?></h1>
 <?php if ($loggedin == 1) { ?>

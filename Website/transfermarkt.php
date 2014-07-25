@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Transfermarkt | Kaufen'); ?> | Ballmanager.de</title>
+<title><?php echo _('Transfermarkt | Kaufen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Markt durchsuchen'); ?></h1>
 <?php

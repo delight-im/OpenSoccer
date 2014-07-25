@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Geschichte'); ?> | Ballmanager.de</title>
+<title><?php echo _('Geschichte'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>

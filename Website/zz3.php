@@ -8,7 +8,7 @@
 	<a href="/regeln.php#regeln" rel="nofollow"><?php echo _('Regeln'); ?></a> &middot;
 	<a href="/impressum.php" rel="nofollow"><?php echo _('Impressum'); ?></a> &middot;
 	<a href="/regeln.php#datenschutz" rel="nofollow"><?php echo _('Datenschutz'); ?></a> &middot;
-	<a href="https://github.com/delight-im/Ballmanager"><?php echo _('Open Source'); ?></a><br />
+	<a href="https://github.com/delight-im/OpenSoccer"><?php echo _('Open Source'); ?></a><br />
 	<?php echo _('Alle Vereine, Spieler und Sponsoren sind frei erfunden und haben keinen Bezug zu realen Ligen. Das Geld im Spiel ist nur virtuell und es erfolgen niemals Auszahlungen.'); ?></span>
 </div>
 <?php

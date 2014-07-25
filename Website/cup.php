@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Nationaler Cup'); ?> | Ballmanager.de</title>
+<title><?php echo _('Nationaler Cup'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <h1><?php echo _('Land wählen'); ?></h1>

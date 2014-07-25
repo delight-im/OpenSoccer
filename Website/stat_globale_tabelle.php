@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title><?php echo _('Globale Tabelle'); ?> | Ballmanager.de</title>
+<title><?php echo _('Globale Tabelle'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .team_<?php echo $cookie_team; ?> {

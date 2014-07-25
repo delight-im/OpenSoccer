@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Personal | Ballmanager.de</title>
+<title><?php echo _('Personal'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -52,7 +52,7 @@ if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
 					$buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Regenerations-Camp', -".$preis.", ".time().")";
 					$buch2 = mysql_query($buch1);
 					// PROTOKOLL ANFANG
-					$formulierung = 'Dein Fitness-Trainer hat ein Regenerations-Camp ('.$temp.'%) für '.$upd2a.' Spieler gebucht.';
+					$formulierung = __('Dein Fitness-Trainer hat ein Regenerations-Camp (%1$d%%) fur %2$s Spieler gebucht.', $temp, $upd2a);
 					$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
 					$sql8 = mysql_query($sql7);
 					// PROTOKOLL ENDE
@@ -64,7 +64,7 @@ if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
 				}
 			}
 			else {
-				addInfoBox('Deine Mannschaft befindet sich schon im Regenerations-Camp.');
+				addInfoBox(_('Deine Mannschaft befindet sich schon im Regenerations-Camp.'));
 			}
 		}
 	}
@@ -95,7 +95,7 @@ if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
 				$buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Physiotherapeut', -".$preis.", ".time().")";
 				$buch2 = mysql_query($buch1);
 				// PROTOKOLL ANFANG
-				$formulierung = 'Dein Physiotherapeut hat Deine verletzten Spieler behandelt und die Ausfallzeit um '.$temp.' '.$tag_singular_plural.' reduziert.';
+				$formulierung = __('Dein Physiotherapeut hat Deine verletzten Spieler behandelt und die Ausfallzeit um %1$d %2$s reduziert.', $temp, $tag_singular_plural);
 				$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
 				$sql8 = mysql_query($sql7);
 				// PROTOKOLL ENDE
@@ -106,7 +106,7 @@ if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
 				addInfoBox($formulierung);
 			}
 			else {
-				addInfoBox('Deine Mannschaft befindet sich schon in Behandlung.');
+				addInfoBox(_('Deine Mannschaft befindet sich schon in Behandlung.'));
 			}
 		}
 	}
@@ -137,7 +137,7 @@ if (isset($_POST['psychologe_behandlung']) && $cookie_id != DEMO_USER_ID) {
 				$buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Psychologe', -".$preis.", ".time().")";
 				$buch2 = mysql_query($buch1);
 				// PROTOKOLL ANFANG
-				$formulierung = 'Dein Psychologe hat Deine unmotivierten Spieler betreut und ihre Moral um '.$temp.' '.$tag_singular_plural.' erhöht.';
+				$formulierung = __('Dein Psychologe hat Deine unmotivierten Spieler betreut und ihre Moral um %1$d %2$s erhöht.', $temp ,$tag_singular_plural);
 				$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
 				$sql8 = mysql_query($sql7);
 				// PROTOKOLL ENDE
@@ -148,16 +148,16 @@ if (isset($_POST['psychologe_behandlung']) && $cookie_id != DEMO_USER_ID) {
 				addInfoBox($formulierung);
 			}
 			else {
-				addInfoBox('Deine Mannschaft wird im Moment schon betreut.');
+				addInfoBox(_('Deine Mannschaft wird im Moment schon betreut.'));
 			}
 		}
 	}
 }
 ?>
-<h1>Achtung</h1>
-<p>Du kannst Dein Personal nur alle 22 Tage austauschen. Überlege Dir also gut, welche Assistenten Du wählst.</p>
-<h1>Jugendtrainer</h1>
-<p>Je höher die Stufe für die Kompetenz des Jugendtrainers ist, desto stärker sind die jungen Spieler, die aus den Nachwuchsmannschaften in Dein Team kommen.<br />
+<h1><?php echo _('Achtung'); ?></h1>
+<p><?php echo _('Du kannst Dein Personal nur alle 22 Tage austauschen. Überlege Dir also gut, welche Assistenten Du wählst.'); ?></p>
+<h1><?php echo _('Jugendtrainer'); ?></h1>
+<p><?php echo _('Je höher die Stufe für die Kompetenz des Jugendtrainers ist, desto stärker sind die jungen Spieler, die aus den Nachwuchsmannschaften in Dein Team kommen.'); ?><br />
 <?php
 if (isset($_POST['jugendtrainer']) && $cookie_id != DEMO_USER_ID) {
 	$temp = intval($_POST['jugendtrainer']);
@@ -168,7 +168,7 @@ if (isset($_POST['jugendtrainer']) && $cookie_id != DEMO_USER_ID) {
             $upd1 = "UPDATE ".$prefix."teams SET jugendarbeit = ".$temp." WHERE ids = '".$cookie_team."'";
             $upd2 = mysql_query($upd1);
             // PROTOKOLL ANFANG
-            $formulierung = 'Du hast einen Jugendtrainer der Stufe '.$temp.' eingestellt.';
+            $formulierung = __('Du hast einen Jugendtrainer der Stufe %d eingestellt.', $temp);
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
             $sql8 = mysql_query($sql7);
             // PROTOKOLL ENDE
@@ -178,7 +178,7 @@ if (isset($_POST['jugendtrainer']) && $cookie_id != DEMO_USER_ID) {
             $ch1 = "SELECT zeit FROM ".$prefix."personal_changes WHERE team = '".$cookie_team."' AND personal = 'Jugendtrainer'";
             $ch2 = mysql_query($ch1);
             $ch3 = mysql_fetch_assoc($ch2);
-        	addInfoBox('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum '.date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit'])).' Uhr warten.');
+        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum %s Uhr warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
         }
 	}
 }
@@ -200,8 +200,8 @@ $sql3 = mysql_fetch_assoc($sql2);
 </div>
 <div style="float:left; width:220px;"><img src="/images/personal_youth.jpg" alt="Jugendtrainer" width="220" style="width:220; height:150; border:0;" /></div>
 <div style="clear:both;"></div>
-<h1>Fanbetreuer</h1>
-<p>Je höher die Stufe für die Kompetenz des Fanbetreuers ist, desto wohler fühlen sich die Fans Deines Vereins. Sie werden lieber ins Stadion gehen und Du wirst mehr Karten verkaufen.<br />
+<h1><?php echo _('Fanbetreuer'); ?></h1>
+<p><?php echo _('Je höher die Stufe für die Kompetenz des Fanbetreuers ist, desto wohler fühlen sich die Fans Deines Vereins. Sie werden lieber ins Stadion gehen und Du wirst mehr Karten verkaufen.'); ?><br />
 <?php
 if (isset($_POST['fanbetreuer']) && $cookie_id != DEMO_USER_ID) {
 	$temp = intval($_POST['fanbetreuer']);
@@ -212,7 +212,7 @@ if (isset($_POST['fanbetreuer']) && $cookie_id != DEMO_USER_ID) {
             $upd1 = "UPDATE ".$prefix."teams SET fanbetreuer = ".$temp." WHERE ids = '".$cookie_team."'";
             $upd2 = mysql_query($upd1);
             // PROTOKOLL ANFANG
-            $formulierung = 'Du hast einen Fanbetreuer der Stufe '.$temp.' eingestellt.';
+            $formulierung = __('Du hast einen Fanbetreuer der Stufe %d eingestellt', $temp);
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
             $sql8 = mysql_query($sql7);
             // PROTOKOLL ENDE
@@ -222,7 +222,7 @@ if (isset($_POST['fanbetreuer']) && $cookie_id != DEMO_USER_ID) {
             $ch1 = "SELECT zeit FROM ".$prefix."personal_changes WHERE team = '".$cookie_team."' AND personal = 'Fanbetreuer'";
             $ch2 = mysql_query($ch1);
             $ch3 = mysql_fetch_assoc($ch2);
-        	addInfoBox('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum '.date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit'])).' Uhr warten.');
+        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum %s Uhr warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
         }
 	}
 }
@@ -242,8 +242,8 @@ $sql3 = mysql_fetch_assoc($sql2);
 <input type="submit" value="Ändern"<?php echo noDemoClick($cookie_id); ?> />
 </p>
 </form>
-<h1>Scout</h1>
-<p>Je höher die Stufe für die Kompetenz des Scouts ist, desto besser werden seine Schätzungen für die maximale Stärke eines Spielers.<br />
+<h1><?php echo _('Scout'); ?></h1>
+<p><?php echo _('Je höher die Stufe für die Kompetenz des Scouts ist, desto besser werden seine Schätzungen für die maximale Stärke eines Spielers.'); ?><br />
 <?php
 if (isset($_POST['scout']) && $cookie_id != DEMO_USER_ID) {
 	$temp = intval($_POST['scout']);
@@ -256,7 +256,7 @@ if (isset($_POST['scout']) && $cookie_id != DEMO_USER_ID) {
             $_SESSION['scout'] = $temp;
             $cookie_scout = $temp;
             // PROTOKOLL ANFANG
-            $formulierung = 'Du hast einen Scout der Stufe '.$temp.' eingestellt.';
+            $formulierung = _('Du hast einen Scout der Stufe %d eingestellt.', $temp);
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
             $sql8 = mysql_query($sql7);
             // PROTOKOLL ENDE
@@ -266,7 +266,7 @@ if (isset($_POST['scout']) && $cookie_id != DEMO_USER_ID) {
             $ch1 = "SELECT zeit FROM ".$prefix."personal_changes WHERE team = '".$cookie_team."' AND personal = 'Scout'";
             $ch2 = mysql_query($ch1);
             $ch3 = mysql_fetch_assoc($ch2);
-        	addInfoBox('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum '.date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit'])).' Uhr warten.');
+        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum %s Uhr warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
         }
 	}
 }
@@ -290,51 +290,51 @@ $sql3 = mysql_fetch_assoc($sql2);
 </div>
 <div style="float:left; width:220px;"><img src="/images/personal_scout.jpg" alt="Scout" width="220" style="width:220; height:150; border:0;" /></div>
 <div style="clear:both;"></div>
-<h1>Fitness-Trainer <span style="color:red">[Angebot und Nachfrage]</span></h1>
-<p>Dein Fitness-Trainer bietet Dir an, ein Regenerations-Camp zu buchen. Dies ist ein Mal pro Tag möglich und bringt allen Spielern
-Deines Kaders einmalig 1, 2 oder 3 Prozentpunkte Frische zusätzlich.</p>
+<h1><?php echo _('Fitness-Trainer').' <span style="color:red">['._('Angebot und Nachfrage'); ?>]</span></h1>
+<p><?php echo _('Dein Fitness-Trainer bietet Dir an, ein Regenerations-Camp zu buchen. Dies ist ein Mal pro Tag möglich und bringt allen Spielern'); ?>
+<?php echo _('Deines Kaders einmalig 1, 2 oder 3 Prozentpunkte Frische zusätzlich.'); ?></p>
 <div style="float:left; width:280px;">
-<p><strong>Wichtig:</strong> Dieses Angebot ist nur für finanzstarke Vereine empfehlenswert, die ihrem Team einen kleinen Vorteil verschaffen wollen. Es ist aber auch sehr gut möglich, ohne dieses Angebot sportlichen Erfolg zu haben.</p>
+<p><strong><?php echo _('Wichtig:').'</strong> '._('Dieses Angebot ist nur für finanzstarke Vereine empfehlenswert, die ihrem Team einen kleinen Vorteil verschaffen wollen. Es ist aber auch sehr gut möglich, ohne dieses Angebot sportlichen Erfolg zu haben.'); ?></p>
 <?php if ($getkonto4 > 0) { ?>
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="fitness_regeneration" value="1" checked="checked" /> +1 %-Punkte Frische (<?php echo number_format($supplyDemandPrices['Fitness-Trainer'], 0, ',', '.'); ?> €)<br />
-<input type="radio" name="fitness_regeneration" value="2" /> +2 %-Punkte Frische (<?php echo number_format($supplyDemandPrices['Fitness-Trainer']*2.15, 0, ',', '.'); ?> €)<br />
-<input type="radio" name="fitness_regeneration" value="3" /> +3 %-Punkte Frische (<?php echo number_format($supplyDemandPrices['Fitness-Trainer']*3.3, 0, ',', '.'); ?> €)<br />
-<input type="submit" value="Buchen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
+<input type="radio" name="fitness_regeneration" value="1" checked="checked" /> <?php echo _('+1 %-Punkte Frische'); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer'], 0, ',', '.'); ?> €)<br />
+<input type="radio" name="fitness_regeneration" value="2" /> <?php echo _('+2 %-Punkte Frische'); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer']*2.15, 0, ',', '.'); ?> €)<br />
+<input type="radio" name="fitness_regeneration" value="3" /> <?php echo _('+3 %-Punkte Frische'); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer']*3.3, 0, ',', '.'); ?> €)<br />
+<input type="submit" value="Buchen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" />
 </p>
 </form>
 <?php } ?>
 </div>
 <div style="float:left; width:220px;"><img src="/images/personal_fitness.jpg" alt="Fitness-Trainer" width="220" style="width:220; height:150; border:0;" /></div>
 <div style="clear:both;"></div>
-<h1>Physiotherapeut <span style="color:red">[Angebot und Nachfrage]</span></h1>
-<p>Dein Physiotherapeut bietet Dir an, die Behandlung Deiner verletzten Spieler zu übernehmen. Er verspricht dabei, die Verletzungszeit zu verkürzen.</p>
-<p><strong>Wichtig:</strong> Dieses Angebot ist nur für finanzstarke Vereine empfehlenswert, die ihrem Team einen kleinen Vorteil verschaffen wollen. Es ist aber auch sehr gut möglich, ohne dieses Angebot sportlichen Erfolg zu haben.</p>
+<h1><?php echo _('Physiotherapeut').' <span style="color:red">['._('Angebot und Nachfrage'); ?>]</span></h1>
+<p><?php echo _('Dein Physiotherapeut bietet Dir an, die Behandlung Deiner verletzten Spieler zu übernehmen. Er verspricht dabei, die Verletzungszeit zu verkürzen.'); ?></p>
+<p><strong><?php echo _('Wichtig:').'</strong> '._('Dieses Angebot ist nur für finanzstarke Vereine empfehlenswert, die ihrem Team einen kleinen Vorteil verschaffen wollen. Es ist aber auch sehr gut möglich, ohne dieses Angebot sportlichen Erfolg zu haben.'); ?></p>
 <?php if ($getkonto4 > 0) { ?>
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="physio_behandlung" value="1" checked="checked" /> 1 Tag kürzere Verletzungen (<?php echo number_format($supplyDemandPrices['Physiotherapeut'], 0, ',', '.'); ?> €)<br />
-<input type="radio" name="physio_behandlung" value="2" /> 2 Tage kürzere Verletzungen (<?php echo number_format($supplyDemandPrices['Physiotherapeut']*2.15, 0, ',', '.'); ?> €)<br />
-<input type="submit" value="Buchen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
+<input type="radio" name="physio_behandlung" value="1" checked="checked" /> <?php echo _('1 Tag kürzere Verletzungen'); ?> (<?php echo number_format($supplyDemandPrices['Physiotherapeut'], 0, ',', '.'); ?> €)<br />
+<input type="radio" name="physio_behandlung" value="2" /> <?php echo _('2 Tage kürzere Verletzungen'); ?> (<?php echo number_format($supplyDemandPrices['Physiotherapeut']*2.15, 0, ',', '.'); ?> €)<br />
+<input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
 </p>
 </form>
 <?php } ?>
-<h1>Psychologe <span style="color:red">[Angebot und Nachfrage]</span></h1>
-<p>Der Psychologe Deines Vereins bietet Dir an, die Betreuung Deiner unmotivierten Spieler zu übernehmen. Er verspricht dabei, ihre Moral zu erhöhen.</p>
-<p><strong>Wichtig:</strong> Dieses Angebot ist nur für finanzstarke Vereine empfehlenswert, die ihrem Team einen kleinen Vorteil verschaffen wollen. Es ist aber auch sehr gut möglich, ohne dieses Angebot sportlichen Erfolg zu haben.</p>
+<h1><?php echo _('Psychologe').' <span style="color:red">['._('Angebot und Nachfrage'); ?>]</span></h1>
+<p><?php echo _('Der Psychologe Deines Vereins bietet Dir an, die Betreuung Deiner unmotivierten Spieler zu übernehmen. Er verspricht dabei, ihre Moral zu erhöhen.'); ?></p>
+<p><strong><?php echo _('Wichtig:').'</strong> '._('Dieses Angebot ist nur für finanzstarke Vereine empfehlenswert, die ihrem Team einen kleinen Vorteil verschaffen wollen. Es ist aber auch sehr gut möglich, ohne dieses Angebot sportlichen Erfolg zu haben.'); ?></p>
 <?php if ($getkonto4 > 0) { ?>
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="psychologe_behandlung" value="2" checked="checked" /> 2 Punkte mehr Moral (<?php echo number_format($supplyDemandPrices['Psychologe']*2.15, 0, ',', '.'); ?> €)<br />
-<input type="radio" name="psychologe_behandlung" value="5" /> 5 Punkte mehr Moral (<?php echo number_format($supplyDemandPrices['Psychologe']*5.575, 0, ',', '.'); ?> €)<br />
-<input type="submit" value="Buchen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
+<input type="radio" name="psychologe_behandlung" value="2" checked="checked" /> <?php echo _('2 Punkte mehr Moral'); ?> (<?php echo number_format($supplyDemandPrices['Psychologe']*2.15, 0, ',', '.'); ?> €)<br />
+<input type="radio" name="psychologe_behandlung" value="5" /> <?php echo _('5 Punkte mehr Moral'); ?> (<?php echo number_format($supplyDemandPrices['Psychologe']*5.575, 0, ',', '.'); ?> €)<br />
+<input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
 </p>
 </form>
 <?php } ?>
 <p style="font-size:80%; color:#999;">Foto des Jugendtrainers: Yatmandu auf Flickr.com (Lizenz: Creative Commons BY)<br />Foto des Scouts: USAG-Humphreys auf Flickr.com (Lizenz: Creative Commons BY)<br />Foto des Fitness-Trainers: Chris Bodine auf Flickr.com (Lizenz: Creative Commons BY)</p>
 <?php } else { ?>
-<h1>Mein Personal</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Mein Personal'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

@@ -6,6 +6,7 @@
 <div><span id="rfooter" style="color:#666; width:820px; margin-left:auto; margin-right:auto; height:55px; text-align:center; font-size:80%; text-decoration:none">
     <span title="<?php echo I18N::getBrowserLanguage(); ?>"><?php echo _('Sprache:'); ?></span> <a href="/?setLocale=de_DE">Deutsch</a> &middot; <a href="/?setLocale=en_US">English</a> &middot; <a href="/?setLocale=es_ES">Español</a><br />
 	<a href="/regeln.php#regeln" rel="nofollow"><?php echo _('Regeln'); ?></a> &middot;
+    <a href="/android_app.php"><?php echo _('Android-App'); ?></a> &middot;
 	<a href="/impressum.php" rel="nofollow"><?php echo _('Impressum'); ?></a> &middot;
 	<a href="/regeln.php#datenschutz" rel="nofollow"><?php echo _('Datenschutz'); ?></a> &middot;
 	<a href="https://github.com/delight-im/OpenSoccer"><?php echo _('Open Source'); ?></a><br />

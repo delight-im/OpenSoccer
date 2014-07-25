@@ -32,12 +32,10 @@ while ($topWidget3 = mysql_fetch_assoc($topWidget2)) {
     $topWidgetPlace++;
 }
 $topWidget .= '</div>';
-if (isset($_GET['via_android'])) {
-	if ($_GET['via_android'] == 1) {
-		$_SESSION['via_android'] = 1;
-	}
+if (isset($_GET['via_android']) && $_GET['via_android'] == 1) {
+    $_SESSION['via_android'] = 1;
 }
-if (!isset($_SESSION['via_android'])) {
+else {
 	$_SESSION['via_android'] = 0;
 }
 if (!isset($_SESSION['pMaxGebot'])) { $_SESSION['pMaxGebot'] = 0; }
@@ -67,7 +65,6 @@ if (isMobile()) {
 else {
 	echo '<li><a href="'.str_replace('www.', 'm.', getBaseURL()).'/">'._('Mobil').'</a></li>';
 }
-echo '<li><a href="/android_app.php">'._('Android™-App').'</a></li>';
 ?>
 <li<?php if ($_SERVER['SCRIPT_NAME'] == '/tour.php') { echo ' id="current"'; } ?>><a href="#" onclick="document.getElementById('lusername').value = 'Demo'; document.getElementById('lpassword').value = 'demo'; document.getElementById('login_form').submit(); return false;">Demo-Account</a></li>
 <?php } else { ?>

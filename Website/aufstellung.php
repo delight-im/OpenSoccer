@@ -75,7 +75,7 @@ $eigene_spiele1 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE typ = '".$live_s
 $eigene_spiele2 = mysql_query($eigene_spiele1);
 $eigene_spiele3 = mysql_result($eigene_spiele2, 0);
 if ($live_scoring_spieltyp_laeuft == $spieltypAufstellung && $eigene_spiele3 != 0) {
-	echo '<p>'.__('Zurzeit läuft ein %s spiel. Deshalb kannst Du diese Aufstellung gerade nicht ändern.', $live_scoring_spieltyp_laeuft).'</p>';
+	echo '<p>'.__('Zurzeit läuft ein %s-Spiel. Deshalb kannst Du diese Aufstellung gerade nicht ändern.', $live_scoring_spieltyp_laeuft).'</p>';
 }
 else { ?>
 <?php

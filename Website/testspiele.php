@@ -3,25 +3,7 @@
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
-function getTestspielPreis($liga) {
-	global $prefix;
-	$bql1 = "SELECT name FROM ".$prefix."ligen WHERE ids = '".$liga."'";
-	$bql2 = mysql_query($bql1);
-	$bql3 = mysql_fetch_assoc($bql2);
-	$ligaNr = intval(substr($bql3['name'], -1));
-	if ($ligaNr == 4) {
-		return 50000;
-	}
-	elseif ($ligaNr == 3) {
-		return 100000;
-	}
-	elseif ($ligaNr == 2) {
-		return 500000;
-	}
-	else {
-		return 1000000;
-	}
-}
+require_once('./classes/Friendlies.php');
 if (isset($_GET['recall']) && $cookie_id != DEMO_USER_ID) {
 	$recall_team2 = mysql_real_escape_string(trim(strip_tags($_GET['recall'])));
 	$anfa = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$cookie_team."' AND team2 = '".$recall_team2."'";
@@ -74,7 +56,7 @@ echo '</form>';
 // FESTLEGEN WAS GESUCHT WERDEN SOLL ENDE
 ?>
 <h1><?php echo _('Entschädigung (Verband)'); ?></h1>
-<p><?php echo __('Damit ein Testspiel genehmigt wird, musst Du %s € an den Verband zahlen.', number_format(getTestspielPreis($cookie_liga), 0, ',', '.')); ?></p>
+<p><?php echo __('Damit ein Testspiel genehmigt wird, musst Du %s € an den Verband zahlen.', number_format(Friendlies::getPrice($cookie_liga, $prefix), 0, ',', '.')); ?></p>
 <h1><?php echo _('Erhaltene Anfragen'); ?></h1>
 <?php
 // MEHRERE TESTSPIELE PRO TAG VERHINDERN ANFANG
@@ -85,7 +67,7 @@ while ($an3 = mysql_fetch_assoc($an2)) {
 	$testspiel_tage[] = $an3['datum'];
 }
 // MEHRERE TESTSPIELE PRO TAG VERHINDERN ENDE
-if ($getkonto4 < getTestspielPreis($cookie_liga)) {
+if ($getkonto4 < Friendlies::getPrice($cookie_liga, $prefix)) {
 	echo '<p>'._('Zurzeit hast Du leider nicht genug Geld, um Testspiele vereinbaren zu können.').'</p>';
 }
 else {

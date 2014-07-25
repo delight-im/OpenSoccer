@@ -1,25 +1,7 @@
 <?php include 'zz1.php'; ?>
 <?php
 if (!isset($_GET['id'])) { exit; }
-function getTestspielPreis($liga, $team) {
-	global $prefix;
-	$bql1 = "SELECT name FROM ".$prefix."ligen WHERE ids = '".$liga."'";
-	$bql2 = mysql_query($bql1);
-	$bql3 = mysql_fetch_assoc($bql2);
-	$ligaNr = intval(substr($bql3['name'], -1));
-	if ($ligaNr == 4) {
-		return 50000;
-	}
-	elseif ($ligaNr == 3) {
-		return 100000;
-	}
-	elseif ($ligaNr == 2) {
-		return 500000;
-	}
-	else {
-		return 1000000;
-	}
-}
+require_once('./classes/Friendlies.php');
 $clearedID = mysql_real_escape_string($_GET['id']);
 $sql1 = "SELECT username, regdate, last_login, liga, team, status, infotext FROM ".$prefix."users WHERE ids = '".$clearedID."'";
 $sql2 = mysql_query($sql1);
@@ -218,13 +200,13 @@ if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 				if ($gesp3_noch < 3) {
 					echo '<h1>'._('Testspiel vereinbaren').'</h1><p><strong>'._('Zu spät:').'</strong> '._('In dieser Saison können leider keine Testspiele mehr vereinbart werden.').'</p>';
 				}
-				elseif ($getkonto4 < getTestspielPreis($cookie_liga, $cookie_team)) {
+				elseif ($getkonto4 < Friendlies::getPrice($cookie_liga, $prefix)) {
 					echo '<h1>'._('Testspiel vereinbaren').'</h1><p><strong>'._('Zu teuer:').'</strong> '._('Im Moment hast Du leider nicht genügend Geld, um ein Testspiel vereinbaren zu können.').'</p>';
 				}
 				else {
 					$optionsStr = '';
 					$optionsStr .= '<h1>'._('Testspiel vereinbaren').'</h1>';
-					$optionsStr .= '<p><strong>'._('Wichtig:').'</strong> '.__('Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das Spiel genehmigt wird. Für Dich sind das %s €.', number_format(getTestspielPreis($cookie_liga, $cookie_team), 0, ',', '.')).'</p>';
+					$optionsStr .= '<p><strong>'._('Wichtig:').'</strong> '.__('Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das Spiel genehmigt wird. Für Dich sind das %s €.', number_format(Friendlies::getPrice($cookie_liga, $prefix), 0, ',', '.')).'</p>';
 					$optionsStr .= '<form action="/testspiel_anfrage.php" method="get" accept-charset="utf-8">';
 					$heute_tag = date('d', time());
 					$heute_monat = date('m', time());

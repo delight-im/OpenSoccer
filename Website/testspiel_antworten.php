@@ -2,25 +2,7 @@
 if (!isset($_GET['id']) OR !isset($_GET['typ'])) { exit; }
 include 'zzserver.php';
 include 'zzcookie.php';
-function getTestspielPreis($liga) {
-	global $prefix;
-	$bql1 = "SELECT name FROM ".$prefix."ligen WHERE ids = '".$liga."'";
-	$bql2 = mysql_query($bql1);
-	$bql3 = mysql_fetch_assoc($bql2);
-	$ligaNr = intval(substr($bql3['name'], -1));
-	if ($ligaNr == 4) {
-		return 50000;
-	}
-	elseif ($ligaNr == 3) {
-		return 100000;
-	}
-	elseif ($ligaNr == 2) {
-		return 500000;
-	}
-	else {
-		return 1000000;
-	}
-}
+require_once('./classes/Friendlies.php');
 function isFriendlyDateValid($matchTime) {
     return $matchTime > time() && $matchTime < (time() + 3600 * 24 * (22 - GameTime::getMatchDay()));
 }
@@ -28,7 +10,7 @@ $team = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 $typ = mysql_real_escape_string(trim(strip_tags($_GET['typ'])));
 if ($cookie_id != DEMO_USER_ID) {
 	if ($typ == 'Annehmen') {
-		$testspiel_preis_ich = getTestspielPreis($cookie_liga, $cookie_team);
+		$testspiel_preis_ich = Friendlies::getPrice($cookie_liga, $prefix);
 		$gt1 = "SELECT a.team1_name, a.datum, b.liga, b.ids FROM ".$prefix."testspiel_anfragen AS a JOIN ".$prefix."teams AS b ON a.team1 = b.ids WHERE a.team1 = '".$team."' AND a.team2 = '".$cookie_team."'";
 		$gt2 = mysql_query($gt1);
 		if (mysql_num_rows($gt2) == 0) { exit; }
@@ -36,7 +18,7 @@ if ($cookie_id != DEMO_USER_ID) {
 		$team1_name = $gt3['team1_name'];
 		$team1_liga = $gt3['liga'];
 		$team1_ids = $gt3['ids'];
-		$testspiel_preis_der_andere = getTestspielPreis($team1_liga, $team1_ids);
+		$testspiel_preis_der_andere = Friendlies::getPrice($team1_liga, $prefix);
 		$datum_spiel = $gt3['datum'];
 
         $gt1 = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$cookie_team."' AND datum = ".$datum_spiel;

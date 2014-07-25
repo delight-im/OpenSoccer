@@ -17,40 +17,40 @@ $transfers_mit_team = array_count_values($transfers_mit_team);
 <form action="/transfermarkt_leihe.php" method="get" accept-charset="utf-8">
 <p><select name="wiealt" size="1" style="width:200px">
 	<option value="no"><?php echo _('Jedes Alter'); ?></option>
-	<option value="17-20"><?php echo __('%1$d bis %2$d Jahre', '17', '20'); ?></option>
-	<option value="17-23"><?php echo __('%1$d bis %2$d Jahre', '17', '23'); ?></option>
-	<option value="20-23"><?php echo __('%1$d bis %2$d Jahre', '20', '23'); ?></option>
-	<option value="20-26"><?php echo __('%1$d bis %2$d Jahre', '20', '26'); ?></option>
-	<option value="23-26"><?php echo __('%1$d bis %2$d Jahre', '23', '26'); ?></option>
-	<option value="23-29"><?php echo __('%1$d bis %2$d Jahre', '23', '29'); ?></option>
-	<option value="26-29"><?php echo __('%1$d bis %2$d Jahre', '26', '29'); ?></option>
-	<option value="26-32"><?php echo __('%1$d bis %2$d Jahre', '26', '32'); ?></option>
-	<option value="29-32"><?php echo __('%1$d bis %2$d Jahre', '29', '32'); ?></option>
-	<option value="29-35"><?php echo __('%1$d bis %2$d Jahre', '29', '35'); ?></option>
-	<option value="32-35"><?php echo __('%1$d bis %2$d Jahre', '32', '35'); ?></option>
+	<option value="17-20"><?php echo __('%1$d bis %2$d Jahre', 17, 20); ?></option>
+	<option value="17-23"><?php echo __('%1$d bis %2$d Jahre', 17, 23); ?></option>
+	<option value="20-23"><?php echo __('%1$d bis %2$d Jahre', 20, 23); ?></option>
+	<option value="20-26"><?php echo __('%1$d bis %2$d Jahre', 20, 26); ?></option>
+	<option value="23-26"><?php echo __('%1$d bis %2$d Jahre', 23, 26); ?></option>
+	<option value="23-29"><?php echo __('%1$d bis %2$d Jahre', 23, 29); ?></option>
+	<option value="26-29"><?php echo __('%1$d bis %2$d Jahre', 26, 29); ?></option>
+	<option value="26-32"><?php echo __('%1$d bis %2$d Jahre', 26, 32); ?></option>
+	<option value="29-32"><?php echo __('%1$d bis %2$d Jahre', 29, 32); ?></option>
+	<option value="29-35"><?php echo __('%1$d bis %2$d Jahre', 29, 35); ?></option>
+	<option value="32-35"><?php echo __('%1$d bis %2$d Jahre', 32, 35); ?></option>
 </select></p>
 <p><select name="position" size="1" style="width:200px">
 	<option value="no"><?php echo _('Jede Position'); ?></option>
-	<option value="T">T<?php echo _('orwart'); ?></option>
+	<option value="T"><?php echo _('Torwart'); ?></option>
 	<option value="A"><?php echo _('Abwehr'); ?></option>
 	<option value="M"><?php echo _('Mittelfeld'); ?></option>
 	<option value="S"><?php echo _('Sturm'); ?></option>
 </select></p>
 <p><select name="staerke" size="1" style="width:200px">
 	<option value="no"><?php echo _('Jede Stärke'); ?></option>
-	<option value="0-3"><?php echo __('Stärke %1$d bis %2$d', '0', '3'); ?></option>
-	<option value="3-6"><?php echo __('Stärke %1$d bis %2$d', '3', '6'); ?></option>
-	<option value="6-9"><?php echo __('Stärke %1$d bis %2$d', '6', '9'); ?></option>
-	<option value="0-0"><?php echo __('Stärke %d', '0'); ?></option>
-	<option value="1-1"><?php echo __('Stärke %d', '1'); ?></option>
-	<option value="2-2"><?php echo __('Stärke %d', '2'); ?></option>
-	<option value="3-3"><?php echo __('Stärke %d', '3'); ?></option>
-	<option value="4-4"><?php echo __('Stärke %d', '4'); ?></option>
-	<option value="5-5"><?php echo __('Stärke %d', '5'); ?></option>
-	<option value="6-6"><?php echo __('Stärke %d', '6'); ?></option>
-	<option value="7-7"><?php echo __('Stärke %d', '7'); ?></option>
-	<option value="8-8"><?php echo __('Stärke %d', '8'); ?></option>
-	<option value="9-9"><?php echo __('Stärke %d', '9'); ?></option>
+	<option value="0-3"><?php echo __('Stärke %1$d bis %2$d', 0, 3); ?></option>
+	<option value="3-6"><?php echo __('Stärke %1$d bis %2$d', 3, 6); ?></option>
+	<option value="6-9"><?php echo __('Stärke %1$d bis %2$d', 6, 9); ?></option>
+	<option value="0-0"><?php echo __('Stärke %d', 0); ?></option>
+	<option value="1-1"><?php echo __('Stärke %d', 1); ?></option>
+	<option value="2-2"><?php echo __('Stärke %d', 2); ?></option>
+	<option value="3-3"><?php echo __('Stärke %d', 3); ?></option>
+	<option value="4-4"><?php echo __('Stärke %d', 4); ?></option>
+	<option value="5-5"><?php echo __('Stärke %d', 5); ?></option>
+	<option value="6-6"><?php echo __('Stärke %d', 6); ?></option>
+	<option value="7-7"><?php echo __('Stärke %d', 7); ?></option>
+	<option value="8-8"><?php echo __('Stärke %d', 8); ?></option>
+	<option value="9-9"><?php echo __('Stärke %d', 9); ?></option>
 </select></p>
 <p><input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
@@ -110,7 +110,6 @@ if (isset($_GET['id']) && $cookie_id != DEMO_USER_ID) {
 	}
 }
 ?>
-<p>
 <table>
 <thead><tr class="odd"><th scope="col"><?php echo _('MT').'</th><th scope="col">'._('Spieler').'</th><th scope="col">'._('AL').'</th><th scope="col">'._('ST').'</th><th scope="col">'._('Prämie p.P.').'</th><th scope="col">'._('Aktion').'</th></tr></thead>'; ?>
 <tbody>
@@ -209,7 +208,6 @@ else {
 ?>
 </tbody>
 </table>
-</p>
 <p><strong><?php echo _('Hinweis:').'</strong> '._('Indem Du auf &quot;Anfragen&quot; klickst, schickst Du dem Besitzer des Spielers ein Angebot, den Spieler bis Saisonende zu übernehmen. Der Besitzer des Spielers hat dann die Möglichkeit, das Angebot entweder abzulehnen oder anzunehmen. Wenn er Dein Angebot annimmt, gehört der Spieler sofort Dir (bis Saisonende).'); ?></p>
 <p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, AL: Alter, ST: Stärke'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>

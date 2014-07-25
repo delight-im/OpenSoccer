@@ -23,7 +23,7 @@
 </thead>
 <tbody>
 <?php
-$ausdruck = "(SELECT AVG(konto) FROM ".$prefix."teams WHERE liga = man_ligen.ids)";
+$ausdruck = "(SELECT AVG(konto) FROM ".$prefix."teams WHERE liga = ".$prefix."ligen.ids)";
 $sql1 = "SELECT ids, name, ".$ausdruck." FROM ".$prefix."ligen ORDER BY ".$ausdruck." DESC LIMIT 0, 26";
 $sql2 = mysql_query($sql1);
 $counter = 1;

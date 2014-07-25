@@ -13,7 +13,7 @@
 </div>
 <?php
 // RUN A SINGLE CRONJOB BEGIN
-// IF THIS TURNS OUT TO BE UNNECESSARY REMOVE CODE AND DATABASE TABLE <man_cronjobs>
+// IF THIS TURNS OUT TO BE UNNECESSARY REMOVE CODE AND DATABASE TABLE <".$prefix."cronjobs>
 /*if (Chance_Percent(33)) {
 	$aktuelle_stunde = date('H');
 	$sql1 = "SELECT id, datei FROM ".$prefix."cronjobs WHERE (zuletzt+intervall) < ".time()." AND stunde_min <= ".$aktuelle_stunde." AND stunde_max >= ".$aktuelle_stunde." ORDER BY zuletzt ASC LIMIT 0, 1";

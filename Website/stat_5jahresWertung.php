@@ -31,7 +31,7 @@
 <tbody>
 <?php
 setTaskDone('check_5yearsranking');
-$sql1 = "SELECT ids, name, pkt_saison1, pkt_saison2, pkt_saison3, pkt_saison4, pkt_saison5, pkt_gesamt FROM man_ligen WHERE hoch = 'KEINE' ORDER BY pkt_gesamt DESC, pkt_saison1 DESC, pkt_saison2 DESC, pkt_saison3 DESC, pkt_saison4 DESC, pkt_saison5 DESC LIMIT 0, 13";
+$sql1 = "SELECT ids, name, pkt_saison1, pkt_saison2, pkt_saison3, pkt_saison4, pkt_saison5, pkt_gesamt FROM ".$prefix."ligen WHERE hoch = 'KEINE' ORDER BY pkt_gesamt DESC, pkt_saison1 DESC, pkt_saison2 DESC, pkt_saison3 DESC, pkt_saison4 DESC, pkt_saison5 DESC LIMIT 0, 13";
 $sql2 = mysql_query($sql1);
 $counter = 1;
 while ($sql3 = mysql_fetch_assoc($sql2)) {

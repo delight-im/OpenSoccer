@@ -46,7 +46,7 @@ if ($naechste_runde == 1) {
 		$freiLosCounter++;
 	}
     // CUPERGEBNIS LETZTES JAHR ZURÜCKSETZEN ANFANG
-    $sddfhooph1 = "UPDATE ".$prefix."teams SET cuprunde = 0 WHERE liga IN (SELECT ids FROM man_ligen WHERE land = '".$landToSimulate4."')";
+    $sddfhooph1 = "UPDATE ".$prefix."teams SET cuprunde = 0 WHERE liga IN (SELECT ids FROM ".$prefix."ligen WHERE land = '".$landToSimulate4."')";
     $sddfhooph2 = mysql_query($sddfhooph1);
     // CUPERGEBNIS LETZTES JAHR ZURÜCKSETZEN ENDE
     // FREILOSE VERTEILEN ANFANG
@@ -74,7 +74,7 @@ elseif ($naechste_runde < 7) {
 		}
     }
 	if ($naechste_runde == 2) {
-		$freiLosVerteilung1 = "SELECT name FROM ".$prefix."teams WHERE liga IN (SELECT ids FROM man_ligen WHERE land = '".$landToSimulate4."') AND cuprunde = 2 LIMIT 0, 16";
+		$freiLosVerteilung1 = "SELECT name FROM ".$prefix."teams WHERE liga IN (SELECT ids FROM ".$prefix."ligen WHERE land = '".$landToSimulate4."') AND cuprunde = 2 LIMIT 0, 16";
 		$freiLosVerteilung2 = mysql_query($freiLosVerteilung1);
 		while ($freiLosVerteilung3 = mysql_fetch_assoc($freiLosVerteilung2)) {
 			$teamliste[] = $freiLosVerteilung3['name'];

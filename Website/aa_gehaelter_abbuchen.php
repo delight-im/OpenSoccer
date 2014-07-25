@@ -70,7 +70,7 @@ if (mysql_affected_rows() > 0) {
 	$preisniveau2 = mysql_query($preisniveau1);
 	$preisniveau3 = mysql_fetch_assoc($preisniveau2);
 	$preisniveau = $preisniveau3['preisniveau']; // P=M/Q (M = Geldmenge, Q = Warenwert)
-	$mwert1 = "SELECT AVG(marktwert), SUM(marktwert) FROM man_spieler WHERE team != 'frei'";
+	$mwert1 = "SELECT AVG(marktwert), SUM(marktwert) FROM ".$prefix."spieler WHERE team != 'frei'";
 	$mwert2 = mysql_query($mwert1);
 	$mwert3 = mysql_fetch_assoc($mwert2);
 	$mwert_avg = $mwert3['AVG(marktwert)'];

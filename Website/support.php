@@ -268,7 +268,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 </tbody>
 </table>
 <?php
-$myRequests1 = "SELECT id, title FROM man_supportRequests WHERE author = '".$cookie_id."' ORDER BY id DESC LIMIT 0, 5";
+$myRequests1 = "SELECT id, title FROM ".$prefix."supportRequests WHERE author = '".$cookie_id."' ORDER BY id DESC LIMIT 0, 5";
 $myRequests2 = mysql_query($myRequests1);
 if (mysql_num_rows($myRequests2) > 0) {
 	echo '<h1>'._('Meine letzten Anfragen').'</h1><ul>';

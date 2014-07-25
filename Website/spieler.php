@@ -136,7 +136,7 @@ else {
 		echo '<a href="/transfermarkt_auktion.php?id='.$sql3['ids'].'">'._('Zur Auktion').'</a>';
 	}
 	elseif ($sql3['transfermarkt'] > 999998) {
-		$getLeihPos1 = "SELECT COUNT(*) FROM man_spieler WHERE transfermarkt > 999998 AND ((staerke > ".$sql3['staerke'].") OR (staerke = ".$sql3['staerke']." AND id < ".$sql3['id']."))";
+		$getLeihPos1 = "SELECT COUNT(*) FROM ".$prefix."spieler WHERE transfermarkt > 999998 AND ((staerke > ".$sql3['staerke'].") OR (staerke = ".$sql3['staerke']." AND id < ".$sql3['id']."))";
 		$getLeihPos2 = mysql_query($getLeihPos1);
 		$getLeihPos3 = mysql_result($getLeihPos2, 0);
 		$getLeihPage = floor($getLeihPos3/$eintraege_pro_seite)+1;

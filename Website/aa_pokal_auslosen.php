@@ -118,7 +118,7 @@ else { // im Finale nur 1 Spiel, daher keine Auswaertstorregel
     $siegLoga = "SELECT saison FROM ".$prefix."zeitrechnung";
     $siegLogb = mysql_query($siegLoga);
     $siegLogc = mysql_fetch_assoc($siegLogb);
-    $siegLog1 = "INSERT INTO man_pokalsieger (saison, sieger, finalgegner) VALUES (".$siegLogc['saison'].", '".mysql_real_escape_string($sieger)."', '".mysql_real_escape_string($finalgegner)."')";
+    $siegLog1 = "INSERT INTO ".$prefix."pokalsieger (saison, sieger, finalgegner) VALUES (".$siegLogc['saison'].", '".mysql_real_escape_string($sieger)."', '".mysql_real_escape_string($finalgegner)."')";
     $siegLog2 = mysql_query($siegLog1);
     $teams6 = "INSERT INTO ".$prefix."spiele (team1, team2, liga, typ, simuliert, datum) VALUES ('keins', 'keins', 'keine', 'Pokal', 1, '".time()."')";
     $teams7 = mysql_query($teams6); // 1 leeres Spiel in die DB schreiben, damit Pokal-Auslosung immer abgebrochen wird

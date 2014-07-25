@@ -23,8 +23,8 @@
 </thead>
 <tbody>
 <?php
-$ausdruck = "(SELECT AVG(staerke) FROM man_teams WHERE liga = man_ligen.ids)";
-$sql1 = "SELECT ids, name, ".$ausdruck." FROM man_ligen ORDER BY ".$ausdruck." DESC LIMIT 0, 26";
+$ausdruck = "(SELECT AVG(staerke) FROM ".$prefix."teams WHERE liga = ".$prefix."ligen.ids)";
+$sql1 = "SELECT ids, name, ".$ausdruck." FROM ".$prefix."ligen ORDER BY ".$ausdruck." DESC LIMIT 0, 26";
 $sql2 = mysql_query($sql1);
 $counter = 1;
 while ($sql3 = mysql_fetch_assoc($sql2)) {

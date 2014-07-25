@@ -133,7 +133,7 @@ if ($cookie_team != '__'.$cookie_id) {
 else {
 	$getkonto4 = 0;
 }
-$cntWatcher1 = "SELECT COUNT(*) FROM man_transfermarkt_watch WHERE spieler_id = '".$sql3['spieler']."'";
+$cntWatcher1 = "SELECT COUNT(*) FROM ".$prefix."transfermarkt_watch WHERE spieler_id = '".$sql3['spieler']."'";
 $cntWatcher2 = mysql_query($cntWatcher1);
 $cntWatcher3 = mysql_result($cntWatcher2, 0);
 ?>

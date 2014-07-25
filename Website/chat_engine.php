@@ -68,7 +68,7 @@ function nachricht_erzeugen($user, $nachricht) {
 				$getReportedUserID4 = mysql_real_escape_string(trim(strip_tags($getReportedUserID3['ids'])));
 				if ($getReportedUserID4 != OFFICIAL_USER_ID && $user != DEMO_USER_ID) {
 					// CHAT-PROTOKOLL ANFERTIGEN ANFANG
-					$sql1 = "SELECT a.user, a.zeit, a.nachricht, b.username, b.last_ip FROM man_chatroom AS a JOIN man_users AS b ON a.user = b.ids ORDER BY a.id DESC LIMIT 0, 100";
+					$sql1 = "SELECT a.user, a.zeit, a.nachricht, b.username, b.last_ip FROM ".$prefix."chatroom AS a JOIN ".$prefix."users AS b ON a.user = b.ids ORDER BY a.id DESC LIMIT 0, 100";
 					$sql2 = mysql_query($sql1);
 					$reportText = '';
 					while ($sql3 = mysql_fetch_assoc($sql2)) {

@@ -85,7 +85,7 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 					addInfoBox(_('Dieser Name steht auf der Sperrliste, weil er einem realen Vereins-Namen zu sehr ähnelt. Bitte versuche es noch einmal mit einem anderen Namen.'));
 				}
 				else {
-					$sql1 = "UPDATE man_teams SET name = '".$neuerName."' WHERE name = '".$showTeamName."'";
+					$sql1 = "UPDATE ".$prefix."teams SET name = '".$neuerName."' WHERE name = '".$showTeamName."'";
 					$sql2 = mysql_query($sql1);
 					if ($sql2 == FALSE) {
 						addInfoBox(_('Dieser Name ist leider schon vergeben. Bitte versuche es noch einmal mit einem anderen Namen.'));

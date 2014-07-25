@@ -7,7 +7,7 @@ $cn3 = mysql_result($cn2, 0);
 if ($cn3 > 2500) { exit; }
 // NUR MAXIMAL 2500 FREIE SPIELER ENDE
 $laengen = array(24, 36, 48, 60, 72);
-$sql1 = "SELECT ids, vorname, nachname, staerke, marktwert, transfermarkt, FLOOR(wiealt/365) AS wiealt_jahre, FLOOR(staerke) AS staerke_punkte FROM man_spieler WHERE team = 'frei' AND wiealt < 11315 AND transfermarkt = 0 GROUP BY wiealt_jahre, staerke_punkte, position ORDER BY staerke DESC LIMIT 0, 100";
+$sql1 = "SELECT ids, vorname, nachname, staerke, marktwert, transfermarkt, FLOOR(wiealt/365) AS wiealt_jahre, FLOOR(staerke) AS staerke_punkte FROM ".$prefix."spieler WHERE team = 'frei' AND wiealt < 11315 AND transfermarkt = 0 GROUP BY wiealt_jahre, staerke_punkte, position ORDER BY staerke DESC LIMIT 0, 100";
 $sql2 = mysql_query($sql1);
 $affectedCounter = 0;
 while ($sql3 = mysql_fetch_assoc($sql2)) {

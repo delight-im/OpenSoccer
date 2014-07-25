@@ -475,7 +475,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
             addInfoBox('Es wurden insgesamt '.mysql_affected_rows().' Spiele verschoben!');
         }
     }
-    $invalidMatches1 = "SELECT id, team1, team2, typ, datum FROM man_spiele WHERE ".$invalidMatchesWhere." LIMIT 0, 312";
+    $invalidMatches1 = "SELECT id, team1, team2, typ, datum FROM ".$prefix."spiele WHERE ".$invalidMatchesWhere." LIMIT 0, 312";
     $invalidMatches2 = mysql_query($invalidMatches1);
     echo '<h1>Fehlerhafte Spiele</h1>';
     if (mysql_num_rows($invalidMatches2) > 0) {

@@ -1,6 +1,11 @@
 <?php
+
+// declare the content type and encoding
+header('Content-Type: text/html; charset=utf-8');
+// remove unnecessary HTTP headers
+header_remove('X-Powered-By');
+
 date_default_timezone_set('Europe/Berlin');
-header('content-type: text/html; charset=utf-8');
 ignore_user_abort(true);
 include 'config.php';
 

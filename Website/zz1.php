@@ -1,5 +1,10 @@
 <?php
 
+if (CONFIG_USE_HTTPS && CONFIG_USE_HTTPS_HSTS) {
+    // use HTTP Strict Transport Security (HSTS) with a period of three months
+    header('Strict-Transport-Security: max-age=7884000');
+}
+
 // prevent caching and storage of sensitive data
 header('Expires: Mon, 24 Mar 2008 00:00:00 GMT');
 header('Cache-Control: no-cache, no-store');

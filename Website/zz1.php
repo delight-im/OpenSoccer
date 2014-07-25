@@ -1,6 +1,9 @@
 <?php
-header("Expires: Mon, 24 Mar 2008 00:00:00 GMT");
-header("Cache-Control: no-cache");
+
+// prevent caching and storage of sensitive data
+header('Expires: Mon, 24 Mar 2008 00:00:00 GMT');
+header('Cache-Control: no-cache, no-store');
+
 ini_set('session.use_trans_sid', 0);
 include 'zzserver.php';
 include 'zzcookie.php';

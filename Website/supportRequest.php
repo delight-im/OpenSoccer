@@ -45,7 +45,7 @@ switch ($sql3['open']) {
 }
 $entryNumber .= ')';
 ?>
-<title>Support: <?php echo $entryNumber; ?> | Ballmanager.de</title>
+<title><?php echo _('Support: %d', $entryNumber); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .commentBoxBlack, .commentBoxRed, .commentBoxOrange {
@@ -74,7 +74,7 @@ $entryNumber .= ')';
 -->
 </style>
 <?php include 'zz2.php'; ?>
-<h1>Support: <?php echo $entryNumber; ?></h1>
+<h1><?php echo _('Support: %d', $entryNumber); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('read_support');
@@ -86,15 +86,15 @@ if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3
 		$sql3['open'] = $setOpen;
 		// AUTOR DER ANFRAGE PER POST BENACHRICHTIGEN ANFANG
 		if ($setOpen != 1) {
-			$betreff = 'Support: Anfrage #'.id2secure($sql3['id']);
-			$notifyText = 'Hallo,<br /><br />vielen Dank für Deine Beteiligung im Support-Forum. Eine Deiner Anfragen wurde jetzt geschlossen, Du findest sie hier:<br />http://www.ballmanager.de/supportRequest.php?id='.id2secure($sql3['id']).'<br /><br />Sportliche Grüße<br />das Ballmanager-Team';
-			$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".$sql3['author']."', '".$betreff."', '".$notifyText."', ".time().", '')";
+            $betreff = _('Support: Anfrage #%s', id2secure($sql3['id']));
+            $notifyText = _('Hallo').',<br /><br />'._('vielen Dank für Deine Beteiligung im Support-Forum. Eine Deiner Anfragen wurde jetzt geschlossen, Du findest sie hier:').'<br />http://www.ballmanager.de/supportRequest.php?id='.id2secure($sql3['id']).'<br /><br />'._('Sportliche Grüße').'<br />'._('das Ballmanager-Team');
+            $sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".$sql3['author']."', '".$betreff."', '".$notifyText."', ".time().", '')";
 			$sql2 = mysql_query($sql1);
 			$sql1 = "UPDATE ".$prefix."pn SET ids = MD5(id) WHERE ids = ''";
 			$sql2 = mysql_query($sql1);
 		}
 		// AUTOR DER ANFRAGE PER POST BENACHRICHTIGEN ENDE
-		addInfoBox('Der Status der Anfrage wurde geändert.');
+		addInfoBox(_('Der Status der Anfrage wurde geändert.'));
 	}
 }
 if (isset($_GET['delCom']) && $cookie_id != DEMO_USER_ID) {
@@ -107,10 +107,10 @@ if (isset($_GET['delCom']) && $cookie_id != DEMO_USER_ID) {
 }
 if ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') {
 	if ($sql3['visibilityLevel'] == 1) {
-		addInfoBox('Diese Anfrage ist geschützt und nur für das Support-Team sichtbar.');
+		addInfoBox(_('Diese Anfrage ist geschützt und nur für das Support-Team sichtbar.'));
 	}
 	elseif ($sql3['visibilityLevel'] == 2) {
-		addInfoBox('Bei dieser Anfrage handelt es sich um einen gelöschten Eintrag.');
+		addInfoBox(_('Bei dieser Anfrage handelt es sich um einen gelöschten Eintrag.'));
 	}
 }
 else {
@@ -125,7 +125,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+		addInfoBox(__('Du bist noch bis zum %1$d Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.' , date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
 		include 'zz3.php';
 		exit;
 	}
@@ -139,14 +139,14 @@ $read2 = mysql_query($read1);
 ?>
 <p style="text-align:right">
 	<a href="/support.php" class="pagenava">Zurück zur Hauptseite</a>
-	<?php if (($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1 && $sql3['visibilityLevel'] == 0) { echo ' <a href="/support.php?del='.id2secure($requestID).'" class="pagenava" onclick="return confirm(\'Bist Du sicher?\')">Anfrage löschen</a>'; } ?>
+	<?php if (($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1 && $sql3['visibilityLevel'] == 0) { echo ' <a href="/support.php?del='.id2secure($requestID).'" class="pagenava" onclick="return confirm(\''._('Bist Du sicher??').'\')">'._('Anfrage löschen').'</a>'; } ?>
 	<?php if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1) {
 			if ($sql3['category'] == 'Vorschlag') {
-				echo ' <a href="/supportRequest.php?id='.id2secure($requestID).'&amp;setOpen=0" class="pagenava" onclick="return confirm(\'Bist Du sicher?\')">Umgesetzt</a>';
-				echo ' <a href="/supportRequest.php?id='.id2secure($requestID).'&amp;setOpen=-1" class="pagenava" onclick="return confirm(\'Bist Du sicher?\')">Ablehnen</a>';
+				echo ' <a href="/supportRequest.php?id='.id2secure($requestID).'&amp;setOpen=0" class="pagenava" onclick="return confirm(\''._('Bist Du sicher?').'\')">'._('Umgesetzt').'</a>';
+				echo ' <a href="/supportRequest.php?id='.id2secure($requestID).'&amp;setOpen=-1" class="pagenava" onclick="return confirm(\''._('Bist Du sicher?').'\')">'._('Ablehnen').'</a>';
 			}
 			else {
-				echo ' <a href="/supportRequest.php?id='.id2secure($requestID).'&amp;setOpen=-1" class="pagenava" onclick="return confirm(\'Bist Du sicher?\')">Geklärt</a>';
+				echo ' <a href="/supportRequest.php?id='.id2secure($requestID).'&amp;setOpen=-1" class="pagenava" onclick="return confirm(\''._('Bist Du sicher?').'\')">'._('Geklärt').'</a>';
 			}
 		}
 	?>
@@ -216,7 +216,7 @@ echo '<p style="text-align:center; font-size:14px; font-weight:bold;">'.$sql3['t
 	if ($sql3['category'] == 'Vorschlag') {
 	if ($votes3 == 0 && $sql3['open'] == 1) { // noch nicht abgestimmt
 		echo '<form action="/supportRequest.php?id='.id2secure($requestID).'" method="post" accept-charset="utf-8">';
-		echo '<p style="text-align:center"><input type="submit" name="ownRating" value="Gut!" style="width:150px; font-size:14px" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')" /> <input type="submit" name="ownRating" value="Schlecht!" style="width:150px; font-size:14px" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\'Bist Du sicher?\')" /></p>';
+		echo '<p style="text-align:center"><input type="submit" name="ownRating" value="'._('Gut!').'" style="width:150px; font-size:14px" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')" /> <input type="submit" name="ownRating" value="'._('Schlecht!').'" style="width:150px; font-size:14px" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')" /></p>';
 		echo '</form>';
 	}
 	else { // schon abgestimmt
@@ -243,27 +243,27 @@ if ($votes3 == 1) { // schon abgestimmt
 	}
 }
 else { // noch nicht abgestimmt
-	echo 'Anonym (Bitte erst oben abstimmen!)';
+	echo _('Anonym (Bitte erst oben abstimmen!)');
 }
 echo '</span>';
-echo '<strong>Hinzugefügt am:</strong> <span style="display:block; margin-bottom:8px;">'.date('d.m.Y H:i', $sql3['timeAdded']).' Uhr</span>';
-echo '<strong>Letzte Aktion:</strong> <span style="display:block; margin-bottom:8px;">'.date('d.m.Y H:i', $sql3['lastAction']).' Uhr</span></p>';
+echo '<strong>'._('Hinzugefügt am:').'</strong> <span style="display:block; margin-bottom:8px;">'.date('d.m.Y H:i', $sql3['timeAdded']).' '._('Uhr').'</span>';
+echo '<strong>'._('Letzte Aktion:').'</strong> <span style="display:block; margin-bottom:8px;">'.date('d.m.Y H:i', $sql3['lastAction']).' '._('Uhr').'</span></p>';
 // WEITERE INFOS ENDE
 ?>
 <?php if ($sql3['open'] == 1) { ?>
-<h1>Dein Kommentar ...</h1>
+<h1><?php echo _('Dein Kommentar'); ?> ...</h1>
 <form action="/supportRequest.php?id=<?php echo id2secure($requestID); ?>" method="post" accept-charset="utf-8">
 <p><textarea name="myComment" cols="10" rows="10" style="width:350px; height:100px"></textarea></p>
-<p><input type="submit" value="Kommentieren" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+<p><input type="submit" value="<?php echo _('Kommentieren'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <?php } ?>
-<h1>Kommentare zu dieser Anfrage</h1>
+<h1><?php echo _('Kommentare zu dieser Anfrage'); ?></h1>
 <?php
 $comments1 = "SELECT a.id, a.deleted, a.userID, a.text, a.zeit, a.likes, b.username, b.status FROM ".$prefix."supportComments AS a JOIN ".$prefix."users AS b ON a.userID = b.ids WHERE a.requestID = ".$requestID." ORDER BY a.zeit ASC";
 $comments2 = mysql_query($comments1);
 $commentsTotal = mysql_num_rows($comments2);
 if ($commentsTotal == 0) {
-	echo '<p>Bisher hat noch niemand einen Kommentar zu dieser Anfrage abgegeben. Sei der Erste!</p>';
+	echo '<p>'._('Bisher hat noch niemand einen Kommentar zu dieser Anfrage abgegeben. Sei der Erste!').'</p>';
 }
 else {
 	$commentsCounter = 1;
@@ -287,33 +287,33 @@ else {
 			echo displayUsername($comments3['username'], $comments3['userID']);
 		}
 		else {
-			echo 'Anonym';
+			echo _('Anonym');
 		}
-		echo ' schrieb am '.date('d.m.Y H:i', $comments3['zeit']).' Uhr:</strong><br />';
+		echo ' '.__('schrieb am %s Uhr:', date('d.m.Y H:i', $comments3['zeit'])).'</strong><br />';
 		if ($comments3['deleted'] == 1) {
-			echo '<i>Dieser Kommentar wurde gelöscht.</i>';
+			echo '<i>'._('Dieser Kommentar wurde gelöscht.').'</i>';
 		}
 		else {
 			echo $comments3['text'];
 		}
 		if ($comments3['likes'] > 0 && $comments3['deleted'] == 0) {
-			echo '<br /><strong>'.$comments3['likes'].' Manager finde';
+			echo '<br /><strong>'.$comments3['likes'].' '._('Manager finde');
 			if ($comments3['likes'] == 1) { echo 't'; } else { echo 'n'; }
-			echo ' diesen Kommentar gut.</strong>';
+			echo ' '._('diesen Kommentar gut.').'</strong>';
 		}
 		$baseURL = '/supportRequest.php?id='.id2secure($requestID).'&amp;';
 		if ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') {
-			echo '<br />&nbsp;<br /><a class="button" href="'.$baseURL.'delCom='.id2secure($comments3['id']).'" onclick="return confirm(\'Bist Du sicher?\')">Kommentar löschen</a>';
+			echo '<br />&nbsp;<br /><a class="button" href="'.$baseURL.'delCom='.id2secure($comments3['id']).'" onclick="return confirm(\''._('Bist Du sicher?').'\'">'._('Kommentar löschen').'</a>';
 			if ($comments3['userID'] != $cookie_id) {
-				echo ' <a class="button" href="#" onclick="voteComment(\''.id2secure($requestID).'\', \''.id2secure($comments3['id']).'\', this); return false;">Guter Kommentar!</a>';
+				echo ' <a class="button" href="#" onclick="voteComment(\''.id2secure($requestID).'\', \''.id2secure($comments3['id']).'\', this); return false;">'._('Guter Kommentar!').'</a>';
 			}
 		}
 		else {
 			if ($comments3['userID'] == $cookie_id) {
-				echo '<br />&nbsp;<br /><a class="button" href="'.$baseURL.'delCom='.id2secure($comments3['id']).'" onclick="return confirm(\'Bist Du sicher?\')">Kommentar löschen</a>';
+				echo '<br />&nbsp;<br /><a class="button" href="'.$baseURL.'delCom='.id2secure($comments3['id']).'" onclick="return confirm(\''._('Bist Du sicher?').'\'">'._('Kommentar löschen').'</a>';
 			}
 			else {
-				echo '<br />&nbsp;<br /><a class="button" href="#" onclick="voteComment(\''.id2secure($requestID).'\', \''.id2secure($comments3['id']).'\', this); return false;">Guter Kommentar!</a>';
+				echo '<br />&nbsp;<br /><a class="button" href="#" onclick="voteComment(\''.id2secure($requestID).'\', \''.id2secure($comments3['id']).'\', this); return false;">'._('Guter Kommentar!').'</a>';
 			}
 		}
 		echo '</p>';
@@ -328,7 +328,7 @@ function voteComment(requestID, commentID, linkElement) {
 		var responseSpan = document.createElement('span');
 		responseSpan.style.marginLeft = '10px';
 		responseSpan.style.marginRight = '10px';
-		responseSpan.innerHTML = '<img src="/images/loading_14.gif" width="14" alt="Wird gesendet ..." /> Wird gesendet ...';
+		responseSpan.innerHTML = '<img src="/images/loading_14.gif" width="14" alt="Wird gesendet ..." /> '._('Wird gesendet').' ...';
 		linkElement.parentNode.appendChild(responseSpan);
 		linkElement.parentNode.removeChild(linkElement);
 	}
@@ -344,6 +344,6 @@ function voteComment(requestID, commentID, linkElement) {
 }
 </script>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

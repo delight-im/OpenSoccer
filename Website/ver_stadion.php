@@ -1,5 +1,5 @@
 <?php include 'zz1.php'; ?>
-<title>Stadion | Ballmanager.de</title>
+<title><?php echo _('Stadion'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -57,16 +57,16 @@ if (isset($_POST['plaetze']) && isset($_POST['art']) && $cookie_id != DEMO_USER_
                         $sql4 = mysql_query($sql3);
                         $buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Bauarbeiten', -".$preis.", '".time()."')";
                         $buch2 = mysql_query($buch1);
-                        $formulierung = 'Du hast Dein Stadion um '.$plaetze_neu.' Plätze vergrößert.';
+                        $formulierung = __('Du hast Dein Stadion um %d Plätze vergrößert.', $plaetze_neu);
                         $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Stadion', '".time()."')";
                         $sql8 = mysql_query($sql7);
                     }
                     else {
-                        addInfoBox('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis '.date('d.m.Y H:i', $underConstructionUntil).' warten.');
+                        addInfoBox(__('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis %s warten.', date('d.m.Y H:i', $underConstructionUntil)));
                     }
                 }
                 else {
-                    addInfoBox('Bitte überprüfe Deinen Kontostand. Diese Bauarbeiten scheinen zu teuer zu sein.');
+                    addInfoBox(_('Bitte überprüfe Deinen Kontostand. Diese Bauarbeiten scheinen zu teuer zu sein.'));
                 }
             }
             else {
@@ -74,7 +74,7 @@ if (isset($_POST['plaetze']) && isset($_POST['art']) && $cookie_id != DEMO_USER_
             }
 		}
         else {
-            addInfoBox('Bitte gib an, wie viele Plätze Du umbauen möchtest.');
+            addInfoBox(_('Bitte gib an, wie viele Plätze Du umbauen möchtest.'));
         }
 	}
 	elseif ($_POST['art'] == 'verkleinert') {
@@ -91,24 +91,24 @@ if (isset($_POST['plaetze']) && isset($_POST['art']) && $cookie_id != DEMO_USER_
                         $sql4 = mysql_query($sql3);
                         $buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Bauarbeiten', -".$preis.", '".time()."')";
                         $buch2 = mysql_query($buch1);
-                        $formulierung = 'Du hast Dein Stadion um '.$plaetze_neu.' Plätze verkleinert.';
+                        $formulierung = __('Du hast Dein Stadion um %d Plätze verkleinert.', $plaetze_neu);
                         $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Stadion', '".time()."')";
                         $sql8 = mysql_query($sql7);
                     }
                     else {
-                        addInfoBox('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis '.date('d.m.Y H:i', $underConstructionUntil).' warten.');
+                        addInfoBox(__('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis %s warten.', date('d.m.Y H:i', $underConstructionUntil)));
                     }
                 }
                 else {
-                    addInfoBox('Bitte überprüfe Deinen Kontostand. Diese Bauarbeiten scheinen zu teuer zu sein.');
+                    addInfoBox(_('Bitte überprüfe Deinen Kontostand. Diese Bauarbeiten scheinen zu teuer zu sein.'));
                 }
             }
             else {
-                addInfoBox('Dein Stadion kann nicht ohne Sitzplätze gebaut werden.');
+                addInfoBox(_('Dein Stadion kann nicht ohne Sitzplätze gebaut werden.'));
             }
 		}
         else {
-            addInfoBox('Bitte gib an, wie viele Plätze Du umbauen möchtest.');
+            addInfoBox(_('Bitte gib an, wie viele Plätze Du umbauen möchtest.'));
         }
 	}
 }
@@ -116,7 +116,7 @@ if (isset($_POST['preis']) && $cookie_id != DEMO_USER_ID) {
 	if (intval($_POST['preis']) > 19 && intval($_POST['preis']) < 71) {
         $sql1 = "UPDATE ".$prefix."stadien SET preis = ".intval($_POST['preis'])." WHERE team = '".$cookie_team."'";
         $sql2 = mysql_query($sql1);
-            $formulierung = 'Du hast die Ticketpreise für Dein Stadion auf '.intval($_POST['preis']).' € gesetzt.';
+            $formulierung = _('Du hast die Ticketpreise für Dein Stadion auf %d € gesetzt.', intval($_POST['preis']));
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Stadion', '".time()."')";
             $sql8 = mysql_query($sql7);
 			setTaskDone('ticket_prices');
@@ -147,7 +147,7 @@ if (isset($_POST['umfeld_bearbeiten']) && $cookie_id != DEMO_USER_ID) {
         $sql2 = mysql_query($sql1);
     }
     else {
-        addInfoBox('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis '.date('d.m.Y H:i', $underConstructionUntil).' warten.');
+        addInfoBox(__('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis %s warten.', date('d.m.Y H:i', $underConstructionUntil));
     }
 }
 if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != DEMO_USER_ID) {
@@ -157,7 +157,7 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 		$stadt = mysql_real_escape_string(trim(strip_tags($_POST['stadt'])));
 		if ((in_array($kuerzel1, $stadiumAffixes) OR in_array($kuerzel2, $stadiumAffixes)) && in_array($stadt, $teamNameParts)) {
 			if ($kuerzel1 != '' && $kuerzel2 != '') {
-				addInfoBox('Du darfst nur <i>einen</i> Zusatz für den Namen wählen. Bitte entscheide Dich für einen und versuche es noch einmal.');
+				addInfoBox(_('Du darfst nur <i>einen</i> Zusatz für den Namen wählen. Bitte entscheide Dich für einen und versuche es noch einmal.'));
 			}
 			else {
 				if ($kuerzel2 == '') {
@@ -169,19 +169,19 @@ if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stad
 				$sql1 = "UPDATE ".$prefix."stadien SET name = '".$neuerName."', namePrefix = '".$kuerzel1."', namePostfix = '".$kuerzel2."' WHERE team = '".$cookie_team."'";
 				$sql2 = mysql_query($sql1);
 				if ($sql2 == FALSE) {
-					addInfoBox('Es ist ein Fehler aufgetreten.');
+					addInfoBox(_('Es ist ein Fehler aufgetreten.'));
 				}
 				else {
-					addInfoBox('Dein Stadion heißt jetzt: '.$neuerName);
+					addInfoBox(__('Dein Stadion heißt jetzt: %s', $neuerName));
 				}
 			}
 		}
 		else {
-			addInfoBox('Du musst <i>einen</i> Zusatz wählen. Bitte versuche es noch einmal.');
+			addInfoBox(_('Du musst <i>einen</i> Zusatz wählen. Bitte versuche es noch einmal.'));
 		}
 	}
 	else {
-		addInfoBox('Du kannst den Namen Deines Stadions nur außerhalb der Spielzeiten ändern. Zurzeit laufen '.$live_scoring_spieltyp_laeuft.'spiele.');
+		addInfoBox(__('Du kannst den Namen Deines Stadions nur außerhalb der Spielzeiten ändern. Zurzeit laufen %s spiele.', $live_scoring_spieltyp_laeuft));
 	}
 }
 ?>
@@ -207,20 +207,20 @@ echo '<img src="'.$selectedStadionPhoto[1].'" alt="Dein Stadion" title="Dein Sta
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Bereich</th>
-<th scope="col">Wert</th>
+<th scope="col"><?php echo _('Bereich'); ?></th>
+<th scope="col"><?php echo _('Wert'); ?></th>
 </tr>
 </thead>
 <tbody>
-<tr><td>Kapazität</td><td><?php echo number_format($sql3['plaetze'], 0, ',', '.'); ?> Plätze</td></tr>
-<tr class="odd"><td>Preis/Platz</td><td><?php echo $sql3['preis']; ?> €</td></tr>
-<tr><td colspan="2">Einnahmen bei voller Auslastung: <?php echo number_format($sql3['plaetze']*$sql3['preis'], 0, ',', '.'); ?> €</td></tr>
-<tr class="odd"><td colspan="2">Instandhaltungskosten: <?php echo number_format(1550000+$sql3['plaetze']*250, 0, ',', '.'); ?> € / Saison</td></tr>
-<tr class="odd"><td colspan="2">Gelände-Kosten: <?php echo number_format($gelaende_kosten, 0, ',', '.'); ?> € / Saison</td></tr>
-<tr><td colspan="2">Zuschauer beim letzten Spiel: <?php echo number_format($sql6, 0, ',', '.'); ?></td></tr>
+<tr><td><?php echo _('Kapazität').'</td><td>'.number_format($sql3['plaetze'], 0, ',', '.').' '._('Plätze'); ?></td></tr>
+<tr class="odd"><td><?php echo _('Preis/Platz').'</td><td>'.$sql3['preis'].' €' ?></td></tr>
+<tr><td colspan="2"><?php echo _('Einnahmen bei voller Auslastung:').' '.echo number_format($sql3['plaetze']*$sql3['preis'], 0, ',', '.'); ?> €</td></tr>
+<tr class="odd"><td colspan="2"><?php echo _('Instandhaltungskosten:').' '.number_format(1550000+$sql3['plaetze']*250, 0, ',', '.').' € / '._('Saison'); ?></td></tr>
+<tr class="odd"><td colspan="2"><?php echo _('Gelände-Kosten:').' '.number_format($gelaende_kosten, 0, ',', '.').' € / '._('Saison'); ?></td></tr>
+<tr><td colspan="2"><?php echo _('Zuschauer beim letzten Spiel:').' '.number_format($sql6, 0, ',', '.'); ?></td></tr>
 </tbody>
 </table>
-<h1>Namen ändern</h1>
+<h1><?php echo _('Namen ändern'); ?></h1>
 <form action="/ver_stadion.php" method="post" accept-charset="utf-8">
 <p><select name="kuerzel1" size="1" style="width:100px"><option value="">&nbsp;-&nbsp;</option>
 <?php
@@ -241,7 +241,7 @@ foreach ($stadiumAffixes as $stadiumAffix) {
 }
 ?>
 </select></p>
-<p><input type="submit" value="Namen ändern"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><input type="submit" value="<?php echo _('Namen ändern'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
 <h1>Preis ändern</h1>
 <form action="/ver_stadion.php" method="post" accept-charset="utf-8">
@@ -253,11 +253,11 @@ foreach ($stadiumAffixes as $stadiumAffix) {
 		echo '>'.$i.' €</option>';
 	}
 	?>
-</select> <input type="submit" value="Ändern" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+</select> <input type="submit" value="<?php echo _('Ändern'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
-<h1>Umbau</h1>
+<h1><?php echo _('Umbau'); ?></h1>
 <form action="/ver_stadion.php" method="post" accept-charset="utf-8">
-<p>Das Stadion soll um&nbsp;
+<p><?php echo _('Das Stadion soll um'); ?>&nbsp;
 	<select name="plaetze" size="1" style="width:100px">
 		<?php
 		$nochBis100Tausend = intval(100000-$sql3['plaetze']);
@@ -271,20 +271,20 @@ foreach ($stadiumAffixes as $stadiumAffix) {
 		}
 		?>
 	</select>
-&nbsp;Plätze <select name="art" size="1" style="width:140px"><option>erweitert</option><option>verkleinert</option></select> werden.</p>
-<p><input type="submit" value="Bauen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+&nbsp;<?php echo _('Plätze').' <select name="art" size="1" style="width:140px"><option>'._('erweitert').'</option><option>'._('verkleinert').'</option></select> '._('werden'); ?>.</p>
+<p><input type="submit" value="<?php echo _('Bauen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <p>
-    <strong>Kosten für Erweiterung:</strong> 11.880.000 € + 1.200 €/Platz<br />
-    <strong>Kosten für Verkleinerung:</strong> 3.880.000 € + 200 €/Platz<br />
-    <strong>Instandhaltungskosten:</strong> 1.550.000 € + 250 €/Platz<br />
-    <strong>Bauzeit für Erweiterung:</strong> bis <?php echo date('d.m.Y H:i', time()+CONSTRUCTION_TIME_EXTEND); ?><br />
-    <strong>Bauzeit für Verkleinerung:</strong> bis <?php echo date('d.m.Y H:i', time()+CONSTRUCTION_TIME_SHRINK); ?><br />
-    <strong>Maximale Kapazität:</strong> 100.000 Plätze
+    <strong><?php echo _('Kosten für Erweiterung:'); ?></strong> 11.880.000 € + 1.200 €/Platz<br />
+    <strong><?php echo _('Kosten für Verkleinerung:'); ?></strong> 3.880.000 € + 200 €/Platz<br />
+    <strong><?php echo _('Instandhaltungskosten:'); ?></strong> 1.550.000 € + 250 €/Platz<br />
+    <strong><?php echo _('Bauzeit für Erweiterung:').'</strong> '._('bis').' '.date('d.m.Y H:i', time()+CONSTRUCTION_TIME_EXTEND); ?><br />
+    <strong><?php echo _('Bauzeit für Verkleinerung:').'</strong> '._('bis').' '.date('d.m.Y H:i', time()+CONSTRUCTION_TIME_SHRINK); ?><br />
+    <strong><?php echo _('Maximale Kapazität:').'</strong> 100.000 '._('Plätze'); ?>
 </p>
-<p><strong>Wichtig:</strong> Der Stadion-Umbau kann nicht stattfinden, wenn dadurch Schulden entstehen würden.</p>
-<p><strong>Information:</strong> Sowohl eine Erweiterung als auch eine Verkleinerung kostet viel Geld. Bei einer Erweiterung steigen die möglichen Einnahmen durch den Kartenverkauf, dagegen steigen jedoch auch die Kosten für die Instandhaltung. Durch eine Verkleinerung kann man die Instandhaltungskosten senken, wodurch aber auch nur noch geringere Einnahmen durch den Kartenverkauf möglich sind.</p>
-<h1>Gelände</h1>
+<p><strong><?php echo _('Wichtig:').'</strong> '._('Der Stadion-Umbau kann nicht stattfinden, wenn dadurch Schulden entstehen würden.'); ?></p>
+<p><strong><?php echo _('Information:').'</strong> '._('Sowohl eine Erweiterung als auch eine Verkleinerung kostet viel Geld. Bei einer Erweiterung steigen die möglichen Einnahmen durch den Kartenverkauf, dagegen steigen jedoch auch die Kosten für die Instandhaltung. Durch eine Verkleinerung kann man die Instandhaltungskosten senken, wodurch aber auch nur noch geringere Einnahmen durch den Kartenverkauf möglich sind.'); ?></p>
+<h1><?php echo _('Gelände'); ?></h1>
 <form action="/ver_stadion.php" method="post" accept-charset="utf-8">
 <p>
 <?php
@@ -298,19 +298,19 @@ foreach (StadiumBuildings::getList() as $tm) {
 }
 ?>
 </p>
-<p><input type="hidden" name="umfeld_bearbeiten" value="1" /><input type="submit" value="Ändern" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+<p><input type="hidden" name="umfeld_bearbeiten" value="1" /><input type="submit" value="<?php echo _('Ändern'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
-<p><strong>Bauzeit für Umbau:</strong> bis <?php echo date('d.m.Y H:i', time()+CONSTRUCTION_TIME_BUILDINGS); ?></p>
-<p><strong>Information:</strong> Je mehr Service und Unterhaltung Du auf dem Gelände rund ums Stadion anbietest, desto höher werden die Betriebs- und Instandhaltungskosten. Die Fans werden aber lieber ins Stadion gehen und der Kartenverkauf wird besser laufen.</p>
+<p><strong><?php echo _('Bauzeit für Umbau:').'</strong> '._('bis').' '.date('d.m.Y H:i', time()+CONSTRUCTION_TIME_BUILDINGS); ?></p>
+<p><strong><?php echo _('Information:').'</strong> '._('Je mehr Service und Unterhaltung Du auf dem Gelände rund ums Stadion anbietest, desto höher werden die Betriebs- und Instandhaltungskosten. Die Fans werden aber lieber ins Stadion gehen und der Kartenverkauf wird besser laufen.'); ?></p>
 <?php
 if (isset($selectedStadionPhoto)) {
 	if (isset($selectedStadionPhoto[2])) {
-		echo '<p style="font-size:80%; color:#999;">Foto des Stadions: '.$selectedStadionPhoto[2].'</p>';
+		echo '<p style="font-size:80%; color:#999;">'.__('Foto des Stadions: %s', $selectedStadionPhoto[2]).'</p>';
 	}
 }
 ?>
 <?php } else { ?>
-<h1>Stadion</h1>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<h1><?php echo _('Stadion'); ?></h1>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

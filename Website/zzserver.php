@@ -12,6 +12,7 @@ mysql_select_db(CONFIG_DATABASE_NAME) or die ('Datenbank existiert nicht!');
 error_reporting(E_ALL);
 ini_set('display_errors', 'stdout');
 function reportError($text, $statement = '') {
+    global $prefix;
 	$err1 = "INSERT INTO ".$prefix."php_fehler (datei, zeile, beschreibung, zeit) VALUES ('".$_SERVER['REQUEST_URI']."_".mt_rand(0, 1000000)."', '0', '".mysql_real_escape_string(trim($text).'/'.$statement)."', ".time().")";
 	mysql_query($err1);
 	return FALSE;

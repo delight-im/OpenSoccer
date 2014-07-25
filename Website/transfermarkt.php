@@ -1,7 +1,7 @@
 <?php include 'zz1.php'; ?>
-<title>Transfermarkt | Kaufen | Ballmanager.de</title>
+<title><?php echo _('Transfermarkt | Kaufen'); ?> | Ballmanager.de</title>
 <?php include 'zz2.php'; ?>
-<h1>Markt durchsuchen</h1>
+<h1><?php echo _('Markt durchsuchen'); ?></h1>
 <?php
 define('MIN_GEBOT', 0); // in 10 Mio
 define('MAX_GEBOT', 40); // in 10 Mio
@@ -54,7 +54,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	for ($i = 17; $i <= 35; $i++) {
 		echo '<option value="'.$i.'"';
 		if ($i == $value_for_wiealt_end) { echo ' selected="selected"'; }
-		echo '>bis '.$i.' Jahre</option>';
+		echo '>'.__('bis %d Jahre', $i).'</option>';
 	}
 	?>
 </select></p>
@@ -62,19 +62,19 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	<?php
 	echo '<option value="all"';
 	if ($value_for_position == 'all') { echo ' selected="selected"'; }
-	echo '>Jede Position</option>';
+	echo '>'._('Jede Position').'</option>';
 	echo '<option value="T"';
 	if ($value_for_position == 'T') { echo ' selected="selected"'; }
-	echo '>Torwart</option>';
+	echo '>'._('Torwart').'</option>';
 	echo '<option value="A"';
 	if ($value_for_position == 'A') { echo ' selected="selected"'; }
-	echo '>Abwehr</option>';
+	echo '>'._('Abwehr').'</option>';
 	echo '<option value="M"';
 	if ($value_for_position == 'M') { echo ' selected="selected"'; }
-	echo '>Mittelfeld</option>';
+	echo '>'._('Mittelfeld').'</option>';
 	echo '<option value="S"';
 	if ($value_for_position == 'S') { echo ' selected="selected"'; }
-	echo '>Sturm</option>';
+	echo '>'._('Sturm').'</option>';
 	?>
 </select></p>
 <p><select name="staerke_start" size="1" style="width:75px">
@@ -82,7 +82,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	for ($i = 0; $i <= 9; $i++) {
 		echo '<option value="'.$i.'"';
 		if ($i == $value_for_staerke_start) { echo ' selected="selected"'; }
-		echo '>von '.$i.',0</option>';
+		echo '>'.__('von %d,0', $i).'</option>';
 	}
 	?>
 </select> 
@@ -91,7 +91,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	for ($i = 0; $i <= 9; $i++) {
 		echo '<option value="'.$i.'"';
 		if ($i == $value_for_staerke_end) { echo ' selected="selected"'; }
-		echo '>bis '.$i.',9 Stärke</option>';
+		echo '>'.__('bis %d,9 Stärke', $i).'</option>';
 	}
 	?>
 </select></p>
@@ -100,7 +100,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	for ($i = 0; $i <= MAX_GEBOT; $i++) {
 		echo '<option value="'.$i.'"';
 		if ($i == $value_for_maxGebot_start) { echo ' selected="selected"'; }
-		echo '>von '.intval($i*10).'</option>';
+		echo '>'.__('von %d', intval($i*10)).'</option>';
 	}
 	?>
 </select> 
@@ -113,9 +113,9 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	}
 	?>
 </select></p>
-<p><input type="submit" value="Suchen" /></p>
+<p><input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
-<h1>Transfermarkt | Kaufen</h1>
+<h1><?php echo _('Transfermarkt | Kaufen'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 // SPIELER MIT FALSCHEM BESITZER RUNTER ANFANG
@@ -160,10 +160,10 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
             $buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$sql3['besitzer']."', 'Ablöse', ".$sql3['betrag_highest'].", ".time().")";
             $buch2 = mysql_query($buch1);
             $getmanager4 = $getmanager3['vorname'].' '.$getmanager3['nachname'];
-            $formulierung = 'Du hast den Spieler <a href="/spieler.php?id='.$sql3['spieler'].'">'.$getmanager4.'</a> für '.number_format($sql3['betrag_highest'], 0, ',', '.').' € gekauft.';
+            $formulierung = __('Du hast den Spieler %1$s fur %2$s € gekauft.', '<a href="/spieler.php?id='.$sql3['spieler'].'">'.$getmanager4.'</a>', number_format($sql3['betrag_highest'], 0, ',', '.'));
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$sql3['bieter_highest']."', '".$formulierung."', 'Transfers', ".time().")";
             $sql8 = mysql_query($sql7);
-            $formulierung = 'Du hast den Spieler <a href="/spieler.php?id='.$sql3['spieler'].'">'.$getmanager4.'</a> für '.number_format($sql3['betrag_highest'], 0, ',', '.').' € verkauft.';
+            $formulierung = __('Du hast den Spieler "1$s fur %2$s € verkauft.', '<a href="/spieler.php?id='.$sql3['spieler'].'">'.$getmanager4.'</a>', number_format($sql3['betrag_highest'], 0, ',', '.'));
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$sql3['besitzer']."', '".$formulierung."', 'Transfers', ".time().")";
             $sql8 = mysql_query($sql7);
             // SPIELER VON BEOBACHTUNGSLISTE RUNTERNEHMEN BEIM GEWINNER ANFANG
@@ -189,7 +189,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 <p>
 <table>
-<thead><tr class="odd"><th scope="col">MT</th><th scope="col">Spieler</th><th scope="col">AL</th><th scope="col">ST</th><th scope="col">Gebot</th><th scope="col">Noch</th></tr></thead>
+<thead><tr class="odd"><th scope="col"><?php echo _('MT').'</th><th scope="col">'._('Spieler').'</th><th scope="col">'._('AL').'</th><th scope="col">'._('ST').'</th><th scope="col">'._('Gebot').'</th><th scope="col">'._('Noch'); ?></th></tr></thead>
 <tbody>
 <?php
 $sql1 = "SELECT a.spieler, a.gebote, a.betrag_highest, a.ende, a.besitzer, b.vorname, b.nachname, b.position, b.staerke, b.talent, b.wiealt FROM ".$prefix."transfermarkt AS a";
@@ -197,7 +197,7 @@ $sql1 .= " JOIN ".$prefix."spieler AS b ON a.spieler = b.ids WHERE a.ende > ".ge
 $sql2 = mysql_query($sql1); // Zeitlimit + 20 Sekunden zur Sicherheit
 $blaetter3 = anzahl_datensaetze_gesamt($sql1);
 if (mysql_num_rows($sql2) == 0) {
-	echo '<tr><td colspan="5">Zurzeit keine Auktionen!</td></tr>';
+	echo '<tr><td colspan="5">'._('Zurzeit keine Auktionen!').'</td></tr>';
 }
 else {
     while ($sql3 = mysql_fetch_assoc($sql2)) {
@@ -224,15 +224,15 @@ else {
 </tbody>
 </table>
 </p>
-<p><strong>Hinweis:</strong> <!-- Der Besitzer eines Spielers kann die Auktion bis 30 Minuten vor Ende noch abbrechen. -->Vor dem Höchstgebot steht in eckigen Klammern die Anzahl der abgegebenen Gebote.</p>
-<p><strong>Überschriften:</strong> MT: Mannschaftsteil, AL: Alter, ST: Stärke</p>
-<p><strong>Mannschaftsteile:</strong> T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm</p>
+<p><strong><?php echo _('Hinweis:').'</strong> <!-- Der Besitzer eines Spielers kann die Auktion bis 30 Minuten vor Ende noch abbrechen. -->'._('Vor dem Höchstgebot steht in eckigen Klammern die Anzahl der abgegebenen Gebote.'); ?></p>
+<p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, AL: Alter, ST: Stärke'); ?></p>
+<p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
 <?php
 echo '<div class="pagebar">';
 $wieviel_seiten = $blaetter3/$eintraege_pro_seite; // ERMITTELN DER SEITENANZAHL FÜR DAS INHALTSVERZEICHNIS
 $vorherige = $seite-1;
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite=1">Erste</a> '; } else { echo '<span class="this-page">Erste</span>'; }
-if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$vorherige.'">Vorherige</a> '; } else { echo '<span class="this-page">Vorherige</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite=1">'._('Erste').'</a> '; } else { echo '<span class="this-page">'._('Erste').'</span>'; }
+if ($seite > 1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$vorherige.'">'._('Vorherige').'</a> '; } else { echo '<span class="this-page">'._('Vorherige').'</span> '; }
 $naechste = $seite+1;
 $vor4 = $seite-4; if ($vor4 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$vor4.'">'.$vor4.'</a> '; }
 $vor3 = $seite-3; if ($vor3 > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$vor3.'">'.$vor3.'</a> '; }
@@ -243,11 +243,11 @@ $nach1 = $seite+1; if ($nach1 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['
 $nach2 = $seite+2; if ($nach2 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$nach2.'">'.$nach2.'</a> '; }
 $nach3 = $seite+3; if ($nach3 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$nach3.'">'.$nach3.'</a> '; }
 $nach4 = $seite+4; if ($nach4 < $wieviel_seiten+1) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$nach4.'">'.$nach4.'</a> '; }
-if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$naechste.'">Nächste</a> '; } else { echo '<span class="this-page">Nächste</span> '; }
-if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.ceil($wieviel_seiten).'">Letzte</a>'; } else { echo '<span clss="this-page">Letzte</span>'; }
+if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.$naechste.'">'._('Nächste').'</a> '; } else { echo '<span class="this-page">'._('Nächste').'</span> '; }
+if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

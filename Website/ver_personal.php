@@ -30,7 +30,7 @@ $getkonto4 = $getkonto3['konto']-einsatz_in_auktionen($cookie_team);
 if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
 	$heute_string = date('Y-m-d', time());
 	$temp = intval($_POST['fitness_regeneration']);
-	if ($temp >= 1 && $temp <= 3) {
+	if ($temp == 1 || $temp == 2 || $temp == 3) {
 		if ($getkonto4 > 0) {
 			$ch1 = "SELECT letzte_regeneration FROM ".$prefix."teams WHERE ids = '".$cookie_team."'";
 			$ch2 = mysql_query($ch1);
@@ -52,7 +52,7 @@ if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
 					$buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Regenerations-Camp', -".$preis.", ".time().")";
 					$buch2 = mysql_query($buch1);
 					// PROTOKOLL ANFANG
-					$formulierung = __('Dein Fitness-Trainer hat ein Regenerations-Camp (%1$d%%) fur %2$s Spieler gebucht.', $temp, $upd2a);
+					$formulierung = __('Dein Fitness-Trainer hat ein Regenerations-Camp (%1$d%%) fur %2$d Spieler gebucht.', $temp, $upd2a);
 					$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
 					$sql8 = mysql_query($sql7);
 					// PROTOKOLL ENDE
@@ -72,7 +72,7 @@ if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
 if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
 	$heute_string = date('Y-m-d', time());
 	$temp = intval($_POST['physio_behandlung']);
-	if ($temp == 1 OR $temp == 2) {
+	if ($temp == 1 || $temp == 2) {
 		if ($getkonto4 > 0) {
 			$ch1 = "SELECT letzte_physio FROM ".$prefix."teams WHERE ids = '".$cookie_team."'";
 			$ch2 = mysql_query($ch1);
@@ -80,11 +80,9 @@ if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
 			if ($ch3['letzte_physio'] != $heute_string) {
 				if ($temp == 1) {
 					$preis = $supplyDemandPrices['Physiotherapeut'];
-					$tag_singular_plural = 'Tag';
 				}
 				else {
 					$preis = $supplyDemandPrices['Physiotherapeut']*2.15;
-					$tag_singular_plural = 'Tage';
 				}
 				$upd1 = "UPDATE ".$prefix."spieler SET verletzung = verletzung-".$temp." WHERE team = '".$cookie_team."'";
 				$upd2 = mysql_query($upd1);
@@ -95,7 +93,7 @@ if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
 				$buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Physiotherapeut', -".$preis.", ".time().")";
 				$buch2 = mysql_query($buch1);
 				// PROTOKOLL ANFANG
-				$formulierung = __('Dein Physiotherapeut hat Deine verletzten Spieler behandelt und die Ausfallzeit um %1$d %2$s reduziert.', $temp, $tag_singular_plural);
+				$formulierung = __('Dein Physiotherapeut hat Deine verletzten Spieler behandelt und die Ausfallzeit um %d Tage reduziert.', $temp);
 				$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
 				$sql8 = mysql_query($sql7);
 				// PROTOKOLL ENDE
@@ -114,7 +112,7 @@ if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
 if (isset($_POST['psychologe_behandlung']) && $cookie_id != DEMO_USER_ID) {
 	$heute_string = date('Y-m-d', time());
 	$temp = intval($_POST['psychologe_behandlung']);
-	if ($temp == 2 OR $temp == 5) {
+	if ($temp == 2 || $temp == 5) {
 		if ($getkonto4 > 0) {
 			$ch1 = "SELECT letzte_psychologe FROM ".$prefix."teams WHERE ids = '".$cookie_team."'";
 			$ch2 = mysql_query($ch1);
@@ -122,11 +120,9 @@ if (isset($_POST['psychologe_behandlung']) && $cookie_id != DEMO_USER_ID) {
 			if ($ch3['letzte_psychologe'] != $heute_string) {
 				if ($temp == 2) {
 					$preis = $supplyDemandPrices['Psychologe']*2.15;
-					$tag_singular_plural = 'Punkte';
 				}
 				else {
 					$preis = $supplyDemandPrices['Psychologe']*5.575;
-					$tag_singular_plural = 'Punkte';
 				}
 				$upd1 = "UPDATE ".$prefix."spieler SET moral = moral+".$temp." WHERE team = '".$cookie_team."'";
 				$upd2 = mysql_query($upd1);
@@ -137,7 +133,7 @@ if (isset($_POST['psychologe_behandlung']) && $cookie_id != DEMO_USER_ID) {
 				$buch1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Psychologe', -".$preis.", ".time().")";
 				$buch2 = mysql_query($buch1);
 				// PROTOKOLL ANFANG
-				$formulierung = __('Dein Psychologe hat Deine unmotivierten Spieler betreut und ihre Moral um %1$d %2$s erhöht.', $temp ,$tag_singular_plural);
+				$formulierung = __('Dein Psychologe hat Deine unmotivierten Spieler betreut und ihre Moral um %d Punkte erhöht.', $temp);
 				$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
 				$sql8 = mysql_query($sql7);
 				// PROTOKOLL ENDE
@@ -178,7 +174,7 @@ if (isset($_POST['jugendtrainer']) && $cookie_id != DEMO_USER_ID) {
             $ch1 = "SELECT zeit FROM ".$prefix."personal_changes WHERE team = '".$cookie_team."' AND personal = 'Jugendtrainer'";
             $ch2 = mysql_query($ch1);
             $ch3 = mysql_fetch_assoc($ch2);
-        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum %s Uhr warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
+        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis %s warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
         }
 	}
 }
@@ -198,7 +194,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 </p>
 </form>
 </div>
-<div style="float:left; width:220px;"><img src="/images/personal_youth.jpg" alt="Jugendtrainer" width="220" style="width:220; height:150; border:0;" /></div>
+<div style="float:left; width:220px;"><img src="/images/personal_youth.jpg" alt="Jugendtrainer" width="220" style="width:220px; height:150px; border:0;" /></div>
 <div style="clear:both;"></div>
 <h1><?php echo _('Fanbetreuer'); ?></h1>
 <p><?php echo _('Je höher die Stufe für die Kompetenz des Fanbetreuers ist, desto wohler fühlen sich die Fans Deines Vereins. Sie werden lieber ins Stadion gehen und Du wirst mehr Karten verkaufen.'); ?><br />
@@ -222,7 +218,7 @@ if (isset($_POST['fanbetreuer']) && $cookie_id != DEMO_USER_ID) {
             $ch1 = "SELECT zeit FROM ".$prefix."personal_changes WHERE team = '".$cookie_team."' AND personal = 'Fanbetreuer'";
             $ch2 = mysql_query($ch1);
             $ch3 = mysql_fetch_assoc($ch2);
-        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum %s Uhr warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
+        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis %s warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
         }
 	}
 }
@@ -266,7 +262,7 @@ if (isset($_POST['scout']) && $cookie_id != DEMO_USER_ID) {
             $ch1 = "SELECT zeit FROM ".$prefix."personal_changes WHERE team = '".$cookie_team."' AND personal = 'Scout'";
             $ch2 = mysql_query($ch1);
             $ch3 = mysql_fetch_assoc($ch2);
-        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis zum %s Uhr warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
+        	addInfoBox(__('Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch bis %s warten.', date('d.m.Y H:i', getTimestamp('+22 days', $ch3['zeit']))));
         }
 	}
 }
@@ -288,25 +284,24 @@ $sql3 = mysql_fetch_assoc($sql2);
 </p>
 </form>
 </div>
-<div style="float:left; width:220px;"><img src="/images/personal_scout.jpg" alt="Scout" width="220" style="width:220; height:150; border:0;" /></div>
+<div style="float:left; width:220px;"><img src="/images/personal_scout.jpg" alt="Scout" width="220" style="width:220px; height:150px; border:0;" /></div>
 <div style="clear:both;"></div>
 <h1><?php echo _('Fitness-Trainer').' <span style="color:red">['._('Angebot und Nachfrage'); ?>]</span></h1>
-<p><?php echo _('Dein Fitness-Trainer bietet Dir an, ein Regenerations-Camp zu buchen. Dies ist ein Mal pro Tag möglich und bringt allen Spielern'); ?>
-<?php echo _('Deines Kaders einmalig 1, 2 oder 3 Prozentpunkte Frische zusätzlich.'); ?></p>
+<p><?php echo _('Dein Fitness-Trainer bietet Dir an, ein Regenerations-Camp zu buchen. Dies ist ein Mal pro Tag möglich und bringt allen Spielern Deines Kaders einmalig 1, 2 oder 3 Prozentpunkte Frische zusätzlich.'); ?></p>
 <div style="float:left; width:280px;">
 <p><strong><?php echo _('Wichtig:').'</strong> '._('Dieses Angebot ist nur für finanzstarke Vereine empfehlenswert, die ihrem Team einen kleinen Vorteil verschaffen wollen. Es ist aber auch sehr gut möglich, ohne dieses Angebot sportlichen Erfolg zu haben.'); ?></p>
 <?php if ($getkonto4 > 0) { ?>
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="fitness_regeneration" value="1" checked="checked" /> <?php echo _('+1 %-Punkte Frische'); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer'], 0, ',', '.'); ?> €)<br />
-<input type="radio" name="fitness_regeneration" value="2" /> <?php echo _('+2 %-Punkte Frische'); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer']*2.15, 0, ',', '.'); ?> €)<br />
-<input type="radio" name="fitness_regeneration" value="3" /> <?php echo _('+3 %-Punkte Frische'); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer']*3.3, 0, ',', '.'); ?> €)<br />
-<input type="submit" value="Buchen" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" />
+<input type="radio" name="fitness_regeneration" value="1" checked="checked" /> <?php echo __('%d%% mehr Frische', 1); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer'], 0, ',', '.'); ?> €)<br />
+<input type="radio" name="fitness_regeneration" value="2" /> <?php echo __('%d%% mehr Frische', 2); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer']*2.15, 0, ',', '.'); ?> €)<br />
+<input type="radio" name="fitness_regeneration" value="3" /> <?php echo __('%d%% mehr Frische', 3); ?> (<?php echo number_format($supplyDemandPrices['Fitness-Trainer']*3.3, 0, ',', '.'); ?> €)<br />
+<input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" />
 </p>
 </form>
 <?php } ?>
 </div>
-<div style="float:left; width:220px;"><img src="/images/personal_fitness.jpg" alt="Fitness-Trainer" width="220" style="width:220; height:150; border:0;" /></div>
+<div style="float:left; width:220px;"><img src="/images/personal_fitness.jpg" alt="Fitness-Trainer" width="220" style="width:220px; height:150px; border:0;" /></div>
 <div style="clear:both;"></div>
 <h1><?php echo _('Physiotherapeut').' <span style="color:red">['._('Angebot und Nachfrage'); ?>]</span></h1>
 <p><?php echo _('Dein Physiotherapeut bietet Dir an, die Behandlung Deiner verletzten Spieler zu übernehmen. Er verspricht dabei, die Verletzungszeit zu verkürzen.'); ?></p>
@@ -314,8 +309,8 @@ $sql3 = mysql_fetch_assoc($sql2);
 <?php if ($getkonto4 > 0) { ?>
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="physio_behandlung" value="1" checked="checked" /> <?php echo _('1 Tag kürzere Verletzungen'); ?> (<?php echo number_format($supplyDemandPrices['Physiotherapeut'], 0, ',', '.'); ?> €)<br />
-<input type="radio" name="physio_behandlung" value="2" /> <?php echo _('2 Tage kürzere Verletzungen'); ?> (<?php echo number_format($supplyDemandPrices['Physiotherapeut']*2.15, 0, ',', '.'); ?> €)<br />
+<input type="radio" name="physio_behandlung" value="1" checked="checked" /> <?php echo __('%d Tage kürzere Verletzungen', 1); ?> (<?php echo number_format($supplyDemandPrices['Physiotherapeut'], 0, ',', '.'); ?> €)<br />
+<input type="radio" name="physio_behandlung" value="2" /> <?php echo __('%d Tage kürzere Verletzungen', 2); ?> (<?php echo number_format($supplyDemandPrices['Physiotherapeut']*2.15, 0, ',', '.'); ?> €)<br />
 <input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
 </p>
 </form>
@@ -326,8 +321,8 @@ $sql3 = mysql_fetch_assoc($sql2);
 <?php if ($getkonto4 > 0) { ?>
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="psychologe_behandlung" value="2" checked="checked" /> <?php echo _('2 Punkte mehr Moral'); ?> (<?php echo number_format($supplyDemandPrices['Psychologe']*2.15, 0, ',', '.'); ?> €)<br />
-<input type="radio" name="psychologe_behandlung" value="5" /> <?php echo _('5 Punkte mehr Moral'); ?> (<?php echo number_format($supplyDemandPrices['Psychologe']*5.575, 0, ',', '.'); ?> €)<br />
+<input type="radio" name="psychologe_behandlung" value="2" checked="checked" /> <?php echo __('%d Punkte mehr Moral', 2); ?> (<?php echo number_format($supplyDemandPrices['Psychologe']*2.15, 0, ',', '.'); ?> €)<br />
+<input type="radio" name="psychologe_behandlung" value="5" /> <?php echo __('%d Punkte mehr Moral', 5); ?> (<?php echo number_format($supplyDemandPrices['Psychologe']*5.575, 0, ',', '.'); ?> €)<br />
 <input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
 </p>
 </form>

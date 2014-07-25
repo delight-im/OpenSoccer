@@ -9,6 +9,10 @@ define('CONFIG_DATABASE_NAME', 'ballmanager');
 // the installation date (UTC) of this game instance in YYYY-MM-DD format (ISO 8601)
 define('CONFIG_INSTALL_DATE', '2008-09-25');
 
+// sitename and website URL
+define('CONFIG_SITE_NAME', 'Ballmanager');
+define('CONFIG_SITE_DOMAIN', 'www.ballmanager.de');
+
 define('CONFIG_EMAIL_PHP_MAILER', false); // whether to use PHPMailer (with SMTP) instead of the mail() function
 define('CONFIG_EMAIL_HOST', ''); // SMTP server address
 define('CONFIG_EMAIL_PORT', ''); // SMTP server port

@@ -4,6 +4,8 @@
 header('Content-Type: text/html; charset=utf-8');
 // prevent clickjacking
 header('X-Frame-Options: sameorigin');
+// prevent content sniffing (MIME sniffing)
+header('X-Content-Type-Options: nosniff');
 // remove unnecessary HTTP headers
 header_remove('X-Powered-By');
 

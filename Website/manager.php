@@ -33,7 +33,7 @@ $liga1 = "SELECT name FROM ".$prefix."ligen WHERE ids = '".$sql3['liga']."'";
 $liga2 = mysql_query($liga1);
 if (mysql_num_rows($liga2) == 0) {
 	$liga3 = '';
-	$ligaTdContent = '<td><i>keine</i></td>';
+	$ligaTdContent = '<td><i>'._('keine').'</i></td>';
 }
 else {
 	$liga3 = mysql_fetch_assoc($liga2);
@@ -50,19 +50,29 @@ if ($sql3['team'] != '__'.$clearedID) {
 	$teamTdClass = ' class="link"';
 }
 else {
-	$team3 = '<i>keins</i>';
+	$team3 = '<i>'._('keins').'</i>';
 	$wantTests = 0;
 	$teamPageLink = $team3;
 	$teamTdClass = '';
 }
 $temp = time()-$sql3['last_login'];
-if ($temp >= 8640000) { $letzte_aktion = 'langer Zeit ;)'; }
-elseif ($temp >= 86400) { $letzte_aktion = round($temp/86400); $letzte_aktion = $letzte_aktion.' Tagen'; }
-elseif ($temp >= 3600) { $letzte_aktion = round($temp/3600); $letzte_aktion = $letzte_aktion.' Stunden'; }
-elseif ($temp >= 60) { $letzte_aktion = round($temp/60); $letzte_aktion = $letzte_aktion.' Minuten'; }
-else { $letzte_aktion = 'wenigen Sekunden'; }
+if ($temp >= 8640000) {
+    $letzte_aktion = _('unbekannt');
+}
+elseif ($temp >= 86400) {
+    $letzte_aktion = __('vor %d Tagen', round($temp/86400));
+}
+elseif ($temp >= 3600) {
+    $letzte_aktion = __('vor %d Stunden', round($temp/3600));
+}
+elseif ($temp >= 60) {
+    $letzte_aktion = __('vor %d Minuten', round($temp/60));
+}
+else {
+    $letzte_aktion = _('vor wenigen Sekunden');
+}
 ?>
-<title>Manager: <?php echo $sql3['username']; ?> | Ballmanager.de</title>
+<title><?php echo __('Manager: %s', $sql3['username']); ?> | Ballmanager.de</title>
 <script type="text/javascript">
 function updateTextLength(element) {
 	var counter = document.getElementById('infotext_counter');
@@ -86,12 +96,12 @@ window.onload = function() {
 $specialStatus = '';
 $specialStatusCSS = 'display:inline-block; padding:1px 4px; font-size:90%; margin:0 2px; background-color:#2556A5; color:#fff;';
 switch ($sql3['status']) {
-	case 'Admin': $specialStatus = ' <span style="'.$specialStatusCSS.'">Administrator</span>'; break;
-	case 'Helfer': $specialStatus = ' <span style="'.$specialStatusCSS.'">Support-Team</span>'; break;
-	case 'Bigpoint': $specialStatus = ' <span style="'.$specialStatusCSS.'">Bigpoint-User</span>'; break;
+	case 'Admin': $specialStatus = ' <span style="'.$specialStatusCSS.'">'._('Administrator').'</span>'; break;
+	case 'Helfer': $specialStatus = ' <span style="'.$specialStatusCSS.'">'._('Support-Team').'</span>'; break;
+	case 'Bigpoint': $specialStatus = ' <span style="'.$specialStatusCSS.'">'._('Bigpoint-User').'</span>'; break;
 }
 ?>
-<h1>Manager: <?php echo $sql3['username'].$specialStatus; ?></h1>
+<h1><?php echo __('Manager: %s', $sql3['username'].$specialStatus); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 // KONTOSTAND PRUEFEN ANFANG
@@ -111,28 +121,25 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 	$mql2 = mysql_query($mql1);
 	if (mysql_num_rows($mql2) != 0) {
 		$geloeschteMultis = 0;
-		$multi_listeStr = '<p><strong>Multi-Accounts:</strong> ';
+		$multi_listeStr = '<p><strong>'._('Multi-Accounts:').'</strong> ';
 		while ($mql3 = mysql_fetch_assoc($mql2)) {
 			//if (substr($mql3['username'], 0, 9) == 'GELOESCHT') {
 			if (strlen($mql3['team']) != 32) {
 				$geloeschteMultis++;
 			}
 			else {
-				$multi_listeStr .= '<a href="/manager.php?id='.$mql3['user2'].'" title="Gefunden: '.date('d.m.Y H:i', $mql3['found_time']).' Uhr">'.$mql3['username'].'</a>, ';
+				$multi_listeStr .= '<a href="/manager.php?id='.$mql3['user2'].'" title="'.__('Gefunden: %s', date('d.m.Y H:i', $mql3['found_time'])).'">'.$mql3['username'].'</a>, ';
 			}
 		}
 		$multi_listeStr = substr($multi_listeStr, 0, -2);
-		if ($geloeschteMultis == 1) {
-			$multi_listeStr .= ' und 1 Inaktiver';
-		}
-		elseif ($geloeschteMultis > 1) {
-			$multi_listeStr .= ' und '.$geloeschteMultis.' Inaktive';
+		if ($geloeschteMultis > 0) {
+			$multi_listeStr .= ' '.__('und %d Inaktive', $geloeschteMultis);
 		}
 		$multi_listeStr .= '</p>';
 		echo $multi_listeStr;
 	}
 	else {
-		echo '<p><strong>Multi-Accounts:</strong> keine</p>';
+		echo '<p><strong>'._('Multi-Accounts:').'</strong> '._('keine').'</p>';
 	}
 }
 // MULTI-ACCOUNTS ENDE
@@ -141,41 +148,41 @@ $ttc1 = "SELECT zeit, team2 FROM ".$prefix."teamChanges WHERE team1 = '".$sql3['
 $ttc2 = mysql_query($ttc1);
 if (mysql_num_rows($ttc2) > 0) {
 	$ttc3 = mysql_fetch_assoc($ttc2);
-	echo '<p><strong>Letzter Team-Tausch:</strong> <a href="/team.php?id='.$ttc3['team2'].'">'.date('d.m.Y H:i', $ttc3['zeit']).' Uhr</a></p>';
+	echo '<p><strong>'._('Letzter Team-Tausch:').'</strong> <a href="/team.php?id='.$ttc3['team2'].'">'.date('d.m.Y H:i', $ttc3['zeit']).'</a></p>';
 }
 // TEAM-TAUSCH MIT CODE ENDE
 if ($urlaub3 > 0 && $clearedID != 'c4ca4238a0b923820dcc509a6f75849b') {
-	echo '<p style="color:red">'.$sql3['username'].' ist zurzeit im Urlaub!</p>';
+	echo '<p style="color:red">'.__('%s ist zurzeit im Urlaub!', $sql3['username']).'</p>';
 }
 ?>
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">Bereich</th>
-<th scope="col">Wert</th>
+<th scope="col"><?php echo _('Bereich'); ?></th>
+<th scope="col"><?php echo _('Wert'); ?></th>
 </tr>
 <?php include 'manager_kontaktlink.php'; ?>
 </thead>
 <tbody>
 <?php
-echo '<tr class="odd"><td>Name</td><td>'.$sql3['username'].'</td></tr>';
-echo '<tr><td>Dabei seit</td><td>'.date('d.m.Y H:i', $sql3['regdate']).'</td></tr>';
-echo '<tr class="odd"><td>Liga</td>'.$ligaTdContent.'</tr>';
-echo '<tr><td>Team</td><td'.$teamTdClass.'>'.$teamPageLink.'</td></tr>';
-echo '<tr class="odd"><td>Letzte Aktion</td><td>';
+echo '<tr class="odd"><td>'._('Name').'</td><td>'.$sql3['username'].'</td></tr>';
+echo '<tr><td>'._('Dabei seit').'</td><td>'.date('d.m.Y H:i', $sql3['regdate']).'</td></tr>';
+echo '<tr class="odd"><td>'._('Liga').'</td>'.$ligaTdContent.'</tr>';
+echo '<tr><td>'._('Team').'</td><td'.$teamTdClass.'>'.$teamPageLink.'</td></tr>';
+echo '<tr class="odd"><td>'._('Letzte Aktion').'</td><td>';
 if ($sql3['regdate'] > $sql3['last_login']) {
-	echo 'noch keine';
+	echo _('noch keine');
 }
 else {
-	echo 'vor '.$letzte_aktion;
+	echo $letzte_aktion;
 }
 echo '</td></tr>';
 if ($_GET['id'] != $cookie_id) {
-	echo '<tr><td colspan="2" class="link"><a href="/post_schreiben.php?id='.$_GET['id'].'"'.noDemoClick($cookie_id).'><img width="16" style="vertical-align: middle;" alt="email" src="/images/email_add.png"> '.$sql3['username'].' jetzt eine Nachricht schicken</a></td></tr>';
+	echo '<tr><td colspan="2" class="link"><a href="/post_schreiben.php?id='.$_GET['id'].'"'.noDemoClick($cookie_id).'><img width="16" style="vertical-align: middle;" alt="email" src="/images/email_add.png"> '.__('%s jetzt eine Nachricht schicken', $sql3['username']).'</a></td></tr>';
 	if (isset($kontakt_link)) { echo $kontakt_link; }
 }
-if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
-	echo '<tr class="odd"><td colspan="2" class="link"><a href="/sanktionen.php?profileID='.$clearedID.'"><img width="16" style="vertical-align: middle;" alt="report" src="/images/report_add.png"> Sanktion für '.$sql3['username'].' festlegen</a></td></tr>';
+if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
+	echo '<tr class="odd"><td colspan="2" class="link"><a href="/sanktionen.php?profileID='.$clearedID.'"><img width="16" style="vertical-align: middle;" alt="report" src="/images/report_add.png"> '.__('Sanktion für %s festlegen', $sql3['username']).'</a></td></tr>';
 }
 ?>
 </tbody>
@@ -209,15 +216,15 @@ if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 			if ($zm2a == 0) {
 				$gesp3_noch = 21-GameTime::getMatchDay();
 				if ($gesp3_noch < 3) {
-					echo '<h1>Testspiel vereinbaren</h1><p><strong>Zu spät:</strong> In dieser Saison können leider keine Testspiele mehr vereinbart werden.</p>';
+					echo '<h1>'._('Testspiel vereinbaren').'</h1><p><strong>'._('Zu spät:').'</strong> '._('In dieser Saison können leider keine Testspiele mehr vereinbart werden.').'</p>';
 				}
 				elseif ($getkonto4 < getTestspielPreis($cookie_liga, $cookie_team)) {
-					echo '<h1>Testspiel vereinbaren</h1><p><strong>Zu teuer:</strong> Im Moment hast Du leider nicht genügend Geld, um ein Testspiel vereinbaren zu können.</p>';
+					echo '<h1>'._('Testspiel vereinbaren').'</h1><p><strong>'._('Zu teuer:').'</strong> '._('Im Moment hast Du leider nicht genügend Geld, um ein Testspiel vereinbaren zu können.').'</p>';
 				}
 				else {
 					$optionsStr = '';
-					$optionsStr .= '<h1>Testspiel vereinbaren</h1>';
-					$optionsStr .= '<p><strong>Wichtig:</strong> Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das Spiel genehmigt wird. Für Dich sind das '.number_format(getTestspielPreis($cookie_liga, $cookie_team), 0, ',', '.').' €.</p>';
+					$optionsStr .= '<h1>'._('Testspiel vereinbaren').'</h1>';
+					$optionsStr .= '<p><strong>'._('Wichtig:').'</strong> '.__('Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das Spiel genehmigt wird. Für Dich sind das %s €.', number_format(getTestspielPreis($cookie_liga, $cookie_team), 0, ',', '.')).'</p>';
 					$optionsStr .= '<form action="/testspiel_anfrage.php" method="get" accept-charset="utf-8">';
 					$heute_tag = date('d', time());
 					$heute_monat = date('m', time());
@@ -233,10 +240,10 @@ if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 						}
 					}
 					$optionsStr .= '</select>';
-					$optionsStr .= ' <input type="hidden" name="id" value="'.$sql3['team'].'" /><input type="submit" value="Anfragen"'.noDemoClick($cookie_id).' /></p>';
+					$optionsStr .= ' <input type="hidden" name="id" value="'.$sql3['team'].'" /><input type="submit" value="'._('Anfragen').'"'.noDemoClick($cookie_id).' /></p>';
 					$optionsStr .= '</form>';
 					if ($nochMoeglicheTage == 0) {
-						echo '<h1>Testspiel vereinbaren</h1><p>Eure Vereine haben keine freien Termine mehr für ein Testspiel.</p>';
+						echo '<h1>'._('Testspiel vereinbaren').'</h1><p>'._('Eure Vereine haben keine freien Termine mehr für ein Testspiel.').'</p>';
 					}
 					else {
 						echo $optionsStr;
@@ -244,12 +251,12 @@ if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 				}
 			}
 			else {
-				echo '<h1>Testspiel vereinbaren</h1><p>Zwischen Dir und '.$sql3['username'].' laufen schon Verhandlungen für ein Testspiel. Du kannst keine weitere Anfrage senden.</p>';
+				echo '<h1>'._('Testspiel vereinbaren').'</h1><p>'.__('Zwischen Dir und %s laufen schon Verhandlungen über ein Testspiel. Du kannst keine weitere Anfrage senden.', $sql3['username']).'</p>';
 			}
 		}
 	}
 	else {
-		echo '<h1>Testspiel vereinbaren</h1><p>Der Verein hat kein Interesse an Testspielen.</p>';
+		echo '<h1>'._('Testspiel vereinbaren').'</h1><p>'._('Der Verein hat kein Interesse an einem Testspiel.').'</p>';
 	}
 }
 // GAESTEBUCH ANFANG
@@ -261,7 +268,7 @@ if (isset($_POST['gaestebuch_eintrag']) && $cookie_id != DEMO_USER_ID) {
 		$ban3 = mysql_fetch_assoc($ban2);
 		$chatSperreBis = $ban3['MAX(chatSperre)'];
 		if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-			addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Ballmanager-Team.</a>');
+			addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
 			include 'zz3.php';
 			exit;
 		}
@@ -278,20 +285,20 @@ if (isset($_GET['delGB']) && $cookie_id != DEMO_USER_ID) {
 	$gb_in1 = "DELETE FROM ".$prefix."chats WHERE id = ".$delGB.$addSql;
 	$gb_in2 = mysql_query($gb_in1);
 }
-echo '<h1 id="anker_gaestebuch">Gästebuch</h1>';
+echo '<h1 id="anker_gaestebuch">'._('Gästebuch').'</h1>';
 echo '<form action="/manager.php?id='.$_GET['id'].'" method="post" accept-charset="utf-8">';
-echo '<p><input type="text" name="gaestebuch_eintrag" style="width:70%" /> <input type="submit" value="Eintragen"'.noDemoClick($cookie_id).' /></p>';
+echo '<p><input type="text" name="gaestebuch_eintrag" style="width:70%" /> <input type="submit" value="'._('Eintragen').'"'.noDemoClick($cookie_id).' /></p>';
 echo '</form>';
 $gb1 = "SELECT a.id, a.user, a.zeit, a.nachricht, b.username FROM ".$prefix."chats AS a JOIN ".$prefix."users AS b ON a.user = b.ids WHERE a.liga = 'GB".mysql_real_escape_string($_GET['id'])."' ORDER BY a.zeit DESC LIMIT 0, 20";
 $gb2 = mysql_query($gb1);
 if (mysql_num_rows($gb2) == 0) {
-	echo '<p>Das Gästebuch von '.$sql3['username'].' ist noch leer. Sei der Erste, der sich einträgt!</p>';
+	echo '<p>'.__('Das Gästebuch von %s ist noch leer. Sei der Erste, der sich einträgt!', $sql3['username']).'</p>';
 }
 else {
 	while ($gb3 = mysql_fetch_assoc($gb2)) {
-		echo '<p><b>'.displayUsername($gb3['username'], $gb3['user']).' schrieb am '.date('d.m.Y, H:i', $gb3['zeit']).':';
+		echo '<p><b>'.__('%1$s schrieb am %2$s:', displayUsername($gb3['username'], $gb3['user']), date('d.m.Y, H:i', $gb3['zeit']));
 		if ($_GET['id'] == $cookie_id OR $gb3['user'] == $cookie_id OR $_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
-			echo ' <a href="/manager.php?id='.mysql_real_escape_string($_GET['id']).'&amp;delGB='.$gb3['id'].'">[Löschen]</a>';
+			echo ' <a href="/manager.php?id='.mysql_real_escape_string($_GET['id']).'&amp;delGB='.$gb3['id'].'">['._('Löschen').']</a>';
 		}
 		echo '</b><br />'.$gb3['nachricht'].'</p>';
 	}
@@ -311,15 +318,15 @@ if ($_GET['id'] == $cookie_id && $cookie_id != DEMO_USER_ID) {
 		$infotext2 = mysql_query($infotext1);
 	}
 }
-echo '<h1 id="anker_infotext">Infotext'.($isOwnProfile ? ' (<span id="infotext_counter">0</span>/5000 Zeichen)' : '').'</h1>';
+echo '<h1 id="anker_infotext">'._('Infotext').($isOwnProfile ? ' ('.__('%s Zeichen', '<span id="infotext_counter">0</span>/5000').')' : '').'</h1>';
 if ($isOwnProfile) { // eigenes Profil
 	echo '<form action="/manager.php?id='.$_GET['id'].'" method="post" accept-charset="utf-8">';
 	echo '<p><textarea rows="15" cols="12" id="infotext" name="infotext" style="width:450px; height:300px" maxlength="5000" onkeyup="updateTextLength(this);">'.br2nl($infotext).'</textarea></p>';
-	echo '<p><input type="submit" value="Speichern"'.noDemoClick($cookie_id).' /></p>';
+	echo '<p><input type="submit" value="'._('Speichern').'"'.noDemoClick($cookie_id).' /></p>';
 }
 else { // fremdes Profil
 	if (strlen($infotext) == 0) {
-		echo '<p>'.$sql3['username'].' hat noch keinen Text über sich und den Verein geschrieben.</p>';
+		echo '<p>'.__('%s hat noch keinen Text über sich und den Verein geschrieben.', $sql3['username']).'</p>';
 	}
 	else {
 		echo '<p>'.$infotext.'</p>';
@@ -328,6 +335,6 @@ else { // fremdes Profil
 // INFOTEXT ENDE
 ?>
 <?php } else { ?>
-<p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
+<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

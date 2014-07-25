@@ -21,7 +21,7 @@ while ($n3t3 = mysql_fetch_assoc($n3t2)) {
 $transfers_mit_team = array_count_values($transfers_mit_team);
 // NUR 2 TRANSFERS ZWISCHEN 2 TEAMS ENDE
 if ($_SESSION['transferGesperrt'] == TRUE) {
-	addInfoBox('Du bist noch für den Transfermarkt <a class="inText" href="/sanktionen.php">gesperrt</a>. Wenn Dir unklar ist, warum, frage bitte ein <a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">Team-Mitglied</a>.');
+	addInfoBox('Du bist noch für den Transfermarkt <a class="inText" href="/sanktionen.php">gesperrt</a>. Wenn Dir unklar ist, warum, frage bitte ein <a class="inText" href="/post_schreiben.php?id='.OFFICIAL_USER_ID.'">Team-Mitglied</a>.');
 }
 else {
 	echo '<h1>Erhaltene Anfragen</h1>';

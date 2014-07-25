@@ -12,7 +12,7 @@ if (isset($_POST['titel']) && isset($_POST['inhalt']) && isset($_POST['an']) && 
 			echo '<p>'.trim(nl2br(strip_tags($_POST['inhalt']))).'</p>';
 		}
 	}
-	else if (trim($_POST['an']) == '18a393b5e23e2b9b4da106b06d8235f3') { // Post an Ballmanager
+	else if (trim($_POST['an']) == OFFICIAL_USER_ID) { // Post an Ballmanager
 		echo '<p>'._('Du kannst diesem Manager nicht direkt eine Nachricht schicken!').'</p>';
 		if (strlen($_POST['inhalt']) > 0) {
 			echo '<p><strong>'._('Dies ist der Text, den Du schreiben wolltest:').'</strong></p>';
@@ -89,7 +89,7 @@ elseif (isset($_GET['id'])) {
 			}
 		}
 		// CHAT-SPERREN ENDE
-		if ($an == '18a393b5e23e2b9b4da106b06d8235f3') {
+		if ($an == OFFICIAL_USER_ID) {
 			echo '<p style="text-align:right"><a href="/manager.php?id='.$an.'" class="pagenava">'._('Zurück zum Profil').'</a></p>';
 			echo '<p>'._('Du kannst diesem Manager nicht direkt eine Nachricht schicken! Bitte wähle ein Mitglied des Support-Teams aus, dem du schreiben möchtest.').'</p>';
 		}

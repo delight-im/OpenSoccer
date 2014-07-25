@@ -88,7 +88,7 @@ if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3
 		if ($setOpen != 1) {
 			$betreff = 'Support: Anfrage #'.id2secure($sql3['id']);
 			$notifyText = 'Hallo,<br /><br />vielen Dank für Deine Beteiligung im Support-Forum. Eine Deiner Anfragen wurde jetzt geschlossen, Du findest sie hier:<br />http://www.ballmanager.de/supportRequest.php?id='.id2secure($sql3['id']).'<br /><br />Sportliche Grüße<br />das Ballmanager-Team';
-			$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('18a393b5e23e2b9b4da106b06d8235f3', '".$sql3['author']."', '".$betreff."', '".$notifyText."', ".time().", '')";
+			$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".$sql3['author']."', '".$betreff."', '".$notifyText."', ".time().", '')";
 			$sql2 = mysql_query($sql1);
 			$sql1 = "UPDATE ".$prefix."pn SET ids = MD5(id) WHERE ids = ''";
 			$sql2 = mysql_query($sql1);

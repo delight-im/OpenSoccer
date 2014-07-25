@@ -20,6 +20,7 @@ function reportError($text, $statement = '') {
 
 // SERVER-DATEN
 define('DEMO_USER_ID', '1d0a7ce36ffa946eea1a52394fcdaebf');
+define('OFFICIAL_USER_ID', '18a393b5e23e2b9b4da106b06d8235f3');
 $prefix = 'man_';
 // SERVER-DATEN
 $kuerzelListe = array('AC', 'AJ', 'AS', 'ASC', 'ASV', 'Athletic', 'Atletico', 'Austria', 'AZ', 'BC', 'BSV', 'BV', 'Calcio', 'CD', 'CF', 'City', 'Club', 'Deportivo', 'Espanyol', 'FC', 'FF', 'FK', 'FSC', 'FSG', 'FV', 'IF', 'KV', 'Olympique', 'OSC', 'PSV', 'Racing', 'Rapid', 'Rapids', 'RC', 'RCD', 'Real', 'Rovers', 'RS', 'SG', 'SK', 'Spartans', 'Sporting', 'SSC', 'Sturm', 'SV', 'TSV', 'TV', 'UD', 'Union', 'United', 'Wanderers');

@@ -206,7 +206,7 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 		<li><a href="/ligaTausch.php"><?php echo _('Ligatausch'); ?> (<?php echo $_SESSION['last_ligaTausch_anzahl']; ?>)</a></li>
 	</ul>
 </li><?php } ?>
-<?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 0, 8) == '/support' OR $_SERVER['SCRIPT_NAME'] == '/tipps_des_tages.php' OR $_SERVER['SCRIPT_NAME'] == '/regeln.php' OR $_SERVER['REQUEST_URI'] == '/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3') { echo ' id="current"'; } ?>><a href="/support.php"><?php echo _('Support'); ?></a>
+<?php if (!isMobile()) { ?><li class="menueintrag"<?php if (substr($_SERVER['SCRIPT_NAME'], 0, 8) == '/support' OR $_SERVER['SCRIPT_NAME'] == '/tipps_des_tages.php' OR $_SERVER['SCRIPT_NAME'] == '/regeln.php' OR $_SERVER['REQUEST_URI'] == ('/post_schreiben.php?id='.OFFICIAL_USER_ID)) { echo ' id="current"'; } ?>><a href="/support.php"><?php echo _('Support'); ?></a>
 	<ul>
 		<li><a href="/support.php"><?php echo _('Support'); ?></a></li>
 		<li><a href="/wio.php#teamList"><?php echo _('Post ans Team'); ?></a></li>

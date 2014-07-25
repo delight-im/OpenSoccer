@@ -24,14 +24,14 @@ function letzte_nachrichten() {
 	}
 	if (mt_rand(1, 8) == 5) {
 		$up1 = "UPDATE ".$prefix."users SET last_chat = ".time()." WHERE ids = '".$cookie_id."'";
-		$up2 = mysql_query($up1);
+		mysql_query($up1);
 	}
     $sql1 = "SELECT ".$prefix."chatroom.id, ".$prefix."chatroom.user, ".$prefix."chatroom.zeit, ".$prefix."chatroom.nachricht, ".$prefix."users.username FROM ".$prefix."chatroom JOIN ".$prefix."users ON ".$prefix."chatroom.user = ".$prefix."users.ids ORDER BY ".$prefix."chatroom.id DESC LIMIT 0, 20";
     $sql2 = mysql_query($sql1);
     while ($sql3 = mysql_fetch_assoc($sql2)) {
 		if (in_array($sql3['user'], $ignoList)) { continue; }
         $ausgabe .= '<p';
-		if ($sql3['user'] == '18a393b5e23e2b9b4da106b06d8235f3' OR stripos($sql3['nachricht'], $cookie_username) !== FALSE) {
+		if ($sql3['user'] == OFFICIAL_USER_ID OR stripos($sql3['nachricht'], $cookie_username) !== FALSE) {
 			$ausgabe .= ' style="background-color:#ddd"';
 		}
 		$ausgabe .= '>';
@@ -66,11 +66,7 @@ function nachricht_erzeugen($user, $nachricht) {
 			if (mysql_num_rows($getReportedUserID2) == 1) {
 				$getReportedUserID3 = mysql_fetch_assoc($getReportedUserID2);
 				$getReportedUserID4 = mysql_real_escape_string(trim(strip_tags($getReportedUserID3['ids'])));
-				if ($getReportedUserID4 == '18a393b5e23e2b9b4da106b06d8235f3') { // Ballmanager Team-Account kann nicht gemeldet werden
-					$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('18a393b5e23e2b9b4da106b06d8235f3', '".time()."', 'Ich halte mich immer an die Regeln ;)')";
-					$sql2 = mysql_query($sql1);
-				}
-				elseif ($user != DEMO_USER_ID) {
+				if ($getReportedUserID4 != OFFICIAL_USER_ID && $user != DEMO_USER_ID) {
 					// CHAT-PROTOKOLL ANFERTIGEN ANFANG
 					$sql1 = "SELECT a.user, a.zeit, a.nachricht, b.username, b.last_ip FROM man_chatroom AS a JOIN man_users AS b ON a.user = b.ids ORDER BY a.id DESC LIMIT 0, 100";
 					$sql2 = mysql_query($sql1);
@@ -86,18 +82,18 @@ function nachricht_erzeugen($user, $nachricht) {
 						$sperrRelevant = 0;
 					}
 					$sql1 = "INSERT INTO ".$prefix."chatroomReportedUsers (user, reporter, datum, protokoll, sperrRelevant) VALUES ('".$getReportedUserID4."', '".$user."', '".$reportDate."', '".mysql_real_escape_string($reportText)."', ".$sperrRelevant.")";
-					$sql2 = mysql_query($sql1);
+					mysql_query($sql1);
 					if (mysql_affected_rows() > 0) { // groesser 0 damit -1 als Fehler ignoriert wird
 						$sql1 = "SELECT COUNT(*) FROM ".$prefix."chatroomReportedUsers WHERE user = '".$getReportedUserID4."' AND datum = '".$reportDate."' AND sperrRelevant = 1";
 						$sql2 = mysql_query($sql1);
 						$sql3 = mysql_result($sql2, 0);
 						if ($sql3 < 3) {
-							$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('18a393b5e23e2b9b4da106b06d8235f3', '".time()."', '".$userToReport." wurde gemeldet.')";
-							$sql2 = mysql_query($sql1);
+							$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('".OFFICIAL_USER_ID."', '".time()."', '".$userToReport." wurde gemeldet.')";
+							mysql_query($sql1);
 						}
 						else {
-							$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('18a393b5e23e2b9b4da106b06d8235f3', '".time()."', '".$userToReport." wurde für den Chat gesperrt.')";
-							$sql2 = mysql_query($sql1);				
+							$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('".OFFICIAL_USER_ID."', '".time()."', '".$userToReport." wurde für den Chat gesperrt.')";
+							mysql_query($sql1);
 						}
 					}
 				}
@@ -116,7 +112,7 @@ function nachricht_erzeugen($user, $nachricht) {
 			}
 			// EMOTICONS ENDE
 			$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('".$user."', '".time()."', '".$nachricht."')";
-			$sql2 = mysql_query($sql1);
+			mysql_query($sql1);
 		}
 	}
 }

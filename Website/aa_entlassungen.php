@@ -136,6 +136,6 @@ while ($sd8faa3 = mysql_fetch_assoc($sd8faa2)) {
 	// ACCOUNT LOESCHEN ENDE
 }
 $clearTimeout = getTimestamp('-26 weeks');
-$clear1 = "DELETE FROM ".$prefix."users WHERE last_login < ".$clearTimeout." AND LENGTH(team) = 34";
+$clear1 = "DELETE FROM ".$prefix."users WHERE last_login < ".$clearTimeout." AND LENGTH(team) = 34 AND ids NOT IN ('".DEMO_USER_ID."', '".OFFICIAL_USER_ID."')";
 $clear2 = mysql_query($clear1);
 ?>

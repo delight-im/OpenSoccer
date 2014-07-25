@@ -104,7 +104,7 @@ if ($_SESSION['pMaxGebot'] == 0) {
 // AM ANFANG NOCH KEINE TRANSFERS ENDE
 // TRANSFER-SPERREN ANFANG
 if ($_SESSION['transferGesperrt'] == TRUE) {
-	addInfoBox(__('Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage bitte ein %2$s.', '<a class="inText" href="/sanktionen.php">'._('gesperrt').'</a>', '<a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">'._('Team-Mitglied').'</a>'));
+	addInfoBox(__('Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage bitte ein %2$s.', '<a class="inText" href="/sanktionen.php">'._('gesperrt').'</a>', '<a class="inText" href="/post_schreiben.php?id='.OFFICIAL_USER_ID.'">'._('Team-Mitglied').'</a>'));
 	include 'zz3.php';
 	exit;
 }

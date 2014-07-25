@@ -45,7 +45,7 @@ switch ($sql3['open']) {
 }
 $entryNumber .= ')';
 ?>
-<title><?php echo _('Support: %d', $entryNumber); ?> | Ballmanager.de</title>
+<title><?php echo __('Support: %s', $entryNumber); ?> | Ballmanager.de</title>
 <style type="text/css">
 <!--
 .commentBoxBlack, .commentBoxRed, .commentBoxOrange {
@@ -74,7 +74,7 @@ $entryNumber .= ')';
 -->
 </style>
 <?php include 'zz2.php'; ?>
-<h1><?php echo _('Support: %d', $entryNumber); ?></h1>
+<h1><?php echo __('Support: %s', $entryNumber); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('read_support');
@@ -125,7 +125,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$blockCom3 = mysql_fetch_assoc($blockCom2);
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-		addInfoBox(__('Du bist noch bis zum %1$d Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.' , date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
+		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Ballmanager-Team').'</a>'));
 		include 'zz3.php';
 		exit;
 	}
@@ -139,7 +139,7 @@ $read2 = mysql_query($read1);
 ?>
 <p style="text-align:right">
 	<a href="/support.php" class="pagenava">Zurück zur Hauptseite</a>
-	<?php if (($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1 && $sql3['visibilityLevel'] == 0) { echo ' <a href="/support.php?del='.id2secure($requestID).'" class="pagenava" onclick="return confirm(\''._('Bist Du sicher??').'\')">'._('Anfrage löschen').'</a>'; } ?>
+	<?php if (($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1 && $sql3['visibilityLevel'] == 0) { echo ' <a href="/support.php?del='.id2secure($requestID).'" class="pagenava" onclick="return confirm(\''._('Bist Du sicher?').'\')">'._('Anfrage löschen').'</a>'; } ?>
 	<?php if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1) {
 			if ($sql3['category'] == 'Vorschlag') {
 				echo ' <a href="/supportRequest.php?id='.id2secure($requestID).'&amp;setOpen=0" class="pagenava" onclick="return confirm(\''._('Bist Du sicher?').'\')">'._('Umgesetzt').'</a>';
@@ -246,12 +246,12 @@ else { // noch nicht abgestimmt
 	echo _('Anonym (Bitte erst oben abstimmen!)');
 }
 echo '</span>';
-echo '<strong>'._('Hinzugefügt am:').'</strong> <span style="display:block; margin-bottom:8px;">'.date('d.m.Y H:i', $sql3['timeAdded']).' '._('Uhr').'</span>';
-echo '<strong>'._('Letzte Aktion:').'</strong> <span style="display:block; margin-bottom:8px;">'.date('d.m.Y H:i', $sql3['lastAction']).' '._('Uhr').'</span></p>';
+echo '<strong>'._('Hinzugefügt am:').'</strong> <span style="display:block; margin-bottom:8px;">'.date('d.m.Y H:i', $sql3['timeAdded']).'</span>';
+echo '<strong>'._('Letzte Aktion:').'</strong> <span style="display:block; margin-bottom:8px;">'.date('d.m.Y H:i', $sql3['lastAction']).'</span></p>';
 // WEITERE INFOS ENDE
 ?>
 <?php if ($sql3['open'] == 1) { ?>
-<h1><?php echo _('Dein Kommentar'); ?> ...</h1>
+<h1><?php echo _('Dein Kommentar ...'); ?></h1>
 <form action="/supportRequest.php?id=<?php echo id2secure($requestID); ?>" method="post" accept-charset="utf-8">
 <p><textarea name="myComment" cols="10" rows="10" style="width:350px; height:100px"></textarea></p>
 <p><input type="submit" value="<?php echo _('Kommentieren'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
@@ -297,9 +297,7 @@ else {
 			echo $comments3['text'];
 		}
 		if ($comments3['likes'] > 0 && $comments3['deleted'] == 0) {
-			echo '<br /><strong>'.$comments3['likes'].' '._('Manager finde');
-			if ($comments3['likes'] == 1) { echo 't'; } else { echo 'n'; }
-			echo ' '._('diesen Kommentar gut.').'</strong>';
+			echo '<br /><strong>'.$comments3['likes'].' '.__('%d Manager finden diesen Kommentar gut', $comments3['likes']).'</strong>';
 		}
 		$baseURL = '/supportRequest.php?id='.id2secure($requestID).'&amp;';
 		if ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') {
@@ -328,7 +326,7 @@ function voteComment(requestID, commentID, linkElement) {
 		var responseSpan = document.createElement('span');
 		responseSpan.style.marginLeft = '10px';
 		responseSpan.style.marginRight = '10px';
-		responseSpan.innerHTML = '<img src="/images/loading_14.gif" width="14" alt="Wird gesendet ..." /> '._('Wird gesendet').' ...';
+		responseSpan.innerHTML = '<img src="/images/loading_14.gif" width="14" alt="Wird gesendet ..." /> '._('Wird gesendet ...');
 		linkElement.parentNode.appendChild(responseSpan);
 		linkElement.parentNode.removeChild(linkElement);
 	}

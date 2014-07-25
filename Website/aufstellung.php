@@ -75,7 +75,7 @@ $eigene_spiele1 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE typ = '".$live_s
 $eigene_spiele2 = mysql_query($eigene_spiele1);
 $eigene_spiele3 = mysql_result($eigene_spiele2, 0);
 if ($live_scoring_spieltyp_laeuft == $spieltypAufstellung && $eigene_spiele3 != 0) {
-	echo '<p>Zurzeit läuft ein '.$live_scoring_spieltyp_laeuft.'spiel. Deshalb kannst Du diese Aufstellung gerade nicht ändern.</p>';
+	echo '<p>'.__('Zurzeit läuft ein %s spiel. Deshalb kannst Du diese Aufstellung gerade nicht ändern.', $live_scoring_spieltyp_laeuft).'</p>';
 }
 else { ?>
 <?php
@@ -139,7 +139,7 @@ if ($spieltypAufstellung == 'Liga') {
 	$aufstellung_aktivieren13 = "UPDATE ".$prefix."teams SET aufstellung = ".$aufstellung_holen3['SUM(staerke)']." WHERE ids = '".$cookie_team."'";
 	$aufstellung_aktivieren13 = mysql_query($aufstellung_aktivieren13);
 }
-addInfoBox('Aufgestellte Spieler: '.$aufstellung_holen3['COUNT(*)'].'/11, Stärke: '.number_format($aufstellung_holen3['SUM(staerke)'], 1, ',', '.'));
+addInfoBox(__('Aufgestellte Spieler: %1$d/11, Stärke: %2$s', $aufstellung_holen3['COUNT(*)'], number_format($aufstellung_holen3['SUM(staerke)'], 1, ',', '.')));
 ?>
 <?php
 // SPIELER IN ARRAY LESEN ANFANG

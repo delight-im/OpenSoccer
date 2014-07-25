@@ -1,6 +1,6 @@
-# Ballmanager
+# OpenSoccer
 
-Online soccer manager
+Online Soccer Manager
 
 Demo: http://www.ballmanager.de/
 

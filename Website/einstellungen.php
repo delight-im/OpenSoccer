@@ -237,7 +237,7 @@ for ($i = $start_urlaub; $i <= $noch_urlaub; $i++) {
 }
 ?>
 </select></p>
-<p><input type="submit" value="<?php echo _('Beantragen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+<p><input type="submit" value="<?php echo _('Beantragen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <?php } ?>
 <?php } ?>
@@ -258,7 +258,7 @@ for ($i = $start_urlaub; $i <= $noch_urlaub; $i++) {
 <form action="/einstellungen.php" method="post" accept-charset="utf-8">
 <p><?php echo _('Das war gut:'); ?><br /><input type="text" name="accDelPlus" style="width:250px" /></p>
 <p><?php echo _('Das hat mir nicht gefallen:'); ?><br /><input type="text" name="accDelMinus" style="width:250px" /></p>
-<p><input type="submit" value="<?php echo _('Account endgültig löschen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+<p><input type="submit" value="<?php echo _('Account endgültig löschen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <?php } else { ?>
 <h1><?php echo _('Einstellungen'); ?></h1>

@@ -163,7 +163,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
             $formulierung = __('Du hast den Spieler %1$s fur %2$s € gekauft.', '<a href="/spieler.php?id='.$sql3['spieler'].'">'.$getmanager4.'</a>', number_format($sql3['betrag_highest'], 0, ',', '.'));
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$sql3['bieter_highest']."', '".$formulierung."', 'Transfers', ".time().")";
             $sql8 = mysql_query($sql7);
-            $formulierung = __('Du hast den Spieler "1$s fur %2$s € verkauft.', '<a href="/spieler.php?id='.$sql3['spieler'].'">'.$getmanager4.'</a>', number_format($sql3['betrag_highest'], 0, ',', '.'));
+            $formulierung = __('Du hast den Spieler %1$s fur %2$s € verkauft.', '<a href="/spieler.php?id='.$sql3['spieler'].'">'.$getmanager4.'</a>', number_format($sql3['betrag_highest'], 0, ',', '.'));
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$sql3['besitzer']."', '".$formulierung."', 'Transfers', ".time().")";
             $sql8 = mysql_query($sql7);
             // SPIELER VON BEOBACHTUNGSLISTE RUNTERNEHMEN BEIM GEWINNER ANFANG
@@ -187,7 +187,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 }
 // ALTE AUKTIONEN BEENDEN UND VERTRAEGE ABSCHLIESSEN ENDE
 ?>
-<p>
 <table>
 <thead><tr class="odd"><th scope="col"><?php echo _('MT').'</th><th scope="col">'._('Spieler').'</th><th scope="col">'._('AL').'</th><th scope="col">'._('ST').'</th><th scope="col">'._('Gebot').'</th><th scope="col">'._('Noch'); ?></th></tr></thead>
 <tbody>
@@ -223,7 +222,6 @@ else {
 ?>
 </tbody>
 </table>
-</p>
 <p><strong><?php echo _('Hinweis:').'</strong> <!-- Der Besitzer eines Spielers kann die Auktion bis 30 Minuten vor Ende noch abbrechen. -->'._('Vor dem Höchstgebot steht in eckigen Klammern die Anzahl der abgegebenen Gebote.'); ?></p>
 <p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, AL: Alter, ST: Stärke'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>

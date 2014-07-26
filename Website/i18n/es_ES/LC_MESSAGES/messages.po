@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-07-25 14:03-0300\n"
-"PO-Revision-Date: 2014-07-25 16:56-0300\n"
-"Last-Translator: Cosme12 <test@example.com>\n"
+"POT-Creation-Date: 2014-07-26 02:29+0100\n"
+"PO-Revision-Date: 2014-07-26 02:29+0100\n"
+"Last-Translator: Marco <marco1@live.de>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -1194,14 +1194,15 @@ msgstr "¿Qué es eso? Un hincha invadió la cancha! El árbitro detiene el jueg
 msgid "Der Schiedsrichter pfeift das Spiel ab."
 msgstr "El árbitro da por finalizado el partido."
 
-#: ../../../android_app.php:2 ../../../android_app.php:19 ../../../zz2.php:70
+#: ../../../android_app.php:2 ../../../android_app.php:19
 msgid "Android™-App"
 msgstr "Android™-App"
 
 #: ../../../android_app.php:20
+#, fuzzy
 msgid ""
-"Du hast ein Smartphone oder Tablet mit Android? Dann spiele den Ballmanager "
-"ganz einfach von unterwegs:"
+"Du hast ein Smartphone oder Tablet mit Android? Dann spiele ganz einfach von "
+"unterwegs:"
 msgstr ""
 "Tienes un smartphone o una tablet con Android? Entonces lleva Ballmanager "
 "contigo a todos lados:"
@@ -1209,8 +1210,8 @@ msgstr ""
 #: ../../../android_app.php:22
 msgid ""
 "Aktiviere unter <em>Einstellungen</em> &raquo; <em>Anwendungen</em> das "
-"Kästchen bei &quot;Unbekannte Quellen&quot;, damit Du die Ballmanager-App "
-"von dieser Seite aus installieren kannst."
+"Kästchen bei &quot;Unbekannte Quellen&quot;, damit Du die App von dieser "
+"Seite aus installieren kannst."
 msgstr ""
 
 #: ../../../android_app.php:23
@@ -1233,7 +1234,7 @@ msgstr ""
 "parte superior de la pantalla. El botón con los tres puntos / líneas, una "
 "encima de la otra, para ver el resto de las entradas del menú."
 
-#: ../../../aufstellung.php:2 ../../../aufstellung.php:37 ../../../zz2.php:176
+#: ../../../aufstellung.php:2 ../../../aufstellung.php:37 ../../../zz2.php:173
 msgid "Aufstellung"
 msgstr "Formación"
 
@@ -1335,7 +1336,8 @@ msgstr "PO"
 
 #: ../../../aufstellung.php:288 ../../../kader.php:58
 #: ../../../leihgaben.php:158 ../../../leihgaben.php:195
-#: ../../../stat_torjaegerliste.php:55 ../../../team.php:131
+#: ../../../manager.php:150 ../../../stat_torjaegerliste.php:55
+#: ../../../team.php:131
 msgid "Name"
 msgstr "Nombre"
 
@@ -1415,7 +1417,8 @@ msgstr "jugadores lesionados o suspendidos"
 #: ../../../lig_tabelle.php:54 ../../../lig_testspiele_liste.php:79
 #: ../../../lig_transfers.php:150 ../../../ligaTausch.php:208
 #: ../../../ligaTauschWuensche.php:67 ../../../liveZentrale.php:156
-#: ../../../logoutNewUser.php:25 ../../../manager_der_saison.php:208
+#: ../../../logoutNewUser.php:25 ../../../manager.php:320
+#: ../../../managerPruefung.php:78 ../../../manager_der_saison.php:208
 #: ../../../marktschreier.php:60 ../../../multiAccounts.php:215
 #: ../../../namensaenderung.php:168 ../../../neueAccounts.php:67
 #: ../../../notizen.php:58 ../../../pokal.php:243 ../../../post.php:6
@@ -1441,7 +1444,7 @@ msgstr "jugadores lesionados o suspendidos"
 #: ../../../stat_zuschauerverlauf.php:44 ../../../support.php:283
 #: ../../../supportAdd.php:49 ../../../supportRequest.php:345
 #: ../../../taktik.php:192 ../../../team.php:191 ../../../testWuensche.php:60
-#: ../../../testspiele.php:185 ../../../tipps_des_tages.php:40
+#: ../../../testspiele.php:167 ../../../tipps_des_tages.php:40
 #: ../../../top_manager.php:115 ../../../transferliste.php:42
 #: ../../../transfermarkt.php:249 ../../../transfermarkt_auktion.php:183
 #: ../../../transfermarkt_leihe.php:235 ../../../ver_buchungen.php:64
@@ -1452,7 +1455,7 @@ msgstr "jugadores lesionados o suspendidos"
 msgid "Du musst angemeldet sein, um diese Seite aufrufen zu können!"
 msgstr "¡Debes estar conectado para ver esta página!"
 
-#: ../../../beobachtung.php:2 ../../../beobachtung.php:15 ../../../zz2.php:169
+#: ../../../beobachtung.php:2 ../../../beobachtung.php:15 ../../../zz2.php:166
 msgid "Beobachtung"
 msgstr "Observación"
 
@@ -1574,9 +1577,10 @@ msgid "Nicht eingeloggt"
 msgstr "Sin conectar"
 
 #: ../../../bp_nicht_eingeloggt.php:5
+#, fuzzy
 msgid ""
 "Im Moment bist Du leider nicht eingeloggt. Bitte logge Dich über die "
-"Bigpoint-Seite beim Ballmanager ein, damit Du spielen kannst."
+"Bigpoint-Seite ein, damit Du spielen kannst."
 msgstr ""
 "Por el momento no te has identificado. Por favor ingresa a través del sitio "
 "Bigpoint en Ballmanager de modo que puedas jugar."
@@ -1626,10 +1630,11 @@ msgid "Benutzernamen wählen"
 msgstr "Elige un nombre de usuario"
 
 #: ../../../bp_username_waehlen.php:43
+#, fuzzy
 msgid ""
-"Willkommen beim Ballmanager! Du stehst jetzt erst einmal auf der Warteliste. "
-"Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - "
-"erhältst Du eine Nachricht von uns bei Bigpoint."
+"Willkommen! Du stehst jetzt erst einmal auf der Warteliste. Sobald ein Team "
+"für Dich frei wird - und das wird nicht lange dauern - erhältst Du eine "
+"Nachricht von uns bei Bigpoint."
 msgstr ""
 "¡Bienvenidos a Ballmanager! Ahora te encuentras en nuestra lista de espera. "
 "Tan pronto como un equipo esté disponible - y esto no tomará mucho tiempo - "
@@ -1660,15 +1665,16 @@ msgid "Fertig"
 msgstr ""
 
 #: ../../../chat.php:2 ../../../chat.php:75 ../../../chat.php:122
-#: ../../../wio.php:6 ../../../wio.php:38 ../../../zz2.php:249
+#: ../../../wio.php:6 ../../../wio.php:38 ../../../zz2.php:246
 msgid "Chat"
 msgstr "Chat"
 
-#: ../../../chat.php:42 ../../../lig_tabelle.php:66 ../../../supportAdd.php:15
+#: ../../../chat.php:42 ../../../lig_tabelle.php:66 ../../../manager.php:82
+#: ../../../manager.php:253 ../../../supportAdd.php:15
 #: ../../../supportRequest.php:128 ../../../testWuensche.php:25
-#, fuzzy
-msgid "Ballmanager-Team"
-msgstr "Charla de Mánagers"
+#: ../../../wio.php:37
+msgid "Support-Team"
+msgstr "Soporte"
 
 #: ../../../chat.php:89
 msgid "Username"
@@ -1705,7 +1711,7 @@ msgstr ""
 "Por favor habilita Javascript en tu navegador para poder utilizar el chat!"
 
 #: ../../../chat_reports.php:2 ../../../chat_reports.php:18
-#: ../../../zz2.php:257
+#: ../../../zz2.php:254
 msgid "Chat-Reports"
 msgstr "Reportes del Chat"
 
@@ -1738,7 +1744,7 @@ msgstr "Reportado por"
 #: ../../../protokoll.php:54 ../../../spielbericht.php:292
 #: ../../../spieler_historie.php:27 ../../../spieler_historie.php:95
 #: ../../../stat_ligaTausch.php:12 ../../../stat_transfer_uebersicht.php:43
-#: ../../../testspiele.php:100 ../../../testspiele.php:153
+#: ../../../testspiele.php:82 ../../../testspiele.php:135
 msgid "Datum"
 msgstr "Fecha"
 
@@ -1799,7 +1805,7 @@ msgstr ""
 "Los números entre corchetes indican la liga de los respectivos equipos."
 
 #: ../../../einstellungen.php:2 ../../../einstellungen.php:264
-#: ../../../zz2.php:152
+#: ../../../zz2.php:149
 msgid "Einstellungen"
 msgstr "Configuración"
 
@@ -1875,7 +1881,7 @@ msgid "Mitglied des Support-Teams"
 msgstr "Soporte"
 
 #: ../../../einstellungen.php:160 ../../../index.php:46 ../../../regeln.php:2
-#: ../../../registrieren.php:90 ../../../zz2.php:214 ../../../zz3.php:8
+#: ../../../registrieren.php:90 ../../../zz2.php:211 ../../../zz3.php:8
 msgid "Regeln"
 msgstr "Reglas"
 
@@ -1932,9 +1938,10 @@ msgid "Passwort ändern"
 msgstr "Cambiar contraseña"
 
 #: ../../../einstellungen.php:247
+#, fuzzy
 msgid ""
-"Mit dem folgenden Formular kannst Du Dein Passwort beim Ballmanager ändern. "
-"Dazu musst Du alle Felder ausfüllen."
+"Mit dem folgenden Formular kannst Du Dein Passwort ändern. Dazu musst Du "
+"alle Felder ausfüllen."
 msgstr ""
 "Con este formulario puedes cambiar tu contraseña del juego. Por favor, llena "
 "todos los campos."
@@ -1956,9 +1963,10 @@ msgid "Account löschen"
 msgstr "Eliminar cuenta"
 
 #: ../../../einstellungen.php:256
+#, fuzzy
 msgid ""
-"Du bist Dir wirklich sicher, dass Du Deinen Account hier beim Ballmanager "
-"löschen möchtest? Das ist sehr schade, aber wir akzeptieren das natürlich."
+"Du bist Dir wirklich sicher, dass Du Deinen Account löschen möchtest? Das "
+"ist sehr schade, aber wir akzeptieren das natürlich."
 msgstr ""
 "¿Estás seguro de que quieres eliminar tu cuenta de este juego? Es una "
 "lástima, pero lo aceptamos de todos modos."
@@ -1981,7 +1989,7 @@ msgstr "Lo que no me gustó:"
 msgid "Account endgültig löschen"
 msgstr "Eliminar cuenta permanentemente"
 
-#: ../../../entwicklung.php:2 ../../../entwicklung.php:4 ../../../zz2.php:179
+#: ../../../entwicklung.php:2 ../../../entwicklung.php:4 ../../../zz2.php:176
 msgid "Entwicklung"
 msgstr "Progreso"
 
@@ -1998,11 +2006,12 @@ msgid "Höhepunkt"
 msgstr ""
 
 #: ../../../freunde.php:2 ../../../freunde.php:67
-#: ../../../liveZentrale.php:153 ../../../wio.php:35 ../../../zz2.php:248
+#: ../../../liveZentrale.php:153 ../../../wio.php:35 ../../../zz2.php:245
 msgid "Freunde"
 msgstr "Amigos"
 
-#: ../../../freunde.php:9 ../../../ligaTausch.php:183 ../../../zz2.php:248
+#: ../../../freunde.php:9 ../../../ligaTausch.php:183 ../../../manager.php:225
+#: ../../../zz2.php:245
 msgid "Anfragen"
 msgstr "Solicitudes"
 
@@ -2021,12 +2030,12 @@ msgid "Aktionen"
 msgstr "Acciones"
 
 #: ../../../freunde.php:11 ../../../ligaTausch.php:172
-#: ../../../testspiele.php:120
+#: ../../../testspiele.php:102
 msgid "Annehmen"
 msgstr ""
 
 #: ../../../freunde.php:11 ../../../ligaTausch.php:172
-#: ../../../supportRequest.php:146 ../../../testspiele.php:120
+#: ../../../supportRequest.php:146 ../../../testspiele.php:102
 msgid "Ablehnen"
 msgstr ""
 
@@ -2039,7 +2048,7 @@ msgstr ""
 "Si deseas agregar a tus amigos a esta lista, por favor abre el perfil del "
 "mánager y elige la opción &quot;Enviar solicitud de amistad&quot;."
 
-#: ../../../freunde.php:31 ../../../freunde.php:52
+#: ../../../freunde.php:31 ../../../freunde.php:52 ../../../manager.php:154
 msgid "Letzte Aktion"
 msgstr "Última acción"
 
@@ -2066,7 +2075,8 @@ msgid "Freunde einladen"
 msgstr "Invita amigos"
 
 #: ../../../freundeWerben.php:6
-msgid "Deine Freunde sind noch nicht beim Ballmanager?"
+#, fuzzy
+msgid "Deine Freunde sind noch nicht dabei?"
 msgstr "Tus amigos no son parte del juego todavía?"
 
 #: ../../../freundeWerben.php:6
@@ -2110,7 +2120,7 @@ msgid "Prämie noch nicht ausgezahlt"
 msgstr "Bonus no pagados"
 
 #: ../../../geloeschteAccounts.php:2 ../../../geloeschteAccounts.php:10
-#: ../../../zz2.php:258
+#: ../../../zz2.php:255
 msgid "Gelöschte Accounts"
 msgstr "Cuentas eliminadas"
 
@@ -2134,11 +2144,11 @@ msgstr ""
 
 #: ../../../geloeschteAccounts.php:12 ../../../index.php:94
 #: ../../../index.php:264 ../../../kalender.php:37 ../../../lig_tabelle.php:54
-#: ../../../manager_der_saison.php:74 ../../../stat_5jahresWertung.php:22
-#: ../../../stat_meiste_titel.php:71 ../../../stat_reichste_ligen.php:20
-#: ../../../stat_staerkste_ligen_a.php:20
+#: ../../../manager.php:152 ../../../manager_der_saison.php:74
+#: ../../../stat_5jahresWertung.php:22 ../../../stat_meiste_titel.php:71
+#: ../../../stat_reichste_ligen.php:20 ../../../stat_staerkste_ligen_a.php:20
 #: ../../../stat_staerkste_ligen_k.php:20
-#: ../../../stat_staerkste_ligen_r.php:20 ../../../zz2.php:186
+#: ../../../stat_staerkste_ligen_r.php:20 ../../../zz2.php:183
 msgid "Liga"
 msgstr "Liga"
 
@@ -2147,9 +2157,10 @@ msgid "Gelöschter Account"
 msgstr "Eliminar cuenta"
 
 #: ../../../geloeschterAccount.php:5
+#, fuzzy
 msgid ""
-"Du hast Deinen Account beim Ballmanager gelöscht. Deshalb kannst Du leider "
-"nicht mehr mitspielen."
+"Du hast Deinen Account gelöscht. Deshalb kannst Du leider nicht mehr "
+"mitspielen."
 msgstr ""
 "Has borrado tu cuenta en este juego. Por lo tanto ya no puedes jugar ni "
 "competir más."
@@ -2164,14 +2175,15 @@ msgid "Namen sperren"
 msgstr "Cambiar nombre"
 
 #: ../../../gruendeFuerLoeschung.php:2 ../../../gruendeFuerLoeschung.php:10
-#: ../../../zz2.php:260
+#: ../../../zz2.php:257
 msgid "Gründe für Löschung"
 msgstr "Razones de la eliminación"
 
 #: ../../../gruendeFuerLoeschung.php:11
+#, fuzzy
 msgid ""
-"Warum haben sich die User beim Ballmanager gelöscht? Lies nach, was ihnen "
-"gefallen und hat und was nicht."
+"Warum haben sich die User im Spiel gelöscht? Lies nach, was ihnen gefallen "
+"und hat und was nicht."
 msgstr ""
 "¿Por qué los usuarios han borrado sus cuentas en este juego? Lee aquí que "
 "les ha gustado y lo que se debe mejorar en su opinión."
@@ -2188,15 +2200,15 @@ msgstr "Positivo"
 msgid "Negativ"
 msgstr "Negativo"
 
-#: ../../../impressum.php:2 ../../../impressum.php:4 ../../../zz3.php:9
+#: ../../../impressum.php:2 ../../../impressum.php:4 ../../../zz3.php:10
 msgid "Impressum"
 msgstr "Contacto"
 
-#: ../../../index.php:5 ../../../zz2.php:147
+#: ../../../index.php:5 ../../../zz2.php:144
 msgid "Büro"
 msgstr "Oficina"
 
-#: ../../../index.php:5
+#: ../../../index.php:5 ../../../zz2.php:23
 msgid "Online-Fußball-Manager"
 msgstr "Mánager de Futbol Online Gratuito"
 
@@ -2220,7 +2232,8 @@ msgstr "Ir al Centro en VIVO"
 msgid "Jetzt abstimmen"
 msgstr ""
 
-#: ../../../index.php:64
+#: ../../../index.php:64 ../../../managerPruefung.php:2
+#: ../../../managerPruefung.php:25
 #, fuzzy
 msgid "Manager-Prüfung"
 msgstr "Mánager"
@@ -2229,9 +2242,9 @@ msgstr "Mánager"
 msgid "Lade Deine Freunde ein und erhalte 7,5 Mio. Bonus!"
 msgstr ""
 
-#: ../../../index.php:79 ../../../spielbericht.php:285 ../../../spieler.php:76
-#: ../../../team.php:45 ../../../ver_finanzen.php:89
-#: ../../../ver_stadion.php:210
+#: ../../../index.php:79 ../../../manager.php:143
+#: ../../../spielbericht.php:285 ../../../spieler.php:76 ../../../team.php:45
+#: ../../../ver_finanzen.php:89 ../../../ver_stadion.php:210
 msgid "Bereich"
 msgstr "Sección"
 
@@ -2304,8 +2317,8 @@ msgstr "Próximo juvenil"
 
 #: ../../../index.php:131 ../../../lig_testspiele_liste.php:2
 #: ../../../lig_testspiele_liste.php:37 ../../../lig_testspiele_liste.php:78
-#: ../../../team.php:82 ../../../testspiele.php:2 ../../../testspiele.php:184
-#: ../../../zz2.php:189 ../../../zz2.php:205
+#: ../../../team.php:82 ../../../testspiele.php:2 ../../../testspiele.php:166
+#: ../../../zz2.php:186 ../../../zz2.php:202
 msgid "Testspiele"
 msgstr "Amistosos"
 
@@ -2420,18 +2433,19 @@ msgstr ""
 #: ../../../leihgaben.php:133 ../../../leihgaben.php:162
 #: ../../../leihgaben.php:199 ../../../lig_tabelle.php:125
 #: ../../../ligaTausch.php:166 ../../../ligaTausch.php:193
-#: ../../../ligaTauschWuensche.php:52 ../../../spieler.php:114
-#: ../../../spieler.php:117 ../../../stat_dauerbrenner.php:21
-#: ../../../stat_geschichte.php:59 ../../../stat_globale_tabelle.php:27
-#: ../../../stat_juengste_kader.php:48 ../../../stat_meiste_titel.php:68
-#: ../../../stat_meiste_zuschauer.php:48 ../../../stat_meister.php:42
-#: ../../../stat_treuesteSpieler.php:35 ../../../stat_wertvollste_teams.php:48
-#: ../../../top_manager.php:51 ../../../wio.php:6 ../../../zz2.php:174
+#: ../../../ligaTauschWuensche.php:52 ../../../manager.php:153
+#: ../../../spieler.php:114 ../../../spieler.php:117
+#: ../../../stat_dauerbrenner.php:21 ../../../stat_geschichte.php:59
+#: ../../../stat_globale_tabelle.php:27 ../../../stat_juengste_kader.php:48
+#: ../../../stat_meiste_titel.php:68 ../../../stat_meiste_zuschauer.php:48
+#: ../../../stat_meister.php:42 ../../../stat_treuesteSpieler.php:35
+#: ../../../stat_wertvollste_teams.php:48 ../../../top_manager.php:51
+#: ../../../wio.php:6 ../../../zz2.php:171
 msgid "Team"
 msgstr "Equipo"
 
 #: ../../../index.php:264 ../../../leihgaben.php:133
-#: ../../../testspiele.php:100 ../../../testspiele.php:138
+#: ../../../testspiele.php:82 ../../../testspiele.php:120
 #: ../../../transfermarkt_leihe.php:114 ../../../wio.php:6 ../../../wio.php:38
 msgid "Aktion"
 msgstr "Actividad"
@@ -2467,11 +2481,11 @@ msgstr "¡Tu contraseña fue cambiada exitosamente!"
 msgid "Einloggen mit bestehendem Account"
 msgstr ""
 
-#: ../../../index.php:294 ../../../zz2.php:230
+#: ../../../index.php:294 ../../../zz2.php:227
 msgid "E-Mail / Username:"
 msgstr "E-Mail / Usuario:"
 
-#: ../../../index.php:295 ../../../zz2.php:231 ../../../zz2.php:241
+#: ../../../index.php:295 ../../../zz2.php:228 ../../../zz2.php:238
 msgid "Passwort:"
 msgstr "Contraseña:"
 
@@ -2479,7 +2493,7 @@ msgstr "Contraseña:"
 msgid "Einloggen"
 msgstr "Iniciar sesión"
 
-#: ../../../index.php:297 ../../../zz2.php:236
+#: ../../../index.php:297 ../../../zz2.php:233
 msgid "Passwort vergessen?"
 msgstr "¿Olvidaste tu contraseña?"
 
@@ -2564,11 +2578,6 @@ msgstr ""
 msgid "Jetzt registrieren"
 msgstr "Regístrate"
 
-#: ../../../index.php:317
-#, fuzzy
-msgid "Gefällt Dir der Ballmanager?"
-msgstr "Parte V: Ballmanager"
-
 #: ../../../ipInfo.php:2 ../../../ipInfo.php:42
 msgid "IP-Info"
 msgstr "IP-Info"
@@ -2586,7 +2595,7 @@ msgid "Letzter Login"
 msgstr "Última conexión"
 
 #: ../../../kader.php:2 ../../../kader.php:14 ../../../team.php:125
-#: ../../../zz2.php:178
+#: ../../../zz2.php:175
 msgid "Kader"
 msgstr "Plantel"
 
@@ -2661,11 +2670,11 @@ msgstr "Buscar mediocampista"
 msgid "Sturm suchen"
 msgstr "Buscar delantero"
 
-#: ../../../kalender.php:2 ../../../zz2.php:181
+#: ../../../kalender.php:2 ../../../zz2.php:178
 msgid "Kalender"
 msgstr "Calendario"
 
-#: ../../../kalender.php:37 ../../../zz2.php:266
+#: ../../../kalender.php:37 ../../../zz2.php:263
 msgid "Alle"
 msgstr "Todos"
 
@@ -2677,13 +2686,13 @@ msgstr "Amistoso"
 msgid "Anstoß"
 msgstr "Saque inicial"
 
-#: ../../../kalender.php:47 ../../../testspiele.php:153
+#: ../../../kalender.php:47 ../../../testspiele.php:135
 msgid "Gegner"
 msgstr "Oponente"
 
 #: ../../../kalender.php:48 ../../../lig_tabelle.php:247
 #: ../../../lig_testspiele_liste.php:45 ../../../spielbericht.php:291
-#: ../../../spielbericht.php:318 ../../../testspiele.php:153
+#: ../../../spielbericht.php:318 ../../../testspiele.php:135
 msgid "Ergebnis"
 msgstr "Resultado"
 
@@ -2747,7 +2756,7 @@ msgstr "Copa Nacional: Final"
 msgid "Pokal: Finale"
 msgstr "Copa Internacional: Final"
 
-#: ../../../leihgaben.php:2 ../../../leihgaben.php:222 ../../../zz2.php:204
+#: ../../../leihgaben.php:2 ../../../leihgaben.php:222 ../../../zz2.php:201
 msgid "Leihgaben"
 msgstr "Préstamos"
 
@@ -3005,7 +3014,7 @@ msgstr "Visitante"
 
 #: ../../../lig_tabelle.php:267 ../../../liveZentrale.php:110
 #: ../../../spielbericht.php:37 ../../../spielbericht.php:92
-#: ../../../testspiele.php:165
+#: ../../../testspiele.php:147
 msgid "LIVE"
 msgstr "VIVO"
 
@@ -3014,8 +3023,9 @@ msgstr "VIVO"
 msgid "Deine Nachricht"
 msgstr "Tu mensaje"
 
-#: ../../../lig_tabelle.php:282 ../../../marktschreier.php:38
-#: ../../../pokal.php:82 ../../../pokal.php:220 ../../../testWuensche.php:38
+#: ../../../lig_tabelle.php:282 ../../../manager.php:272
+#: ../../../marktschreier.php:38 ../../../pokal.php:82 ../../../pokal.php:220
+#: ../../../testWuensche.php:38
 #, fuzzy
 msgid "Eintragen"
 msgstr "Solicitar"
@@ -3035,7 +3045,7 @@ msgstr ""
 
 #: ../../../lig_transfers.php:2 ../../../lig_transfers.php:21
 #: ../../../lig_transfers.php:149 ../../../ver_finanzen.php:103
-#: ../../../zz2.php:165
+#: ../../../zz2.php:162
 msgid "Transfers"
 msgstr "Transferencias"
 
@@ -3199,7 +3209,7 @@ msgstr ""
 msgid "Die Anfrage wurde angenommen, eure Ligen wurden getauscht."
 msgstr ""
 
-#: ../../../ligaTausch.php:158 ../../../testspiele.php:78
+#: ../../../ligaTausch.php:158 ../../../testspiele.php:60
 #, fuzzy
 msgid "Erhaltene Anfragen"
 msgstr "Eviar solicitud"
@@ -3328,9 +3338,143 @@ msgstr "¿Cerrar sesión?"
 msgid "Du bist neu hier, deshalb fragen wir Dich:"
 msgstr ""
 
-#: ../../../logoutNewUser.php:18
-msgid "Was möchtest Du tun? Wie gefällt der Ballmanager Dir bisher?"
+#: ../../../manager.php:18 ../../../manager.php:124
+#, fuzzy
+msgid "keine"
+msgstr "Ninguno"
+
+#: ../../../manager.php:35
+msgid "keins"
 msgstr ""
+
+#: ../../../manager.php:42 ../../../spieler.php:120 ../../../spieler.php:123
+msgid "unbekannt"
+msgstr "desconocido"
+
+#: ../../../manager.php:54
+msgid "vor wenigen Sekunden"
+msgstr ""
+
+#: ../../../manager.php:81
+msgid "Administrator"
+msgstr ""
+
+#: ../../../manager.php:83
+msgid "Bigpoint-User"
+msgstr ""
+
+#: ../../../manager.php:106 ../../../manager.php:124
+#, fuzzy
+msgid "Multi-Accounts:"
+msgstr "Multi-Cuentas"
+
+#: ../../../manager.php:133
+msgid "Letzter Team-Tausch:"
+msgstr ""
+
+#: ../../../manager.php:144 ../../../spielbericht.php:286
+#: ../../../spieler.php:77 ../../../team.php:46 ../../../ver_stadion.php:211
+msgid "Wert"
+msgstr "Valor"
+
+#: ../../../manager.php:151
+msgid "Dabei seit"
+msgstr ""
+
+#: ../../../manager.php:156
+msgid "noch keine"
+msgstr ""
+
+#: ../../../manager.php:201 ../../../manager.php:204 ../../../manager.php:208
+#: ../../../manager.php:228 ../../../manager.php:236 ../../../manager.php:241
+#, fuzzy
+msgid "Testspiel vereinbaren"
+msgstr "Amistosos"
+
+#: ../../../manager.php:201
+msgid "Zu spät:"
+msgstr ""
+
+#: ../../../manager.php:201
+#, fuzzy
+msgid "In dieser Saison können leider keine Testspiele mehr vereinbart werden."
+msgstr "Aún no has invitado ningun usuario!"
+
+#: ../../../manager.php:204
+msgid "Zu teuer:"
+msgstr ""
+
+#: ../../../manager.php:204
+#, fuzzy
+msgid ""
+"Im Moment hast Du leider nicht genügend Geld, um ein Testspiel vereinbaren "
+"zu können."
+msgstr "¡No dispones de suficiente dinero para comprar este jugador!"
+
+#: ../../../manager.php:209 ../../../passwort_vergessen.php:112
+#: ../../../testspiele.php:81 ../../../testspiele.php:119
+#: ../../../ver_personal.php:292 ../../../ver_personal.php:308
+#: ../../../ver_personal.php:320 ../../../ver_stadion.php:287
+msgid "Wichtig:"
+msgstr "Atención:"
+
+#: ../../../manager.php:228
+msgid "Eure Vereine haben keine freien Termine mehr für ein Testspiel."
+msgstr ""
+
+#: ../../../manager.php:241
+msgid "Der Verein hat kein Interesse an einem Testspiel."
+msgstr ""
+
+#: ../../../manager.php:270
+msgid "Gästebuch"
+msgstr ""
+
+#: ../../../manager.php:283 ../../../taktik.php:180
+msgid "Löschen"
+msgstr "Borrar"
+
+#: ../../../manager.php:303
+msgid "Infotext"
+msgstr ""
+
+#: ../../../manager.php:307 ../../../notizen.php:55 ../../../taktik.php:149
+#: ../../../taktik.php:171
+msgid "Speichern"
+msgstr "Guardar"
+
+#: ../../../managerPruefung.php:11
+msgid "Erfolgreich bestanden"
+msgstr ""
+
+#: ../../../managerPruefung.php:14
+#, fuzzy
+msgid "Noch nicht abgeschlossen"
+msgstr "Tiro débil."
+
+#: ../../../managerPruefung.php:26
+msgid ""
+"Der Vorstand Deines Klubs hat viel Vertrauen in Dich. Aber bevor Du "
+"Transfers aushandeln darfst, sollst Du erst alle Aufgaben dieser Manager-"
+"Prüfung erfolgreich abschließen."
+msgstr ""
+
+#: ../../../managerPruefung.php:27
+#, fuzzy
+msgid "Prüfung"
+msgstr "Mánager"
+
+#: ../../../managerPruefung.php:28
+msgid "Registriere Dich im Spiel und aktiviere Deinen Account."
+msgstr ""
+
+#: ../../../managerPruefung.php:29
+msgid "Wähle nach dem ersten Login Dein Team und Deine Liga."
+msgstr ""
+
+#: ../../../managerPruefung.php:44 ../../../zz2.php:167
+msgid "Abgeschlossen"
+msgstr "Cerrado"
 
 #: ../../../manager_der_saison.php:2 ../../../manager_der_saison.php:4
 #: ../../../team.php:118
@@ -3401,7 +3545,7 @@ msgid "mind. Halbfinale"
 msgstr "Copa Nacional: Semifinal"
 
 #: ../../../manager_der_saison.php:45 ../../../manager_der_saison.php:53
-#: ../../../pokal.php:138 ../../../zzserver.php:230 ../../../zzserver.php:243
+#: ../../../pokal.php:138 ../../../zzserver.php:238 ../../../zzserver.php:251
 #, fuzzy
 msgid "Finale"
 msgstr "Finanzas"
@@ -3488,7 +3632,7 @@ msgstr ""
 
 #: ../../../manager_der_saison.php:185 ../../../stat_cupsieger.php:45
 #: ../../../stat_meister.php:41 ../../../stat_pokalsieger.php:19
-#: ../../../transfermarkt_auktion.php:144 ../../../zz2.php:184
+#: ../../../transfermarkt_auktion.php:144 ../../../zz2.php:181
 msgid "Saison"
 msgstr "Temporada"
 
@@ -3513,7 +3657,7 @@ msgid "Diesen User nicht mehr ignorieren"
 msgstr "Dejar de ignorar este usuario"
 
 #: ../../../marktschreier.php:2 ../../../marktschreier.php:4
-#: ../../../zz2.php:171
+#: ../../../zz2.php:168
 msgid "Marktschreier"
 msgstr "Márketing"
 
@@ -3535,15 +3679,15 @@ msgstr ""
 
 #: ../../../marktschreier.php:25 ../../../pokal.php:55 ../../../support.php:23
 #, fuzzy
-msgid "Ballmanager-Team."
-msgstr "Charla de Mánagers"
+msgid "Support-Team."
+msgstr "Soporte"
 
 #: ../../../marktschreier.php:40
 msgid "Angebote auf dem Markt"
 msgstr "Ofertas en el mercado"
 
 #: ../../../multiAccounts.php:2 ../../../multiAccounts.php:214
-#: ../../../multiSperre.php:3 ../../../multiSperre.php:5 ../../../zz2.php:256
+#: ../../../multiSperre.php:3 ../../../multiSperre.php:5 ../../../zz2.php:253
 msgid "Multi-Accounts"
 msgstr "Multi-Cuentas"
 
@@ -3679,10 +3823,6 @@ msgstr ""
 "favor contáctanos via email a la siguiente dirección:"
 
 #: ../../../multiSperre.php:10
-msgid "Kontakt"
-msgstr "Contacto"
-
-#: ../../../multiSperre.php:11
 #, fuzzy
 msgid "Deinen Account löschen"
 msgstr "Eliminar cuenta"
@@ -3758,7 +3898,7 @@ msgid "Namen ändern"
 msgstr "Cambiar nombre"
 
 #: ../../../neueAccounts.php:2 ../../../neueAccounts.php:10
-#: ../../../zz2.php:259
+#: ../../../zz2.php:256
 msgid "Neue Accounts"
 msgstr "Cuentas nuevas"
 
@@ -3787,7 +3927,7 @@ msgstr "Este mánager ya ha sido contactado"
 msgid "Dieser Manager wurde bisher noch nicht angeschrieben"
 msgstr "Este mánager aún no fue contactado"
 
-#: ../../../notizen.php:2 ../../../notizen.php:49 ../../../zz2.php:151
+#: ../../../notizen.php:2 ../../../notizen.php:49 ../../../zz2.php:148
 msgid "Notizen"
 msgstr "Notas"
 
@@ -3803,11 +3943,7 @@ msgstr "Solo verás las últimas 25 notas."
 msgid "Neue Notiz erstellen"
 msgstr "Agregar nueva nota"
 
-#: ../../../notizen.php:55 ../../../taktik.php:149 ../../../taktik.php:171
-msgid "Speichern"
-msgstr "Guardar"
-
-#: ../../../passwort_vergessen.php:3 ../../../passwort_vergessen.php:106
+#: ../../../passwort_vergessen.php:3 ../../../passwort_vergessen.php:109
 msgid "Passwort vergessen"
 msgstr "¿Olvidaste tu contraseña?"
 
@@ -3841,7 +3977,7 @@ msgstr ""
 "abusado por otra persona. La solicitud ha sido enviada desde la dirección IP "
 "siguiente:"
 
-#: ../../../passwort_vergessen.php:97
+#: ../../../passwort_vergessen.php:100
 msgid ""
 "Der Vorgang war erfolgreich. Wir senden Dir jetzt eine E-Mail mit weiteren "
 "Informationen zu."
@@ -3849,7 +3985,7 @@ msgstr ""
 "El proceso ha sido exitoso. Ahora te estamos enviando un correo electrónico "
 "con más información."
 
-#: ../../../passwort_vergessen.php:102
+#: ../../../passwort_vergessen.php:105
 msgid ""
 "Es konnte kein User mit der angegebenen E-Mail-Adresse gefunden werden. "
 "Bitte versuche es noch einmal."
@@ -3857,7 +3993,7 @@ msgstr ""
 "No hemos podido encontrar ningún usuario con esa dirección de correo "
 "electrónico. Por favor, intenta de nuevo."
 
-#: ../../../passwort_vergessen.php:108
+#: ../../../passwort_vergessen.php:111
 msgid ""
 "Du hast Dein Passwort vergessen? Dann gib hier bitte einfach die E-Mail-"
 "Adresse ein, mit der Du Dich registriert hast. Wir schicken Dir dann eine E-"
@@ -3867,14 +4003,7 @@ msgstr ""
 "a continuación que utilizaste para registrarte y te enviaremos un correo "
 "electrónico con más información acerca de cómo restablecer su contraseña."
 
-#: ../../../passwort_vergessen.php:109 ../../../testspiele.php:99
-#: ../../../testspiele.php:137 ../../../ver_personal.php:292
-#: ../../../ver_personal.php:308 ../../../ver_personal.php:320
-#: ../../../ver_stadion.php:287
-msgid "Wichtig:"
-msgstr "Atención:"
-
-#: ../../../passwort_vergessen.php:109
+#: ../../../passwort_vergessen.php:112
 msgid ""
 "Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang "
 "gültig. Danach musst Du die E-Mail erneut anfordern."
@@ -3882,7 +4011,7 @@ msgstr ""
 "El enlace que te enviamos en el correo electrónico es válido sólo por cinco "
 "horas. Después de eso debes solicitarlo de nuevo."
 
-#: ../../../passwort_vergessen.php:111
+#: ../../../passwort_vergessen.php:114
 msgid "E-Mail-Adresse:"
 msgstr "Dirección de correo electrónico:"
 
@@ -3906,22 +4035,22 @@ msgid ""
 "nächste Runde erreicht."
 msgstr ""
 
-#: ../../../pokal.php:134 ../../../zzserver.php:226 ../../../zzserver.php:239
+#: ../../../pokal.php:134 ../../../zzserver.php:234 ../../../zzserver.php:247
 #, fuzzy
 msgid "Vorrunde"
 msgstr "Copa Nacional: Preliminares"
 
-#: ../../../pokal.php:135 ../../../zzserver.php:227 ../../../zzserver.php:240
+#: ../../../pokal.php:135 ../../../zzserver.php:235 ../../../zzserver.php:248
 #, fuzzy
 msgid "Achtelfinale"
 msgstr "Copa Nacional: Octavos de final"
 
-#: ../../../pokal.php:136 ../../../zzserver.php:228 ../../../zzserver.php:241
+#: ../../../pokal.php:136 ../../../zzserver.php:236 ../../../zzserver.php:249
 #, fuzzy
 msgid "Viertelfinale"
 msgstr "Copa Nacional: Cuartos de final"
 
-#: ../../../pokal.php:137 ../../../zzserver.php:229 ../../../zzserver.php:242
+#: ../../../pokal.php:137 ../../../zzserver.php:237 ../../../zzserver.php:250
 #, fuzzy
 msgid "Halbfinale"
 msgstr "Copa Nacional: Semifinal"
@@ -4020,7 +4149,7 @@ msgstr "Bandeja de salida"
 
 #: ../../../postausgang.php:30 ../../../posteingang.php:2
 #: ../../../posteingang.php:15 ../../../posteingang.php:39
-#: ../../../zz2.php:247
+#: ../../../zz2.php:244
 msgid "Posteingang"
 msgstr "Bandeja de entrada"
 
@@ -4045,7 +4174,7 @@ msgid "Alle als gelesen markieren"
 msgstr "Marcar todos como leídos"
 
 #: ../../../protokoll.php:2 ../../../protokoll.php:20
-#: ../../../protokoll.php:99 ../../../zz2.php:150
+#: ../../../protokoll.php:99 ../../../zz2.php:147
 msgid "Protokoll"
 msgstr "Notificaciones"
 
@@ -4085,18 +4214,6 @@ msgid ""
 msgstr ""
 "Sólo puedes participar en este juego si aceptas las reglas del juego. De lo "
 "contrario, te recomendamos que borres tu cuenta en \"Ajustes\"."
-
-#: ../../../regeln.php:31
-msgid ""
-"Diese Nutzungsbedingungen (&quot;Regeln&quot;) legen fest, wie Du (&quot;der "
-"User&quot;) die Webseite unter www.ballmanager.de (&quot;Ballmanager&quot;) "
-"nutzen darfst. Mit der Nutzung dieser Webseite erklärst Du, dass Du mit den "
-"Regeln auf dieser Seite einverstanden bist."
-msgstr ""
-"Estos términos de uso (% quot; las Reglas \") determinan como debes (\" el "
-"Usuario \") utilizar este sitio web y todos los servicios ofrecidos en "
-"nuestras páginas (\" la solicitud \"). Mediante el uso de esta solicitud "
-"declaras estar de acuerdo con las Reglas que figuran en esta página."
 
 #: ../../../regeln.php:32
 msgid ""
@@ -4277,7 +4394,8 @@ msgstr ""
 "bienes"
 
 #: ../../../regeln.php:68
-msgid "Teil IV: Aufgaben und Funktion des Ballmanager-Teams"
+#, fuzzy
+msgid "Teil IV: Aufgaben und Funktion des Support-Teams"
 msgstr "Parte IV: El papel y la función del equipo de Ballmanager"
 
 #: ../../../regeln.php:70
@@ -4323,8 +4441,8 @@ msgstr ""
 "comunidad tanto en las palabras como en los hechos."
 
 #: ../../../regeln.php:78
-msgid "Teil V: Ballmanager"
-msgstr "Parte V: Ballmanager"
+msgid "Teil V: Das Spiel"
+msgstr ""
 
 #: ../../../regeln.php:80
 msgid ""
@@ -4347,13 +4465,6 @@ msgid ""
 msgstr ""
 "El juego está en constante evolución ya sea en el cambio de funciones, "
 "añadido o eliminado."
-
-#: ../../../regeln.php:83
-msgid ""
-"Ballmanager behält sich vor, den Zugang ohne Angabe von Gründen zu sperren "
-"bzw. Accounts zu löschen. Dabei ist auch keine Benachrichtigung im Voraus "
-"nötig."
-msgstr ""
 
 #: ../../../regeln.php:84
 msgid ""
@@ -4384,28 +4495,13 @@ msgid ""
 "nicht gestattet."
 msgstr ""
 
-#: ../../../regeln.php:88
-msgid "Ballmanager behält sich vor, diese Regeln jederzeit ändern zu können."
-msgstr ""
-"Ballmanager se reserva el derecho de modificar estas reglas en cualquier "
-"momento."
-
-#: ../../../regeln.php:90 ../../../zz3.php:10
+#: ../../../regeln.php:90 ../../../zz3.php:11
 msgid "Datenschutz"
 msgstr "Política de Privacidad"
 
 #: ../../../regeln.php:91
 msgid "Keine Weitergabe der Daten:"
 msgstr "Privacidad de los datos:"
-
-#: ../../../regeln.php:92
-msgid ""
-"Die Betreiber der Webseite unter www.ballmanager.de (&quot;"
-"Ballmanager&quot;) geben grundsätzlich keine Daten von Benutzern an Dritte "
-"weiter. Ausnahmen sind Fälle, in denen Ballmanager.de gesetzlich oder durch "
-"Entscheidungen von Gerichten dazu verpflichtet ist, und Fälle, in denen die "
-"Daten zur Strafverfolgung benötigt werden."
-msgstr ""
 
 #: ../../../regeln.php:93
 msgid "Akzeptieren der Datenschutzerklärung:"
@@ -4425,9 +4521,9 @@ msgstr "Dirección de IP"
 
 #: ../../../regeln.php:96
 msgid ""
-"Beim Aufrufen, Lesen und Benutzen von Seiten unter www.ballmanager.de wird "
-"die IP-Adresse des Users in anonymisierter Form gespeichert. Zum einen wird "
-"die aktuelle IP-Adresse als MD5-Hash (Beispiel: "
+"Beim Aufrufen, Lesen und Benutzen einzelner Teile der Webseite wird die IP-"
+"Adresse des Users in anonymisierter Form gespeichert. Zum einen wird die "
+"aktuelle IP-Adresse als MD5-Hash (Beispiel: "
 "d41d8cd98f00b204e9800998ecf8427e) gespeichert. Zum anderen wird die IP-"
 "Adresse gespeichert, nachdem die letzten beiden Oktetts gelöscht wurden "
 "(Beispiel: 123.123.XXX.XXX)."
@@ -4585,24 +4681,9 @@ msgstr ""
 msgid "Änderungen an dieser Datenschutzerklärung:"
 msgstr "Modificaciones a esta declaración de privacidad:"
 
-#: ../../../regeln.php:124
-msgid ""
-"Ballmanager behält sich vor, jederzeit Änderungen an dieser "
-"Datenschutzerklärung durchzuführen."
-msgstr ""
-"Ballmanager se reserva el derecho para hacer cambios a esta Política de "
-"Privacidad en cualquier momento."
-
 #: ../../../regeln.php:125
 msgid "Verlinkte Webseiten:"
 msgstr "Sitios relacionados:"
-
-#: ../../../regeln.php:126
-msgid ""
-"Auf den einzelnen Seiten dieses Projekts sind verschiedene externe Webseiten "
-"verlinkt. Für diese Seiten gilt die obige Erklärung nicht und Ballmanager "
-"ist nicht für die Seiten verantwortlich."
-msgstr ""
 
 #: ../../../regeln.php:127
 msgid "Weitere Informationen:"
@@ -4654,10 +4735,6 @@ msgid ""
 "wurden noch nicht gespeichert."
 msgstr "Aún puedes cancelar tu registro. Tus datos no se ha guardado todavia."
 
-#: ../../../registrierung.php:12
-msgid "Ballmanager: Willkommen"
-msgstr "Ballmanager: Bienvenido"
-
 #: ../../../registrierung.php:68
 #, fuzzy
 msgid "Dein Passwort lautet:"
@@ -4699,11 +4776,6 @@ msgstr "Actualizar"
 #: ../../../spielbericht.php:261
 msgid "Herzlich willkommen im Stadion. Heute findet das Spiel zwischen "
 msgstr "Bienvenidos al estadio. El partido de hoy es entre"
-
-#: ../../../spielbericht.php:286 ../../../spieler.php:77 ../../../team.php:46
-#: ../../../ver_stadion.php:211
-msgid "Wert"
-msgstr "Valor"
 
 #: ../../../spielbericht.php:290
 msgid "Begegnung"
@@ -4825,10 +4897,6 @@ msgstr ""
 #: ../../../spieler_historie.php:42
 msgid "außerhalb Europas"
 msgstr "Fuera de Europa"
-
-#: ../../../spieler.php:120 ../../../spieler.php:123
-msgid "unbekannt"
-msgstr "desconocido"
 
 #: ../../../spieler.php:123 ../../../spieler.php:126
 #, fuzzy
@@ -5090,7 +5158,7 @@ msgid "Welches Teams haben den Cup schon gewonnen? Wer war ihr Finalgegner?"
 msgstr "¿Qué equipos han ganado la Copa Nacional? ¿Contra quién fue su final?"
 
 #: ../../../stat_cupsieger.php:46 ../../../stat_pokalsieger.php:20
-#: ../../../zzserver.php:231
+#: ../../../zzserver.php:239
 msgid "Sieger"
 msgstr "Ganador"
 
@@ -5423,8 +5491,8 @@ msgid ""
 "angezeigt werden."
 msgstr ""
 
-#: ../../../support.php:2 ../../../support.php:282 ../../../zz2.php:209
-#: ../../../zz2.php:211
+#: ../../../support.php:2 ../../../support.php:282 ../../../zz2.php:206
+#: ../../../zz2.php:208
 msgid "Support"
 msgstr "Soporte"
 
@@ -5442,8 +5510,8 @@ msgstr "Crear tema"
 
 #: ../../../support.php:32
 msgid ""
-"Du hast Vorschläge, wie wir den Ballmanager besser gestalten können? Du hast "
-"noch Fragen zum Spiel oder Du hast einen Fehler gefunden?"
+"Du hast Vorschläge, wie wir das Spiel besser gestalten können? Du hast noch "
+"Fragen zum Spiel oder Du hast einen Fehler gefunden?"
 msgstr ""
 
 #: ../../../support.php:33
@@ -5615,11 +5683,6 @@ msgstr ""
 msgid "Sportliche Grüße"
 msgstr ""
 
-#: ../../../supportRequest.php:90
-#, fuzzy
-msgid "das Ballmanager-Team"
-msgstr "Charla de Mánagers"
-
 #: ../../../supportRequest.php:97
 #, fuzzy
 msgid "Der Status der Anfrage wurde geändert."
@@ -5692,7 +5755,7 @@ msgstr "Eliminar comentario"
 msgid "Guter Kommentar!"
 msgstr "¡Me gusta!"
 
-#: ../../../taktik.php:2 ../../../taktik.php:9 ../../../zz2.php:177
+#: ../../../taktik.php:2 ../../../taktik.php:9 ../../../zz2.php:174
 msgid "Taktik"
 msgstr "Tácticas"
 
@@ -5821,10 +5884,6 @@ msgstr ""
 #: ../../../taktik.php:171
 msgid "Name für neue Vorlage ..."
 msgstr ""
-
-#: ../../../taktik.php:180
-msgid "Löschen"
-msgstr "Borrar"
 
 #: ../../../taktik.php:182
 msgid "Erklärungen zu den einzelnen Einstellungen"
@@ -5974,7 +6033,7 @@ msgstr ""
 
 #: ../../../team.php:85 ../../../ver_finanzen.php:105
 #: ../../../ver_stadion.php:2 ../../../ver_stadion.php:315
-#: ../../../zz2.php:198
+#: ../../../zz2.php:195
 msgid "Stadion"
 msgstr "Estadio"
 
@@ -5990,7 +6049,7 @@ msgstr ""
 "(goles), MV: valor de mercado en millones €"
 
 #: ../../../testWuensche.php:2 ../../../testWuensche.php:4
-#: ../../../zz2.php:190
+#: ../../../zz2.php:187
 msgid "Testwünsche"
 msgstr "Ofertas de amistosos"
 
@@ -6015,42 +6074,42 @@ msgstr ""
 msgid "Wünsche nach Testspielen"
 msgstr ""
 
-#: ../../../testspiele.php:29 ../../../transfermarkt_leihe.php:104
+#: ../../../testspiele.php:11 ../../../transfermarkt_leihe.php:104
 msgid "Deine Anfrage wurde zurückgezogen."
 msgstr ""
 
-#: ../../../testspiele.php:51
+#: ../../../testspiele.php:33
 msgid ""
 "Andere Teams können Dir nun Testspiel-Anfragen senden, die Du hier annehmen "
 "oder ablehnen kannst."
 msgstr ""
 
-#: ../../../testspiele.php:54
+#: ../../../testspiele.php:36
 msgid "Ab sofort bekommst Du keine Testspiel-Anfragen mehr."
 msgstr ""
 
-#: ../../../testspiele.php:67
+#: ../../../testspiele.php:49
 msgid "Interesse an Testspielen?"
 msgstr "¿Te interesan los amistosos?"
 
-#: ../../../testspiele.php:70
+#: ../../../testspiele.php:52
 msgid "Ja, bin interessiert"
 msgstr "Si, estoy interesado"
 
-#: ../../../testspiele.php:71
+#: ../../../testspiele.php:53
 msgid "Nein, kein Interesse"
 msgstr "No, no me interesa"
 
-#: ../../../testspiele.php:76
+#: ../../../testspiele.php:58
 msgid "Entschädigung (Verband)"
 msgstr ""
 
-#: ../../../testspiele.php:89
+#: ../../../testspiele.php:71
 msgid ""
 "Zurzeit hast Du leider nicht genug Geld, um Testspiele vereinbaren zu können."
 msgstr ""
 
-#: ../../../testspiele.php:99 ../../../testspiele.php:137
+#: ../../../testspiele.php:81 ../../../testspiele.php:119
 msgid ""
 "Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams "
 "müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das "
@@ -6060,52 +6119,52 @@ msgstr ""
 "tienen que pagar una indemnización a la Asociación por amistoso, para que el "
 "juego sea aprobado."
 
-#: ../../../testspiele.php:100
+#: ../../../testspiele.php:82
 #, fuzzy
 msgid "Anfragender"
 msgstr "Solicitudes"
 
-#: ../../../testspiele.php:106
+#: ../../../testspiele.php:88
 msgid "Dein Co-Trainer hat eine Anfrage für ein Testspiel abgelehnt."
 msgstr ""
 
-#: ../../../testspiele.php:116
+#: ../../../testspiele.php:98
 msgid ""
 "Dein Co-Trainer hat diese Anfrage abgelehnt, weil Du an dem Tag schon ein "
 "Testspiel hast."
 msgstr ""
 
-#: ../../../testspiele.php:127
+#: ../../../testspiele.php:109
 msgid ""
 "Zurzeit keine Anfragen! Du kannst selbst bei anderen Vereinen anfragen, ob "
 "sie Interesse haben. Das Formular dazu findest Du im Profil jedes Managers. "
 "Anfragen können nur bis spätestens 24h vor dem Spieltag angenommen werden."
 msgstr ""
 
-#: ../../../testspiele.php:131
+#: ../../../testspiele.php:113
 msgid "Gesendete Angebote (bisher unbeantwortet)"
 msgstr "Ofertas enviadas (sin respuesta)"
 
-#: ../../../testspiele.php:138
+#: ../../../testspiele.php:120
 #, fuzzy
 msgid "Anfrage an"
 msgstr "Solicitudes"
 
-#: ../../../testspiele.php:138
+#: ../../../testspiele.php:120
 msgid "Spiel-Datum"
 msgstr "Fecha de juego"
 
-#: ../../../testspiele.php:145
+#: ../../../testspiele.php:127
 msgid ""
 "Zurzeit keine ausstehenden Angebote! Du kannst andere Vereine um ein "
 "Testspiel bitten. Das Formular dazu findest Du im Profil jedes Managers."
 msgstr ""
 
-#: ../../../testspiele.php:148
+#: ../../../testspiele.php:130
 msgid "Vereinbarte Testspiele"
 msgstr "Amistosos acordados"
 
-#: ../../../testspiele.php:180
+#: ../../../testspiele.php:162
 #, fuzzy
 msgid "Du hattest bisher keine Testspiele!"
 msgstr "Aún no has invitado ningun usuario!"
@@ -6287,11 +6346,11 @@ msgstr "Tu máxima oferta "
 #: ../../../transfermarkt_auktion.php:180
 #, php-format
 msgid ""
-"Wenn Du neu beim Ballmanager bist, kannst Du nur bis 125% des Marktwertes "
-"bieten. Nach 7 Tagen kannst du dann bis 250% bieten. Wenn Du schon 21 Tage "
-"dabei bist, kannst Du bis maximal 400% bieten. Schließlich kannst Du ab dem "
-"42. Tag sogar 800% und ab dem 84. Tag bis 1600% bieten, d.h. das "
-"Sechzehnfache vom Marktwert eines Spielers."
+"Wenn Du neu im Spiel bist, kannst Du nur bis 125% des Marktwertes bieten. "
+"Nach 7 Tagen kannst du dann bis 250% bieten. Wenn Du schon 21 Tage dabei "
+"bist, kannst Du bis maximal 400% bieten. Schließlich kannst Du ab dem 42. "
+"Tag sogar 800% und ab dem 84. Tag bis 1600% bieten, d.h. das Sechzehnfache "
+"vom Marktwert eines Spielers."
 msgstr ""
 
 #: ../../../transfermarkt_leihe.php:2 ../../../transfermarkt_leihe.php:57
@@ -6329,7 +6388,7 @@ msgid ""
 msgstr ""
 
 #: ../../../ver_buchungen.php:2 ../../../ver_buchungen.php:4
-#: ../../../zz2.php:196
+#: ../../../zz2.php:193
 msgid "Buchungen"
 msgstr "Transacciones"
 
@@ -6348,7 +6407,7 @@ msgid "Verwendungszweck"
 msgstr "Uso destinado"
 
 #: ../../../ver_finanzen.php:2 ../../../ver_finanzen.php:4
-#: ../../../zz2.php:195
+#: ../../../zz2.php:192
 msgid "Finanzen"
 msgstr "Finanzas"
 
@@ -6439,7 +6498,7 @@ msgstr "Este valor es una extrapolación para toda la temporada"
 msgid "Lotto, Testspiele, Entlassungen, Sanktionen"
 msgstr ""
 
-#: ../../../ver_lotto.php:2 ../../../zz2.php:199
+#: ../../../ver_lotto.php:2 ../../../zz2.php:196
 msgid "Lotto"
 msgstr "Lotería"
 
@@ -6535,7 +6594,7 @@ msgstr "Últimos premios"
 msgid "Höchste Gewinne"
 msgstr "Premios mas altos"
 
-#: ../../../ver_personal.php:2 ../../../zz2.php:197
+#: ../../../ver_personal.php:2 ../../../zz2.php:194
 msgid "Personal"
 msgstr "Personal"
 
@@ -6767,7 +6826,7 @@ msgid ""
 "laufen."
 msgstr ""
 
-#: ../../../vertraege.php:2 ../../../vertraege.php:4 ../../../zz2.php:180
+#: ../../../vertraege.php:2 ../../../vertraege.php:4 ../../../zz2.php:177
 msgid "Verträge"
 msgstr "Contratos"
 
@@ -6809,7 +6868,7 @@ msgstr ""
 "te asignemos un equipo. Te notificaremos via email y podrás continuar "
 "jugando instantaneamente."
 
-#: ../../../wio.php:2 ../../../wio.php:4 ../../../zz2.php:246
+#: ../../../wio.php:2 ../../../wio.php:4 ../../../zz2.php:243
 msgid "Wer ist online?"
 msgstr "¿Quién esta conectado?"
 
@@ -6817,35 +6876,27 @@ msgstr "¿Quién esta conectado?"
 msgid "Aktiv"
 msgstr "Activo"
 
-#: ../../../wio.php:37
-msgid "Support-Team"
-msgstr "Soporte"
-
-#: ../../../zz1.php:50
-msgid "Der Ballmanager hat Geburtstag"
-msgstr ""
-
-#: ../../../zz1.php:51
+#: ../../../zz1.php:59
 msgid "Es ist Weihnachten"
 msgstr ""
 
-#: ../../../zz1.php:52
+#: ../../../zz1.php:60
 msgid "Das neue Jahr hat begonnen"
 msgstr ""
 
-#: ../../../zz1.php:53
+#: ../../../zz1.php:61
 msgid "Es ist Maifeiertag"
 msgstr ""
 
-#: ../../../zz1.php:54
+#: ../../../zz1.php:62
 msgid "Es ist Tag der Deutschen Einheit"
 msgstr ""
 
-#: ../../../zz1.php:55
+#: ../../../zz1.php:63
 msgid "Es ist Ostern"
 msgstr ""
 
-#: ../../../zz1.php:58
+#: ../../../zz1.php:66
 msgid "Lotto spielen"
 msgstr "Jugar a la lotería"
 
@@ -6867,115 +6918,111 @@ msgstr "¡Esta función no esta disponible en la cuenta demo!"
 msgid "Top-Manager"
 msgstr "Mejores mánagers"
 
-#: ../../../zz2.php:62
+#: ../../../zz2.php:60
 msgid "Startseite"
 msgstr "Inicio"
 
-#: ../../../zz2.php:65
+#: ../../../zz2.php:63
 msgid "Desktop"
 msgstr "Escritorio"
 
-#: ../../../zz2.php:68
+#: ../../../zz2.php:66
 msgid "Mobil"
 msgstr "Celulares"
 
-#: ../../../zz2.php:149
+#: ../../../zz2.php:146
 msgid "Zentrale"
 msgstr "Cede"
 
-#: ../../../zz2.php:153 ../../../zz2.php:218
+#: ../../../zz2.php:150 ../../../zz2.php:215
 msgid "Logout"
 msgstr "Salir"
 
-#: ../../../zz2.php:156 ../../../zz2.php:159
+#: ../../../zz2.php:153 ../../../zz2.php:156
 msgid "Ranking"
 msgstr "Ranking"
 
-#: ../../../zz2.php:160
+#: ../../../zz2.php:157
 msgid "Statistiken"
 msgstr "Estadísticas"
 
-#: ../../../zz2.php:161
+#: ../../../zz2.php:158
 msgid "Manager-Wahl"
 msgstr "Mánager del Año"
 
-#: ../../../zz2.php:167
+#: ../../../zz2.php:164
 msgid "Kaufen"
 msgstr "Comprar"
 
-#: ../../../zz2.php:168
+#: ../../../zz2.php:165
 msgid "Leihen"
 msgstr "Préstamo"
 
-#: ../../../zz2.php:170
-msgid "Abgeschlossen"
-msgstr "Cerrado"
-
-#: ../../../zz2.php:187
+#: ../../../zz2.php:184
 msgid "Int. Pokal"
 msgstr "Copa Internacional"
 
-#: ../../../zz2.php:188
+#: ../../../zz2.php:185
 msgid "Nat. Cup"
 msgstr "Copa Nacional"
 
-#: ../../../zz2.php:193
+#: ../../../zz2.php:190
 msgid "Verein"
 msgstr "Club"
 
-#: ../../../zz2.php:206
+#: ../../../zz2.php:203
 msgid "Ligatausch"
 msgstr "Intercambiar ligas"
 
-#: ../../../zz2.php:212
+#: ../../../zz2.php:209
 msgid "Post ans Team"
 msgstr "Equipo de soporte"
 
-#: ../../../zz2.php:213
+#: ../../../zz2.php:210
 msgid "Kurztipps"
 msgstr "Consejos rápidos"
 
-#: ../../../zz2.php:215
+#: ../../../zz2.php:212
 msgid "Archiv"
 msgstr "Archivo"
 
-#: ../../../zz2.php:226
+#: ../../../zz2.php:223
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: ../../../zz2.php:239
+#: ../../../zz2.php:236
 msgid "Demo-Account"
 msgstr "Cuenta-Demo"
 
-#: ../../../zz2.php:241
+#: ../../../zz2.php:238
 msgid "Username:"
 msgstr "Usuario:"
 
-#: ../../../zz2.php:247
+#: ../../../zz2.php:244
 msgid "ungelesen"
 msgstr "no leídos"
 
-#: ../../../zz2.php:249
+#: ../../../zz2.php:246
 msgid "online"
 msgstr "conectados"
 
-#: ../../../zz2.php:250
+#: ../../../zz2.php:247
 msgid "Mein Profil"
 msgstr "Mi perfil"
 
-#: ../../../zz2.php:254
+#: ../../../zz2.php:251
 msgid "Support-Menü"
 msgstr "Soporte Menu"
 
-#: ../../../zz2.php:261
+#: ../../../zz2.php:258
 msgid "Kontrollzentrum"
 msgstr "Panel de control"
 
-#: ../../../zz2.php:266
+#: ../../../zz2.php:263
 msgid "Tipp des Tages"
 msgstr "Consejo del día"
 
-#: ../../../zz2.php:279
+#: ../../../zz2.php:276
 msgid "Nächste Spiele"
 msgstr "Próximos partidos"
 
@@ -6983,11 +7030,16 @@ msgstr "Próximos partidos"
 msgid "Sprache:"
 msgstr "Idioma:"
 
-#: ../../../zz3.php:11
+#: ../../../zz3.php:9
+#, fuzzy
+msgid "Android-App"
+msgstr "Android™-App"
+
+#: ../../../zz3.php:12
 msgid "Open Source"
 msgstr "Código abierto"
 
-#: ../../../zz3.php:12
+#: ../../../zz3.php:13
 msgid ""
 "Alle Vereine, Spieler und Sponsoren sind frei erfunden und haben keinen "
 "Bezug zu realen Ligen. Das Geld im Spiel ist nur virtuell und es erfolgen "
@@ -6997,7 +7049,7 @@ msgstr ""
 "ninguna relación con las ligas reales. El dinero es sólo virtual y nunca se "
 "efectuan pagos."
 
-#: ../../../zzserver.php:238
+#: ../../../zzserver.php:246
 msgid "Qualifikation"
 msgstr "Clasificación"
 
@@ -7255,7 +7307,7 @@ msgstr ""
 #: ../../../tipps_des_tages.php.txt:34
 msgid ""
 "Dein persönliches Maximalgebot bei Auktionen hängt davon ab, wie lange Du "
-"schon beim Ballmanager dabei bist."
+"schon dabei bist."
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:35
@@ -7333,9 +7385,10 @@ msgid ""
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:46
+#, fuzzy
 msgid ""
-"Das <i>4-4-2</i> ist das einzige Spielsystem beim Ballmanager. Trotzdem "
-"kannst Du viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-"
+"Das <i>4-4-2</i> ist das einzige verfügbare Spielsystem. Trotzdem kannst Du "
+"viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-"
 "Einstellungen."
 msgstr ""
 "El <i>4-4-2</i> es la única formación disponible en Ballmanager. Sin "
@@ -7444,7 +7497,7 @@ msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:61
 msgid ""
-"Eine Saison beim Ballmanager dauert 22 Tage. Nach 11 Hinrunden- und 11 "
+"Eine Saison im Spiel dauert 22 Tage. Nach 11 Hinrunden- und 11 "
 "Rückrundenspielen endet eine Saison und die nächste beginnt. Dabei gibt es "
 "keinen Tag Pause zwischen den beiden Saisons."
 msgstr ""
@@ -7752,6 +7805,55 @@ msgstr ""
 "En los clásicos, cuando ambos equipos son de la misma ciudad, los jugadores "
 "siempre juegan mas fuerte y con mayor agresividad. Y por supuesto, también "
 "van más espectadores!"
+
+#, fuzzy
+#~ msgid "Ballmanager-Team"
+#~ msgstr "Charla de Mánagers"
+
+#, fuzzy
+#~ msgid "Gefällt Dir der Ballmanager?"
+#~ msgstr "Parte V: Ballmanager"
+
+#, fuzzy
+#~ msgid "Ballmanager-Team."
+#~ msgstr "Charla de Mánagers"
+
+#~ msgid "Kontakt"
+#~ msgstr "Contacto"
+
+#~ msgid ""
+#~ "Diese Nutzungsbedingungen (&quot;Regeln&quot;) legen fest, wie Du (&quot;"
+#~ "der User&quot;) die Webseite unter www.ballmanager.de (&quot;"
+#~ "Ballmanager&quot;) nutzen darfst. Mit der Nutzung dieser Webseite "
+#~ "erklärst Du, dass Du mit den Regeln auf dieser Seite einverstanden bist."
+#~ msgstr ""
+#~ "Estos términos de uso (% quot; las Reglas \") determinan como debes (\" "
+#~ "el Usuario \") utilizar este sitio web y todos los servicios ofrecidos en "
+#~ "nuestras páginas (\" la solicitud \"). Mediante el uso de esta solicitud "
+#~ "declaras estar de acuerdo con las Reglas que figuran en esta página."
+
+#~ msgid "Teil V: Ballmanager"
+#~ msgstr "Parte V: Ballmanager"
+
+#~ msgid ""
+#~ "Ballmanager behält sich vor, diese Regeln jederzeit ändern zu können."
+#~ msgstr ""
+#~ "Ballmanager se reserva el derecho de modificar estas reglas en cualquier "
+#~ "momento."
+
+#~ msgid ""
+#~ "Ballmanager behält sich vor, jederzeit Änderungen an dieser "
+#~ "Datenschutzerklärung durchzuführen."
+#~ msgstr ""
+#~ "Ballmanager se reserva el derecho para hacer cambios a esta Política de "
+#~ "Privacidad en cualquier momento."
+
+#~ msgid "Ballmanager: Willkommen"
+#~ msgstr "Ballmanager: Bienvenido"
+
+#, fuzzy
+#~ msgid "das Ballmanager-Team"
+#~ msgstr "Charla de Mánagers"
 
 #~ msgid "Es wurden %d Nachrichten aus Deinem Posteingang gelöscht."
 #~ msgstr "Se eliminaron %d mensajes del buzón de entrada."

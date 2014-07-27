@@ -17,6 +17,16 @@ define('CONFIG_SITE_NAME', 'Ballmanager');
 define('CONFIG_SITE_DOMAIN', 'www.ballmanager.de');
 define('CONFIG_SITE_EMAIL', 'info@ballmanager.de');
 
+// special users and roles
+define('CONFIG_OFFICIAL_USER', '18a393b5e23e2b9b4da106b06d8235f3');
+define('CONFIG_DEMO_USER', '1d0a7ce36ffa946eea1a52394fcdaebf');
+define('CONFIG_PROTECTED_USERS', serialize(array( // IDs of users that are excluded from multiple account detection, HTML filtering in support area, bans etc.
+    CONFIG_OFFICIAL_USER,
+    CONFIG_DEMO_USER,
+    'c4ca4238a0b923820dcc509a6f75849b'
+)));
+
+// email settings (PHPMailer may be used instead of mail() function)
 define('CONFIG_EMAIL_PHP_MAILER', false); // whether to use PHPMailer (with SMTP) instead of the mail() function
 define('CONFIG_EMAIL_HOST', ''); // SMTP server address
 define('CONFIG_EMAIL_PORT', ''); // SMTP server port

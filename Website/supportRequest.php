@@ -3,7 +3,7 @@
 if (isset($_GET['likeComment'])) {
 	include 'zzserver.php';
 	include 'zzcookie.php';
-	if ($cookie_id != DEMO_USER_ID) {
+	if ($cookie_id != CONFIG_DEMO_USER) {
 		$likeComment = intval(secure2id(trim($_GET['likeComment'])));
 		$getAuthor1 = "SELECT userID FROM ".$prefix."supportComments WHERE id = ".$likeComment;
 		$getAuthor2 = mysql_query($getAuthor1);
@@ -78,7 +78,7 @@ $entryNumber .= ')';
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('read_support');
-if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1 && $cookie_id != DEMO_USER_ID) {
+if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1 && $cookie_id != CONFIG_DEMO_USER) {
 	if (isset($_GET['setOpen'])) {
 		$setOpen = intval($_GET['setOpen']);
 		$up1 = "UPDATE ".$prefix."supportRequests SET open = ".$setOpen." WHERE id = ".$requestID;
@@ -88,7 +88,7 @@ if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3
 		if ($setOpen != 1) {
             $betreff = _('Support: Anfrage #%s', id2secure($sql3['id']));
             $notifyText = _('Hallo').',<br /><br />'._('vielen Dank für Deine Beteiligung im Support-Forum. Eine Deiner Anfragen wurde jetzt geschlossen, Du findest sie hier:').'<br />http://'.CONFIG_SITE_DOMAIN.'/supportRequest.php?id='.id2secure($sql3['id']).'<br /><br />'._('Sportliche Grüße').'<br />'.CONFIG_SITE_NAME.'<br />'.CONFIG_SITE_DOMAIN;
-            $sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".$sql3['author']."', '".$betreff."', '".$notifyText."', ".time().", '')";
+            $sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".CONFIG_OFFICIAL_USER."', '".$sql3['author']."', '".$betreff."', '".$notifyText."', ".time().", '')";
 			$sql2 = mysql_query($sql1);
 			$sql1 = "UPDATE ".$prefix."pn SET ids = MD5(id) WHERE ids = ''";
 			$sql2 = mysql_query($sql1);
@@ -97,7 +97,7 @@ if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3
 		addInfoBox(_('Der Status der Anfrage wurde geändert.'));
 	}
 }
-if (isset($_GET['delCom']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['delCom']) && $cookie_id != CONFIG_DEMO_USER) {
 	$delCom = secure2id($_GET['delCom']);
 	$up1 = "UPDATE ".$prefix."supportComments SET deleted = 1 WHERE id = ".$delCom;
 	if ($_SESSION['status'] != 'Admin' && $_SESSION['status'] != 'Helfer') {
@@ -160,7 +160,7 @@ if ($sql3['category'] == 'Vorschlag') {
 else {
 	$votes3 = 1;
 }
-if (isset($_POST['myComment']) && $sql3['open'] == 1 && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['myComment']) && $sql3['open'] == 1 && $cookie_id != CONFIG_DEMO_USER) {
 	$myComment = mysql_real_escape_string(trim(strip_tags(nl2br($_POST['myComment']), '<br>')));
 	$up1 = "INSERT INTO ".$prefix."supportComments (userID, requestID, zeit, text) VALUES ('".$cookie_id."', ".$requestID.", ".time().", '".$myComment."')";
 	$up2 = mysql_query($up1);
@@ -186,7 +186,7 @@ if (isset($_POST['myComment']) && $sql3['open'] == 1 && $cookie_id != DEMO_USER_
 	$unRead1 = "DELETE FROM ".$prefix."supportRead WHERE userID != '".$cookie_id."' AND anfrageID = ".$requestID;
 	$unRead2 = mysql_query($unRead1);
 }
-if (isset($_POST['ownRating']) && $votes3 == 0 && $sql3['open'] == 1 && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['ownRating']) && $votes3 == 0 && $sql3['open'] == 1 && $cookie_id != CONFIG_DEMO_USER) {
 	switch ($_POST['ownRating']) {
 		case 'Gut!': $sqlPro = 1; $sqlCon = 0; break;
 		case 'Schlecht!': $sqlPro = 0; $sqlCon = 1; break;

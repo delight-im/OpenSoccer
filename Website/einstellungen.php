@@ -3,7 +3,7 @@
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
 <?php
-if (isset($_POST['accDelPlus']) && isset($_POST['accDelMinus']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['accDelPlus']) && isset($_POST['accDelMinus']) && $cookie_id != CONFIG_DEMO_USER) {
 	$accDelPlus = mysql_real_escape_string(trim(strip_tags($_POST['accDelPlus'])));
 	$accDelMinus = mysql_real_escape_string(trim(strip_tags($_POST['accDelMinus'])));
 	$sql1 = "INSERT INTO ".$prefix."accDel (user, zeit, plus, minus) VALUES ('".$cookie_username."', ".time().", '".$accDelPlus."', '".$accDelMinus."')";
@@ -63,14 +63,14 @@ if (mysql_num_rows($get_urlaub5) > 0) {
 else {
 	$aktueller_urlaub = '';
 }
-if (isset($_POST['urlaub_abbrechen']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['urlaub_abbrechen']) && $cookie_id != CONFIG_DEMO_USER) {
 	if ($_POST['urlaub_abbrechen'] == '1') {
 		$cancelUrlaub1 = "DELETE FROM ".$prefix."urlaub WHERE user = '".$cookie_id."'";
 		$cancelUrlaub2 = mysql_query($cancelUrlaub1);
 		addInfoBox(_('Dein Urlaub wurde abgebrochen. Du hast nun wieder die volle Kontrolle über Dein Team.'));
 	}
 }
-if (isset($_POST['pw_alt']) && isset($_POST['pw_neu1']) && isset($_POST['pw_neu2']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['pw_alt']) && isset($_POST['pw_neu1']) && isset($_POST['pw_neu2']) && $cookie_id != CONFIG_DEMO_USER) {
 $pw_meldung = _('Dein Passwort konnte leider nicht geändert werden. Bitte versuche es noch einmal!');
 	$pw_alt = trim($_POST['pw_alt']);
 	$pw_neu1 = trim($_POST['pw_neu1']);
@@ -98,7 +98,7 @@ $pw_meldung = _('Dein Passwort konnte leider nicht geändert werden. Bitte versu
         }
     }
 }
-if (isset($_POST['urlaub_ende']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['urlaub_ende']) && $cookie_id != CONFIG_DEMO_USER) {
 	if ($cookie_team != '__'.$cookie_id) {
 		if (!isset($_SESSION['urlaub_min'])) { $_SESSION['urlaub_min'] = 0; }
 		if (!isset($_SESSION['urlaub_max'])) { $_SESSION['urlaub_max'] = 0; }

@@ -50,7 +50,7 @@ if (isset($_POST['laufzeit']) && isset($_POST['spieler'])) {
 	$laufzeit = intval(trim($_POST['laufzeit']));
 	$spieler_id = mysql_real_escape_string(trim(strip_tags($_POST['spieler'])));
 	if ($laufzeit == 22 || $laufzeit == 44 || $laufzeit == 66) {
-		if ($cookie_id != DEMO_USER_ID) {
+		if ($cookie_id != CONFIG_DEMO_USER) {
 			$laufzeit_end = endOfDay(getTimestamp('+'.$laufzeit.' days'));
 			$ina = "SELECT marktwert, wiealt, vertrag, moral FROM ".$prefix."spieler WHERE ids = '".$spieler_id."' AND team = '".$cookie_team."'";
 			$inb = mysql_query($ina);

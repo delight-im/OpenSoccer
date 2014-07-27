@@ -3,7 +3,7 @@ if (!isset($_GET['id'])) { exit; }
 include 'zzserver.php';
 include 'zzcookie.php';
 $spieler = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
-if ($cookie_id != DEMO_USER_ID) {
+if ($cookie_id != CONFIG_DEMO_USER) {
 	$sql1 = "DELETE FROM ".$prefix."transfers WHERE bieter = '".$cookie_teamname."' AND spieler = '".$spieler."'";
 	$sql2 = mysql_query($sql1);
 }

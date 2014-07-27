@@ -69,7 +69,7 @@ if ($_SESSION['pMaxGebot'] == 0) {
 $multiListe = explode('-', $_SESSION['multiAccountList']);
 $weg1 = "UPDATE ".$prefix."spieler SET transfermarkt = 0 WHERE transfermarkt > 999998 AND team NOT IN (SELECT team FROM ".$prefix."users)"; // Computer-Spieler da PC nicht antworten kann
 $weg2 = mysql_query($weg1);
-if (isset($_GET['id']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['id']) && $cookie_id != CONFIG_DEMO_USER) {
 	if ($cookie_team != '__'.$cookie_id) {
 		$ids = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 		$anfa = "SELECT team FROM ".$prefix."spieler WHERE ids = '".$ids."' AND transfermarkt > 999998";

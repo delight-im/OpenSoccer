@@ -39,7 +39,7 @@ else {
 	$timeout = getTimestamp('-1 day');
 	$sql1 = "DELETE FROM ".$prefix."ligaChangeAnfragen WHERE zeit < ".$timeout;
 	$sql2 = mysql_query($sql1);
-	if (isset($_POST['wishTeam']) && $cookie_id != DEMO_USER_ID) {
+	if (isset($_POST['wishTeam']) && $cookie_id != CONFIG_DEMO_USER) {
 		$wishTeam = mysql_real_escape_string(trim(strip_tags($_POST['wishTeam'])));
 		$sql1 = "SELECT a.ids, b.land FROM ".$prefix."teams AS a JOIN ".$prefix."ligen AS b ON a.liga = b.ids WHERE a.name = '".$wishTeam."'";
 		$sql2 = mysql_query($sql1);
@@ -63,7 +63,7 @@ else {
 			}
 		}
 	}
-	if (isset($_POST['newTeam']) && isset($_POST['aktion']) && $cookie_id != DEMO_USER_ID) {
+	if (isset($_POST['newTeam']) && isset($_POST['aktion']) && $cookie_id != CONFIG_DEMO_USER) {
 		$newTeam = mysql_real_escape_string(trim(strip_tags($_POST['newTeam'])));
 		$sql1 = "DELETE FROM ".$prefix."ligaChangeAnfragen WHERE vonTeam = '".$newTeam."' AND anTeam = '".$cookie_team."'";
 		$sql2 = mysql_query($sql1);

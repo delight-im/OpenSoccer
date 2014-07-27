@@ -237,7 +237,7 @@ else {
 					// SPIELER VOM TRANSFERMARKT HOLEN ENDE
 					// WILLKOMMENS-POST SCHICKEN ANFANG
 					$willkommensText = 'Hallo '.$cookie_username.',<br /><br />herzlich willkommen bei '.CONFIG_SITE_NAME.'. Wir hoffen, du findest Dich hier schnell zurecht.<br />Damit Dir der Einstieg etwas leichter fällt, haben wir viele nützliche <a href="/tipps_des_tages.php">Tipps</a> gesammelt.<br />Wenn Du noch Fragen hast, helfen wir Dir auch gerne im <a href="/chat.php">Chat</a> oder in unserem <a href="/support.php">Support-Bereich</a> weiter.<br />Es wartet eine nette Community auf Dich :)<br /><br />Viel Spaß wünscht<br />'.CONFIG_SITE_NAME.'<br />'.CONFIG_SITE_DOMAIN;
-					$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".$cookie_id."', 'Willkommen bei '.CONFIG_SITE_NAME, '".$willkommensText."', '".time()."', '')";
+					$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".CONFIG_OFFICIAL_USER."', '".$cookie_id."', 'Willkommen bei '.CONFIG_SITE_NAME, '".$willkommensText."', '".time()."', '')";
 					$sql2 = mysql_query($sql1);
 					$sql1 = "UPDATE ".$prefix."pn SET ids = MD5(id) WHERE ids = ''";
 					$sql2 = mysql_query($sql1);

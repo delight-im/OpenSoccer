@@ -133,7 +133,7 @@ if (mysql_num_rows($ttc2) > 0) {
 	echo '<p><strong>'._('Letzter Team-Tausch:').'</strong> <a href="/team.php?id='.$ttc3['team2'].'">'.date('d.m.Y H:i', $ttc3['zeit']).'</a></p>';
 }
 // TEAM-TAUSCH MIT CODE ENDE
-if ($urlaub3 > 0 && $clearedID != 'c4ca4238a0b923820dcc509a6f75849b') {
+if ($urlaub3 > 0 && !in_array($clearedID, unserialize(CONFIG_PROTECTED_USERS))) {
 	echo '<p style="color:red">'.__('%s ist zurzeit im Urlaub!', $sql3['username']).'</p>';
 }
 ?>
@@ -242,7 +242,7 @@ if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 	}
 }
 // GAESTEBUCH ANFANG
-if (isset($_POST['gaestebuch_eintrag']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['gaestebuch_eintrag']) && $cookie_id != CONFIG_DEMO_USER) {
 	// CHAT-SPERREN ANFANG
 	$ban1 = "SELECT MAX(chatSperre) FROM ".$prefix."helferLog WHERE managerBestrafen = '".$cookie_id."'";
 	$ban2 = mysql_query($ban1);
@@ -260,7 +260,7 @@ if (isset($_POST['gaestebuch_eintrag']) && $cookie_id != DEMO_USER_ID) {
 	$gb_in1 = "INSERT INTO ".$prefix."chats (user, zeit, nachricht, liga) VALUES ('".$cookie_id."', ".time().", '".$gb_text."', 'GB".mysql_real_escape_string($_GET['id'])."')";
 	$gb_in2 = mysql_query($gb_in1);
 }
-if (isset($_GET['delGB']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['delGB']) && $cookie_id != CONFIG_DEMO_USER) {
 	$delGB = mysql_real_escape_string(trim(strip_tags($_GET['delGB'])));
 	$addSql = " AND (user = '".$cookie_id."' OR liga = 'GB".mysql_real_escape_string($cookie_id)."')";
 	if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') { $addSql = ""; }
@@ -292,7 +292,7 @@ function br2nl($text) {
 	return str_replace('<br />', '', $text);
 }
 $isOwnProfile = FALSE;
-if ($_GET['id'] == $cookie_id && $cookie_id != DEMO_USER_ID) {
+if ($_GET['id'] == $cookie_id && $cookie_id != CONFIG_DEMO_USER) {
 	$isOwnProfile = TRUE;
 	if (isset($_POST['infotext'])) {
 		$infotext = nl2br(mb_substr(strip_tags(trim($_POST['infotext'])), 0, 10000));

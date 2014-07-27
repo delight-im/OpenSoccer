@@ -14,7 +14,7 @@ function time_rel($zeitstempel) {
     else { $ago1 = round($ago/86400, 0);  if ($ago1 == 1) { $agos = '1 Tag'; } else { $agos = $ago1.' Tagen'; } }
 	return $agos;
 }
-if (isset($_POST['nachricht']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['nachricht']) && $cookie_id != CONFIG_DEMO_USER) {
 	// CHAT-SPERREN ANFANG
 	$sql1 = "SELECT MAX(chatSperre) FROM ".$prefix."helferLog WHERE managerBestrafen = '".$cookie_id."'";
 	$sql2 = mysql_query($sql1);
@@ -39,7 +39,7 @@ if (isset($_POST['nachricht']) && $cookie_id != DEMO_USER_ID) {
 </form>
 <h1><?php echo _('Angebote auf dem Markt'); ?></h1>
 <?php
-if (isset($_GET['delEntry']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['delEntry']) && $cookie_id != CONFIG_DEMO_USER) {
 	$delEntry = mysql_real_escape_string(trim(strip_tags($_GET['delEntry'])));
 	$addSql = " AND user = '".$cookie_id."'";
 	if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') { $addSql = ""; }

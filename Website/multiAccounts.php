@@ -36,7 +36,7 @@ if (isset($_POST['connectAction']) && isset($_POST['user1ID']) && isset($_POST['
 	$multiChanges2 = mysql_query($multiChanges1);
 	// ANDERE HELFER INFORMIEREN ANFANG
 	$markNotice .= '<a href="/manager.php?id='.$tempUser1ID.'">'._('User 1').'</a> + <a href="/manager.php?id='.$tempUser2ID.'">'._('User 2').'</a><br /><br />'._('[Nachricht vom System]');
-	$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".OFFICIAL_USER_ID."', '".OFFICIAL_USER_ID."', 'Multi-Markierung', '".mysql_real_escape_string($markNotice)."', ".time().", '')";
+	$sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".CONFIG_OFFICIAL_USER."', '".CONFIG_OFFICIAL_USER."', 'Multi-Markierung', '".mysql_real_escape_string($markNotice)."', ".time().", '')";
 	$sql2 = mysql_query($sql1);
 	// ANDERE HELFER INFORMIEREN ENDE
 }

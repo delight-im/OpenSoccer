@@ -18,7 +18,7 @@ if ($sql3['last_urlaub_lang'] > $timeout_urlaub2) { continue; }
 if ($sql3['status'] == 'Helfer' OR $sql3['status'] == 'Admin') { continue; } // Team-Mitglieder vor Löschung schützen
 if ($sql3['verwarnt'] != 0) { continue; } // wenn schon verwarnt, dann nicht noch mal verwarnen, sondern löschen
 if (strlen($sql3['team']) != 32) { continue; } // wenn der User überhaupt ein Team hat, sonst eh passiver User
-if ($sql3['ids'] == DEMO_USER_ID) { continue; }
+if ($sql3['ids'] == CONFIG_DEMO_USER) { continue; }
 $monateDabei = round(abs(time()-$sql3['regdate'])/3600/24/30);
 $tageNichtOnline = round(abs(time()-$sql3['last_login'])/3600/24)-9;
 if ($monateDabei > $tageNichtOnline) { continue; } // nach jedem Monat darf man einen Tag länger fehlen
@@ -98,7 +98,7 @@ while ($sd8faa3 = mysql_fetch_assoc($sd8faa2)) {
 	if ($sd8faa3['last_urlaub_kurz'] > $timeout_urlaub1) { continue; }
 	if ($sd8faa3['last_urlaub_lang'] > $timeout_urlaub2) { continue; }
 	if ($sd8faa3['status'] == 'Helfer' OR $sd8faa3['status'] == 'Admin') { continue; }
-	if ($sd8faa3['ids'] == DEMO_USER_ID) { continue; }
+	if ($sd8faa3['ids'] == CONFIG_DEMO_USER) { continue; }
 	if ($sd8faa3['verwarnt'] == 0 && $sd8faa3['last_login'] > 1) { continue; } // bei last_login = 1 keine Verwarnung noetig
 	if ($sd8faa3['verwarnt'] > $timeoutv) { continue; }
 	if (strlen($sd8faa3['team']) != 32) { continue; }
@@ -136,6 +136,6 @@ while ($sd8faa3 = mysql_fetch_assoc($sd8faa2)) {
 	// ACCOUNT LOESCHEN ENDE
 }
 $clearTimeout = getTimestamp('-26 weeks');
-$clear1 = "DELETE FROM ".$prefix."users WHERE last_login < ".$clearTimeout." AND LENGTH(team) = 34 AND ids NOT IN ('".DEMO_USER_ID."', '".OFFICIAL_USER_ID."')";
+$clear1 = "DELETE FROM ".$prefix."users WHERE last_login < ".$clearTimeout." AND LENGTH(team) = 34 AND ids NOT IN ('".CONFIG_DEMO_USER."', '".CONFIG_OFFICIAL_USER."')";
 $clear2 = mysql_query($clear1);
 ?>

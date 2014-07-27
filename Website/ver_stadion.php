@@ -36,7 +36,7 @@ $stadionPhotos = array(
 	4 => array(75000, '/images/arena_06.jpg', 'Steve Cadman auf Flickr (Lizenz: Creative Commons BY-SA)'),
 	5 => array(90000, '/images/arena_07.jpg', 'Ralf Peter Reimann auf Flickr (Lizenz: Creative Commons BY-SA)')
 );
-if (isset($_POST['plaetze']) && isset($_POST['art']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['plaetze']) && isset($_POST['art']) && $cookie_id != CONFIG_DEMO_USER) {
     $val1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$cookie_team."'";
     $val2 = mysql_query($val1);
     $val3 = mysql_fetch_assoc($val2);
@@ -112,7 +112,7 @@ if (isset($_POST['plaetze']) && isset($_POST['art']) && $cookie_id != DEMO_USER_
         }
 	}
 }
-if (isset($_POST['preis']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['preis']) && $cookie_idCONFIG_DEMO_USERR_ID) {
 	if (intval($_POST['preis']) > 19 && intval($_POST['preis']) < 71) {
         $sql1 = "UPDATE ".$prefix."stadien SET preis = ".intval($_POST['preis'])." WHERE team = '".$cookie_team."'";
         $sql2 = mysql_query($sql1);
@@ -125,7 +125,7 @@ if (isset($_POST['preis']) && $cookie_id != DEMO_USER_ID) {
 
 require_once('./classes/StadiumBuildings.php');
 
-if (isset($_POST['umfeld_bearbeiten']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['umfeld_bearbeiten']) && $cookiCONFIG_DEMO_USER_USER_ID) {
     $stadiumSeats1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$cookie_team."'";
     $stadiumSeats2 = mysql_query($stadiumSeats1);
     $stadiumSeats3 = mysql_result($stadiumSeats2, 0);
@@ -150,7 +150,7 @@ if (isset($_POST['umfeld_bearbeiten']) && $cookie_id != DEMO_USER_ID) {
         addInfoBox(__('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis %s warten.', date('d.m.Y H:i', $underConstructionUntil)));
     }
 }
-if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != CONFIG_DEMO_USER) {
 	if ($live_scoring_spieltyp_laeuft == '') {
 		$kuerzel1 = mysql_real_escape_string(trim(strip_tags($_POST['kuerzel1'])));
 		$kuerzel2 = mysql_real_escape_string(trim(strip_tags($_POST['kuerzel2'])));

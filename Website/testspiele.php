@@ -4,7 +4,7 @@
 <?php if ($loggedin == 1) { ?>
 <?php
 require_once('./classes/Friendlies.php');
-if (isset($_GET['recall']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['recall']) && $cookie_id != CONFIG_DEMO_USER) {
 	$recall_team2 = mysql_real_escape_string(trim(strip_tags($_GET['recall'])));
 	$anfa = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$cookie_team."' AND team2 = '".$recall_team2."'";
 	$anfb = mysql_query($anfa);
@@ -24,7 +24,7 @@ else {
 }
 // KONTOSTAND PRUEFEN ENDE
 // FESTLEGEN WAS GESUCHT WERDEN SOLL ANFANG
-if (isset($_POST['wantTests']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['wantTests']) && $cookie_id != CONFIG_DEMO_USER) {
 	$wantTests = intval($_POST['wantTests']);
 	if ($wantTests == 0 OR $wantTests == 1) {
 		$up1 = "UPDATE ".$prefix."teams SET wantTests = '".$wantTests."' WHERE ids = '".$cookie_team."'";

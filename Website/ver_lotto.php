@@ -30,7 +30,7 @@ $datum_heute = date('Y-m-d', time());
 <?php if ($loggedin == 1) { ?>
 <?php
 // TIPP EINLOESEN ANFANG
-if (isset($_POST['tipp']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['tipp']) && $cookie_id != CONFIG_DEMO_USER) {
 	if (is_array($_POST['tipp'])) {
 		if (count($_POST['tipp']) == 4) {
 			$temp = $_POST['tipp'];

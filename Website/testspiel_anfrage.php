@@ -3,7 +3,7 @@ if (!isset($_GET['id']) OR !isset($_GET['datum'])) { exit; }
 include 'zzserver.php';
 include 'zzcookie.php';
 $team = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
-if ($cookie_id != DEMO_USER_ID) {
+if ($cookie_id != CONFIG_DEMO_USER) {
 	$datum = bigintval($_GET['datum']);
 	$gt1 = "SELECT name FROM ".$prefix."teams WHERE ids = '".$team."'";
 	$gt2 = mysql_query($gt1);

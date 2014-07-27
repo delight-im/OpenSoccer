@@ -28,7 +28,7 @@ else {
 	$temp = $sql3['titel'];
 }
 // "RE: " EINFUEGEN, WENN NICHT SCHON ANTWORT WAR ENDE
-if ($sql3['von'] != OFFICIAL_USER_ID) {
+if ($sql3['von'] != CONFIG_OFFICIAL_USER) {
 	echo '<strong><a href="/post_schreiben.php?id='.$sql3['von'].'&amp;betreff='.urlencode($temp).'&amp;in_reply_to='.$sql3['ids'].'">'._('Antworten').'</a> | <a href="/post_schreiben.php?id='.$sql3['von'].'">'._('Neue Nachricht').'</a></strong>';
 }
 echo '</p>';

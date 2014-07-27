@@ -33,7 +33,7 @@ elseif (isset($_POST['email'])) {
 	if (mysql_num_rows($ou2) != 0) {
         $ou3 = mysql_fetch_assoc($ou2);
     	$user = $ou3['ids'];
-		if ($user != DEMO_USER_ID) {
+		if ($user != CONFIG_DEMO_USER) {
 			$username = $ou3['username'];
 			$key = md5(md5($ou3['regdate']).md5(time()).'29');
 			$key_db = md5($key);

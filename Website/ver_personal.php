@@ -27,7 +27,7 @@ $getkonto1 = "SELECT konto FROM ".$prefix."teams WHERE ids = '".$cookie_team."'"
 $getkonto2 = mysql_query($getkonto1);
 $getkonto3 = mysql_fetch_assoc($getkonto2);
 $getkonto4 = $getkonto3['konto']-einsatz_in_auktionen($cookie_team);
-if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['fitness_regeneration']) && $cookie_id != CONFIG_DEMO_USER) {
 	$heute_string = date('Y-m-d', time());
 	$temp = intval($_POST['fitness_regeneration']);
 	if ($temp == 1 || $temp == 2 || $temp == 3) {
@@ -69,7 +69,7 @@ if (isset($_POST['fitness_regeneration']) && $cookie_id != DEMO_USER_ID) {
 		}
 	}
 }
-if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['physio_behandlung']) && $cookie_id != CONFIG_DEMO_USER) {
 	$heute_string = date('Y-m-d', time());
 	$temp = intval($_POST['physio_behandlung']);
 	if ($temp == 1 || $temp == 2) {
@@ -109,7 +109,7 @@ if (isset($_POST['physio_behandlung']) && $cookie_id != DEMO_USER_ID) {
 		}
 	}
 }
-if (isset($_POST['psychologe_behandlung']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['psychologe_behandlung']) && $cookie_id != CONFIG_DEMO_USER) {
 	$heute_string = date('Y-m-d', time());
 	$temp = intval($_POST['psychologe_behandlung']);
 	if ($temp == 2 || $temp == 5) {
@@ -155,7 +155,7 @@ if (isset($_POST['psychologe_behandlung']) && $cookie_id != DEMO_USER_ID) {
 <h1><?php echo _('Jugendtrainer'); ?></h1>
 <p><?php echo _('Je höher die Stufe für die Kompetenz des Jugendtrainers ist, desto stärker sind die jungen Spieler, die aus den Nachwuchsmannschaften in Dein Team kommen.'); ?><br />
 <?php
-if (isset($_POST['jugendtrainer']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['jugendtrainer']) && $cookie_id != CONFIG_DEMO_USER) {
 	$temp = intval($_POST['jugendtrainer']);
 	if ($temp >= 1 && $temp <= 5) {
 		$ch1 = "UPDATE ".$prefix."personal_changes SET zeit = ".time()." WHERE team = '".$cookie_team."' AND personal = 'Jugendtrainer' AND zeit < ".$timeout;
@@ -199,7 +199,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 <h1><?php echo _('Fanbetreuer'); ?></h1>
 <p><?php echo _('Je höher die Stufe für die Kompetenz des Fanbetreuers ist, desto wohler fühlen sich die Fans Deines Vereins. Sie werden lieber ins Stadion gehen und Du wirst mehr Karten verkaufen.'); ?><br />
 <?php
-if (isset($_POST['fanbetreuer']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['fanbetreuer']) && $cookie_id != CONFIG_DEMO_USER) {
 	$temp = intval($_POST['fanbetreuer']);
 	if ($temp >= 1 && $temp <= 5) {
 		$ch1 = "UPDATE ".$prefix."personal_changes SET zeit = ".time()." WHERE team = '".$cookie_team."' AND personal = 'Fanbetreuer' AND zeit < ".$timeout;
@@ -241,7 +241,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 <h1><?php echo _('Scout'); ?></h1>
 <p><?php echo _('Je höher die Stufe für die Kompetenz des Scouts ist, desto besser werden seine Schätzungen für die maximale Stärke eines Spielers.'); ?><br />
 <?php
-if (isset($_POST['scout']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['scout']) && $cookie_id != CONFIG_DEMO_USER) {
 	$temp = intval($_POST['scout']);
 	if ($temp >= 1 && $temp <= 5) {
 		$ch1 = "UPDATE ".$prefix."personal_changes SET zeit = ".time()." WHERE team = '".$cookie_team."' AND personal = 'Scout' AND zeit < ".$timeout;

@@ -2,9 +2,9 @@
 <?php include 'zzcookie.php'; ?>
 <?php
 $adresse = 'Location: /freunde.php';
-if (isset($_GET['id']) && isset($_GET['aktion']) && $loggedin == 1 && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['id']) && isset($_GET['aktion']) && $loggedin == 1 && $cookie_id != CONFIG_DEMO_USER) {
 	$id = mysql_real_escape_string($_GET['id']);
-	if ($id != DEMO_USER_ID) {
+	if ($id != CONFIG_DEMO_USER) {
 		$aktion = mysql_real_escape_string($_GET['aktion']);
 		if ($aktion == 'einladen' && $id != $cookie_id) {
 			$adresse = 'Location: /manager.php?id='.$id;

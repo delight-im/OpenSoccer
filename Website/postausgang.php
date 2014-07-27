@@ -15,7 +15,7 @@ function checkAll(quelle) {
 <h1><?php echo _('Postausgang'); ?></h1>
 <?php if ($loggedin == 0) { echo '<p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>'; } else { ?>
 <?php
-if (isset($_POST['auswahl']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['auswahl']) && $cookie_id != CONFIG_DEMO_USER) {
 	if (is_array($_POST['auswahl'])) {
 		foreach ($_POST['auswahl'] as $markedEntry) {
 			$sql1 = "UPDATE ".$prefix."pn SET geloescht_von = 1 WHERE von = '".$cookie_id."' AND ids = '".mysql_real_escape_string(trim(strip_tags($markedEntry)))."'";

@@ -56,10 +56,10 @@ if ($letzteAenderungVor < $changeLockDuration) { // check time limit for team na
 
 ?>
 <p><?php echo _('Auf dieser Seite kannst Du den Namen Deines Vereins ändern. Du kannst den Namen einer Stadt und einen beliebigen Zusatz aus der Liste wählen, der vor oder nach dem Städtenamen stehen kann.'); ?></p>
-<p><?php echo __('Hier fehlt ein Städtename, den Du gerne dabei hättest? Dann %s, vielleicht kommt er dann dazu!', '<a href="/post_schreiben.php?id=c4ca4238a0b923820dcc509a6f75849b">'._('sag uns Bescheid').'</a>'); ?></p>
+<p><?php echo __('Hier fehlt ein Städtename, den Du gerne dabei hättest? Dann %s, vielleicht kommt er dann dazu!', '<a href="/wio.php#teamList">'._('sag uns Bescheid').'</a>'); ?></p>
 <p><strong><?php echo _('Hinweis:').'</strong> '._('Du kannst den Namen Deines Klubs nur alle 30 Tage ändern.'); ?></p>
 <?php
-if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != CONFIG_DEMO_USER) {
 	if ($live_scoring_spieltyp_laeuft == '') {
 		$kuerzel1 = mysql_real_escape_string(trim(strip_tags($_POST['kuerzel1'])));
 		$kuerzel2 = mysql_real_escape_string(trim(strip_tags($_POST['kuerzel2'])));

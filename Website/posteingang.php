@@ -16,7 +16,7 @@ function checkAll(quelle) {
 <?php if ($loggedin == 0) { echo '<p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>'; } else { ?>
 <?php
 setTaskDone('open_inbox');
-if (isset($_POST['markedAction']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['markedAction']) && $cookie_id != CONFIG_DEMO_USER) {
 	if ($_POST['markedAction'] == 'MAR') {
 		$sql1 = "UPDATE ".$prefix."pn SET gelesen = 1 WHERE an = '".$cookie_id."'";
 		$sql2 = mysql_query($sql1);

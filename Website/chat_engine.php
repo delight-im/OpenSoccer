@@ -31,7 +31,7 @@ function letzte_nachrichten() {
     while ($sql3 = mysql_fetch_assoc($sql2)) {
 		if (in_array($sql3['user'], $ignoList)) { continue; }
         $ausgabe .= '<p';
-		if ($sql3['user'] == OFFICIAL_USER_ID OR stripos($sql3['nachricht'], $cookie_username) !== FALSE) {
+		if ($sql3['user'] == CONFIG_OFFICIAL_USER OR stripos($sql3['nachricht'], $cookie_username) !== FALSE) {
 			$ausgabe .= ' style="background-color:#ddd"';
 		}
 		$ausgabe .= '>';
@@ -66,7 +66,7 @@ function nachricht_erzeugen($user, $nachricht) {
 			if (mysql_num_rows($getReportedUserID2) == 1) {
 				$getReportedUserID3 = mysql_fetch_assoc($getReportedUserID2);
 				$getReportedUserID4 = mysql_real_escape_string(trim(strip_tags($getReportedUserID3['ids'])));
-				if ($getReportedUserID4 != OFFICIAL_USER_ID && $user != DEMO_USER_ID) {
+				if ($getReportedUserID4 != CONFIG_OFFICIAL_USER && $user != CONFIG_DEMO_USER) {
 					// CHAT-PROTOKOLL ANFERTIGEN ANFANG
 					$sql1 = "SELECT a.user, a.zeit, a.nachricht, b.username, b.last_ip FROM ".$prefix."chatroom AS a JOIN ".$prefix."users AS b ON a.user = b.ids ORDER BY a.id DESC LIMIT 0, 100";
 					$sql2 = mysql_query($sql1);
@@ -88,18 +88,18 @@ function nachricht_erzeugen($user, $nachricht) {
 						$sql2 = mysql_query($sql1);
 						$sql3 = mysql_result($sql2, 0);
 						if ($sql3 < 3) {
-							$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('".OFFICIAL_USER_ID."', '".time()."', '".$userToReport." wurde gemeldet.')";
+							$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('".CONFIG_OFFICIAL_USER."', '".time()."', '".$userToReport." wurde gemeldet.')";
 							mysql_query($sql1);
 						}
 						else {
-							$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('".OFFICIAL_USER_ID."', '".time()."', '".$userToReport." wurde für den Chat gesperrt.')";
+							$sql1 = "INSERT INTO ".$prefix."chatroom (user, zeit, nachricht) VALUES ('".CONFIG_OFFICIAL_USER."', '".time()."', '".$userToReport." wurde für den Chat gesperrt.')";
 							mysql_query($sql1);
 						}
 					}
 				}
 			}
 		}
-		elseif ($user != DEMO_USER_ID) {
+		elseif ($user != CONFIG_DEMO_USER) {
 			$nachricht = mysql_real_escape_string(strip_tags($nachricht));
 			if (strlen($nachricht) == 0) { exit; }
 			// EMOTICONS ANFANG

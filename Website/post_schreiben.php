@@ -3,7 +3,7 @@
 <?php include 'zz2.php'; ?>
 
 <?php
-if (isset($_POST['titel']) && isset($_POST['inhalt']) && isset($_POST['an']) && isset($_POST['in_reply_to']) && isset($_POST['secHash']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['titel']) && isset($_POST['inhalt']) && isset($_POST['an']) && isset($_POST['in_reply_to']) && isset($_POST['secHash']) && $cookie_id != CONFIG_DEMO_USER) {
 	echo '<h1>'._('Post geschrieben').'</h1><p>';
 	if ($loggedin == 0) {
 		echo '<p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>';
@@ -12,7 +12,7 @@ if (isset($_POST['titel']) && isset($_POST['inhalt']) && isset($_POST['an']) && 
 			echo '<p>'.trim(nl2br(strip_tags($_POST['inhalt']))).'</p>';
 		}
 	}
-	else if (trim($_POST['an']) == OFFICIAL_USER_ID) { // message to official user
+	else if (trim($_POST['an']) == CONFIG_OFFICIAL_USER) { // message to official user
 		echo '<p>'._('Du kannst diesem Manager nicht direkt eine Nachricht schicken!').'</p>';
 		if (strlen($_POST['inhalt']) > 0) {
 			echo '<p><strong>'._('Dies ist der Text, den Du schreiben wolltest:').'</strong></p>';
@@ -89,7 +89,7 @@ elseif (isset($_GET['id'])) {
 			}
 		}
 		// CHAT-SPERREN ENDE
-		if ($an == OFFICIAL_USER_ID) {
+		if ($an == CONFIG_OFFICIAL_USER) {
 			echo '<p style="text-align:right"><a href="/manager.php?id='.$an.'" class="pagenava">'._('Zurück zum Profil').'</a></p>';
 			echo '<p>'._('Du kannst diesem Manager nicht direkt eine Nachricht schicken! Bitte wähle ein Mitglied des Support-Teams aus, dem du schreiben möchtest.').'</p>';
 		}

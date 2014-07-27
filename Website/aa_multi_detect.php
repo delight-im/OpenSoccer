@@ -40,8 +40,8 @@ else {
 		if (count($multi) == 1) { continue; }
 		for ($i = 0; $i < count($multi); $i++) {
 			for ($k = $i+1; $k < count($multi); $k++) {
-				if ($multi[$i] == 'c4ca4238a0b923820dcc509a6f75849b' OR $multi[$k] == 'c4ca4238a0b923820dcc509a6f75849b') { continue; } // Admin nicht als Multi identifizieren
-				if ($multi[$i] == DEMO_USER_ID || $multi[$k] == DEMO_USER_ID) { continue; }
+				if (in_array($multi[$i], unserialize(CONFIG_PROTECTED_USERS)) || in_array($multi[$k], unserialize(CONFIG_PROTECTED_USERS))) { continue; } // Admin nicht als Multi identifizieren
+				if ($multi[$i] == CONFIG_DEMO_USER || $multi[$k] == CONFIG_DEMO_USER) { continue; }
 				$in1 = "INSERT IGNORE INTO ".$prefix."users_multis (user1, user2, found_ip, found_time) VALUES ('".$multi[$i]."', '".$multi[$k]."', '".$found_ip."', ".time()."),('".$multi[$k]."', '".$multi[$i]."', '".$found_ip."', ".time().")";
 				$in2 = mysql_query($in1);
 			}

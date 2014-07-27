@@ -5,7 +5,7 @@ include 'zzcookie.php';
 $spieler = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 $sql1 = "SELECT gehalt, vertrag, jugendTeam, team FROM ".$prefix."spieler WHERE ids = '".$spieler."' AND team = '".$cookie_team."' AND leiher = 'keiner'";
 $sql2 = mysql_query($sql1);
-if (mysql_num_rows($sql2) > 0 && $cookie_id != DEMO_USER_ID) {
+if (mysql_num_rows($sql2) > 0 && $cookie_id != CONFIG_DEMO_USER) {
     $sql3 = mysql_fetch_assoc($sql2);
 	if ($sql3['vertrag'] > time()) {
 		if ($sql3['jugendTeam'] == $sql3['team'] && $sql3['gehalt'] % 100000 == 0) {

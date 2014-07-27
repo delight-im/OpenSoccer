@@ -245,7 +245,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 	$userChooseable = array();
 	while ($nm3 = mysql_fetch_assoc($nm2)) {
 		if (substr($nm3['username'], 0, 9) == 'GELOESCHT') { continue; }
-		if ($nm3['ids'] == 'c4ca4238a0b923820dcc509a6f75849b') { continue; }
+		if (in_array($nm3['ids'], unserialize(CONFIG_PROTECTED_USERS))) { continue; }
 		$userChooseable[] = array($nm3['ids'], $nm3['username']);
 	}
 	foreach ($userChooseable as $userChooseableEntry) {

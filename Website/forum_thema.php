@@ -68,17 +68,9 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 		$user_holen3 = mysql_fetch_assoc($user_holen2);
 		$username_temp = displayUsername($user_holen3['username'], $sql3['manager']);
 	}
-	echo '<p';
-	if ($sql3['manager'] == 'c4ca4238a0b923820dcc509a6f75849b') { // Admin-Posts markieren
-		echo ' style="border:5px solid #f00; margin:10px 0"';
-	}
-	echo '><b>'.$username_temp.' ('.date('d.m.Y H:i', $sql3['datum']).')</b>';
+	echo '<p><b>'.$username_temp.' ('.date('d.m.Y H:i', $sql3['datum']).')</b>';
 	if ($sql3['quote'] != '') { // Zitat enthalten
-		echo '</p><blockquote>'.autoLink(hideTeamCode($sql3['quote'], $_SESSION['status'])).'</blockquote><p';
-		if ($sql3['manager'] == 'c4ca4238a0b923820dcc509a6f75849b') { // Admin-Posts markieren
-			echo ' style="border: 5px solid #f00"';
-		}
-		echo '>'.autoLink(hideTeamCode($sql3['inhalt'], $_SESSION['status']));
+		echo '</p><blockquote>'.autoLink(hideTeamCode($sql3['quote'], $_SESSION['status'])).'</blockquote><p>'.autoLink(hideTeamCode($sql3['inhalt'], $_SESSION['status']));
 	}
 	else { // kein Zitat enthalten
 		echo '<br />'.autoLink(hideTeamCode($sql3['inhalt'], $_SESSION['status']));

@@ -42,7 +42,7 @@ function validateTacticsValue($value) {
         return $value;
     }
 }
-if (count($_POST) > 5 && $cookie_id != DEMO_USER_ID) {
+if (count($_POST) > 5 && $cookie_id != CONFIG_DEMO_USER) {
 	if (isset($_POST['ausrichtung'])) { $ausrichtung = validateTacticsValue(trim($_POST['ausrichtung'])); } else { $ausrichtung = 2; }
 	if (isset($_POST['geschw_auf'])) { $geschw_auf = validateTacticsValue(trim($_POST['geschw_auf'])); } else { $geschw_auf = 2; }
 	if (isset($_POST['pass_auf'])) { $pass_auf = validateTacticsValue(trim($_POST['pass_auf'])); } else { $pass_auf = 2; }
@@ -57,7 +57,7 @@ if (count($_POST) > 5 && $cookie_id != DEMO_USER_ID) {
 }
 ?>
 <?php
-if (isset($_POST['vorlageLaden']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['vorlageLaden']) && $cookie_id != CONFIG_DEMO_USER) {
 	$vorlageLaden = mysql_real_escape_string(strip_tags(trim(base64_decode($_POST['vorlageLaden']))));
 	$vorlageLaden1 = "SELECT ausrichtung, geschw_auf, pass_auf, risk_pass, druck, aggress FROM ".$prefix."taktiken_vorlagen WHERE team = '".$cookie_team."' AND name = '".$vorlageLaden."'";
 	$vorlageLaden2 = mysql_query($vorlageLaden1);
@@ -71,7 +71,7 @@ if (isset($_POST['vorlageLaden']) && $cookie_id != DEMO_USER_ID) {
 		addInfoBox(__('Die Vorlage &quot;%s&quot; wurde geladen und als neue Taktik übernommen.', $vorlageLaden));
 	}
 }
-if (isset($_POST['vorlageLoeschen']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['vorlageLoeschen']) && $cookie_id != CONFIG_DEMO_USER) {
 	$vorlageLoeschen = mysql_real_escape_string(strip_tags(trim(base64_decode($_POST['vorlageLoeschen']))));
 	$vorlageLoeschen1 = "DELETE FROM ".$prefix."taktiken_vorlagen WHERE team = '".$cookie_team."' AND name = '".$vorlageLoeschen."'";
 	$vorlageLoeschen2 = mysql_query($vorlageLoeschen1);
@@ -85,7 +85,7 @@ if (isset($_POST['vorlageLoeschen']) && $cookie_id != DEMO_USER_ID) {
 $tue1 = "SELECT ausrichtung, geschw_auf, pass_auf, risk_pass, druck, aggress FROM ".$prefix."taktiken WHERE team = '".$cookie_team."' AND spieltyp = '".$spieltypTaktik."'";
 $tue2 = mysql_query($tue1);
 $tue3 = mysql_fetch_assoc($tue2);
-if (isset($_POST['vorlageSpeichern']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['vorlageSpeichern']) && $cookie_id != CONFIG_DEMO_USER) {
 	$vorlageSpeichern = mysql_real_escape_string(trim(strip_tags($_POST['vorlageSpeichern'])));
 	$vorlageSpeichern1 = "INSERT INTO ".$prefix."taktiken_vorlagen (team, name, zeit, ausrichtung, geschw_auf, pass_auf, risk_pass, druck, aggress) VALUES ('".$cookie_team."', '".$vorlageSpeichern."', ".time().", ".$tue3['ausrichtung'].", ".$tue3['geschw_auf'].", ".$tue3['pass_auf'].", ".$tue3['risk_pass'].", ".$tue3['druck'].", ".$tue3['aggress'].")";
 	$vorlageSpeichern2 = mysql_query($vorlageSpeichern1);

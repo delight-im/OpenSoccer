@@ -8,7 +8,7 @@ else {
 	exit;
 }
 if ($loggedin == 1) {
-    if (isset($_POST['typ']) && $cookie_id != DEMO_USER_ID) { // && isset($_POST['laenge']) && isset($_POST['startgebot']) && isset($_POST['autorestart'])
+    if (isset($_POST['typ']) && $cookie_id != CONFIG_DEMO_USER) { // && isset($_POST['laenge']) && isset($_POST['startgebot']) && isset($_POST['autorestart'])
         $sql1 = "SELECT vorname, nachname, marktwert, spiele_verein, staerke FROM ".$prefix."spieler WHERE ids = '".$spieler_id."' AND team = '".$cookie_team."' AND leiher = 'keiner'";
         $sql2 = mysql_query($sql1);
         $sql2a = mysql_num_rows($sql2);
@@ -66,7 +66,7 @@ if ($loggedin == 1) {
             }
         }
     }
-    elseif (isset($_POST['abbrechen']) && $cookie_id != DEMO_USER_ID) {
+    elseif (isset($_POST['abbrechen']) && $cookie_id != CONFIG_DEMO_USER) {
     	if ($_POST['abbrechen'] == 'Ja') {
             $sql6 = "DELETE FROM ".$prefix."transfermarkt WHERE spieler = '".$spieler_id."' AND ende > ".getTimestamp('+30 minutes')." AND gebote = 0";
             $sql7 = mysql_query($sql6);

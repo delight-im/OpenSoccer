@@ -4,7 +4,7 @@ include 'zzserver.php';
 include 'zzcookie.php';
 if ($loggedin == 0) { exit; }
 $spieler = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
-if ($cookie_id != DEMO_USER_ID) {
+if ($cookie_id != CONFIG_DEMO_USER) {
 	$sql1 = "SELECT vorname, nachname FROM ".$prefix."spieler WHERE ids = '".$spieler."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) { exit; }

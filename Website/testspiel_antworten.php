@@ -8,7 +8,7 @@ function isFriendlyDateValid($matchTime) {
 }
 $team = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 $typ = mysql_real_escape_string(trim(strip_tags($_GET['typ'])));
-if ($cookie_id != DEMO_USER_ID) {
+if ($cookie_id != CONFIG_DEMO_USER) {
 	if ($typ == 'Annehmen') {
 		$testspiel_preis_ich = Friendlies::getPrice($cookie_liga, $prefix);
 		$gt1 = "SELECT a.team1_name, a.datum, b.liga, b.ids FROM ".$prefix."testspiel_anfragen AS a JOIN ".$prefix."teams AS b ON a.team1 = b.ids WHERE a.team1 = '".$team."' AND a.team2 = '".$cookie_team."'";

@@ -96,7 +96,7 @@ if ((isset($_POST['lusername']) && isset($_POST['lpassword'])) OR $valid_bigpoin
 			if (isset($_SERVER['HTTP_USER_AGENT'])) { $loginLog_userAgent = mysql_real_escape_string(trim(strip_tags($_SERVER['HTTP_USER_AGENT']))); } else { $loginLog_userAgent = ''; }
 			$loginLog_ip = getUserIP();
 			if (isset($_COOKIE['uniqueHash'])) { $loginLog_uniqueHash = mysql_real_escape_string(trim(strip_tags($_COOKIE['uniqueHash']))); } else { $loginLog_uniqueHash = $loginLog_ip; setcookie('uniqueHash', $loginLog_ip, getTimestamp('+30 days'), '/', str_replace('www.', '.', CONFIG_SITE_DOMAIN), FALSE, TRUE); }
-			if ($lologin4['ids'] != 'c4ca4238a0b923820dcc509a6f75849b' && $lologin4['ids'] != DEMO_USER_ID) { // Admin und Demo-User nicht loggen
+			if (!in_array($lologin4['ids'], unserialize(CONFIG_PROTECTED_USERS))) {
 				$loginLog1 = "INSERT INTO ".$prefix."loginLog (user, zeit, ip, userAgent, uniqueHash) VALUES ('".$lologin4['ids']."', ".time().", '".$loginLog_ip."', '".$loginLog_userAgent."', '".$loginLog_uniqueHash."')";
 				$loginLog2 = mysql_query($loginLog1);
 			}

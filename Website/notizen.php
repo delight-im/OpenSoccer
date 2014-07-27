@@ -10,7 +10,7 @@ function laengeStoppen(feld) {
 </script>
 <?php if ($loggedin == 1) { ?>
 <?php
-if (isset($_POST['neu']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['neu']) && $cookie_id != CONFIG_DEMO_USER) {
 	$farben = array('fff'=>'000', '00f'=>'fff', '00008b'=>'fff', 'ff8c00'=>'000', 'ffd700'=>'000', '0f0'=>'000', '000080'=>'fff', 'f00'=>'000', 'ff0'=>'000');
 	$backgroundColor = array_rand($farben);
 	$textColor = $farben[$backgroundColor];
@@ -19,7 +19,7 @@ if (isset($_POST['neu']) && $cookie_id != DEMO_USER_ID) {
 	$sql2 = mysql_query($sql1);
 	setTaskDone('create_note');
 }
-if (isset($_GET['del']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['del']) && $cookie_id != CONFIG_DEMO_USER) {
 	$delID = bigintval($_GET['del']);
 	$sql1 = "DELETE FROM ".$prefix."users_notizen WHERE id = ".$delID." AND user = '".$cookie_id."'";
 	$sql2 = mysql_query($sql1);

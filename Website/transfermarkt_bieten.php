@@ -9,7 +9,7 @@ else {
 	exit;
 }
 if ($loggedin == 1) {
-	if ($_SESSION['transferGesperrt'] == FALSE && isset($_POST['wt2']) && $cookie_id != DEMO_USER_ID) {
+	if ($_SESSION['transferGesperrt'] == FALSE && isset($_POST['wt2']) && $cookie_id != CONFIG_DEMO_USER) {
 		$teamOwnerID = mysql_real_escape_string(trim(strip_tags($_POST['wt2'])));
 		// KONTOSTAND ERMITTELN ANFANG
 		if ($cookie_team != '__'.$cookie_id) {

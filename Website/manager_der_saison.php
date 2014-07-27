@@ -23,7 +23,7 @@ if ($sql3['regdate'] > $timeout) {
 	$tage_dabei = round((time()-$sql3['regdate'])/86400);
 	addInfoBox(__('Du bist erst %d Tage dabei und deshalb nicht stimmberechtigt.', $tage_dabei));
 }
-elseif ($sql6 == 1 || $cookie_id == DEMO_USER_ID) {
+elseif ($sql6 == 1 || $cookie_id == CONFIG_DEMO_USER) {
 	addInfoBox(_('Du hast schon abgestimmt!'));
 }
 else {

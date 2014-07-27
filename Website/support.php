@@ -37,7 +37,7 @@ if (mysql_num_rows($blockCom2) > 0) {
 </form>
 <?php
 // ANFRAGE LÖSCHEN ANFANG
-if (isset($_GET['del']) && ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['del']) && ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') && $cookie_id != CONFIG_DEMO_USER) {
 	$delID = bigintval(secure2id($_GET['del']));
 	$sql1 = "SELECT author, pro, contra FROM ".$prefix."supportRequests WHERE id = ".$delID;
 	$sql2 = mysql_query($sql1) or die(mysql_error());
@@ -62,10 +62,10 @@ if ($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') {
 }
 // SICHTBARKEITSSTUFEN ENDE
 // NEUE ANFRAGE ERSTELLEN ANFANG
-if (isset($_POST['category']) && isset($_POST['title']) && isset($_POST['description']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['category']) && isset($_POST['title']) && isset($_POST['description']) && $cookie_id != CONFIG_DEMO_USER) {
 	$newCategory = mysql_real_escape_string(trim(strip_tags($_POST['category'])));
 	$newTitle = mysql_real_escape_string(trim(strip_tags($_POST['title'])));
-	if ($cookie_id == 'c4ca4238a0b923820dcc509a6f75849b') { // für den Administrator
+	if (in_array($cookie_id, unserialize(CONFIG_PROTECTED_USERS))) { // für den Administrator
 		$newDescription = mysql_real_escape_string(trim(strip_tags(nl2br($_POST['description']), '<br><strong><p><a>'))); // mehrere HTML-Tags erlauben
 	}
 	else { // für alle anderen User

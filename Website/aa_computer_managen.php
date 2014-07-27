@@ -10,7 +10,7 @@ while ($lig1c = mysql_fetch_assoc($lig1b)) {
 	$ligaToKlasse[$lig1c['ids']] = substr($lig1c['name'], -1);
 }
 
-$demoTeamID1 = "SELECT team FROM ".$prefix."users WHERE ids = '".DEMO_USER_ID."'";
+$demoTeamID1 = "SELECT team FROM ".$prefix."users WHERE ids = '".CONFIG_DEMO_USER."'";
 $demoTeamID2 = mysql_query($demoTeamID1);
 $sqlIsDemoTeam = "";
 if (mysql_num_rows($demoTeamID2) == 1) {
@@ -23,7 +23,7 @@ $urlaub2 = mysql_query($urlaub1);
 $urlaub_string = "('LEER', ";
 $beurlaubte_teams = array();
 while ($urlaub3 = mysql_fetch_assoc($urlaub2)) {
-	if ($urlaub3['user'] != DEMO_USER_ID) {
+	if ($urlaub3['user'] != CONFIG_DEMO_USER) {
 		$urlaub_string .= "'".$urlaub3['user']."', ";
 		$beurlaubte_teams[] = $urlaub3['team'];
 	}

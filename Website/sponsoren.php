@@ -24,7 +24,7 @@ $getelo3 = mysql_query($getelo3);
 $getelo3 = mysql_fetch_assoc($getelo3);
 $getelo3 = intval($getelo3['elo']);
 // EIGENES RKP HOLEN ENDE
-if (isset($_GET['id']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['id']) && $cookie_id != CONFIG_DEMO_USER) {
 	if ($spon3 == 0) {
         $upd1 = "SELECT name, prozentsatz FROM ".$prefix."sponsoren WHERE id = ".intval($_GET['id']);
         $upd2 = mysql_query($upd1);

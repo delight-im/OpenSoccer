@@ -44,7 +44,7 @@ if (isset($laender[$cookie_liga])) {
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('pokal_standings');
-if (isset($_POST['nachricht']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['nachricht']) && $cookie_id != CONFIG_DEMO_USER) {
 	// CHAT-SPERREN ANFANG
 	$sql1 = "SELECT MAX(chatSperre) FROM ".$prefix."helferLog WHERE managerBestrafen = '".$cookie_id."'";
 	$sql2 = mysql_query($sql1);
@@ -83,7 +83,7 @@ if (file_exists($tmp_dateiname)) {
 </form>
 <h1><?php echo _('Manager-Talk'); ?></h1>
 <?php
-if (isset($_GET['delEntry']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_GET['delEntry']) && $cookie_id != CONFIG_DEMO_USER) {
 	$delEntry = mysql_real_escape_string(trim(strip_tags($_GET['delEntry'])));
 	$addSql = " AND user = '".$cookie_id."'";
 	if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') { $addSql = ""; }

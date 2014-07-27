@@ -209,7 +209,7 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 		<li><a href="/wio.php#teamList"><?php echo _('Post ans Team'); ?></a></li>
 		<li><a href="/tipps_des_tages.php"><?php echo _('Kurztipps'); ?></a></li>
 		<li><a href="/regeln.php"><?php echo _('Regeln'); ?></a></li>
-		<?php if ($cookie_username == 'Yazu7') { ?><li><a href="/forum.php"><?php echo _('Archiv'); ?></a></li><?php } ?>
+		<li><a href="/forum.php"><?php echo _('Archiv'); ?></a></li>
 	</ul>
 </li><?php } ?>
 <?php if (!isMobile()) { ?><li class="menueintrag"><a href="/<?php if ($_SESSION['pMaxGebot'] == 1) { echo 'logoutNewUser.php'; } else { echo 'logout.php'; } ?>"><?php echo _('Logout'); ?></a></li><?php } ?>

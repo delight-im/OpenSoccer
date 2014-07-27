@@ -87,7 +87,7 @@ echo '<tr class="odd"><td>'._('Position').'</td><td>';
     elseif ($sql3['position'] == 'S') { echo _('Sturm'); }
 echo '</td></tr>';
 $alter_in_jahren = floor($sql3['wiealt']/365);
-echo '<tr><td>Alter</td><td>'.$alter_in_jahren.' Jahre</td></tr>';
+echo '<tr><td>'._('Alter').'</td><td>'.__('%d Jahre', $alter_in_jahren).'</td></tr>';
 echo '<tr class="odd"><td>'._('Stärke').'</td><td>'.number_format($sql3['staerke'], 1, ',', '.').'</td></tr>';
 if ($sql3['team'] == 'frei') {
 	$sql3['frische'] = getRegularFreshness(GameTime::getMatchDay());

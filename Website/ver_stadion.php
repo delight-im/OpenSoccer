@@ -150,7 +150,7 @@ if (isset($_POST['umfeld_bearbeiten']) && $cookie_id != CONFIG_DEMO_USER) {
         addInfoBox(__('Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis %s warten.', date('d.m.Y H:i', $underConstructionUntil)));
     }
 }
-if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != DEMO_USER_ID) {
+if (isset($_POST['kuerzel1']) && isset($_POST['kuerzel2']) && isset($_POST['stadt']) && $cookie_id != CONFIG_DEMO_USER) {
 	if ($live_scoring_spieltyp_laeuft == '') {
 		$kuerzel1 = mysql_real_escape_string(trim(strip_tags($_POST['kuerzel1'])));
 		$kuerzel2 = mysql_real_escape_string(trim(strip_tags($_POST['kuerzel2'])));

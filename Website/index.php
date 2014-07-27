@@ -65,7 +65,7 @@ if ($cookie_team != '__'.$cookie_id) {
 	}
 	?>
 	<?php if (isMobile() && isset($nextGamesHTML)) { echo str_replace(' (<a href="/wio.php">WIO</a>)', '', $nextGamesHTML); } ?>
-	<h1>Dein Verein: <?php echo $cookie_teamname; ?></h1>
+	<h1><?php echo __('Dein Verein: %s', $cookie_teamname); ?></h1>
     <p style="float:left; text-align:left; margin-bottom:0;">
         <a class="pagenava" href="/freundeWerben.php"><?php echo _('Freunde einladen'); ?></a>
     </p>

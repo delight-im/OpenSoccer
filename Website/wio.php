@@ -28,7 +28,7 @@ while ($kontakt3 = mysql_fetch_assoc($kontakt2)) {
 		echo '<td>'.$mark1.date('H:i', $kontakt3['last_chat']).$mark2.'</td>';
 	}
 	echo '<td class="link">'.$mark1.'<a href="/team.php?id='.$kontakt3['team'].'">'.$kontakt3['name'].'</a>'.$mark2.'</td>';
-	echo '<td class="link">'.$mark1.'<a href="/post_schreiben.php?id='.$kontakt3['ids'].'">'.('Post schicken').'</a>'.$mark2.'</td></tr>';
+	echo '<td class="link">'.$mark1.'<a href="/post_schreiben.php?id='.$kontakt3['ids'].'">'._('Post schicken').'</a>'.$mark2.'</td></tr>';
 }
 ?>
 </tbody></table>

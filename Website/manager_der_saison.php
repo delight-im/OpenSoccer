@@ -38,32 +38,32 @@ else {
 </select></p>
 <p><select name="pokalergebnis" size="1" style="width:200px">
 	<option value="no"><?php echo _('Jedes Pokal-Ergebnis'); ?></option>
-	<option value="1"><?php echo _('mind. Vorrunde'); ?></option>
-	<option value="2"><?php echo _('mind. Achtelfinale'); ?></option>
-	<option value="3"><?php echo _('mind. Viertelfinale'); ?></option>
-	<option value="4"><?php echo _('mind. Halbfinale'); ?></option>
+	<option value="1"><?php echo __('mind. %s', _('Vorrunde')); ?></option>
+	<option value="2"><?php echo __('mind. %s', _('Achtelfinale')); ?></option>
+	<option value="3"><?php echo __('mind. %s', _('Viertelfinale')); ?></option>
+	<option value="4"><?php echo __('mind. %s', _('Halbfinale')); ?></option>
 	<option value="5"><?php echo _('Finale'); ?></option>
 </select></p>
 <p><select name="cupergebnis" size="1" style="width:200px">
 	<option value="no"><?php echo _('Jedes Cup-Ergebnis'); ?></option>
-	<option value="1"><?php echo _('mind. Vorrunde'); ?></option>
-	<option value="2"><?php echo _('mind. Achtelfinale'); ?></option>
-	<option value="3"><?php echo _('mind. Viertelfinale'); ?></option>
-	<option value="4"><?php echo _('mind. Halbfinale'); ?></option>
+	<option value="1"><?php echo __('mind. %s', _('Vorrunde')); ?></option>
+	<option value="2"><?php echo __('mind. %s', _('Achtelfinale')); ?></option>
+	<option value="3"><?php echo __('mind. %s', _('Viertelfinale')); ?></option>
+	<option value="4"><?php echo __('mind. %s', _('Halbfinale')); ?></option>
 	<option value="5"><?php echo _('Finale'); ?></option>
 </select></p>
 <p><select name="bilanz" size="1" style="width:200px">
 	<option value="no"><?php echo _('Jede Bilanz'); ?></option>
-	<option value="000-010"><?php echo _('0 bis 10 Mio € Gewinn'); ?></option>
-	<option value="010-030"><?php echo _('10 bis 30 Mio € Gewinn'); ?></option>
-	<option value="030-060"><?php echo _('30 bis 60 Mio € Gewinn'); ?></option>
-	<option value="060-100"><?php echo _('60 bis 100 Mio € Gewinn'); ?></option>
-	<option value="100-150"><?php echo _('100 bis 150 Mio € Gewinn'); ?></option>
-	<option value="150-210"><?php echo _('150 bis 210 Mio € Gewinn'); ?></option>
-	<option value="210-280"><?php echo _('210 bis 280 Mio € Gewinn'); ?></option>
-	<option value="280-360"><?php echo _('280 bis 360 Mio € Gewinn'); ?></option>
-	<option value="360-450"><?php echo _('360 bis 450 Mio € Gewinn'); ?></option>
-	<option value="450-550"><?php echo _('450 bis 550 Mio € Gewinn'); ?></option>
+	<option value="000-010"><?php echo __('%1$d bis %2$d Mio € Gewinn', 0, 10); ?></option>
+	<option value="010-030"><?php echo __('%1$d bis %2$d Mio € Gewinn', 10, 30); ?></option>
+	<option value="030-060"><?php echo __('%1$d bis %2$d Mio € Gewinn', 30, 60); ?></option>
+	<option value="060-100"><?php echo __('%1$d bis %2$d Mio € Gewinn', 60, 100); ?></option>
+	<option value="100-150"><?php echo __('%1$d bis %2$d Mio € Gewinn', 100, 150); ?></option>
+	<option value="150-210"><?php echo __('%1$d bis %2$d Mio € Gewinn', 150, 210); ?></option>
+	<option value="210-280"><?php echo __('%1$d bis %2$d Mio € Gewinn', 210, 280); ?></option>
+	<option value="280-360"><?php echo __('%1$d bis %2$d Mio € Gewinn', 280, 360); ?></option>
+	<option value="360-450"><?php echo __('%1$d bis %2$d Mio € Gewinn', 360, 450); ?></option>
+	<option value="450-550"><?php echo __('%1$d bis %2$d Mio € Gewinn', 450, 550); ?></option>
 </select></p>
 <p><input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>

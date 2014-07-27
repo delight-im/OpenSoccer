@@ -35,7 +35,7 @@ if (isset($_POST['nachricht']) && $cookie_id != CONFIG_DEMO_USER) {
 ?>
 <h1><?php echo _('Deine Nachricht'); ?></h1>
 <form action="/marktschreier.php" method="post" accept-charset="utf-8">
-<p><input type="text" name="nachricht" style="width:80%" /> <input type="submit" value="<?php echo _('Eintragen'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
+<p><input type="text" name="nachricht" style="width:60%" /> <input type="submit" value="<?php echo _('Eintragen'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
 <h1><?php echo _('Angebote auf dem Markt'); ?></h1>
 <?php

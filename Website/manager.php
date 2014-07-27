@@ -269,7 +269,7 @@ if (isset($_GET['delGB']) && $cookie_id != CONFIG_DEMO_USER) {
 }
 echo '<h1 id="anker_gaestebuch">'._('Gästebuch').'</h1>';
 echo '<form action="/manager.php?id='.$_GET['id'].'" method="post" accept-charset="utf-8">';
-echo '<p><input type="text" name="gaestebuch_eintrag" style="width:70%" /> <input type="submit" value="'._('Eintragen').'"'.noDemoClick($cookie_id).' /></p>';
+echo '<p><input type="text" name="gaestebuch_eintrag" style="width:60%" /> <input type="submit" value="'._('Eintragen').'"'.noDemoClick($cookie_id).' /></p>';
 echo '</form>';
 $gb1 = "SELECT a.id, a.user, a.zeit, a.nachricht, b.username FROM ".$prefix."chats AS a JOIN ".$prefix."users AS b ON a.user = b.ids WHERE a.liga = 'GB".mysql_real_escape_string($_GET['id'])."' ORDER BY a.zeit DESC LIMIT 0, 20";
 $gb2 = mysql_query($gb1);

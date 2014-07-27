@@ -51,6 +51,7 @@ In order to provide translations for this project, please refer to our [document
 
  * Go to `File` - `Preferences` - `Parsers` - `PHP` - `Edit`. In the list of extensions, add `;*.php.txt` at the end.
  * Go to `File` - `Preferences` - `Translation Memory`. Disable the checkbox for `Use translation memory`.
+ * Go to `Catalogue` - `Properties` - `Sources keywords`. Add a new entry `__` (double underscore).
 
 ## License
 

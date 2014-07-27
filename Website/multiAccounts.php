@@ -41,13 +41,13 @@ if (isset($_POST['connectAction']) && isset($_POST['user1ID']) && isset($_POST['
 	// ANDERE HELFER INFORMIEREN ENDE
 }
 if (isset($_GET['user1']) && isset($_GET['user2'])) {
-	$user1Name = mysql_real_escape_string(trim(strip_tags($_GET['user1'])));
-	$user2Name = mysql_real_escape_string(trim(strip_tags($_GET['user2'])));
+	$user1Name = trim($_GET['user1']);
+	$user2Name = trim($_GET['user2']);
 	// USER IN DB SUCHEN ANFANG
-	$sql1 = "SELECT ids FROM ".$prefix."users WHERE username = '".$user1Name."'";
+	$sql1 = "SELECT ids FROM ".$prefix."users WHERE username = '".mysql_real_escape_string($user1Name)."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) {
-		addInfoBox(__('Der User %s konnte nicht gefunden werden.', $user1Name));
+		addInfoBox(__('Der User %s konnte nicht gefunden werden.', htmlspecialchars($user1Name)));
 		include 'zz3.php';
 		exit;
 	}
@@ -55,10 +55,10 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 		$sql3 = mysql_fetch_assoc($sql2);
 		$user1ID = $sql3['ids'];
 	}
-	$sql1 = "SELECT ids FROM ".$prefix."users WHERE username = '".$user2Name."'";
+	$sql1 = "SELECT ids FROM ".$prefix."users WHERE username = '".mysql_real_escape_string($user2Name)."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) {
-		addInfoBox(__('Der User %s konnte nicht gefunden werden.', $user2Name));
+		addInfoBox(__('Der User %s konnte nicht gefunden werden.', htmlspecialchars($user2Name)));
 		include 'zz3.php';
 		exit;
 	}
@@ -96,7 +96,7 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 $sql1 = "SELECT found_time FROM ".$prefix."users_multis WHERE user1 = '".$user1ID."' AND user2 = '".$user2ID."'";
 $sql2 = mysql_query($sql1);
 if (mysql_num_rows($sql2) == 0) {
-	echo '<p>'.__('Die beiden User %1$s und %2$s sind im System noch nicht verknüpft.', $user1Name, $user2Name).'</p>';
+	echo '<p>'.__('Die beiden User %1$s und %2$s sind im System noch nicht verknüpft.', htmlspecialchars($user1Name), htmlspecialchars($user2Name)).'</p>';
 	echo '<p>'._('Wenn Du durch den IP-Vergleich der Meinung bist, dass es sich um Multi-Accounts handelt, kannst Du die beiden User jetzt im System verknüpfen.').'</p>';
 	echo '<form action="/multiAccounts.php?user1='.urlencode($user1Name).'&user2='.urlencode($user2Name).'" method="post" accept-charset="utf-8">';
 	echo '<input type="hidden" name="user1ID" value="'.$user1ID.'" />';
@@ -107,7 +107,7 @@ if (mysql_num_rows($sql2) == 0) {
 }
 else {
 	$sql3 = mysql_fetch_assoc($sql2);
-	echo '<p>Die beiden User '.$user1Name.' und '.$user2Name.' sind im System seit dem '.date('d.m.Y H:i', $sql3['found_time']).' Uhr verknüpft.</p>';
+	echo '<p>'.__('Die beiden User %1$s und %2$s sind im System seit %3$s verknüpft.', htmlspecialchars($user1Name), htmlspecialchars($user2Name), date('d.m.Y H:i', $sql3['found_time'])).'</p>';
 	echo '<p>Wenn Du durch den IP-Vergleich der Meinung bist, dass es sich nicht (mehr) um Multi-Accounts handelt, kannst Du die Verknüpfung im System lösen.</p>';
 	echo '<form action="/multiAccounts.php?user1='.urlencode($user1Name).'&user2='.urlencode($user2Name).'" method="post" accept-charset="utf-8">';
 	echo '<input type="hidden" name="user1ID" value="'.$user1ID.'" />';
@@ -117,15 +117,53 @@ else {
 	echo '</form>';
 }
 ?>
-<p></p>
+<?php
+function showActionCount($title, $sqlForCount, $userIdsToNames) {
+    $out = '<li>';
+    $out .= '<strong>'.$title.'</strong>';
+    $out .= '<ul>';
+
+    foreach ($userIdsToNames as $userID => $userName) {
+        $res = mysql_query(sprintf($sqlForCount, mysql_real_escape_string($userID)));
+        $count = mysql_result($res, 0);
+        $out .= '<li>'.htmlspecialchars($userName).' &raquo; '.intval($count).'</li>';
+    }
+
+    $out .= '</ul>';
+    $out .= '</li>';
+    return $out;
+}
+if (isset($user1ID) && isset($user2ID)) {
+    $activityCompareDays = 90;
+    $timeout = intval(time() - 3600 * 24 * $activityCompareDays);
+    $userIdsToNames = array(
+        $user1ID => $user1Name,
+        $user2ID => $user2Name
+    );
+
+    echo '<h1>'.__('Vergleich der Aktivität in den letzten %d Tagen', $activityCompareDays).'</h1>';
+    echo '<ul>';
+    echo showActionCount(_('Logins im Spiel'), "SELECT COUNT(*) FROM ".$prefix."loginLog WHERE user = '%s' AND zeit > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Aufstellungen geändert'), "SELECT COUNT(*) FROM ".$prefix."aufstellungLog WHERE team = (SELECT team FROM ".$prefix."users WHERE ids = '%s') AND zeit > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Beiträge im Liga-Chat'), "SELECT COUNT(*) FROM ".$prefix."chats WHERE user = '%s' AND zeit > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Beiträge im Pokal-Chat'), "SELECT COUNT(*) FROM ".$prefix."chats_pokal WHERE user = '%s' AND zeit > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Beiträge im Testwünsche-Chat'), "SELECT COUNT(*) FROM ".$prefix."chats_tests WHERE user = '%s' AND zeit > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Beiträge im Marktschreier'), "SELECT COUNT(*) FROM ".$prefix."chats_markt WHERE user = '%s' AND zeit > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Post (gesendet)'), "SELECT COUNT(*) FROM ".$prefix."pn WHERE von = '%s' AND zeit > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Post (empfangen)'), "SELECT COUNT(*) FROM ".$prefix."pn WHERE an = '%s' AND zeit > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Anfragen im Support-Bereich'), "SELECT COUNT(*) FROM ".$prefix."supportRequests WHERE author = '%s' AND timeAdded > ".$timeout, $userIdsToNames);
+    echo showActionCount(_('Kommentare im Support-Bereich'), "SELECT COUNT(*) FROM ".$prefix."supportComments WHERE userID = '%s' AND zeit > ".$timeout, $userIdsToNames);
+    echo '</ul>';
+}
+?>
 <h1><?php echo __('IP-Adressen (%d Treffer)', count($multiIPs)); ?></h1>
-<p><?php echo __('Die folgende Liste zeigt, wann die beiden User %1$s und %2$s mit welcher IP-Adresse eingeloggt waren. Wenn Du mit der Maus über ein Datum mit Uhrzeit fährst, siehst Du die Browser-Informationen dieses Nutzers.', $user1Name, $user2Name); ?> </p>
+<p><?php echo __('Die folgende Liste zeigt, wann die beiden User %1$s und %2$s mit welcher IP-Adresse eingeloggt waren. Wenn Du mit der Maus über ein Datum mit Uhrzeit fährst, siehst Du die Browser-Informationen dieses Nutzers.', htmlspecialchars($user1Name), htmlspecialchars($user2Name)); ?> </p>
 <table>
 <thead>
 <tr class="odd">
 <th scope="col"><?php echo _('IP-Hash'); ?></th>
-<th scope="col"><?php echo $user1Name; ?></th>
-<th scope="col"><?php echo $user2Name; ?></th>
+<th scope="col"><?php echo htmlspecialchars($user1Name); ?></th>
+<th scope="col"><?php echo htmlspecialchars($user2Name); ?></th>
 </tr>
 </thead>
 <tbody>

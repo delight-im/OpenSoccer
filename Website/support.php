@@ -163,7 +163,7 @@ $sql1 .= " ORDER BY open DESC, lastAction DESC LIMIT ".$start.", ".$eintraege_pr
 $sql2 = mysql_query($sql1);
 if ($sql2 == FALSE) { exit; }
 if (mysql_num_rows($sql2) == 0) {
-	echo '<tr><td colspan="3">'.__('Es gibt noch keine Anfragen %s.', '<a href="/supportAdd.php">'._('Mache den Anfang!').'</a>').'</td></tr>';
+	echo '<tr><td colspan="3">'.__('Es gibt noch keine Anfragen. %s', '<a href="/supportAdd.php">'._('Mache den Anfang!').'</a>').'</td></tr>';
 	echo '</tbody>';
 	echo '</table>';
 }

@@ -94,7 +94,7 @@ if ($cookie_team != '__'.$cookie_id) {
 	<tr><td><?php echo _('Liga'); ?></td><td><?php echo $vd3['rank'].'. Platz'; ?></td></tr>
 	<tr class="odd"><td><?php echo _('Pokal'); ?></td><td><?php if ($vd3['pokalrunde'] == 0) { echo '-'; } else { echo pokalrunde_wort($vd3['pokalrunde']); } ?></td></tr>
 	<tr><td><?php echo _('Cup'); ?></td><td><?php if ($vd3['cuprunde'] == 0) { echo '-'; } else { echo cuprunde_wort($vd3['cuprunde']); } ?></td></tr>
-	<tr class="odd"><td><?php echo _('RKP'); ?></td><td><?php echo number_format($vd3['elo'], 0, ',', '.'); ?> Punkte</td></tr>
+	<tr class="odd"><td><?php echo _('RKP'); ?></td><td><?php echo __('%s Punkte', number_format($vd3['elo'], 0, ',', '.')); ?></td></tr>
 	<tr><td><?php echo _('Kontostand'); ?></td><td<?php if ($vd3['konto'] < 0) { echo ' style="color:red"'; } ?>><?php echo showKontostand($vd3['konto']); ?> €</td></tr>
 	<tr class="odd"><td><?php echo _('Einsatz in Auktionen'); ?></td><td><?php echo number_format($einsatzAuk, 0, ',', '.'); ?> €</td></tr>
 	<tr><td><?php echo _('Verfügbares Geld'); ?></td><td><?php echo showKontostand($verfuegbaresGeld); ?> €</td></tr>
@@ -103,13 +103,13 @@ if ($cookie_team != '__'.$cookie_id) {
 	<tr class="odd"><td><?php echo _('Jugendabteilung'); ?></td><td class="link"><a href="/kader.php#besetzung">
 		<?php
 		switch ($vd3['posToSearch']) {
-			case 'T': $posToSearch = 'Torwart'; break;
-			case 'A': $posToSearch = 'Abwehr'; break;
-			case 'M': $posToSearch = 'Mittelfeld'; break;
-			case 'S': $posToSearch = 'Sturm'; break;
+			case 'T': $posToSearch = _('Torwart'); break;
+			case 'A': $posToSearch = _('Abwehr'); break;
+			case 'M': $posToSearch = _('Mittelfeld'); break;
+			case 'S': $posToSearch = _('Sturm'); break;
 			default: $posToSearch = '?'; break;
 		}
-		echo $posToSearch.' gesucht';
+		echo __('%s gesucht', $posToSearch);
 		?>
 	</a></td></tr>
 	<?php

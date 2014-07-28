@@ -31,10 +31,10 @@ else {
 <form action="/manager_der_saison.php" method="get" accept-charset="utf-8">
 <p><select name="tabellenplatz" size="1" style="width:200px">
 	<option value="no"><?php echo _('Jeder Tabellenplatz'); ?></option>
-	<option value="01-03"><?php echo _('1. bis 3.'); ?></option>
-	<option value="04-06"><?php echo _('4. bis 6.'); ?></option>
-	<option value="07-09"><?php echo _('7. bis 9.'); ?></option>
-	<option value="10-12"><?php echo _('10. bis 12.'); ?></option>
+	<option value="01-03"><?php echo __('%1$d. bis %2$d.', 1, 3); ?></option>
+	<option value="04-06"><?php echo __('%1$d. bis %2$d.', 4, 6); ?></option>
+	<option value="07-09"><?php echo __('%1$d. bis %2$d.', 7, 9); ?></option>
+	<option value="10-12"><?php echo __('%1$d. bis %2$d.', 10, 12); ?></option>
 </select></p>
 <p><select name="pokalergebnis" size="1" style="width:200px">
 	<option value="no"><?php echo _('Jedes Pokal-Ergebnis'); ?></option>

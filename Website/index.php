@@ -49,7 +49,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		addInfoBox(__('Die folgenden %1$s sind unvollständig: %2$s', '<a class="inText" href="/aufstellung.php">'._('Aufstellungen').'</a>', substr($unvollstaendigStr, 0, -2)));
 	}
 	if ($auslauf3 != 0) {
-		addInfoBox(__('In den nächsten drei Tagen laufen %s aus.', __('<a class="inText" href="/vertraege.php">%d Verträge</a>', $auslauf3)));
+		addInfoBox(__('In den nächsten drei Tagen laufen %s aus.', '<a class="inText" href="/vertraege.php">'.__('%d Verträge', $auslauf3).'</a>'));
 	}
 	if ($myteam3['sponsor'] == 0) {
 		addInfoBox(__('Du hast für die aktuelle Saison noch keinen Vertrag mit einem Sponsor abgeschlossen. %s', '<a class="inText" href="/sponsoren.php">'._('Klicke hier, um jetzt einen Vertrag abzuschließen.').'</a>'));

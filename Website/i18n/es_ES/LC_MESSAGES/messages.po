@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-07-26 02:29+0100\n"
-"PO-Revision-Date: 2014-07-26 02:29+0100\n"
-"Last-Translator: Marco <marco1@live.de>\n"
+"POT-Creation-Date: 2014-07-28 00:09-0300\n"
+"PO-Revision-Date: 2014-07-29 02:01-0300\n"
+"Last-Translator: Cosme12 <test@example.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
 #: ../../../aa_spieltag_simulation.php:13
@@ -1182,7 +1183,7 @@ msgstr ""
 #: ../../../aa_spieltag_simulation.php:977
 msgid "Die Zuschauer fiebern dem Derby schon lange entgegen!"
 msgstr ""
-"El público esperaba con impaciencia este clásico desde hace un largo tiempo!"
+"El público esperaba con impaciencia este clásico desde hacía un largo tiempo!"
 
 #: ../../../aa_spieltag_simulation.php:999
 msgid ""
@@ -1199,13 +1200,12 @@ msgid "Android™-App"
 msgstr "Android™-App"
 
 #: ../../../android_app.php:20
-#, fuzzy
 msgid ""
 "Du hast ein Smartphone oder Tablet mit Android? Dann spiele ganz einfach von "
 "unterwegs:"
 msgstr ""
-"Tienes un smartphone o una tablet con Android? Entonces lleva Ballmanager "
-"contigo a todos lados:"
+"Tienes un smartphone o una tablet con Android? Entonces lleva el juego "
+"contigo a todas partes:"
 
 #: ../../../android_app.php:22
 msgid ""
@@ -1237,6 +1237,18 @@ msgstr ""
 #: ../../../aufstellung.php:2 ../../../aufstellung.php:37 ../../../zz2.php:173
 msgid "Aufstellung"
 msgstr "Formación"
+
+#: ../../../aufstellung.php:78
+#, php-format
+msgid ""
+"Zurzeit läuft ein %s-Spiel. Deshalb kannst Du diese Aufstellung gerade nicht "
+"ändern."
+msgstr ""
+
+#: ../../../aufstellung.php:142
+#, php-format
+msgid "Aufgestellte Spieler: %1$d/11, Stärke: %2$s"
+msgstr "Jugadores en formación: %1$d/11, Fuerza: %2$s"
 
 #: ../../../aufstellung.php:173
 msgid "Aufstellung speichern"
@@ -1332,7 +1344,7 @@ msgstr "Mis jugadores"
 #: ../../../leihgaben.php:157 ../../../leihgaben.php:194 ../../../team.php:129
 #: ../../../transfermarkt.php:191 ../../../transfermarkt_leihe.php:114
 msgid "MT"
-msgstr "PO"
+msgstr "Po"
 
 #: ../../../aufstellung.php:288 ../../../kader.php:58
 #: ../../../leihgaben.php:158 ../../../leihgaben.php:195
@@ -1346,7 +1358,7 @@ msgstr "Nombre"
 #: ../../../transfermarkt.php:191 ../../../transfermarkt_leihe.php:114
 #: ../../../vertraege.php:11
 msgid "AL"
-msgstr "ED"
+msgstr "Ed"
 
 #: ../../../aufstellung.php:290 ../../../beobachtung.php:41
 #: ../../../kader.php:60 ../../../spieler.php:91
@@ -1358,11 +1370,11 @@ msgstr "Fuerza"
 
 #: ../../../aufstellung.php:291 ../../../team.php:134
 msgid "FR"
-msgstr "FR"
+msgstr "Fr"
 
 #: ../../../aufstellung.php:292 ../../../vertraege.php:12
 msgid "MO"
-msgstr "MO"
+msgstr "Mo"
 
 #: ../../../aufstellung.php:340 ../../../beobachtung.php:119
 #: ../../../entwicklung.php:43 ../../../kader.php:164
@@ -1375,7 +1387,7 @@ msgstr "Encabezados:"
 
 #: ../../../aufstellung.php:340
 msgid "SE: Startelf, MT: Mannschaftsteil, AL: Alter, FR: Frische, MO: Moral"
-msgstr "SE: titulares, MT: posición, AL: edad, FR: frescura, MO: moral"
+msgstr "SE: titulares, Po: posición, Ed: edad, Fr: frescura, Mo: moral"
 
 #: ../../../aufstellung.php:341 ../../../beobachtung.php:120
 #: ../../../entwicklung.php:44 ../../../kader.php:165
@@ -1419,7 +1431,7 @@ msgstr "jugadores lesionados o suspendidos"
 #: ../../../ligaTauschWuensche.php:67 ../../../liveZentrale.php:156
 #: ../../../logoutNewUser.php:25 ../../../manager.php:320
 #: ../../../managerPruefung.php:78 ../../../manager_der_saison.php:208
-#: ../../../marktschreier.php:60 ../../../multiAccounts.php:215
+#: ../../../marktschreier.php:60 ../../../multiAccounts.php:253
 #: ../../../namensaenderung.php:168 ../../../neueAccounts.php:67
 #: ../../../notizen.php:58 ../../../pokal.php:243 ../../../post.php:6
 #: ../../../post_schreiben.php:9 ../../../post_schreiben.php:136
@@ -1469,6 +1481,11 @@ msgstr ""
 "el nombre podrás ver el perfil del jugador. Si el jugador esta a la venta\n"
 " cedido o no, entonces el estado de la transferencia también se mostrará."
 
+#: ../../../beobachtung.php:27
+#, php-format
+msgid "Es wurden %d Spieler von Deiner Beobachtungsliste gelöscht."
+msgstr "Se eliminaron %d jugadores de tu lista de observación."
+
 #: ../../../beobachtung.php:38 ../../../entwicklung.php:12
 #: ../../../index.php:164 ../../../kader.php:173 ../../../leihgaben.php:106
 #: ../../../leihgaben.php:133 ../../../lig_transfers.php:49
@@ -1485,7 +1502,8 @@ msgid "Status"
 msgstr "Estado"
 
 #: ../../../beobachtung.php:40 ../../../entwicklung.php:13
-#: ../../../index.php:165 ../../../stat_juengste_kader.php:49
+#: ../../../index.php:165 ../../../spieler.php:90
+#: ../../../stat_juengste_kader.php:49
 msgid "Alter"
 msgstr "Edad"
 
@@ -1527,7 +1545,7 @@ msgstr ""
 #: ../../../beobachtung.php:103 ../../../chat_reports.php:82
 #: ../../../entwicklung.php:50 ../../../geloeschteAccounts.php:24
 #: ../../../gruendeFuerLoeschung.php:24 ../../../lig_transfers.php:132
-#: ../../../multiAccounts.php:196 ../../../neueAccounts.php:49
+#: ../../../multiAccounts.php:234 ../../../neueAccounts.php:49
 #: ../../../postausgang.php:83 ../../../posteingang.php:87
 #: ../../../protokoll.php:82 ../../../support.php:222
 #: ../../../top_manager.php:98 ../../../transfermarkt.php:232
@@ -1538,7 +1556,7 @@ msgstr "Primero"
 #: ../../../beobachtung.php:104 ../../../chat_reports.php:83
 #: ../../../entwicklung.php:51 ../../../geloeschteAccounts.php:25
 #: ../../../gruendeFuerLoeschung.php:25 ../../../lig_transfers.php:133
-#: ../../../multiAccounts.php:197 ../../../neueAccounts.php:50
+#: ../../../multiAccounts.php:235 ../../../neueAccounts.php:50
 #: ../../../postausgang.php:84 ../../../posteingang.php:88
 #: ../../../protokoll.php:83 ../../../support.php:223
 #: ../../../top_manager.php:99 ../../../transfermarkt.php:233
@@ -1549,7 +1567,7 @@ msgstr "Anterior"
 #: ../../../beobachtung.php:115 ../../../chat_reports.php:94
 #: ../../../entwicklung.php:62 ../../../geloeschteAccounts.php:36
 #: ../../../gruendeFuerLoeschung.php:36 ../../../lig_transfers.php:144
-#: ../../../multiAccounts.php:208 ../../../neueAccounts.php:61
+#: ../../../multiAccounts.php:246 ../../../neueAccounts.php:61
 #: ../../../postausgang.php:95 ../../../posteingang.php:99
 #: ../../../protokoll.php:94 ../../../support.php:234
 #: ../../../top_manager.php:110 ../../../transfermarkt.php:244
@@ -1560,7 +1578,7 @@ msgstr "Siguiente"
 #: ../../../beobachtung.php:116 ../../../chat_reports.php:95
 #: ../../../entwicklung.php:63 ../../../geloeschteAccounts.php:37
 #: ../../../gruendeFuerLoeschung.php:37 ../../../lig_transfers.php:145
-#: ../../../multiAccounts.php:209 ../../../neueAccounts.php:62
+#: ../../../multiAccounts.php:247 ../../../neueAccounts.php:62
 #: ../../../postausgang.php:96 ../../../posteingang.php:100
 #: ../../../protokoll.php:95 ../../../support.php:235
 #: ../../../top_manager.php:111 ../../../transfermarkt.php:245
@@ -1570,7 +1588,7 @@ msgstr "Último"
 
 #: ../../../beobachtung.php:119 ../../../entwicklung.php:43
 msgid "MT: Mannschaftsteil"
-msgstr "MT: posición"
+msgstr "Po: posición"
 
 #: ../../../bp_nicht_eingeloggt.php:2 ../../../bp_nicht_eingeloggt.php:4
 msgid "Nicht eingeloggt"
@@ -1630,15 +1648,14 @@ msgid "Benutzernamen wählen"
 msgstr "Elige un nombre de usuario"
 
 #: ../../../bp_username_waehlen.php:43
-#, fuzzy
 msgid ""
 "Willkommen! Du stehst jetzt erst einmal auf der Warteliste. Sobald ein Team "
 "für Dich frei wird - und das wird nicht lange dauern - erhältst Du eine "
 "Nachricht von uns bei Bigpoint."
 msgstr ""
-"¡Bienvenidos a Ballmanager! Ahora te encuentras en nuestra lista de espera. "
-"Tan pronto como un equipo esté disponible - y esto no tomará mucho tiempo - "
-"recibirás una notificación de nuestra parte en Bigpoint."
+"¡Bienvenido! Te encuentras en nuestra lista de espera. Tan pronto como un "
+"equipo esté disponible - esto no tomará mucho tiempo - recibirás una "
+"notificación de nuestra parte en Bigpoint."
 
 #: ../../../bp_username_waehlen.php:44
 msgid ""
@@ -1660,6 +1677,11 @@ msgstr ""
 msgid "diese Regeln"
 msgstr "Reglas"
 
+#: ../../../bp_username_waehlen.php:45
+#, php-format
+msgid "Bitte halte Dich bei der Wahl Deines Namens aber an %s."
+msgstr ""
+
 #: ../../../bp_username_waehlen.php:54
 msgid "Fertig"
 msgstr ""
@@ -1676,12 +1698,25 @@ msgstr "Chat"
 msgid "Support-Team"
 msgstr "Soporte"
 
+#: ../../../chat.php:42 ../../../lig_tabelle.php:66 ../../../manager.php:253
+#: ../../../supportRequest.php:128
+#, php-format
+msgid ""
+"Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn "
+"Dir unklar ist warum, frage bitte das %2$s."
+msgstr ""
+
 #: ../../../chat.php:89
 msgid "Username"
 msgstr "Usuario"
 
 #: ../../../chat.php:89
 msgid "Regelverstoß"
+msgstr ""
+
+#: ../../../chat.php:89
+#, php-format
+msgid "schreiben, um einen User zu melden (nur bei %s)"
 msgstr ""
 
 #: ../../../chat.php:90
@@ -1702,7 +1737,7 @@ msgstr "Siguiente charla de la tarde:"
 
 #: ../../../chat.php:117 ../../../post_schreiben.php:130
 msgid "Senden"
-msgstr ""
+msgstr "Enviar"
 
 #: ../../../chat.php:119
 msgid ""
@@ -1771,6 +1806,14 @@ msgstr "Elige un país"
 msgid "Auswählen"
 msgstr "Elige un país"
 
+#: ../../../cup.php:36
+#, php-format
+msgid ""
+"Für diesen Wettbewerb qualifizieren sich die 32 besten Teams aus %s, 16 "
+"davon durch ein Freilos. Von Liga 1 bis 4 - jeder hat die Chance auf den Cup-"
+"Sieg."
+msgstr ""
+
 #: ../../../cup.php:37
 msgid ""
 "Es gibt eine Qualifikation und danach fünf Runden, die jeweils ausgelost "
@@ -1809,6 +1852,11 @@ msgstr ""
 msgid "Einstellungen"
 msgstr "Configuración"
 
+#: ../../../einstellungen.php:56 ../../../einstellungen.php:135
+#, php-format
+msgid "Du hast zurzeit Urlaub, und zwar bis zum %s."
+msgstr "Estas de vacaciones hasta el %s"
+
 #: ../../../einstellungen.php:57
 msgid "Urlaub abbrechen"
 msgstr "Cancelar vacaciones"
@@ -1818,6 +1866,8 @@ msgid ""
 "Dein Urlaub wurde abgebrochen. Du hast nun wieder die volle Kontrolle über "
 "Dein Team."
 msgstr ""
+"Tus vacaciones han sido canceladas. Ya tienes el control total de tu equipo "
+"nuevamente."
 
 #: ../../../einstellungen.php:74
 msgid ""
@@ -1865,20 +1915,34 @@ msgstr "Cambiar el nombre del equipo"
 
 #: ../../../einstellungen.php:155
 msgid "auf dieser Seite"
+msgstr "esta página"
+
+#: ../../../einstellungen.php:155
+#, php-format
+msgid "Du möchtest den Namen Deines Vereins ändern? Dann kannst Du das %s tun!"
 msgstr ""
+"¿Quieres cambiar el nombre de tu club? ¡Puedes consultar %s para hacerlo!"
 
 #: ../../../einstellungen.php:156
 msgid "geschützten Namen"
+msgstr "nombres protegidos"
+
+#: ../../../einstellungen.php:156
+#, php-format
+msgid ""
+"Eine Liste mit %s findest Du hier. Diese Namen darfst Du leider nicht für "
+"Dein Team verwenden."
 msgstr ""
+"Una lista de los %s se puede encontrar aquí. Lamentablemente no puedes "
+"utilizar estos nombres para tu equipo."
 
 #: ../../../einstellungen.php:159
 msgid "Managernamen ändern"
 msgstr "Cambiar el nombre de mánager"
 
 #: ../../../einstellungen.php:160
-#, fuzzy
 msgid "Mitglied des Support-Teams"
-msgstr "Soporte"
+msgstr "miembro del Equipo de Soporte"
 
 #: ../../../einstellungen.php:160 ../../../index.php:46 ../../../regeln.php:2
 #: ../../../registrieren.php:90 ../../../zz2.php:211 ../../../zz3.php:8
@@ -1886,9 +1950,19 @@ msgid "Regeln"
 msgstr "Reglas"
 
 #: ../../../einstellungen.php:160
-#, fuzzy
+#, php-format
+msgid ""
+"Du möchtest Deinen eigenen Managernamen ändern? Schreibe bitte einfach einem "
+"%1$s eine kurze Nachricht. Dein Name wird dann so bald wie möglich geändert, "
+"wenn er nicht gegen die %2$s verstößt."
+msgstr ""
+"¿Quieres cambiar tu nombre de mánager? Por favor, simplemente envía un "
+"mensaje a algún %1$s. Tu nombre se cambiará tan pronto como sea posible "
+"siempre y cuando no este en contra de las %2$s."
+
+#: ../../../einstellungen.php:160
 msgid "Achtung:"
-msgstr "Orientación"
+msgstr "Nota:"
 
 #: ../../../einstellungen.php:160
 msgid ""
@@ -1915,7 +1989,7 @@ msgstr ""
 
 #: ../../../einstellungen.php:176 ../../../einstellungen.php:194
 msgid "noch keinen Urlaub"
-msgstr ""
+msgstr "todavía sin vacaciones"
 
 #: ../../../einstellungen.php:182 ../../../einstellungen.php:200
 msgid "Du kannst jetzt neuen Urlaub beantragen."
@@ -1924,6 +1998,22 @@ msgstr "Ya puedes solicitar unas nuevas vacaciones."
 #: ../../../einstellungen.php:189
 msgid "Kurzurlaub (1-10 Tage):"
 msgstr "Vacaciones cortas (1-10 días):"
+
+#: ../../../einstellungen.php:189 ../../../einstellungen.php:207
+#, php-format
+msgid "Du hast %1$s beantragt. %2$s"
+msgstr ""
+
+#: ../../../einstellungen.php:197
+#, php-format
+msgid "zuletzt am %s einen langen Urlaub"
+msgstr ""
+
+#: ../../../einstellungen.php:205
+#, php-format
+msgid "Du musst noch %d Tage warten, bis Du wieder Urlaub beantragen kannst."
+msgstr ""
+"Debes esperar %d días hasta que puedas solicitar vacaciones nuevamente."
 
 #: ../../../einstellungen.php:207
 msgid "Langer Urlaub (11-30 Tage):"
@@ -1938,7 +2028,6 @@ msgid "Passwort ändern"
 msgstr "Cambiar contraseña"
 
 #: ../../../einstellungen.php:247
-#, fuzzy
 msgid ""
 "Mit dem folgenden Formular kannst Du Dein Passwort ändern. Dazu musst Du "
 "alle Felder ausfüllen."
@@ -1963,7 +2052,6 @@ msgid "Account löschen"
 msgstr "Eliminar cuenta"
 
 #: ../../../einstellungen.php:256
-#, fuzzy
 msgid ""
 "Du bist Dir wirklich sicher, dass Du Deinen Account löschen möchtest? Das "
 "ist sehr schade, aber wir akzeptieren das natürlich."
@@ -1976,6 +2064,8 @@ msgid ""
 "Wir würden uns freuen, wenn Du uns noch mitteilen würdest, was Dir hier "
 "gefallen hat und was noch nicht so gut war."
 msgstr ""
+"Nos encataría que nos dijeras, que fue lo que te gustó, y que no era tan "
+"bueno."
 
 #: ../../../einstellungen.php:259
 msgid "Das war gut:"
@@ -2003,7 +2093,7 @@ msgstr "Nuevo"
 
 #: ../../../entwicklung.php:33
 msgid "Höhepunkt"
-msgstr ""
+msgstr "Máximo"
 
 #: ../../../freunde.php:2 ../../../freunde.php:67
 #: ../../../liveZentrale.php:153 ../../../wio.php:35 ../../../zz2.php:245
@@ -2018,7 +2108,7 @@ msgstr "Solicitudes"
 #: ../../../freunde.php:9 ../../../freunde.php:31 ../../../freunde.php:52
 #: ../../../geloeschteAccounts.php:12 ../../../gruendeFuerLoeschung.php:12
 #: ../../../manager_der_saison.php:73 ../../../manager_der_saison.php:185
-#: ../../../multiAccounts.php:177 ../../../neueAccounts.php:12
+#: ../../../multiAccounts.php:215 ../../../neueAccounts.php:12
 #: ../../../stat_ligaTausch.php:13 ../../../stat_meiste_titel.php:67
 #: ../../../support.php:245 ../../../team.php:70 ../../../top_manager.php:50
 #: ../../../wio.php:6 ../../../wio.php:38
@@ -2032,12 +2122,17 @@ msgstr "Acciones"
 #: ../../../freunde.php:11 ../../../ligaTausch.php:172
 #: ../../../testspiele.php:102
 msgid "Annehmen"
-msgstr ""
+msgstr "Aceptar"
 
 #: ../../../freunde.php:11 ../../../ligaTausch.php:172
 #: ../../../supportRequest.php:146 ../../../testspiele.php:102
 msgid "Ablehnen"
-msgstr ""
+msgstr "Cancelar"
+
+#: ../../../freunde.php:28
+#, php-format
+msgid "Du hast zurzeit %d Freunde im Spiel"
+msgstr "Actualmente tienes %d amigos en el juego"
 
 #: ../../../freunde.php:29
 msgid ""
@@ -2054,11 +2149,16 @@ msgstr "Última acción"
 
 #: ../../../freunde.php:38 ../../../freunde.php:59
 msgid "Nach oben verschieben"
-msgstr ""
+msgstr "Subir"
 
 #: ../../../freunde.php:38 ../../../freunde.php:59
 msgid "Nach unten verschieben"
-msgstr ""
+msgstr "Bajar"
+
+#: ../../../freunde.php:49
+#, php-format
+msgid "Du ignorierst zurzeit %d User im Spiel"
+msgstr "Actualmente ignoras %d usuarios"
 
 #: ../../../freunde.php:50
 msgid ""
@@ -2067,7 +2167,7 @@ msgid ""
 "User ignorieren&quot;."
 msgstr ""
 "Si deseas agregar usuarios a esta lista, por favor abre el perfil del "
-"mánager y elige la opción &quot;Ignorar este usuario&quot;."
+"mánager y elige la opción &quot;Ignorar usuario&quot;."
 
 #: ../../../freundeWerben.php:2 ../../../freundeWerben.php:4
 #: ../../../index.php:70 ../../../index.php:73
@@ -2075,9 +2175,8 @@ msgid "Freunde einladen"
 msgstr "Invita amigos"
 
 #: ../../../freundeWerben.php:6
-#, fuzzy
 msgid "Deine Freunde sind noch nicht dabei?"
-msgstr "Tus amigos no son parte del juego todavía?"
+msgstr "¿Tus amigos aún no son parte del juego?"
 
 #: ../../../freundeWerben.php:6
 msgid "Dann nutze den folgenden Link, um sie einzuladen."
@@ -2157,7 +2256,6 @@ msgid "Gelöschter Account"
 msgstr "Eliminar cuenta"
 
 #: ../../../geloeschterAccount.php:5
-#, fuzzy
 msgid ""
 "Du hast Deinen Account gelöscht. Deshalb kannst Du leider nicht mehr "
 "mitspielen."
@@ -2170,9 +2268,8 @@ msgid "Gesperrte Teamnamen"
 msgstr "Nombre de equipos bloqueados"
 
 #: ../../../gesperrteTeamnamen.php:83
-#, fuzzy
 msgid "Namen sperren"
-msgstr "Cambiar nombre"
+msgstr "Bloquear nombre de equipo"
 
 #: ../../../gruendeFuerLoeschung.php:2 ../../../gruendeFuerLoeschung.php:10
 #: ../../../zz2.php:257
@@ -2180,13 +2277,12 @@ msgid "Gründe für Löschung"
 msgstr "Razones de la eliminación"
 
 #: ../../../gruendeFuerLoeschung.php:11
-#, fuzzy
 msgid ""
 "Warum haben sich die User im Spiel gelöscht? Lies nach, was ihnen gefallen "
 "und hat und was nicht."
 msgstr ""
 "¿Por qué los usuarios han borrado sus cuentas en este juego? Lee aquí que "
-"les ha gustado y lo que se debe mejorar en su opinión."
+"les ha gustado y lo que se debe mejorar, según su opinión."
 
 #: ../../../gruendeFuerLoeschung.php:12
 msgid "Löschdatum"
@@ -2214,22 +2310,59 @@ msgstr "Mánager de Futbol Online Gratuito"
 
 #: ../../../index.php:43
 msgid "Klicke hier, um die Ergebnisse für Deine Suche anzeigen zu lassen."
+msgstr "Has clic aquí para ver los resultados de tu búsqueda. "
+
+#: ../../../index.php:46
+#, php-format
+msgid "Bitte akzeptiere unsere aktuellen %s, die dem Spiel zugrunde liegen."
 msgstr ""
 
 #: ../../../index.php:49
 msgid "Aufstellungen"
 msgstr "Formaciones"
 
+#: ../../../index.php:49
+#, php-format
+msgid "Die folgenden %1$s sind unvollständig: %2$s"
+msgstr "Las siguiente  %1$s esta incompletas: %2$s"
+
+#: ../../../index.php:52
+#, php-format
+msgid "<a class=\"inText\" href=\"/vertraege.php\">%d Verträge</a>"
+msgstr ""
+
+#: ../../../index.php:52
+#, php-format
+msgid "In den nächsten drei Tagen laufen %s aus."
+msgstr ""
+
 #: ../../../index.php:55
 msgid "Klicke hier, um jetzt einen Vertrag abzuschließen."
 msgstr ""
+
+#: ../../../index.php:55
+#, fuzzy, php-format
+msgid ""
+"Du hast für die aktuelle Saison noch keinen Vertrag mit einem Sponsor "
+"abgeschlossen. %s"
+msgstr "Aún no has invitado ningun usuario!"
 
 #: ../../../index.php:58 ../../../spielbericht.php:118
 msgid "Zur LIVE-Zentrale"
 msgstr "Ir al Centro en VIVO"
 
+#: ../../../index.php:58
+#, php-format
+msgid "LIVE: %1$s-spiele von heute! %2$s"
+msgstr ""
+
 #: ../../../index.php:61
 msgid "Jetzt abstimmen"
+msgstr ""
+
+#: ../../../index.php:61
+#, php-format
+msgid "Die Wahl zum &quot;Manager der Saison&quot; läuft! %s"
 msgstr ""
 
 #: ../../../index.php:64 ../../../managerPruefung.php:2
@@ -2238,9 +2371,21 @@ msgstr ""
 msgid "Manager-Prüfung"
 msgstr "Mánager"
 
+#: ../../../index.php:64
+#, php-format
+msgid ""
+"Du hast Deine %s noch nicht abgeschlossen: Für jede erledigte Aufgabe "
+"bekommst Du 1 Mio. auf Dein Vereinskonto!"
+msgstr ""
+
+#: ../../../index.php:68
+#, php-format
+msgid "Dein Verein: %s"
+msgstr "Tu club: %s"
+
 #: ../../../index.php:73
 msgid "Lade Deine Freunde ein und erhalte 7,5 Mio. Bonus!"
-msgstr ""
+msgstr "¡Invita a tus amigos y consegue 7,5 millones de regalo!"
 
 #: ../../../index.php:79 ../../../manager.php:143
 #: ../../../spielbericht.php:285 ../../../spieler.php:76 ../../../team.php:45
@@ -2249,9 +2394,8 @@ msgid "Bereich"
 msgstr "Sección"
 
 #: ../../../index.php:80
-#, fuzzy
 msgid "Vereinsdaten"
-msgstr "Club"
+msgstr "Datos del club"
 
 #: ../../../index.php:95 ../../../kalender.php:37
 #: ../../../manager_der_saison.php:75 ../../../stat_meiste_titel.php:72
@@ -2274,21 +2418,19 @@ msgstr "Saldo bancario"
 
 #: ../../../index.php:99
 msgid "Einsatz in Auktionen"
-msgstr ""
+msgstr "Uso en subastas"
 
 #: ../../../index.php:100
 msgid "Verfügbares Geld"
-msgstr ""
+msgstr "Dinero disponible"
 
 #: ../../../index.php:101 ../../../team.php:77
-#, fuzzy
 msgid "Aufstellungsstärke"
-msgstr "Formación"
+msgstr "Resistencia de la formación"
 
 #: ../../../index.php:102 ../../../team.php:76
-#, fuzzy
 msgid "Kaderstärke"
-msgstr "Fuerza"
+msgstr "Fuerza del plantel"
 
 #: ../../../index.php:103
 msgid "Jugendabteilung"
@@ -2330,6 +2472,21 @@ msgstr "Interesado"
 msgid "Kein Interesse"
 msgstr "No interesado"
 
+#: ../../../index.php:141 ../../../kalender.php:22
+#, php-format
+msgid "Saison %d"
+msgstr "Temporada %d"
+
+#: ../../../index.php:141
+#, php-format
+msgid "Spieltag %d"
+msgstr "Fecha %d"
+
+#: ../../../index.php:141
+#, php-format
+msgid "%s Uhr"
+msgstr "%s hs"
+
 #: ../../../index.php:159
 msgid "Kürzeste Verträge"
 msgstr "Contratos a vencer"
@@ -2339,6 +2496,8 @@ msgid ""
 "Die Verträge der folgenden Spieler laufen als Nächstes aus. Du solltest sie "
 "rechtzeitig verlängern, damit die Spieler bei Deinem Verein bleiben:"
 msgstr ""
+"Los contratos de los siguientes jugadores se estan por vencer. Debes "
+"extender la fecha para que tus jugadores permanezcan en tu equipo:"
 
 #: ../../../index.php:166 ../../../spieler.php:119
 msgid "Vertrag bis"
@@ -2350,17 +2509,17 @@ msgstr "Costo"
 
 #: ../../../index.php:181
 msgid "Suche nach Teams oder Managern"
-msgstr ""
+msgstr "Buscar equipos o mánagers"
 
 #: ../../../index.php:183 ../../../manager_der_saison.php:68
 #: ../../../support.php:36 ../../../transfermarkt.php:116
 #: ../../../transfermarkt_leihe.php:55
 msgid "Suchen"
-msgstr ""
+msgstr "Buscar"
 
 #: ../../../index.php:186
 msgid "Suchergebnisse (maximal 10)"
-msgstr ""
+msgstr "Resultados de búsqueda (máximo 10)"
 
 #: ../../../index.php:193 ../../../team.php:19 ../../../team.php:28
 msgid "Team:"
@@ -2377,12 +2536,16 @@ msgstr "Juego limpio y Multi-Cuentas"
 #: ../../../index.php:208
 msgid "Wie im Sport genießt auch bei uns das Fairplay absolute Priorität."
 msgstr ""
+"Al igual que en el deporte, el juego limpio es prioridad absoluta para "
+"nosotros."
 
 #: ../../../index.php:208
 msgid ""
 "Pro Person ist nur ein Account erlaubt. Bekannte, Freunde oder die geliebte "
 "Familie dürfen natürlich vom selben Internet-Anschluss aus mitspielen."
 msgstr ""
+"Por persona sólo se permite una cuenta. Por supuesto, conocidos, amigos o "
+"familiares también pueden jugar desde la misma conexión a Internet."
 
 #: ../../../index.php:208
 msgid ""
@@ -2396,6 +2559,8 @@ msgid ""
 "Sorry, ein anderer Manager war leider schneller: Er hat Dir das Team "
 "weggeschnappt! Bitte versuche es mit einem anderen Team ..."
 msgstr ""
+"Lo sentimos, otro mánager fue más rapido: Él ya tomó el control del equipo! "
+"Por favor intenta de nuevo con otro club ..."
 
 #: ../../../index.php:245
 msgid ""
@@ -2409,7 +2574,16 @@ msgstr "[Cerrar sesión]"
 
 #: ../../../index.php:246
 msgid "Dein neuer Job!"
+msgstr "¡Tu nuevo trabajo!"
+
+#: ../../../index.php:247
+#, php-format
+msgid ""
+"Herzlichen Glückwunsch! %s freut sich sehr, Dich als neuen Manager begrüßen "
+"zu dürfen! Du erhältst Dein Team automatisch beim nächsten Login."
 msgstr ""
+"¡Felicitaciones! %s se complace en darte la bienvenida como ¡nuevo mánager! "
+"Recibirás tu equipo de forma automática en el siguiente inicio de sesión."
 
 #: ../../../index.php:248
 msgid ""
@@ -2422,12 +2596,20 @@ msgstr ""
 msgid "Viel Spaß!"
 msgstr "Diviértete!"
 
+#: ../../../index.php:257
+#, php-format
+msgid "Herzlich Willkommen, %s!"
+msgstr "¡Bienvenido, %s!"
+
 #: ../../../index.php:263
 msgid ""
 "Du bist zwar ein Neuling, aber man sagt, du hättest großes Talent. Deshalb "
 "haben wir hier ein paar Job-Angebote für Dich. Such Dir einfach ein Team aus "
 "und deine Reise als Manager kann beginnen:"
 msgstr ""
+"En verdad eres un novato, pero dijiste que tenías un gran talento. Por lo "
+"tanto, tenemos aquí un par de ofertas de trabajo para tí. Basta con buscar "
+"un equipo y ya puedes comenzar tu viaje como mánager:"
 
 #: ../../../index.php:264 ../../../leihgaben.php:106
 #: ../../../leihgaben.php:133 ../../../leihgaben.php:162
@@ -2464,6 +2646,11 @@ msgstr ""
 
 #: ../../../index.php:281
 msgid "Klicke hier, um mehr anzuzeigen!"
+msgstr "¡Has clic aquí para ver más!"
+
+#: ../../../index.php:281
+#, php-format
+msgid "Nicht genug Angebote? Du möchtest in einer anderen Liga anfangen? %s"
 msgstr ""
 
 #: ../../../index.php:282
@@ -2479,7 +2666,7 @@ msgstr "¡Tu contraseña fue cambiada exitosamente!"
 
 #: ../../../index.php:292
 msgid "Einloggen mit bestehendem Account"
-msgstr ""
+msgstr "Accede con tu cuenta actual"
 
 #: ../../../index.php:294 ../../../zz2.php:227
 msgid "E-Mail / Username:"
@@ -2499,20 +2686,19 @@ msgstr "¿Olvidaste tu contraseña?"
 
 #: ../../../index.php:299
 msgid "Jetzt neu registrieren"
-msgstr ""
+msgstr "Regístrate ahora"
 
 #: ../../../index.php:301 ../../../index.php:312
 msgid "Dein gewünschter Managername:"
-msgstr ""
+msgstr "Tu nombre de mánager preferido:"
 
 #: ../../../index.php:302 ../../../index.php:313
-#, fuzzy
 msgid "Deine E-Mail-Adresse:"
-msgstr "Dirección de correo electrónico:"
+msgstr "Tu dirección de correo electrónico:"
 
 #: ../../../index.php:303 ../../../index.php:314
 msgid "Jetzt kostenlos mitspielen"
-msgstr ""
+msgstr "Únete ahora gratis"
 
 #: ../../../index.php:304 ../../../index.php:315
 msgid ""
@@ -2527,7 +2713,7 @@ msgstr "Mánager de Futbol Online Gratuito"
 
 #: ../../../index.php:308
 msgid "Du bist der Trainer. Du bist der Manager. Du hast alles in der Hand!"
-msgstr ""
+msgstr "Tu eres el entrenador. Tu eres el mánager. ¡Tienes todo en tus manos!"
 
 #: ../../../index.php:309
 msgid "Übernimm Deinen eigenen Fußballklub!"
@@ -2535,19 +2721,19 @@ msgstr ""
 
 #: ../../../index.php:309
 msgid "jeden Tag 1 bis 4 Spiele (Liga + Pokal)"
-msgstr ""
+msgstr "todos los días de 1 a 4 partidos (liga + copa)"
 
 #: ../../../index.php:309
 msgid "einfach im Browser managen &mdash; keine Installation"
-msgstr ""
+msgstr "simplemente con el navegador - sin instalación"
 
 #: ../../../index.php:309
 msgid "garantiert kostenlos &mdash; auch in Zukunft"
-msgstr ""
+msgstr "garantizado gratis - siempre"
 
 #: ../../../index.php:309
 msgid "keine Premium-Accounts &mdash; gleiche Chancen für alle"
-msgstr ""
+msgstr "sin cuentas premium - igualdad de oportunidades para todos"
 
 #: ../../../index.php:309
 msgid "schneller Einstieg"
@@ -2559,7 +2745,7 @@ msgstr ""
 
 #: ../../../index.php:309
 msgid "tolle Community"
-msgstr ""
+msgstr "gran comunidad"
 
 #: ../../../index.php:309
 msgid "wenig Zeitaufwand"
@@ -2567,16 +2753,21 @@ msgstr ""
 
 #: ../../../index.php:309
 msgid "LIVE-Spiele &mdash; spannend bis zum Ende"
-msgstr ""
+msgstr "Partidos EN VIVO &mdash;  emocionante hasta el final"
 
 #: ../../../index.php:309
 msgid "Urlaubsvertretung durch den Computer (10-30 Tage)"
-msgstr ""
+msgstr "Vacaciones con reemplazo por la coputadora (10-30 días)"
 
 #: ../../../index.php:310
 #, fuzzy
 msgid "Jetzt registrieren"
 msgstr "Regístrate"
+
+#: ../../../index.php:317
+#, fuzzy, php-format
+msgid "Gefällt Dir %s?"
+msgstr "Parte V: Ballmanager"
 
 #: ../../../ipInfo.php:2 ../../../ipInfo.php:42
 msgid "IP-Info"
@@ -2585,6 +2776,13 @@ msgstr "IP-Info"
 #: ../../../ipInfo.php:9
 msgid "IP-Info:"
 msgstr "IP-Info:"
+
+#: ../../../ipInfo.php:10
+#, php-format
+msgid ""
+"Die folgende Liste zeigt, welche User schon mit der IP-Adresse &quot;"
+"%s&quot; eingeloggt waren."
+msgstr ""
 
 #: ../../../ipInfo.php:15
 msgid "User"
@@ -2599,9 +2797,14 @@ msgstr "Última conexión"
 msgid "Kader"
 msgstr "Plantel"
 
+#: ../../../kader.php:28
+#, php-format
+msgid "Dein Jugendtrainer sucht ab sofort %s."
+msgstr "Su entrenador de juveniles está esta buscando un %s"
+
 #: ../../../kader.php:57 ../../../team.php:130
 msgid "TS"
-msgstr "ES"
+msgstr "ET"
 
 #: ../../../kader.php:61 ../../../leihgaben.php:161 ../../../leihgaben.php:198
 msgid "PS"
@@ -2612,14 +2815,22 @@ msgid "MW"
 msgstr "VM"
 
 #: ../../../kader.php:117
-#, fuzzy
 msgid "Verliehen"
-msgstr "Ampliar"
+msgstr "Cedido"
 
 #: ../../../kader.php:120 ../../../spieler.php:129
-#, fuzzy
 msgid "Ausgeliehen"
-msgstr "Balanceado"
+msgstr "Prestado"
+
+#: ../../../kader.php:146 ../../../team.php:182
+#, php-format
+msgid "Team-Alter: %s Jahre"
+msgstr "Edad del plantel: %s años"
+
+#: ../../../kader.php:147 ../../../team.php:183
+#, php-format
+msgid "Team-Marktwert: %s €"
+msgstr "Valor del plantel: %s €"
 
 #: ../../../kader.php:152
 msgid "Keine"
@@ -2635,8 +2846,8 @@ msgid ""
 "MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, PS: Pflichtspiele "
 "(Tore), MW: Marktwert in Millionen Euro"
 msgstr ""
-"PT: posición, TS: estado de transferencia, AG: edad, OM: partidos oficiales "
-"(goles), MV: valor de mercado en millones €"
+"Po: posición, ET: estado de transferencia, Ed: edad, PO: partidos oficiales "
+"(goles), VM: valor de mercado en millones €"
 
 #: ../../../kader.php:166 ../../../team.php:189
 msgid "Durchgestrichen:"
@@ -2673,6 +2884,11 @@ msgstr "Buscar delantero"
 #: ../../../kalender.php:2 ../../../zz2.php:178
 msgid "Kalender"
 msgstr "Calendario"
+
+#: ../../../kalender.php:22
+#, php-format
+msgid "Spiele von %s"
+msgstr "Partidos de %s"
 
 #: ../../../kalender.php:37 ../../../zz2.php:263
 msgid "Alle"
@@ -2770,6 +2986,14 @@ msgstr ""
 msgid "Team-Mitglied"
 msgstr ""
 
+#: ../../../leihgaben.php:24 ../../../transfermarkt_auktion.php:107
+#: ../../../transfermarkt_leihe.php:108
+#, php-format
+msgid ""
+"Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage "
+"bitte ein %2$s."
+msgstr ""
+
 #: ../../../leihgaben.php:35
 #, fuzzy
 msgid "Der Spieler konnte nicht gefunden werden."
@@ -2780,23 +3004,36 @@ msgstr "El jugador le hace un tunel a su oponente."
 msgid "Die Anfrage wurde zurückgezogen."
 msgstr "¡Tus vacaciones han sido aceptadas!"
 
+#: ../../../leihgaben.php:68
+#, php-format
+msgid "für %s € pro Pflichtspiel"
+msgstr ""
+
 #: ../../../leihgaben.php:71
 msgid "ohne Prämie"
 msgstr ""
 
+#: ../../../leihgaben.php:73
+#, fuzzy, php-format
+msgid "Du hast den Spieler %s an einen anderen Verein verliehen."
+msgstr "Aún no has invitado ningun usuario!"
+
+#: ../../../leihgaben.php:76
+#, fuzzy, php-format
+msgid "Du hast den Spieler %s ausgeliehen."
+msgstr "Aún no has invitado ningun usuario!"
+
 #: ../../../leihgaben.php:85
-#, fuzzy
 msgid "Die Anfrage wurde angenommen."
-msgstr "¡Tus vacaciones han sido aceptadas!"
+msgstr "La solicitud fue aceptada."
 
 #: ../../../leihgaben.php:91
 msgid "Du hast mit diesem Verein schon zwei Transfers ausgehandelt."
-msgstr ""
+msgstr "Ya has negociado dos transferencias con este club."
 
 #: ../../../leihgaben.php:99 ../../../ligaTausch.php:153
-#, fuzzy
 msgid "Die Anfrage wurde abgelehnt."
-msgstr "¡Tus vacaciones han sido aceptadas!"
+msgstr "La solicitud fue denegada."
 
 #: ../../../leihgaben.php:106
 msgid "Prämie p.E."
@@ -2804,7 +3041,7 @@ msgstr ""
 
 #: ../../../leihgaben.php:106
 msgid "Annehmen?"
-msgstr ""
+msgstr "¿Respuesta?"
 
 #: ../../../leihgaben.php:113
 msgid "Dein Co-Trainer hat die Anfrage abgelehnt (2-Transfers-Sperre)"
@@ -2812,11 +3049,11 @@ msgstr ""
 
 #: ../../../leihgaben.php:118 ../../../spieler.php:163
 msgid "Ja"
-msgstr ""
+msgstr "Si"
 
 #: ../../../leihgaben.php:118 ../../../spieler.php:156
 msgid "Nein"
-msgstr ""
+msgstr "No"
 
 #: ../../../leihgaben.php:121
 msgid ""
@@ -2825,14 +3062,12 @@ msgid ""
 msgstr ""
 
 #: ../../../leihgaben.php:124 ../../../leihgaben.php:144
-#, fuzzy
 msgid "Zurzeit keine Anfragen!"
-msgstr "Eviar solicitud"
+msgstr "¡Por el momento no hay solicitudes!"
 
 #: ../../../leihgaben.php:128
-#, fuzzy
 msgid "Gesendete Anfragen"
-msgstr "Eviar solicitud"
+msgstr "Solicitudes enviadas"
 
 #: ../../../leihgaben.php:133
 #, fuzzy
@@ -2841,7 +3076,7 @@ msgstr "Préstamo"
 
 #: ../../../leihgaben.php:139
 msgid "Zurückziehen"
-msgstr ""
+msgstr "Cancelar"
 
 #: ../../../leihgaben.php:147
 #, fuzzy
@@ -2874,14 +3109,12 @@ msgstr ""
 "(goles), MV: valor de mercado en millones €"
 
 #: ../../../leihgaben.php:182
-#, fuzzy
 msgid "Du hast in dieser Saison noch keine Spieler verliehen."
-msgstr "Aún no has invitado ningun usuario!"
+msgstr "No has cedido ningún jugador en esta temporada."
 
 #: ../../../leihgaben.php:184
-#, fuzzy
 msgid "Ausgeliehene Spieler"
-msgstr "Mis jugadores"
+msgstr "Jugadores cedidos"
 
 #: ../../../leihgaben.php:190
 msgid ""
@@ -2964,9 +3197,13 @@ msgid "[AB]"
 msgstr ""
 
 #: ../../../lig_tabelle.php:206
-#, fuzzy
 msgid "Erklärung:"
 msgstr "Explicaciones:"
+
+#: ../../../lig_tabelle.php:208
+#, php-format
+msgid "Platz 1: Meister, Platz 1-%d: Pokalplätze, Platz 10-12: Abstiegsplätze"
+msgstr ""
 
 #: ../../../lig_tabelle.php:209 ../../../lig_tabelle.php:213
 #: ../../../lig_tabelle.php:217
@@ -2998,11 +3235,17 @@ msgid ""
 "SP: Spiele, S-U-N: Siege/Unentschieden/Niederlagen, TO: Tore, DI: Differenz, "
 "PT: Punkte"
 msgstr ""
+"PJ: partidos jugados, G-E-P: ganados/empatados/perdidos, GF-GE: goles a "
+"favor/goles en contra, +/-: Diferencia, Ptos: puntos"
+
+#: ../../../lig_tabelle.php:226
+#, php-format
+msgid "Ergebnisse (%s. Spieltag)"
+msgstr "Resultados (fecha %s)"
 
 #: ../../../lig_tabelle.php:238
-#, fuzzy
 msgid "Anzeigen"
-msgstr "Todas las ligas"
+msgstr "Mostrar"
 
 #: ../../../lig_tabelle.php:245 ../../../lig_testspiele_liste.php:43
 msgid "Heim"
@@ -3141,6 +3384,14 @@ msgstr "Intercambio-configuración"
 msgid "Wichtig: Vor Liga-Tausch erst lesen:"
 msgstr "Atención: por favor lee antes de intercambiar ligas:"
 
+#: ../../../ligaTausch.php:14
+#, php-format
+msgid ""
+"Du möchtest in einer anderen Liga spielen? In %s hast Du schon alles "
+"gewonnen und jetzt möchtest Du in einem anderen Land um den Titel kämpfen? "
+"Oder ein anderes Land gefällt Dir einfach besser?"
+msgstr ""
+
 #: ../../../ligaTausch.php:15
 msgid ""
 "Dann ist der Liga-Tausch genau das Richtige für Dich! Tausche einfach mit "
@@ -3174,6 +3425,11 @@ msgstr ""
 "Así que por favor ten en cuenta que no llevaras los amistosos con tu nuevo "
 "equipo en caso de que ya hubieses arreglado alguno para esta temporada."
 
+#: ../../../ligaTausch.php:24
+#, php-format
+msgid "Du musst noch %d Tage warten, bis Du wieder die Liga wechseln kannst."
+msgstr "Debes esperar %d hasta que puedas cambiar de liga nuevamente."
+
 #: ../../../ligaTausch.php:29
 msgid ""
 "Der Verband erlaubt einen Liga-Tausch nur an den ersten fünf Spieltagen. "
@@ -3181,6 +3437,13 @@ msgid ""
 msgstr ""
 "La asociación permite solo un intercambio de liga en los primeros cinco días "
 "de cada temporada. Por favor, espera hasta la siguiente."
+
+#: ../../../ligaTausch.php:34
+#, php-format
+msgid ""
+"Zurzeit laufen %s-Spiele. Deshalb kannst Du leider keine Liga-Wechsel "
+"durchführen. Bitte warte, bis die Spiele beendet sind."
+msgstr ""
 
 #: ../../../ligaTausch.php:47
 #, fuzzy
@@ -3207,7 +3470,7 @@ msgstr ""
 
 #: ../../../ligaTausch.php:146
 msgid "Die Anfrage wurde angenommen, eure Ligen wurden getauscht."
-msgstr ""
+msgstr "La solicitud ha sido aceptada, se intercambiaron sus ligas."
 
 #: ../../../ligaTausch.php:158 ../../../testspiele.php:60
 #, fuzzy
@@ -3270,7 +3533,7 @@ msgid ""
 "Jeder Eintrag wird nach 22 Tagen wieder gelöscht, kann dann aber erneut "
 "eingestellt werden."
 msgstr ""
-"Cada entrada se eliminarán después de 22 días, pero puedes añadir otra "
+"Cada entrada se eliminará después de 22 días, pero puedes añadir otra "
 "nuevamente."
 
 #: ../../../liveZentrale.php:2 ../../../liveZentrale.php:35
@@ -3318,6 +3581,13 @@ msgstr "Colores:"
 msgid "Rot: LIVE, Schwarz: Beendet"
 msgstr "Rojo: VIVO, negro: terminado"
 
+#: ../../../liveZentrale.php:153
+#, php-format
+msgid ""
+"Spiele Deiner %s sind mit einem Symbol vor den Teamnamen gekennzeichnet. "
+"Deine eigenen Spiele sind fett markiert."
+msgstr ""
+
 #: ../../../logoutNewUser.php:6 ../../../logoutNewUser.php:20
 msgid "Ich komme später wieder - Ausloggen!"
 msgstr ""
@@ -3338,6 +3608,11 @@ msgstr "¿Cerrar sesión?"
 msgid "Du bist neu hier, deshalb fragen wir Dich:"
 msgstr ""
 
+#: ../../../logoutNewUser.php:18
+#, php-format
+msgid "Was möchtest Du tun? Wie gefällt Dir %s bisher?"
+msgstr ""
+
 #: ../../../manager.php:18 ../../../manager.php:124
 #, fuzzy
 msgid "keine"
@@ -3351,65 +3626,110 @@ msgstr ""
 msgid "unbekannt"
 msgstr "desconocido"
 
+#: ../../../manager.php:45
+#, php-format
+msgid "vor %d Tagen"
+msgstr "hace %d días"
+
+#: ../../../manager.php:48
+#, php-format
+msgid "vor %d Stunden"
+msgstr "hace %d horas"
+
+#: ../../../manager.php:51
+#, php-format
+msgid "vor %d Minuten"
+msgstr "hace %d minutos"
+
 #: ../../../manager.php:54
 msgid "vor wenigen Sekunden"
-msgstr ""
+msgstr "hace unos segundos"
+
+#: ../../../manager.php:57 ../../../manager.php:86
+#, php-format
+msgid "Manager: %s"
+msgstr "Mánager: %s"
 
 #: ../../../manager.php:81
 msgid "Administrator"
-msgstr ""
+msgstr "Administrador"
 
 #: ../../../manager.php:83
 msgid "Bigpoint-User"
-msgstr ""
+msgstr "Usuario de Bigpoint"
 
 #: ../../../manager.php:106 ../../../manager.php:124
-#, fuzzy
 msgid "Multi-Accounts:"
-msgstr "Multi-Cuentas"
+msgstr "Multi-cuentas"
+
+#: ../../../manager.php:113
+#, fuzzy, php-format
+msgid "Gefunden: %s"
+msgstr "Amigos"
+
+#: ../../../manager.php:118
+#, php-format
+msgid "und %d Inaktive"
+msgstr ""
 
 #: ../../../manager.php:133
 msgid "Letzter Team-Tausch:"
 msgstr ""
 
+#: ../../../manager.php:137
+#, php-format
+msgid "%s ist zurzeit im Urlaub!"
+msgstr "%s está actualmente de vacaciones!"
+
 #: ../../../manager.php:144 ../../../spielbericht.php:286
 #: ../../../spieler.php:77 ../../../team.php:46 ../../../ver_stadion.php:211
 msgid "Wert"
-msgstr "Valor"
+msgstr "Datos"
 
 #: ../../../manager.php:151
 msgid "Dabei seit"
-msgstr ""
+msgstr "Se unió"
 
 #: ../../../manager.php:156
 msgid "noch keine"
 msgstr ""
 
+#: ../../../manager.php:163
+#, php-format
+msgid "%s jetzt eine Nachricht schicken"
+msgstr ""
+
+#: ../../../manager.php:167
+#, php-format
+msgid "Sanktion für %s festlegen"
+msgstr ""
+
 #: ../../../manager.php:201 ../../../manager.php:204 ../../../manager.php:208
 #: ../../../manager.php:228 ../../../manager.php:236 ../../../manager.php:241
-#, fuzzy
 msgid "Testspiel vereinbaren"
-msgstr "Amistosos"
+msgstr "Organizar amistosos"
 
 #: ../../../manager.php:201
 msgid "Zu spät:"
-msgstr ""
+msgstr "Demasiado tarde:"
 
 #: ../../../manager.php:201
-#, fuzzy
 msgid "In dieser Saison können leider keine Testspiele mehr vereinbart werden."
-msgstr "Aún no has invitado ningun usuario!"
+msgstr ""
+"Lamentablemente, no se pueden organizar mas amistosos hasta que finalice la "
+"temporada."
 
 #: ../../../manager.php:204
 msgid "Zu teuer:"
 msgstr ""
 
 #: ../../../manager.php:204
-#, fuzzy
 msgid ""
 "Im Moment hast Du leider nicht genügend Geld, um ein Testspiel vereinbaren "
 "zu können."
-msgstr "¡No dispones de suficiente dinero para comprar este jugador!"
+msgstr ""
+"En este momento no dispones de suficiente dinero para organizar un partido "
+"amistoso."
 
 #: ../../../manager.php:209 ../../../passwort_vergessen.php:112
 #: ../../../testspiele.php:81 ../../../testspiele.php:119
@@ -3418,8 +3738,26 @@ msgstr "¡No dispones de suficiente dinero para comprar este jugador!"
 msgid "Wichtig:"
 msgstr "Atención:"
 
+#: ../../../manager.php:209
+#, php-format
+msgid ""
+"Das Testspiel findet immer im Stadion des Anfragenden statt. Beide Teams "
+"müssen für ein Testspiel eine Entschädigung an den Verband zahlen, damit das "
+"Spiel genehmigt wird. Für Dich sind das %s €."
+msgstr ""
+"Los amistosos se juegan siempre en el estadio del solicitante. Ambos equipos "
+"tienen que pagar una indemnización a la Asociación por amistoso, para que el "
+"juego sea aprobado. En tu caso es de %s €."
+
 #: ../../../manager.php:228
 msgid "Eure Vereine haben keine freien Termine mehr für ein Testspiel."
+msgstr ""
+
+#: ../../../manager.php:236
+#, php-format
+msgid ""
+"Zwischen Dir und %s laufen schon Verhandlungen über ein Testspiel. Du kannst "
+"keine weitere Anfrage senden."
 msgstr ""
 
 #: ../../../manager.php:241
@@ -3428,7 +3766,17 @@ msgstr ""
 
 #: ../../../manager.php:270
 msgid "Gästebuch"
+msgstr "Libro de visitas"
+
+#: ../../../manager.php:277
+#, php-format
+msgid "Das Gästebuch von %s ist noch leer. Sei der Erste, der sich einträgt!"
 msgstr ""
+
+#: ../../../manager.php:281
+#, php-format
+msgid "%1$s schrieb am %2$s:"
+msgstr "%1$s escribió el %2$s:"
 
 #: ../../../manager.php:283 ../../../taktik.php:180
 msgid "Löschen"
@@ -3436,12 +3784,22 @@ msgstr "Borrar"
 
 #: ../../../manager.php:303
 msgid "Infotext"
-msgstr ""
+msgstr "Texto informativo"
+
+#: ../../../manager.php:303
+#, php-format
+msgid "%s Zeichen"
+msgstr "%s caracteres"
 
 #: ../../../manager.php:307 ../../../notizen.php:55 ../../../taktik.php:149
 #: ../../../taktik.php:171
 msgid "Speichern"
 msgstr "Guardar"
+
+#: ../../../manager.php:311
+#, php-format
+msgid "%s hat noch keinen Text über sich und den Verein geschrieben."
+msgstr "%s no ha escrito ningún texto sobre sí mismos o el club."
 
 #: ../../../managerPruefung.php:11
 msgid "Erfolgreich bestanden"
@@ -3466,7 +3824,7 @@ msgstr "Mánager"
 
 #: ../../../managerPruefung.php:28
 msgid "Registriere Dich im Spiel und aktiviere Deinen Account."
-msgstr ""
+msgstr "Registrarse en el juego y activar tu cuenta."
 
 #: ../../../managerPruefung.php:29
 msgid "Wähle nach dem ersten Login Dein Team und Deine Liga."
@@ -3495,6 +3853,11 @@ msgid ""
 "dabei sind."
 msgstr ""
 
+#: ../../../manager_der_saison.php:24
+#, php-format
+msgid "Du bist erst %d Tage dabei und deshalb nicht stimmberechtigt."
+msgstr "Te uniste hace %d días y por lo tanto aún no puedes votar."
+
 #: ../../../manager_der_saison.php:27 ../../../manager_der_saison.php:89
 #, fuzzy
 msgid "Du hast schon abgestimmt!"
@@ -3502,7 +3865,7 @@ msgstr "Apostado hoy"
 
 #: ../../../manager_der_saison.php:33
 msgid "Jeder Tabellenplatz"
-msgstr ""
+msgstr "Cualquier "
 
 #: ../../../manager_der_saison.php:34
 msgid "1. bis 3."
@@ -3525,27 +3888,39 @@ msgid "Jedes Pokal-Ergebnis"
 msgstr ""
 
 #: ../../../manager_der_saison.php:41 ../../../manager_der_saison.php:49
+#: ../../../pokal.php:134 ../../../zzserver.php:230 ../../../zzserver.php:243
 #, fuzzy
-msgid "mind. Vorrunde"
+msgid "Vorrunde"
 msgstr "Copa Nacional: Preliminares"
 
+#: ../../../manager_der_saison.php:41 ../../../manager_der_saison.php:42
+#: ../../../manager_der_saison.php:43 ../../../manager_der_saison.php:44
+#: ../../../manager_der_saison.php:49 ../../../manager_der_saison.php:50
+#: ../../../manager_der_saison.php:51 ../../../manager_der_saison.php:52
+#, php-format
+msgid "mind. %s"
+msgstr ""
+
 #: ../../../manager_der_saison.php:42 ../../../manager_der_saison.php:50
+#: ../../../pokal.php:135 ../../../zzserver.php:231 ../../../zzserver.php:244
 #, fuzzy
-msgid "mind. Achtelfinale"
+msgid "Achtelfinale"
 msgstr "Copa Nacional: Octavos de final"
 
 #: ../../../manager_der_saison.php:43 ../../../manager_der_saison.php:51
+#: ../../../pokal.php:136 ../../../zzserver.php:232 ../../../zzserver.php:245
 #, fuzzy
-msgid "mind. Viertelfinale"
+msgid "Viertelfinale"
 msgstr "Copa Nacional: Cuartos de final"
 
 #: ../../../manager_der_saison.php:44 ../../../manager_der_saison.php:52
+#: ../../../pokal.php:137 ../../../zzserver.php:233 ../../../zzserver.php:246
 #, fuzzy
-msgid "mind. Halbfinale"
+msgid "Halbfinale"
 msgstr "Copa Nacional: Semifinal"
 
 #: ../../../manager_der_saison.php:45 ../../../manager_der_saison.php:53
-#: ../../../pokal.php:138 ../../../zzserver.php:238 ../../../zzserver.php:251
+#: ../../../pokal.php:138 ../../../zzserver.php:234 ../../../zzserver.php:247
 #, fuzzy
 msgid "Finale"
 msgstr "Finanzas"
@@ -3559,44 +3934,13 @@ msgstr "Resultado"
 msgid "Jede Bilanz"
 msgstr ""
 
-#: ../../../manager_der_saison.php:57
-msgid "0 bis 10 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:58
-msgid "10 bis 30 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:59
-msgid "30 bis 60 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:60
-msgid "60 bis 100 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:61
-msgid "100 bis 150 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:62
-msgid "150 bis 210 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:63
-msgid "210 bis 280 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:64
-msgid "280 bis 360 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:65
-msgid "360 bis 450 Mio € Gewinn"
-msgstr ""
-
-#: ../../../manager_der_saison.php:66
-msgid "450 bis 550 Mio € Gewinn"
+#: ../../../manager_der_saison.php:57 ../../../manager_der_saison.php:58
+#: ../../../manager_der_saison.php:59 ../../../manager_der_saison.php:60
+#: ../../../manager_der_saison.php:61 ../../../manager_der_saison.php:62
+#: ../../../manager_der_saison.php:63 ../../../manager_der_saison.php:64
+#: ../../../manager_der_saison.php:65 ../../../manager_der_saison.php:66
+#, php-format
+msgid "%1$d bis %2$d Mio € Gewinn"
 msgstr ""
 
 #: ../../../manager_der_saison.php:76
@@ -3618,6 +3962,11 @@ msgstr ""
 "Desafortunadamente, tu contraseña no se ha podido cambiar. Por favor, "
 "¡vuelve a intentarlo!"
 
+#: ../../../manager_der_saison.php:161
+#, php-format
+msgid "%s Mio"
+msgstr ""
+
 #: ../../../manager_der_saison.php:162
 msgid "'Bist Du sicher?'"
 msgstr "'¿Estás seguro?'"
@@ -3628,7 +3977,7 @@ msgstr ""
 
 #: ../../../manager_der_saison.php:184
 msgid "Bisherige Sieger"
-msgstr ""
+msgstr "Ganadores anteriores"
 
 #: ../../../manager_der_saison.php:185 ../../../stat_cupsieger.php:45
 #: ../../../stat_meister.php:41 ../../../stat_pokalsieger.php:19
@@ -3678,15 +4027,22 @@ msgstr ""
 "desaparecerán rápidamente!"
 
 #: ../../../marktschreier.php:25 ../../../pokal.php:55 ../../../support.php:23
-#, fuzzy
 msgid "Support-Team."
 msgstr "Soporte"
+
+#: ../../../marktschreier.php:25 ../../../support.php:23
+#: ../../../supportAdd.php:15
+#, php-format
+msgid ""
+"Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn "
+"Dir unklar ist warum, frage bitte das %2$s"
+msgstr ""
 
 #: ../../../marktschreier.php:40
 msgid "Angebote auf dem Markt"
 msgstr "Ofertas en el mercado"
 
-#: ../../../multiAccounts.php:2 ../../../multiAccounts.php:214
+#: ../../../multiAccounts.php:2 ../../../multiAccounts.php:252
 #: ../../../multiSperre.php:3 ../../../multiSperre.php:5 ../../../zz2.php:253
 msgid "Multi-Accounts"
 msgstr "Multi-Cuentas"
@@ -3741,10 +4097,20 @@ msgstr "Usuario 2"
 
 #: ../../../multiAccounts.php:38
 msgid "[Nachricht vom System]"
-msgstr ""
+msgstr "[Mensaje del sistema]"
+
+#: ../../../multiAccounts.php:50 ../../../multiAccounts.php:61
+#, fuzzy, php-format
+msgid "Der User %s konnte nicht gefunden werden."
+msgstr "El jugador le hace un tunel a su oponente."
 
 #: ../../../multiAccounts.php:94
 msgid "Verknüpfung"
+msgstr ""
+
+#: ../../../multiAccounts.php:99
+#, php-format
+msgid "Die beiden User %1$s und %2$s sind im System noch nicht verknüpft."
 msgstr ""
 
 #: ../../../multiAccounts.php:100
@@ -3757,43 +4123,120 @@ msgstr ""
 msgid "Verknüpfung erstellen"
 msgstr ""
 
+#: ../../../multiAccounts.php:110
+#, php-format
+msgid "Die beiden User %1$s und %2$s sind im System seit %3$s verknüpft."
+msgstr ""
+
 #: ../../../multiAccounts.php:116
 msgid "Verknüpfung lösen"
 msgstr ""
 
-#: ../../../multiAccounts.php:126
+#: ../../../multiAccounts.php:144
+#, php-format
+msgid "Vergleich der Aktivität in den letzten %d Tagen"
+msgstr ""
+
+#: ../../../multiAccounts.php:146
+msgid "Logins im Spiel"
+msgstr ""
+
+#: ../../../multiAccounts.php:147
+#, fuzzy
+msgid "Aufstellungen geändert"
+msgstr "Formaciones"
+
+#: ../../../multiAccounts.php:148
+msgid "Beiträge im Liga-Chat"
+msgstr ""
+
+#: ../../../multiAccounts.php:149
+msgid "Beiträge im Pokal-Chat"
+msgstr ""
+
+#: ../../../multiAccounts.php:150
+msgid "Beiträge im Testwünsche-Chat"
+msgstr ""
+
+#: ../../../multiAccounts.php:151
+#, fuzzy
+msgid "Beiträge im Marktschreier"
+msgstr "Márketing"
+
+#: ../../../multiAccounts.php:152
+msgid "Post (gesendet)"
+msgstr ""
+
+#: ../../../multiAccounts.php:153
+#, fuzzy
+msgid "Post (empfangen)"
+msgstr "Pase interceptado."
+
+#: ../../../multiAccounts.php:154
+msgid "Anfragen im Support-Bereich"
+msgstr ""
+
+#: ../../../multiAccounts.php:155
+#, fuzzy
+msgid "Kommentare im Support-Bereich"
+msgstr "Relato del periodista"
+
+#: ../../../multiAccounts.php:159
+#, php-format
+msgid "IP-Adressen (%d Treffer)"
+msgstr ""
+
+#: ../../../multiAccounts.php:160
+#, php-format
+msgid ""
+"Die folgende Liste zeigt, wann die beiden User %1$s und %2$s mit welcher IP-"
+"Adresse eingeloggt waren. Wenn Du mit der Maus über ein Datum mit Uhrzeit "
+"fährst, siehst Du die Browser-Informationen dieses Nutzers."
+msgstr ""
+
+#: ../../../multiAccounts.php:164
 msgid "IP-Hash"
 msgstr ""
 
-#: ../../../multiAccounts.php:175
+#: ../../../multiAccounts.php:213
 #, fuzzy
 msgid "Letzte Multis"
 msgstr "Última acción"
 
-#: ../../../multiAccounts.php:176
+#: ../../../multiAccounts.php:214
 msgid "Die folgenden Accounts wurden zuletzt als Multi-Accounts erkannt."
 msgstr ""
 
-#: ../../../multiAccounts.php:177
+#: ../../../multiAccounts.php:215
 msgid "Grund"
 msgstr ""
 
-#: ../../../multiAccounts.php:177
+#: ../../../multiAccounts.php:215
 #, fuzzy
 msgid "Gefunden"
 msgstr "Amigos"
 
-#: ../../../multiAccounts.php:183
+#: ../../../multiAccounts.php:221
 msgid "Cookie:"
 msgstr "Cookie:"
 
-#: ../../../multiAccounts.php:186
+#: ../../../multiAccounts.php:224
 msgid "IP-Adresse:"
 msgstr "Dirección de IP:"
 
 #: ../../../multiSperre.php:6 ../../../regeln.php:30
 msgid "Nutzungsregeln"
 msgstr "Términos de uso"
+
+#: ../../../multiSperre.php:6
+#, fuzzy, php-format
+msgid ""
+"Hast Du die %s des Spiels gelesen? Pro Person ist nur 1 Account erlaubt! "
+"Andere Personen dürfen natürlich vom selben Internetanschluss aus spielen, "
+"werden jedoch vom System registriert."
+msgstr ""
+"Por persona sólo se permite una cuenta. Por supuesto, conocidos, amigos o "
+"familiares también pueden jugar desde la misma conexión a Internet."
 
 #: ../../../multiSperre.php:7
 msgid ""
@@ -3827,9 +4270,19 @@ msgstr ""
 msgid "Deinen Account löschen"
 msgstr "Eliminar cuenta"
 
+#: ../../../multiSperre.php:10
+#, php-format
+msgid "Möchtest Du %s?"
+msgstr ""
+
 #: ../../../namensaenderung.php:2 ../../../namensaenderung.php:23
 #: ../../../namensaenderung.php:167
 msgid "Namensänderung"
+msgstr "Cambiar nombre"
+
+#: ../../../namensaenderung.php:26
+#, fuzzy, php-format
+msgid "Namensänderung für %s"
 msgstr "Cambiar nombre"
 
 #: ../../../namensaenderung.php:33
@@ -3840,6 +4293,13 @@ msgstr "Solicitudes"
 #: ../../../namensaenderung.php:38
 msgid "Minuten"
 msgstr "Minutos"
+
+#: ../../../namensaenderung.php:51
+#, php-format
+msgid ""
+"Der Name Deines Vereins wurde zuletzt vor %1$d %2$d geändert. Du kannst ihn "
+"in %3$d %4$d das nächste Mal ändern."
+msgstr ""
 
 #: ../../../namensaenderung.php:58
 msgid ""
@@ -3853,6 +4313,13 @@ msgstr ""
 
 #: ../../../namensaenderung.php:59
 msgid "sag uns Bescheid"
+msgstr ""
+
+#: ../../../namensaenderung.php:59
+#, php-format
+msgid ""
+"Hier fehlt ein Städtename, den Du gerne dabei hättest? Dann %s, vielleicht "
+"kommt er dann dazu!"
 msgstr ""
 
 #: ../../../namensaenderung.php:60
@@ -3872,13 +4339,12 @@ msgid ""
 msgstr ""
 
 #: ../../../namensaenderung.php:91
-#, fuzzy
 msgid ""
 "Dieser Name ist leider schon vergeben. Bitte versuche es noch einmal mit "
 "einem anderen Namen."
 msgstr ""
-"Desafortunadamente, tu contraseña no se ha podido cambiar. Por favor, "
-"¡vuelve a intentarlo!"
+"Desafortunadamente este nombre ya está en uso. Por favor, inténtalo de nuevo "
+"con un nombre diferente."
 
 #: ../../../namensaenderung.php:118
 msgid "Dein Verein heißt jetzt:"
@@ -3890,6 +4356,13 @@ msgid "Du musst <i>einen</i> Zusatz wählen. Bitte versuche es noch einmal."
 msgstr ""
 "Desafortunadamente, tu contraseña no se ha podido cambiar. Por favor, "
 "¡vuelve a intentarlo!"
+
+#: ../../../namensaenderung.php:133
+#, php-format
+msgid ""
+"Du kannst den Namen Deines Vereins nur außerhalb der Spielzeiten ändern. "
+"Zurzeit laufen %s-Spiele."
+msgstr ""
 
 #: ../../../namensaenderung.php:163 ../../../ver_stadion.php:223
 #: ../../../ver_stadion.php:244
@@ -4019,6 +4492,13 @@ msgstr "Dirección de correo electrónico:"
 msgid "Internationaler Pokal"
 msgstr "Copa Internacional"
 
+#: ../../../pokal.php:55
+#, php-format
+msgid ""
+"Du bist noch bis zum %1$d für die Kommunikation im Spiel gesperrt. Wenn Dir "
+"unklar ist warum, frage bitte das %2$s"
+msgstr ""
+
 #: ../../../pokal.php:67
 msgid ""
 "Für diesen Wettbewerb qualifizieren sich die 32 besten Teams des Spiels. Das "
@@ -4035,34 +4515,13 @@ msgid ""
 "nächste Runde erreicht."
 msgstr ""
 
-#: ../../../pokal.php:134 ../../../zzserver.php:234 ../../../zzserver.php:247
-#, fuzzy
-msgid "Vorrunde"
-msgstr "Copa Nacional: Preliminares"
-
-#: ../../../pokal.php:135 ../../../zzserver.php:235 ../../../zzserver.php:248
-#, fuzzy
-msgid "Achtelfinale"
-msgstr "Copa Nacional: Octavos de final"
-
-#: ../../../pokal.php:136 ../../../zzserver.php:236 ../../../zzserver.php:249
-#, fuzzy
-msgid "Viertelfinale"
-msgstr "Copa Nacional: Cuartos de final"
-
-#: ../../../pokal.php:137 ../../../zzserver.php:237 ../../../zzserver.php:250
-#, fuzzy
-msgid "Halbfinale"
-msgstr "Copa Nacional: Semifinal"
-
 #: ../../../pokal.php:191
 msgid "H"
-msgstr ""
+msgstr "I"
 
 #: ../../../pokal.php:191
-#, fuzzy
 msgid "R"
-msgstr "FR"
+msgstr "V"
 
 #: ../../../pokal.php:196
 msgid "Spiele mit Beteiligung aus dem eigenen Land werden grau hinterlegt."
@@ -4107,16 +4566,14 @@ msgid ""
 msgstr ""
 
 #: ../../../post_schreiben.php:63
-#, fuzzy
 msgid ""
 "Deine Post konnte leider nicht versendet werden. Du musst alle Felder "
 "ausfüllen. Bitte versuche es noch einmal."
 msgstr ""
-"Desafortunadamente, tu contraseña no se ha podido cambiar. Por favor, "
-"¡vuelve a intentarlo!"
+"Por desgracia, tu correo no se pudo enviar. Debes llenar todos los campos. "
+"Por favor, ¡vuelve a intentarlo!"
 
 #: ../../../post_schreiben.php:93 ../../../post_schreiben.php:97
-#, fuzzy
 msgid "Zurück zum Profil"
 msgstr "Volver al perfil del jugador"
 
@@ -4147,6 +4604,11 @@ msgstr "Mensaje:"
 msgid "Postausgang"
 msgstr "Bandeja de salida"
 
+#: ../../../postausgang.php:26
+#, php-format
+msgid "Es wurden %d Nachrichten aus Deinem Postausgang gelöscht."
+msgstr "Se eliminaron %d mensajes del buzón de entrada."
+
 #: ../../../postausgang.php:30 ../../../posteingang.php:2
 #: ../../../posteingang.php:15 ../../../posteingang.php:39
 #: ../../../zz2.php:244
@@ -4165,6 +4627,16 @@ msgstr "Receptor"
 msgid "Gelöschter User"
 msgstr "Usuario eliminado"
 
+#: ../../../posteingang.php:24
+#, php-format
+msgid "Es wurden %d Nachrichten als gelesen markiert."
+msgstr "Se marcaron como leídos %d mensajes del buzón de entrada."
+
+#: ../../../posteingang.php:34
+#, php-format
+msgid "Es wurden %d Nachrichten aus Deinem Posteingang gelöscht."
+msgstr "Se eliminaron %d mensajes del buzón de entrada."
+
 #: ../../../posteingang.php:46
 msgid "Absender"
 msgstr "Remitente"
@@ -4177,6 +4649,11 @@ msgstr "Marcar todos como leídos"
 #: ../../../protokoll.php:99 ../../../zz2.php:147
 msgid "Protokoll"
 msgstr "Notificaciones"
+
+#: ../../../protokoll.php:23
+#, php-format
+msgid "Protokoll für %s"
+msgstr "Notificaciones de %s"
 
 #: ../../../protokoll.php:48
 msgid "Filtern"
@@ -4214,6 +4691,19 @@ msgid ""
 msgstr ""
 "Sólo puedes participar en este juego si aceptas las reglas del juego. De lo "
 "contrario, te recomendamos que borres tu cuenta en \"Ajustes\"."
+
+#: ../../../regeln.php:31
+#, fuzzy, php-format
+msgid ""
+"Diese Nutzungsbedingungen (&quot;Regeln&quot;) legen fest, wie Du (&quot;der "
+"User&quot;) die Webseite unter %1$s (&quot;%2$s&quot;) nutzen darfst. Mit "
+"der Nutzung dieser Webseite erklärst Du, dass Du mit den Regeln auf dieser "
+"Seite einverstanden bist."
+msgstr ""
+"Estos términos de uso (% quot; las Reglas \") determinan como debes (\" el "
+"Usuario \") utilizar este sitio web y todos los servicios ofrecidos en "
+"nuestras páginas (\" la solicitud \"). Mediante el uso de esta solicitud "
+"declaras estar de acuerdo con las Reglas que figuran en esta página."
 
 #: ../../../regeln.php:32
 msgid ""
@@ -4394,9 +4884,8 @@ msgstr ""
 "bienes"
 
 #: ../../../regeln.php:68
-#, fuzzy
 msgid "Teil IV: Aufgaben und Funktion des Support-Teams"
-msgstr "Parte IV: El papel y la función del equipo de Ballmanager"
+msgstr "Parte IV: El papel y la función del equipo de Soporte"
 
 #: ../../../regeln.php:70
 msgid ""
@@ -4442,7 +4931,7 @@ msgstr ""
 
 #: ../../../regeln.php:78
 msgid "Teil V: Das Spiel"
-msgstr ""
+msgstr "Parte V: El juego"
 
 #: ../../../regeln.php:80
 msgid ""
@@ -4465,6 +4954,13 @@ msgid ""
 msgstr ""
 "El juego está en constante evolución ya sea en el cambio de funciones, "
 "añadido o eliminado."
+
+#: ../../../regeln.php:83
+#, php-format
+msgid ""
+"%s behält sich vor, den Zugang ohne Angabe von Gründen zu sperren bzw. "
+"Accounts zu löschen. Dabei ist auch keine Benachrichtigung im Voraus nötig."
+msgstr ""
 
 #: ../../../regeln.php:84
 msgid ""
@@ -4495,6 +4991,12 @@ msgid ""
 "nicht gestattet."
 msgstr ""
 
+#: ../../../regeln.php:88
+#, php-format
+msgid "%s behält sich vor, diese Regeln jederzeit ändern zu können."
+msgstr ""
+"%s se reserva el derecho de modificar estas reglas en cualquier momento."
+
 #: ../../../regeln.php:90 ../../../zz3.php:11
 msgid "Datenschutz"
 msgstr "Política de Privacidad"
@@ -4502,6 +5004,15 @@ msgstr "Política de Privacidad"
 #: ../../../regeln.php:91
 msgid "Keine Weitergabe der Daten:"
 msgstr "Privacidad de los datos:"
+
+#: ../../../regeln.php:92
+#, php-format
+msgid ""
+"Die Betreiber der Webseite unter %1$s (&quot;%2$s&quot;) geben grundsätzlich "
+"keine Daten von Benutzern an Dritte weiter. Ausnahmen sind Fälle, in denen "
+"%2$s gesetzlich oder durch Entscheidungen von Gerichten dazu verpflichtet "
+"ist, und Fälle, in denen die Daten zur Strafverfolgung benötigt werden."
+msgstr ""
 
 #: ../../../regeln.php:93
 msgid "Akzeptieren der Datenschutzerklärung:"
@@ -4681,9 +5192,26 @@ msgstr ""
 msgid "Änderungen an dieser Datenschutzerklärung:"
 msgstr "Modificaciones a esta declaración de privacidad:"
 
+#: ../../../regeln.php:124
+#, php-format
+msgid ""
+"%s behält sich vor, jederzeit Änderungen an dieser Datenschutzerklärung "
+"durchzuführen."
+msgstr ""
+"%s se reserva el derecho para hacer cambios a esta Política de Privacidad en "
+"cualquier momento."
+
 #: ../../../regeln.php:125
 msgid "Verlinkte Webseiten:"
 msgstr "Sitios relacionados:"
+
+#: ../../../regeln.php:126
+#, php-format
+msgid ""
+"Auf den einzelnen Seiten dieses Projekts sind verschiedene externe Webseiten "
+"verlinkt. Für diese Seiten gilt die obige Erklärung nicht und %s ist nicht "
+"für die Seiten verantwortlich."
+msgstr ""
 
 #: ../../../regeln.php:127
 msgid "Weitere Informationen:"
@@ -4715,10 +5243,23 @@ msgstr ""
 "Desafortunadamente, no se pueden utilizar las direcciones de correo "
 "electrónico de este proveedor."
 
+#: ../../../registrieren.php:89
+#, php-format
+msgid ""
+"Ich möchte als %1$s mitspielen. Das Spiel ist zu 100%% kostenlos. Meine E-"
+"Mail-Adresse ist %2$s. An diese Adresse soll mir jetzt gleich ein Passwort "
+"zugeschickt werden, mit dem ich mich dann einloggen kann."
+msgstr ""
+
 #: ../../../registrieren.php:90
-#, fuzzy
 msgid "Datenschutzrichtlinien"
 msgstr "Política de Privacidad"
+
+#: ../../../registrieren.php:90
+#, php-format
+msgid ""
+"Die %1$s und die %2$s des Spiels habe ich gelesen und ich akzeptiere diese."
+msgstr ""
 
 #: ../../../registrieren.php:91
 msgid "Dein Team und die Liga kannst Du Dir beim ersten Login frei aussuchen."
@@ -4727,7 +5268,7 @@ msgstr ""
 
 #: ../../../registrieren.php:92
 msgid "Jetzt mit diesen Daten registrieren"
-msgstr ""
+msgstr "Registrarme ahora utilizando estos datos"
 
 #: ../../../registrieren.php:93
 msgid ""
@@ -4841,15 +5382,18 @@ msgstr "Posibles cambios de RKP"
 msgid "Spieler:"
 msgstr "Jugador:"
 
+#: ../../../spieler.php:62
+#, php-format
+msgid "Du hast den Spieler erfolgreich für %s € verkauft."
+msgstr ""
+
 #: ../../../spieler.php:66
-#, fuzzy
 msgid "Spieler beobachten"
-msgstr "Reporte del partido"
+msgstr "Observar jugador"
 
 #: ../../../spieler.php:69
-#, fuzzy
 msgid "Beobachtung beenden"
-msgstr "Observación"
+msgstr "Terminar observación"
 
 #: ../../../spieler.php:71
 msgid "Zur Historie"
@@ -4875,6 +5419,11 @@ msgstr "Mediocampista"
 msgid "Sturm"
 msgstr "Delantero"
 
+#: ../../../spieler.php:90
+#, php-format
+msgid "%d Jahre"
+msgstr "%d años"
+
 #: ../../../spieler.php:95
 msgid "Frische"
 msgstr "Frescura"
@@ -4891,7 +5440,7 @@ msgstr "Valor de mercado"
 
 #: ../../../spieler.php:99 ../../../spieler.php:111
 msgid "Gehalt / Saison"
-msgstr ""
+msgstr "Sueldo / Temporada"
 
 #: ../../../spieler.php:114 ../../../spieler_historie.php:12
 #: ../../../spieler_historie.php:42
@@ -4899,9 +5448,8 @@ msgid "außerhalb Europas"
 msgstr "Fuera de Europa"
 
 #: ../../../spieler.php:123 ../../../spieler.php:126
-#, fuzzy
 msgid "Transferstatus"
-msgstr "Transferencias"
+msgstr "Estado de transferencia"
 
 #: ../../../spieler.php:136
 #, fuzzy
@@ -4941,7 +5489,13 @@ msgstr "Talento"
 #: ../../../spieler.php:177
 msgid ""
 "Dein Scout glaubt, dass dieser Spieler seinen Höhepunkt bereits erreicht hat."
-msgstr ""
+msgstr "Tu explorador cree que este jugador ya ha alcanzado su punto máximo."
+
+#: ../../../spieler.php:180
+#, php-format
+msgid ""
+"Dein Scout glaubt, dass dieser Spieler eine Stärke von %s erreichen kann."
+msgstr "Tu explorador cree que este jugador puede llegar a un nivel de %s."
 
 #: ../../../spieler.php:184
 msgid "Vertrag verlängern"
@@ -4957,6 +5511,11 @@ msgid ""
 "entlassen"
 msgstr ""
 
+#: ../../../spieler.php:199
+#, php-format
+msgid "Für %s € entlassen"
+msgstr "Despedir por %s €"
+
 #: ../../../spieler.php:209
 msgid "Transfermarkt"
 msgstr "Transferencias"
@@ -4970,12 +5529,24 @@ msgid ""
 "eins davon annimmst."
 msgstr ""
 
+#: ../../../spieler.php:215
+#, php-format
+msgid "Verkauf für %s €"
+msgstr "Vender por %s €"
+
 #: ../../../spieler.php:216
 msgid "Jetzt verkaufen"
 msgstr ""
 
 #: ../../../spieler.php:222
 msgid "zur Leihgabe (ohne Prämie)"
+msgstr ""
+
+#: ../../../spieler.php:223 ../../../spieler.php:224 ../../../spieler.php:225
+#: ../../../spieler.php:226 ../../../spieler.php:227 ../../../spieler.php:228
+#: ../../../spieler.php:229
+#, php-format
+msgid "zur Leihgabe (%s Prämie p.P.)"
 msgstr ""
 
 #: ../../../spieler.php:230
@@ -5018,6 +5589,7 @@ msgid ""
 "Spieler, die über 33 Jahre alt sind, können grundsätzlich nicht mehr "
 "verkauft oder verliehen werden."
 msgstr ""
+"Los jugadores mayores de 33 años, ya no pueden ser vendidos o prestados."
 
 #: ../../../spieler_historie.php:19 ../../../spieler_historie.php:21
 msgid "Spieler-Historie:"
@@ -5032,9 +5604,8 @@ msgid "Ablöse"
 msgstr "Taza de transferencia"
 
 #: ../../../spieler_historie.php:34
-#, fuzzy
 msgid "jetzt"
-msgstr "Último"
+msgstr "ahora"
 
 #: ../../../spieler_historie.php:83
 msgid "Jugend"
@@ -5059,11 +5630,28 @@ msgstr "Préstamo"
 
 #: ../../../sponsoren.php:2 ../../../sponsoren.php:4
 msgid "Sponsoren"
-msgstr "Auspiciantes"
+msgstr "Patrocinadores"
+
+#: ../../../sponsoren.php:38
+#, php-format
+msgid ""
+"Du hast %1$s als Sponsor gewählt: Antrittsprämie %2$s € und Siegprämie %3$s "
+"€."
+msgstr ""
+
+#: ../../../sponsoren.php:57
+#, php-format
+msgid "Du hast für die aktuelle Saison %s als Sponsor ausgewählt."
+msgstr ""
+
+#: ../../../sponsoren.php:58
+#, php-format
+msgid "Als Antrittsprämie bekommst Du %1$s € und als Siegprämie %2$s €."
+msgstr ""
 
 #: ../../../sponsoren.php:65 ../../../ver_finanzen.php:96
 msgid "Sponsor"
-msgstr "Auspiciante"
+msgstr "Patrocinador"
 
 #: ../../../sponsoren.php:66
 msgid "Antrittsprämie"
@@ -5092,8 +5680,20 @@ msgid ""
 "und die erwartete Anzahl von Siegen aus."
 msgstr ""
 
+#: ../../../sponsoren.php:93
+#, php-format
+msgid "%d Siege"
+msgstr "%d victorias"
+
 #: ../../../sponsoren.php:97
 msgid "Rechnen"
+msgstr ""
+
+#: ../../../sponsoren.php:109
+#, php-format
+msgid ""
+"%1$s würde Dir bei %2$d Siegen %3$s € an Antrittsprämien und %4$s € an "
+"Siegprämien zahlen."
 msgstr ""
 
 #: ../../../stat_5jahresWertung.php:2 ../../../stat_5jahresWertung.php:13
@@ -5158,7 +5758,7 @@ msgid "Welches Teams haben den Cup schon gewonnen? Wer war ihr Finalgegner?"
 msgstr "¿Qué equipos han ganado la Copa Nacional? ¿Contra quién fue su final?"
 
 #: ../../../stat_cupsieger.php:46 ../../../stat_pokalsieger.php:20
-#: ../../../zzserver.php:239
+#: ../../../zzserver.php:235
 msgid "Sieger"
 msgstr "Ganador"
 
@@ -5241,6 +5841,13 @@ msgstr "Diferencia"
 #: ../../../zzsubnav_statistik.php:12
 msgid "Globale Tabelle"
 msgstr "Tabla de posiciones globales"
+
+#: ../../../stat_globale_tabelle.php:16
+#, php-format
+msgid ""
+"Zurzeit laufen %s-Spiele. Deshalb kannst Du leider die globale Tabelle nicht "
+"ansehen. Bitte warte, bis die Spiele beendet sind."
+msgstr ""
 
 #: ../../../stat_globale_tabelle.php:22
 msgid ""
@@ -5409,11 +6016,18 @@ msgid ""
 "gemessen."
 msgstr ""
 
+#: ../../../stat_torjaegerliste.php:16
+#, php-format
+msgid ""
+"Zurzeit laufen %s-Spiele. Deshalb kannst Du leider die Torjäger-Liste nicht "
+"ansehen. Bitte warte, bis die Spiele beendet sind."
+msgstr ""
+
 #: ../../../stat_torjaegerliste.php:50
 msgid ""
 "In dieser Torjägerliste sind die erfolgreichsten Torschützen aller Ligen "
 "aufgelistet."
-msgstr ""
+msgstr "En esta lista se enumeran los goleadores de todas las ligas."
 
 #: ../../../stat_transfer_uebersicht.php:2
 #: ../../../stat_transfer_uebersicht.php:34
@@ -5453,6 +6067,8 @@ msgid ""
 "Welche Spieler haben über mehrere Saisons die meisten Einsätze für ihren "
 "Verein absolviert? Welche Spieler sind die treuesten?"
 msgstr ""
+"¿Qué jugadores han completado durante varias temporadas, la mayoría de las "
+"tareas para su club? ¿Qué jugadores son los más leales?"
 
 #: ../../../stat_wertvollste_spieler.php:2
 #: ../../../stat_wertvollste_spieler.php:41
@@ -5465,6 +6081,8 @@ msgid ""
 "In dieser Tabelle sind die 20 wertvollsten Spieler aus allen Ligen "
 "aufgelistet. Sie wurden nach ihrem Marktwert absteigend sortiert."
 msgstr ""
+"Esta tabla muestra los 20 jugadores más valiosos de todas las ligas. Fueron "
+"ordenados en orden descendente de acuerdo a su valor de mercado."
 
 #: ../../../stat_wertvollste_teams.php:2
 #: ../../../stat_wertvollste_teams.php:41
@@ -5478,6 +6096,9 @@ msgid ""
 "Spieler. In dieser Tabelle wurden alle Teams nach ihrem Marktwert sortiert "
 "aufgelistet."
 msgstr ""
+"El valor de mercado de un equipo es la suma de todos los valores de mercado "
+"de cada jugador. En esta tabla, todos los equipos se enumeran en orden de su "
+"valor de mercado."
 
 #: ../../../stat_zuschauerverlauf.php:2 ../../../stat_zuschauerverlauf.php:7
 #: ../../../stat_zuschauerverlauf.php:43 ../../../zzsubnav_statistik.php:29
@@ -5490,6 +6111,9 @@ msgid ""
 "aktuellen Saison. Hinweis: Die Daten können erst nach dem zweiten Heimspiel "
 "angezeigt werden."
 msgstr ""
+"Este gráfico de líneas muestra el desarrollo de tu público en la temporada "
+"actual. Nota: Los datos sólo se pueden visualizar después del segundo "
+"partido de local."
 
 #: ../../../support.php:2 ../../../support.php:282 ../../../zz2.php:206
 #: ../../../zz2.php:208
@@ -5498,7 +6122,7 @@ msgstr "Soporte"
 
 #: ../../../support.php:30
 msgid "Unser Support-Bereich"
-msgstr ""
+msgstr "Nuestra área de soporte"
 
 #: ../../../support.php:31
 msgid "Support-Hauptseite"
@@ -5513,6 +6137,8 @@ msgid ""
 "Du hast Vorschläge, wie wir das Spiel besser gestalten können? Du hast noch "
 "Fragen zum Spiel oder Du hast einen Fehler gefunden?"
 msgstr ""
+"¿Tienes alguna sugerencia sobre cómo podemos mejorar el juego? ¿Tienes "
+"preguntas sobre como jugar o has encontrado un error?"
 
 #: ../../../support.php:33
 msgid ""
@@ -5526,14 +6152,19 @@ msgstr "Buscar temas"
 
 #: ../../../support.php:53
 msgid "Die ausgewählte Anfrage wurde vollständig gelöscht."
-msgstr ""
+msgstr "La solicitud seleccionada ha sido completamente borrada."
 
 #: ../../../support.php:83
 msgid "Sorry, Du kannst nicht zwei Anfragen mit dem gleichen Titel erstellen."
-msgstr ""
+msgstr "Lo sentimos, no se pueden crear dos temas con el mismo título."
 
 #: ../../../support.php:88
 msgid "Danke, Deine Anfrage wurde erstellt."
+msgstr "Gracias, se ha creado tu tema."
+
+#: ../../../support.php:100
+#, php-format
+msgid "Aktuelle Anfragen zum Thema &quot;%s&quot;"
 msgstr ""
 
 #: ../../../support.php:100
@@ -5547,7 +6178,7 @@ msgstr ""
 
 #: ../../../support.php:110
 msgid "Alle Themen wurden als gelesen markiert."
-msgstr ""
+msgstr "Todos los temas han sido marcados como leídos."
 
 #: ../../../support.php:116
 msgid "Danke, Dein Kommentar wurde gespeichert."
@@ -5566,17 +6197,21 @@ msgid "Anfrage"
 msgstr "Temas"
 
 #: ../../../support.php:145
-#, fuzzy
 msgid "Aktivität"
-msgstr "Activo"
+msgstr "Actividad"
 
 #: ../../../support.php:166
 msgid "Mache den Anfang!"
 msgstr ""
 
+#: ../../../support.php:166
+#, fuzzy, php-format
+msgid "Es gibt noch keine Anfragen. %s"
+msgstr "Eviar solicitud"
+
 #: ../../../support.php:185 ../../../supportRequest.php:145
 msgid "Umgesetzt"
-msgstr ""
+msgstr "Implementado"
 
 #: ../../../support.php:189
 #, fuzzy
@@ -5589,6 +6224,11 @@ msgstr "Cerrar"
 
 #: ../../../support.php:200
 msgid "Frage / Fehlerbericht"
+msgstr ""
+
+#: ../../../support.php:204
+#, php-format
+msgid "%d%% sind für diesen Vorschlag"
 msgstr ""
 
 #: ../../../support.php:207
@@ -5605,11 +6245,26 @@ msgstr "Ir al último comentario"
 
 #: ../../../support.php:240
 msgid "Aktive Manager in diesem Bereich"
-msgstr ""
+msgstr "Mánager activos en esta área"
 
 #: ../../../support.php:247
 msgid "Guter Kommentar"
 msgstr "Me gusta"
+
+#: ../../../support.php:261
+#, php-format
+msgid "<b>%d</b> insgesamt"
+msgstr ""
+
+#: ../../../support.php:262
+#, php-format
+msgid "<b>%d</b> schnelle"
+msgstr ""
+
+#: ../../../support.php:263
+#, php-format
+msgid "<b>%d</b> Stimmen erhalten"
+msgstr ""
 
 #: ../../../support.php:274
 msgid "Meine letzten Anfragen"
@@ -5625,7 +6280,7 @@ msgstr "Volver a la página principal"
 
 #: ../../../supportAdd.php:29
 msgid "Wer soll die Anfrage sehen können?"
-msgstr ""
+msgstr "¿Quién debe ser capaz de ver la solicitud?"
 
 #: ../../../supportAdd.php:30
 msgid "Jeder User"
@@ -5660,9 +6315,24 @@ msgid "Möchtest Du Deine Anfrage noch genauer beschreiben ... ?"
 msgstr ""
 
 #: ../../../supportAdd.php:41
-#, fuzzy
 msgid "Anfrage erstellen"
 msgstr "Enviar solicitud"
+
+#: ../../../supportAdd.php:45
+#, php-format
+msgid ""
+"Du hast heute schon %d neue Anfragen erstellt. Da nur 5 pro Tag erlaubt "
+"sind, bitten wir Dich, etwas zu warten. Später kannst Du gerne wieder eine "
+"neue Anfrage erstellen."
+msgstr ""
+"Hoy ya ha creado %d nuevos temas. Dado que sólo se permiten 5 por día, te "
+"pedimos que esperes un poco. Más tarde, podrás volver a crear una nueva "
+"solicitud."
+
+#: ../../../supportRequest.php:48 ../../../supportRequest.php:77
+#, php-format
+msgid "Support: %s"
+msgstr "Soporte: %s"
 
 #: ../../../supportRequest.php:89
 #, php-format
@@ -5702,7 +6372,7 @@ msgstr "Eliminar tema"
 
 #: ../../../supportRequest.php:219
 msgid "Gut!"
-msgstr ""
+msgstr "¡Me gusta!"
 
 #: ../../../supportRequest.php:219
 #, fuzzy
@@ -5715,7 +6385,7 @@ msgstr ""
 
 #: ../../../supportRequest.php:249
 msgid "Hinzugefügt am:"
-msgstr ""
+msgstr "Creado el:"
 
 #: ../../../supportRequest.php:250
 msgid "Letzte Aktion:"
@@ -5737,15 +6407,25 @@ msgstr "Comentarios de este tema"
 msgid ""
 "Bisher hat noch niemand einen Kommentar zu dieser Anfrage abgegeben. Sei der "
 "Erste!"
-msgstr ""
+msgstr "Nadie ha publicado un comentario en este tema. ¡Sé el primero!"
 
 #: ../../../supportRequest.php:290
 msgid "Anonym"
-msgstr ""
+msgstr "Anónimo"
+
+#: ../../../supportRequest.php:292
+#, php-format
+msgid "schrieb am %s Uhr:"
+msgstr "escrito el %s hs:"
 
 #: ../../../supportRequest.php:294
 msgid "Dieser Kommentar wurde gelöscht."
 msgstr "Este comentario ha sido eliminado."
+
+#: ../../../supportRequest.php:300
+#, php-format
+msgid "%d Manager finden diesen Kommentar gut"
+msgstr "A %d mánagers les gusta este comentario"
 
 #: ../../../supportRequest.php:304 ../../../supportRequest.php:311
 msgid "Kommentar löschen"
@@ -5759,29 +6439,48 @@ msgstr "¡Me gusta!"
 msgid "Taktik"
 msgstr "Tácticas"
 
-#: ../../../taktik.php:68
-#, fuzzy
-msgid "Die Vorlage konnte nicht geladen werden. Bitte versuche es noch einmal."
+#: ../../../taktik.php:32
+#, php-format
+msgid ""
+"Zurzeit läuft ein %s-Spiel. Deshalb kannst Du diese Taktik gerade nicht "
+"ändern."
 msgstr ""
-"Desafortunadamente, tu contraseña no se ha podido cambiar. Por favor, "
-"¡vuelve a intentarlo!"
+"Actualmente se ejecuta un juego de %s. Por lo tanto, no se pueden cambiar "
+"estas tácticas."
+
+#: ../../../taktik.php:68
+msgid "Die Vorlage konnte nicht geladen werden. Bitte versuche es noch einmal."
+msgstr "La plantilla no se pudo cargar. Por favor, inténtalo de nuevo."
+
+#: ../../../taktik.php:71
+#, php-format
+msgid ""
+"Die Vorlage &quot;%s&quot; wurde geladen und als neue Taktik übernommen."
+msgstr "La plantilla \"%s\" se cargó y se toma como nueva táctica."
 
 #: ../../../taktik.php:79
-#, fuzzy
 msgid ""
 "Die Vorlage konnte nicht gelöscht werden. Bitte versuche es noch einmal."
-msgstr ""
-"Desafortunadamente, tu contraseña no se ha podido cambiar. Por favor, "
-"¡vuelve a intentarlo!"
+msgstr "La plantilla no se pudo eliminar. Por favor, inténtela de nuevo."
+
+#: ../../../taktik.php:82
+#, php-format
+msgid "Die Vorlage &quot;%s&quot; wurde gelöscht."
+msgstr "La plantilla &quot;%s&quot; ha sido eliminada."
 
 #: ../../../taktik.php:93
-#, fuzzy
 msgid ""
 "Deine Taktik konnte nicht als Vorlage gespeichert werden. Bitte versuche es "
 "noch einmal. Du darfst jeden Namen nur ein Mal benutzen."
 msgstr ""
-"Tu contraseña no se pudo activar. Por favor usa el enlace de activación una "
-"vez más, o solicita una nueva contraseña."
+"Tus tácticas no se han guardado como plantilla. Por favor, inténtalo de "
+"nuevo. Sólo se puede utilizar una vez cada nombre."
+
+#: ../../../taktik.php:96
+#, php-format
+msgid ""
+"Deine Taktik wurde als Vorlage mit dem Namen &quot;%s&quot; gespeichert."
+msgstr "Tu táctica fue guardada como plantilla con el nombre de \"%s\"."
 
 #: ../../../taktik.php:102 ../../../taktik.php:184
 msgid "Ausrichtung:"
@@ -5876,10 +6575,12 @@ msgid ""
 "Hier kannst Du die aktuell ausgewählte Taktik als Vorlage speichern. Du "
 "kannst auch eine Vorlage laden, die dann die aktuelle Taktik ersetzt."
 msgstr ""
+"Aquí se puede guardar como una plantilla las tácticas seleccionadas. También "
+"puedes cargar una plantilla que reemplaze a las tácticas actuales."
 
 #: ../../../taktik.php:168
 msgid "Laden"
-msgstr ""
+msgstr "Cargar"
 
 #: ../../../taktik.php:171
 msgid "Name für neue Vorlage ..."
@@ -5996,9 +6697,8 @@ msgid "Trainer"
 msgstr "Entrenador"
 
 #: ../../../team.php:71
-#, fuzzy
 msgid "Finanzlage"
-msgstr "Finanzas"
+msgstr "Estado financiero"
 
 #: ../../../team.php:73
 msgid "Liga (Vorjahr)"
@@ -6013,22 +6713,29 @@ msgid "Cup (Vorjahr)"
 msgstr ""
 
 #: ../../../team.php:78 ../../../team.php:103
-#, fuzzy
 msgid "Meisterschaft"
-msgstr "Campeones"
+msgstr "Copas de Ligas"
 
 #: ../../../team.php:79 ../../../team.php:108
-#, fuzzy
 msgid "Pokalsieg"
-msgstr "Ganadores Copa Internacional"
+msgstr "Copas Internacionales"
 
 #: ../../../team.php:80 ../../../team.php:113
-#, fuzzy
 msgid "Cupsieg"
-msgstr "Ganadores Copa Nacional"
+msgstr "Copas Nacionales"
 
 #: ../../../team.php:81
 msgid "RKP (Vorjahr)"
+msgstr ""
+
+#: ../../../team.php:81
+#, php-format
+msgid "%1$s (%2$s) Punkte"
+msgstr ""
+
+#: ../../../team.php:83
+#, php-format
+msgid "%1$s (%2$s Siege)"
 msgstr ""
 
 #: ../../../team.php:85 ../../../ver_finanzen.php:105
@@ -6037,16 +6744,19 @@ msgstr ""
 msgid "Stadion"
 msgstr "Estadio"
 
+#: ../../../team.php:85 ../../../ver_stadion.php:215
+#: ../../../ver_stadion.php:285
+#, php-format
+msgid "%s Plätze"
+msgstr "%s plateas"
+
 #: ../../../team.php:100
 msgid "Trophäen-Raum"
 msgstr "Sala de trofeos"
 
 #: ../../../team.php:187
-#, fuzzy
 msgid "MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, FR: Frische"
-msgstr ""
-"PT: posición, TS: estado de transferencia, AG: edad, OM: partidos oficiales "
-"(goles), MV: valor de mercado en millones €"
+msgstr "Po: posición, ET: estado de transferencia,  Ed: edad, Fr: frescura"
 
 #: ../../../testWuensche.php:2 ../../../testWuensche.php:4
 #: ../../../zz2.php:187
@@ -6076,17 +6786,19 @@ msgstr ""
 
 #: ../../../testspiele.php:11 ../../../transfermarkt_leihe.php:104
 msgid "Deine Anfrage wurde zurückgezogen."
-msgstr ""
+msgstr "Tu solicitud ha sido retirada."
 
 #: ../../../testspiele.php:33
 msgid ""
 "Andere Teams können Dir nun Testspiel-Anfragen senden, die Du hier annehmen "
 "oder ablehnen kannst."
 msgstr ""
+"Ahora otros equipos pueden enviarte solicitudes de amistosos que puedes "
+"aceptar o rechazar aquí."
 
 #: ../../../testspiele.php:36
 msgid "Ab sofort bekommst Du keine Testspiel-Anfragen mehr."
-msgstr ""
+msgstr "De ahora en adelante no recibirás mas peticiones de amistosos."
 
 #: ../../../testspiele.php:49
 msgid "Interesse an Testspielen?"
@@ -6102,12 +6814,19 @@ msgstr "No, no me interesa"
 
 #: ../../../testspiele.php:58
 msgid "Entschädigung (Verband)"
+msgstr "Compensación (Asociación)"
+
+#: ../../../testspiele.php:59
+#, php-format
+msgid ""
+"Damit ein Testspiel genehmigt wird, musst Du %s € an den Verband zahlen."
 msgstr ""
+"Para que se apruebe un amistoso, tienes que pagar %s € a la Asociación."
 
 #: ../../../testspiele.php:71
 msgid ""
 "Zurzeit hast Du leider nicht genug Geld, um Testspiele vereinbaren zu können."
-msgstr ""
+msgstr "Actualmente, no tienes suficiente dinero para organizar amistosos."
 
 #: ../../../testspiele.php:81 ../../../testspiele.php:119
 msgid ""
@@ -6126,13 +6845,21 @@ msgstr "Solicitudes"
 
 #: ../../../testspiele.php:88
 msgid "Dein Co-Trainer hat eine Anfrage für ein Testspiel abgelehnt."
+msgstr "Tu entrenador asistente ha denegado una solicitud para un amistoso."
+
+#: ../../../testspiele.php:91
+#, php-format
+msgid "Der Co-Trainer von %s hat Dein Angebot für ein Testspiel abgelehnt."
 msgstr ""
+"Tu entrenador asistente ha rechazado la oferta de %s para jugar un amistoso."
 
 #: ../../../testspiele.php:98
 msgid ""
 "Dein Co-Trainer hat diese Anfrage abgelehnt, weil Du an dem Tag schon ein "
 "Testspiel hast."
 msgstr ""
+"Tu entrenador asistente ha rechazado esta solicitud porque ya tienes un "
+"amistoso acordado para ese día."
 
 #: ../../../testspiele.php:109
 msgid ""
@@ -6165,9 +6892,8 @@ msgid "Vereinbarte Testspiele"
 msgstr "Amistosos acordados"
 
 #: ../../../testspiele.php:162
-#, fuzzy
 msgid "Du hattest bisher keine Testspiele!"
-msgstr "Aún no has invitado ningun usuario!"
+msgstr "¡Aún no has jugado ningún amistoso!"
 
 #: ../../../tipps_des_tages.php:2 ../../../tipps_des_tages.php:13
 #: ../../../tipps_des_tages.php:39
@@ -6206,7 +6932,7 @@ msgid ""
 "Welcher Manager ist der erfolgreichste? Die Rangliste zeigt alle Manager, "
 "geordnet nach dem RKP ihrer Vereine."
 msgstr ""
-"¿Qué mánager es el más exitoso? El ranking muestra todos los gerentes "
+"¿Qué mánager es el más exitoso? El ranking muestra todos los entrenadores "
 "ordenados por los RKP de sus clubes."
 
 #: ../../../top_manager.php:78
@@ -6234,17 +6960,46 @@ msgid "Du bietest im Moment keinen Spieler zum Verkauf an."
 msgstr "En este momento no estas ofreciendo ningún jugador a la venta."
 
 #: ../../../transfermarkt.php:2 ../../../transfermarkt.php:118
-#, fuzzy
 msgid "Transfermarkt | Kaufen"
-msgstr "Transferencias"
+msgstr "Transferencias | Comprar"
 
 #: ../../../transfermarkt.php:4 ../../../transfermarkt_leihe.php:4
 msgid "Markt durchsuchen"
 msgstr "Buscar en el mercado"
 
+#: ../../../transfermarkt.php:57
+#, php-format
+msgid "bis %d Jahre"
+msgstr "hastea %d años"
+
 #: ../../../transfermarkt.php:65 ../../../transfermarkt_leihe.php:33
 msgid "Jede Position"
 msgstr "Cualquier posición"
+
+#: ../../../transfermarkt.php:85
+#, php-format
+msgid "von %d,0"
+msgstr "desde %d,0"
+
+#: ../../../transfermarkt.php:94
+#, php-format
+msgid "bis %d,9 Stärke"
+msgstr "hasta %d,9 de fuerza"
+
+#: ../../../transfermarkt.php:103
+#, php-format
+msgid "von %d"
+msgstr "desde %d"
+
+#: ../../../transfermarkt.php:163
+#, php-format
+msgid "Du hast den Spieler %1$s fur %2$s € gekauft."
+msgstr ""
+
+#: ../../../transfermarkt.php:166
+#, php-format
+msgid "Du hast den Spieler %1$s fur %2$s € verkauft."
+msgstr ""
 
 #: ../../../transfermarkt.php:191
 msgid "Gebot"
@@ -6262,11 +7017,20 @@ msgid ""
 msgstr ""
 
 #: ../../../transfermarkt.php:226 ../../../transfermarkt_leihe.php:212
-#, fuzzy
 msgid "MT: Mannschaftsteil, AL: Alter, ST: Stärke"
+msgstr "Po: posición, Ed: edad, Fu: fuerza"
+
+#: ../../../transfermarkt_aktion.php:38
+#, php-format
+msgid ""
+"Du hast den Spieler %1$s für %2$s € an einen Verein außerhalb Europas "
+"verkauft."
 msgstr ""
-"PT: posición, TS: estado de transferencia, AG: edad, OM: partidos oficiales "
-"(goles), MV: valor de mercado en millones €"
+
+#: ../../../transfermarkt_auktion.php:37
+#, php-format
+msgid "Transfermarkt: %s"
+msgstr "Transferencias: %s"
 
 #: ../../../transfermarkt_auktion.php:98 ../../../transfermarkt_leihe.php:62
 msgid ""
@@ -6290,6 +7054,23 @@ msgstr "Planteles más jóvenes"
 msgid "Mannschaft"
 msgstr "Posiciones:"
 
+#: ../../../transfermarkt_auktion.php:100 ../../../transfermarkt_leihe.php:64
+#, php-format
+msgid ""
+"Du solltest Dir zuerst einmal %1$s ansehen und versuchen, eine erste %2$s "
+"daraus zu formen."
+msgstr ""
+
+#: ../../../transfermarkt_auktion.php:142
+#, fuzzy, php-format
+msgid "%d Gebote"
+msgstr "Ofertas"
+
+#: ../../../transfermarkt_auktion.php:142
+#, fuzzy, php-format
+msgid "%d Beobachter"
+msgstr "Observación"
+
 #: ../../../transfermarkt_auktion.php:145
 msgid "Besitzer"
 msgstr "Propietario"
@@ -6298,6 +7079,16 @@ msgstr "Propietario"
 #, fuzzy
 msgid "Ablösesumme"
 msgstr "Taza de transferencia"
+
+#: ../../../transfermarkt_auktion.php:148
+#, php-format
+msgid "%1$d Minuten und %2$d Sekunden"
+msgstr "%1$d minutos y %2$d segundos"
+
+#: ../../../transfermarkt_auktion.php:153
+#, php-format
+msgid "Du musst das alte Gebot um mindestens %s € überbieten!"
+msgstr ""
 
 #: ../../../transfermarkt_auktion.php:156
 msgid "Du kannst nicht für Deine eigenen Spieler bieten!"
@@ -6318,13 +7109,12 @@ msgid ""
 msgstr ""
 
 #: ../../../transfermarkt_auktion.php:170
-#, fuzzy
 msgid "Betrag bieten"
-msgstr "Solicitar"
+msgstr "Hacer oferta"
 
 #: ../../../transfermarkt_auktion.php:173
 msgid "Du bist zurzeit der Höchstbietende!"
-msgstr ""
+msgstr "¡Tu eres el mejor postor!"
 
 #: ../../../transfermarkt_auktion.php:177
 msgid ""
@@ -6338,6 +7128,8 @@ msgid ""
 "Jedes Gebot verlängert die Laufzeit der Auktion um 1 Minute, damit andere "
 "Manager noch die Chance haben, mehr zu bieten."
 msgstr ""
+"Cada oferta aumenta la duración de la subasta por 1 minuto, para que otros "
+"mánagers tengan la oportunidad de ofrecer más."
 
 #: ../../../transfermarkt_auktion.php:179
 msgid "Dein Maximalgebot"
@@ -6353,6 +7145,11 @@ msgid ""
 "vom Marktwert eines Spielers."
 msgstr ""
 
+#: ../../../transfermarkt_auktion.php:181
+#, php-format
+msgid "Im Moment liegt Deine persönliche Grenze bei %s des Marktwertes."
+msgstr "Por el momento, tu límite personal es %s del valor de mercado."
+
 #: ../../../transfermarkt_leihe.php:2 ../../../transfermarkt_leihe.php:57
 msgid "Transfermarkt | Ausleihen"
 msgstr "Transferencias | Alquiler"
@@ -6361,9 +7158,34 @@ msgstr "Transferencias | Alquiler"
 msgid "Jedes Alter"
 msgstr "Cualquier edad"
 
+#: ../../../transfermarkt_leihe.php:20 ../../../transfermarkt_leihe.php:21
+#: ../../../transfermarkt_leihe.php:22 ../../../transfermarkt_leihe.php:23
+#: ../../../transfermarkt_leihe.php:24 ../../../transfermarkt_leihe.php:25
+#: ../../../transfermarkt_leihe.php:26 ../../../transfermarkt_leihe.php:27
+#: ../../../transfermarkt_leihe.php:28 ../../../transfermarkt_leihe.php:29
+#: ../../../transfermarkt_leihe.php:30
+#, php-format
+msgid "%1$d bis %2$d Jahre"
+msgstr "%1$d a %2$d años"
+
 #: ../../../transfermarkt_leihe.php:40
 msgid "Jede Stärke"
 msgstr "Cualquier fuerza"
+
+#: ../../../transfermarkt_leihe.php:41 ../../../transfermarkt_leihe.php:42
+#: ../../../transfermarkt_leihe.php:43
+#, php-format
+msgid "Stärke %1$d bis %2$d"
+msgstr "Fuerza de %1$d a %2$d"
+
+#: ../../../transfermarkt_leihe.php:44 ../../../transfermarkt_leihe.php:45
+#: ../../../transfermarkt_leihe.php:46 ../../../transfermarkt_leihe.php:47
+#: ../../../transfermarkt_leihe.php:48 ../../../transfermarkt_leihe.php:49
+#: ../../../transfermarkt_leihe.php:50 ../../../transfermarkt_leihe.php:51
+#: ../../../transfermarkt_leihe.php:52 ../../../transfermarkt_leihe.php:53
+#, php-format
+msgid "Stärke %d"
+msgstr "Fuerza %d"
 
 #: ../../../transfermarkt_leihe.php:90
 msgid "Du kannst den Spieler nicht ausleihen: 2-Transfers-Sperre"
@@ -6417,6 +7239,9 @@ msgid ""
 "Transfers, Austausch von Personal und Stadionausbau kann die Prognose vom "
 "tatsächlichen Saisonergebnis abweichen."
 msgstr ""
+"Aquí, en el área financiera, se puede encontrar un balance para la temporada "
+"actual. Por transferencias, intercambio de personal y el desarrollo del "
+"estadio, el pronóstico puede definir el resultado real de la temporada."
 
 #: ../../../ver_finanzen.php:90
 msgid "Einnahmen"
@@ -6428,7 +7253,7 @@ msgstr "Gastos"
 
 #: ../../../ver_finanzen.php:95
 msgid "TV-Gelder"
-msgstr ""
+msgstr "Derechos de transmición por TV"
 
 #: ../../../ver_finanzen.php:97
 msgid "Spielergehälter"
@@ -6452,12 +7277,11 @@ msgstr "Preparador físico"
 
 #: ../../../ver_finanzen.php:102 ../../../ver_personal.php:306
 msgid "Physiotherapeut"
-msgstr "fisioterapeuta"
+msgstr "Fisioterapeuta"
 
 #: ../../../ver_finanzen.php:104
-#, fuzzy
 msgid "Ablösesteuer"
-msgstr "Taza de transferencia"
+msgstr "Impuesto sobre Transmisiones Patrimoniales"
 
 #: ../../../ver_finanzen.php:106
 #, fuzzy
@@ -6474,7 +7298,7 @@ msgstr "Saldo actual:"
 
 #: ../../../ver_finanzen.php:111
 msgid "Alter Kontostand"
-msgstr ""
+msgstr "Saldo bancario anterior"
 
 #: ../../../ver_finanzen.php:112
 msgid "Voraussichtlicher Gewinn"
@@ -6489,6 +7313,8 @@ msgid ""
 "Dieser Wert gibt den Kontostand an, den Dein Team direkt vor dem "
 "Saisonwechsel hatte, also am Ende der letzten Saison."
 msgstr ""
+"Este valor indica el saldo bancario, del que disponía tu equipo justo antes "
+"del cambio de la temporada pasada, en la última fecha. "
 
 #: ../../../ver_finanzen.php:117
 msgid "Dieser Wert ist eine Hochrechnung für die gesamte Saison"
@@ -6496,7 +7322,7 @@ msgstr "Este valor es una extrapolación para toda la temporada"
 
 #: ../../../ver_finanzen.php:118
 msgid "Lotto, Testspiele, Entlassungen, Sanktionen"
-msgstr ""
+msgstr "Lotería, amistosos, despidos, sanciones"
 
 #: ../../../ver_lotto.php:2 ../../../zz2.php:196
 msgid "Lotto"
@@ -6590,6 +7416,11 @@ msgstr "Números de ayer"
 msgid "Letzte Gewinne"
 msgstr "Últimos premios"
 
+#: ../../../ver_lotto.php:137 ../../../ver_lotto.php:148
+#, php-format
+msgid "%d Richtige"
+msgstr "%d aciertos"
+
 #: ../../../ver_lotto.php:142
 msgid "Höchste Gewinne"
 msgstr "Premios mas altos"
@@ -6598,13 +7429,38 @@ msgstr "Premios mas altos"
 msgid "Personal"
 msgstr "Personal"
 
+#: ../../../ver_personal.php:55
+#, php-format
+msgid ""
+"Dein Fitness-Trainer hat ein Regenerations-Camp (%1$d%%) für %2$d Spieler "
+"gebucht."
+msgstr ""
+
 #: ../../../ver_personal.php:67
 msgid "Deine Mannschaft befindet sich schon im Regenerations-Camp."
+msgstr "Tu equipo ya está en el campo de regeneración."
+
+#: ../../../ver_personal.php:96
+#, php-format
+msgid ""
+"Dein Physiotherapeut hat Deine verletzten Spieler behandelt und die "
+"Ausfallzeit um %d Tage reduziert."
 msgstr ""
+"Tu fisioterapeuta ha tratado a tus jugadores lesionados y ha reducido el "
+"tiempo de inactividad por %d días. "
 
 #: ../../../ver_personal.php:107
 msgid "Deine Mannschaft befindet sich schon in Behandlung."
+msgstr "Tu equipo ya está en tratamiento."
+
+#: ../../../ver_personal.php:136
+#, php-format
+msgid ""
+"Dein Psychologe hat Deine unmotivierten Spieler betreut und ihre Moral um %d "
+"Punkte erhöht."
 msgstr ""
+"Tu psicólogo ha supervisado tus jugadores desmotivados y ha aumentado su "
+"moral en %d puntos."
 
 #: ../../../ver_personal.php:147
 msgid "Deine Mannschaft wird im Moment schon betreut."
@@ -6619,6 +7475,8 @@ msgid ""
 "Du kannst Dein Personal nur alle 22 Tage austauschen. Überlege Dir also gut, "
 "welche Assistenten Du wählst."
 msgstr ""
+"Solo puedes cambiar tu personal cada 22 días. Así que piensa bien, qué "
+"asistente que eliges."
 
 #: ../../../ver_personal.php:156
 msgid ""
@@ -6626,6 +7484,24 @@ msgid ""
 "sind die jungen Spieler, die aus den Nachwuchsmannschaften in Dein Team "
 "kommen."
 msgstr ""
+"Cuanto más alto es el nivel de competencia del entrenador de juveniles, más "
+"fuerte son los jugadores jóvenes que vienen de las categorías inferiores de "
+"tu equipo."
+
+#: ../../../ver_personal.php:167
+#, php-format
+msgid "Du hast einen Jugendtrainer der Stufe %d eingestellt."
+msgstr "Tienes un entrenador de juveniles de nivel %d."
+
+#: ../../../ver_personal.php:177 ../../../ver_personal.php:221
+#: ../../../ver_personal.php:265
+#, php-format
+msgid ""
+"Du kannst jeden Assistenten nur alle 22 Tage austauschen. Du musst also noch "
+"bis %s warten."
+msgstr ""
+"Sólo puedes reemplazar un asistente cada 22 días. Así que hay que debes "
+"esperar hasta el %s."
 
 #: ../../../ver_personal.php:200
 msgid ""
@@ -6634,16 +7510,23 @@ msgid ""
 "Du wirst mehr Karten verkaufen."
 msgstr ""
 
+#: ../../../ver_personal.php:211
+#, php-format
+msgid "Du hast einen Fanbetreuer der Stufe %d eingestellt"
+msgstr "Tienes un entrenador de animadores de nivel %d."
+
 #: ../../../ver_personal.php:242
 msgid ""
 "Je höher die Stufe für die Kompetenz des Scouts ist, desto besser werden "
 "seine Schätzungen für die maximale Stärke eines Spielers."
 msgstr ""
+"Cuanto mayor es el nivel de competencia de los exploradores, mejor son sus "
+"estimaciones de la fuerza máxima de un jugador."
 
 #: ../../../ver_personal.php:255
 #, php-format
 msgid "Du hast einen Scout der Stufe %d eingestellt."
-msgstr ""
+msgstr "Tienes un explorador de nivel %d."
 
 #: ../../../ver_personal.php:289 ../../../ver_personal.php:306
 #: ../../../ver_personal.php:318
@@ -6664,6 +7547,15 @@ msgid ""
 "Team einen kleinen Vorteil verschaffen wollen. Es ist aber auch sehr gut "
 "möglich, ohne dieses Angebot sportlichen Erfolg zu haben."
 msgstr ""
+"Esta oferta sólo es recomendable para los clubes económicamente fuertes que "
+"quieren que su equipo gane una pequeña ventaja. Ten en cuenta que también es "
+"posible tener éxito sin estos bonus."
+
+#: ../../../ver_personal.php:296 ../../../ver_personal.php:297
+#: ../../../ver_personal.php:298
+#, php-format
+msgid "%d%% mehr Frische"
+msgstr "%d%% de frescura"
 
 #: ../../../ver_personal.php:299 ../../../ver_personal.php:314
 #: ../../../ver_personal.php:326
@@ -6676,6 +7568,14 @@ msgid ""
 "Dein Physiotherapeut bietet Dir an, die Behandlung Deiner verletzten Spieler "
 "zu übernehmen. Er verspricht dabei, die Verletzungszeit zu verkürzen."
 msgstr ""
+"Su fisioterapeuta te ofrece hacerse cargo del manejo de tus jugadores "
+"lesionados. Se compromete a acortar significativamente el tiempo de la "
+"lesión."
+
+#: ../../../ver_personal.php:312 ../../../ver_personal.php:313
+#, php-format
+msgid "%d Tage kürzere Verletzungen"
+msgstr "%d días menos de lesión"
 
 #: ../../../ver_personal.php:318
 msgid "Psychologe"
@@ -6687,37 +7587,83 @@ msgid ""
 "unmotivierten Spieler zu übernehmen. Er verspricht dabei, ihre Moral zu "
 "erhöhen."
 msgstr ""
+"El psicólogo de la asociación garantiza cuidar de tus jugadores "
+"desmotivados. Él promete aumentar su moral."
+
+#: ../../../ver_personal.php:324 ../../../ver_personal.php:325
+#, php-format
+msgid "%d Punkte mehr Moral"
+msgstr "%d puntos más de moral"
 
 #: ../../../ver_personal.php:332
 msgid "Mein Personal"
 msgstr "Mi personal"
+
+#: ../../../ver_stadion.php:60
+#, php-format
+msgid "Du hast Dein Stadion um %d Plätze vergrößert."
+msgstr "Has construido %d plateas en tu estadio."
+
+#: ../../../ver_stadion.php:65 ../../../ver_stadion.php:99
+#: ../../../ver_stadion.php:150
+#, php-format
+msgid ""
+"Es gibt noch laufende Bauarbeiten an Deinem Stadion. Du musst noch bis %s "
+"warten."
+msgstr "Hay obras en construcción en tu estadio. Debes esperar hasta el %s."
 
 #: ../../../ver_stadion.php:69 ../../../ver_stadion.php:103
 msgid ""
 "Bitte überprüfe Deinen Kontostand. Diese Bauarbeiten scheinen zu teuer zu "
 "sein."
 msgstr ""
+"Por favor verifique tu saldo bancario. Estas obras parecen ser demasiado "
+"caras."
+
+#: ../../../ver_stadion.php:73
+#, php-format
+msgid "Dein Stadion kann nicht mehr als %s Plätze haben."
+msgstr "Tu estadio no puede tener mas de %s plateas."
 
 #: ../../../ver_stadion.php:77 ../../../ver_stadion.php:111
 msgid "Bitte gib an, wie viele Plätze Du umbauen möchtest."
-msgstr ""
+msgstr "Por favor, introduce el número de plateas que deseas cambiar."
+
+#: ../../../ver_stadion.php:94
+#, php-format
+msgid "Du hast Dein Stadion um %d Plätze verkleinert."
+msgstr "Has reducido tu estadio en %d plateas."
 
 #: ../../../ver_stadion.php:107
 msgid "Dein Stadion kann nicht ohne Sitzplätze gebaut werden."
-msgstr ""
+msgstr "No pudes demoler todas las plateas de tu estadio."
 
 #: ../../../ver_stadion.php:119
 #, php-format
 msgid "Du hast die Ticketpreise für Dein Stadion auf %d € gesetzt."
-msgstr ""
+msgstr "Has establecido los precios de las entradas para tu estadio a %d €."
 
 #: ../../../ver_stadion.php:172
 msgid "Es ist ein Fehler aufgetreten."
+msgstr "Se ha producido un error."
+
+#: ../../../ver_stadion.php:175
+#, php-format
+msgid "Dein Stadion heißt jetzt: %s"
+msgstr "Su club ahora se llama: %s"
+
+#: ../../../ver_stadion.php:184
+#, php-format
+msgid ""
+"Du kannst den Namen Deines Stadions nur außerhalb der Spielzeiten ändern. "
+"Zurzeit laufen %s-Spiele."
 msgstr ""
+"Solo puedes cambiar el nombre del estadio al final de la temporada. "
+"Actualmente %s esta en juego."
 
 #: ../../../ver_stadion.php:215
 msgid "Kapazität"
-msgstr ""
+msgstr "Capacidad"
 
 #: ../../../ver_stadion.php:216
 msgid "Preis/Platz"
@@ -6725,19 +7671,24 @@ msgstr "Precio/Platea"
 
 #: ../../../ver_stadion.php:217
 msgid "Einnahmen bei voller Auslastung"
-msgstr ""
+msgstr "Ingresos a plena capacidad"
 
 #: ../../../ver_stadion.php:218
 msgid "Instandhaltungskosten"
-msgstr ""
+msgstr "Costos de matenimiento"
+
+#: ../../../ver_stadion.php:218 ../../../ver_stadion.php:219
+#, php-format
+msgid "%s € / Saison"
+msgstr "%s € / Temporada"
 
 #: ../../../ver_stadion.php:219
 msgid "Gelände-Kosten"
-msgstr ""
+msgstr "Costos del estadio"
 
 #: ../../../ver_stadion.php:220
 msgid "Zuschauer beim letzten Spiel"
-msgstr ""
+msgstr "Espectadores en el último partido"
 
 #: ../../../ver_stadion.php:256 ../../../ver_stadion.php:303
 msgid "Ändern"
@@ -6745,57 +7696,71 @@ msgstr "Cambiar"
 
 #: ../../../ver_stadion.php:258
 msgid "Umbau"
-msgstr ""
+msgstr "Reformas"
 
 #: ../../../ver_stadion.php:260
 msgid "Anzahl der Plätze:"
-msgstr ""
+msgstr "Número de plateas:"
 
 #: ../../../ver_stadion.php:273
 msgid "Art des Umbaus:"
-msgstr ""
+msgstr "Tipo de modificación:"
 
 #: ../../../ver_stadion.php:274
 msgid "Erweiterung"
-msgstr ""
+msgstr "Apliar"
 
 #: ../../../ver_stadion.php:275
 msgid "Verkleinerung"
-msgstr ""
+msgstr "Demoler"
 
 #: ../../../ver_stadion.php:277
 msgid "Bauen"
-msgstr ""
+msgstr "Construir"
 
 #: ../../../ver_stadion.php:280
 msgid "Kosten für Erweiterung:"
-msgstr ""
+msgstr "Costo de ampliación: "
+
+#: ../../../ver_stadion.php:280 ../../../ver_stadion.php:281
+#: ../../../ver_stadion.php:282
+#, php-format
+msgid "%s € / Platz"
+msgstr "%s € / Platea"
 
 #: ../../../ver_stadion.php:281
 msgid "Kosten für Verkleinerung:"
-msgstr ""
+msgstr "Costo de demolición:"
 
 #: ../../../ver_stadion.php:282
 msgid "Instandhaltungskosten:"
-msgstr ""
+msgstr "Costo de matenimiento:"
 
 #: ../../../ver_stadion.php:283
 msgid "Bauzeit für Erweiterung:"
-msgstr ""
+msgstr "Periodo de construcción de la ampliación:"
+
+#: ../../../ver_stadion.php:283 ../../../ver_stadion.php:284
+#: ../../../ver_stadion.php:305
+#, php-format
+msgid "bis %s"
+msgstr "hasta el %s"
 
 #: ../../../ver_stadion.php:284
 msgid "Bauzeit für Verkleinerung:"
-msgstr ""
+msgstr "Periodo de trabajo de la demolición:"
 
 #: ../../../ver_stadion.php:285
 msgid "Maximale Kapazität:"
-msgstr ""
+msgstr "Máxima capacidad:"
 
 #: ../../../ver_stadion.php:287
 msgid ""
 "Der Stadion-Umbau kann nicht stattfinden, wenn dadurch Schulden entstehen "
 "würden."
 msgstr ""
+"La remodelación del estadio no puede llevarse a cabo si se plantease una "
+"deuda."
 
 #: ../../../ver_stadion.php:288 ../../../ver_stadion.php:306
 msgid "Information:"
@@ -6809,6 +7774,12 @@ msgid ""
 "Verkleinerung kann man die Instandhaltungskosten senken, wodurch aber auch "
 "nur noch geringere Einnahmen durch den Kartenverkauf möglich sind."
 msgstr ""
+"Tanto la apliación como la demolición representan una gran cantidad de "
+"dinero. Al ampliar el estadio se genera un aumento de los ingresos a través "
+"de la venta de entradas, sin embargo, por otra parte, también aumentará el "
+"costo de mantenimiento. A través de una demolición se pueden reducir los "
+"costos de mantenimiento, pero los ingresos podrían disminuir debido a la "
+"baja en la venta de boletos."
 
 #: ../../../ver_stadion.php:289
 msgid "Gelände"
@@ -6826,6 +7797,11 @@ msgid ""
 "laufen."
 msgstr ""
 
+#: ../../../ver_stadion.php:310
+#, php-format
+msgid "Foto des Stadions: %s"
+msgstr "Foto de los estadios: %s"
+
 #: ../../../vertraege.php:2 ../../../vertraege.php:4 ../../../zz2.php:177
 msgid "Verträge"
 msgstr "Contratos"
@@ -6840,11 +7816,38 @@ msgstr "Ampliar"
 
 #: ../../../vertraege.php:86
 msgid "AL: Alter, MO: Moral, GE: Gehalt pro Saison in Millionen €"
-msgstr "AL: edad, MO: moral, ST: salario por temporada en millones €"
+msgstr "Ed: edad, Mo: moral, ST: salario por temporada en millones €"
+
+#: ../../../vertrag_verlaengern.php:88
+#, php-format
+msgid "Du hast den Vertrag mit %1$s auf %2$d Tage verlängert."
+msgstr ""
 
 #: ../../../vertrag_verlaengern.php:116 ../../../vertrag_verlaengern.php:118
 msgid "Vertrag verlängern:"
 msgstr "Extender contrato:"
+
+#: ../../../vertrag_verlaengern.php:128
+#, php-format
+msgid ""
+"Der Spieler %1$s hat Dir Angebote für eine Verlängerung seines Vertrags "
+"gemacht. Zurzeit verdient er %2$s € pro Saison. Wenn Du mit einem der "
+"Angebote einverstanden bist, wähle es aus und klicke anschließend auf "
+"<i>Abschließen</i>."
+msgstr ""
+
+#: ../../../vertrag_verlaengern.php:135
+#, php-format
+msgid "%1$d Tage mit %2$s € Gehalt pro Saison"
+msgstr "%1$d fechas con %2$s € de sueldo por Temporada"
+
+#: ../../../vertrag_verlaengern.php:157
+#, php-format
+msgid ""
+"Der Spieler %s möchte seinen Vertrag zurzeit nicht verlängern und hat Dir "
+"deshalb kein Angebot gemacht. Vielleicht ist er unzufrieden in Deinem Team. "
+"Achte auf seine Moral!"
+msgstr ""
 
 #: ../../../vertrag_verlaengern.php:158
 msgid "Zurück zur Vertragsübersicht"
@@ -6868,6 +7871,11 @@ msgstr ""
 "te asignemos un equipo. Te notificaremos via email y podrás continuar "
 "jugando instantaneamente."
 
+#: ../../../warteliste.php:9
+#, php-format
+msgid "Du hast Dich am %s Uhr registriert."
+msgstr ""
+
 #: ../../../wio.php:2 ../../../wio.php:4 ../../../zz2.php:243
 msgid "Wer ist online?"
 msgstr "¿Quién esta conectado?"
@@ -6876,29 +7884,55 @@ msgstr "¿Quién esta conectado?"
 msgid "Aktiv"
 msgstr "Activo"
 
+#: ../../../wio.php:31
+msgid "Post schicken"
+msgstr "Enviar mensaje"
+
+#: ../../../wio.php:35
+#, php-format
+msgid "Deine %s sind fett markiert."
+msgstr "Tus %s están marcados en negrita."
+
+#: ../../../zz1.php:46
+#, php-format
+msgid ""
+"Herzlichen Glückwunsch, Du hast gerade einen weiteren Teil deiner %1$s "
+"abgeschlossen!"
+msgstr ""
+
+#: ../../../zz1.php:58
+#, php-format
+msgid "%s hat Geburtstag"
+msgstr ""
+
 #: ../../../zz1.php:59
 msgid "Es ist Weihnachten"
-msgstr ""
+msgstr "Es Navidad"
 
 #: ../../../zz1.php:60
 msgid "Das neue Jahr hat begonnen"
-msgstr ""
+msgstr "El año nuevo ha comenzado"
 
 #: ../../../zz1.php:61
 msgid "Es ist Maifeiertag"
-msgstr ""
+msgstr "Es el Primero de Mayo"
 
 #: ../../../zz1.php:62
 msgid "Es ist Tag der Deutschen Einheit"
-msgstr ""
+msgstr "Es el Día de la Unidad Alemana"
 
 #: ../../../zz1.php:63
 msgid "Es ist Ostern"
-msgstr ""
+msgstr "Es pascuas"
 
 #: ../../../zz1.php:66
 msgid "Lotto spielen"
 msgstr "Jugar a la lotería"
+
+#: ../../../zz1.php:66
+#, php-format
+msgid "%1$s und deshalb darf jeder Manager kostenlos %2$s!"
+msgstr ""
 
 #: ../../../zz2.php:1
 msgid ""
@@ -7031,9 +8065,8 @@ msgid "Sprache:"
 msgstr "Idioma:"
 
 #: ../../../zz3.php:9
-#, fuzzy
 msgid "Android-App"
-msgstr "Android™-App"
+msgstr "Android-App"
 
 #: ../../../zz3.php:12
 msgid "Open Source"
@@ -7049,7 +8082,7 @@ msgstr ""
 "ninguna relación con las ligas reales. El dinero es sólo virtual y nunca se "
 "efectuan pagos."
 
-#: ../../../zzserver.php:246
+#: ../../../zzserver.php:242
 msgid "Qualifikation"
 msgstr "Clasificación"
 
@@ -7110,7 +8143,8 @@ msgstr ""
 #: ../../../tipps_des_tages.php.txt:7
 msgid "Nutze Deinen Heimvorteil im eigenen Stadion - besonders im Pokal!"
 msgstr ""
-"Utiliza tu ventaja de local en tu propio estadio - en especial en la Copa!"
+"Utiliza tu ventaja de local en tu propio estadio - en especial durante la "
+"Copa!"
 
 #: ../../../tipps_des_tages.php.txt:8
 msgid ""
@@ -7385,15 +8419,14 @@ msgid ""
 msgstr ""
 
 #: ../../../tipps_des_tages.php.txt:46
-#, fuzzy
 msgid ""
 "Das <i>4-4-2</i> ist das einzige verfügbare Spielsystem. Trotzdem kannst Du "
 "viel Einfluss auf Dein Team nehmen durch die umfangreichen Taktik-"
 "Einstellungen."
 msgstr ""
-"El <i>4-4-2</i> es la única formación disponible en Ballmanager. Sin "
-"embargo, puedes generar un gran impacto en tu equipo a través de la extensa "
-"configuración táctica con la que dispones."
+"El <i>4-4-2</i> es la única formación disponible. Sin embargo, puedes "
+"generar un gran impacto en tu equipo a través de la extensa configuración "
+"táctica con la que dispones."
 
 #: ../../../tipps_des_tages.php.txt:47
 msgid ""
@@ -7740,12 +8773,17 @@ msgid ""
 "Wenn ein Spieler in einer Saison schon ein Pokalspiel gemacht hat, kann er "
 "(nach einem Transfer) für andere Klubs keine Pokalspiele mehr bestreiten."
 msgstr ""
+"Si un jugador ya ha jugado un partido internacional esta temporada, para "
+"otro equipo (después de una transferencia), no podrá volver participar hasta "
+"que finalize la temporada."
 
 #: ../../../tipps_des_tages.php.txt:98
 msgid ""
 "Wenn man 9 Tage nicht online war, wird man von seinem Verein entlassen. "
 "Diese Frist wird pro Monat, den man schon dabei ist, um einen Tag verlängert."
 msgstr ""
+"Si no te conectas por un plazo de 10 días, serás despedido de tu club. Este "
+"plazo se reducirá al mes,  y se prolongará un día."
 
 #: ../../../tipps_des_tages.php.txt:99
 msgid ""
@@ -7807,12 +8845,24 @@ msgstr ""
 "van más espectadores!"
 
 #, fuzzy
-#~ msgid "Ballmanager-Team"
-#~ msgstr "Charla de Mánagers"
+#~ msgid "mind. Vorrunde"
+#~ msgstr "Copa Nacional: Preliminares"
 
 #, fuzzy
-#~ msgid "Gefällt Dir der Ballmanager?"
-#~ msgstr "Parte V: Ballmanager"
+#~ msgid "mind. Achtelfinale"
+#~ msgstr "Copa Nacional: Octavos de final"
+
+#, fuzzy
+#~ msgid "mind. Viertelfinale"
+#~ msgstr "Copa Nacional: Cuartos de final"
+
+#, fuzzy
+#~ msgid "mind. Halbfinale"
+#~ msgstr "Copa Nacional: Semifinal"
+
+#, fuzzy
+#~ msgid "Ballmanager-Team"
+#~ msgstr "Charla de Mánagers"
 
 #, fuzzy
 #~ msgid "Ballmanager-Team."
@@ -7821,32 +8871,8 @@ msgstr ""
 #~ msgid "Kontakt"
 #~ msgstr "Contacto"
 
-#~ msgid ""
-#~ "Diese Nutzungsbedingungen (&quot;Regeln&quot;) legen fest, wie Du (&quot;"
-#~ "der User&quot;) die Webseite unter www.ballmanager.de (&quot;"
-#~ "Ballmanager&quot;) nutzen darfst. Mit der Nutzung dieser Webseite "
-#~ "erklärst Du, dass Du mit den Regeln auf dieser Seite einverstanden bist."
-#~ msgstr ""
-#~ "Estos términos de uso (% quot; las Reglas \") determinan como debes (\" "
-#~ "el Usuario \") utilizar este sitio web y todos los servicios ofrecidos en "
-#~ "nuestras páginas (\" la solicitud \"). Mediante el uso de esta solicitud "
-#~ "declaras estar de acuerdo con las Reglas que figuran en esta página."
-
 #~ msgid "Teil V: Ballmanager"
 #~ msgstr "Parte V: Ballmanager"
-
-#~ msgid ""
-#~ "Ballmanager behält sich vor, diese Regeln jederzeit ändern zu können."
-#~ msgstr ""
-#~ "Ballmanager se reserva el derecho de modificar estas reglas en cualquier "
-#~ "momento."
-
-#~ msgid ""
-#~ "Ballmanager behält sich vor, jederzeit Änderungen an dieser "
-#~ "Datenschutzerklärung durchzuführen."
-#~ msgstr ""
-#~ "Ballmanager se reserva el derecho para hacer cambios a esta Política de "
-#~ "Privacidad en cualquier momento."
 
 #~ msgid "Ballmanager: Willkommen"
 #~ msgstr "Ballmanager: Bienvenido"
@@ -7854,9 +8880,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "das Ballmanager-Team"
 #~ msgstr "Charla de Mánagers"
-
-#~ msgid "Es wurden %d Nachrichten aus Deinem Posteingang gelöscht."
-#~ msgstr "Se eliminaron %d mensajes del buzón de entrada."
 
 #~ msgid "Neuigkeiten"
 #~ msgstr "Noticias"

@@ -252,7 +252,7 @@ if (isset($_POST['scout']) && $cookie_id != CONFIG_DEMO_USER) {
             $_SESSION['scout'] = $temp;
             $cookie_scout = $temp;
             // PROTOKOLL ANFANG
-            $formulierung = _('Du hast einen Scout der Stufe %d eingestellt.', $temp);
+            $formulierung = __('Du hast einen Scout der Stufe %d eingestellt.', $temp);
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Assistenten', '".time()."')";
             $sql8 = mysql_query($sql7);
             // PROTOKOLL ENDE

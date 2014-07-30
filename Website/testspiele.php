@@ -99,7 +99,7 @@ else {
 			}
 			else {
 				echo '<tr><td class="link"><a href="/team.php?id='.$an3['team1'].'">'.$an3['team1_name'].'</a></td><td>'.date('d.m.Y', $an3['datum']).'</td>';
-				echo '<td><form action="/testspiel_antworten.php" method="get" accept-charset="utf-8"><input type="hidden" name="id" value="'.$an3['team1'].'" /> <input type="submit" name="typ" value="'._('Annehmen').'"'.noDemoClick($cookie_id).' /> <input type="submit" name="typ" value="'._('Ablehnen').'"'.noDemoClick($cookie_id).' /></form></td>';
+				echo '<td><form action="/testspiel_antworten.php" method="get" accept-charset="utf-8"><input type="hidden" name="id" value="'.$an3['team1'].'" /> <button type="submit" name="typ" value="Annehmen"'.noDemoClick($cookie_id).'>'._('Annehmen').'</button> <button type="submit" name="typ" value="Ablehnen"'.noDemoClick($cookie_id).'>'._('Ablehnen').'</button></form></td>';
 				echo '</tr>';
 			}
 		}

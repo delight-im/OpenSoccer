@@ -169,7 +169,7 @@ else {
 			echo '<tr class="odd">';
 			echo '<td class="link"><a href="/team.php?id='.$sql3['vonTeam'].'">'.$sql3['name'].'</a></td>';
 			echo '<td>'.date('d.m.Y H:i', $sql3['zeit']).'</td>';
-			echo '<td><form action="/ligaTausch.php" method="post" accept-charset="utf-8"><input type="hidden" name="newTeam" value="'.$sql3['vonTeam'].'" /><input type="submit" name="aktion" value="'._('Annehmen').'"'.noDemoClick($cookie_id).' /> <input type="submit" name="aktion" value="'._('Ablehnen').'"'.noDemoClick($cookie_id).' /></form></td>';
+			echo '<td><form action="/ligaTausch.php" method="post" accept-charset="utf-8"><input type="hidden" name="newTeam" value="'.$sql3['vonTeam'].'" /><button type="submit" name="aktion" value="Annehmen"'.noDemoClick($cookie_id).'>'._('Annehmen').'</button> <button type="submit" name="aktion" value="Ablehnen"'.noDemoClick($cookie_id).'>'._('Ablehnen').'</button></form></td>';
 			echo '</tr>';
 			$counter++;
 		}

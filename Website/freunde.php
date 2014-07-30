@@ -8,7 +8,7 @@ $an2 = mysql_query($an1);
 $an2a = mysql_num_rows($an2);
 if ($an2a > 0) { echo '<h1>'._('Anfragen').'</h1><p><table><thead><tr class="odd"><th scope="col">'._('Manager').'</th><th scope="col">'._('Aktionen').'</th></tr></thead><tbody>';
     while ($an3 = mysql_fetch_assoc($an2)) {
-        echo '<tr><td class="link">'.displayUsername($an3['username'], $an3['von']).'</td><td><form action="/freunde_aktion.php" method="get" accept-charset="utf-8"><input type="hidden" name="id" value="'.$an3['von'].'" /><input type="submit" name="aktion" value="'._('Annehmen').'"'.noDemoClick($cookie_id).' /> <input type="submit" name="aktion" value="'._('Ablehnen').'"'.noDemoClick($cookie_id).' /></form></td>';
+        echo '<tr><td class="link">'.displayUsername($an3['username'], $an3['von']).'</td><td><form action="/freunde_aktion.php" method="get" accept-charset="utf-8"><input type="hidden" name="id" value="'.$an3['von'].'" /><button type="submit" name="aktion" value="Annehmen"'.noDemoClick($cookie_id).'>'._('Annehmen').'</button> <button type="submit" name="aktion" value="Ablehnen"'.noDemoClick($cookie_id).'>'._('Ablehnen').'</button></form></td>';
     }
     echo '</tbody></table></p>';
 }

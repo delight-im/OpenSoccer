@@ -52,7 +52,8 @@ if ($loggedin == 1) {
 							$debugStr = '4';
 							if ($n3t3 < 2) { // nur 2 Transfers zwischen zwei Teams
 								$debugStr = '5';
-								$in1 = "UPDATE ".$prefix."transfermarkt SET betrag_highest = ".$gebot.", bieter_highest = '".$cookie_team."', gebote = gebote+1, ende = ende+180 WHERE spieler = '".$spieler_id."' AND betrag_highest < ".$gebot." AND ende > ".time();
+                                require_once('./classes/TransferMarket.php');
+								$in1 = "UPDATE ".$prefix."transfermarkt SET betrag_highest = ".$gebot.", bieter_highest = '".$cookie_team."', gebote = gebote+1, ende = ende+".intval(TransferMarket::AUCTION_TIME_EXTENSION_ON_BID * 60)." WHERE spieler = '".$spieler_id."' AND betrag_highest < ".$gebot." AND ende > ".time();
 								$in2 = mysql_query($in1);
 								$transferLog1 = "INSERT INTO ".$prefix."transfers_gebote (spieler, datum, bieter, bieterIP, betrag) VALUES ('".$spieler_id."', ".time().", '".$cookie_team."', '".getUserIP()."', ".bigintval($gebot).")";
 								$transferLog2 = mysql_query($transferLog1);

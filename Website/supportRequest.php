@@ -86,7 +86,7 @@ if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3
 		$sql3['open'] = $setOpen;
 		// AUTOR DER ANFRAGE PER POST BENACHRICHTIGEN ANFANG
 		if ($setOpen != 1) {
-            $betreff = _('Support: Anfrage #%s', id2secure($sql3['id']));
+            $betreff = __('Support: Anfrage #%s', id2secure($sql3['id']));
             $notifyText = _('Hallo').',<br /><br />'._('vielen Dank für Deine Beteiligung im Support-Forum. Eine Deiner Anfragen wurde jetzt geschlossen, Du findest sie hier:').'<br />http://'.CONFIG_SITE_DOMAIN.'/supportRequest.php?id='.id2secure($sql3['id']).'<br /><br />'._('Sportliche Grüße').'<br />'.CONFIG_SITE_NAME.'<br />'.CONFIG_SITE_DOMAIN;
             $sql1 = "INSERT INTO ".$prefix."pn (von, an, titel, inhalt, zeit, in_reply_to) VALUES ('".CONFIG_OFFICIAL_USER."', '".$sql3['author']."', '".$betreff."', '".$notifyText."', ".time().", '')";
 			$sql2 = mysql_query($sql1);

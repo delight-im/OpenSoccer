@@ -112,7 +112,7 @@ else{
 <i><?php echo _('Wichtig:').'</i> '._('Der Link in der E-Mail, die wir Dir senden, ist nur fünf Stunden lang gültig. Danach musst Du die E-Mail erneut anfordern.'); ?></p>
 <form method="post" action="/passwort_vergessen.php" accept-charset="utf-8">
 <p><?php echo _('E-Mail-Adresse:'); ?><br /><input type="text" name="email" id="email" style="width:200px" /></p>
-<p><input type="submit" value="Anfordern" /></p>
+<p><input type="submit" value="<?php echo _('Anfordern'); ?>" /></p>
 </form>
 <?php } ?>
 <?php include 'zz3.php'; ?>

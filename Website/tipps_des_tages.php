@@ -4,7 +4,7 @@
 <?php if ($loggedin == 1) { ?>
 <h1><?php echo _('Tipps durchsuchen'); ?></h1>
 <form action="/tipps_des_tages.php" method="get" accept-charset="utf-8">
-<p><input type="text" name="q" style="width:200px" /> <input type="submit" value="Suchen" /></p>
+<p><input type="text" name="q" style="width:200px" /> <input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
 <?php
 setTaskDone('open_shorttips');

@@ -233,7 +233,7 @@ echo '<p style="text-align:center; font-size:14px; font-weight:bold;">'.$sql3['t
 // BEWERTUNG ENDE
 // WEITERE INFOS ANFANG
 echo '<p class="commentBoxBlack"><span style="display:block; margin-bottom:16px;">'.$sql3['description'].'</span>';
-echo '<strong>Anfrage von:</strong> <span style="display:block; margin-bottom:8px;">';
+echo '<strong>'._('Anfrage von:').'</strong> <span style="display:block; margin-bottom:8px;">';
 if ($votes3 == 1) { // schon abgestimmt
 	$user1 = "SELECT username FROM ".$prefix."users WHERE ids = '".$sql3['author']."'";
 	$user2 = mysql_query($user1);

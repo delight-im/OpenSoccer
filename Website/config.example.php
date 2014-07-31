@@ -13,9 +13,9 @@ define('CONFIG_USE_HTTPS', false); // whether to use secure connections over HTT
 define('CONFIG_USE_HTTPS_HSTS', false); // whether to guarantee and force HTTPS for a long period of time
 
 // site information
-define('CONFIG_SITE_NAME', 'Ballmanager');
-define('CONFIG_SITE_DOMAIN', 'www.ballmanager.de');
-define('CONFIG_SITE_EMAIL', 'info@ballmanager.de');
+define('CONFIG_SITE_NAME', 'OpenSoccer');
+define('CONFIG_SITE_DOMAIN', 'www.opensoccer.org');
+define('CONFIG_SITE_EMAIL', 'info@opensoccer.org');
 
 // special users and roles
 define('CONFIG_OFFICIAL_USER', '18a393b5e23e2b9b4da106b06d8235f3');

@@ -20,7 +20,7 @@ function noDemoPopup() {
 <body>
 <div id="wrap">
 <div id="header">
-<div class="logo_top" style="position:relative"><img src="/images/logo-260x60.png" alt="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" title="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" width="260" style="border:0; width:260px; height:60px" />
+<div class="logo_top" style="position:relative"><img src="/images/logo.png" alt="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" title="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" width="224" style="border:0; width:224px; height:60px" />
 <?php
 $topWidget = '<h1>'._('Top-Manager').'</h1>';
 $topWidget .= '<div class="left-box navBlockLinks">';

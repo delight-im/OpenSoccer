@@ -185,12 +185,12 @@ $sql3 = mysql_fetch_assoc($sql2);
 <div style="float:left; width:280px;">
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="jugendtrainer" value="1" <?php if ($sql3['jugendarbeit'] == 1) { echo 'checked="checked" '; } ?>/> Stufe 1 (8.000.000 € pro Saison)<br />
-<input type="radio" name="jugendtrainer" value="2" <?php if ($sql3['jugendarbeit'] == 2) { echo 'checked="checked" '; } ?>/> Stufe 2 (16.000.000 € pro Saison)<br />
-<input type="radio" name="jugendtrainer" value="3" <?php if ($sql3['jugendarbeit'] == 3) { echo 'checked="checked" '; } ?>/> Stufe 3 (24.000.000 € pro Saison)<br />
-<input type="radio" name="jugendtrainer" value="4" <?php if ($sql3['jugendarbeit'] == 4) { echo 'checked="checked" '; } ?>/> Stufe 4 (32.000.000 € pro Saison)<br />
-<input type="radio" name="jugendtrainer" value="5" <?php if ($sql3['jugendarbeit'] == 5) { echo 'checked="checked" '; } ?>/> Stufe 5 (40.000.000 € pro Saison)<br />
-<input type="submit" value="Ändern"<?php echo noDemoClick($cookie_id); ?> />
+<input type="radio" name="jugendtrainer" value="1" <?php if ($sql3['jugendarbeit'] == 1) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 1, '8.000.000'); ?><br />
+<input type="radio" name="jugendtrainer" value="2" <?php if ($sql3['jugendarbeit'] == 2) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 2, '16.000.000'); ?><br />
+<input type="radio" name="jugendtrainer" value="3" <?php if ($sql3['jugendarbeit'] == 3) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 3, '24.000.000'); ?><br />
+<input type="radio" name="jugendtrainer" value="4" <?php if ($sql3['jugendarbeit'] == 4) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 4, '32.000.000'); ?><br />
+<input type="radio" name="jugendtrainer" value="5" <?php if ($sql3['jugendarbeit'] == 5) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 5, '40.000.000'); ?><br />
+<input type="submit" value="<?php echo _('Ändern'); ?>"<?php echo noDemoClick($cookie_id); ?> />
 </p>
 </form>
 </div>
@@ -230,12 +230,12 @@ $sql3 = mysql_fetch_assoc($sql2);
 ?>
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="fanbetreuer" value="1" <?php if ($sql3['fanbetreuer'] == 1) { echo 'checked="checked" '; } ?>/> Stufe 1 (6.000.000 € pro Saison)<br />
-<input type="radio" name="fanbetreuer" value="2" <?php if ($sql3['fanbetreuer'] == 2) { echo 'checked="checked" '; } ?>/> Stufe 2 (12.000.000 € pro Saison)<br />
-<input type="radio" name="fanbetreuer" value="3" <?php if ($sql3['fanbetreuer'] == 3) { echo 'checked="checked" '; } ?>/> Stufe 3 (18.000.000 € pro Saison)<br />
-<input type="radio" name="fanbetreuer" value="4" <?php if ($sql3['fanbetreuer'] == 4) { echo 'checked="checked" '; } ?>/> Stufe 4 (24.000.000 € pro Saison)<br />
-<input type="radio" name="fanbetreuer" value="5" <?php if ($sql3['fanbetreuer'] == 5) { echo 'checked="checked" '; } ?>/> Stufe 5 (30.000.000 € pro Saison)<br />
-<input type="submit" value="Ändern"<?php echo noDemoClick($cookie_id); ?> />
+<input type="radio" name="fanbetreuer" value="1" <?php if ($sql3['fanbetreuer'] == 1) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 1, '6.000.000'); ?><br />
+<input type="radio" name="fanbetreuer" value="2" <?php if ($sql3['fanbetreuer'] == 2) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 2, '12.000.000'); ?><br />
+<input type="radio" name="fanbetreuer" value="3" <?php if ($sql3['fanbetreuer'] == 3) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 3, '18.000.000'); ?><br />
+<input type="radio" name="fanbetreuer" value="4" <?php if ($sql3['fanbetreuer'] == 4) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 4, '24.000.000'); ?><br />
+<input type="radio" name="fanbetreuer" value="5" <?php if ($sql3['fanbetreuer'] == 5) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 5, '30.000.000'); ?><br />
+<input type="submit" value="<?php echo _('Ändern'); ?>"<?php echo noDemoClick($cookie_id); ?> />
 </p>
 </form>
 <h1><?php echo _('Scout'); ?></h1>
@@ -275,12 +275,12 @@ $sql3 = mysql_fetch_assoc($sql2);
 <div style="float:left; width:280px;">
 <form action="/ver_personal.php" method="post" accept-charset="utf-8">
 <p>
-<input type="radio" name="scout" value="1" <?php if ($sql3['scout'] == 1) { echo 'checked="checked" '; } ?>/> Stufe 1 (5.000.000 € pro Saison)<br />
-<input type="radio" name="scout" value="2" <?php if ($sql3['scout'] == 2) { echo 'checked="checked" '; } ?>/> Stufe 2 (10.000.000 € pro Saison)<br />
-<input type="radio" name="scout" value="3" <?php if ($sql3['scout'] == 3) { echo 'checked="checked" '; } ?>/> Stufe 3 (15.000.000 € pro Saison)<br />
-<input type="radio" name="scout" value="4" <?php if ($sql3['scout'] == 4) { echo 'checked="checked" '; } ?>/> Stufe 4 (20.000.000 € pro Saison)<br />
-<input type="radio" name="scout" value="5" <?php if ($sql3['scout'] == 5) { echo 'checked="checked" '; } ?>/> Stufe 5 (25.000.000 € pro Saison)<br />
-<input type="submit" value="Ändern"<?php echo noDemoClick($cookie_id); ?> />
+<input type="radio" name="scout" value="1" <?php if ($sql3['scout'] == 1) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 1, '5.000.000'); ?><br />
+<input type="radio" name="scout" value="2" <?php if ($sql3['scout'] == 2) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 2, '10.000.000'); ?><br />
+<input type="radio" name="scout" value="3" <?php if ($sql3['scout'] == 3) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 3, '15.000.000'); ?><br />
+<input type="radio" name="scout" value="4" <?php if ($sql3['scout'] == 4) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 4, '20.000.000'); ?><br />
+<input type="radio" name="scout" value="5" <?php if ($sql3['scout'] == 5) { echo 'checked="checked" '; } ?>/> <?php echo __('Stufe %1$d (%2$s € pro Saison)', 5, '25.000.000'); ?><br />
+<input type="submit" value="<?php echo _('Ändern'); ?>"<?php echo noDemoClick($cookie_id); ?> />
 </p>
 </form>
 </div>

@@ -326,7 +326,7 @@ function voteComment(requestID, commentID, linkElement) {
 		var responseSpan = document.createElement('span');
 		responseSpan.style.marginLeft = '10px';
 		responseSpan.style.marginRight = '10px';
-		responseSpan.innerHTML = '<img src="/images/loading_14.gif" width="14" alt="Wird gesendet ..." /> '._('Wird gesendet ...');
+		responseSpan.innerHTML = '<img src="/images/loading_14.gif" width="14" alt="Wird gesendet ..." /> <?php echo htmlspecialchars(_('Wird gesendet ...')); ?>';
 		linkElement.parentNode.appendChild(responseSpan);
 		linkElement.parentNode.removeChild(linkElement);
 	}

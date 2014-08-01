@@ -293,7 +293,7 @@ if (isset($_GET['delEntry']) && $cookie_id != CONFIG_DEMO_USER) {
 $sql1 = "SELECT ".$prefix."chats.id, ".$prefix."chats.user, ".$prefix."chats.zeit, ".$prefix."chats.nachricht, ".$prefix."users.username FROM ".$prefix."chats JOIN ".$prefix."users ON ".$prefix."chats.user = ".$prefix."users.ids WHERE ".$prefix."chats.liga = '".$temp_liga."' ORDER BY ".$prefix."chats.zeit DESC LIMIT 0, 20";
 $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {
-	echo '<p><b>'.displayUsername($sql3['username'], $sql3['user']).' schrieb am '.date('d.m.Y, H:i', $sql3['zeit']).':';
+	echo '<p><b>'.__('%1$s schrieb am %2$s:', displayUsername($sql3['username'], $sql3['user']), date('d.m.Y, H:i', $sql3['zeit']));
 	if ($sql3['user'] == $cookie_id OR $_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 		echo ' <a href="/lig_tabelle.php?liga='.mysql_real_escape_string($temp_liga).'&amp;delEntry='.$sql3['id'].'">'._('[Löschen]').'</a>';
 	}

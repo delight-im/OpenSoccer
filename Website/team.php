@@ -47,7 +47,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 </thead>
 <tbody>
 <?php
-if (isset($_GET['action'])) {
+if (isset($_GET['action']) && $loggedin == 1) {
 	if ($_GET['action'] == 'requestedFriendly') {
 		setTaskDone('arrange_friendly');
 	}

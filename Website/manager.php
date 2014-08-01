@@ -84,10 +84,9 @@ switch ($sql3['status']) {
 }
 ?>
 <h1><?php echo __('Manager: %s', $sql3['username'].$specialStatus); ?></h1>
-<?php if ($loggedin == 1) { ?>
 <?php
 // KONTOSTAND PRUEFEN ANFANG
-if ($cookie_team != '__'.$cookie_id) {
+if ($loggedin == 1 && $cookie_team != '__'.$cookie_id) {
 	$getkonto1 = "SELECT konto FROM ".$prefix."teams WHERE ids = '".$cookie_team."'";
 	$getkonto2 = mysql_query($getkonto1);
 	$getkonto3 = mysql_fetch_assoc($getkonto2);
@@ -98,7 +97,7 @@ else {
 }
 // KONTOSTAND PRUEFEN ENDE
 // MULTI-ACCOUNTS ANFANG
-if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
+if ($loggedin == 1 && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) {
 	$mql1 = "SELECT a.user2, a.found_time, b.username, b.team FROM ".$prefix."users_multis AS a JOIN ".$prefix."users AS b ON a.user2 = b.ids WHERE a.user1 = '".mysql_real_escape_string($_GET['id'])."'";
 	$mql2 = mysql_query($mql1);
 	if (mysql_num_rows($mql2) != 0) {
@@ -159,18 +158,20 @@ else {
 	echo $letzte_aktion;
 }
 echo '</td></tr>';
-if ($_GET['id'] != $cookie_id) {
-	echo '<tr><td colspan="2" class="link"><a href="/post_schreiben.php?id='.$_GET['id'].'"'.noDemoClick($cookie_id).'><img width="16" style="vertical-align: middle;" alt="email" src="/images/email_add.png"> '.__('%s jetzt eine Nachricht schicken', $sql3['username']).'</a></td></tr>';
-	if (isset($kontakt_link)) { echo $kontakt_link; }
-}
-if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
-	echo '<tr class="odd"><td colspan="2" class="link"><a href="/sanktionen.php?profileID='.$clearedID.'"><img width="16" style="vertical-align: middle;" alt="report" src="/images/report_add.png"> '.__('Sanktion für %s festlegen', $sql3['username']).'</a></td></tr>';
+if ($loggedin == 1) {
+    if ($_GET['id'] != $cookie_id) {
+        echo '<tr><td colspan="2" class="link"><a href="/post_schreiben.php?id='.$_GET['id'].'"'.noDemoClick($cookie_id).'><img width="16" style="vertical-align: middle;" alt="email" src="/images/email_add.png"> '.__('%s jetzt eine Nachricht schicken', $sql3['username']).'</a></td></tr>';
+        if (isset($kontakt_link)) { echo $kontakt_link; }
+    }
+    if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
+        echo '<tr class="odd"><td colspan="2" class="link"><a href="/sanktionen.php?profileID='.$clearedID.'"><img width="16" style="vertical-align: middle;" alt="report" src="/images/report_add.png"> '.__('Sanktion für %s festlegen', $sql3['username']).'</a></td></tr>';
+    }
 }
 ?>
 </tbody>
 </table>
 <?php
-if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
+if ($loggedin == 1 && $sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 	if ($wantTests == 1) {
 		// MEHERE TESTSPIELE AM GLEICHEN TAG VERHINDERN ANFANG
 		$testspiel_tage = array();
@@ -242,81 +243,82 @@ if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 	}
 }
 // GAESTEBUCH ANFANG
-if (isset($_POST['gaestebuch_eintrag']) && $cookie_id != CONFIG_DEMO_USER) {
-	// CHAT-SPERREN ANFANG
-	$ban1 = "SELECT MAX(chatSperre) FROM ".$prefix."helferLog WHERE managerBestrafen = '".$cookie_id."'";
-	$ban2 = mysql_query($ban1);
-	if (mysql_num_rows($ban2) > 0) {
-		$ban3 = mysql_fetch_assoc($ban2);
-		$chatSperreBis = $ban3['MAX(chatSperre)'];
-		if ($chatSperreBis > 0 && $chatSperreBis > time()) {
-			addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team').'</a>'));
-			include 'zz3.php';
-			exit;
-		}
-	}
-	// CHAT-SPERREN ENDE
-	$gb_text = mysql_real_escape_string(trim(strip_tags($_POST['gaestebuch_eintrag'])));
-	$gb_in1 = "INSERT INTO ".$prefix."chats (user, zeit, nachricht, liga) VALUES ('".$cookie_id."', ".time().", '".$gb_text."', 'GB".mysql_real_escape_string($_GET['id'])."')";
-	$gb_in2 = mysql_query($gb_in1);
-}
-if (isset($_GET['delGB']) && $cookie_id != CONFIG_DEMO_USER) {
-	$delGB = mysql_real_escape_string(trim(strip_tags($_GET['delGB'])));
-	$addSql = " AND (user = '".$cookie_id."' OR liga = 'GB".mysql_real_escape_string($cookie_id)."')";
-	if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') { $addSql = ""; }
-	$gb_in1 = "DELETE FROM ".$prefix."chats WHERE id = ".$delGB.$addSql;
-	$gb_in2 = mysql_query($gb_in1);
-}
-echo '<h1 id="anker_gaestebuch">'._('Gästebuch').'</h1>';
-echo '<form action="/manager.php?id='.$_GET['id'].'" method="post" accept-charset="utf-8">';
-echo '<p><input type="text" name="gaestebuch_eintrag" style="width:60%" /> <input type="submit" value="'._('Eintragen').'"'.noDemoClick($cookie_id).' /></p>';
-echo '</form>';
-$gb1 = "SELECT a.id, a.user, a.zeit, a.nachricht, b.username FROM ".$prefix."chats AS a JOIN ".$prefix."users AS b ON a.user = b.ids WHERE a.liga = 'GB".mysql_real_escape_string($_GET['id'])."' ORDER BY a.zeit DESC LIMIT 0, 20";
-$gb2 = mysql_query($gb1);
-if (mysql_num_rows($gb2) == 0) {
-	echo '<p>'.__('Das Gästebuch von %s ist noch leer. Sei der Erste, der sich einträgt!', $sql3['username']).'</p>';
-}
-else {
-	while ($gb3 = mysql_fetch_assoc($gb2)) {
-		echo '<p><b>'.__('%1$s schrieb am %2$s:', displayUsername($gb3['username'], $gb3['user']), date('d.m.Y, H:i', $gb3['zeit']));
-		if ($_GET['id'] == $cookie_id OR $gb3['user'] == $cookie_id OR $_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
-			echo ' <a href="/manager.php?id='.mysql_real_escape_string($_GET['id']).'&amp;delGB='.$gb3['id'].'">['._('Löschen').']</a>';
-		}
-		echo '</b><br />'.$gb3['nachricht'].'</p>';
-	}
+if ($loggedin == 1) {
+    if (isset($_POST['gaestebuch_eintrag']) && $cookie_id != CONFIG_DEMO_USER) {
+        // CHAT-SPERREN ANFANG
+        $ban1 = "SELECT MAX(chatSperre) FROM ".$prefix."helferLog WHERE managerBestrafen = '".$cookie_id."'";
+        $ban2 = mysql_query($ban1);
+        if (mysql_num_rows($ban2) > 0) {
+            $ban3 = mysql_fetch_assoc($ban2);
+            $chatSperreBis = $ban3['MAX(chatSperre)'];
+            if ($chatSperreBis > 0 && $chatSperreBis > time()) {
+                addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team').'</a>'));
+                include 'zz3.php';
+                exit;
+            }
+        }
+        // CHAT-SPERREN ENDE
+        $gb_text = mysql_real_escape_string(trim(strip_tags($_POST['gaestebuch_eintrag'])));
+        $gb_in1 = "INSERT INTO ".$prefix."chats (user, zeit, nachricht, liga) VALUES ('".$cookie_id."', ".time().", '".$gb_text."', 'GB".mysql_real_escape_string($_GET['id'])."')";
+        $gb_in2 = mysql_query($gb_in1);
+    }
+    if (isset($_GET['delGB']) && $cookie_id != CONFIG_DEMO_USER) {
+        $delGB = mysql_real_escape_string(trim(strip_tags($_GET['delGB'])));
+        $addSql = " AND (user = '".$cookie_id."' OR liga = 'GB".mysql_real_escape_string($cookie_id)."')";
+        if ($loggedin == 1 && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) { $addSql = ""; }
+        $gb_in1 = "DELETE FROM ".$prefix."chats WHERE id = ".$delGB.$addSql;
+        $gb_in2 = mysql_query($gb_in1);
+    }
+    echo '<h1 id="anker_gaestebuch">'._('Gästebuch').'</h1>';
+    echo '<form action="/manager.php?id='.$_GET['id'].'" method="post" accept-charset="utf-8">';
+    echo '<p><input type="text" name="gaestebuch_eintrag" style="width:60%" /> <input type="submit" value="'._('Eintragen').'"'.noDemoClick($cookie_id).' /></p>';
+    echo '</form>';
+    $gb1 = "SELECT a.id, a.user, a.zeit, a.nachricht, b.username FROM ".$prefix."chats AS a JOIN ".$prefix."users AS b ON a.user = b.ids WHERE a.liga = 'GB".mysql_real_escape_string($_GET['id'])."' ORDER BY a.zeit DESC LIMIT 0, 20";
+    $gb2 = mysql_query($gb1);
+    if (mysql_num_rows($gb2) == 0) {
+        echo '<p>'.__('Das Gästebuch von %s ist noch leer. Sei der Erste, der sich einträgt!', $sql3['username']).'</p>';
+    }
+    else {
+        while ($gb3 = mysql_fetch_assoc($gb2)) {
+            echo '<p><b>'.__('%1$s schrieb am %2$s:', displayUsername($gb3['username'], $gb3['user']), date('d.m.Y, H:i', $gb3['zeit']));
+            if ($loggedin == 1 && ($_GET['id'] == $cookie_id || $gb3['user'] == $cookie_id || $_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) {
+                echo ' <a href="/manager.php?id='.mysql_real_escape_string($_GET['id']).'&amp;delGB='.$gb3['id'].'">['._('Löschen').']</a>';
+            }
+            echo '</b><br />'.$gb3['nachricht'].'</p>';
+        }
+    }
 }
 // GAESTEBUCH ENDE
 // INFOTEXT ANFANG
-$infotext = trim($sql3['infotext']);
-function br2nl($text) {
-	return str_replace('<br />', '', $text);
-}
-$isOwnProfile = FALSE;
-if ($_GET['id'] == $cookie_id && $cookie_id != CONFIG_DEMO_USER) {
-	$isOwnProfile = TRUE;
-	if (isset($_POST['infotext'])) {
-		$infotext = nl2br(mb_substr(strip_tags(trim($_POST['infotext'])), 0, 10000));
-		$infotext1 = "UPDATE ".$prefix."users SET infotext = '".mysql_real_escape_string($infotext)."' WHERE ids = '".$cookie_id."'";
-		$infotext2 = mysql_query($infotext1);
-	}
-}
-echo '<h1 id="anker_infotext">'._('Infotext').($isOwnProfile ? ' ('.__('%s Zeichen', '<span id="infotext_counter">0</span>/5000').')' : '').'</h1>';
-if ($isOwnProfile) { // eigenes Profil
-	echo '<form action="/manager.php?id='.$_GET['id'].'" method="post" accept-charset="utf-8">';
-	echo '<p><textarea rows="15" cols="12" id="infotext" name="infotext" style="width:450px; height:300px" maxlength="5000" onkeyup="updateTextLength(this);">'.br2nl($infotext).'</textarea></p>';
-	echo '<p><input type="submit" value="'._('Speichern').'"'.noDemoClick($cookie_id).' /></p>';
-}
-else { // fremdes Profil
-	if (strlen($infotext) == 0) {
-		echo '<p>'.__('%s hat noch keinen Text über sich und den Verein geschrieben.', $sql3['username']).'</p>';
-	}
-	else {
-		echo '<p>'.$infotext.'</p>';
-	}
+if ($loggedin == 1) {
+    $infotext = trim($sql3['infotext']);
+    function br2nl($text) {
+        return str_replace('<br />', '', $text);
+    }
+    $isOwnProfile = FALSE;
+    if ($_GET['id'] == $cookie_id && $cookie_id != CONFIG_DEMO_USER) {
+        $isOwnProfile = TRUE;
+        if (isset($_POST['infotext'])) {
+            $infotext = nl2br(mb_substr(strip_tags(trim($_POST['infotext'])), 0, 10000));
+            $infotext1 = "UPDATE ".$prefix."users SET infotext = '".mysql_real_escape_string($infotext)."' WHERE ids = '".$cookie_id."'";
+            $infotext2 = mysql_query($infotext1);
+        }
+    }
+    echo '<h1 id="anker_infotext">'._('Infotext').($isOwnProfile ? ' ('.__('%s Zeichen', '<span id="infotext_counter">0</span>/5000').')' : '').'</h1>';
+    if ($isOwnProfile) { // eigenes Profil
+        echo '<form action="/manager.php?id='.$_GET['id'].'" method="post" accept-charset="utf-8">';
+        echo '<p><textarea rows="15" cols="12" id="infotext" name="infotext" style="width:450px; height:300px" maxlength="5000" onkeyup="updateTextLength(this);">'.br2nl($infotext).'</textarea></p>';
+        echo '<p><input type="submit" value="'._('Speichern').'"'.noDemoClick($cookie_id).' /></p>';
+    }
+    else { // fremdes Profil
+        if (strlen($infotext) == 0) {
+            echo '<p>'.__('%s hat noch keinen Text über sich und den Verein geschrieben.', $sql3['username']).'</p>';
+        }
+        else {
+            echo '<p>'.$infotext.'</p>';
+        }
+    }
 }
 // INFOTEXT ENDE
 ?>
-<?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
-<?php } ?>
 <?php include 'zz3.php'; ?>

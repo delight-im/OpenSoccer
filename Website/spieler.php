@@ -10,7 +10,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 $tm1 = "SELECT name FROM ".$prefix."teams WHERE ids = '".$sql3['team']."'";
 $tm2 = mysql_query($tm1);
 $tm3 = mysql_fetch_assoc($tm2);
-if ($cookie_team != '__'.$cookie_id) {
+if ($loggedin == 1 && $cookie_team != '__'.$cookie_id) {
 	$getkonto1 = "SELECT konto FROM ".$prefix."teams WHERE ids = '".$cookie_team."'";
 	$getkonto2 = mysql_query($getkonto1);
 	$getkonto3 = mysql_fetch_assoc($getkonto2);
@@ -31,9 +31,14 @@ if ($sql3['transfermarkt'] < 999998) { // nur beim Verkauf
 	$sql3['transfermarkt'] = $tskwert;
 }
 // TRANSFERSTATUS KORRIGIEREN ENDE
-$watch1 = "SELECT COUNT(*) FROM ".$prefix."transfermarkt_watch WHERE team = '".$cookie_team."' AND spieler_id = '".$sql3['ids']."'";
-$watch2 = mysql_query($watch1);
-$watch3 = mysql_result($watch2, 0);
+if ($loggedin == 1) {
+    $watch1 = "SELECT COUNT(*) FROM ".$prefix."transfermarkt_watch WHERE team = '".$cookie_team."' AND spieler_id = '".$sql3['ids']."'";
+    $watch2 = mysql_query($watch1);
+    $watch3 = mysql_result($watch2, 0);
+}
+else {
+    $watch3 = 0;
+}
 ?>
 <title><?php echo _('Spieler:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
@@ -50,7 +55,6 @@ $watch3 = mysql_result($watch2, 0);
 </style>
 <?php include 'zz2.php'; ?>
 <h1>Spieler: <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
-<?php if ($loggedin == 1) { ?>
 <?php
 if (isset($_GET['action'])) {
 	if ($_GET['action'] == 'setWatching') {
@@ -61,14 +65,18 @@ if (isset($_GET['sellSuccess'])) {
 	$sellPrice = number_format($_GET['sellSuccess'], 0, ',', '.');
 	addInfoBox(__('Du hast den Spieler erfolgreich für %s € verkauft.', $sellPrice));
 }
-echo '<p style="text-align:right"><a href="/transfermarkt_watch.php?id='.$sql3['ids'].'" class="pagenava" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')">';
-if ($watch3 == 0) {
-    echo _('Spieler beobachten');
+echo '<p style="text-align:right">';
+if ($loggedin == 1) {
+    echo '<a href="/transfermarkt_watch.php?id='.$sql3['ids'].'" class="pagenava" onclick="return'.noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')">';
+    if ($watch3 == 0) {
+        echo _('Spieler beobachten');
+    }
+    else {
+        echo _('Beobachtung beenden');
+    }
+    echo '</a> ';
 }
-else {
-    echo _('Beobachtung beenden');
-}
-echo '</a> <a href="/spieler_historie.php?id='.$sql3['ids'].'" class="pagenava">'._('Zur Historie').'</a></p>';
+echo '<a href="/spieler_historie.php?id='.$sql3['ids'].'" class="pagenava">'._('Zur Historie').'</a></p>';
 ?>
 <table>
 <thead>
@@ -95,7 +103,7 @@ if ($sql3['team'] == 'frei') {
 echo '<tr><td>'._('Frische').'</td><td><img src="/images/balken/'.round($sql3['frische']).'.png" alt="'.round($sql3['frische']).'%" title="'.round($sql3['frische']).'%" width="104" /></td></tr>';
 echo '<tr class="odd"><td>'._('Moral').'</td><td><img src="/images/balken/'.round($sql3['moral']).'.png" alt="'.round($sql3['moral']).'%" title="'.round($sql3['moral']).'%" width="104" /></td></tr>';
 echo '<tr><td>'._('Marktwert').'</td><td>'.number_format($sql3['marktwert'], 0, ',', '.').' €</td></tr>';
-if ($sql3['team'] == $cookie_team) {
+if ($loggedin == 1 && $sql3['team'] == $cookie_team) {
 	echo '<tr class="odd"><td>'._('Gehalt / Saison').'</td><td>'.number_format($sql3['gehalt'], 0, ',', '.').' €</td></tr>';
 }
 elseif ($sql3['team'] != 'frei') {
@@ -179,7 +187,7 @@ if ($schaetzungVomScout <= $sql3['staerke']) {
 else {
 	echo '<tr><td colspan="2">'.__('Dein Scout glaubt, dass dieser Spieler eine Stärke von %s erreichen kann.', number_format($schaetzungVomScout, 1, ',', '.')).'</td></tr>';
 }
-if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
+if ($loggedin == 1 && $sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
 	if ($sql3['marktwert'] > 0) {
 		echo '<tr class="odd"><td colspan="2" class="link"><a href="/vertrag_verlaengern.php?id='.$sql3['ids'].'">'._('Vertrag verlängern').'</a></td></tr>';
 	}
@@ -203,7 +211,7 @@ if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
 </tbody>
 </table>
 <?php
-if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner' && $sql3['marktwert'] > 0) {
+if ($loggedin == 1 && $sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner' && $sql3['marktwert'] > 0) {
 	if (($sql3['spiele_verein'] > 5 && $alter_in_jahren < 34) OR ($sql3['spiele'] <= 6 && $alter_in_jahren < 34)) {
 		if ($_SESSION['transferGesperrt'] == FALSE) {
 			echo '<h1>'._('Transfermarkt').'</h1>';
@@ -255,7 +263,4 @@ if ($sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner' && $sql3['markt
 	}
 }
 ?>
-<?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
-<?php } ?>
 <?php include 'zz3.php'; ?>

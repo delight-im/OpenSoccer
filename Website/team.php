@@ -156,10 +156,10 @@ while ($sql6 = mysql_fetch_assoc($sql5)) {
 		echo '&nbsp;';
 	}
 	elseif ($sql6['transfermarkt'] == 1) {
-		echo 'Kauf';
+		echo _('Kauf');
 	}
 	else {
-		echo 'Leihe';
+		echo _('Leihe');
 	}
 	echo '</td>';
 	echo '<td class="link"><a href="/spieler.php?id='.$sql6['ids'].'">'.$sql6['vorname'].' '.$sql6['nachname'].'</a></td><td>'.floor($sql6['wiealt']/365).'</td><td>'.number_format($sql6['staerke'], 1, ',', '.').' <span style="color:#999">('.number_format($schaetzungVomScout, 1, ',', '.').')</span></td><td>'.$sql6['frische'].'%</td>';

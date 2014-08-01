@@ -45,7 +45,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	for ($i = 17; $i <= 35; $i++) {
 		echo '<option value="'.$i.'"';
 		if ($i == $value_for_wiealt_start) { echo ' selected="selected"'; }
-		echo '>von '.$i.'</option>';
+		echo '>'.__('von %d', $i).'</option>';
 	}
 	?>
 </select> 
@@ -109,7 +109,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	for ($i = 0; $i <= MAX_GEBOT; $i++) {
 		echo '<option value="'.$i.'"';
 		if ($i == $value_for_maxGebot_end) { echo ' selected="selected"'; }
-		echo '>bis '.intval($i*10).' Mio. €</option>';
+		echo '>'.__('bis %d Mio. €', intval($i*10)).'</option>';
 	}
 	?>
 </select></p>

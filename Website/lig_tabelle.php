@@ -30,7 +30,7 @@ if (isset($_GET['liga'])) {
 elseif (isset($liga)) {
     $temp_liga = $liga;
 }
-elseif ($cookie_liga != '') {
+elseif ($loggedin == 1 && $cookie_liga != '') {
     $temp_liga = $cookie_liga;
 }
 else {
@@ -50,12 +50,11 @@ if (isset($_GET['slide'])) {
 // ERGEBNISSE FUER TAG DAVOR ODER DANACH ENDE
 ?>
 <?php include 'zz2.php'; ?>
-<?php if ($loggedin == 0) { ?>
-<?php echo '<h1>'._('Liga').'</h1><p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>'; ?><?php include 'zz3.php'; exit; ?>
-<?php } else { ?>
 <?php
-setTaskDone('league_standings');
-if (isset($_POST['nachricht']) && isset($_POST['liga']) && $cookie_id != CONFIG_DEMO_USER) {
+if ($loggedin == 1) {
+    setTaskDone('league_standings');
+}
+if (isset($_POST['nachricht']) && isset($_POST['liga']) && $loggedin == 1 && $cookie_id != CONFIG_DEMO_USER) {
 	// CHAT-SPERREN ANFANG
 	$sql1 = "SELECT MAX(chatSperre) FROM ".$prefix."helferLog WHERE managerBestrafen = '".$cookie_id."'";
 	$sql2 = mysql_query($sql1);
@@ -276,6 +275,7 @@ while ($erg3 = mysql_fetch_assoc($erg2)) {
 }
 echo '</tbody>';
 echo '</table>';
+if ($loggedin == 1) {
 ?>
 <h1><?php echo _('Deine Nachricht'); ?></h1>
 <form action="/lig_tabelle.php" method="post" accept-charset="utf-8">
@@ -286,7 +286,7 @@ echo '</table>';
 if (isset($_GET['delEntry']) && $cookie_id != CONFIG_DEMO_USER) {
 	$delEntry = mysql_real_escape_string(trim(strip_tags($_GET['delEntry'])));
 	$addSql = " AND user = '".$cookie_id."'";
-	if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') { $addSql = ""; }
+	if ($loggedin == 1 && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) { $addSql = ""; }
 	$gb_in1 = "DELETE FROM ".$prefix."chats WHERE id = ".$delEntry.$addSql;
 	$gb_in2 = mysql_query($gb_in1);
 }
@@ -294,11 +294,11 @@ $sql1 = "SELECT ".$prefix."chats.id, ".$prefix."chats.user, ".$prefix."chats.zei
 $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<p><b>'.__('%1$s schrieb am %2$s:', displayUsername($sql3['username'], $sql3['user']), date('d.m.Y, H:i', $sql3['zeit']));
-	if ($sql3['user'] == $cookie_id OR $_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
+	if ($loggedin == 1 && ($sql3['user'] == $cookie_id || $_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) {
 		echo ' <a href="/lig_tabelle.php?liga='.mysql_real_escape_string($temp_liga).'&amp;delEntry='.$sql3['id'].'">'._('[Löschen]').'</a>';
 	}
 	echo '</b><br />'.$sql3['nachricht'].'</p>';
 }
+}
 ?>
-<?php } ?>
 <?php include 'zz3.php'; ?>

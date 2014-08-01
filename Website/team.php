@@ -38,7 +38,6 @@ $sql3 = mysql_fetch_assoc($sql2);
 	<a href="/lig_transfers.php?team=<?php echo $clearid; ?>" class="pagenava"><?php echo _('Transfers dieses Teams'); ?></a>
 	<a href="/kalender.php?team=<?php echo $clearid; ?>" class="pagenava"><?php echo _('Zum Spielplan'); ?></a>
 </p>
-<?php if ($loggedin == 1) { ?>
 <table>
 <thead>
 <tr class="odd">
@@ -187,7 +186,4 @@ echo '<tr class="odd"><td colspan="6">'.__('Team-Marktwert: %s €', number_form
 <p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, FR: Frische'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
 <p><strong><?php echo _('Durchgestrichen:').'</strong> '._('verletzte oder gesperrte Spieler'); ?></p>
-<?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
-<?php } ?>
 <?php include 'zz3.php'; ?>

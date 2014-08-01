@@ -7,7 +7,8 @@ if (isset($_GET['team'])) {
 	$sql1 = "SELECT name FROM ".$prefix."teams WHERE ids = '".$chosenTeamID."'";
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) == 0) {
-		$chosenTeam = $cookie_teamname;
+		unset($_GET['team']);
+        $chosenTeam = '';
 	}
 	else {
 		$sql3 = mysql_fetch_assoc($sql2);
@@ -20,9 +21,11 @@ else {
 }
 ?>
 <h1><?php echo __('Saison %d', GameTime::getSeason()); ?> - <?php echo __('Spiele von %s', $chosenTeam); ?></h1>
-<?php if ($loggedin == 1) { ?>
+<?php if ($loggedin == 1 || isset($_GET['team'])) { ?>
 <?php
-setTaskDone('team_calender');
+if ($loggedin == 1) {
+    setTaskDone('team_calender');
+}
 // TYPEN-FILTER ANFANG
 $filterSQL = "";
 $filterTyp = '';

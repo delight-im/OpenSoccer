@@ -79,7 +79,7 @@ echo '<tr class="odd"><td>'._('Pokalsieg').'</td><td>'.$sql3['pokalsiege'].'x</t
 echo '<tr><td>'._('Cupsieg').'</td><td>'.$sql3['cupsiege'].'x</td></tr>';
 echo '<tr class="odd"><td>'._('RKP (Vorjahr)').'</td><td>'.__('%1$s (%2$s) Punkte', number_format($sql3['elo'], 0, ',', '.'), number_format($sql3['vorjahr_elo'], 0, ',', '.')).'</td></tr>';
 echo '<tr><td>'._('Testspiele').'</td><td>';
-if ($live_scoring_spieltyp_laeuft == 'Test') { echo '?'; } else { __('%1$s (%2$s Siege)', $sql3['friendlies_ges'], $sql3['friendlies']); }
+if ($live_scoring_spieltyp_laeuft == 'Test') { echo '?'; } else { echo __('%1$s (%2$s Siege)', $sql3['friendlies_ges'], $sql3['friendlies']); }
 echo '</td></tr>';
 echo '<tr class="odd"><td>'._('Stadion').'</td><td>'.__('%s Plätze', number_format($stadion3['plaetze'], 0, ',', '.')).'</td></tr>';
 ?>

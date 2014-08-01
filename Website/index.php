@@ -126,7 +126,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		$nextYouth = _('in drei Tagen');
 		$nextYouthDay = 3;
 	}
-	echo '<tr><td>'._('Nächster Jugendspieler').'</td><td>'.$nextYouth.' (Spieltag '.$nextYouthDay.')</td></tr>';
+	echo '<tr><td>'._('Nächster Jugendspieler').'</td><td>'.$nextYouth.' ('.__('Spieltag %d', $nextYouthDay).')</td></tr>';
 	?>
 	<tr class="odd"><td><?php echo _('Testspiele'); ?></td><td class="link"><a href="/testspiele.php">
 		<?php

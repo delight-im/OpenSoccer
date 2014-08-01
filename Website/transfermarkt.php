@@ -116,7 +116,6 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 <p><input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
 <h1><?php echo _('Transfermarkt | Kaufen'); ?></h1>
-<?php if ($loggedin == 1) { ?>
 <?php
 // SPIELER MIT FALSCHEM BESITZER RUNTER ANFANG
 $a1 = "SELECT b.ids FROM ".$prefix."transfermarkt AS a JOIN ".$prefix."spieler AS b ON a.spieler = b.ids WHERE b.team != 'frei' AND a.besitzer != b.team";
@@ -245,7 +244,4 @@ if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wieal
 if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
-<?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
-<?php } ?>
 <?php include 'zz3.php'; ?>

@@ -19,7 +19,6 @@ else {
 <title><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <h1><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
-<?php if ($loggedin == 1) { ?>
 <p style="text-align:right"><a href="/spieler.php?id=<?php echo $sql3['ids']; ?>" class="pagenava"><?php echo _('Zum Spieler-Profil'); ?></a></p>
 <table>
 <thead>
@@ -87,7 +86,7 @@ if (mysql_num_rows($youthTeam2) == 1) {
 ?>
 </tbody>
 </table>
-<?php if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') { ?>
+<?php if ($loggedin == 1 && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) { ?>
 <h1><?php echo _('Letzte Gebote [Sichtbar fürs Team]'); ?></h1>
 <table>
 <thead>
@@ -125,8 +124,5 @@ while ($a3 = mysql_fetch_assoc($a2)) {
 ?>
 </tbody>
 </table>
-<?php } ?>
-<?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
 <?php include 'zz3.php'; ?>

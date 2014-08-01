@@ -110,7 +110,6 @@ echo '<div class="matchReport">';
 	echo '<span class="team teamRight">'.$sql3['team2'].'</span>';
 echo '</div>';
 ?>
-<?php if ($loggedin == 1) { ?>
 <?php
 if ($live_scoring_meldung != '') {
 	echo '<p style="text-align:right">';
@@ -326,7 +325,4 @@ elseif ($live_scoring_spieltyp_laeuft == '') {
 	echo '</tbody></table>';
 }
 ?>
-<?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
-<?php } ?>
 <?php include 'zz3.php'; ?>

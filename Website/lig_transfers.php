@@ -11,7 +11,6 @@
 -->
 </style>
 <?php include 'zz2.php'; ?>
-<?php if ($loggedin == 1) { ?>
 <?php
 // IN EIGENE LIGA ODER IN ALLE LIGEN ANFANG
 $addSql = "";
@@ -40,7 +39,9 @@ if (isset($_GET['liga'])) {
 	}
 }
 echo '<h1>'.$pageTitle.'</h1>';
-echo $ligaNav;
+if ($loggedin == 1) {
+    echo $ligaNav;
+}
 // IN EIGENE LIGA ODER IN ALLE LIGEN ENDE
 ?>
 <table>
@@ -145,8 +146,4 @@ if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga=
 if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?liga='.$ligaGetValue.'&amp;team='.$teamGetValue.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
-<?php } else { ?>
-<h1><?php echo _('Transfers'); ?></h1>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
-<?php } ?>
 <?php include 'zz3.php'; ?>

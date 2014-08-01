@@ -5,11 +5,13 @@
 <?php
 // NUR 2 TRANSFERS ZWISCHEN 2 TEAMS ANFANG
 $transfers_mit_team = array();
-$n3t1 = "SELECT bieter, besitzer FROM ".$prefix."transfers WHERE bieter = '".$cookie_team."' OR besitzer = '".$cookie_team."'";
-$n3t2 = mysql_query($n3t1);
-while ($n3t3 = mysql_fetch_assoc($n3t2)) {
-    $transfers_mit_team[] = $n3t3['besitzer'];
-	$transfers_mit_team[] = $n3t3['bieter'];
+if ($loggedin == 1) {
+    $n3t1 = "SELECT bieter, besitzer FROM ".$prefix."transfers WHERE bieter = '".$cookie_team."' OR besitzer = '".$cookie_team."'";
+    $n3t2 = mysql_query($n3t1);
+    while ($n3t3 = mysql_fetch_assoc($n3t2)) {
+        $transfers_mit_team[] = $n3t3['besitzer'];
+        $transfers_mit_team[] = $n3t3['bieter'];
+    }
 }
 $transfers_mit_team = array_count_values($transfers_mit_team);
 // NUR 2 TRANSFERS ZWISCHEN 2 TEAMS ENDE
@@ -55,10 +57,9 @@ $transfers_mit_team = array_count_values($transfers_mit_team);
 <p><input type="submit" value="<?php echo _('Suchen'); ?>" /></p>
 </form>
 <h1><?php echo _('Transfermarkt | Ausleihen'); ?></h1>
-<?php if ($loggedin == 1) { ?>
 <?php
 // AM ANFANG NOCH KEINE TRANSFERS ANFANG
-if ($_SESSION['pMaxGebot'] == 0) {
+if ($loggedin == 1 && $_SESSION['pMaxGebot'] == 0) {
 	echo '<p>'._('Bist Du wirklich sicher, dass Du schon eine Verstärkung für Dein Team brauchst?').'</p>';
 	echo '<p>'._('Der Vorstand empfiehlt Dir, als neuer Trainer in den ersten zwei Stunden auf Transfers zu verzichten.').'</p>';
 	echo '<p>'.__('Du solltest Dir zuerst einmal %1$s ansehen und versuchen, eine erste %2$s daraus zu formen.', '<a href="/kader.php">'._('Deinen Kader').'</a>', '<a href="/aufstellung.php">'._('Mannschaft').'</a>').'</p>';
@@ -66,10 +67,15 @@ if ($_SESSION['pMaxGebot'] == 0) {
 	exit;
 }
 // AM ANFANG NOCH KEINE TRANSFERS ENDE
-$multiListe = explode('-', $_SESSION['multiAccountList']);
+if ($loggedin == 1) {
+    $multiListe = explode('-', $_SESSION['multiAccountList']);
+}
+else {
+    $multiListe = array();
+}
 $weg1 = "UPDATE ".$prefix."spieler SET transfermarkt = 0 WHERE transfermarkt > 999998 AND team NOT IN (SELECT team FROM ".$prefix."users)"; // Computer-Spieler da PC nicht antworten kann
 $weg2 = mysql_query($weg1);
-if (isset($_GET['id']) && $cookie_id != CONFIG_DEMO_USER) {
+if (isset($_GET['id']) && $loggedin == 1 && $cookie_id != CONFIG_DEMO_USER) {
 	if ($cookie_team != '__'.$cookie_id) {
 		$ids = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 		$anfa = "SELECT team FROM ".$prefix."spieler WHERE ids = '".$ids."' AND transfermarkt > 999998";
@@ -118,12 +124,16 @@ $entryToMark = '';
 if (isset($_GET['mark'])) {
 	$entryToMark = trim(strip_tags($_GET['mark']));
 }
-$lauf1 = "SELECT spieler FROM ".$prefix."transfermarkt_leihe WHERE bieter = '".$cookie_teamname."' AND akzeptiert = 0";
-$lauf2 = mysql_query($lauf1);
+
 $laufende_verhandlungen = array();
-while ($lauf3 = mysql_fetch_assoc($lauf2)) {
-	$laufende_verhandlungen[] = $lauf3['spieler'];
+if ($loggedin == 1) {
+    $lauf1 = "SELECT spieler FROM ".$prefix."transfermarkt_leihe WHERE bieter = '".$cookie_teamname."' AND akzeptiert = 0";
+    $lauf2 = mysql_query($lauf1);
+    while ($lauf3 = mysql_fetch_assoc($lauf2)) {
+        $laufende_verhandlungen[] = $lauf3['spieler'];
+    }
 }
+
 $zusatzbedingungen = "";
 $value_for_wiealt = 'no';
 $value_for_position = 'no';
@@ -185,7 +195,10 @@ else {
 		echo '<td>'.$leihprämie.'</td>';
 		// PRÄMIE ENDE
 		echo '<td>';
-		if ($sql3['team'] == $cookie_team) {
+        if ($loggedin != 1) {
+            echo '&nbsp;'; // not signed in
+        }
+		elseif ($sql3['team'] == $cookie_team) {
 			echo '&nbsp;'; // eigener Spieler
 		}
 		elseif (in_array($sql3['ids'], $laufende_verhandlungen)) {
@@ -231,7 +244,4 @@ if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wieal
 if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
-<?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
-<?php } ?>
 <?php include 'zz3.php'; ?>

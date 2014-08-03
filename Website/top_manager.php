@@ -54,7 +54,7 @@ if ($cookie_team != '__'.$cookie_id) {
 </thead>
 <tbody>
 <?php
-$sql1 = "SELECT a.ids, a.username, a.team, a.status, b.name, b.elo FROM ".$prefix."users AS a";
+$sql1 = "SELECT a.ids, a.username, a.status, b.ids AS team, b.name, b.elo FROM ".$prefix."users AS a";
 if ($filter_land != '') {
 	$sql1 .= " RIGHT";
 }

@@ -14,8 +14,9 @@ define('CONFIG_USE_HTTPS_HSTS', false); // whether to guarantee and force HTTPS 
 
 // site information
 define('CONFIG_SITE_NAME', 'OpenSoccer');
-define('CONFIG_SITE_DOMAIN', 'www.opensoccer.org');
+define('CONFIG_SITE_DOMAIN', 'www.opensoccer.org'); // must include <www> subdomain
 define('CONFIG_SITE_EMAIL', 'info@opensoccer.org');
+define('CONFIG_CONTACT_PAGE_HTML', '<p>Contact information goes here ...</p>');
 
 // special users and roles
 define('CONFIG_OFFICIAL_USER', '18a393b5e23e2b9b4da106b06d8235f3');

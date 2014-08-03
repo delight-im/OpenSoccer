@@ -33,11 +33,28 @@ $kuerzelListe = array('AC', 'AJ', 'AS', 'ASC', 'ASV', 'Athletic', 'Atletico', 'A
 $kategorienListe = array('Finanzen', 'Spiele & Taktik', 'Verein & Spieler', 'Accounts', 'Transfers', 'Grundregeln', 'Sonstiges');
 
 function isMobile() {
-	return stripos($_SERVER['SERVER_NAME'], 'm.') !== false;
+	return stripos($_SERVER['SERVER_NAME'], 'm.') === 0;
 }
 
-function getBaseURL() {
-    return (CONFIG_USE_HTTPS ? 'https' : 'http').'://'.CONFIG_SITE_DOMAIN;
+/**
+ * Returns the base URL for this website in the form of <http://www.example.com>, i.e. without a trailing slash
+ *
+ * @param boolean|NULL $forceMobile whether to return the URL for the mobile site (true) or the desktop site (false) or auto-detect the type (NULL)
+ * @return string the base URL
+ */
+function getBaseURL($forceMobile = NULL) {
+    if (!isset($forceMobile)) {
+        $forceMobile = isMobile();
+    }
+
+    if ($forceMobile) {
+        $hostname = str_replace('www.', 'm.', CONFIG_SITE_DOMAIN);
+    }
+    else {
+        $hostname = CONFIG_SITE_DOMAIN;
+    }
+
+    return (CONFIG_USE_HTTPS ? 'https' : 'http').'://'.$hostname;
 }
 
 function noDemoClick($userID, $inExisting = FALSE) {

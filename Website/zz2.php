@@ -60,10 +60,10 @@ if (!isset($_SESSION['pMaxGebot'])) { $_SESSION['pMaxGebot'] = 0; }
 <li<?php if ($_SERVER['SCRIPT_NAME'] == '/index.php') { echo ' id="current"'; } ?>><a href="/"><?php echo _('Startseite'); ?></a></li>
 <?php
 if (isMobile()) {
-	echo '<li><a href="'.getBaseURL().'/">'._('Desktop').'</a></li>';
+	echo '<li><a href="'.getBaseURL(false).'/">'._('Desktop').'</a></li>';
 }
 else {
-	echo '<li><a href="'.str_replace('www.', 'm.', getBaseURL()).'/">'._('Mobil').'</a></li>';
+	echo '<li><a href="'.getBaseURL(true).'/">'._('Mobil').'</a></li>';
 }
 ?>
 <li<?php if ($_SERVER['SCRIPT_NAME'] == '/tour.php') { echo ' id="current"'; } ?>><a href="#" onclick="document.getElementById('lusername').value = 'Demo'; document.getElementById('lpassword').value = 'demo'; document.getElementById('login_form').submit(); return false;">Demo-Account</a></li>

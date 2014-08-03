@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ballmanager</string>
+    <string name="app_name">OpenSoccer</string>
     <string name="buero">Büro</string>
     <string name="ranking">Ranking</string>
     <string name="transfers">Transfers</string>
@@ -9,7 +9,7 @@
     <string name="anfragen">Anfragen</string>
     <string name="community">Community</string>
     <string name="support">Support</string>
-    <string name="title_activity_main">Ballmanager</string>
+    <string name="title_activity_main">OpenSoccer</string>
     <string name="title_activity_preferences">Einstellungen</string>
     <string name="settings">Einstellungen</string>
     <string name="menu_hint">Alle Bereiche des Spiels findest Du im Optionsmenü, das Du über die Menü-Taste Deines Gerätes öffnen kannst!</string>

@@ -1,5 +1,8 @@
 package com.lateinme.manager;
 
+import android.content.Context;
+import android.view.ViewConfiguration;
+import java.lang.reflect.Field;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -45,6 +48,8 @@ public class MainActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
+        forceOverflowMenu(this);
+
         CookieSyncManager.createInstance(this);
         CookieManager.getInstance().setAcceptCookie(true);
         mWebView = (WebView) findViewById(R.id.webview);
@@ -262,6 +267,18 @@ public class MainActivity extends Activity {
 			}
 			mAlertDialog = null;
 		}
+	}
+	
+	private static void forceOverflowMenu(Context context) {
+		try {
+			ViewConfiguration config = ViewConfiguration.get(context);
+			Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+			if (menuKeyField != null) {
+				menuKeyField.setAccessible(true);
+				menuKeyField.setBoolean(config, false);
+			}
+		}
+		catch (Exception e) { }
 	}
 
 }

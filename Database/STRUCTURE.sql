@@ -350,6 +350,7 @@ CREATE TABLE `man_ligen` (
   `hoch` varchar(32) NOT NULL DEFAULT 'KEINE',
   `runter` varchar(32) NOT NULL DEFAULT 'KEINE',
   `land` varchar(255) NOT NULL,
+  `isoAlpha2` varchar(2) NOT NULL,
   `pkt_saison5` decimal(4,1) unsigned NOT NULL DEFAULT '0.0',
   `pkt_saison4` decimal(4,1) unsigned NOT NULL DEFAULT '0.0',
   `pkt_saison3` decimal(4,1) unsigned NOT NULL DEFAULT '0.0',

@@ -2,34 +2,17 @@
 <title><?php echo _('Internationaler Pokal'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php
 // LAENDER HOLEN ANFANG
-$ld1 = "SELECT ids, name FROM ".$prefix."ligen";
+$ld1 = "SELECT ids, name, land, isoAlpha2 FROM ".$prefix."ligen";
 $ld2 = mysql_query($ld1);
 $laender = array();
 $ligIDToLand = array();
 $punkte_der_ligen = array(); // 5-Jahres-Wertung
 $anzahlTeilnehmer = array(); // Divisor
 while ($ld3 = mysql_fetch_assoc($ld2)) {
-	$land = substr($ld3['name'], 0, -2);
-	switch ($land) {
-		case 'Österreich': $ld_kurz = 'at'; break;
-		case 'Belgien': $ld_kurz = 'be'; break;
-		case 'Deutschland': $ld_kurz = 'de'; break;
-		case 'England': $ld_kurz = 'en'; break;
-		case 'Frankreich': $ld_kurz = 'fr'; break;
-		case 'Italien': $ld_kurz = 'it'; break;
-		case 'Niederlande': $ld_kurz = 'nl'; break;
-		case 'Polen': $ld_kurz = 'pl'; break;
-		case 'Portugal': $ld_kurz = 'pt'; break;
-		case 'Schweden': $ld_kurz = 'se'; break;
-		case 'Schweiz': $ld_kurz = 'ch'; break;
-		case 'Spanien': $ld_kurz = 'es'; break;
-		case 'Türkei': $ld_kurz = 'tr'; break;
-		default: $ld_kurz = 'de'; break;
-	}
 	$punkte_der_ligen[$ld3['ids']] = 0; // 5-Jahres-Wertung
 	$anzahlTeilnehmer[$ld3['ids']] = 0; // Divisor
-	$laender[$ld3['ids']] = $ld_kurz;
-	$ligIDToLand[$ld3['ids']] = $land;
+	$laender[$ld3['ids']] = $ld3['isoAlpha2'];
+	$ligIDToLand[$ld3['ids']] = $ld3['land'];
 }
 // LAENDER HOLEN ENDE
 if (isset($laender[$cookie_liga])) {

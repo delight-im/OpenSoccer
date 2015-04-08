@@ -25,6 +25,8 @@ Online Soccer Manager
 
     `sudo apt-get install php5-intl`
 
+ 10. Make sure the directory `cache` is writable
+
 ## Cron jobs
 
  * [Website/aa_buchungenBuffer.php](Website/aa_buchungenBuffer.php): every 10 minutes; except for hours 10-11, 14-15, 18-19 and 22-23

@@ -17,7 +17,7 @@
 <thead>
 <tr class="odd">
 <th scope="col">&nbsp;</th>
-<th scope="col"><?php echo _('Liga'); ?>/th>
+<th scope="col"><?php echo _('Liga'); ?></th>
 <th scope="col"><?php echo _('Stärke'); ?></th>
 </tr>
 </thead>

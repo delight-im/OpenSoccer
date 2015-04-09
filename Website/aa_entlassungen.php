@@ -65,7 +65,7 @@ else {
 		$mail->Port = CONFIG_EMAIL_PORT;
 		$mail->Username = CONFIG_EMAIL_USER;
 		$mail->Password = CONFIG_EMAIL_PASS;
-		$mail->SetFrom(CONFIG_EMAIL_FROM);
+		$mail->SetFrom(CONFIG_EMAIL_FROM, CONFIG_SITE_NAME);
 		$mail->Subject = $betreff;
 		$mail->Body = $nachricht;
 		$mail->AddAddress($empfaenger);

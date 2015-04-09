@@ -67,7 +67,7 @@ In order to provide translations for this project, please refer to our [document
 
 ## License
 
-All parts of this project, except for the folder `images` in folder `Website`, has been released under the following license.
+All parts of this project, except for the folder `Website/images`, have been released under the following license:
 
 ```
  Copyright (C) 2008-2014 www.delight.im <info@delight.im>

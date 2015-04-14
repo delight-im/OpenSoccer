@@ -1,7 +1,4 @@
 <?php include 'zz1.php'; ?>
-<?php
-define('FACEBOOK_LIKEBOX', '<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fwww.ballmanager.de&amp;width=400&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23ffffff&amp;stream=false&amp;header=false&amp;appId=454258221256761" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:258px;" allowTransparency="true"></iframe>');
-?>
 <?php if ($loggedin == 1) { ?><title><?php echo _('Büro'); ?> - <?php echo CONFIG_SITE_NAME; ?></title><?php } else { ?><title><?php echo _('Online-Fußball-Manager'); ?> - <?php echo CONFIG_SITE_NAME; ?></title><?php } ?>
 <?php include 'zz2.php'; ?>
 <?php if ($loggedin == 1) { ?>
@@ -286,7 +283,6 @@ else {
 <?php } else { ?>
 <?php if (isset($_GET['loggedout'])) { ?>
 <h1><?php echo _('Du wurdest erfolgreich ausgeloggt!'); ?></h1>
-<?php echo FACEBOOK_LIKEBOX; ?>
 <?php } else { ?>
 <?php if (isMobile()) { ?>
 <h1><?php echo _('Einloggen mit bestehendem Account'); ?></h1>
@@ -314,8 +310,6 @@ else {
 <p><input type="submit" value="<?php echo _('Jetzt kostenlos mitspielen'); ?>" /></p>
 <p><?php echo _('Du kannst Deine Daten anschließend noch einmal prüfen, sie werden noch nicht gespeichert. Du darfst Dich nur ein einziges Mal registrieren und nur einen Verein haben.'); ?></p>
 </form>
-<h1><?php echo __('Gefällt Dir %s?', CONFIG_SITE_NAME); ?></h1>
-<?php echo FACEBOOK_LIKEBOX; ?>
 <?php } ?>
 <?php
 if (isset($_GET['r'])) {

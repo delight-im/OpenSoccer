@@ -20,7 +20,7 @@ function noDemoPopup() {
 <body>
 <div id="wrap">
 <div id="header">
-<div class="logo_top" style="position:relative"><img src="/images/logo.png" alt="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" title="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" width="224" style="border:0; width:224px; height:60px" />
+<div class="logo_top" style="padding:12px 0;"><img src="/images/logo.png" alt="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" title="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" width="224" style="display:block; border:0; width:224px; height:60px; margin:0 auto;" />
 <?php
 $topWidget = '<h1>'._('Top-Manager').'</h1>';
 $topWidget .= '<div class="left-box navBlockLinks">';
@@ -39,19 +39,8 @@ else {
 	$_SESSION['via_android'] = 0;
 }
 if (!isset($_SESSION['pMaxGebot'])) { $_SESSION['pMaxGebot'] = 0; }
-/*if ($loggedin == 1 && !isMobile() && $_SESSION['pMaxGebot'] > 2) {
-	$communityAds = array('/chat.php', '/posteingang.php', '/postausgang.php', '/post.php', '/post_schreiben.php', '/support.php');
-	echo '<div style="width:468px; height:60px; overflow:hidden; background-color:#fff; position:absolute; top:0px; left:256px">';
-	if (!in_array($_SERVER['SCRIPT_NAME'], $communityAds)) {
-		echo '<script type="text/javascript"><!-- google_ad_client = "ca-pub-5616874035428509"; google_ad_slot = "5071587014"; google_ad_width = 468; google_ad_height = 60; //--> </script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>';
-	}
-	else {
-		echo '<iframe src="http://rcm-de.amazon.de/e/cm?t=ballmanager-21&o=3&p=26&l=ur1&category=generic&banner=1M3FZGK72Q1YXAM9GT82&f=ifr" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>';
-	}
-	echo '</div>';
-}*/
 ?>
-</div> <!-- logo_top ENDE -->
+</div>
 </div>
 <div id="menu">
 <?php if ($_SESSION['via_android'] == 0) { ?>

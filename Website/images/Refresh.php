@@ -702,4 +702,40 @@ input[type="submit"]:hover, a.button:hover {
 	background-repeat: repeat-x;
 }
 
+@media (max-width: 879px) {
+	#wrap, #content-wrap, #header, #footer {
+		width: auto;
+		max-width: 820px;
+	}
+	#main {
+		float: none;
+		width: auto;
+	}
+	#sidebar {
+		float: none;
+		width: auto;
+	}
+	#menu {
+		overflow: hidden;
+	}
+	.infokasten {
+		width: 42%;
+	}
+	.balken_rahmen {
+		width: 12%;
+	}
+	.showInfoBox {
+		height: auto;
+	}
+	.showInfoBox a.closeLink:link, .showInfoBox a.closeLink:visited, .showInfoBox a.closeLink:hover, .showInfoBox a.closeLink:active {
+		position: relative;
+		top: auto;
+		right: 2px;
+		left: auto;
+		bottom: 2px;
+		display: block;
+		margin: 12px 0;
+	}
+}
+
 <?php ob_end_flush(); ?>

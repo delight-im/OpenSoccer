@@ -16,7 +16,3 @@ RewriteCond %{HTTP_HOST} !^$
 RewriteCond %{HTTP_HOST} !^(www|m)\. [NC]
 RewriteCond %{HTTPS}s ^on(s)|
 RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-# Return mobile CSS for <m> subdomain
-RewriteCond %{HTTP_HOST} ^m\.(.*)$ [NC]
-RewriteRule ^images/Refresh\.php$ images/RefreshMobile.php [NC,L]

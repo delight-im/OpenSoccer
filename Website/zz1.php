@@ -86,4 +86,4 @@ else {
 <script type="text/javascript" src="/js/drop_down.js"></script>
 <link rel="stylesheet" href="/css/drop_down.css" type="text/css" />
 <link rel="icon" type="image/png" href="/images/favicon.png" />
-<?php if (isMobile()) { ?><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /><?php } ?>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />

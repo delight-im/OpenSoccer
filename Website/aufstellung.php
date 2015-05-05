@@ -142,7 +142,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
 <p><input type="submit" value="<?php echo _('Aufstellung speichern'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 <?php if (!isMobile()) { ?><div class="os-lineup-field"><?php } ?>
-<?php if (isMobile()) { ?><p><strong><?php echo _('Torwart:'); ?></strong></p><?php } ?>
+<div class="visible-mobile"><p><strong><?php echo _('Torwart:'); ?></strong></p></div>
 <select name="11" size="1" class="os-lineup-player os-lineup-player-goalkeeper">
 	<?php
 	foreach ($player_t as $player_ts) {
@@ -150,7 +150,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 	}
 	?>
 </select>
-<?php if (isMobile()) { ?><p><strong><?php echo _('Abwehr:'); ?></strong></p><?php } ?>
+<div class="visible-mobile"><p><strong><?php echo _('Abwehr:'); ?></strong></p></div>
 <select name="10" size="1" class="os-lineup-player os-lineup-player-defender1">
 	<?php
 	foreach ($player_a as $player_as) {
@@ -179,7 +179,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 	}
 	?>
 </select>
-<?php if (isMobile()) { ?><p><strong><?php echo _('Mittelfeld:'); ?></strong></p><?php } ?>
+<div class="visible-mobile"><p><strong><?php echo _('Mittelfeld:'); ?></strong></p></div>
 <select name="6" size="1" class="os-lineup-player os-lineup-player-midfield1">
 	<?php
 	foreach ($player_m as $player_ms) {
@@ -208,7 +208,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 	}
 	?>
 </select>
-<?php if (isMobile()) { ?><p><strong><?php echo _('Sturm:'); ?></strong></p><?php } ?>
+<div class="visible-mobile"><p><strong><?php echo _('Sturm:'); ?></strong></p></div>
 <select name="2" size="1" class="os-lineup-player os-lineup-player-forward1">
 	<?php
 	foreach ($player_s as $player_ss) {

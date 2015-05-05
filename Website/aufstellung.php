@@ -2,9 +2,6 @@
 <title><?php echo _('Aufstellung'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
-<?php if (isMobile()) { ?>
-.os-lineup-player { display: block; width: 120px; margin: 2px 0; }
-<?php } else { ?>
 .os-lineup-field { position:relative; left:0; top:0; width:100%; max-width: 522px; height: 400px; margin: 0 auto; background-image: url(/images/fussballfeld.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: center bottom; color:#fff; font-weight:bold; z-index:1; }
 .os-lineup-player { position: absolute; width:120px; }
 .os-lineup-player.os-lineup-player-goalkeeper { left:201px; top:340px; }
@@ -18,8 +15,13 @@
 .os-lineup-player.os-lineup-player-midfield4 { left:326px; top:135px; }
 .os-lineup-player.os-lineup-player-forward1 { left:136px; top:65px; }
 .os-lineup-player.os-lineup-player-forward2 { left:266px; top:65px; }
-<?php } ?>
+
 .os-player-row-injured td, .os-player-row-injured td a { color: #ff0000; }
+
+@media (max-width: 879px) {
+    .os-lineup-field { padding: 16px 0; }
+    .os-lineup-player { position: static; display: block; width: 120px; margin: 8px auto; }
+}
 -->
 </style>
 <?php include 'zz2.php'; ?>

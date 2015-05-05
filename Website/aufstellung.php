@@ -16,7 +16,7 @@ select { width:120px; }
 .sturm1 { display: block; margin: 2px 0; }
 .sturm2 { display: block; margin: 2px 0; }
 <?php } else { ?>
-.spielfeld { position:relative; left:0; top:0; width:522px; height:400px; background:white url(/images/fussballfeld.png) scroll no-repeat; color:#fff; font-weight:bold; z-index:1; }
+.lineup-field { position:relative; left:0; top:0; width:100%; max-width: 522px; height: 400px; margin: 0 auto; background-image: url(/images/fussballfeld.png); background-attachment: scroll; background-repeat: no-repeat; background-size: cover; background-position: center bottom; color:#fff; font-weight:bold; z-index:1; }
 select { width:120px; }
 .torwart { position:absolute; left:201px; top:340px; }
 .abwehr1 { position:absolute; left:36px; top:230px; }
@@ -83,7 +83,7 @@ if (isset($_POST['farbeAufstellen'])) {
 	$farbeAufstellen = trim(strip_tags($_POST['farbeAufstellen']));
 	if ($farbeAufstellen == 'Blau' OR $farbeAufstellen == 'Gelb' OR $farbeAufstellen == 'Rot' OR $farbeAufstellen == 'Gruen' OR $farbeAufstellen == 'Pink' OR $farbeAufstellen == 'Aqua' OR $farbeAufstellen == 'Silber' OR $farbeAufstellen == 'Lila' OR $farbeAufstellen == 'Oliv') {
 		$aufstellungLog1 = "INSERT INTO ".$prefix."aufstellungLog (team, zeit, typ) VALUES ('".$cookie_team."', ".time().", '".$spieltypAufstellung."')";
-		$aufstellungLog2 = mysql_query($aufstellungLog1);		
+		$aufstellungLog2 = mysql_query($aufstellungLog1);
 		$scs1 = "UPDATE ".$prefix."spieler SET startelf_".$spieltypAufstellung." = 0 WHERE team = '".$cookie_team."'";
 		$scs2 = mysql_query($scs1);
 		$setColor1 = "SELECT a.ids, a.position FROM ".$prefix."spieler AS a JOIN ".$prefix."spieler_mark AS b ON a.ids = b.spieler WHERE a.team = '".$cookie_team."' AND b.team = '".$cookie_team."' AND b.farbe = '".$farbeAufstellen."' AND a.verletzung = 0";
@@ -108,7 +108,7 @@ if (isset($_POST['farbeAufstellen'])) {
 if (count($_POST) > 0) {
     if (count($_POST) == 11) {
 		$aufstellungLog1 = "INSERT INTO ".$prefix."aufstellungLog (team, zeit, typ) VALUES ('".$cookie_team."', ".time().", '".$spieltypAufstellung."')";
-		$aufstellungLog2 = mysql_query($aufstellungLog1);		
+		$aufstellungLog2 = mysql_query($aufstellungLog1);
 		$aufstellung_aktivieren0 = "UPDATE ".$prefix."spieler SET startelf_".$spieltypAufstellung." = 0 WHERE team = '".$cookie_team."'";
 		$aufstellung_aktivieren0 = mysql_query($aufstellung_aktivieren0);
 		for ($i = 1; $i <= 11; $i++) {
@@ -123,7 +123,7 @@ if (count($_POST) > 0) {
 		$aufstellungUebernehmen = mysql_real_escape_string(trim(strip_tags($_POST['aufstellungUebernehmen'])));
 		if ($aufstellungUebernehmen == 'Liga' OR $aufstellungUebernehmen == 'Pokal' OR $aufstellungUebernehmen == 'Cup' OR $aufstellungUebernehmen == 'Test') {
 			$aufstellungLog1 = "INSERT INTO ".$prefix."aufstellungLog (team, zeit, typ) VALUES ('".$cookie_team."', ".time().", '".$spieltypAufstellung."')";
-			$aufstellungLog2 = mysql_query($aufstellungLog1);					
+			$aufstellungLog2 = mysql_query($aufstellungLog1);
 			$aufstellungUebernehmen1 = "UPDATE ".$prefix."spieler SET startelf_".$spieltypAufstellung." = startelf_".$aufstellungUebernehmen." WHERE team = '".$cookie_team."'".$pokalNurFuerSQL;
 			$aufstellungUebernehmen2 = mysql_query($aufstellungUebernehmen1);
 		}
@@ -171,7 +171,7 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 ?>
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
 <p><input type="submit" value="<?php echo _('Aufstellung speichern'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
-<?php if (!isMobile()) { ?><div class="spielfeld"><?php } ?>
+<?php if (!isMobile()) { ?><div class="lineup-field"><?php } ?>
 <?php if (isMobile()) { ?><p><strong><?php echo _('Torwart:'); ?></strong></p><?php } ?>
 <select name="11" size="1" class="torwart">
 	<?php

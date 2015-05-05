@@ -232,7 +232,7 @@ echo '<p><select name="positionToSearch" size="1" style="width:200px">';
 	echo '<option value="A"'; if ($currentlySearching == 'A') { echo ' selected="selected"'; } echo '>'._('Abwehr suchen').'</option>';
 	echo '<option value="M"'; if ($currentlySearching == 'M') { echo ' selected="selected"'; } echo '>'._('Mittelfeld suchen').'</option>';
 	echo '<option value="S"'; if ($currentlySearching == 'S') { echo ' selected="selected"'; } echo '>'._('Sturm suchen').'</option>';
-echo '</select> <input type="submit" value="Festlegen"'.noDemoClick($cookie_id).' /></p>';
+echo '</select> <input type="submit" value="'._('Festlegen').'"'.noDemoClick($cookie_id).' /></p>';
 echo '</form>';
 // FESTLEGEN WAS GESUCHT WERDEN SOLL ENDE
 ?>

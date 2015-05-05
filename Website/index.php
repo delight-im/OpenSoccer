@@ -18,10 +18,10 @@ if ($cookie_team != '__'.$cookie_id) {
 	$unvollstaendig2 = mysql_query($unvollstaendig1);
 	$unvollstaendig3 = mysql_fetch_assoc($unvollstaendig2);
 	$unvollstaendigStr = '';
-	if ($unvollstaendig3['a1'] != 66 && $live_scoring_spieltyp_laeuft != 'Liga') { $unvollstaendigStr .= 'Liga, '; }
-	if ($unvollstaendig3['a2'] != 66 && $live_scoring_spieltyp_laeuft != 'Pokal') { $unvollstaendigStr .= 'Pokal, '; }
-	if ($unvollstaendig3['a3'] != 66 && $live_scoring_spieltyp_laeuft != 'Cup') { $unvollstaendigStr .= 'Cup, '; }
-	if ($unvollstaendig3['a4'] != 66 && $live_scoring_spieltyp_laeuft != 'Test') { $unvollstaendigStr .= 'Test, '; }
+	if ($unvollstaendig3['a1'] != 66 && $live_scoring_spieltyp_laeuft != 'Liga') { $unvollstaendigStr .= _('Liga').', '; }
+	if ($unvollstaendig3['a2'] != 66 && $live_scoring_spieltyp_laeuft != 'Pokal') { $unvollstaendigStr .= _('Pokal').', '; }
+	if ($unvollstaendig3['a3'] != 66 && $live_scoring_spieltyp_laeuft != 'Cup') { $unvollstaendigStr .= _('Cup').', '; }
+	if ($unvollstaendig3['a4'] != 66 && $live_scoring_spieltyp_laeuft != 'Test') { $unvollstaendigStr .= _('Test').', '; }
 	// KANN ETWAS LIVE UEBERTRAGEN WERDEN ANFANG
 	if ($live_scoring_spieltyp_laeuft == '') {
 		$laufende_spiele3 = 0;

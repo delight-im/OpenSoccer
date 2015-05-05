@@ -702,6 +702,72 @@ input[type="submit"]:hover, a.button:hover {
 	background-repeat: repeat-x;
 }
 
+.os-lineup-field {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 522px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url(fussballfeld.png);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+.os-lineup-player {
+    position: absolute;
+    width:120px;
+}
+.os-lineup-player.os-lineup-player-goalkeeper {
+    left: 201px;
+    top: 340px;
+}
+.os-lineup-player.os-lineup-player-defender1 {
+    left: 36px;
+    top: 230px;
+}
+.os-lineup-player.os-lineup-player-defender2 {
+    left: 136px;
+    top: 255px;
+}
+.os-lineup-player.os-lineup-player-defender3 {
+    left: 266px;
+    top: 255px;
+}
+.os-lineup-player.os-lineup-player-defender4 {
+    left: 366px;
+    top: 230px;
+}
+.os-lineup-player.os-lineup-player-midfield1 {
+    left: 76px;
+    top: 135px;
+}
+.os-lineup-player.os-lineup-player-midfield2 {
+    left: 136px;
+    top: 160px;
+}
+.os-lineup-player.os-lineup-player-midfield3 {
+    left: 266px;
+    top: 160px;
+}
+.os-lineup-player.os-lineup-player-midfield4 {
+    left: 326px;
+    top: 135px;
+}
+.os-lineup-player.os-lineup-player-forward1 {
+    left: 136px;
+    top: 65px;
+}
+.os-lineup-player.os-lineup-player-forward2 {
+    left: 266px;
+    top: 65px;
+}
+
 @media (max-width: 879px) {
 	#wrap, #content-wrap, #header, #footer {
 		width: auto;
@@ -736,6 +802,15 @@ input[type="submit"]:hover, a.button:hover {
 		display: block;
 		margin: 12px 0;
 	}
+    .os-lineup-field {
+        padding: 16px 0;
+    }
+    .os-lineup-player {
+        position: static;
+        display: block;
+        width: 120px;
+        margin: 8px auto;
+    }
 }
 
 <?php ob_end_flush(); ?>

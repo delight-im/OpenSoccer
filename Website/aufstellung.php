@@ -141,89 +141,89 @@ while ($gf3 = mysql_fetch_assoc($gf2)) {
 ?>
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
 <p><input type="submit" value="<?php echo _('Aufstellung speichern'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
-<?php if (!isMobile()) { ?><div class="os-lineup-field"><?php } ?>
-<div class="visible-mobile"><p><strong><?php echo _('Torwart:'); ?></strong></p></div>
-<select name="11" size="1" class="os-lineup-player os-lineup-player-goalkeeper">
-	<?php
-	foreach ($player_t as $player_ts) {
-		echo '<option value="'.$player_ts[0].'"'; if ($player_ts[2] == 11) { echo ' selected="selected"'; } echo '>'.$player_ts[1].'</option>';
-	}
-	?>
-</select>
-<div class="visible-mobile"><p><strong><?php echo _('Abwehr:'); ?></strong></p></div>
-<select name="10" size="1" class="os-lineup-player os-lineup-player-defender1">
-	<?php
-	foreach ($player_a as $player_as) {
-		echo '<option value="'.$player_as[0].'"'; if ($player_as[2] == 10) { echo ' selected="selected"'; } echo '>'.$player_as[1].'</option>';
-	}
-	?>
-</select>
-<select name="9" size="1" class="os-lineup-player os-lineup-player-defender2">
-	<?php
-	foreach ($player_a as $player_as) {
-		echo '<option value="'.$player_as[0].'"'; if ($player_as[2] == 9) { echo ' selected="selected"'; } echo '>'.$player_as[1].'</option>';
-	}
-	?>
-</select>
-<select name="8" size="1" class="os-lineup-player os-lineup-player-defender3">
-	<?php
-	foreach ($player_a as $player_as) {
-		echo '<option value="'.$player_as[0].'"'; if ($player_as[2] == 8) { echo ' selected="selected"'; } echo '>'.$player_as[1].'</option>';
-	}
-	?>
-</select>
-<select name="7" size="1" class="os-lineup-player os-lineup-player-defender4">
-	<?php
-	foreach ($player_a as $player_as) {
-		echo '<option value="'.$player_as[0].'"'; if ($player_as[2] == 7) { echo ' selected="selected"'; } echo '>'.$player_as[1].'</option>';
-	}
-	?>
-</select>
-<div class="visible-mobile"><p><strong><?php echo _('Mittelfeld:'); ?></strong></p></div>
-<select name="6" size="1" class="os-lineup-player os-lineup-player-midfield1">
-	<?php
-	foreach ($player_m as $player_ms) {
-		echo '<option value="'.$player_ms[0].'"'; if ($player_ms[2] == 6) { echo ' selected="selected"'; } echo '>'.$player_ms[1].'</option>';
-	}
-	?>
-</select>
-<select name="5" size="1" class="os-lineup-player os-lineup-player-midfield2">
-	<?php
-	foreach ($player_m as $player_ms) {
-		echo '<option value="'.$player_ms[0].'"'; if ($player_ms[2] == 5) { echo ' selected="selected"'; } echo '>'.$player_ms[1].'</option>';
-	}
-	?>
-</select>
-<select name="4" size="1" class="os-lineup-player os-lineup-player-midfield3">
-	<?php
-	foreach ($player_m as $player_ms) {
-		echo '<option value="'.$player_ms[0].'"'; if ($player_ms[2] == 4) { echo ' selected="selected"'; } echo '>'.$player_ms[1].'</option>';
-	}
-	?>
-</select>
-<select name="3" size="1" class="os-lineup-player os-lineup-player-midfield4">
-	<?php
-	foreach ($player_m as $player_ms) {
-		echo '<option value="'.$player_ms[0].'"'; if ($player_ms[2] == 3) { echo ' selected="selected"'; } echo '>'.$player_ms[1].'</option>';
-	}
-	?>
-</select>
-<div class="visible-mobile"><p><strong><?php echo _('Sturm:'); ?></strong></p></div>
-<select name="2" size="1" class="os-lineup-player os-lineup-player-forward1">
-	<?php
-	foreach ($player_s as $player_ss) {
-		echo '<option value="'.$player_ss[0].'"'; if ($player_ss[2] == 2) { echo ' selected="selected"'; } echo '>'.$player_ss[1].'</option>';
-	}
-	?>
-</select>
-<select name="1" size="1" class="os-lineup-player os-lineup-player-forward2">
-	<?php
-	foreach ($player_s as $player_ss) {
-		echo '<option value="'.$player_ss[0].'"'; if ($player_ss[2] == 1) { echo ' selected="selected"'; } echo '>'.$player_ss[1].'</option>';
-	}
-	?>
-</select>
-<?php if (!isMobile()) { ?></div><?php } ?>
+<div class="os-lineup-field">
+    <div class="visible-mobile"><p><strong><?php echo _('Sturm:'); ?></strong></p></div>
+    <select name="2" size="1" class="os-lineup-player os-lineup-player-forward1">
+        <?php
+        foreach ($player_s as $player_ss) {
+            echo '<option value="'.$player_ss[0].'"'; if ($player_ss[2] == 2) { echo ' selected="selected"'; } echo '>'.$player_ss[1].'</option>';
+        }
+        ?>
+    </select>
+    <select name="1" size="1" class="os-lineup-player os-lineup-player-forward2">
+        <?php
+        foreach ($player_s as $player_ss) {
+            echo '<option value="'.$player_ss[0].'"'; if ($player_ss[2] == 1) { echo ' selected="selected"'; } echo '>'.$player_ss[1].'</option>';
+        }
+        ?>
+    </select>
+    <div class="visible-mobile"><p><strong><?php echo _('Mittelfeld:'); ?></strong></p></div>
+    <select name="6" size="1" class="os-lineup-player os-lineup-player-midfield1">
+        <?php
+        foreach ($player_m as $player_ms) {
+            echo '<option value="'.$player_ms[0].'"'; if ($player_ms[2] == 6) { echo ' selected="selected"'; } echo '>'.$player_ms[1].'</option>';
+        }
+        ?>
+    </select>
+    <select name="5" size="1" class="os-lineup-player os-lineup-player-midfield2">
+        <?php
+        foreach ($player_m as $player_ms) {
+            echo '<option value="'.$player_ms[0].'"'; if ($player_ms[2] == 5) { echo ' selected="selected"'; } echo '>'.$player_ms[1].'</option>';
+        }
+        ?>
+    </select>
+    <select name="4" size="1" class="os-lineup-player os-lineup-player-midfield3">
+        <?php
+        foreach ($player_m as $player_ms) {
+            echo '<option value="'.$player_ms[0].'"'; if ($player_ms[2] == 4) { echo ' selected="selected"'; } echo '>'.$player_ms[1].'</option>';
+        }
+        ?>
+    </select>
+    <select name="3" size="1" class="os-lineup-player os-lineup-player-midfield4">
+        <?php
+        foreach ($player_m as $player_ms) {
+            echo '<option value="'.$player_ms[0].'"'; if ($player_ms[2] == 3) { echo ' selected="selected"'; } echo '>'.$player_ms[1].'</option>';
+        }
+        ?>
+    </select>
+    <div class="visible-mobile"><p><strong><?php echo _('Abwehr:'); ?></strong></p></div>
+    <select name="10" size="1" class="os-lineup-player os-lineup-player-defender1">
+        <?php
+        foreach ($player_a as $player_as) {
+            echo '<option value="'.$player_as[0].'"'; if ($player_as[2] == 10) { echo ' selected="selected"'; } echo '>'.$player_as[1].'</option>';
+        }
+        ?>
+    </select>
+    <select name="9" size="1" class="os-lineup-player os-lineup-player-defender2">
+        <?php
+        foreach ($player_a as $player_as) {
+            echo '<option value="'.$player_as[0].'"'; if ($player_as[2] == 9) { echo ' selected="selected"'; } echo '>'.$player_as[1].'</option>';
+        }
+        ?>
+    </select>
+    <select name="8" size="1" class="os-lineup-player os-lineup-player-defender3">
+        <?php
+        foreach ($player_a as $player_as) {
+            echo '<option value="'.$player_as[0].'"'; if ($player_as[2] == 8) { echo ' selected="selected"'; } echo '>'.$player_as[1].'</option>';
+        }
+        ?>
+    </select>
+    <select name="7" size="1" class="os-lineup-player os-lineup-player-defender4">
+        <?php
+        foreach ($player_a as $player_as) {
+            echo '<option value="'.$player_as[0].'"'; if ($player_as[2] == 7) { echo ' selected="selected"'; } echo '>'.$player_as[1].'</option>';
+        }
+        ?>
+    </select>
+    <div class="visible-mobile"><p><strong><?php echo _('Torwart:'); ?></strong></p></div>
+    <select name="11" size="1" class="os-lineup-player os-lineup-player-goalkeeper">
+        <?php
+        foreach ($player_t as $player_ts) {
+            echo '<option value="'.$player_ts[0].'"'; if ($player_ts[2] == 11) { echo ' selected="selected"'; } echo '>'.$player_ts[1].'</option>';
+        }
+        ?>
+    </select>
+</div>
 </form>
 <form action="/aufstellung.php?spieltypAufstellung=<?php echo $spieltypAufstellung; ?>" method="post" accept-charset="utf-8">
 <p><select name="farbeAufstellen" size="1" style="width:200px">

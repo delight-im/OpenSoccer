@@ -40,9 +40,9 @@ if (isset($_GET['filter'])) {
 	<option value="">&nbsp;-&nbsp;</option>
 	<?php
 	foreach ($filterTypes as $filterType) {
-		echo '<option';
+		echo '<option value="'.$filterType.'"';
 		if ($filterType == $filterGET) { echo ' selected="selected"'; }
-		echo '>'.$filterType.'</option>';
+		echo '>'._($filterType).'</option>';
 	}
 	?>
 </select> <input type="submit" value="<?php echo _('Filtern'); ?>" /></p>

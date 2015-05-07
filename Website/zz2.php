@@ -199,8 +199,11 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 <?php } ?>
 </div>
 <div id="content-wrap">
-<div id="sidebar">
+<?php if ($loggedin == 1) { ?>
+<div id="sidebar-expander" onclick="(function (self) { var sidebar = document.getElementById('sidebar'); self.style.display = 'none'; sidebar.style.display = 'block'; })(this);"><span><?php echo _('Seitenleiste ausklappen'); ?></span></div>
+<?php } ?>
 <?php if ($loggedin == 0) { ?>
+<div id="sidebar" style="display:block;">
 <h1><?php echo _('Login'); ?></h1>
 <div class="left-box">
 <form action="<?php echo getBaseURL(); ?>/login.php" method="post" accept-charset="utf-8" id="login_form" class="imtext">
@@ -220,6 +223,7 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 </div>
 <?php echo $topWidget; ?>
 <?php } else { ?>
+<div id="sidebar">
 <div id="top_box_nav">
 <a href="/wio.php" class="blue"><?php echo _('Wer ist online?'); ?></a>
 <a href="/posteingang.php" class="lightgrey"><?php echo _('Posteingang'); ?> (<?php echo (isset($_SESSION['last_pn_anzahl']) ? $_SESSION['last_pn_anzahl'] : 0); ?> <?php echo _('ungelesen'); ?>)</a>

@@ -770,6 +770,22 @@ input[type="submit"]:hover, a.button:hover {
 div.visible-mobile {
     display: none;
 }
+div#sidebar-expander {
+    display: none;
+    width: 100%;
+    background-color: #666;
+    padding: 4px 8px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+div#sidebar-expander span {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
 
 @media (max-width: 879px) {
 	#wrap, #content-wrap, #header, #footer {
@@ -787,6 +803,7 @@ div.visible-mobile {
 		width: auto;
 	}
 	#sidebar {
+        display: none;
 		float: none;
 		width: auto;
 	}
@@ -822,6 +839,9 @@ div.visible-mobile {
         margin: 8px auto;
     }
     div.visible-mobile {
+        display: block;
+    }
+    div#sidebar-expander {
         display: block;
     }
 }

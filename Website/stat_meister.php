@@ -30,7 +30,7 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Meister'); ?></h1>
 <p><?php echo _('Wer wurde in meiner Liga in den letzten Saisons Meister? Wie viele Punkte hatten diese Teams jeweils?'); ?></p>

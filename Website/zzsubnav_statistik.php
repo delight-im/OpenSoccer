@@ -33,5 +33,5 @@ foreach ($statistiken as $statistik) {
 	echo '>'.$statistik[1].'</option>';
 }
 ?>
-</select> <input type="submit" value="Auswählen" /></p>
+</select> <input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>

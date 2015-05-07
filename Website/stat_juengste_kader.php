@@ -36,7 +36,7 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Jüngste Kader'); ?></h1>
 <p><?php echo _('Welche Vereine setzen am stärksten auf die Jugend? Die folgende Liste zeigt die Teams mit den jüngsten Kadern. Bedingung: mindestens 17 Spieler im Kader.'); ?></p>

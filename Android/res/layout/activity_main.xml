@@ -3,15 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center">
-		<WebView
+		<im.delight.android.webview.AdvancedWebView
 		    android:id="@+id/webview"
-		    android:layout_width="fill_parent"
-		    android:layout_height="fill_parent"
-		    android:focusable="true"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
 		    android:visibility="gone" />
 		<ProgressBar
 			android:id="@+id/progressBar"
 			android:layout_gravity="center"
-			android:layout_width="50dp"
-			android:layout_height="50dp" />
+			android:layout_width="48dp"
+			android:layout_height="48dp" />
 </FrameLayout>

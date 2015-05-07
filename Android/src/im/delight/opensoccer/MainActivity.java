@@ -1,5 +1,7 @@
 package im.delight.opensoccer;
 
+import android.view.MenuItem;
+import im.delight.android.webview.AdvancedWebView;
 import android.content.Context;
 import android.view.ViewConfiguration;
 import java.lang.reflect.Field;
@@ -11,164 +13,96 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
-import android.webkit.JsResult;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
-	
-	private WebView mWebView = null;
+public class MainActivity extends Activity implements AdvancedWebView.Listener {
+
+	private AdvancedWebView mWebView;
 	private AlertDialog mAlertDialog;
-	
+	private ProgressBar mProgressBar;
+
+	@SuppressLint("NewApi")
 	@Override
 	protected void onResume() {
 		super.onResume();
+
+		mWebView.onResume();
 		CookieSyncManager.getInstance().startSync();
 	}
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onPause() {
-		super.onPause();
 		CookieSyncManager.getInstance().stopSync();
+		mWebView.onPause();
+
+		super.onPause();
 	}
 
     @SuppressLint("SetJavaScriptEnabled")
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         setContentView(R.layout.activity_main);
+
         forceOverflowMenu(this);
 
         CookieSyncManager.createInstance(this);
         CookieManager.getInstance().setAcceptCookie(true);
-        mWebView = (WebView) findViewById(R.id.webview);
-        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.getSettings().setBuiltInZoomControls(false);
-        mWebView.setId(234923794);
-        mWebView.setSaveEnabled(true);
-        mWebView.setWebChromeClient(new WebChromeClient() {
-        	@Override
-        	public boolean onJsAlert(WebView view, String url, String message, final JsResult result) {
-				AlertDialog.Builder reallyExit = new AlertDialog.Builder(MainActivity.this);
-				reallyExit.setTitle(getString(R.string.app_name));
-				reallyExit.setMessage(message);
-				reallyExit.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int which) {
-						if (dialog != null) {
-							dialog.dismiss();
-						}
-						if (result != null) {
-							result.confirm();
-						}
-					}
-				});
-				mAlertDialog = reallyExit.show();
-				return true;
-        	}
-			@Override
-			public boolean onJsConfirm(WebView view, String url, String message, final JsResult result) {
-				AlertDialog.Builder reallyExit = new AlertDialog.Builder(MainActivity.this);
-				reallyExit.setTitle(getString(R.string.app_name));
-				reallyExit.setMessage(message);
-				reallyExit.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int which) {
-						if (dialog != null) {
-							dialog.dismiss();
-						}
-						if (result != null) {
-							result.confirm();
-						}
-					}
-				});
-				reallyExit.setNegativeButton("Abbrechen", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int which) {
-						if (dialog != null) {
-							dialog.dismiss();
-						}
-						if (result != null) {
-							result.cancel();
-						}
-					}
-				});
-				mAlertDialog = reallyExit.show();
-				return true;
-	        }
-        });
-        mWebView.setWebViewClient(new WebViewClient() {
 
-	        @Override
-	        public void onPageStarted(WebView view, String url, Bitmap favicon) {
-				progressBar.setVisibility(View.VISIBLE);
-				mWebView.setVisibility(View.GONE);
-	        }
+        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-	        @Override
-			public void onPageFinished(WebView view, String url) {
-				progressBar.setVisibility(View.GONE);
-				mWebView.setVisibility(View.VISIBLE);
-			}
+        mWebView = (AdvancedWebView) findViewById(R.id.webview);
+        mWebView.setListener(this, this);
+        mWebView.loadUrl("http://m.opensoccer.org/?via_android=1", true);
 
-        });
-        mWebView.setOnTouchListener(new View.OnTouchListener() {
-			public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                case MotionEvent.ACTION_UP:
-                    if (!v.hasFocus()) {
-                        v.requestFocus();
-                    }
-                    break;
-                }
-                return false;
-			}
-        });
-        mWebView.loadUrl("http://m.opensoccer.org/?via_android=1");
         if (android.os.Build.VERSION.SDK_INT < 11) {
         	Toast.makeText(this, getString(R.string.menu_hint), Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
-    
+
     private void showPageChooser(final CharSequence[] items, final String[] urls, final String title) {
-    	AlertDialog.Builder chooser = new AlertDialog.Builder(this);
+		// TODO rewrite
+    	final AlertDialog.Builder chooser = new AlertDialog.Builder(this);
     	chooser.setTitle(title);
     	chooser.setItems(items, new DialogInterface.OnClickListener() {
+
+    		@Override
 			public void onClick(DialogInterface dialog, int which) {
 				if (dialog != null) {
 					dialog.dismiss();
 				}
-				mWebView.loadUrl("http://m.opensoccer.org"+urls[which]);
+				mWebView.loadUrl("http://m.opensoccer.org"+urls[which], true);
 			}
+
 		});
     	chooser.setNeutralButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+
+    		@Override
 			public void onClick(DialogInterface dialog, int which) {
 				if (dialog != null) {
 					dialog.dismiss();
 				}
 			}
+
 		});
     	chooser.show();
     }
-    
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO rewrite
 		switch (item.getItemId()) {
 		case R.id.menu_buero:
 			CharSequence[] items0 = { "Zentrale", "Protokoll", "Notizen", "Einstellungen" };
@@ -219,60 +153,83 @@ public class MainActivity extends Activity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
-	
-	protected void onNewIntent(Intent i) {
+
+	@Override
+	protected void onNewIntent(final Intent i) {
 		super.onNewIntent(i);
 		setIntent(i);
 	}
-	
+
 	@Override
 	public void onBackPressed() {
-	    if (mWebView != null && mWebView.isFocused() && mWebView.canGoBack()) {
-	    	mWebView.goBack();       
-	    }
-	    else {
-			AlertDialog.Builder reallyExit = new AlertDialog.Builder(this);
-			reallyExit.setTitle("Wirklich verlassen?");
-			reallyExit.setMessage("Möchtest Du das Spiel wirklich beenden?");
-			reallyExit.setPositiveButton("Ja", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					if (dialog != null) {
-						dialog.dismiss();
-					}
-					((Activity) MainActivity.this).finish();
-				}
-			});
-			reallyExit.setNegativeButton("Nein", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					if (dialog != null) {
-						dialog.dismiss();
-					}
-				}
-			});
-			mAlertDialog = reallyExit.show();
-	    }
-	}
-	
-	protected void onDestroy() {
-		super.onDestroy();
-		if (mAlertDialog != null) {
-			if (mAlertDialog.isShowing()) {
-				mAlertDialog.dismiss();
+		if (!mWebView.onBackPressed()) { return; }
+
+		final AlertDialog.Builder reallyExit = new AlertDialog.Builder(this);
+		reallyExit.setTitle("Wirklich verlassen?");
+		reallyExit.setMessage("Möchtest Du das Spiel wirklich beenden?");
+		reallyExit.setPositiveButton("Ja", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				finish();
 			}
+
+		});
+		reallyExit.setNegativeButton("Nein", null);
+		mAlertDialog = reallyExit.show();
+	}
+
+	@Override
+	protected void onDestroy() {
+		if (mAlertDialog != null) {
+			mAlertDialog.dismiss();
 			mAlertDialog = null;
 		}
+
+		mWebView.onDestroy();
+
+		super.onDestroy();
 	}
-	
+
 	private static void forceOverflowMenu(Context context) {
 		try {
-			ViewConfiguration config = ViewConfiguration.get(context);
-			Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+			final ViewConfiguration config = ViewConfiguration.get(context);
+			final Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
 			if (menuKeyField != null) {
 				menuKeyField.setAccessible(true);
 				menuKeyField.setBoolean(config, false);
 			}
 		}
 		catch (Exception e) { }
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+		super.onActivityResult(requestCode, resultCode, intent);
+		mWebView.onActivityResult(requestCode, resultCode, intent);
+	}
+
+	@Override
+	public void onDownloadRequested(final String url, final String userAgent, final String contentDisposition, final String mimetype, final long contentLength) { }
+
+	@Override
+	public void onExternalPageRequest(final String url) { }
+
+	@Override
+	public void onPageError(final int errorCode, final String description, final String failingUrl) { }
+
+	@Override
+	public void onPageFinished(final String url) {
+		mProgressBar.setVisibility(View.GONE);
+		mWebView.setVisibility(View.VISIBLE);
+
+		CookieSyncManager.getInstance().sync();
+	}
+
+	@Override
+	public void onPageStarted(final String url, final Bitmap favicon) {
+		mWebView.setVisibility(View.GONE);
+		mProgressBar.setVisibility(View.VISIBLE);
 	}
 
 }

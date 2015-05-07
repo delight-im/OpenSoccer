@@ -20,6 +20,7 @@ import android.widget.ProgressBar;
 
 public class MainActivity extends Activity implements AdvancedWebView.Listener {
 
+	public static final String QUERY_STRING_ANDROID_INIT = "?via_android=1";
 	private AdvancedWebView mWebView;
 	private AlertDialog mAlertDialog;
 	private ProgressBar mProgressBar;
@@ -58,7 +59,7 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
 
         mWebView = (AdvancedWebView) findViewById(R.id.webview);
         mWebView.setListener(this, this);
-        mWebView.loadUrl("http://m.opensoccer.org/?via_android=1", true);
+        mWebView.loadUrl(Config.SITE_URL + QUERY_STRING_ANDROID_INIT, true);
     }
 
     @Override
@@ -78,7 +79,7 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
 				if (dialog != null) {
 					dialog.dismiss();
 				}
-				mWebView.loadUrl("http://m.opensoccer.org"+urls[which], true);
+				mWebView.loadUrl(Config.SITE_URL + urls[which], true);
 			}
 
 		});

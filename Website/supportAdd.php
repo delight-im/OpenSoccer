@@ -38,7 +38,7 @@ if ($sql3 <= 5) {
 	</select></p>
 	<p><label for="newTitle"><?php echo _('Deine Anfrage (max. 150 Zeichen):'); ?></label><input type="text" name="title" id="newTitle" style="width:200px" /></p>
 	<p><label for="newDescription"><?php echo _('Möchtest Du Deine Anfrage noch genauer beschreiben ... ?'); ?></label><textarea name="description" id="newDescription" cols="10" rows="10" style="width:350px; height:200px"></textarea></p>
-	<p><input type="submit" value="<?php echo _('Anfrage erstellen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" /></p>
+	<p><input type="submit" value="<?php echo _('Anfrage erstellen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE).' confirm(\''._('Bist Du sicher?').'\')" /></p>'; ?>
 	</form>
 <?php }
 else {

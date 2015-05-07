@@ -708,7 +708,7 @@ input[type="submit"]:hover, a.button:hover {
     top: 0;
     width: 100%;
     max-width: 522px;
-    height: 480px;
+    height: 400px;
     margin: 0 auto;
     background-image: url(fussballfeld.png);
     background-attachment: scroll;
@@ -812,6 +812,7 @@ div.visible-mobile {
 		margin: 12px 0;
 	}
     .os-lineup-field {
+        height: 520px;
         padding: 12px 0;
     }
     .os-lineup-player {

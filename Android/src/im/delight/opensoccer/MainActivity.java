@@ -17,7 +17,6 @@ import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 public class MainActivity extends Activity implements AdvancedWebView.Listener {
 
@@ -60,10 +59,6 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
         mWebView = (AdvancedWebView) findViewById(R.id.webview);
         mWebView.setListener(this, this);
         mWebView.loadUrl("http://m.opensoccer.org/?via_android=1", true);
-
-        if (android.os.Build.VERSION.SDK_INT < 11) {
-        	Toast.makeText(this, getString(R.string.menu_hint), Toast.LENGTH_SHORT).show();
-        }
     }
 
     @Override

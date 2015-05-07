@@ -213,8 +213,8 @@ form.search input.button {
 #header {
 	width: 820px;
 	position: relative;
-	background: -webkit-linear-gradient(to right, #467CD2, #2757A3);
-	background: -moz-linear-gradient(to right, #467CD2, #2757A3);
+	background: -webkit-linear-gradient(left, #467CD2, #2757A3);
+	background: -moz-linear-gradient(left, #467CD2, #2757A3);
 	background: linear-gradient(to right, #467CD2, #2757A3);
 	padding: 0;
 	font-size: 14px;
@@ -247,8 +247,8 @@ form.search input.button {
 	clear: both;
 	margin: 0;
 	padding: 0 8px;
-	background: -webkit-linear-gradient(to right, #82C13E, #63932F);
-	background: -moz-linear-gradient(to right, #82C13E, #63932F);
+	background: -webkit-linear-gradient(left, #82C13E, #63932F);
+	background: -moz-linear-gradient(left, #82C13E, #63932F);
 	background: linear-gradient(to right, #82C13E, #63932F);
 	font: bold 12px/26px Verdana, Arial, Tahoma, Sans-serif;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
@@ -666,16 +666,10 @@ input[type="submit"], a.button {
 	margin: 0;
 	padding: 3px 6px;
 	border: 1px solid #999;
-	background: #f3f3f3;
 	cursor: pointer;
-	background-color: #efefef;
-	background-image: linear-gradient(to bottom, #f3f3f3, #eeeeee);
-	background-image: -moz-linear-gradient(top, #f3f3f3, #eeeeee);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f3f3f3), to(#eeeeee));
-	background-image: -webkit-linear-gradient(top, #f3f3f3, #eeeeee);
-	background-image: -ms-linear-gradient(top, #f3f3f3, #eeeeee);
-	background-image: -o-linear-gradient(top, #f3f3f3, #eeeeee);
-	background-repeat: repeat-x;
+    background: -webkit-linear-gradient(top, #f3f3f3, #eeeeee);
+	background: -moz-linear-gradient(top, #f3f3f3, #eeeeee);
+    background: linear-gradient(to bottom, #f3f3f3, #eeeeee);
 	color: #333;
 	text-align: center;
 	text-decoration: none;
@@ -692,14 +686,9 @@ input[type="submit"], a.button {
 input[type="submit"]:hover, a.button:hover {
 	border: 1px solid #666;
 	color: #333;
-	background-color: #e8e8e8;
-	background-image: linear-gradient(to bottom, #eeeeee, #dddddd);
-	background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#dddddd));
-	background-image: -webkit-linear-gradient(top, #eeeeee, #dddddd);
-	background-image: -ms-linear-gradient(top, #eeeeee, #dddddd);
-	background-image: -o-linear-gradient(top, #eeeeee, #dddddd);
-	background-repeat: repeat-x;
+    background: -webkit-linear-gradient(top, #eeeeee, #dddddd);
+	background: -moz-linear-gradient(top, #eeeeee, #dddddd);
+    background: linear-gradient(to bottom, #eeeeee, #dddddd);
 }
 
 .os-lineup-field {

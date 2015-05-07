@@ -776,6 +776,12 @@ div.visible-mobile {
 		width: auto;
 		max-width: 820px;
 	}
+    #wrap {
+        margin-top: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
 	#main {
 		float: none;
 		width: auto;

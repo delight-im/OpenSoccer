@@ -51,20 +51,6 @@ function setTaskDone($shortName) {
 		}
 	}
 }
-function getSpecialOffer() {
-	$today = date('d.m');
-	$ostern = date('d.m', easter_date());
-	switch ($today) {
-		case '13.07': $reason = __('%s hat Geburtstag', CONFIG_SITE_NAME); break;
-		case '24.12': $reason = _('Es ist Weihnachten'); break;
-		case '01.01': $reason = _('Das neue Jahr hat begonnen'); break;
-		case '01.05': $reason = _('Es ist Maifeiertag'); break;
-		case '03.10': $reason = _('Es ist Tag der Deutschen Einheit'); break;
-		case $ostern: $reason = _('Es ist Ostern'); break;
-		default: return false;
-	}
-	return __('%1$s und deshalb darf jeder Manager kostenlos %2$s!', $reason, '<a class="inText" href="/ver_lotto.php">'._('Lotto spielen').'</a>');
-}
 // INFO-BOXEN-ARRAY ENDE
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

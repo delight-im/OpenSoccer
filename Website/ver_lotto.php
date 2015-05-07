@@ -2,7 +2,6 @@
 <title><?php echo _('Lotto'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php include 'zz2.php'; ?>
 <?php
-$specialOffer = getSpecialOffer();
 $monthIndex = date('m', time());
 switch ($monthIndex) {
 	case '01': $monat_string = _('Januar'); break;
@@ -46,16 +45,11 @@ if (isset($_POST['tipp']) && $cookie_id != CONFIG_DEMO_USER) {
 				$in1 = "INSERT INTO ".$prefix."lotto_tipps (team, datum, zahlen) VALUES ('".$cookie_team."', '".$datum_heute."', '".$tipp_string."')";
 				$in2 = mysql_query($in1);
 				if ($in2 !== FALSE) {
-					if ($specialOffer === FALSE) {
-						$az1 = "UPDATE ".$prefix."teams SET konto = konto-1000000 WHERE ids = '".$cookie_team."'";
-						$az2 = mysql_query($az1);
-						$az3 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Lottoschein', -1000000, '".time()."')";
-						$az4 = mysql_query($az3);
-						$formulierung = _('Du hast für 1.000.000 € einen Lottoschein eingelöst.');
-					}
-					else {
-						$formulierung = _('Du hast zur Feier des Tages einen kostenlosen Lottoschein eingelöst.');
-					}
+                    $az1 = "UPDATE ".$prefix."teams SET konto = konto-1000000 WHERE ids = '".$cookie_team."'";
+                    $az2 = mysql_query($az1);
+                    $az3 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Lottoschein', -1000000, '".time()."')";
+                    $az4 = mysql_query($az3);
+                    $formulierung = _('Du hast für 1.000.000 € einen Lottoschein eingelöst.');
                     // PROTOKOLL ANFANG
                     $az5 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Finanzen', ".time().")";
                     $az6 = mysql_query($az5);
@@ -98,14 +92,7 @@ for ($i = 0; $i < 5; $i++) {
 		echo '<input style="position:absolute;top:'.$pos_y.'px;left:'.$pos_x.'px" type="checkbox" name="tipp[]" value="'.$zahl.'" />';
 	}
 }
-echo '</div><p><input type="submit" value="';
-if ($specialOffer === FALSE) {
-	echo _('Für 1.000.000€ einlösen');
-}
-else {
-	echo _('Kostenlos einlösen');
-}
-echo '"'.noDemoClick($cookie_id).' /></p></form>';
+echo '</div><p><input type="submit" value="'._('Für 1.000.000€ einlösen').'"'.noDemoClick($cookie_id).' /></p></form>';
 ?>
 <?php
 }

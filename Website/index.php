@@ -138,14 +138,6 @@ if ($cookie_team != '__'.$cookie_id) {
 	</tbody>
 	</table>
 	<?php
-	// SPECIAL OFFERS BEGIN
-	if (!isset($_SESSION['last_special_offer_check']) || $_SESSION['last_special_offer_check'] < (time()-3600)) {
-		$specialOffer = getSpecialOffer();
-		if ($specialOffer !== FALSE) {
-			addInfoBox($specialOffer);
-		}
-	}
-	// SPECIAL OFFERS END
 	$in_14_tagen = getTimestamp('+14 days');
 	$auslauf1 = "SELECT ids, vorname, nachname, vertrag, gehalt, wiealt FROM ".$prefix."spieler WHERE team = '".$cookie_team."' ORDER BY vertrag ASC LIMIT 0, 10";
 	$auslauf2 = mysql_query($auslauf1);

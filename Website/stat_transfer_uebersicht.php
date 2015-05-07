@@ -29,7 +29,7 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Transfer-Übersicht'); ?></h1>
 <p><?php echo _('In dieser Tabelle sind die 20 teuersten Transfers dieser Saison aufgelistet. Es werden jedoch nur Spieler angezeigt, die nach dem Transfer weiterhin in Europa gespielt haben.'); ?></p>

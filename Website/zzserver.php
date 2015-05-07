@@ -32,29 +32,13 @@ $prefix = 'man_';
 $kuerzelListe = array('AC', 'AJ', 'AS', 'ASC', 'ASV', 'Athletic', 'Atletico', 'Austria', 'AZ', 'BC', 'BSV', 'BV', 'Calcio', 'CD', 'CF', 'City', 'Club', 'Deportivo', 'Espanyol', 'FC', 'FF', 'FK', 'FSC', 'FSG', 'FV', 'IF', 'KV', 'Olympique', 'OSC', 'PSV', 'Racing', 'Rapid', 'Rapids', 'RC', 'RCD', 'Real', 'Rovers', 'RS', 'SG', 'SK', 'Spartans', 'Sporting', 'SSC', 'Sturm', 'SV', 'TSV', 'TV', 'UD', 'Union', 'United', 'Wanderers');
 $kategorienListe = array('Finanzen', 'Spiele & Taktik', 'Verein & Spieler', 'Accounts', 'Transfers', 'Grundregeln', 'Sonstiges');
 
-function isMobile() {
-	return stripos($_SERVER['SERVER_NAME'], 'm.') === 0;
-}
-
 /**
  * Returns the base URL for this website in the form of <http://www.example.com>, i.e. without a trailing slash
  *
- * @param boolean|NULL $forceMobile whether to return the URL for the mobile site (true) or the desktop site (false) or auto-detect the type (NULL)
  * @return string the base URL
  */
-function getBaseURL($forceMobile = NULL) {
-    if (!isset($forceMobile)) {
-        $forceMobile = isMobile();
-    }
-
-    if ($forceMobile) {
-        $hostname = str_replace('www.', 'm.', CONFIG_SITE_DOMAIN);
-    }
-    else {
-        $hostname = CONFIG_SITE_DOMAIN;
-    }
-
-    return (CONFIG_USE_HTTPS ? 'https' : 'http').'://'.$hostname;
+function getBaseURL() {
+    return (CONFIG_USE_HTTPS ? 'https' : 'http').'://'.CONFIG_SITE_DOMAIN;
 }
 
 function noDemoClick($userID, $inExisting = FALSE) {

@@ -74,14 +74,7 @@ function getSpecialOffer() {
 <meta http-equiv="content-language" content="de" />
 <meta http-equiv="content-script-type" content="text/javascript" />
 <meta http-equiv="content-style-type" content="text/css" />
-<?php
-if (isMobile()) {
-	echo '<meta name="robots" content="noindex,follow" />';
-}
-else {
-	echo '<meta name="robots" content="index,follow" />';
-}
-?>
+<meta name="robots" content="index,follow" />
 <link rel="stylesheet" href="/images/Refresh.php?v=234934" type="text/css" />
 <script type="text/javascript" src="/js/drop_down.js"></script>
 <link rel="stylesheet" href="/css/drop_down.css" type="text/css" />

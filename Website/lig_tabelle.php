@@ -123,13 +123,9 @@ $tmp_liga_cache .= '
 <th scope="col">&nbsp;</th>
 <th scope="col">'._('Team').'</th>
 <th scope="col">'._('SP').'</th>';
-if (!isMobile()) {
-	$tmp_liga_cache .= '<th scope="col">'._('S-U-N').'</th>';
-}
+$tmp_liga_cache .= '<th scope="col">'._('S-U-N').'</th>';
 $tmp_liga_cache .= '<th scope="col">'._('TO').'</th>';
-if (!isMobile()) {
-	$tmp_liga_cache .= '<th scope="col">'._('DI').'</th>';
-}
+$tmp_liga_cache .= '<th scope="col">'._('DI').'</th>';
 $tmp_liga_cache .= '<th scope="col">'._('PT').'</th>
 </tr>
 </thead>
@@ -187,13 +183,9 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 		if ($sql3['vorjahr_platz'] > 9) { $tmp_liga_cache .= ' '._('[AB]'); }
 	}
 	$tmp_liga_cache .= '</a></td><td>'.$liga3['gespielt'].'</td>';
-	if (!isMobile()) {
-		$tmp_liga_cache .= '<td>'.$sql3['sunS'].'-'.$sql3['sunU'].'-'.$sql3['sunN'].'</td>';
-	}
+    $tmp_liga_cache .= '<td>'.$sql3['sunS'].'-'.$sql3['sunU'].'-'.$sql3['sunN'].'</td>';
 	$tmp_liga_cache .= '<td>'.$sql3['tore'].':'.$sql3['gegentore'].'</td>';
-	if (!isMobile()) {
-		$tmp_liga_cache .= '<td>'.$differenz.'</td>';
-	}
+    $tmp_liga_cache .= '<td>'.$differenz.'</td>';
 	$tmp_liga_cache .= '<td>'.$sql3['punkte'].'</td>';
 	$tmp_liga_cache .= '</tr>';
 	$counter++;

@@ -61,7 +61,6 @@ if ($cookie_team != '__'.$cookie_id) {
 		addInfoBox(__('Du hast Deine %s noch nicht abgeschlossen: Für jede erledigte Aufgabe bekommst Du 1 Mio. auf Dein Vereinskonto!', '<a class="inText" href="/managerPruefung.php">'._('Manager-Prüfung').'</a>'));
 	}
 	?>
-	<?php if (isMobile() && isset($nextGamesHTML)) { echo str_replace(' (<a href="/wio.php">WIO</a>)', '', $nextGamesHTML); } ?>
 	<h1><?php echo __('Dein Verein: %s', $cookie_teamname); ?></h1>
     <p style="float:left; text-align:left; margin-bottom:0;">
         <a class="pagenava" href="/freundeWerben.php"><?php echo _('Freunde einladen'); ?></a>
@@ -284,22 +283,6 @@ else {
 <?php if (isset($_GET['loggedout'])) { ?>
 <h1><?php echo _('Du wurdest erfolgreich ausgeloggt!'); ?></h1>
 <?php } else { ?>
-<?php if (isMobile()) { ?>
-<h1><?php echo _('Einloggen mit bestehendem Account'); ?></h1>
-<form action="<?php echo getBaseURL(); ?>/login.php" method="post" accept-charset="utf-8" id="login_form" class="imtext">
-<p><?php echo _('E-Mail / Username:'); ?><br /><input type="text" name="lusername" /></p>
-<p><?php echo _('Passwort:'); ?><br /><input type="password" name="lpassword" /></p>
-<p><input type="hidden" name="returnURL" value="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" /><input type="submit" value="<?php echo _('Einloggen'); ?>" /></p>
-<p><b><a href="/passwort_vergessen.php"><?php echo _('Passwort vergessen?'); ?></a></b></p>
-</form>
-<h1><?php echo _('Jetzt neu registrieren'); ?></h1>
-<form method="post" action="/registrieren.php" accept-charset="utf-8" class="imtext">
-<p><?php echo _('Dein gewünschter Managername:'); ?><br /><input type="text" name="reg_benutzername" id="reg_benutzername" style="width:200px" /></p>
-<p><?php echo _('Deine E-Mail-Adresse:'); ?><br /><input type="text" name="reg_email" id="reg_email" style="width:200px" /></p>
-<p><input type="submit" value="<?php echo _('Jetzt kostenlos mitspielen'); ?>" /></p>
-<p><?php echo _('Du kannst Deine Daten anschließend noch einmal prüfen, sie werden noch nicht gespeichert. Du darfst Dich nur ein einziges Mal registrieren und nur einen Verein haben.'); ?></p>
-</form>
-<?php } else { ?>
 <h1><?php echo _('Kostenloser Online-Fußball-Manager'); ?></h1>
 <p><strong><?php echo _('Du bist der Trainer. Du bist der Manager. Du hast alles in der Hand!'); ?></strong></p>
 <p>+ <?php echo _('Übernimm Deinen eigenen Fußballklub!'); ?><br />+ <?php echo _('jeden Tag 1 bis 4 Spiele (Liga + Pokal)'); ?><br />+ <?php echo _('einfach im Browser managen &mdash; keine Installation'); ?><br />+ <?php echo _('garantiert kostenlos &mdash; auch in Zukunft'); ?><br />+ <?php echo _('keine Premium-Accounts &mdash; gleiche Chancen für alle'); ?><br />+ <?php echo _('schneller Einstieg'); ?><br />+ <?php echo _('langfristiger Spielspaß'); ?><br />+ <?php echo _('tolle Community'); ?><br />+ <?php echo _('wenig Zeitaufwand'); ?><br />+ <?php echo _('LIVE-Spiele &mdash; spannend bis zum Ende'); ?><br />+ <?php echo _('Urlaubsvertretung durch den Computer (10-30 Tage)'); ?></p>
@@ -310,7 +293,6 @@ else {
 <p><input type="submit" value="<?php echo _('Jetzt kostenlos mitspielen'); ?>" /></p>
 <p><?php echo _('Du kannst Deine Daten anschließend noch einmal prüfen, sie werden noch nicht gespeichert. Du darfst Dich nur ein einziges Mal registrieren und nur einen Verein haben.'); ?></p>
 </form>
-<?php } ?>
 <?php
 if (isset($_GET['r'])) {
 	$referralID = mysql_real_escape_string(trim(strip_tags($_GET['r'])));

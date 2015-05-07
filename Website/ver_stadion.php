@@ -116,7 +116,7 @@ if (isset($_POST['preis']) && $cookie_id != CONFIG_DEMO_USER) {
 	if (intval($_POST['preis']) > 19 && intval($_POST['preis']) < 71) {
         $sql1 = "UPDATE ".$prefix."stadien SET preis = ".intval($_POST['preis'])." WHERE team = '".$cookie_team."'";
         $sql2 = mysql_query($sql1);
-            $formulierung = _('Du hast die Ticketpreise für Dein Stadion auf %d € gesetzt.', intval($_POST['preis']));
+            $formulierung = __('Du hast die Ticketpreise für Dein Stadion auf %d € gesetzt.', intval($_POST['preis']));
             $sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Stadion', '".time()."')";
             $sql8 = mysql_query($sql7);
 			setTaskDone('ticket_prices');

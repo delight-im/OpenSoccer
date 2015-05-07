@@ -24,7 +24,7 @@ if ($_SESSION['transferGesperrt'] == TRUE) {
     addInfoBox(__('Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage bitte ein %2$s.', '<a class="inText" href="/sanktionen.php">'._('gesperrt').'</a>', '<a class="inText" href="/post_schreiben.php?id=18a393b5e23e2b9b4da106b06d8235f3">'._('Team-Mitglied').'</a>'));
 }
 else {
-	echo '<h1>Erhaltene Anfragen</h1>';
+	echo '<h1>'._('Erhaltene Anfragen').'</h1>';
 	if (isset($_POST['spieler']) && isset($_POST['aktion']) && isset($_POST['besitzer'])) {
 		$ac_spieler = mysql_real_escape_string(trim(strip_tags($_POST['spieler'])));
 		$ac_besitzer = mysql_real_escape_string(trim(strip_tags($_POST['besitzer'])));

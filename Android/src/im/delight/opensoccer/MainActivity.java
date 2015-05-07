@@ -1,4 +1,4 @@
-package com.lateinme.manager;
+package im.delight.opensoccer;
 
 import android.content.Context;
 import android.view.ViewConfiguration;

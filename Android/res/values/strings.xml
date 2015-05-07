@@ -9,10 +9,6 @@
     <string name="anfragen">Anfragen</string>
     <string name="community">Community</string>
     <string name="support">Support</string>
-    <string name="title_activity_main">OpenSoccer</string>
-    <string name="title_activity_preferences">Einstellungen</string>
-    <string name="settings">Einstellungen</string>
     <string name="menu_hint">Alle Bereiche des Spiels findest Du im Optionsmenü, das Du über die Menü-Taste Deines Gerätes öffnen kannst!</string>
-    <string name="please_choose">Bitte wählen</string>
     <string name="cancel">Abbrechen</string>
 </resources>

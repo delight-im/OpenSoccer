@@ -96,10 +96,10 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 		$transferstatus = '&nbsp;';
 	}
 	elseif ($sql3['transfermarkt'] == 1) {
-		$transferstatus = 'Kauf';
+		$transferstatus = _('Kauf');
 	}
 	else {
-		$transferstatus = 'Leihe';
+		$transferstatus = _('Leihe');
 	}
 	// CSS-KLASSEN BESTIMMEN ANFANG
 	$trCSS = '';
@@ -191,13 +191,13 @@ while ($posSel3 = mysql_fetch_assoc($posSel2)) {
 // BESETZUNGEN BERECHNEN ENDE
 // BEWERTUNG AUSGEBEN ANFANG
 function besetzungToWort($besetzung) {
-	if ($besetzung < 0.5) { return 'sehr schlecht'; }
-	elseif ($besetzung < 0.8) { return 'schlecht'; }
-	elseif ($besetzung < 1.1) { return 'solide'; }
-	elseif ($besetzung < 1.4) { return 'gut'; }
-	elseif ($besetzung < 1.7) { return 'sehr gut'; }
-	elseif ($besetzung < 2) { return 'hervorragend'; }
-	elseif ($besetzung < 2.3) { return 'weltklasse'; }
+	if ($besetzung < 0.5) { return _('sehr schlecht'); }
+	elseif ($besetzung < 0.8) { return _('schlecht'); }
+	elseif ($besetzung < 1.1) { return _('solide'); }
+	elseif ($besetzung < 1.4) { return _('gut'); }
+	elseif ($besetzung < 1.7) { return _('sehr gut'); }
+	elseif ($besetzung < 2) { return _('hervorragend'); }
+	elseif ($besetzung < 2.3) { return _('weltklasse'); }
 	else { return 'überbesetzt'; }
 }
 krsort($posArr);

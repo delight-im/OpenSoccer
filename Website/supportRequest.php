@@ -38,8 +38,8 @@ if (mysql_num_rows($sql2) != 1) { exit; }
 $sql3 = mysql_fetch_assoc($sql2);
 $entryNumber = $sql3['category'].' #'.id2secure($sql3['id']).' (';
 switch ($sql3['open']) {
-	case 1: $entryNumber .= 'OFFEN'; break;
-	case 0: $entryNumber .= 'UMGESETZT'; break;
+	case 1: $entryNumber .= _('OFFEN'); break;
+	case 0: $entryNumber .= _('UMGESETZT'); break;
 	case -1: if ($sql3['category'] == 'Vorschlag') { $entryNumber .= 'ABGELEHNT'; } else { $entryNumber .= 'GEKLÄRT'; } break;
 	default: exit; break;
 }
@@ -138,7 +138,7 @@ $read2 = mysql_query($read1);
 // ANFRAGE ALS GELESEN MARKIEREN ENDE
 ?>
 <p style="text-align:right">
-	<a href="/support.php" class="pagenava">Zurück zur Hauptseite</a>
+	<a href="/support.php" class="pagenava"><?php echo _('Zurück zur Hauptseite'); ?></a>
 	<?php if (($_SESSION['status'] == 'Admin' OR $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1 && $sql3['visibilityLevel'] == 0) { echo ' <a href="/support.php?del='.id2secure($requestID).'" class="pagenava" onclick="return confirm(\''._('Bist Du sicher?').'\')">'._('Anfrage löschen').'</a>'; } ?>
 	<?php if (($_SESSION['status'] == 'Admin' || $_SESSION['status'] == 'Helfer') && $sql3['open'] == 1) {
 			if ($sql3['category'] == 'Vorschlag') {

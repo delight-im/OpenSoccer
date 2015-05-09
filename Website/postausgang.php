@@ -29,7 +29,6 @@ if (isset($_POST['auswahl']) && $cookie_id != CONFIG_DEMO_USER) {
 ?>
 <p style="text-align:right;"><a class="pagenava" href="/posteingang.php"><?php echo _('Posteingang'); ?></a> <a class="pagenava aktiv" href="/postausgang.php"><?php echo _('Postausgang'); ?></a></p>
 <form action="/postausgang.php" name="checkBoxForm" method="post" accept-charset="utf-8">
-<p>
 <table>
 <thead>
 <tr class="odd">
@@ -70,7 +69,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 ?>
 </tbody>
 </table>
-</p>
 <p><select name="markedAction" size="1" style="width:200px">
 	<option value="DEL"><?php echo _('Markierte löschen'); ?></option>
 </select></p>

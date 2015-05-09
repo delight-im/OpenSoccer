@@ -1,5 +1,6 @@
 package im.delight.opensoccer;
 
+import im.delight.opensoccer.exceptions.UnknownMenuItemException;
 import android.view.MenuItem;
 import im.delight.android.webview.AdvancedWebView;
 import android.content.Context;
@@ -62,90 +63,63 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
         mWebView.loadUrl(Config.SITE_URL + QUERY_STRING_ANDROID_INIT, true);
     }
 
+    private static String getTargetUrlFromMenuItem(final int menuItemId) throws UnknownMenuItemException {
+    	switch (menuItemId) {
+	    	case R.id.menu_home: return "";
+	    	case R.id.menu_office_dashboard: return "";
+	    	case R.id.menu_office_reports: return "protokoll.php";
+	    	case R.id.menu_office_notes: return "notizen.php";
+	    	case R.id.menu_office_settings: return "einstellungen.php";
+	    	case R.id.menu_office_logout: return "logout.php";
+	    	case R.id.menu_ranking_ranking: return "top_manager.php";
+	    	case R.id.menu_ranking_statistics: return "stat_5jahresWertung.php";
+	    	case R.id.menu_ranking_manager_of_year: return "manager_der_saison.php";
+	    	case R.id.menu_transfers_buy: return "transfermarkt.php";
+	    	case R.id.menu_transfers_loan: return "transfermarkt_leihe.php";
+	    	case R.id.menu_transfers_watch_list: return "beobachtung.php";
+	    	case R.id.menu_transfers_completed: return "lig_transfers.php";
+	    	case R.id.menu_transfers_barker: return "marktschreier.php";
+	    	case R.id.menu_team_lineup: return "aufstellung.php";
+	    	case R.id.menu_team_tactics: return "taktik.php";
+	    	case R.id.menu_team_squad: return "kader.php";
+	    	case R.id.menu_team_development: return "entwicklung.php";
+	    	case R.id.menu_team_contracts: return "vertraege.php";
+	    	case R.id.menu_team_calendar: return "kalender.php";
+	    	case R.id.menu_season_league: return "lig_tabelle.php";
+	    	case R.id.menu_season_international_cup: return "pokal.php";
+	    	case R.id.menu_season_national_cup: return "cup.php";
+	    	case R.id.menu_season_friendly_matches: return "lig_testspiele_liste.php";
+	    	case R.id.menu_season_friendly_market: return "testWuensche.php";
+	    	case R.id.menu_club_finances: return "ver_finanzen.php";
+	    	case R.id.menu_club_transactions: return "ver_buchungen.php";
+	    	case R.id.menu_club_personnel: return "ver_personal.php";
+	    	case R.id.menu_club_stadium: return "ver_stadion.php";
+	    	case R.id.menu_requests_loans: return "leihgaben.php";
+	    	case R.id.menu_requests_friendlies: return "testspiele.php";
+	    	case R.id.menu_requests_league_swap: return "ligaTausch.php";
+	    	case R.id.menu_support_support: return "support.php";
+	    	case R.id.menu_support_contact_staff: return "wio.php#teamList";
+	    	case R.id.menu_support_short_hints: return "tipps_des_tages.php";
+	    	case R.id.menu_support_rules: return "regeln.php";
+	    	default: throw new UnknownMenuItemException("Unknown menu item ID: "+menuItemId);
+    	}
+    }
+
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
 
-    private void showPageChooser(final CharSequence[] items, final String[] urls, final String title) {
-		// TODO rewrite
-    	final AlertDialog.Builder chooser = new AlertDialog.Builder(this);
-    	chooser.setTitle(title);
-    	chooser.setItems(items, new DialogInterface.OnClickListener() {
-
-    		@Override
-			public void onClick(DialogInterface dialog, int which) {
-				if (dialog != null) {
-					dialog.dismiss();
-				}
-				mWebView.loadUrl(Config.SITE_URL + urls[which], true);
-			}
-
-		});
-    	chooser.setNeutralButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
-
-    		@Override
-			public void onClick(DialogInterface dialog, int which) {
-				if (dialog != null) {
-					dialog.dismiss();
-				}
-			}
-
-		});
-    	chooser.show();
-    }
-
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO rewrite
-		switch (item.getItemId()) {
-		case R.id.menu_buero:
-			CharSequence[] items0 = { "Zentrale", "Protokoll", "Notizen", "Einstellungen" };
-			String[] urls0 = { "/", "/protokoll.php", "/notizen.php", "/einstellungen.php" };
-			showPageChooser(items0, urls0, "Büro");
+	public boolean onOptionsItemSelected(final MenuItem item) {
+		try {
+			final String targetPath = getTargetUrlFromMenuItem(item.getItemId());
+			mWebView.loadUrl(Config.SITE_URL + targetPath, true);
+
 			return true;
-		case R.id.menu_ranking:
-			CharSequence[] items1 = { "Ranking", "Statistiken", "Manager-Wahl" };
-			String[] urls1 = { "/top_manager.php", "/stat_5jahresWertung.php", "/manager_der_saison.php" };
-			showPageChooser(items1, urls1, "Ranking");
-			return true;
-		case R.id.menu_transfers:
-			CharSequence[] items2 = { "Kaufen", "Leihen", "Beobachtung", "Abgeschlossen", "Marktschreier" };
-			String[] urls2 = { "/transfermarkt.php", "/transfermarkt_leihe.php", "/beobachtung.php", "/lig_transfers.php", "/marktschreier.php" };
-			showPageChooser(items2, urls2, "Transfers");
-			return true;
-		case R.id.menu_team:
-			CharSequence[] items3 = { "Aufstellung", "Taktik", "Kader", "Entwicklung", "Verträge", "Kalender" };
-			String[] urls3 = { "/aufstellung.php", "/taktik.php", "/kader.php", "/entwicklung.php", "/vertraege.php", "/kalender.php" };
-			showPageChooser(items3, urls3, "Team");
-			return true;
-		case R.id.menu_saison:
-			CharSequence[] items4 = { "Liga", "Int. Pokal", "Nat. Cup", "Testspiele", "Testwünsche" };
-			String[] urls4 = { "/lig_tabelle.php", "/pokal.php", "/cup.php", "/lig_testspiele_liste.php", "/testWuensche.php" };
-			showPageChooser(items4, urls4, "Saison");
-			return true;
-		case R.id.menu_verein:
-			CharSequence[] items5 = { "Finanzen", "Buchungen", "Personal", "Stadion", "Lotto" };
-			String[] urls5 = { "/ver_finanzen.php", "/ver_buchungen.php", "/ver_personal.php", "/ver_stadion.php", "/ver_lotto.php" };
-			showPageChooser(items5, urls5, "Verein");
-			return true;
-		case R.id.menu_anfragen:
-			CharSequence[] items6 = { "Leihgaben", "Testspiele", "Ligatausch" };
-			String[] urls6 = { "/leihgaben.php", "/testspiele.php", "/ligaTausch.php" };
-			showPageChooser(items6, urls6, "Anfragen");
-			return true;
-		case R.id.menu_community:
-			CharSequence[] items7 = { "Chat", "Post: Ein", "Post: Aus", "Freunde", "Sanktionen", "Nutzungsregeln" };
-			String[] urls7 = { "/chat.php", "/posteingang.php", "/postausgang.php", "/freunde.php", "/sanktionen.php", "/regeln.php" };
-			showPageChooser(items7, urls7, "Community");
-			return true;
-		case R.id.menu_support:
-			CharSequence[] items8 = { "Support", "Post ans Team", "Kurztipps", "Neuigkeiten" };
-			String[] urls8 = { "/support.php", "/wio.php#teamList", "/tipps_des_tages.php", "/neuigkeiten.php" };
-			showPageChooser(items8, urls8, "Support");
-			return true;
-		default:
+		}
+		catch (UnknownMenuItemException e) {
 			return super.onOptionsItemSelected(item);
 		}
 	}

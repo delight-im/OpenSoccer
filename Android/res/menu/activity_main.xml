@@ -1,48 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_buero"
-        android:title="@string/buero"
+        android:id="@+id/menu_home"
+        android:title="@string/home"
         android:icon="@drawable/ic_ab_home"
-        android:orderInCategory="1"
         android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_office"
+        android:title="@string/office"
+        android:showAsAction="never">
+        <menu>
+	        <item
+	            android:id="@+id/menu_office_dashboard"
+	            android:title="@string/dashboard" />
+	        <item
+	            android:id="@+id/menu_office_reports"
+	            android:title="@string/reports" />
+	        <item
+	            android:id="@+id/menu_office_notes"
+	            android:title="@string/notes" />
+	        <item
+	            android:id="@+id/menu_office_settings"
+	            android:title="@string/settings" />
+		    <item
+		        android:id="@+id/menu_office_logout"
+		        android:title="@string/logout" />
+		</menu>
+	</item>
     <item
         android:id="@+id/menu_ranking"
         android:title="@string/ranking"
-        android:orderInCategory="2"
-        android:showAsAction="never" />
+        android:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_ranking_ranking"
+                android:title="@string/ranking" />
+            <item
+                android:id="@+id/menu_ranking_statistics"
+                android:title="@string/statistics" />
+            <item
+                android:id="@+id/menu_ranking_manager_of_year"
+                android:title="@string/manager_of_year" />
+        </menu>
+	</item>
     <item
         android:id="@+id/menu_transfers"
         android:title="@string/transfers"
-        android:orderInCategory="3"
-        android:showAsAction="never" />
+        android:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_transfers_buy"
+                android:title="@string/buy_players" />
+            <item
+                android:id="@+id/menu_transfers_loan"
+                android:title="@string/loan_players" />
+            <item
+                android:id="@+id/menu_transfers_watch_list"
+                android:title="@string/watch_list" />
+            <item
+                android:id="@+id/menu_transfers_completed"
+                android:title="@string/completed_transfers" />
+            <item
+                android:id="@+id/menu_transfers_barker"
+                android:title="@string/market_barker" />
+        </menu>
+	</item>
     <item
         android:id="@+id/menu_team"
         android:title="@string/team"
-        android:orderInCategory="4"
-        android:showAsAction="never" />
+        android:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_team_lineup"
+                android:title="@string/lineup" />
+            <item
+                android:id="@+id/menu_team_tactics"
+                android:title="@string/tactics" />
+            <item
+                android:id="@+id/menu_team_squad"
+                android:title="@string/squad" />
+            <item
+                android:id="@+id/menu_team_development"
+                android:title="@string/development" />
+            <item
+                android:id="@+id/menu_team_contracts"
+                android:title="@string/contracts" />
+            <item
+                android:id="@+id/menu_team_calendar"
+                android:title="@string/calendar" />
+        </menu>
+	</item>
     <item
-        android:id="@+id/menu_saison"
-        android:title="@string/saison"
-        android:orderInCategory="5"
-        android:showAsAction="never" />
+        android:id="@+id/menu_season"
+        android:title="@string/season"
+        android:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_season_league"
+                android:title="@string/league" />
+            <item
+                android:id="@+id/menu_season_international_cup"
+                android:title="@string/international_cup" />
+            <item
+                android:id="@+id/menu_season_national_cup"
+                android:title="@string/national_cup" />
+            <item
+                android:id="@+id/menu_season_friendly_matches"
+                android:title="@string/friendly_matches" />
+            <item
+                android:id="@+id/menu_season_friendly_market"
+                android:title="@string/find_friendlies" />
+        </menu>
+	</item>
     <item
-        android:id="@+id/menu_verein"
-        android:title="@string/verein"
-        android:orderInCategory="6"
-        android:showAsAction="never" />
+        android:id="@+id/menu_club"
+        android:title="@string/club"
+        android:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_club_finances"
+                android:title="@string/finances" />
+            <item
+                android:id="@+id/menu_club_transactions"
+                android:title="@string/transactions" />
+            <item
+                android:id="@+id/menu_club_personnel"
+                android:title="@string/personnel" />
+            <item
+                android:id="@+id/menu_club_stadium"
+                android:title="@string/stadium" />
+        </menu>
+	</item>
     <item
-        android:id="@+id/menu_anfragen"
-        android:title="@string/anfragen"
-        android:orderInCategory="7"
-        android:showAsAction="never" />
-    <item
-        android:id="@+id/menu_community"
-        android:title="@string/community"
-        android:orderInCategory="8"
-        android:showAsAction="never" />
+        android:id="@+id/menu_requests"
+        android:title="@string/requests"
+        android:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_requests_loans"
+                android:title="@string/loan_players" />
+            <item
+                android:id="@+id/menu_requests_friendlies"
+                android:title="@string/friendly_matches" />
+            <item
+                android:id="@+id/menu_requests_league_swap"
+                android:title="@string/league_swap" />
+        </menu>
+	</item>
     <item
         android:id="@+id/menu_support"
         android:title="@string/support"
-        android:orderInCategory="9"
-        android:showAsAction="never" />
+        android:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_support_support"
+                android:title="@string/support" />
+            <item
+                android:id="@+id/menu_support_contact_staff"
+                android:title="@string/contact_staff" />
+            <item
+                android:id="@+id/menu_support_short_hints"
+                android:title="@string/short_hints" />
+            <item
+                android:id="@+id/menu_support_rules"
+                android:title="@string/rules" />
+        </menu>
+	</item>
 </menu>

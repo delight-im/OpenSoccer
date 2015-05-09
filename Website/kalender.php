@@ -80,7 +80,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	else { // neuer Tag
 		$currentSpieltag = GameTime::getMatchDay()-round((time()-$sql3['datum'])/86400);
 		echo '<td style="font-weight:bold;">'.$currentDate.'</td>';
-		echo '<td colspan="3" style="font-weight:bold;">Spieltag '.$currentSpieltag.'</td></tr><tr><td>&nbsp;</td>'; // Zeile mit Spieltag einschieben
+		echo '<td colspan="3" style="font-weight:bold;">'.__('Spieltag %d', $currentSpieltag).'</td></tr><tr><td>&nbsp;</td>'; // Zeile mit Spieltag einschieben
 		$counter++; // Zeilen-Counter erhöhen
 		if (isset($spieltagDescription[$currentSpieltag]) && is_array($spieltagDescription[$currentSpieltag])) { // Zeile mit Spieltags-Beschreibung einschieben
             foreach ($spieltagDescription[$currentSpieltag] as $special_date) {

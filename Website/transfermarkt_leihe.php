@@ -194,7 +194,7 @@ else {
 		}
 		echo '<td>'.$leihprämie.'</td>';
 		// PRÄMIE ENDE
-		echo '<td>';
+		echo '<td class="link">';
         if ($loggedin != 1) {
             echo '&nbsp;'; // not signed in
         }

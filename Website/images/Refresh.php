@@ -138,7 +138,7 @@ label {
 	font-weight:bold;
 	margin:2px 0;
 }
-input {
+input, button {
 	padding: 2px;
 	border: 1px solid #999;
 	font: normal normal normal 1em Verdana, sans-serif;
@@ -658,7 +658,7 @@ div#top_box_nav .lightgrey {
 div#top_box_nav .lightgrey:hover {
 	background-color: rgba(60,60,60,0.6);
 }
-input[type="submit"], a.button {
+input[type="submit"], button {
 	display: inline-block;
 	min-width: 10em;
 	width: auto;
@@ -683,7 +683,7 @@ input[type="submit"], a.button {
 	-o-transition: all 0.2s ease 0.1s;
 	-webkit-touch-callout: none;
 }
-input[type="submit"]:hover, a.button:hover {
+input[type="submit"]:hover, button:hover {
 	border: 1px solid #666;
 	color: #333;
     background: -webkit-linear-gradient(top, #eeeeee, #dddddd);

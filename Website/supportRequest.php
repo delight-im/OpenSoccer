@@ -38,9 +38,9 @@ if (mysql_num_rows($sql2) != 1) { exit; }
 $sql3 = mysql_fetch_assoc($sql2);
 $entryNumber = $sql3['category'].' #'.id2secure($sql3['id']).' (';
 switch ($sql3['open']) {
-	case 1: $entryNumber .= _('OFFEN'); break;
-	case 0: $entryNumber .= _('UMGESETZT'); break;
-	case -1: if ($sql3['category'] == 'Vorschlag') { $entryNumber .= 'ABGELEHNT'; } else { $entryNumber .= 'GEKLÄRT'; } break;
+	case 1: $entryNumber .= _('offen'); break;
+	case 0: $entryNumber .= _('umgesetzt'); break;
+	case -1: if ($sql3['category'] == 'Vorschlag') { $entryNumber .= _('abgelehnt'); } else { $entryNumber .= _('geklärt'); } break;
 	default: exit; break;
 }
 $entryNumber .= ')';

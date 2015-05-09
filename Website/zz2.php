@@ -217,7 +217,7 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 <label for="lpassword"><?php echo _('Passwort:'); ?></label><input type="password" name="lpassword" id="lpassword" />
 </p>
 <p>
-<input type="hidden" name="returnURL" value="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" /><input type="submit" value="Einloggen" />
+<input type="hidden" name="returnURL" value="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" /><input type="submit" value="<?php echo _('Einloggen'); ?>" />
 </p>
 <p><b><a href="/passwort_vergessen.php"><?php echo _('Passwort vergessen?'); ?></a></b></p>
 </form>

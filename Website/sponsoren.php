@@ -75,7 +75,7 @@ $sql1 = "SELECT id, name, prozentsatz FROM ".$prefix."sponsoren";
 $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	$angebote_vom_sponsor = get_sponsoren_angebot($sql3['prozentsatz'], $getelo3);
-	echo '<tr><td>'.$sql3['name'].'</td><td>'.number_format($angebote_vom_sponsor[0], 0, ',', '.').' €</td><td>'.number_format($angebote_vom_sponsor[1], 0, ',', '.').' €</td><td>';
+	echo '<tr><td>'.$sql3['name'].'</td><td>'.number_format($angebote_vom_sponsor[0], 0, ',', '.').' €</td><td>'.number_format($angebote_vom_sponsor[1], 0, ',', '.').' €</td><td class="link">';
 	echo '<a href="/sponsoren.php?id='.$sql3['id'].'" onclick="return confirm(\''._('Bist Du sicher?').'\')">'._('Abschließen').'</a></td></tr>';
 	$rechner_optionen .= '<option value="'.$sql3['id'].'">'.$sql3['name'].'</option>';
 }

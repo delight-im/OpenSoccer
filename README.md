@@ -70,7 +70,7 @@ In order to provide translations for this project, please refer to our [document
 All parts of this project, except for the folder `Website/images`, have been released under the following license:
 
 ```
- Copyright (C) 2008-2014 www.delight.im <info@delight.im>
+ Copyright (C) 2008-2015 www.delight.im <info@delight.im>
  
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

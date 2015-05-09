@@ -17,9 +17,22 @@ function noDemoPopup() {
   })();
 </script>
 </head>
+<?php
+if (isset($_GET['via_android'])) {
+    if ($_GET['via_android'] == 1) {
+        $_SESSION['via_android'] = 1;
+    }
+    else {
+        $_SESSION['via_android'] = 0;
+    }
+}
+if (!isset($_SESSION['via_android'])) {
+    $_SESSION['via_android'] = 0;
+}
+?>
 <body>
 <div id="wrap">
-<div id="header">
+<div id="header"<?php if ($_SESSION['via_android'] == 1) { echo ' style="display:none;"'; } ?>>
 <div class="logo_top" style="padding:12px 0;"><img src="/images/logo.png" alt="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" title="<?php echo CONFIG_SITE_NAME; ?> - <?php echo _('Online-Fußball-Manager'); ?>" width="224" style="display:block; border:0; width:224px; height:60px; margin:0 auto;" />
 <?php
 $topWidget = '<h1>'._('Top-Manager').'</h1>';
@@ -33,24 +46,11 @@ while ($topWidget3 = mysql_fetch_assoc($topWidget2)) {
 }
 $topWidget .= '</div>';
 
-if (isset($_GET['via_android'])) {
-    if ($_GET['via_android'] == 1) {
-        $_SESSION['via_android'] = 1;
-    }
-    else {
-        $_SESSION['via_android'] = 0;
-    }
-}
-if (!isset($_SESSION['via_android'])) {
-    $_SESSION['via_android'] = 0;
-}
-
 if (!isset($_SESSION['pMaxGebot'])) { $_SESSION['pMaxGebot'] = 0; }
 ?>
 </div>
 </div>
-<div id="menu">
-<?php if ($_SESSION['via_android'] == 0) { ?>
+<div id="menu"<?php if ($_SESSION['via_android'] == 1) { echo ' style="display:none;"'; } ?>>
 <ul id="nav">
 <?php if ($loggedin == 0) { ?>
 <li<?php if ($_SERVER['SCRIPT_NAME'] == '/index.php') { echo ' id="current"'; } ?>><a href="/"><?php echo _('Startseite'); ?></a></li>
@@ -202,7 +202,6 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 <li class="menueintrag"><a href="/<?php if ($_SESSION['pMaxGebot'] == 1) { echo 'logoutNewUser.php'; } else { echo 'logout.php'; } ?>"><?php echo _('Logout'); ?></a></li>
 <?php } ?>
 </ul>
-<?php } ?>
 </div>
 <div id="content-wrap">
 <?php if ($loggedin == 1) { ?>

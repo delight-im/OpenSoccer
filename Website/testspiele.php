@@ -51,7 +51,7 @@ echo '<form action="/testspiele.php" method="post" accept-charset="utf-8">';
 echo '<p><select name="wantTests" size="1" style="width:200px">';
 	echo '<option value="1"'; if ($wantTests == 1) { echo ' selected="selected"'; } echo '>'._('Ja, bin interessiert').'</option>';
 	echo '<option value="0"'; if ($wantTests == 0) { echo ' selected="selected"'; } echo '>'._('Nein, kein Interesse').'</option>';
-echo '</select> <input type="submit" value="Festlegen"'.noDemoClick($cookie_id).' /></p>';
+echo '</select> <input type="submit" value="'._('Festlegen').'"'.noDemoClick($cookie_id).' /></p>';
 echo '</form>';
 // FESTLEGEN WAS GESUCHT WERDEN SOLL ENDE
 ?>

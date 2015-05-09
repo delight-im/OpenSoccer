@@ -43,7 +43,7 @@ function setTaskDone($shortName) {
 		$taskDone1 = "INSERT INTO ".$prefix."licenseTasks_Completed (user, task) VALUES ('".$cookie_id."', '".mysql_real_escape_string(trim($shortName))."')";
 		$taskDone2 = mysql_query($taskDone1);
 		if ($taskDone2 != FALSE) {
-			addInfoBox(__('Herzlichen Glückwunsch, Du hast gerade einen weiteren Teil deiner %1$s abgeschlossen!', '<a class="inText" href="/managerPruefung.php">'.('Manager-Prüfung').'</a>'));
+			addInfoBox(__('Herzlichen Glückwunsch, Du hast gerade einen weiteren Teil deiner %1$s abgeschlossen!', '<a class="inText" href="/managerPruefung.php">'._('Manager-Prüfung').'</a>'));
 			$getTaskMoney1 = "UPDATE ".$prefix."teams SET konto = konto+1000000 WHERE ids = '".$cookie_team."'";
 			mysql_query($getTaskMoney1);
 			$taskBuchung1 = "INSERT INTO ".$prefix."buchungen (team, verwendungszweck, betrag, zeit) VALUES ('".$cookie_team."', 'Manager-Prüfung', 1000000, ".time().")";

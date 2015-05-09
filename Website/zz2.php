@@ -32,12 +32,19 @@ while ($topWidget3 = mysql_fetch_assoc($topWidget2)) {
     $topWidgetPlace++;
 }
 $topWidget .= '</div>';
-if (isset($_GET['via_android']) && $_GET['via_android'] == 1) {
-    $_SESSION['via_android'] = 1;
+
+if (isset($_GET['via_android'])) {
+    if ($_GET['via_android'] == 1) {
+        $_SESSION['via_android'] = 1;
+    }
+    else {
+        $_SESSION['via_android'] = 0;
+    }
 }
-else {
-	$_SESSION['via_android'] = 0;
+if (!isset($_SESSION['via_android'])) {
+    $_SESSION['via_android'] = 0;
 }
+
 if (!isset($_SESSION['pMaxGebot'])) { $_SESSION['pMaxGebot'] = 0; }
 ?>
 </div>

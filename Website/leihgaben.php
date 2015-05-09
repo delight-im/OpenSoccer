@@ -115,7 +115,7 @@ else {
 				}
 			}
 			echo '<tr><td class="link"><a href="/spieler.php?id='.$an3['spieler'].'">'.$an3['vorname'].' '.$an3['nachname'].'</a></td><td class="link"><a href="/team.php?id='.$an3['ids'].'">'.$an3['bieter'].'</a></td><td>'.number_format($an3['praemie'], 0, ',', '.').' €</td>';
-			echo '<td><form action="/leihgaben.php" method="POST" accept-charset="utf-8"><input type="hidden" name="spieler" value="'.$an3['spieler'].'" /><input type="hidden" name="bieter" value="'.$an3['bieter'].'" /><input type="hidden" name="praemie" value="'.$an3['praemie'].'" /><input type="submit" name="aktion" value="'._('Ja').'"'.noDemoClick($cookie_id).' />&nbsp;<input type="submit" name="aktion" value="'._('Nein').'"'.noDemoClick($cookie_id).' /></form></td>';
+			echo '<td><form action="/leihgaben.php" method="POST" accept-charset="utf-8"><input type="hidden" name="spieler" value="'.$an3['spieler'].'" /><input type="hidden" name="bieter" value="'.$an3['bieter'].'" /><input type="hidden" name="praemie" value="'.$an3['praemie'].'" /><button type="submit" name="aktion" value="Ja"'.noDemoClick($cookie_id).'>'._('Ja').'</button>&nbsp;<button type="submit" name="aktion" value="Nein"'.noDemoClick($cookie_id).'>'._('Nein').'</button></form></td>';
 		}
 		echo '</tbody></table></p>';
 		echo '<p><strong>'._('Hinweis:').'</strong> '._('Bei mehreren Anfragen für denselben Spieler sind die anfragenden Teams nach Kaderstärke sortiert. Das Angebot des schwächsten Teams steht oben.').'</p>';

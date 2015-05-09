@@ -152,9 +152,9 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
 		if (!mWebView.onBackPressed()) { return; }
 
 		final AlertDialog.Builder reallyExit = new AlertDialog.Builder(this);
-		reallyExit.setTitle("Wirklich verlassen?");
-		reallyExit.setMessage("Möchtest Du das Spiel wirklich beenden?");
-		reallyExit.setPositiveButton("Ja", new DialogInterface.OnClickListener() {
+		reallyExit.setTitle(R.string.are_you_sure);
+		reallyExit.setMessage(R.string.really_want_to_leave);
+		reallyExit.setPositiveButton(R.string.leave, new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
@@ -162,7 +162,7 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
 			}
 
 		});
-		reallyExit.setNegativeButton("Nein", null);
+		reallyExit.setNegativeButton(R.string.cancel, null);
 		mAlertDialog = reallyExit.show();
 	}
 

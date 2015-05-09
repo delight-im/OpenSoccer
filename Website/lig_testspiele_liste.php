@@ -32,7 +32,7 @@ for ($i = 1; $i <= 22; $i++) {
 }
 ?>
 </select></p>
-<p><input type="submit" value="Auswählen" /></p>
+<p><input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Testspiele'); ?></h1>
 <p>

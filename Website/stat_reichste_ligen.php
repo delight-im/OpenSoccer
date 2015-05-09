@@ -9,7 +9,7 @@
 </style>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
-<h1>Reichste Ligen</h1>
+<h1><?php echo _('Reichste Ligen'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p><?php echo _('In welcher Liga spielen die reichsten Teams? Diese Statistik zeigt den Durschnitt der Kontostände.'); ?></p>
 <p>

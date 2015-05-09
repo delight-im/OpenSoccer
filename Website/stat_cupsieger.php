@@ -34,7 +34,7 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Cupsieger'); ?></h1>
 <p><?php echo _('Welches Teams haben den Cup schon gewonnen? Wer war ihr Finalgegner?'); ?></p>

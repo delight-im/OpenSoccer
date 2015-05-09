@@ -36,7 +36,7 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Meiste Titel'); ?></h1>
 <?php
@@ -54,7 +54,7 @@ if (isset($_GET['typ'])) {
 }
 echo '<p style="text-align:right">';
 $standardLink = '<a href="/stat_meiste_titel.php?liga='.$temp_liga.'&amp;typ=';
-echo $standardLink.'" class="pagenava'; if ($filterTyp == '') { echo ' aktiv'; } echo '">Alle</a> '.$standardLink.'Cup" class="pagenava'; if ($filterTyp == 'Cup') { echo ' aktiv'; } echo '">Cup</a> '.$standardLink.'Liga" class="pagenava'; if ($filterTyp == 'Liga') { echo ' aktiv'; } echo '">Liga</a> '.$standardLink.'Pokal" class="pagenava'; if ($filterTyp == 'Pokal') { echo ' aktiv'; } echo '">Pokal</a>';
+echo $standardLink.'" class="pagenava'; if ($filterTyp == '') { echo ' aktiv'; } echo '">'._('Alle').'</a> '.$standardLink.'Cup" class="pagenava'; if ($filterTyp == 'Cup') { echo ' aktiv'; } echo '">'._('Cup').'</a> '.$standardLink.'Liga" class="pagenava'; if ($filterTyp == 'Liga') { echo ' aktiv'; } echo '">'._('Liga').'</a> '.$standardLink.'Pokal" class="pagenava'; if ($filterTyp == 'Pokal') { echo ' aktiv'; } echo '">'._('Pokal').'</a>';
 echo '</p>';
 // TYPEN FILTER ENDE
 ?>

@@ -10,7 +10,7 @@
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
 <?php if ($loggedin == 1) { ?>
-<h1>Liga wählen</h1>
+<h1><?php echo _('Liga wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
 <p><select name="liga" size="1" style="width:200px">
 	<option value="alle"><?php echo _('Alle Ligen'); ?></option>
@@ -36,7 +36,7 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Jüngste Kader'); ?></h1>
 <p><?php echo _('Welche Vereine setzen am stärksten auf die Jugend? Die folgende Liste zeigt die Teams mit den jüngsten Kadern. Bedingung: mindestens 17 Spieler im Kader.'); ?></p>

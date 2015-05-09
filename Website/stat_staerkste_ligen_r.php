@@ -9,7 +9,7 @@
 </style>
 <?php include 'zz2.php'; ?>
 <?php include 'zzsubnav_statistik.php'; ?>
-<h1>Stärkste Ligen - RKP</h1>
+<h1><?php echo _('Stärkste Ligen - RKP'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p><?php echo _('Jedes Team besitzt eine Punktzahl fürs Ranking, RKP genannt. Am Durchschnitt dieser RKP-Zahlen innerhalb der einzelnen Ligen wird hier deren Stärke gemessen.'); ?></p>
 <p>

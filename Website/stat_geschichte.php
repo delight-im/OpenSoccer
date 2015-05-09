@@ -47,7 +47,7 @@ else {
     }
     ?>
 </select></p>
-<p><input type="submit" value="Auswählen" /></p>
+<p><input type="submit" value="<?php echo _('Auswählen') ?>" /></p>
 </form>
 <h1><?php echo _('Geschichte'); ?></h1>
 <p><?php echo _('Hier kannst Du Dir die Tabellen aller Ligen von jedem Spieltag der letzten Saisons ansehen.'); ?></p>

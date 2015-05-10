@@ -46,8 +46,8 @@ else {
 	}
 	// FREUNDESLISTE LADEN ENDE
 	if (!isset($temp_land)) { $temp_land = ''; }
-	echo '<h1>LIVE-Zentrale: '.$live_scoring_spieltyp_laeuft.' ('.$live_scoring_min_gespielt.'. Minute)</h1>';
-	echo '<p style="text-align:right"><a href="'.$_SERVER['REQUEST_URI'].'" onclick="window.location.reload(); return false" class="pagenava">'.('Aktualisieren').'</a></p>';
+	echo '<h1>'.__('LIVE-Zentrale: %1$s (%2$s. Minute)', $live_scoring_spieltyp_laeuft, $live_scoring_min_gespielt).'</h1>';
+	echo '<p style="text-align:right"><a href="'.$_SERVER['REQUEST_URI'].'" onclick="window.location.reload(); return false" class="pagenava">'._('Aktualisieren').'</a></p>';
 	function extract_kommentar_ergebnis($kommentar) {
 			$ergebnis_str = '';
 			$ergebnisPattern = '/ \[([0-9]+:[0-9]+)\]/i';
@@ -100,7 +100,6 @@ else {
 	}
 	if (count($resultTable) > 0) {
 		//ksort($resultTable); // nach Spielnummer sortieren
-		echo '<p>';
 		echo '<table>';
 		echo '<thead>';
 		echo '<tr>';
@@ -116,7 +115,7 @@ else {
 		foreach ($resultTable as $spielID=>$resultEntry) {
 			$counter++;
 			if ($resultEntry[0] == 'FREIZEILE') {
-				echo '<tr><td colspan="4">&nbsp;</td></tr>';
+				echo '<tr><td colspan="5">&nbsp;</td></tr>';
 				continue;
 			}
 			echo '<tr';
@@ -145,7 +144,6 @@ else {
 		}
 		echo '</tbody>';
 		echo '</table>';
-		echo '</p>';
 	}
 }
 ?>

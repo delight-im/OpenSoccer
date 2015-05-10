@@ -46,7 +46,7 @@ else {
 	}
 	// FREUNDESLISTE LADEN ENDE
 	if (!isset($temp_land)) { $temp_land = ''; }
-	echo '<h1>'.__('LIVE-Zentrale: %1$s %2$s. Minute', $live_scoring_spieltyp_laeuft, $live_scoring_min_gespielt).'</h1>';
+	echo '<h1>'.__('LIVE-Zentrale: %1$s (%2$s. Minute)', $live_scoring_spieltyp_laeuft, $live_scoring_min_gespielt).'</h1>';
 	echo '<p style="text-align:right"><a href="'.$_SERVER['REQUEST_URI'].'" onclick="window.location.reload(); return false" class="pagenava">'._('Aktualisieren').'</a></p>';
 	function extract_kommentar_ergebnis($kommentar) {
 			$ergebnis_str = '';

@@ -48,6 +48,7 @@ $sql4 = mysql_fetch_assoc($sql2);
 $sql1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$sql4['ids']."'";
 $sql2 = mysql_query($sql1);
 $sql4 = mysql_fetch_assoc($sql2);
+$selectedStadionPhoto = $stadionPhotos[0];
 for ($c = 5; $c >= 0; $c--) {
 	if ($sql4['plaetze'] >= $stadionPhotos[$c][0]) {
 		$selectedStadionPhoto = $stadionPhotos[$c];
@@ -346,6 +347,12 @@ elseif ($live_scoring_spieltyp_laeuft == '') {
 		echo '<tr><td>'.$ergebnisStr.'</td><td>'.$eloChange1.'</td><td>'.$eloChange2.'</td>';
 	}
 	echo '</tbody></table>';
+}
+echo '<p></p>';
+if (isset($selectedStadionPhoto)) {
+	if (isset($selectedStadionPhoto[2])) {
+		echo '<p style="font-size:80%; color:#999;">'.__('Foto des Stadions: %s', $selectedStadionPhoto[2]).'</p>';
+	}
 }
 ?>
 <?php include 'zz3.php'; ?>

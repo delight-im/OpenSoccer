@@ -45,7 +45,7 @@ $stadionPhotos = array(
 $sql1 = "SELECT ids FROM ".$prefix."teams WHERE name = '".$sql3['team1']."'";
 $sql2 = mysql_query($sql1);
 $sql4 = mysql_fetch_assoc($sql2);
-$sql1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$sql3['team1']."'";
+$sql1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$sql4['ids']."'";
 $sql2 = mysql_query($sql1);
 $sql4 = mysql_fetch_assoc($sql2);
 for ($c = 5; $c >= 0; $c--) {

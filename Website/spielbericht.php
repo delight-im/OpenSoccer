@@ -131,7 +131,7 @@ echo '<div class="matchReport">';
 	echo '</div>';
 	echo '<span class="team teamRight">'.$sql3['team2'].'</span>';
 echo '</div>';
-echo '<img src="'.$selectedStadionPhoto[1].'" alt="Dein Stadion" title="'._('Dein Stadion').'" style="display:block; width:540px; height:auto; border:0; margin:10px auto; max-width:100%;" />';
+echo '<img src="'.$selectedStadionPhoto[1].'" alt="'._('Dein Stadion').'" title="'._('Dein Stadion').'" style="display:block; width:540px; height:auto; border:0; margin:10px auto; max-width:100%;" />';
 ?>
 <?php
 if ($live_scoring_meldung != '') {

@@ -91,9 +91,9 @@ if ($cookie_team != '__'.$cookie_id) {
 	<tr class="odd"><td><?php echo _('Pokal'); ?></td><td><?php if ($vd3['pokalrunde'] == 0) { echo '-'; } else { echo pokalrunde_wort($vd3['pokalrunde']); } ?></td></tr>
 	<tr><td><?php echo _('Cup'); ?></td><td><?php if ($vd3['cuprunde'] == 0) { echo '-'; } else { echo cuprunde_wort($vd3['cuprunde']); } ?></td></tr>
 	<tr class="odd"><td><?php echo _('RKP'); ?></td><td><?php echo __('%s Punkte', number_format($vd3['elo'], 0, ',', '.')); ?></td></tr>
-	<tr><td><?php echo _('Kontostand'); ?></td><td<?php if ($vd3['konto'] < 0) { echo ' style="color:red"'; } ?>><?php echo __('€ %s', showKontostand($vd3['konto'])); ?></td></tr>
-	<tr class="odd"><td><?php echo _('Einsatz in Auktionen'); ?></td><td><?php echo __('€ %s', number_format($einsatzAuk, 0, ',', '.')); ?></td></tr>
-	<tr><td><?php echo _('Verfügbares Geld'); ?></td><td><?php echo __('€ %s', showKontostand($verfuegbaresGeld)); ?></td></tr>
+	<tr><td><?php echo _('Kontostand'); ?></td><td<?php if ($vd3['konto'] < 0) { echo ' style="color:red"'; } ?>><?php echo __('%s €', showKontostand($vd3['konto'])); ?></td></tr>
+	<tr class="odd"><td><?php echo _('Einsatz in Auktionen'); ?></td><td><?php echo __('%s €', number_format($einsatzAuk, 0, ',', '.')); ?></td></tr>
+	<tr><td><?php echo _('Verfügbares Geld'); ?></td><td><?php echo __('%s €', showKontostand($verfuegbaresGeld)); ?></td></tr>
 	<tr class="odd"><td><?php echo _('Aufstellungsstärke'); ?></td><td><img src="/images/balken/<?php echo $vd_aufstellungsstaerke; ?>.png" alt="" /></td></tr>
 	<tr><td><?php echo _('Kaderstärke'); ?></td><td><img src="/images/balken/<?php echo $vd_kaderstaerke; ?>.png" alt="" /></td></tr>
 	<tr class="odd"><td><?php echo _('Jugendabteilung'); ?></td><td class="link"><a href="/kader.php#besetzung">
@@ -161,7 +161,7 @@ if ($cookie_team != '__'.$cookie_id) {
 	while ($auslauf3 = mysql_fetch_assoc($auslauf2)) {
 		echo '<tr';
 		if ($counter % 2 == 1) { echo ' class="odd"'; }
-		echo '><td class="link"><a href="/spieler.php?id='.$auslauf3['ids'].'">'.$auslauf3['vorname'].' '.$auslauf3['nachname'].'</a></td><td>'.floor($auslauf3['wiealt']/365).'</td><td>'.date('d.m.Y', $auslauf3['vertrag']).'</td><td>'.__('€ %s', number_format($auslauf3['gehalt'], 0, ',', '.')).'</td></tr>';
+		echo '><td class="link"><a href="/spieler.php?id='.$auslauf3['ids'].'">'.$auslauf3['vorname'].' '.$auslauf3['nachname'].'</a></td><td>'.floor($auslauf3['wiealt']/365).'</td><td>'.date('d.m.Y', $auslauf3['vertrag']).'</td><td>'.__('%s €', number_format($auslauf3['gehalt'], 0, ',', '.')).'</td></tr>';
 		$counter++;
 	} // while auslauf3
 	echo '</tbody></table>';

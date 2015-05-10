@@ -87,7 +87,7 @@ if ($cookie_team != '__'.$cookie_id) {
 	$verfuegbaresGeld = $vd3['konto']-$einsatzAuk;
 	if ($verfuegbaresGeld < 0) { $verfuegbaresGeld = 0; }
 	?>
-	<tr><td><?php echo _('Liga'); ?></td><td><?php echo $vd3['rank'].'. Platz'; ?></td></tr>
+	<tr><td><?php echo _('Liga'); ?></td><td><?php echo __('%d. Platz', $vd3['rank']); ?></td></tr>
 	<tr class="odd"><td><?php echo _('Pokal'); ?></td><td><?php if ($vd3['pokalrunde'] == 0) { echo '-'; } else { echo pokalrunde_wort($vd3['pokalrunde']); } ?></td></tr>
 	<tr><td><?php echo _('Cup'); ?></td><td><?php if ($vd3['cuprunde'] == 0) { echo '-'; } else { echo cuprunde_wort($vd3['cuprunde']); } ?></td></tr>
 	<tr class="odd"><td><?php echo _('RKP'); ?></td><td><?php echo __('%s Punkte', number_format($vd3['elo'], 0, ',', '.')); ?></td></tr>

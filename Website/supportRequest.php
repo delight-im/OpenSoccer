@@ -20,7 +20,7 @@ if (isset($_GET['likeComment'])) {
 			$sql2 = mysql_query($sql1);
 			$thx1 = "INSERT INTO ".$prefix."supportUsers (userID, thanksReceived) VALUES ('".$getAuthor3."', 1) ON DUPLICATE KEY UPDATE thanksReceived = thanksReceived+1, points = (replies*10+fastReplies*25+thanksReceived*5+votes*1)";
 			$thx2 = mysql_query($thx1);
-			echo 'Vielen Dank!';
+			echo _('Vielen Dank!');
 		}
 	}
 	exit;

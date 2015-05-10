@@ -27,7 +27,7 @@ return _('Je häufiger ein Spieler eingesetzt wird und je höher der Druck (Takt
 return _('Du erhältst alle 3 Tage Nachwuchsspieler aus Deiner Jugendabteilung. Die Qualität wird von Deinem Jugendtrainer beeinflusst.');
 return _('Jedes Team muss immer mindestens 13 Spieler im Kader haben, die nicht auf dem Transfermarkt angeboten werden.');
 return _('Bei jedem Foul im Spiel besteht das Risiko, dass der foulende Spieler eine Karte bekommt.');
-return _('Nach einer Roten Karte verliert ein Team 10% seiner Stärke, nach einer Gelben 2%.');
+return _('Nach einer Roten Karte verliert ein Team 10%% seiner Stärke, nach einer Gelben 2%.');
 return _('Beim <i>BM-Lotto</i> wird 4 aus 15 gespielt. Das heißt, man muss aus der Zahlenreihe von 1 bis 15 insgesamt 4 Zahlen tippen.');
 return _('Chancen beim <i>BM-Lotto</i>:<br />- 4 Richtige = 1:1365<br />- 3 Richtige = 33:1365<br />- 2 Richtige = 330:1365');
 return _('Ein Lottoschein für einen Tag kostet 1 Mio. Euro, 75% davon gehen in den Jackpot.');
@@ -101,5 +101,5 @@ return _('Denke bei Transfers oder Vertragsverlängerungen daran, dass die Moral
 return _('Täglich verlieren Deine Spieler 1% Moral. Aber für jeden Pflichtspiel-Einsatz bekommen sie auch wieder 1,8% dazu, für jedes Testspiel 1,0%.');
 return _('Spieler, die Du von einem Verein außerhalb Europas kaufst, haben immer 100% Moral.');
 return _('Beim Anbieten eines Spielers zur Leihgabe verliert er sofort 10% Moral. Aber wenn er dann verliehen wird und ein neues Team bekommt, gewinnt er wieder 5% Moral.');
-return _('Bei Vertragsverlängerungen kann die Moral eines Spielers um bis zu 10% steigen - je nach Gehalt und Laufzeit des Vertrages.');
+return _('Bei Vertragsverlängerungen kann die Moral eines Spielers um bis zu 10%% steigen - je nach Gehalt und Laufzeit des Vertrages.');
 return _('In Derbys, also wenn beide Teams aus derselben Stadt kommen, spielen die Teams immer besonders offensiv und mit viel Aggressivität. Deshalb kommen natürlich auch mehr Zuschauer!');

@@ -42,6 +42,9 @@ $stadionPhotos = array(
 	4 => array(75000, '/images/arena_06.jpg', 'Steve Cadman auf Flickr (Lizenz: Creative Commons BY-SA)'),
 	5 => array(90000, '/images/arena_07.jpg', 'Ralf Peter Reimann auf Flickr (Lizenz: Creative Commons BY-SA)')
 );
+$sql1 = "SELECT ids FROM ".$prefix."teams WHERE name = '".$sql3['team1']."'";
+$sql2 = mysql_query($sql1);
+$sql4 = mysql_fetch_assoc($sql2);
 $sql1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$sql3['team1']."'";
 $sql2 = mysql_query($sql1);
 $sql4 = mysql_fetch_assoc($sql2);

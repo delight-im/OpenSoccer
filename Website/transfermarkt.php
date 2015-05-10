@@ -40,7 +40,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 // FILTER ENDE
 ?>
 <form action="/transfermarkt.php" method="get" accept-charset="utf-8">
-<p><select name="wiealt_start" size="1" style="width:75px">
+<p><select name="wiealt_start" size="1" style="width:95px">
 	<?php
 	for ($i = 17; $i <= 35; $i++) {
 		echo '<option value="'.$i.'"';
@@ -49,7 +49,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	}
 	?>
 </select> 
-<select name="wiealt_end" size="1" style="width:120px">
+<select name="wiealt_end" size="1" style="width:160px">
 	<?php
 	for ($i = 17; $i <= 35; $i++) {
 		echo '<option value="'.$i.'"';
@@ -58,7 +58,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	}
 	?>
 </select></p>
-<p><select name="position" size="1" style="width:200px">
+<p><select name="position" size="1" style="width:260px">
 	<?php
 	echo '<option value="all"';
 	if ($value_for_position == 'all') { echo ' selected="selected"'; }
@@ -77,7 +77,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	echo '>'._('Sturm').'</option>';
 	?>
 </select></p>
-<p><select name="staerke_start" size="1" style="width:75px">
+<p><select name="staerke_start" size="1" style="width:95px">
 	<?php
 	for ($i = 0; $i <= 9; $i++) {
 		echo '<option value="'.$i.'"';
@@ -86,7 +86,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	}
 	?>
 </select> 
-<select name="staerke_end" size="1" style="width:120px">
+<select name="staerke_end" size="1" style="width:160px">
 	<?php
 	for ($i = 0; $i <= 9; $i++) {
 		echo '<option value="'.$i.'"';
@@ -95,7 +95,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	}
 	?>
 </select></p>
-<p><select name="maxGebot_start" size="1" style="width:75px">
+<p><select name="maxGebot_start" size="1" style="width:95px">
 	<?php
 	for ($i = 0; $i <= MAX_GEBOT; $i++) {
 		echo '<option value="'.$i.'"';
@@ -104,7 +104,7 @@ if (isset($_GET['wiealt_start']) && isset($_GET['wiealt_end']) && isset($_GET['p
 	}
 	?>
 </select> 
-<select name="maxGebot_end" size="1" style="width:120px">
+<select name="maxGebot_end" size="1" style="width:160px">
 	<?php
 	for ($i = 0; $i <= MAX_GEBOT; $i++) {
 		echo '<option value="'.$i.'"';

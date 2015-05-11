@@ -202,7 +202,7 @@ for ($c = 5; $c >= 0; $c--) {
 		break;
 	}
 }
-echo '<img src="'.$selectedStadionPhoto[1].'" alt="Dein Stadion" title="Dein Stadion" width="540" style="display:block; width:540px; height:auto; border:0; margin:10px auto; max-width:100%;" />';
+echo '<img src="'.$selectedStadionPhoto[1].'" alt="'._('Dein Stadion').'" title="'._('Dein Stadion').'" style="display:block; width:540px; height:auto; border:0; margin:10px auto; max-width:100%;" />';
 ?>
 <table>
 <thead>

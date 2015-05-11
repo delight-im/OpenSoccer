@@ -33,6 +33,29 @@ else {
 	$live_scoring_meldung = '';
 }
 // LIVE-SCORING ENDE
+// STADIUM IMAGE START
+$stadionPhotos = array(
+	0 => array(0, '/images/arena_01.jpg', 'Richard Matthews auf Flickr (Lizenz: Creative Commons BY)'),
+	1 => array(30000, '/images/arena_03.jpg', 'Jon Candy auf Flickr (Lizenz: Creative Commons BY-SA)'),
+	2 => array(45000, '/images/arena_04.jpg', 'poolie auf Flickr (Lizenz: Creative Commons BY)'),
+	3 => array(60000, '/images/arena_05.jpg', 'Lawrie Cate auf Flickr (Lizenz: Creative Commons BY)'),
+	4 => array(75000, '/images/arena_06.jpg', 'Steve Cadman auf Flickr (Lizenz: Creative Commons BY-SA)'),
+	5 => array(90000, '/images/arena_07.jpg', 'Ralf Peter Reimann auf Flickr (Lizenz: Creative Commons BY-SA)')
+);
+$sql1 = "SELECT ids FROM ".$prefix."teams WHERE name = '".$sql3['team1']."'";
+$sql2 = mysql_query($sql1);
+$sql4 = mysql_fetch_assoc($sql2);
+$sql1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$sql4['ids']."'";
+$sql2 = mysql_query($sql1);
+$sql4 = mysql_fetch_assoc($sql2);
+$selectedStadionPhoto = $stadionPhotos[0];
+for ($c = 5; $c >= 0; $c--) {
+	if ($sql4['plaetze'] >= $stadionPhotos[$c][0]) {
+		$selectedStadionPhoto = $stadionPhotos[$c];
+		break;
+	}
+}
+// STADIUM IMAGE ENDS
 ?>
 <title><?php echo $sql3['team1']; ?> - <?php echo $sql3['team2']; ?> <?php if ($live_scoring_meldung != '') { echo _('LIVE'); } else { echo $sql3['ergebnis']; } ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
@@ -109,6 +132,7 @@ echo '<div class="matchReport">';
 	echo '</div>';
 	echo '<span class="team teamRight">'.$sql3['team2'].'</span>';
 echo '</div>';
+echo '<img src="'.$selectedStadionPhoto[1].'" alt="'._('Dein Stadion').'" title="'._('Dein Stadion').'" style="display:block; width:540px; height:auto; border:0; margin:10px auto; max-width:100%;" />';
 ?>
 <?php
 if ($live_scoring_meldung != '') {
@@ -323,6 +347,12 @@ elseif ($live_scoring_spieltyp_laeuft == '') {
 		echo '<tr><td>'.$ergebnisStr.'</td><td>'.$eloChange1.'</td><td>'.$eloChange2.'</td>';
 	}
 	echo '</tbody></table>';
+}
+echo '<p></p>';
+if (isset($selectedStadionPhoto)) {
+	if (isset($selectedStadionPhoto[2])) {
+		echo '<p style="font-size:80%; color:#999;">'.__('Foto des Stadions: %s', $selectedStadionPhoto[2]).'</p>';
+	}
 }
 ?>
 <?php include 'zz3.php'; ?>

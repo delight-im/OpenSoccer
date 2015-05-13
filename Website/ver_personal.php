@@ -311,7 +311,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 <p>
 <input type="radio" name="physio_behandlung" value="1" checked="checked" /> <?php echo __('%d Tage kürzere Verletzungen', 1); ?> (<?php echo number_format($supplyDemandPrices['Physiotherapeut'], 0, ',', '.'); ?> €)<br />
 <input type="radio" name="physio_behandlung" value="2" /> <?php echo __('%d Tage kürzere Verletzungen', 2); ?> (<?php echo number_format($supplyDemandPrices['Physiotherapeut']*2.15, 0, ',', '.'); ?> €)<br />
-<input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
+<input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" />
 </p>
 </form>
 <?php } ?>
@@ -323,7 +323,7 @@ $sql3 = mysql_fetch_assoc($sql2);
 <p>
 <input type="radio" name="psychologe_behandlung" value="2" checked="checked" /> <?php echo __('%d Punkte mehr Moral', 2); ?> (<?php echo number_format($supplyDemandPrices['Psychologe']*2.15, 0, ',', '.'); ?> €)<br />
 <input type="radio" name="psychologe_behandlung" value="5" /> <?php echo __('%d Punkte mehr Moral', 5); ?> (<?php echo number_format($supplyDemandPrices['Psychologe']*5.575, 0, ',', '.'); ?> €)<br />
-<input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
+<input type="submit" value="<?php echo _('Buchen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" />
 </p>
 </form>
 <?php } ?>

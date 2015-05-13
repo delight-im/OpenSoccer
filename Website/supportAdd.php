@@ -32,7 +32,7 @@ if ($sql3 <= 5) {
 		</select></p>
 	<?php } ?>
 	<p><label for="newCategory"><?php echo _('Was für eine Anfrage möchtest Du erstellen?'); ?></label><select name="category" id="newCategory" size="1" style="width:200px">
-		<option value="<?php echo 'Freage">'._('Frage'); ?></option>
+		<option value="<?php echo 'Frage">'._('Frage'); ?></option>
 		<option value="<?php echo 'Fehlerbericht">'._('Fehlerbericht'); ?></option>
 		<option value="<?php echo 'Vorschlag">'._('Vorschlag'); ?></option>
 	</select></p>

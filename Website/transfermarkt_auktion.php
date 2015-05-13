@@ -90,7 +90,7 @@ function stepGebot(type) {
 </style>
 <?php include 'zz2.php'; ?>
 <h1>Transfermarkt: <?php echo $spieler_name; ?></h1>
-<p style="text-align:right"><a href="/transfermarkt_auktion.php?id=<?php echo $ids; ?>" onclick="window.location.reload(); return false" class="pagenava">Seite aktualisieren</a></p>
+<p style="text-align:right"><a href="/transfermarkt_auktion.php?id=<?php echo $ids; ?>" onclick="window.location.reload(); return false" class="pagenava"><?php echo _('Seite aktualisieren'); ?></a></p>
 <?php if ($loggedin == 1) { ?>
 <?php
 // AM ANFANG NOCH KEINE TRANSFERS ANFANG

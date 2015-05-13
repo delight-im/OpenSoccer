@@ -193,7 +193,7 @@ if ($cookie_team != '__'.$cookie_id) {
 		echo '</ul>';
 	}
 	echo '<h1>'._('Fairplay und Multi-Accounts').'</h1>';
-	echo '<p>'._('Wie im Sport genießt auch bei uns das Fairplay absolute Priorität.').'</p><p>'._('Pro Person ist nur ein Account erlaubt. Bekannte, Freunde oder die geliebte Familie dürfen natürlich vom selben Internet-Anschluss aus mitspielen.').'</p><p>'._('Solltest Du aber gemeinsam mit Anderen einen Rechner benutzen, unterliegt dieses Vorgehen einer Auflage, welche das Fairplay gewährleisten und schützen soll:').'<br />'.('Unter allen diesen Accounts sind jegliche Aktivitäten, die einem der Accounts einen Vorteil verschaffen können, untersagt. Ansonsten genießen diese Accounts selbstverständlich die gleichen Rechte, Pflichten und Spielfunktionen wie die Einzelspieler.').'</p>';
+	echo '<p>'._('Wie im Sport genießt auch bei uns das Fairplay absolute Priorität.').'</p><p>'._('Pro Person ist nur ein Account erlaubt. Bekannte, Freunde oder die geliebte Familie dürfen natürlich vom selben Internet-Anschluss aus mitspielen.').'</p><p>'._('Solltest Du aber gemeinsam mit Anderen einen Rechner benutzen, unterliegt dieses Vorgehen einer Auflage, welche das Fairplay gewährleisten und schützen soll:').'<br />'._('Unter allen diesen Accounts sind jegliche Aktivitäten, die einem der Accounts einen Vorteil verschaffen können, untersagt. Ansonsten genießen diese Accounts selbstverständlich die gleichen Rechte, Pflichten und Spielfunktionen wie die Einzelspieler.').'</p>';
 }
 else {
 	if (isset($_GET['newUser']) && isset($_GET['selectTeam']) && isset($_GET['verify'])) {

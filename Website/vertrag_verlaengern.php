@@ -149,7 +149,7 @@ $contractOptionsHTML .= getContractOption(66, $pLevels[2], $sql3, $contractOptio
 <p>
 <?php if (isset($_SERVER['HTTP_REFERER'])) { if (stripos($_SERVER['HTTP_REFERER'], '/vertraege.php') !== false) { ?><input type="hidden" name="returnToVertraege" value="1" /><?php } } ?>
 <input type="hidden" name="spieler" value="<?php echo $sql3['ids']; ?>" />
-<input type="submit" value="<?php echo _('Abschließen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('Bist Du sicher?')" />
+<input type="submit" value="<?php echo _('Abschließen'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" />
 </p>
 </form>
 <?php } else { ?>

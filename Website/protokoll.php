@@ -25,11 +25,11 @@ else { // if the event log for another user's club is to be shown by the support
 
 setTaskDone('check_logs');
 
-$filterTypes = array('Spieler', 'Finanzen', 'Termine', 'Transfers', 'Verletzung', 'Stadion', 'Assistenten');
+$filterTypes = array('Spieler'=>_('Spieler'), 'Finanzen'=>_('Finanzen'), 'Termine'=>_('Termine'), 'Transfers'=>_('Transfers'), 'Verletzung'=>_('Verletzung'), 'Stadion'=>_('Stadion'), 'Assistenten'=>_('Assistenten'));
 $filterSQL = "";
 $filterGET = '';
 if (isset($_GET['filter'])) {
-	if (in_array($_GET['filter'], $filterTypes)) {
+	if (array_key_exists($_GET['filter'], $filterTypes)) {
 		$filterGET = mysql_real_escape_string($_GET['filter']);
 		$filterSQL = " AND typ = '".$filterGET."'";
 	}
@@ -39,10 +39,10 @@ if (isset($_GET['filter'])) {
 <p><select name="filter" size="1" style="width:200px">
 	<option value="">&nbsp;-&nbsp;</option>
 	<?php
-	foreach ($filterTypes as $filterType) {
-		echo '<option';
+	foreach ($filterTypes as $filterType => $filterTypeLabel) {
+		echo '<option value="'.$filterType.'"';
 		if ($filterType == $filterGET) { echo ' selected="selected"'; }
-		echo '>'.$filterType.'</option>';
+		echo '>'.$filterTypeLabel.'</option>';
 	}
 	?>
 </select> <input type="submit" value="<?php echo _('Filtern'); ?>" /></p>

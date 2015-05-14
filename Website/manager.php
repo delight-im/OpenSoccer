@@ -307,7 +307,7 @@ if ($loggedin == 1) {
     echo '<h1 id="anker_infotext">'._('Infotext').($isOwnProfile ? ' ('.__('%s Zeichen', '<span id="infotext_counter">0</span>/5000').')' : '').'</h1>';
     if ($isOwnProfile) { // eigenes Profil
         echo '<form action="/manager.php?id='.$_GET['id'].'" method="post" accept-charset="utf-8">';
-        echo '<p><textarea rows="15" cols="12" id="infotext" name="infotext" style="width:450px; height:300px" maxlength="5000" onkeyup="updateTextLength(this);">'.br2nl($infotext).'</textarea></p>';
+        echo '<p><textarea rows="15" cols="12" id="infotext" name="infotext" style="width:83%; height:300px" maxlength="5000" onkeyup="updateTextLength(this);">'.br2nl($infotext).'</textarea></p>';
         echo '<p><input type="submit" value="'._('Speichern').'"'.noDemoClick($cookie_id).' /></p>';
     }
     else { // fremdes Profil

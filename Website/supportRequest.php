@@ -227,7 +227,7 @@ echo '<p style="text-align:center; font-size:14px; font-weight:bold;">'.$sql3['t
 		echo '<div style="width:400px; height:40px; margin:10px auto; background-color:#3b69b6; color:#fff">';
 		echo '<div style="width:4px; height:40px; margin:0; background-color:#fff; position:relative; left:'.$pixelPro.'px; top:0"></div>';
 		echo '</div>';
-		echo '<p style="text-align:center; font-size:14px">'.$pPro.'% DAFÜR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$pCon.'% DAGEGEN<br />&nbsp;<br />(Stimmen: '.$votesGes.')</p>';
+		echo '<p style="text-align:center; font-size:14px">'.__('%d%% dafür', $pPro).'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.__('%d%% dagegen', $pCon).'<br />&nbsp;<br />('.__('Stimmen: %d', $votesGes).')</p>';
 	}
 }
 // BEWERTUNG ENDE

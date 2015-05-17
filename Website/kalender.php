@@ -89,8 +89,8 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
             }
 		}
 	}
-	echo '<td>'.date('H:i', getTimestamp('-1 hour', $sql3['datum'])).' Uhr</td><td>'.substr($sql3['typ'], 0, 1).': ';
-	if ($sql3['team1'] != $chosenTeam) { $ergebnis = ergebnis_drehen($sql3['ergebnis']); $gegner = $sql3['team1']; $zusatz = ' (A)'; } else { $ergebnis = $sql3['ergebnis']; $gegner = $sql3['team2']; $zusatz = ' (H)'; }
+	echo '<td>'.__('%s Uhr', date('H:i', getTimestamp('-1 hour', $sql3['datum']))).'</td><td>'.substr($sql3['typ'], 0, 1).': ';
+	if ($sql3['team1'] != $chosenTeam) { $ergebnis = ergebnis_drehen($sql3['ergebnis']); $gegner = $sql3['team1']; $zusatz = ' '._('(A)'); } else { $ergebnis = $sql3['ergebnis']; $gegner = $sql3['team2']; $zusatz = ' '._('(H)'); }
 	$sql4 = "SELECT ids FROM ".$prefix."teams WHERE name = '".$gegner."'";
 	$sql5 = mysql_query($sql4);
 	$sql6 = mysql_fetch_assoc($sql5);

@@ -113,6 +113,9 @@ else { // End-Tabelle der letzten Saison
 	$linkText = _('Letzte Saison');
 	$linkURL = '/stat_geschichte.php?saison_spieltag='.intval(GameTime::getSeason()-1).'-22&liga='.$temp_liga;
 }
+$liga1 = "SELECT ids, name, gespielt, isoAlpha2, pkt_gesamt FROM ".$prefix."ligen WHERE ids = '".$temp_liga."'";
+$liga2 = mysql_query($liga1);
+$liga3 = mysql_fetch_assoc($liga2);
 $tmp_liga_cache = '';
 $tmp_liga_cache .= '
 <h1>'._('Tabelle').'</h1>
@@ -120,7 +123,7 @@ $tmp_liga_cache .= '
 <table>
 <thead>
 <tr class="odd">
-<th scope="col">&nbsp;</th>
+<th scope="col"><img src="/images/flaggen/'.$liga3["isoAlpha2"].'.png" alt="" /></th>
 <th scope="col">'._('Team').'</th>
 <th scope="col">'._('SP').'</th>';
 $tmp_liga_cache .= '<th scope="col">'._('S-U-N').'</th>';
@@ -130,9 +133,6 @@ $tmp_liga_cache .= '<th scope="col">'._('PT').'</th>
 </tr>
 </thead>
 <tbody>';
-$liga1 = "SELECT ids, name, gespielt, pkt_gesamt FROM ".$prefix."ligen WHERE ids = '".$temp_liga."'";
-$liga2 = mysql_query($liga1);
-$liga3 = mysql_fetch_assoc($liga2);
 // 2 ODER 3 POKALPLAETZE ANFANG
 $jahresWertung1 = "SELECT COUNT(*) FROM ".$prefix."ligen WHERE hoch = 'KEINE' AND pkt_gesamt >= ".$liga3['pkt_gesamt'];
 $jahresWertung2 = mysql_query($jahresWertung1);

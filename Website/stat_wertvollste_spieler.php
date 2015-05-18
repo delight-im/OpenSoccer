@@ -36,7 +36,7 @@
     }
     ?>
 </select>
-<input type="submit" value="Auswählen" /></p>
+<input type="submit" value="<?php echo _('Auswählen'); ?>" /></p>
 </form>
 <h1><?php echo _('Wertvollste Spieler'); ?></h1>
 <p><?php echo _('In dieser Tabelle sind die 20 wertvollsten Spieler aus allen Ligen aufgelistet. Sie wurden nach ihrem Marktwert absteigend sortiert.'); ?></p>
@@ -56,7 +56,7 @@ $sql2 = mysql_query($sql1);
 $counter = 1;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if ($counter % 2 == 1) { echo '<tr class="team_'.$sql3['team'].'">'; } else { echo '<tr class="team_'.$sql3['team'].' odd">'; }
-	echo '<td>'.$counter.'.</td><td class="link"><a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a></td><td>'.number_format($sql3['marktwert'], 0, ',', '.').' €</td>';
+	echo '<td>'.$counter.'.</td><td class="link"><a href="/spieler.php?id='.$sql3['ids'].'">'.$sql3['vorname'].' '.$sql3['nachname'].'</a></td><td>'.__('%s €', number_format($sql3['marktwert'], 0, ',', '.')).'</td>';
 	echo '</tr>';
 	$counter++;
 }

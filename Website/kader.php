@@ -20,10 +20,10 @@ if (isset($_POST['positionToSearch'])) {
 		$up1 = "UPDATE ".$prefix."teams SET posToSearch = '".$positionToSearch."' WHERE ids = '".$cookie_team."'";
 		$up2 = mysql_query($up1);
 		switch ($positionToSearch) {
-			case 'T': $whatIsSearched = 'Torhüter'; break;
-			case 'A': $whatIsSearched = 'Abwehrspieler'; setTaskDone('instruct_youthcoach'); break;
-			case 'M': $whatIsSearched = 'Mittelfeldspieler'; break;
-			case 'S': $whatIsSearched = 'Stürmer'; break;
+			case 'T': $whatIsSearched = _('Torhüter'); break;
+			case 'A': $whatIsSearched = _('Abwehrspieler'); setTaskDone('instruct_youthcoach'); break;
+			case 'M': $whatIsSearched = _('Mittelfeldspieler'); break;
+			case 'S': $whatIsSearched = _('Stürmer'); break;
 		}
 		addInfoBox(__('Dein Jugendtrainer sucht ab sofort %s.', $whatIsSearched));
 	}
@@ -198,15 +198,15 @@ function besetzungToWort($besetzung) {
 	elseif ($besetzung < 1.7) { return _('sehr gut'); }
 	elseif ($besetzung < 2) { return _('hervorragend'); }
 	elseif ($besetzung < 2.3) { return _('weltklasse'); }
-	else { return 'überbesetzt'; }
+	else { return _('überbesetzt'); }
 }
 krsort($posArr);
 foreach ($posArr as $position=>$besetzung) {
 	switch ($position) {
-		case 'T': $posToSearch = 'Torwart'; $anzahlSpieler = $besetzung*1.5; break;
-		case 'A': $posToSearch = 'Abwehr'; $anzahlSpieler = $besetzung*6; break;
-		case 'M': $posToSearch = 'Mittelfeld'; $anzahlSpieler = $besetzung*6; break;
-		case 'S': $posToSearch = 'Sturm'; $anzahlSpieler = $besetzung*3; break;
+		case 'T': $posToSearch = _('Torwart'); $anzahlSpieler = $besetzung*1.5; break;
+		case 'A': $posToSearch = _('Abwehr'); $anzahlSpieler = $besetzung*6; break;
+		case 'M': $posToSearch = _('Mittelfeld'); $anzahlSpieler = $besetzung*6; break;
+		case 'S': $posToSearch = _('Sturm'); $anzahlSpieler = $besetzung*3; break;
 		default: $posToSearch = '?'; $anzahlSpieler = 0; break;
 	}
 	echo '<tr><td>'.$posToSearch.'</td><td>'.besetzungToWort($besetzung).'</td><td>'.$anzahlSpieler.'</td></tr>';

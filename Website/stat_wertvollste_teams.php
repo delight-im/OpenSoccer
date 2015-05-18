@@ -70,7 +70,7 @@ if ($temp == FALSE) {
     $counter = 1;
     while ($sql3 = mysql_fetch_assoc($sql2)) {
         if ($counter % 2 == 1) { $tmp_liga_cache .= '<tr class="team_'.$sql3['ids'].'">'; } else { $tmp_liga_cache .= '<tr class="team_'.$sql3['ids'].' odd">'; }
-        $tmp_liga_cache .= '<td>'.$counter.'.</td><td class="link"><a href="/team.php?id='.$sql3['ids'].'">'.$sql3['name'].'</a></td><td>'__('€ %s', number_format($sql3['teamwert'], 0, ',', '.')).'</td>';
+        $tmp_liga_cache .= '<td>'.$counter.'.</td><td class="link"><a href="/team.php?id='.$sql3['ids'].'">'.$sql3['name'].'</a></td><td>'.__('€ %s', number_format($sql3['teamwert'], 0, ',', '.')).'</td>';
         $tmp_liga_cache .= '</tr>';
         $counter++;
     }

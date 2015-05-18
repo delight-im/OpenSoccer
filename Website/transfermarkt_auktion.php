@@ -19,7 +19,7 @@ else {
 	$sql6 = mysql_fetch_assoc($sql5);
 	$spieler_name = $sql6['vorname'].' '.$sql6['nachname'];
 	if ($sql3['besitzer'] == 'KEINER') {
-		$team_name = 'außerhalb Europas';
+		$team_name = _('außerhalb Europas');
 		$teamLink = '<td>'.$team_name.'</td>';
 		$teamOwnerID = 'NONE';
 	}
@@ -143,15 +143,15 @@ echo '<thead><tr class="odd"><th scope="col" colspan="2"><a href="/spieler.php?i
 echo '<tbody>';
 echo '<tr><td>'._('Gehalt').'</td><td>'.number_format($sql6['gehalt'], 0, ',', '.').' € / '._('Saison').'</td></tr>';
 echo '<tr class="odd"><td>'._('Besitzer').'</td>'.$teamLink.'</tr>';
-echo '<tr><td>'._('Marktwert').'</td><td>'.number_format($sql6['marktwert'], 0, ',', '.').' €</td></tr>';
+echo '<tr><td>'._('Marktwert').'</td><td>'.__('%s €', number_format($sql6['marktwert'], 0, ',', '.')).'</td></tr>';
 echo '<tr class="odd"><td>'._('Höchstgebot').'</td><td>'.number_format($sql3['betrag_highest'], 0, ',', '.').' € ('._('Ablösesumme').')</td></tr>';
-echo '<tr><td>Restzeit</td><td>'.__('%1$d Minuten und %2$d Sekunden', floor(($sql3['ende']-time())/60), floor(($sql3['ende']-time())%60)).'</td></tr>';
+echo '<tr><td>'._('Restzeit').'</td><td>'.__('%1$d Minuten und %2$d Sekunden', floor(($sql3['ende']-time())/60), floor(($sql3['ende']-time())%60)).'</td></tr>';
 $mindestgebot = floor($sql6['marktwert']/100);
 $mindestgebot_temp = strlen($mindestgebot)-1;
 $mindestgebot = floor($mindestgebot/pow(10, $mindestgebot_temp))*pow(10, $mindestgebot_temp);
 $maximalgebot = floor($sql6['marktwert']*$_SESSION['pMaxGebot']);
 echo '<tr class="odd"><td colspan="2">'.__('Du musst das alte Gebot um mindestens %s € überbieten!', number_format($mindestgebot, 0, ',', '.')).'</td></tr>';
-echo '<tr><td colspan="2">Maximalgebot: '.number_format($maximalgebot, 0, ',', '.').' €</td></tr>';
+echo '<tr><td colspan="2">'.__('Maximalgebot: %s €', number_format($maximalgebot, 0, ',', '.')).'</td></tr>';
 if ($sql3['besitzer'] == $cookie_team) {
 	echo '<tr class="odd"><td colspan="2">'._('Du kannst nicht für Deine eigenen Spieler bieten!').'</td></tr>';
 }
@@ -178,7 +178,7 @@ require_once('./classes/TransferMarket.php');
 echo '<p><strong>'._('Hinweis:').'</strong> '._('Der Verein, der die höchste Ablösesumme bietet, bekommt den Spieler automatisch nach Auktionsende. Der Vertrag wird dann erst einmal für 29 Tage mit dem angegebenen Gehalt abgeschlossen.').'</p><p>'.__('Jedes Gebot verlängert die Laufzeit der Auktion um %d Minuten, damit andere Manager noch die Chance haben, mehr zu bieten.', TransferMarket::AUCTION_TIME_EXTENSION_ON_BID).'</p>';
 ?>
 <h1><?php echo _('Dein Maximalgebot'); ?></h1>
-<p><?php echo _('Wenn Du neu im Spiel bist, kannst Du nur bis 125% des Marktwertes bieten. Nach 7 Tagen kannst du dann bis 250% bieten. Wenn Du schon 21 Tage dabei bist, kannst Du bis maximal 400% bieten. Schließlich kannst Du ab dem 42. Tag sogar 800% und ab dem 84. Tag bis 1600% bieten, d.h. das Sechzehnfache vom Marktwert eines Spielers.'); ?></p>
+<p><?php echo _('Wenn Du neu im Spiel bist, kannst Du nur bis 125%% des Marktwertes bieten. Nach 7 Tagen kannst du dann bis 250%% bieten. Wenn Du schon 21 Tage dabei bist, kannst Du bis maximal 400%% bieten. Schließlich kannst Du ab dem 42. Tag sogar 800%% und ab dem 84. Tag bis 1600%% bieten, d.h. das Sechzehnfache vom Marktwert eines Spielers.'); ?></p>
 <p><?php echo __('Im Moment liegt Deine persönliche Grenze bei %s des Marktwertes.', '<strong>'.intval($_SESSION['pMaxGebot']*100).'%</strong>'); ?></p>
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>

@@ -29,7 +29,7 @@ $sql2 = mysql_query($sql1);
 $counter = 1;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if ($counter % 2 == 1) { echo '<tr class="liga_'.$sql3['ids'].'">'; } else { echo '<tr class="liga_'.$sql3['ids'].' odd">'; }
-	echo '<td>'.$counter.'.</td><td class="link"><a href="/lig_tabelle.php?liga='.$sql3['ids'].'">'.$sql3['name'].'</a></td><td>'.number_format($sql3[$ausdruck], 0, ',', '.').' €</td>';
+	echo '<td>'.$counter.'.</td><td class="link"><a href="/lig_tabelle.php?liga='.$sql3['ids'].'">'.$sql3['name'].'</a></td><td>'.__('%s €', number_format($sql3[$ausdruck], 0, ',', '.')).'</td>';
 	echo '</tr>';
 	$counter++;
 }

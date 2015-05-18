@@ -253,7 +253,7 @@ echo '<strong>'._('Letzte Aktion:').'</strong> <span style="display:block; margi
 <?php if ($sql3['open'] == 1) { ?>
 <h1><?php echo _('Dein Kommentar ...'); ?></h1>
 <form action="/supportRequest.php?id=<?php echo id2secure($requestID); ?>" method="post" accept-charset="utf-8">
-<p><textarea name="myComment" cols="10" rows="10" style="width:350px; height:100px"></textarea></p>
+<p><textarea name="myComment" cols="10" rows="10" style="width:100%; height:100px"></textarea></p>
 <p><input type="submit" value="<?php echo _('Kommentieren'); ?>" onclick="return<?php echo noDemoClick($cookie_id, TRUE); ?> confirm('<?php echo _('Bist Du sicher?'); ?>')" /></p>
 </form>
 <?php } ?>

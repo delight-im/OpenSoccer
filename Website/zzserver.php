@@ -266,9 +266,7 @@ function showInfoBox($meldungListe) {
 				$ID = intval(99-$counter);
 				if ($ID > 0) {
 					$output .= '<div id="showInfoBox'.$ID.'" class="showInfoBox" style="z-index:'.$ID.'"><span>'.trim($meldungEntry).'</span>';
-					if ($anzMeldungen > 1) {
-						$output .= '<a class="closeLink" href="#" onclick="document.getElementById(\'showInfoBox'.$ID.'\').style.display=\'none\'; return false;">'.intval($counter+1).'/'.$anzMeldungen.' [X]</a>';
-					}
+					$output .= '<a class="closeLink" href="#" onclick="document.getElementById(\'showInfoBox'.$ID.'\').style.display=\'none\'; return false;">'.intval($counter+1).'/'.$anzMeldungen.' [X]</a>';
 					$output .= '</div>';
 					$counter++;
 				}

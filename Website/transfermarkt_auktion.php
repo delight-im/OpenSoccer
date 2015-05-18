@@ -178,7 +178,7 @@ require_once('./classes/TransferMarket.php');
 echo '<p><strong>'._('Hinweis:').'</strong> '._('Der Verein, der die höchste Ablösesumme bietet, bekommt den Spieler automatisch nach Auktionsende. Der Vertrag wird dann erst einmal für 29 Tage mit dem angegebenen Gehalt abgeschlossen.').'</p><p>'.__('Jedes Gebot verlängert die Laufzeit der Auktion um %d Minuten, damit andere Manager noch die Chance haben, mehr zu bieten.', TransferMarket::AUCTION_TIME_EXTENSION_ON_BID).'</p>';
 ?>
 <h1><?php echo _('Dein Maximalgebot'); ?></h1>
-<p><?php echo _('Wenn Du neu im Spiel bist, kannst Du nur bis 125%% des Marktwertes bieten. Nach 7 Tagen kannst du dann bis 250%% bieten. Wenn Du schon 21 Tage dabei bist, kannst Du bis maximal 400%% bieten. Schließlich kannst Du ab dem 42. Tag sogar 800%% und ab dem 84. Tag bis 1600%% bieten, d.h. das Sechzehnfache vom Marktwert eines Spielers.'); ?></p>
+<p><?php echo _('Wenn Du neu im Spiel bist, kannst Du nur bis 125% des Marktwertes bieten. Nach 7 Tagen kannst du dann bis 250% bieten. Wenn Du schon 21 Tage dabei bist, kannst Du bis maximal 400% bieten. Schließlich kannst Du ab dem 42. Tag sogar 800% und ab dem 84. Tag bis 1600% bieten, d.h. das Sechzehnfache vom Marktwert eines Spielers.'); ?></p>
 <p><?php echo __('Im Moment liegt Deine persönliche Grenze bei %s des Marktwertes.', '<strong>'.intval($_SESSION['pMaxGebot']*100).'%</strong>'); ?></p>
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>

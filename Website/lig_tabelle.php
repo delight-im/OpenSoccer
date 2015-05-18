@@ -223,7 +223,7 @@ echo $tmp_liga_cache;
 			$slideSteps = intval($i-GameTime::getMatchDay());
 			echo '<option value="'.$slideSteps.'"';
 			if ($i == $slideResults) { echo ' selected="selected"'; }
-			echo '>Spieltag '.$i.'</option>';
+			echo '>'.__('Spieltag %d', $i).'</option>';
 		}
 		?>
 	</select> <input type="submit" value="<?php echo _('Anzeigen'); ?>" />

@@ -32,7 +32,7 @@ else {
     	$sa_sp_string = $shsj3['saison'].'-'.$shsj3['spieltag'];
         echo '<option value="'.$sa_sp_string.'"';
         if ($shsj3['saison'] == $saison_ak && $shsj3['spieltag'] == $spieltag_ak) { echo ' selected="selected"'; }
-        echo '>Saison '.$shsj3['saison'].', Spieltag '.$shsj3['spieltag'].'</option>';
+        echo '>'.__('Saison %1$s, Spieltag %2$s', $shsj3['saison'], $shsj3['spieltag']).'</option>';
     }
     ?>
 </select></p>

@@ -58,7 +58,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	else {
 		echo '<td>'._('Außerhalb Europas').'</td>';
 	}
-	echo '<td>'.number_format($sql3['gebot'], 0, ',', '.').'€</td>';
+	echo '<td>'.__('%s €', number_format($sql3['gebot'], 0, ',', '.')).'</td>';
 	echo '<td>'.date('d.m.Y', $sql3['datum']).'</td>';
 	echo '</tr>';
 	$counter++;

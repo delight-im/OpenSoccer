@@ -213,8 +213,8 @@ echo '<img src="'.$selectedStadionPhoto[1].'" alt="'._('Dein Stadion').'" title=
 </thead>
 <tbody>
 <tr><td><?php echo _('Kapazität').'</td><td>'.__('%s Plätze', number_format($sql3['plaetze'], 0, ',', '.')); ?></td></tr>
-<tr class="odd"><td><?php echo _('Preis/Platz').'</td><td>'.__('€ %s', $sql3['preis']); ?></td></tr>
-<tr><td><?php echo _('Einnahmen bei voller Auslastung').'</td><td>'.__('€ %s', number_format($sql3['plaetze']*$sql3['preis'], 0, ',', '.')); ?></td></tr>
+<tr class="odd"><td><?php echo _('Preis/Platz').'</td><td>'.__('%s €', $sql3['preis']); ?></td></tr>
+<tr><td><?php echo _('Einnahmen bei voller Auslastung').'</td><td>'.__('%s €', number_format($sql3['plaetze']*$sql3['preis'], 0, ',', '.')); ?></td></tr>
 <tr class="odd"><td><?php echo _('Instandhaltungskosten').'</td><td>'.__('%s € / Saison', number_format(1550000+$sql3['plaetze']*250, 0, ',', '.')); ?></td></tr>
 <tr class="odd"><td><?php echo _('Gelände-Kosten').'</td><td>'.__('%s € / Saison', number_format($gelaende_kosten, 0, ',', '.')); ?></td></tr>
 <tr><td><?php echo _('Zuschauer beim letzten Spiel').'</td><td>'.number_format($sql6, 0, ',', '.'); ?></td></tr>

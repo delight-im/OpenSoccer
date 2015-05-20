@@ -14,17 +14,16 @@ class StadiumBuildings {
      */
     public static function getList() {
         return array(
-            array('parkplatz', 'Parkplatz', 7500, 30000),
-            array('ubahn', 'U-Bahn', 40000, 90000),
-            array('restaurant', 'Restaurant', 15000, 320000),
-            array('bierzelt', 'Bierzelt', 20000, 74000),
-            array('pizzeria', 'Pizzeria', 12000, 90000),
-            array('imbissstand', 'Imbissstand', 10000, 45000),
-            array('vereinsmuseum', 'Vereinsmuseum', 50000, 655000),
-            array('fanshop', 'Fanshop', 30000, 160000),
+            array('parkplatz', _('Parkplatz'), 7500, 30000),
+            array('ubahn', _('U-Bahn'), 40000, 90000),
+            array('restaurant', _('Restaurant'), 15000, 320000),
+            array('bierzelt', _('Bierzelt'), 20000, 74000),
+            array('pizzeria', _('Pizzeria'), 12000, 90000),
+            array('imbissstand', _('Imbissstand'), 10000, 45000),
+            array('vereinsmuseum', _('Vereinsmuseum'), 50000, 655000),
+            array('fanshop', _('Fanshop'), 30000, 160000),
         );
     }
-
 }
 
 ?>

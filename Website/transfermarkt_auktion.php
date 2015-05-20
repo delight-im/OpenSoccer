@@ -19,7 +19,7 @@ else {
 	$sql6 = mysql_fetch_assoc($sql5);
 	$spieler_name = $sql6['vorname'].' '.$sql6['nachname'];
 	if ($sql3['besitzer'] == 'KEINER') {
-		$team_name = 'außerhalb Europas';
+		$team_name = _('außerhalb Europas');
 		$teamLink = '<td>'.$team_name.'</td>';
 		$teamOwnerID = 'NONE';
 	}
@@ -143,15 +143,15 @@ echo '<thead><tr class="odd"><th scope="col" colspan="2"><a href="/spieler.php?i
 echo '<tbody>';
 echo '<tr><td>'._('Gehalt').'</td><td>'.number_format($sql6['gehalt'], 0, ',', '.').' € / '._('Saison').'</td></tr>';
 echo '<tr class="odd"><td>'._('Besitzer').'</td>'.$teamLink.'</tr>';
-echo '<tr><td>'._('Marktwert').'</td><td>'.number_format($sql6['marktwert'], 0, ',', '.').' €</td></tr>';
+echo '<tr><td>'._('Marktwert').'</td><td>'.__('%s €', number_format($sql6['marktwert'], 0, ',', '.')).'</td></tr>';
 echo '<tr class="odd"><td>'._('Höchstgebot').'</td><td>'.number_format($sql3['betrag_highest'], 0, ',', '.').' € ('._('Ablösesumme').')</td></tr>';
-echo '<tr><td>Restzeit</td><td>'.__('%1$d Minuten und %2$d Sekunden', floor(($sql3['ende']-time())/60), floor(($sql3['ende']-time())%60)).'</td></tr>';
+echo '<tr><td>'._('Restzeit').'</td><td>'.__('%1$d Minuten und %2$d Sekunden', floor(($sql3['ende']-time())/60), floor(($sql3['ende']-time())%60)).'</td></tr>';
 $mindestgebot = floor($sql6['marktwert']/100);
 $mindestgebot_temp = strlen($mindestgebot)-1;
 $mindestgebot = floor($mindestgebot/pow(10, $mindestgebot_temp))*pow(10, $mindestgebot_temp);
 $maximalgebot = floor($sql6['marktwert']*$_SESSION['pMaxGebot']);
 echo '<tr class="odd"><td colspan="2">'.__('Du musst das alte Gebot um mindestens %s € überbieten!', number_format($mindestgebot, 0, ',', '.')).'</td></tr>';
-echo '<tr><td colspan="2">Maximalgebot: '.number_format($maximalgebot, 0, ',', '.').' €</td></tr>';
+echo '<tr><td colspan="2">'.__('Maximalgebot: %s €', number_format($maximalgebot, 0, ',', '.')).'</td></tr>';
 if ($sql3['besitzer'] == $cookie_team) {
 	echo '<tr class="odd"><td colspan="2">'._('Du kannst nicht für Deine eigenen Spieler bieten!').'</td></tr>';
 }

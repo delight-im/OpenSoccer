@@ -213,8 +213,8 @@ echo '<img src="'.$selectedStadionPhoto[1].'" alt="'._('Dein Stadion').'" title=
 </thead>
 <tbody>
 <tr><td><?php echo _('Kapazität').'</td><td>'.__('%s Plätze', number_format($sql3['plaetze'], 0, ',', '.')); ?></td></tr>
-<tr class="odd"><td><?php echo _('Preis/Platz').'</td><td>'.$sql3['preis']; ?> €</td></tr>
-<tr><td><?php echo _('Einnahmen bei voller Auslastung').'</td><td>'.number_format($sql3['plaetze']*$sql3['preis'], 0, ',', '.'); ?> €</td></tr>
+<tr class="odd"><td><?php echo _('Preis/Platz').'</td><td>'.__('%s €', $sql3['preis']); ?></td></tr>
+<tr><td><?php echo _('Einnahmen bei voller Auslastung').'</td><td>'.__('%s €', number_format($sql3['plaetze']*$sql3['preis'], 0, ',', '.')); ?></td></tr>
 <tr class="odd"><td><?php echo _('Instandhaltungskosten').'</td><td>'.__('%s € / Saison', number_format(1550000+$sql3['plaetze']*250, 0, ',', '.')); ?></td></tr>
 <tr class="odd"><td><?php echo _('Gelände-Kosten').'</td><td>'.__('%s € / Saison', number_format($gelaende_kosten, 0, ',', '.')); ?></td></tr>
 <tr><td><?php echo _('Zuschauer beim letzten Spiel').'</td><td>'.number_format($sql6, 0, ',', '.'); ?></td></tr>
@@ -243,7 +243,7 @@ foreach ($stadiumAffixes as $stadiumAffix) {
 </select></p>
 <p><input type="submit" value="<?php echo _('Namen ändern'); ?>"<?php echo noDemoClick($cookie_id); ?> /></p>
 </form>
-<h1>Preis ändern</h1>
+<h1><?php echo _('Preis ändern'); ?></h1>
 <form action="/ver_stadion.php" method="post" accept-charset="utf-8">
 <p><select name="preis" size="1" style="width:60px">
 	<?php
@@ -296,7 +296,7 @@ foreach (StadiumBuildings::getList() as $tm) {
 	echo '<input type="checkbox" name="'.$tm[0].'" value="'.$anzahl.'" ';
 	if ($sql3[$tm[0]] > 0) { echo 'checked="checked" '; }
 	echo '/> ';
-	echo '<strong>'.($anzahl < 10 ? '0' : '').$anzahl.'&times; '.$tm[1].'</strong> &mdash; '.number_format($kosten, 0, ',', '.').' € / Saison<br />';
+	echo '<strong>'.($anzahl < 10 ? '0' : '').$anzahl.'&times; '.$tm[1].'</strong> &mdash; '.__('%s € / Saison', number_format($kosten, 0, ',', '.')).' <br />';
 }
 ?>
 </p>

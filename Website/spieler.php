@@ -40,7 +40,7 @@ else {
     $watch3 = 0;
 }
 ?>
-<title><?php echo _('Spieler:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
+<title><?php echo __('Spieler: %1$s %2$s', $sql3['vorname'], $sql3['nachname']); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
 .selectVisible {
@@ -53,9 +53,8 @@ else {
 }
 -->
 </style>
-<?php include 'zz2.php'; ?>
-<h1>Spieler: <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
-<?php
+<?php include 'zz2.php';
+echo '<h1>'.__('Spieler: %1$s %2$s', $sql3['vorname'], $sql3['nachname']).'</h1>';
 if (isset($_GET['action'])) {
 	if ($_GET['action'] == 'setWatching') {
 		setTaskDone('watch_player');

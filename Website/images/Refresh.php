@@ -252,8 +252,13 @@ form.search input.button {
 	background: linear-gradient(to right, #82C13E, #63932F);
 	font: bold 12px/26px Verdana, Arial, Tahoma, Sans-serif;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-	height: 26px;
+	height: auto;
 	z-index: 2;
+}
+#menu:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 #menu ul {
 	float: right;
@@ -795,9 +800,6 @@ div#sidebar-expander span {
         display: none;
 		float: none;
 		width: auto;
-	}
-	#menu {
-		overflow: hidden;
 	}
 	.infokasten {
 		width: 42%;

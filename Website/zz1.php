@@ -61,7 +61,7 @@ function setTaskDone($shortName) {
 <meta http-equiv="content-script-type" content="text/javascript" />
 <meta http-equiv="content-style-type" content="text/css" />
 <meta name="robots" content="index,follow" />
-<link rel="stylesheet" href="/images/Refresh.php?v=234935" type="text/css" />
+<link rel="stylesheet" href="/images/Refresh.php?v=234936" type="text/css" />
 <script type="text/javascript" src="/js/drop_down.js"></script>
 <link rel="stylesheet" href="/css/drop_down.css" type="text/css" />
 <link rel="icon" type="image/png" href="/images/favicon.png" />

@@ -17,6 +17,7 @@ define('CONFIG_SITE_NAME', 'OpenSoccer');
 define('CONFIG_SITE_DOMAIN', 'www.opensoccer.org'); // must include <www> subdomain
 define('CONFIG_SITE_EMAIL', 'info@opensoccer.org');
 define('CONFIG_CONTACT_PAGE_HTML', '<p>Contact information goes here ...</p>');
+define('CONFIG_ANDROID_APP_URL', NULL); // the location of the Android app (e.g. in app store) as a string or `NULL`
 
 // special users and roles
 define('CONFIG_OFFICIAL_USER', '18a393b5e23e2b9b4da106b06d8235f3');
